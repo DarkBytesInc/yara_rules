@@ -1,0 +1,10 @@
+rule Win_Worm_Duload_3
+{
+strings:
+	$a0 = { abcb0ba9af73f9496f6b2d4d0cc9efcf5b217c943e4f7292604d8ee45ebe23478e8823b4cbba371a71c91fd138557835c4452732316f95647540631b2962f1eed7c4b048b0de9665926e3c3addcb0706d42eedf2fbd966abf7e590c0afbcd27c0da7d978428f6152b6771c5c6deadd77936cf141a9 }
+
+condition:
+	$a0
+}
+
+        

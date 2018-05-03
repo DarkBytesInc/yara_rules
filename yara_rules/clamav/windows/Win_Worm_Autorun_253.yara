@@ -1,0 +1,10 @@
+rule Win_Worm_Autorun_253
+{
+strings:
+	$a0 = { 5c6175746f72756e2e696e66[0-148]7368656c6c5c6f70656e5c636f6d6d616e643d[0-179]5c43757272656e7456657273696f6e5c52756e }
+
+condition:
+	$a0
+}
+
+        

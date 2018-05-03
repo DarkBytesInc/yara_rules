@@ -1,0 +1,10 @@
+rule Win_Worm_Viking_3
+{
+strings:
+	$a0 = { fcda09bfc8c176d2c9ab1ebfcf6f7f6d89c381962f2d482ec7f4d6ceaab710291edaaf77ff9d56bed575be2845f28c35e859e6adab6e4e7635e55c4e24e62851408d09d4ca3eb9ae345d857fb24ae5c65e4f95cb83e525aaf8466c3528c8cf839112a1a832fa4cef3940aba74100aa01d7a16ce126ad4a0e0073b157cfe4fd4796976e6667bde182fef986f9 }
+
+condition:
+	$a0
+}
+
+        

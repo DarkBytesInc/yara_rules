@@ -1,0 +1,10 @@
+rule Win_Ircbot_Fruit_5
+{
+strings:
+	$a0 = { 6b3dd62fe2c1d4361b040aad07f88c5f221db8c431aaffb1d9dee9faed69e25dad400d16b06f3c17cb07256d947cf71175bc695c29381241ca7c8bc8beee5a9ec729f092ddda3785874282d655f3e99af5c0b27d4ece1b851b2284235bfc6a5b14c5aab556390a463b05f627450b0f15a1cd }
+
+condition:
+	$a0
+}
+
+        

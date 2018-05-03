@@ -1,0 +1,10 @@
+rule Email_Phishing_Webmail_14
+{
+strings:
+	$a0 = { 56656a61[56]56656a61206d61706173206520656e636f6e747265206173206d656c686f72657320726f746173 }
+
+condition:
+	$a0
+}
+
+        

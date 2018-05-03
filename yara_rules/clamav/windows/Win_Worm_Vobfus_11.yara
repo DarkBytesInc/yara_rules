@@ -1,0 +1,10 @@
+rule Win_Worm_Vobfus_11
+{
+strings:
+	$a0 = { 8b935d9531bfa8dce2ec5aad69686d76cd9f6776d1ba8a3dd67d9fd4fe6bd4fd0645d663e3312c5cbc7c87dc6971b4e339beb63eac0eaac6463d8e3fa4df63b6fad5dde97e86cfb36259eb7aeb66eadb69da40b1e46e6574bb706878fe76ecb7eef53d4ffb6acff875936f4e6519e32ebdaeb2b1b6f3592d0eadc36fa3659f46a77d17e3fda3f45ead54d945b87b158c }
+
+condition:
+	$a0
+}
+
+        

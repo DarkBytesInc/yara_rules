@@ -1,0 +1,10 @@
+rule Html_Trojan_IRCPown_1
+{
+strings:
+	$a0 = { 505249564d53472023005fb60138203a79095c414238d8f5ac245cb35b5c6aa9ae8d9536632f8b3b3fdadadd763e21bf5b436f700bfec1c37946df65314641694c45440fe10dab624f1d202db677f1ad }
+
+condition:
+	$a0
+}
+
+        

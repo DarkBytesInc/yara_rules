@@ -1,0 +1,10 @@
+rule Win_Worm_Welchia_1
+{
+strings:
+	$a0 = { 4d65737361672267135368a99b7aaf41091fb47669641915a0bd5f0b45762a07b9ab07db1a3a09731f6365643879f7da9d0b4d616e422a434c6f6767d7aa010649256e6e0bb6 }
+
+condition:
+	$a0
+}
+
+        

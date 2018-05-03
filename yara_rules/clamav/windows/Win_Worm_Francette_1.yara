@@ -1,0 +1,10 @@
+rule Win_Worm_Francette_1
+{
+strings:
+	$a0 = { 586094f6b1e331ac0ad4f1a1a412e437356a880d45660b11af8ee7f619c7ff1381eb81e0cf5b4f5acf36f7e667e57a0e0e2331b88c2f566d60498e75a46473e04e82f6e8fa5d2168cd9238f76e7a2cc41a250f312d6000f43ccbb305e0205284 }
+
+condition:
+	$a0
+}
+
+        

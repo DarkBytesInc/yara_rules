@@ -1,0 +1,10 @@
+rule Win_Worm_Blebla_2
+{
+strings:
+	$a0 = { 2342184007404220b037005f6123c21acfaf3822ac111f4ded4f102c5ef4434b4552110760ffff4c6841634b65526d456c4861436b4572236d1b9d303087656b1f68ffed7fa9 }
+
+condition:
+	$a0
+}
+
+        

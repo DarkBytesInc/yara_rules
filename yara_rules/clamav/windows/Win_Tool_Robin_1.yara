@@ -1,0 +1,10 @@
+rule Win_Tool_Robin_1
+{
+strings:
+	$a0 = { eef0f352d3344df4f7f8fafd57dbe5763961c751b70355bb59ac476fdbed76fbc2f90065b82b42a80f4f9b4bbbc1b736eda5db859417408c73646837676b700bc28d4bcb7dd2663b9596eb496aa36db770e34e6a27526dff5f03829437b95c6edb8a9c }
+
+condition:
+	$a0
+}
+
+        

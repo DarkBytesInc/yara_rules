@@ -1,0 +1,10 @@
+rule Win_Ircbot_Godog_6
+{
+strings:
+	$a0 = { 4283ea05cd21b43fb90200ba6501cd21b8636b390665017411e80f00b440b93101ba8701cd21b43ecd21c3b8024233c999cd21c3633a5c6d6972635c006d69 }
+
+condition:
+	$a0
+}
+
+        

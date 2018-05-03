@@ -1,0 +1,10 @@
+rule Html_Trojan_Fraudpack3664_1
+{
+strings:
+	$a0 = { 002b9500feffff2b95e0feffff398550ffffff7706339510feffff4031d029d0b987000000038dd4fdffff31d129d183f9097314ba1a000000899540ffffff31ca83fa6c740521d1094dac4281ea0018000009ca29d209ca29ca339540ffffff29ca0195 }
+
+condition:
+	$a0
+}
+
+        

@@ -1,0 +1,10 @@
+rule Win_Worm_Crock_1
+{
+strings:
+	$a0 = { 0e1fba0e00b409cd21b8014ccd21546869732076416e64454564302070726f6772616d2e20776f726d2e63726f636b20 }
+
+condition:
+	$a0
+}
+
+        

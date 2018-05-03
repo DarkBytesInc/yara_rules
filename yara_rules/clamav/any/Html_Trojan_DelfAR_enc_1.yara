@@ -1,0 +1,10 @@
+rule Html_Trojan_DelfAR_enc_1
+{
+strings:
+	$a0 = { 6d7f5250684408210485f46815ad36fdac6db7c1f885bf0a3444eb5e6803635f7bcfadc901e615d81b187dfbd9d88bf714319885c0740b0d506a3056ac6df89da70f065a508b430440143ed908ed68089d35118d85f0fb9077ae194b1811dffc }
+
+condition:
+	$a0
+}
+
+        

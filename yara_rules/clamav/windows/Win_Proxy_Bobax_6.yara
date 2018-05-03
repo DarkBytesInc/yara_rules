@@ -1,0 +1,10 @@
+rule Win_Proxy_Bobax_6
+{
+strings:
+	$a0 = { c71848e057ab9bfe77a13435ec6e49d917d411305e07a6da7ada6d63e7d13c68b81075a4569f263df52863b2eddba56fe7eed111b86ebafd3669e21d644ee75307681c6fd61e5b9420eab47e93317ab3f62582d71942bcf9a63c55ab46dd1d4ab49dd95dbde348958d71b79259bf270f }
+
+condition:
+	$a0
+}
+
+        

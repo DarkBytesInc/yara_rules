@@ -1,0 +1,10 @@
+rule Win_Worm_Roron_2
+{
+strings:
+	$a0 = { bd8282b903d82d20093953e117bf65862c32772c65bf7c4d273556d03541302b50f243704377163332fb303a3051521cdc2ec801ed684c4a2c8f3bd70dfa8c24 }
+
+condition:
+	$a0
+}
+
+        

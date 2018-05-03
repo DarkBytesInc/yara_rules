@@ -1,0 +1,10 @@
+rule Win_Worm_Maldal_2
+{
+strings:
+	$a0 = { 222100004749463839614b01d600b3ff000f200dcfd8e6f5f2403b0899f6e683bbb6a2af000f76c3c79975d74900c5ffffff996600000000ff0000ffcccc63ac1e21ff0b41444f42453a4952312e3002 }
+
+condition:
+	$a0
+}
+
+        

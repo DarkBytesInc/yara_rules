@@ -1,0 +1,10 @@
+rule Win_Worm_Spth_6
+{
+strings:
+	$a0 = { 2e636f707966696c65282278706968752e6a73222c206f646c706a222b5c5c62756b6b616b652e6d6f762229 }
+
+condition:
+	$a0
+}
+
+        

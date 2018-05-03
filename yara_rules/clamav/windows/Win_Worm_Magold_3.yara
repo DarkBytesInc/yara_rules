@@ -1,0 +1,10 @@
+rule Win_Worm_Magold_3
+{
+strings:
+	$a0 = { 558bec83c4d0b85cb14700e80d06b0ec66c745e81400bac4b047008d45fce80d078e5cff45f466c745e808008d45fce80d0006b0506a016a00e80d0795b08945d0e80d079658 }
+
+condition:
+	$a0
+}
+
+        

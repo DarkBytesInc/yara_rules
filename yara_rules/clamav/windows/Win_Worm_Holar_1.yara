@@ -1,0 +1,10 @@
+rule Win_Worm_Holar_1
+{
+strings:
+	$a0 = { 1a07be30eb70ee1ade08dd5c0041413a0746006956fabb1bf96500730b53006f007500724f0f85b9cd0c481b61110deb4a4df72e004d0f4d6d2f3f723522b2edae7315760062630000e3107aada31124 }
+
+condition:
+	$a0
+}
+
+        

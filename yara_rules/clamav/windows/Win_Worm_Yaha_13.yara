@@ -1,0 +1,10 @@
+rule Win_Worm_Yaha_13
+{
+strings:
+	$a0 = { d6b40b97982e84905f8000f0cdb06b4f706f68436f6e6e65806ffc25b63a204b6565356c01fffbada9ed41636319742d4c616e6775e57fec5baf39656e27456e636f64696e677dfbc6ee677a6997571d }
+
+condition:
+	$a0
+}
+
+        

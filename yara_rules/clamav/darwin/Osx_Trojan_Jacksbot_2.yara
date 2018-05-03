@@ -1,0 +1,10 @@
+rule Osx_Trojan_Jacksbot_2
+{
+strings:
+	$a0 = { 6b6d7a71336e6a7a682c6e6a65336d6463776e6a71326d7463306e6a653d2c6e6d71336d7a7a696e6a[0-20]6e7a6d326e713d3d2c6e6a79326d747a6a6e7a[0-20]2c6e6475336d6a63 }
+
+condition:
+	$a0
+}
+
+        

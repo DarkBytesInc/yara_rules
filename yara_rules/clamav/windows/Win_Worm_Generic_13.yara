@@ -1,0 +1,10 @@
+rule Win_Worm_Generic_13
+{
+strings:
+	$a0 = { 2f72756e20617474726962202b72202b73202b6820433a5c6d6972635c5363726970742e696e6922 }
+
+condition:
+	$a0
+}
+
+        

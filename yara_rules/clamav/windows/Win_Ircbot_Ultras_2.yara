@@ -1,0 +1,10 @@
+rule Win_Ircbot_Ultras_2
+{
+strings:
+	$a0 = { 66647368756e716d6472722f6b71662f626e6c0c0b6f35323c21212121212121217c0c0b6f35353c212121217c0c0b6f }
+
+condition:
+	$a0
+}
+
+        

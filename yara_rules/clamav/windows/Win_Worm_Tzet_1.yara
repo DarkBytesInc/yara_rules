@@ -1,0 +1,10 @@
+rule Win_Worm_Tzet_1
+{
+strings:
+	$a0 = { 23eea478c78c7fa683c53762b5d287b3492fa3438e9506074732ab2f6e9bb7657bcef6e91d8ef93907136a7ee46f7d1ef9e25fefd9b81b93cfd8c3a97a6c89eedc2e8f3d85c31501dc58b20d20ebc17beeb0e05de5822ab220acc5740eb08960a9996029ab2cc500e60b573be6f8c3cd9c4aee6c660193 }
+
+condition:
+	$a0
+}
+
+        

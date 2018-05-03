@@ -1,0 +1,10 @@
+rule Win_Worm_Paps_1
+{
+strings:
+	$a0 = { 38d45e5bc300ffffffff8e00000048692064752120486162206d616c207363686e656c6c2065696e207061617220466f746f73206d69 }
+
+condition:
+	$a0
+}
+
+        

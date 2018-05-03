@@ -1,0 +1,10 @@
+rule Win_Proxy_Lager_55
+{
+strings:
+	$a0 = { 452c1fc8140c6b64080a096b7ea2f16814e2a3fa973aee78f00f26b8ae020813a807767a94086e0d57d54a062c75b3794f25fe3c490a118fc3739ee3ba658b787855008a1990 }
+
+condition:
+	$a0
+}
+
+        

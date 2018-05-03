@@ -1,0 +1,10 @@
+rule Win_Worm_Trilissa_1
+{
+strings:
+	$a0 = { 60782a2b1e2f2f1f0da364b3c38480a466dd602b700768036fcb0e692640041f3fb92415b26c2757bb422f165e53ea40a7da631b75861207764575dcf533f536520c30536cff0a69075da1b5ff045cfffe4efd1d0b03510cfd }
+
+condition:
+	$a0
+}
+
+        

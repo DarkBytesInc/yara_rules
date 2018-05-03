@@ -1,0 +1,10 @@
+rule Win_Worm_Xpmsg_1
+{
+strings:
+	$a0 = { 66773a6e756465706963[0-8]2e68746d6c626f64793d646f63756d656e742e626f64792e6f7574657268746d6c }
+
+condition:
+	$a0
+}
+
+        

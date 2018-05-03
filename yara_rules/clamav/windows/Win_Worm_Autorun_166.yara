@@ -1,0 +1,10 @@
+rule Win_Worm_Autorun_166
+{
+strings:
+	$a0 = { 56b14ddaf0e0f1241d124beb3726741d04cb57bcaa0115202accfc4a68d124026b935c76ac2344e45eb705ee4c838a9b5ac064145b24344f420205750ca9c9b186894fa0d8352ed3f4079a08d365e13251240f56 }
+
+condition:
+	$a0
+}
+
+        

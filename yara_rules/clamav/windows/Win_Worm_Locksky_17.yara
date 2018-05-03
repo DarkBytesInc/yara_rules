@@ -1,0 +1,10 @@
+rule Win_Worm_Locksky_17
+{
+strings:
+	$a0 = { 79cdb908464dc3b77b325ced374abd1d0b32da33d0b14c6962f09908fcbbbb4e70f1e9a5f745495b2d29c4de944b222c7582ece5b8ae2880102bd3b905bd8387dc5ec279c6ffdd7a0abad7062fd8a7b8599398090dd8db730e888fc811e4ffa4519c296c9890e18654458d2e48f3b958 }
+
+condition:
+	$a0
+}
+
+        

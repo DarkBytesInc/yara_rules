@@ -1,0 +1,10 @@
+rule Win_Ircbot_Debat_1
+{
+strings:
+	$a0 = { 25302e626174205c785c782e6261743e6e756c0d0a636f70792025302e62617420633a5c6d6972635c6d69726364656d }
+
+condition:
+	$a0
+}
+
+        

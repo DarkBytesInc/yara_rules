@@ -1,0 +1,10 @@
+rule Html_Trojan_ZBotDropper_1
+{
+strings:
+	$a0 = { 6825f1d2b8ff74241ce8c5030000ffd03bc30f84d1020000505368ac389ff7ff742418e8ab030000ffd083c0360f84b6020000ff70148d4818894c2418ff74241850e89dfeffff8b4424140fb60083c00f }
+
+condition:
+	$a0
+}
+
+        

@@ -1,0 +1,10 @@
+rule Win_Worm_VB_572
+{
+strings:
+	$a0 = { 625eae5e40816c74544c73d76cac7a85cfbac36072bf0ea41082ab03408fb8fad40ebcf1504343e87ba45f7daafb960a21b83a00707521841082ab03e0ea5c5db4271e7bf18f071c719476c81293eeb86bdbb13b6eb3ddd85f5e70513bca7f72eaeb074f3ce6f2eb6f7cf5bfffa9b50557e7ea00b87ac7b93a8769310e3a7ae21ffff2dfc9577e77dfefe79d6f }
+
+condition:
+	$a0
+}
+
+        

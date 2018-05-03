@@ -1,0 +1,10 @@
+rule Win_Worm_Stepaik_1
+{
+strings:
+	$a0 = { 694deab96b1c74c1814d898262e1c2fe5003a193452c10aabbfc9922594e4f2ae4cedffec7568f3c1e11c9490d5806589024246da2850c21ffc70af8827cfd1116a0febffadc555c4374cabb752a1ad447709a5da571cf151ab71fceb79a8f3be1fa2578c525c3ce785be857d7ca10df92c5bd92d0561a77482c115b }
+
+condition:
+	$a0
+}
+
+        

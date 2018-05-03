@@ -1,0 +1,10 @@
+rule Doc_Trojan_Twister_11
+{
+strings:
+	$a0 = { 4170706c69636174696f6e2e43617074696f6e203d20224d696372f873f866742057f87264202d2057696e4e756b657222 }
+
+condition:
+	$a0
+}
+
+        

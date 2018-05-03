@@ -1,0 +1,10 @@
+rule Win_Ircbot_Septic_3
+{
+strings:
+	$a0 = { 726962202b72202b6820633a5c706f726e6f2e636f6d00200d0a646f736b6579206469723d646d247464697220242a3e }
+
+condition:
+	$a0
+}
+
+        

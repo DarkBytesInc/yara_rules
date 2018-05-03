@@ -1,0 +1,10 @@
+rule Html_Trojan_BifroseClient_1
+{
+strings:
+	$a0 = { 477892b1cbfcbdd3f25dc3efdf25489ad0b18b7a595ee09574995311753519174b6c6b5eedb1e72a60c59940cccf9a56c66c6cf49877e48e81cafe6c37ea3e12bf12779eea3cb8f189d56c58d85f7c15b1f4037de12099f2fcf8bc243d3ed7762b52366ee39e6be290f6747b36f39b058edad9157b2dcd489ac22e559daed768a1e57aface1554 }
+
+condition:
+	$a0
+}
+
+        

@@ -1,0 +1,10 @@
+rule Win_Worm_Netav_1
+{
+strings:
+	$a0 = { fbbffde560e8000b8b642408e90701bd33d264ff3264892215fbffffbd09ea33c01c2952696e734d75746578005050ff15d622402f1772567ec00f858401204a9aee676b37a3ba27040aa2ea294028ba }
+
+condition:
+	$a0
+}
+
+        

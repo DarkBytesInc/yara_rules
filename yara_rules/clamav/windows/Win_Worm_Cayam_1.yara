@@ -1,0 +1,10 @@
+rule Win_Worm_Cayam_1
+{
+strings:
+	$a0 = { 24dadc1b1217dbdd8142de177265740269c9c6aa0a22b0484b1f211bb223bb220f779c1792cf757fac035f791f7bc4e1898b080739628a8fd8de0b00635177baae6b584b6ecb6f09730f6d056636604b }
+
+condition:
+	$a0
+}
+
+        

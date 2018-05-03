@@ -1,0 +1,10 @@
+rule Win_Worm_Socks_7
+{
+strings:
+	$a0 = { 8bec6a016878834000e8cafdffff83c408a3301240005dc3558bece8020000005dc3558bec6a0268a8834000e8a7fdffff83c408a3081140005dc3558bece8020000005dc3558bec6a0568b0834000 }
+
+condition:
+	$a0
+}
+
+        

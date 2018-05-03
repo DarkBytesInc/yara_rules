@@ -1,0 +1,10 @@
+rule Html_Trojan_ClickerSmall_46
+{
+strings:
+	$a0 = { 3a2f2f682d342e75732f6370e826c7616d2e6d3802430231303031341881ffffffff0b473231ec38c2113634098ac0083235e808d70437363041115834c2200cc336df6eff }
+
+condition:
+	$a0
+}
+
+        

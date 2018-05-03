@@ -1,0 +1,10 @@
+rule Win_Worm_Sircam_1
+{
+strings:
+	$a0 = { b9410000006a006a004975f951535657b8d4a84100e8bfb0feffbe10ef410033c05568ddb4410064ff3064892033c055688eb4410064ff306489206a20e8d3b1feff50e8fdb2feff6affe8d6b1feff50e8f8b2feffe8ebfdffff8d4df033d2b8f4b44100e89cb5ffff8b55f0b8fcee4100e8 }
+
+condition:
+	$a0
+}
+
+        

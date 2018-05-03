@@ -1,0 +1,10 @@
+rule Win_Worm_Sonic_4
+{
+strings:
+	$a0 = { 78277663587d633d58557b29282b5e6b7471655e66636e6d582d00000000587d6a7c1e697e7300000000536f6e6963596f }
+
+condition:
+	$a0
+}
+
+        

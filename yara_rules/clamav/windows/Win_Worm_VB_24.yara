@@ -1,0 +1,10 @@
+rule Win_Worm_VB_24
+{
+strings:
+	$a0 = { debffd1f77696e33322e43616672082e776f726d0053f53fd70cc9fc39436f007030b3dde70c57000bfc13105017c71eb00d5e184953cc12408b942a849c9cb0400fd412d03fdbb5f6b70168b14f0b44 }
+
+condition:
+	$a0
+}
+
+        

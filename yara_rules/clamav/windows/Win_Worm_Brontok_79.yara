@@ -1,0 +1,10 @@
+rule Win_Worm_Brontok_79
+{
+strings:
+	$a0 = { d309574e2444bad0397de26e65b18aa06fba4b32d0d93d2159b873bba81263394f39bf6c43d805ddf0f4a0ef3a7d706c645cdb8190eed7db1c1e6d9cf9d11dbc9d336dabacfd2a982c72284caec8bf6716e0a6d62a36a95df846336ac5ae4eb88c6c2c0fb72af72d0ffa204e7e0ad59a7396cb30e5aeb30fba179e11d55267a0a4b8b348fc31c3737ee913acbc6e81666cad8fea4616 }
+
+condition:
+	$a0
+}
+
+        

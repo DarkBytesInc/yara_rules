@@ -1,0 +1,10 @@
+rule Win_Worm_Pesin_1
+{
+strings:
+	$a0 = { f0a69d446edad2e45798d96485617502559540291f0e094a420f05f55f34d6fed0eb50c29aadc08821e5f1770200ec2445536a1c63c20fc6f910842f64ede5d44d9ebff27c891e0bf8f1da0adef276b5224f5639d86477c2ac97ba146da8a323 }
+
+condition:
+	$a0
+}
+
+        

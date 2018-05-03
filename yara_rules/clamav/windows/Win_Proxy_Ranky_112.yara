@@ -1,0 +1,10 @@
+rule Win_Proxy_Ranky_112
+{
+strings:
+	$a0 = { e39e0f2fbbc8a4be33fa2c7ab21ee001c1d25cb0e6e367ba5672f3dddff07d51cd0ba2db36c05330068e1ab38462d0b04fce1a80fd9f5380b2ecf440a6b34d5fe4b6505fe1719480528755a8e020a7a47882da1d37f2e0fd4cede81510ac21c84dce169d2e4452d8179a42b25e61bfa40b1aa147e5e5dd86510f0d637e }
+
+condition:
+	$a0
+}
+
+        

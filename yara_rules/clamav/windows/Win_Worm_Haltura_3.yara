@@ -1,0 +1,10 @@
+rule Win_Worm_Haltura_3
+{
+strings:
+	$a0 = { 8bc849ba01000000a1d0784100e865e6ffff8b45ecb988534000baa0534000e86ff8ffff68d07841008b15d0784100b87c534000e87ee6ffff83c00250a1d0784100e8e0e3ffff8bc8a1d07841005ae823e6ffff }
+
+condition:
+	$a0
+}
+
+        

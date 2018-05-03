@@ -1,0 +1,10 @@
+rule Doc_Trojan_Hopper_11
+{
+strings:
+	$a0 = { 49662041572e4c696e657328312c203129203c3e2022273c212d2d424541542c56312e302d2d3e22205468656e }
+
+condition:
+	$a0
+}
+
+        

@@ -1,0 +1,10 @@
+rule Win_Worm_Yarner_4
+{
+strings:
+	$a0 = { fc8a12e8aca5faff8d45ccba60a14500e87fa6faff8b45cce8a7eeffff33c05a59596489106867a045008d45ccba0d000000e8c1a3faffc3e9bf9dfaffebeb5f5e5b8be55dc30000ffffffff0c00000079617773657475702e65786500000000ffffffff1900000054726f6a616e65722d496e666f204e65 }
+
+condition:
+	$a0
+}
+
+        

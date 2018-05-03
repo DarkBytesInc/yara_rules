@@ -1,0 +1,10 @@
+rule Win_Worm_Rbot_8
+{
+strings:
+	$a0 = { 4d6f640bbfedff7f642072426f74206279205302293a205b561d7328302ef3643bf3322e315d5a2d0000503fffa8dbb568448b76030600020167fbad21a70307 }
+
+condition:
+	$a0
+}
+
+        

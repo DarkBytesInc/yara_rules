@@ -1,0 +1,10 @@
+rule Win_Worm_Protoride_2
+{
+strings:
+	$a0 = { 1b053f56f8b74e78412046554e4349641b505249564d08b7ffed5347202b203a033134023a3a020632210e7b18b62c11b0c82e021bdb3d0c933a6d75296c }
+
+condition:
+	$a0
+}
+
+        

@@ -1,0 +1,10 @@
+rule Win_Worm_Bloop_1
+{
+strings:
+	$a0 = { 743d2242256b6c25736562616c6c20426c6f6f7065727322203e3e20433a5c6c7525766a25692e256b6c252e766225676d250d }
+
+condition:
+	$a0
+}
+
+        

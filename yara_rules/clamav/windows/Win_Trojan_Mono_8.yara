@@ -1,0 +1,10 @@
+rule Win_Trojan_Mono_8
+{
+strings:
+	$a0 = { 5390908b??90908b??90908b??90908b??90908b??90908b??90908b??90908b??90908b }
+
+condition:
+	$a0
+}
+
+        

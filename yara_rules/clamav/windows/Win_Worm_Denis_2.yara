@@ -1,0 +1,10 @@
+rule Win_Worm_Denis_2
+{
+strings:
+	$a0 = { 408b15e0f340008902a100f440008b00baf4de4000e80ce7ffff8b15c4f3400089028d4df4a100f440008b00ba08df4000e864e6ffff8b55f4a1e8f34000e8b754ffff33c05a5959648910eb0a }
+
+condition:
+	$a0
+}
+
+        

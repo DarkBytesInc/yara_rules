@@ -1,0 +1,10 @@
+rule Win_Worm_Sasser_1
+{
+strings:
+	$a0 = { 14ff0536246fb38b350648e2276838bd5cbcdb2cad83081528d43f2e743125dbaf6cbd588b3550e359365f9df6bb403c2fb90408760fe72a208b5e5ff0e3e408895364d636333915039d9fc35a35d03b }
+
+condition:
+	$a0
+}
+
+        

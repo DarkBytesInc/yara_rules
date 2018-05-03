@@ -1,0 +1,10 @@
+rule Win_Ircbot_IrcBat_1
+{
+strings:
+	$a0 = { 206f70657273657276207b0d0a6e393d202074726f6a616e2e6d736720286d73673a6f70657273657276292024312d0d }
+
+condition:
+	$a0
+}
+
+        

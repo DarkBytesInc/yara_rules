@@ -1,0 +1,10 @@
+rule Win_Worm_Licat_1
+{
+strings:
+	$a0 = { 6cd931d7730eb2950db2ea7f3bd6ca56d2c4c92b48ab8c55d1074b25f0465c8fad10c242c24b905dd86c90543ba5329a425a65a9af32462b6c40fa32e813f61732d16e25567970686f746fb1 }
+
+condition:
+	$a0
+}
+
+        

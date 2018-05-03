@@ -1,0 +1,10 @@
+rule Html_Trojan_Blackhole_69
+{
+strings:
+	$a0 = { 6d656e742e626f64797d63617463682867647367736467297b773d77696e646f773b763d2265222b763b653d775b765d3b7d }
+
+condition:
+	$a0
+}
+
+        

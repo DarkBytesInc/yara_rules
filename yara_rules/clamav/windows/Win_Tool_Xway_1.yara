@@ -1,0 +1,10 @@
+rule Win_Tool_Xway_1
+{
+strings:
+	$a0 = { 423e8301b420454107d24762b0f4a1c022737c81c906f7151bdd66637fc775d3fc67f88e775aeea0373ba817333bc06b9902b6bc82d582eadbc9054901aba905aea05b8ea416ba91c7aea41f4d705add720fa6a0357520e5d6a0b997520f5ba06f73342d73ba5ee7efffaf77fbe7cfbf7cf3ef9e79bfbe6f7bfc03e7bfc10d32041a932dbaddbd5b2d5bd960 }
+
+condition:
+	$a0
+}
+
+        

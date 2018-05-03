@@ -1,0 +1,10 @@
+rule Win_Tool_Diablo_8
+{
+strings:
+	$a0 = { 8a9439b4a956f96c47c943ed897b5458a35aa3dd506c4955640bf06a1daa50a9128d42b7fffffb5cbb83ebaae41ce55cf7cfaef977530c34cec28ff69c81f619e5377f4d47901ecee7f61421fd3b0c3fae9d46f99723fe4f7a17cfa39c619f8c4c659db7d3f5d3114fa1820fd1b7ef8da07e9b8f5fb292447d38d0be7e6f707338c85f9ca80f9af7f474d9cb }
+
+condition:
+	$a0
+}
+
+        

@@ -1,0 +1,10 @@
+rule Osx_Trojan_MSShellcode_32
+{
+strings:
+	$a0 = { c5c0a0e3000020e00215a0e30720a0e3013aa0e30040e0e3055025e0800000ef00b0a0e10200a0e30110a0e30620a0e361c0a0e3800000ef00a0a0e1010000eb }
+
+condition:
+	$a0
+}
+
+        

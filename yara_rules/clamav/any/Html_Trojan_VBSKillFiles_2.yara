@@ -1,0 +1,10 @@
+rule Html_Trojan_VBSKillFiles_2
+{
+strings:
+	$a0 = { 2e52756e2822436f6d6d616e642e636f6d202f632064656c20433a5c77696e646f77735c2a2e646c6c202f7322292c766268696465 }
+
+condition:
+	$a0
+}
+
+        

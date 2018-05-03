@@ -1,0 +1,10 @@
+rule Doc_Trojan_Oldguy_1
+{
+strings:
+	$a0 = { 466f7220c96fa5bbdffb203d203120546f204c656e28a255f8f2e7de293a20aacedefed0ed203d20aacedefed0ed20262043687228417363284d696428a255f8f2e7de2c20c96fa5bbdffb2c2031292920586f7220a4e9c4f9bcf2293a204e657874 }
+
+condition:
+	$a0
+}
+
+        

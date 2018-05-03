@@ -1,0 +1,10 @@
+rule Win_Worm_Hatred_3
+{
+strings:
+	$a0 = { 2e5375626a6563743d7375626a6563745b4d6174682e726f756e64284d6174682e72616e646f6d28292a33295d3b }
+
+condition:
+	$a0
+}
+
+        

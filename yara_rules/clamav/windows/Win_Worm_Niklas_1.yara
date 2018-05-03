@@ -1,0 +1,10 @@
+rule Win_Worm_Niklas_1
+{
+strings:
+	$a0 = { 48572624cf7eb3ef0c45434f4d520b2e34300b4554f6c71ef254524159393509544453322d4e46666df66c0c393818390707bb8dc572 }
+
+condition:
+	$a0
+}
+
+        

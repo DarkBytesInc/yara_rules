@@ -1,0 +1,10 @@
+rule Osx_Trojan_MSShellcode_48
+{
+strings:
+	$a0 = { 680a074dba68ff02115c89e731c0506a016a026a10b061cd805750506a6258cd80506a5a58cd80ff4fe879f6682f2f7368682f62696e89e35054545350b03bcd }
+
+condition:
+	$a0
+}
+
+        

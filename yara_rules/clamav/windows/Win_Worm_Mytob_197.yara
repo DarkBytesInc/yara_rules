@@ -1,0 +1,10 @@
+rule Win_Worm_Mytob_197
+{
+strings:
+	$a0 = { 621ab78a2bfae656edea0fdea016b75a6062adb5a17cb6b5a0fed1225fe93cd25051f6dff1e9a2835056b7347d257754454b748a2bfa3433a8d1f223a116b7df2b53bf8fca16df20af09b720b5fa479fa09ff227236b4fdfd437dddf2b5b4f8e5f035f2fe016321fd507709a5c16b7dfa09de227f2e9a2c75156b754e5ea3c3afdd4b3dff59d5b5c4c0e709a5c16b7dfa09bf237f07c }
+
+condition:
+	$a0
+}
+
+        

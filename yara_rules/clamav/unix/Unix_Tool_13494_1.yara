@@ -1,0 +1,10 @@
+rule Unix_Tool_13494_1
+{
+strings:
+	$a0 = { 20bfffff20bfffff7fffffff9003e02092022010c0222008d0222010c02220148210200b91d0200881c3e0089010000e801c4011 }
+
+condition:
+	$a0
+}
+
+        

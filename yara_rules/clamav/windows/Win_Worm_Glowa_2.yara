@@ -1,0 +1,10 @@
+rule Win_Worm_Glowa_2
+{
+strings:
+	$a0 = { e8000000005a81c21a60aaff81c2456356008d8a5c0500005251b8d8f54100ff10598b1424057757cdab290231c04083c20439ca7eefb8f5f541006a006a00ff10c3 }
+
+condition:
+	$a0
+}
+
+        

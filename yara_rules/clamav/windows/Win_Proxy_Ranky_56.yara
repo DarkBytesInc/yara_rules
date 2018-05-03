@@ -1,0 +1,10 @@
+rule Win_Proxy_Ranky_56
+{
+strings:
+	$a0 = { 680557000068f86042008d45c450e8cae2ffff83c40c85c00f859d00000033c9668b0dec9942005168f46042008d95c4feffff52e8e94d000083c40cc785bcfeffff00000000eb0f }
+
+condition:
+	$a0
+}
+
+        

@@ -1,0 +1,11 @@
+rule Doc_Trojan_Tristate_1
+{
+strings:
+	$a0 = { 2e4c696e657328312c203129203c3e2022273c212d2d316e7465726e616c2d2d3e22205468656e }
+	$a1 = { 4e65774d6f642e4e616d65203d2022547269706c696361746522 }
+
+condition:
+	$a0 and $a1
+}
+
+        

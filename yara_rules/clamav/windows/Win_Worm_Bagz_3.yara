@@ -1,0 +1,11 @@
+rule Win_Worm_Bagz_3
+{
+strings:
+	$a0 = { c05cab42cafc14277d98697368700694c3a005ee03dbd70aa310142b4a659420165e0ee20bd1955c }
+	$a1 = { 7a616c75706100005c7379736c6f67696e2e657865000000776200005c646c }
+
+condition:
+	$a0 and $a1
+}
+
+        

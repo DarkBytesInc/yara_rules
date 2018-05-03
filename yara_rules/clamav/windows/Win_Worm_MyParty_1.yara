@@ -1,0 +1,10 @@
+rule Win_Worm_MyParty_1
+{
+strings:
+	$a0 = { aa328cf24554d90b307c407eca9a4cf02a4d5a90000332c8b26904ffffb840f97f370080040e1fba0e00b409cd21b8014c001f027c54686973c363616e042568d54562e2c876b0ffbf0420444f53 }
+
+condition:
+	$a0
+}
+
+        

@@ -1,0 +1,10 @@
+rule Win_Worm_Bobax_42
+{
+strings:
+	$a0 = { b3fc9a7ca4a52a9168a6ed7a141c8b9356d015ce19573e14818a7bbdaeee375f11a26b4339417a10555266dc4ff3db19bc16b446e7004a79d6cb9ccbfa2ceab45c041a7427c46b83bd3dd430e21de46c07e1bc1d6c65db40ec0a634aee3d6f25377aecbe437efedac11d3cafc4d6e2141bfab55ae0c3fb370efde5a1a9c84f267e196b17037f017cabadb075b5582ac8fc0be5128ecb }
+
+condition:
+	$a0
+}
+
+        

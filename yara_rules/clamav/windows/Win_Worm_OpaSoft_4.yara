@@ -1,0 +1,10 @@
+rule Win_Worm_OpaSoft_4
+{
+strings:
+	$a0 = { 65793d313233343536267265733d302020485454502f312e310d0a486f73743a207777772e6e33742e636f6d2e62722e0d }
+
+condition:
+	$a0
+}
+
+        

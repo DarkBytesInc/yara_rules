@@ -1,0 +1,10 @@
+rule Win_Worm_Bagle_8
+{
+strings:
+	$a0 = { 746ba9460b887a7702d69edb6d6a4f19d100a7caf04736dbfbfb0401b9021935023416a5a2ff82b73dd8f60bab98079969fb474926dfbe95bb35ab7ec5fe06e0f40140f101f9d51fd976770bc1f0810955af2204a9c5ae06cafebb7725350d74ca4dc160b07e55a5baf8ad1f730b19 }
+
+condition:
+	$a0
+}
+
+        

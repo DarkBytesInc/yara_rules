@@ -1,0 +1,10 @@
+rule Win_Worm_Spear_2
+{
+strings:
+	$a0 = { fd6f761eff0a686f73745f66616b6572130cf6b2f78773706f6f66152b697015c9dee45b13083d27c937b09f0d64656e40170b7f7bd82c2e2b7472416f }
+
+condition:
+	$a0
+}
+
+        

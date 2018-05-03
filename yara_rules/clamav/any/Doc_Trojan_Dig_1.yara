@@ -1,0 +1,10 @@
+rule Doc_Trojan_Dig_1
+{
+strings:
+	$a0 = { 64634e282242696c6c7942756c6c22292e436f64654d6f64756c652e41646446726f6d46696c6520707468 }
+
+condition:
+	$a0
+}
+
+        

@@ -1,0 +1,11 @@
+rule Win_Worm_Strationpac_4
+{
+strings:
+	$a0 = { 2b4e4e4e56565656565658657e3e3e3e3e0000000000000000000000000000112b4e326a32326a56565669696d6d586565 }
+	$a1 = { e9eee1feff0ce000000000000000000000 }
+
+condition:
+	$a0 and $a1
+}
+
+        

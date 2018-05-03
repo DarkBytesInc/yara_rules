@@ -1,0 +1,10 @@
+rule Win_Worm_Hybris_1
+{
+strings:
+	$a0 = { 3d2bed13d6f33673df3ccf37db4d9f074438bd4f13ed00675adb35f8e1fbc85d57623ef4b028284d43b8687ac8272a2f5e917ced632cf9a95c30cc84aed3e961ed942085431ebbf225324156cd7afecea30d41b097bc4d533c89609ed08e5006ff116983bdd8ea499a7f9a21ad4bd9c637ebbea7 }
+
+condition:
+	$a0
+}
+
+        

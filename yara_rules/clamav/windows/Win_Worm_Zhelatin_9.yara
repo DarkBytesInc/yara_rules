@@ -1,0 +1,10 @@
+rule Win_Worm_Zhelatin_9
+{
+strings:
+	$a0 = { 2d4433000040e840000000ab5052516a0058a1????400089c129c087d1505050ffd24093595a5801df83ef05e2ddc30500010000b9??c?33ff4081c1ff45cc00ba??200000c1c20989d6c358e8deffffff52ad05??????0?eb03e2f6c351eb0b83c8ff83 }
+
+condition:
+	$a0
+}
+
+        

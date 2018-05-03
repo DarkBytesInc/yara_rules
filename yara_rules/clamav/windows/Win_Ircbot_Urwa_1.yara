@@ -1,0 +1,10 @@
+rule Win_Ircbot_Urwa_1
+{
+strings:
+	$a0 = { 6e333d6f6e20313a746578743a2a6c616d65723a3f3a2f616d7367204f2054414b212121204b55525741204a455354 }
+
+condition:
+	$a0
+}
+
+        

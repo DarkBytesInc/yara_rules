@@ -1,0 +1,10 @@
+rule Win_Ircbot_Gillich_1
+{
+strings:
+	$a0 = { 246e69636b203d3d20246d652029207b2068616c74207d206e31333d202f6463632073656e6420246e69636b }
+
+condition:
+	$a0
+}
+
+        

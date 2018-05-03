@@ -1,0 +1,10 @@
+rule Win_Tool_PHP_4
+{
+strings:
+	$a0 = { 6563686f20223c62723e3c62723ecdeab3c93c62723e3c62723e203c6120687265663d24626163656e616d653ebbd8c8a5bfb4bfb4a3bf3c2f613e3c62723e223b }
+
+condition:
+	$a0
+}
+
+        

@@ -1,0 +1,10 @@
+rule Html_Trojan_ZeusABS_1
+{
+strings:
+	$a0 = { 4c6974657261747572766f727374656c6c756e67656e360046656c73656e737469636831350000 }
+
+condition:
+	$a0
+}
+
+        

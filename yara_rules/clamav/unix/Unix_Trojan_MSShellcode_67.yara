@@ -1,0 +1,10 @@
+rule Unix_Trojan_MSShellcode_67
+{
+strings:
+	$a0 = { 6a7d5899b207b90010000089e36681e300f0cd8031dbf7e35343536a0289e1b066cd805b5e52680200115c6a10515089e16a6658cd80d1e3b066cd8043b06689 }
+
+condition:
+	$a0
+}
+
+        

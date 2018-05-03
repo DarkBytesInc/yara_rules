@@ -1,0 +1,10 @@
+rule Win_Worm_Indra_1
+{
+strings:
+	$a0 = { 75e68d7b03ba09681afc3ff89b8a4415e5b9c0e80480e40f66053030c395f017ffc3eb32c0aa77f8037d0879d0a3fe1e78823b7d0c770983ff1273c5ffb37fff3b03357225c6440d004f780dfe0e2439 }
+
+condition:
+	$a0
+}
+
+        

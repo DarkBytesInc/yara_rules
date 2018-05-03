@@ -1,0 +1,10 @@
+rule Win_Proxy_Mitglieder_10
+{
+strings:
+	$a0 = { 58450044725765622e65786514687474703a2f2f322e66fe7fc8ff726565636a2e636f6d2f612e6c6f6c69742e6e65742ffeffcdd611450253686f7748656c704d65 }
+
+condition:
+	$a0
+}
+
+        

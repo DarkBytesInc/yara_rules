@@ -1,0 +1,10 @@
+rule Win_Proxy_Ranky_63
+{
+strings:
+	$a0 = { b70e1372cd160d678119fb28367a3ad95eb1e0a5c9e33769e68fbf5de3ee456dad2cce61ab633a595456ec54bd8ae3690ab91fafb203a59569e1df7219eee5c77aba78b669fb545e21af274a3dc76e570197716ff81e092899c5181e8688916b7d5c172bee51c03800 }
+
+condition:
+	$a0
+}
+
+        

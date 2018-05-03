@@ -1,0 +1,10 @@
+rule Win_Worm_Stration_451
+{
+strings:
+	$a0 = { 3b3e2b4b2a5f532a05392a302caaf38a63eaafc687a0037c019eee8c23a64100d8fa4cde14ebdfb6f45a661da19acd1b2efc6f701f40e8085d752f9239eb1641fa5d61517f787418c3fb645d00d617854b57793f8b525ba070c23fa5f6df2d4127bd6fd574a9b0bc9237939edbcffc05abbe2f46525b5a6531e0 }
+
+condition:
+	$a0
+}
+
+        

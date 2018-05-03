@@ -1,0 +1,10 @@
+rule Win_Worm_Jadi_2
+{
+strings:
+	$a0 = { 83c40cc745fc040000006a026898534000ff151c124000c745fc050000008b55088b028b4d0851ff90f8060000 }
+
+condition:
+	$a0
+}
+
+        

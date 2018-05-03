@@ -1,0 +1,11 @@
+rule Win_Worm_Randon_30
+{
+strings:
+	$a0 = { 7479206572726f72215d207573657220636c69636b65643a204348414e4e454c21207c202f71756974207c202f }
+	$a1 = { 256d342002bd021fbe1f02bd021fbe1f02bd021fbe1f02bd021fbe1f02bd021fbe1f02bd }
+
+condition:
+	$a0 and $a1
+}
+
+        

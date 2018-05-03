@@ -1,0 +1,11 @@
+rule Html_Trojan_IRCBotscript_1
+{
+strings:
+	$a0 = { 28202431203d3d202d6d6173736465766f696365 }
+	$a1 = { 74696d65726d736720342033206d73672025666c6f6f646368616e2024332d }
+
+condition:
+	$a0 and $a1
+}
+
+        

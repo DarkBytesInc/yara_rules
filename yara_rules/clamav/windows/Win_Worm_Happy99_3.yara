@@ -1,0 +1,10 @@
+rule Win_Worm_Happy99_3
+{
+strings:
+	$a0 = { 8b0325dfdfdfdf3d5243505475378b430425ffdfdfff3d20544f3a7528e8b0070000890d04004200e8dd01000083f8000f8449010000c70595004200ffffffffe931010000 }
+
+condition:
+	$a0
+}
+
+        

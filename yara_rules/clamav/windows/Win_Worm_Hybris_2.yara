@@ -1,0 +1,10 @@
+rule Win_Worm_Hybris_2
+{
+strings:
+	$a0 = { f18daba1192840001a0ec7105347ff052928400072dc528b79351340908df72dbf2d4000825f0511a1de02a3bf2d4000825ff7f13a4f5a5972c56170c1f4393991c0656ddeff6961dd8d87dbb18d }
+
+condition:
+	$a0
+}
+
+        

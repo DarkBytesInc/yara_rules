@@ -1,0 +1,10 @@
+rule Win_Proxy_Small_4793
+{
+strings:
+	$a0 = { 07ba7b6df6c810fc5666e73f66b6333f7c0f4d6f178acb11e3cf2105d5632f9f03a6e4246a43cdd7bdce82af0fc2b15a469e6d98cbaa5bd49f000c38c01db75067268979acd5dc53d3fe7f50288c40d4601ffa5cb8b243bd9c0ab226b1d90c95de124b9886f996025bd0a2595c6fd4fd78ec8f2acb73186afb7d4a }
+
+condition:
+	$a0
+}
+
+        

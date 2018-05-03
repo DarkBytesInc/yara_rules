@@ -1,0 +1,10 @@
+rule Win_Worm_SomeFool_45
+{
+strings:
+	$a0 = { 420a610a670a6c0a0a650a20790a6f0a750a20730a680a690a740a740a790a200a670a750a790a2c200a790a6f0a750a200a770a690a6c0a6c0a200a6c0a6f0a6f0a730a650a21 }
+
+condition:
+	$a0
+}
+
+        

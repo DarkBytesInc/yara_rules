@@ -1,0 +1,10 @@
+rule Email_Phishing_DblDom_129
+{
+strings:
+	$a0 = { 687474703a2f2f[5-100]2f7777772e6e776f6c622e636f6d[5-200]796f7572206163636f756e74207365637572697479 }
+
+condition:
+	$a0
+}
+
+        

@@ -1,0 +1,10 @@
+rule Win_Worm_Delf_1608
+{
+strings:
+	$a0 = { 5d3ee4210c91118987570d09fe974181bb44599219fae7e01456ce65d02164f823f56493d461e50b15abd8093b5e9e340e760af3c3f4c1a6f843d077ff820afa1cbc15ff1bb29ebb7fa6fc22d268a36c18f86d7671 }
+
+condition:
+	$a0
+}
+
+        

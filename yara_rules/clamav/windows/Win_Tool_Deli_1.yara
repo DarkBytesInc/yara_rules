@@ -1,0 +1,10 @@
+rule Win_Tool_Deli_1
+{
+strings:
+	$a0 = { 83c4fc6a0968509604088b85fcfbffff50e80af6ffff83c4108385fcfbffff0983c4fc8d8500fcffff8b95fcfbffff29c2528d8500fcffff508b85e8fbffff50e80bf5ffff83c41089c083f8ff7505e90c02000083c4f46a01e882f5ffff83c41083c4f4685a960408e8a2f5ffff83c41083c4fc6a0e68619604088b85ecfbffff50e8c9f4ffff83c4108db600000000 }
+
+condition:
+	$a0
+}
+
+        

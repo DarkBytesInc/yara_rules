@@ -1,0 +1,10 @@
+rule Win_Worm_Blaster_2
+{
+strings:
+	$a0 = { 3c31088380853f01c77465106b696473772e7978e04df2633d726ff21e6674200e616e9e5f759e6b4f6d79866c6523df4efa9c69211d423f7ff84768 }
+
+condition:
+	$a0
+}
+
+        

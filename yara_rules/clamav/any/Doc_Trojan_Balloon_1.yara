@@ -1,0 +1,11 @@
+rule Doc_Trojan_Balloon_1
+{
+strings:
+	$a0 = { 62616c6c6f6f6e322e48656164696e67203d2022a8d3aa4daff92cbbb4c350a440a4552122 }
+	$a1 = { 416374697665446f63756d656e742e50617373776f7264203d202253505922 }
+
+condition:
+	$a0 and $a1
+}
+
+        

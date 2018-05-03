@@ -1,0 +1,10 @@
+rule Win_Proxy_Agent_34821
+{
+strings:
+	$a0 = { 5daf0d7aec2acf6fa7eeaa8d4237c1c991ac9d52cd3fd45be55d6c8df11365fb6da85539dbc9ba28417f30a2eaceee2d817c00052e84ffe9e381e3899c769809b7bfbf0a4f591822aee73706e05022f88601dfe7eb4a91780b47ac007e97ed7049287dec48e2c266593594ed4d856e94b7998561cd2acb5be9c3dd }
+
+condition:
+	$a0
+}
+
+        

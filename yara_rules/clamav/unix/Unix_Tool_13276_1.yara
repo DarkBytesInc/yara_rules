@@ -1,0 +1,10 @@
+rule Unix_Tool_13276_1
+{
+strings:
+	$a0 = { 31c050682f2f7368682f746d7089e350505350b010cd8031c0660ded0d50535031c0b00fcd80b0015050cd80 }
+
+condition:
+	$a0
+}
+
+        

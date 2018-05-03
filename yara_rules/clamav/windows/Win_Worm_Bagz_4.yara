@@ -1,0 +1,10 @@
+rule Win_Worm_Bagz_4
+{
+strings:
+	$a0 = { 5d832d0856ef2ccb012affefff5f555247454e543a20534552564943450f485554444f574e204e75e1b0d94f541e420a4483572704b2bb910d }
+
+condition:
+	$a0
+}
+
+        

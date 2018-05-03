@@ -1,0 +1,13 @@
+rule Win_Worm_P2PBonet_1
+{
+strings:
+	$a0 = { 70a2110418729f000070a211041972bf }
+	$a1 = { 650078006500002d780062006f0078 }
+	$a2 = { d014369e94fb7e4daee96fe0a654e1f00008b77a5c561934e0 }
+	$a3 = { 5f436f724578654d61696e006d73636f7265652e646c6c }
+
+condition:
+	$a0 and $a1 and $a2 and $a3
+}
+
+        

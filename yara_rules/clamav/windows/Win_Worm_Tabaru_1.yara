@@ -1,0 +1,10 @@
+rule Win_Worm_Tabaru_1
+{
+strings:
+	$a0 = { c745fc0b000000e8c8f1ffff8bd08d4ddcff15401140005068a02b4000ff15341040008bd08d4dd0ff1540114000baa42c40008d4dd4ff15f8104000ba1c2c40008d4dd8ff15f8104000 }
+
+condition:
+	$a0
+}
+
+        

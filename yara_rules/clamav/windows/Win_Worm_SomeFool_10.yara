@@ -1,0 +1,10 @@
+rule Win_Worm_SomeFool_10
+{
+strings:
+	$a0 = { 42494e0c6e6f34703861643a507aebdc415676453c67699c652e9d7833415c000001e02070400e4b45524e604c33322e }
+
+condition:
+	$a0
+}
+
+        

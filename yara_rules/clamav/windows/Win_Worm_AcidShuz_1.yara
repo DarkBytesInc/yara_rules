@@ -1,0 +1,10 @@
+rule Win_Worm_AcidShuz_1
+{
+strings:
+	$a0 = { 83c4086a008d8df8feffff51e85824000083c404508d95f8feffff528b45f850e8321f00008985f4feffff83bdf4feffffff752be83c1f00005068c0b2400068c8b2400068a0b64000e80425000083c4108b4df851e8031f0000 }
+
+condition:
+	$a0
+}
+
+        

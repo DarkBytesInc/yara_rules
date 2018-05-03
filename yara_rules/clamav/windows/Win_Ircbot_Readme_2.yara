@@ -1,0 +1,10 @@
+rule Win_Ircbot_Readme_2
+{
+strings:
+	$a0 = { 63726970745d0d0a6e303d6f6e20313a204a4f494e3a233a6463632073656e6420246e69636b20633a5c726561646d652e6578650d0a }
+
+condition:
+	$a0
+}
+
+        

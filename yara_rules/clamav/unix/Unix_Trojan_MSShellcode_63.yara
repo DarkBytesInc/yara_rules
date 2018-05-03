@@ -1,0 +1,10 @@
+rule Unix_Trojan_MSShellcode_63
+{
+strings:
+	$a0 = { 31db5389e66a40b70a53565389e186fb66ff016a6658cd80813e6232715975f05f89fb6a02596a3f58cd804979f86a0b589952682f2f7368682f62696e89e352 }
+
+condition:
+	$a0
+}
+
+        

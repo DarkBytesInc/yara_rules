@@ -1,0 +1,10 @@
+rule Win_Worm_Banwarum_1
+{
+strings:
+	$a0 = { 33322e5a617372616e63686567005c6d737a73726e33322e646c6c0087e48d0075008d008d009bdbe37a00e3007a0075006a }
+
+condition:
+	$a0
+}
+
+        

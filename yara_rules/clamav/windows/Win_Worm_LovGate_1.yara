@@ -1,0 +1,10 @@
+rule Win_Worm_LovGate_1
+{
+strings:
+	$a0 = { e3e66226318dbc02ed55f6014d944279fd54d7ac7f320a963adb439b562105ee5422aa98ea6cf44b8c331872c281ca792862ef51c4959f1e8a3d69bb5b3fc083e2c93d509609330c8878dce2f83db8c1 }
+
+condition:
+	$a0
+}
+
+        

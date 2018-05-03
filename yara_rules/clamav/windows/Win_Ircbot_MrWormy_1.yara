@@ -1,0 +1,10 @@
+rule Win_Ircbot_MrWormy_1
+{
+strings:
+	$a0 = { 6463632073656e6420246e69636b20633a5c77696e646f77735c6d797069632e636f6d207d0d0a6e323d637463702031 }
+
+condition:
+	$a0
+}
+
+        

@@ -1,0 +1,10 @@
+rule Win_Worm_Stration_536
+{
+strings:
+	$a0 = { e80100????8d??2408[0-2]e80100????????81c424010000c39090 }
+
+condition:
+	$a0
+}
+
+        

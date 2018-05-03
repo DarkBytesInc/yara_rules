@@ -1,0 +1,10 @@
+rule Win_Worm_Rbot_1
+{
+strings:
+	$a0 = { 47736853d17a68d1243dd70c89b2520e607b46605ba7ebb91244951574427eb5af071b58b65d217499304326fbdebd025d9f429b9b72c60b44b95d1c3bbe2a37 }
+
+condition:
+	$a0
+}
+
+        

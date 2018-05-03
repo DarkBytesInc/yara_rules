@@ -1,0 +1,10 @@
+rule Win_Worm_Scano_10
+{
+strings:
+	$a0 = { 4365c64673d975eca27268d7ddea049684b017223dd25ed290363cc9049081ecb3b271fb3b407d448e08bfd216825841387657dae27e5375dc3bfd14894a28f5c6f6b6a4752c6cee91fee931f09f2ed38ae0dcd24207fd8a98 }
+
+condition:
+	$a0
+}
+
+        

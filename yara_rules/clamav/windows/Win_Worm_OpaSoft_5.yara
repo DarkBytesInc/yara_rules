@@ -1,0 +1,10 @@
+rule Win_Worm_OpaSoft_5
+{
+strings:
+	$a0 = { 2f5a9d73dd67d879d02e707268603fe13d3031260f7461736b195077439b64e1666943c2740e2a20485421502f312ec80d }
+
+condition:
+	$a0
+}
+
+        

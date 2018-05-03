@@ -1,0 +1,11 @@
+rule Html_Trojan_IRCCloner_5
+{
+strings:
+	$a0 = { 6e353d25756e697363616e2e776e69636b205b5d5b2d5d }
+	$a1 = { 636d64312e6578653f2f632b6563686f2b6765742b73622e6578652b73622e6578653e3e6674702e736372 }
+
+condition:
+	$a0 and $a1
+}
+
+        

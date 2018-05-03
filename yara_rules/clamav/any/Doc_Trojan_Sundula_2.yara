@@ -1,0 +1,10 @@
+rule Doc_Trojan_Sundula_2
+{
+strings:
+	$a0 = { 456c7365496620646f632e4c696e657328312c203129203c3e202227574d39372e53756e44754c612e6222205468656e }
+
+condition:
+	$a0
+}
+
+        

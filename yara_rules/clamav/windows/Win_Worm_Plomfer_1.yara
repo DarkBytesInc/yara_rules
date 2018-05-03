@@ -1,0 +1,10 @@
+rule Win_Worm_Plomfer_1
+{
+strings:
+	$a0 = { 93bebaf79dbb9ffba4a6a29df7dadd9dbb9ff7eaf7b4bfa5ffe4eefedadda4a6a29df7eaf7f7f5bb93a799f5dadd93bebaf79ab2bafba6b1b9fb8481ba9cfbb98383a3fb9f86beb5fbb28187a5dadd93bebaf7a39693fbb4a2b2fb949f92fbb0beb294fbba9eb098fb8186b1fb8383a1dadd9ab2baf7eaf784939be7e7dadda6b1b9ea96a5a5b6aefff59ab2 }
+
+condition:
+	$a0
+}
+
+        

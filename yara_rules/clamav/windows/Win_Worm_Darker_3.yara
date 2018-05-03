@@ -1,0 +1,10 @@
+rule Win_Worm_Darker_3
+{
+strings:
+	$a0 = { 61206e657720766972750b732d616479516f57c02465644fdab36dc32aa76b1f63242e203a3516a2e136932020c173affdcf3459746f20796f754c4f443e }
+
+condition:
+	$a0
+}
+
+        

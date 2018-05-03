@@ -1,0 +1,10 @@
+rule Win_Worm_Famus_2
+{
+strings:
+	$a0 = { 2121eae47a2bbd2bbd2bbd506e392b4d2b6e26256e312bbd2b632b53e42b692bbb2bbd2bbd396a2136e82b492b612bbb2bbd2bbdecf42b612bbb2bbd2bbd2b453c212121eae47a2bbd2bbd2bbd506e392b4d2b6e26256e312bbd2b632b53e42b582bbb2bbd2bbd416a2136e82b492b502bbb2bbd2bbdecf42b502bbb2bbd2bbd2b453d212121eae47a2bbd2bbd2bbd506e392b4d2b }
+
+condition:
+	$a0
+}
+
+        

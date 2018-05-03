@@ -1,0 +1,10 @@
+rule Win_Ircbot_PIF_4
+{
+strings:
+	$a0 = { 5f432057312e3020627920566f785472610d0a433a5c0d0a6d64207379730d0a636f707920633a5c6d6972635c6d6972 }
+
+condition:
+	$a0
+}
+
+        

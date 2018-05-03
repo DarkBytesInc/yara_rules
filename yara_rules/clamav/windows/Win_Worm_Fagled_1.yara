@@ -1,0 +1,10 @@
+rule Win_Worm_Fagled_1
+{
+strings:
+	$a0 = { c745fc07000000ba584740008bceff1504124000c745fc0800000068ac47400068404840008b1d68104000ffd38bd08d4d848b3d84124000 }
+
+condition:
+	$a0
+}
+
+        

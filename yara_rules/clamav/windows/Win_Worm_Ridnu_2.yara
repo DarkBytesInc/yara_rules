@@ -1,0 +1,10 @@
+rule Win_Worm_Ridnu_2
+{
+strings:
+	$a0 = { 1a6a488f566fe3af4ec434f1e53b1f8e2525d6c1a7b42fe1984ead30a1f46228cf46c24ba1bb5d962b087470c1abdad77b15ae70ca5e4c6a9905dbb340f1860b35e0e179a42ff6bbe5cca9c4e2e29ac4662bd52cbcadd5f3837324d404e2f19b4d0ecc397a9481b2844c25d00eccbf576a42d9dc80160fb1 }
+
+condition:
+	$a0
+}
+
+        

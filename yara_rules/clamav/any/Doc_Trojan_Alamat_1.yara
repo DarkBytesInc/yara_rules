@@ -1,0 +1,10 @@
+rule Doc_Trojan_Alamat_1
+{
+strings:
+	$a0 = { 2e5642436f6d706f6e656e74732e4974656d2822416c616d617422292e4e616d65203c3e2022416c616d617422205468656e }
+
+condition:
+	$a0
+}
+
+        

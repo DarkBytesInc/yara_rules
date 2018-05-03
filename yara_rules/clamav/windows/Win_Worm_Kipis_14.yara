@@ -1,0 +1,10 @@
+rule Win_Worm_Kipis_14
+{
+strings:
+	$a0 = { bcc5975fcbddaf77daf5c78fef0ddfa70425f7bf0e3d0fd71d5527ef2d6d3f073f85571f666d747b828990979ea5acb3bac1c8cfd6dde4ebf2f900070e15262d343b424950575e656c737a81888f969da4abb2b9c0c7ced58f969da4abb2b9c0c7cec4d0a7afafb7b13607cfc74e1fe7d16637ffe87e4f17f796672f07ae7f471cc6975f2bdeaf773bf6c78f500edfa75d26f7bfc7cf }
+
+condition:
+	$a0
+}
+
+        

@@ -1,0 +1,10 @@
+rule Win_Joke_Klicken_2
+{
+strings:
+	$a0 = { 101482554348b64745620548044ddd81ec88dca8b733b6b732e671ef73bf80f7bf8c0b79dc897bdef341b79d815b6ec1bd580dbc7647e8682b5c80b4c915ae482d320d6dc835e3906f1b920fd3006f6e40bdbdc0b796e41bdb991b795c4b7399979de5ef72e677fffff5bbebcf5e79f3df9efcf3cf5e6fbcdfdfd7dfd124c61b5daed2dcd96a2027c9ff84a9 }
+
+condition:
+	$a0
+}
+
+        

@@ -1,0 +1,10 @@
+rule Win_Worm_Gemel_1
+{
+strings:
+	$a0 = { 69616c445d0142790600feffbffd4c6162656c3309011800206b756173616e6167756940726f636b65813889df04732e }
+
+condition:
+	$a0
+}
+
+        

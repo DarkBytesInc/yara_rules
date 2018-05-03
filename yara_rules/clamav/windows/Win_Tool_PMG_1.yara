@@ -1,0 +1,10 @@
+rule Win_Tool_PMG_1
+{
+strings:
+	$a0 = { 73ad70a62fe1ddfb2f4effef687474703a2f2f7777772e636fcc07c37a2e22981163e7d94d47272069bf42793ebb205b031c2356589008074b6d1b1aa074c0ec5b3c5d47352d32b54c483030216d }
+
+condition:
+	$a0
+}
+
+        

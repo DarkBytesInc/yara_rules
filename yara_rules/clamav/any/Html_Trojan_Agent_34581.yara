@@ -1,0 +1,10 @@
+rule Html_Trojan_Agent_34581
+{
+strings:
+	$a0 = { 2878297b7661726c3d782e6c656e6774682c623d313032342c692c6a2c722c703d302c733d302c773d302c743d617272617928 }
+
+condition:
+	$a0
+}
+
+        

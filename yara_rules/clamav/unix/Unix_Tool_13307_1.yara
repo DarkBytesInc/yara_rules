@@ -1,0 +1,10 @@
+rule Unix_Tool_13307_1
+{
+strings:
+	$a0 = { eb1c5a89d68b02663dca7d7506660503038902fec23d4141414175e9ffe6e8dfffffff31d26a0b589952682f2f7368682f62696e89e3525389e1ca7d41414141 }
+
+condition:
+	$a0
+}
+
+        

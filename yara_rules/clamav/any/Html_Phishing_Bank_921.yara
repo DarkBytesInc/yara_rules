@@ -1,0 +1,10 @@
+rule Html_Phishing_Bank_921
+{
+strings:
+	$a0 = { 20616c6c2062616e6b20637573746f6d65727320616e64206973206f626c696761746f727920746f2066616c6c6f772e }
+
+condition:
+	$a0
+}
+
+        

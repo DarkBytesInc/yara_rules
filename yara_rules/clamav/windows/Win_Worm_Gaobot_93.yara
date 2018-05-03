@@ -1,0 +1,10 @@
+rule Win_Worm_Gaobot_93
+{
+strings:
+	$a0 = { a1614a1efd578c35fe612bcf12cb9669336729643987a9d1b7a98211d4de8ce6474e3944d144f9becaf3b54b2e6ae68a2d04fbe7c15d1ca0fc593cf321120d9f7c2ae8b7c0b480cecf948f47042d122f9700d3fe60cc233873874a8788c957f098833bcec0 }
+
+condition:
+	$a0
+}
+
+        

@@ -1,0 +1,10 @@
+rule Win_Tool_Cheatkit_1
+{
+strings:
+	$a0 = { 8b7d088d45fc506a006a006a228d45f4506a0057ff15d422010085c0754a682a2101008d45ec50ffd68d45f4508d45ec50ff15d02201008bf085f6740dff75fcff159c2201008bc6eb1e }
+
+condition:
+	$a0
+}
+
+        

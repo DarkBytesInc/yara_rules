@@ -1,0 +1,10 @@
+rule Win_Worm_Bropia_20
+{
+strings:
+	$a0 = { 9e4aebe7eefb354ca928483fae7018d164833bf068a334e7811582bd4d305c5a11d45c9afae9f4e13ba67f63c70015e2dd85da57eeb6458c30312c2c12a7abec4b10c864ad8f13f3237d9fc48e06bec31eca26e080a6157b4cc5617e9a1806fd76d36a2d1d3a0bd3cee5c77f4e0b2b53e24faaa57b2e6ac8980299 }
+
+condition:
+	$a0
+}
+
+        

@@ -1,0 +1,10 @@
+rule Win_Worm_Antinny_18
+{
+strings:
+	$a0 = { 558bec6a006a006a0033c05568c191460064ff306489208d45f8e809ecffff8b55f88d45fcb9d4914600e8c1b1f9ff6a008b45fce86bb3f9ff508d55f433c0e86c98f9ff8b45f4e858b3f9ff50e8b6cff9ff8b45fce86afeffff8b45fce852ebffff33c05a595964891068c8914600 }
+
+condition:
+	$a0
+}
+
+        

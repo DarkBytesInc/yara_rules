@@ -1,0 +1,10 @@
+rule Js_Trojan_Obfus_75
+{
+strings:
+	$a0 = { 666f7228693d303b693c6e2e6c656e6774683b692b2b296e3030302b3d73286e5b695d293b6576616c286e303030293b }
+
+condition:
+	$a0
+}
+
+        

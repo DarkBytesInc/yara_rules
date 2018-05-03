@@ -1,0 +1,10 @@
+rule Win_Worm_Drudgbot_1
+{
+strings:
+	$a0 = { ae8e4808aab9a9c68b262aefb502b4134c038c4e6edaed0f227f91efff18c674218f957bfd1182bd932d47b1bcb587c71ca31114aa1463b78930c4571945bc4d12c6624bf32e2eb76e0e2e37b186665e709630047b31c9fe56760c42e211669f }
+
+condition:
+	$a0
+}
+
+        

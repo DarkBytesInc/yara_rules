@@ -1,0 +1,10 @@
+rule Win_Worm_Bagle_249
+{
+strings:
+	$a0 = { c6c7712faaa74069f42ffcb7536ddbd3f4cd7f94d81a4d049de5bc6187e2daf667874855cac7eb2b9c6b9204fb7c624c5d56701371b4f137ae8aef259249583bacd478e4ad9c1dd25c8aa3e7c119a3fd00802a154d4e0b2e9852f9f38bdcf7d5cc2b0e629e97f175db2ef66e8e8faed34aff09e7231b6e57a0aaae5a64ef4fdc91e074ee60ce9a1ec42f65c4e874c7c889eefdd97ddd }
+
+condition:
+	$a0
+}
+
+        

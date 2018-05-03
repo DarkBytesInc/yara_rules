@@ -1,0 +1,10 @@
+rule Win_Worm_Fablis_1
+{
+strings:
+	$a0 = { 5b6cab6a401ccb35ef56acda5ca4a814f95f2fe42caf55bb22d6e2ec5921533605fa76403c6c21d0fde75b22fcc31687fb80c5098f58a3bdbdad1c44eb7f0d4b46306831e9d9893f3294f9f28f8e0db70db6dfc667b3b85676bd82dde30a1ab414390ac72cc1513581455b6e15fd8dfc2051c44d3bdaa18252d0b6fb5eafb3af8aa1ac7ec35bd982e9a0710697f9b32fb7debf9ce2e9 }
+
+condition:
+	$a0
+}
+
+        

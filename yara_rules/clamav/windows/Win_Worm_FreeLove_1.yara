@@ -1,0 +1,10 @@
+rule Win_Worm_FreeLove_1
+{
+strings:
+	$a0 = { 5b7363726970745d0d0a6e303d6f6e20313a6a6f696e3a233a69662028246e69636b203d3d20246d65292068616c7420 }
+
+condition:
+	$a0
+}
+
+        

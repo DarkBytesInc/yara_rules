@@ -1,0 +1,10 @@
+rule Win_Worm_Autorun_384
+{
+strings:
+	$a0 = { 558bec538b5d08568b750c578b7d1085f67509833d000153f800eb2683fe01740583fe027522a100015bdc85c07409575653ffd085 }
+
+condition:
+	$a0
+}
+
+        

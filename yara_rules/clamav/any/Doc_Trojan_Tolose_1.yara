@@ -1,0 +1,11 @@
+rule Doc_Trojan_Tolose_1
+{
+strings:
+	$a0 = { 46756e6374696f6e204d6163726f332829 }
+	$a1 = { 6465732c204e616d653a3d224e6f7468696e67546f4c6f7365222c204f626a6563743a3d77644f7267616e697a }
+
+condition:
+	$a0 and $a1
+}
+
+        

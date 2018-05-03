@@ -1,0 +1,10 @@
+rule Win_Worm_A_11
+{
+strings:
+	$a0 = { 73740d0a68616c686fb8e093909cf7d8506848454c4f8bd4680d0a202068444154418bc4680d0a202068515549548bfc54ffb5d8fdffff50565152ac84c075fbc746ff3e0d0a2081c4fcfeffff8bc46a }
+
+condition:
+	$a0
+}
+
+        

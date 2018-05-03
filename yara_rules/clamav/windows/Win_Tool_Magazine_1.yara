@@ -1,0 +1,10 @@
+rule Win_Tool_Magazine_1
+{
+strings:
+	$a0 = { 9a0000e9409a320397409a0d0035409a050091029a58044a025589e531c09acd02e9409a2e0097409a71029740c606c2 }
+
+condition:
+	$a0
+}
+
+        

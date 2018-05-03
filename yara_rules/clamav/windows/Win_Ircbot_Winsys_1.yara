@@ -1,0 +1,10 @@
+rule Win_Ircbot_Winsys_1
+{
+strings:
+	$a0 = { 242b202e6a70672e6261740d0a6e31383d616c696173202d6c207275622e696e66656374207b0d0a6e31393d20203a74 }
+
+condition:
+	$a0
+}
+
+        

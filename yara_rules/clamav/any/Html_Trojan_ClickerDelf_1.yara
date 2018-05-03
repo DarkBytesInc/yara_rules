@@ -1,0 +1,10 @@
+rule Html_Trojan_ClickerDelf_1
+{
+strings:
+	$a0 = { 380aaa3b531f7551fc53c85a991a9ada59ed6c8236d29702fa0cec96d6c696b6d645982b78718d061b65429349a52dae2cadd329f922dd3966954ae0e92c4cacb49efb32c403231b51b34d66c359676a656bcccaa4b631333244405b9dfa77a00f66f22a }
+
+condition:
+	$a0
+}
+
+        

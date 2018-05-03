@@ -1,0 +1,10 @@
+rule Email_Trojan_Trojan_750
+{
+strings:
+	$a0 = { 5365652042656c6f77204174746163682046696c6520466f7220436c61696d730d0a0d0a5468616e6b20596f75 }
+
+condition:
+	$a0
+}
+
+        

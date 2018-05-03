@@ -1,0 +1,10 @@
+rule Win_Joke_ProjectCool_1
+{
+strings:
+	$a0 = { 50524f4a434f4f4c2e4558450000000001001e4a656666277320436f6f6c2044656c706869204170706c69636174696f6e }
+
+condition:
+	$a0
+}
+
+        

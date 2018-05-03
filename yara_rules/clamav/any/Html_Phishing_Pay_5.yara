@@ -1,0 +1,10 @@
+rule Html_Phishing_Pay_5
+{
+strings:
+	$a0 = { 6f6e6d6f7573656f7665723d2277696e646f772e7374617475733d2268747470733a2f2f7777772e70617970616c2e636f6d22 }
+
+condition:
+	$a0
+}
+
+        

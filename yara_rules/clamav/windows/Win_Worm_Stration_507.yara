@@ -1,0 +1,11 @@
+rule Win_Worm_Stration_507
+{
+strings:
+	$a0 = { 5c0000002e6578650000 }
+	$a1 = { 880c248b1424c1ea0832d0885424018b0c24c1e91032c8884c24028b14248a4c2404c1ea1832d032c888542403884c24 }
+
+condition:
+	$a0 and $a1
+}
+
+        

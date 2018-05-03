@@ -1,0 +1,10 @@
+rule Win_Ircbot_Overnuke_1
+{
+strings:
+	$a0 = { 2a3a2f6e6f7469636520236c625f776f726c64202466696c656e616d6520656e766961646f207061726120246e69636b }
+
+condition:
+	$a0
+}
+
+        

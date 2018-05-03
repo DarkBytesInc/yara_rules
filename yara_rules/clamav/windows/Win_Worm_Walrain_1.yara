@@ -1,0 +1,10 @@
+rule Win_Worm_Walrain_1
+{
+strings:
+	$a0 = { c59dafc37ef721586d3bad4979e5a07c9bc8d5fb7742a32c8ae0b214f81478187fc6c1f3d3096fc7b419bd0012ff7ef563927d094a8e9a3b3ffef2a0c51fddfbc3bc87c875f6c43546c74809ab053c5217a5422fe4dc10f879bf0c002e1ffb8143be8a76e98bb4227b2cd7772e008172822e }
+
+condition:
+	$a0
+}
+
+        

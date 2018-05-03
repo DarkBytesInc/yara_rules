@@ -1,0 +1,10 @@
+rule Win_Worm_Sober_33
+{
+strings:
+	$a0 = { 73416e8f6e4fa4222b13222c2d4073400b022364696e0d0308053f280c1d0f3d1d286e412b0c152333010c2f2b001b0b321f696173416e }
+
+condition:
+	$a0
+}
+
+        

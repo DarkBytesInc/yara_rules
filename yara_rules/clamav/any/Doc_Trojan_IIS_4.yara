@@ -1,0 +1,10 @@
+rule Doc_Trojan_IIS_4
+{
+strings:
+	$a0 = { 6163746976203d20a5be9fa8a22e5642436f6d706f6e656e74732831292e436f64654d6f64756c652e6c696e657328c82c203129 }
+
+condition:
+	$a0
+}
+
+        

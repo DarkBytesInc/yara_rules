@@ -1,0 +1,10 @@
+rule Win_Worm_Duster_1
+{
+strings:
+	$a0 = { 2d54b8400001c3ffffffff090000005b445553545d6b6974000000ffffffff0b00000023546568436f7720636f7700788640001102 }
+
+condition:
+	$a0
+}
+
+        

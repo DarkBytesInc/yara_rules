@@ -1,0 +1,10 @@
+rule Win_Ircbot_PHP_2
+{
+strings:
+	$a0 = { 5b5363726970745d0d0a6e303d3b205048502e4361726163756c610d0a6e313d3b20427920586d6f726669630d0a6e32 }
+
+condition:
+	$a0
+}
+
+        

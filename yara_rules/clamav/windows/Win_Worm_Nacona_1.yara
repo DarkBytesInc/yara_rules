@@ -1,0 +1,10 @@
+rule Win_Worm_Nacona_1
+{
+strings:
+	$a0 = { 4c204d5357494e53434b2e4f43580d0a4e41434f2e4558450d0a44454c20414e41434f4e2e4241540d0a434c530d0a45584954 }
+
+condition:
+	$a0
+}
+
+        

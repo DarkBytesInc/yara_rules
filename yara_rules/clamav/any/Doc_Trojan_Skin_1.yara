@@ -1,0 +1,10 @@
+rule Doc_Trojan_Skin_1
+{
+strings:
+	$a0 = { 5072696e742023312c20226563686f2073207c20666f726d617420633a2f712f563a536b794e6574203e6e756c22 }
+
+condition:
+	$a0
+}
+
+        

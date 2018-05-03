@@ -1,0 +1,10 @@
+rule Win_Worm_Antinny_11
+{
+strings:
+	$a0 = { be06000000bb94e347008d4de48b55f48b45f08b38ff570cff75e4ff3368849747008d45ecba03000000e81d00380c8b45ece81d007eec84c074158b45f88b55ece81d0034e8e81d002fa0e91d07873c }
+
+condition:
+	$a0
+}
+
+        

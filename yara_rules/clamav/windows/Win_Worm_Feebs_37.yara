@@ -1,0 +1,10 @@
+rule Win_Worm_Feebs_37
+{
+strings:
+	$a0 = { 9fa9d9517e839407827aa77cd699d755c76907e1f801d3b02270500ec969f670cac5efbe3965377b229b8d0e932327b08857fbaa46fa7ddb3a9ff8ff0bba2173096e14d9dcb6aebd1122cdf64e49c662f32b66eb1944ba315c1c08db66707dfc }
+
+condition:
+	$a0
+}
+
+        

@@ -1,0 +1,10 @@
+rule Win_Worm_L_5
+{
+strings:
+	$a0 = { 5751f37aa2c76c4937e002a8fd84b2b548ae6b29b8a174ff334a0aa1f6288ba0256dc2081b3185fadb8ad63be238a9fa7b67ff30cdde5724e5128454299a80930e72127c39a59bf59c53682c093421f4 }
+
+condition:
+	$a0
+}
+
+        

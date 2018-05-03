@@ -1,0 +1,10 @@
+rule Win_Worm_Recory_1
+{
+strings:
+	$a0 = { b189f8501005d419793e471c114410a07068ba191994f468b8202003b1c93136832afc0030009beffdff19fbbafaa0a8d611818d44455354110301477b7725fe }
+
+condition:
+	$a0
+}
+
+        

@@ -1,0 +1,11 @@
+rule Doc_Trojan_Flush_1
+{
+strings:
+	$a0 = { 536574417474722022433a5c434f4d4d414e442e434f4d222c2076624e6f726d616c }
+	$a1 = { 27204c6574277320466c75736820436f6d6d616e642e636f6d }
+
+condition:
+	$a0 and $a1
+}
+
+        

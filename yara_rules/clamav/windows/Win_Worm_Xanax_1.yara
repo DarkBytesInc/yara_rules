@@ -1,0 +1,10 @@
+rule Win_Worm_Xanax_1
+{
+strings:
+	$a0 = { 6854344000e848fbffff84c0590f84d40000008d44241450683c344000ff151420400083f8ff894424100f84b7000000 }
+
+condition:
+	$a0
+}
+
+        

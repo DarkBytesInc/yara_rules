@@ -1,0 +1,10 @@
+rule Win_Worm_BugBear_1
+{
+strings:
+	$a0 = { fcee515549548e072e0ccf75626a6563747a6cb7e83a2048106f21272a3335eb17ffef2bb441403235075243505420544f3a3ceb3ef634fa7126c1494c67314d }
+
+condition:
+	$a0
+}
+
+        

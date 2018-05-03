@@ -1,0 +1,10 @@
+rule Win_Worm_SomeFool_24
+{
+strings:
+	$a0 = { ba0e00b409cd21b8014ccd21416c657669727573204e6574536b792d6220437261636b656420416e696e6861414d415643212e0d0d }
+
+condition:
+	$a0
+}
+
+        

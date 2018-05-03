@@ -1,0 +1,10 @@
+rule Win_Worm_Coronex_1
+{
+strings:
+	$a0 = { 0586234000a3202140006a006a006a016a006a02680000004050e865090000a30f21400083f8ff7465 }
+
+condition:
+	$a0
+}
+
+        

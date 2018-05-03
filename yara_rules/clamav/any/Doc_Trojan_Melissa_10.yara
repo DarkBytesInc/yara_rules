@@ -1,0 +1,10 @@
+rule Doc_Trojan_Melissa_10
+{
+strings:
+	$a0 = { 2e436f64654d6f64756c652e496e736572744c696e657320312c204e542e436f64654d6f64756c652e4c696e657328312c204e544c29 }
+
+condition:
+	$a0
+}
+
+        

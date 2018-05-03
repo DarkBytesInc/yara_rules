@@ -1,0 +1,10 @@
+rule Win_Worm_Mugly_1
+{
+strings:
+	$a0 = { ecd7e88550365ec3d52a957ebf3304029a4d1284ad8d4046033c7604f42ea1e21b2111489ca18020732d71c17f3180007e1f581330e3f8fcfe978b718c46fce669492becdf80565ff200facf75ca5db7cc128970b85d2bc8a0b3cd09aefd3b6309ca10bcdeefbcceff7c7581f4faf03f }
+
+condition:
+	$a0
+}
+
+        

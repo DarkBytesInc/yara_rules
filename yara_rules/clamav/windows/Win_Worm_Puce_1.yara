@@ -1,0 +1,10 @@
+rule Win_Worm_Puce_1
+{
+strings:
+	$a0 = { 52e2147c50d57ebe51e839e25adf53205b86ed6659b187a4583491eb5d03fb295c5a456f5e6d2fad5f801b35e1b771f7e0eecfb1e2d9a573e35cb33ce66bd9fee73267b8e5050d7ae4384a26ef0f20e4ee569ea2ec61f460ede4e22fe8d388ede98a36abebbd5c69eaf0b813fdc7d2d1fc9e6c97fea90655ff2c101afa1b7ad8fb42c49ef975ae5cf848e900f37f83c2f2263d84f011 }
+
+condition:
+	$a0
+}
+
+        

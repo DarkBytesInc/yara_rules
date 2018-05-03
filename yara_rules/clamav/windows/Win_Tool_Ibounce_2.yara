@@ -1,0 +1,10 @@
+rule Win_Tool_Ibounce_2
+{
+strings:
+	$a0 = { 03d0414647d15890498044cf720600ef9c6d2dbf872f37ae6b5c3f0dfe11dfe1cd48377cd40bbe6ee036f2c05b5c836a406d6e4054907aea416ba02daea057975815ddd6036dd48de375901ddd485b5d641ddba82ddf3501b6ea0ef6dd0ddf39bd5b7fffff7f9f3a7dfbe7df3cf33efdf3dcfe03e77f81973212a136612d1c0596c6d198bfeb7e7883c92e65 }
+
+condition:
+	$a0
+}
+
+        

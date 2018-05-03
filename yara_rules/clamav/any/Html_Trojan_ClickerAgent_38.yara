@@ -1,0 +1,10 @@
+rule Html_Trojan_ClickerAgent_38
+{
+strings:
+	$a0 = { 43757272656e7456657273696f6e5c52756e[31]2e6578650000000010592fb62865d11196110000f81e0d0de03d4c396f3cd211817b00c04f797ab7ffffffffca234000de2340 }
+
+condition:
+	$a0
+}
+
+        

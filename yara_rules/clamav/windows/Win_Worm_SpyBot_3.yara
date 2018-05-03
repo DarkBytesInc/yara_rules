@@ -1,0 +1,10 @@
+rule Win_Worm_SpyBot_3
+{
+strings:
+	$a0 = { 969f795aa9114550631173331d3f5cab1f432d3a4ee697ef654655de916bcd7ab03e6565efdf86547b6c5b75f927e0104aafb13064a84ee3463281e62b61e6c05fa1461c04e85235f87a9a57d6401b37 }
+
+condition:
+	$a0
+}
+
+        

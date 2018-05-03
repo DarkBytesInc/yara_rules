@@ -1,0 +1,10 @@
+rule Html_Trojan_ClickerSmall_74
+{
+strings:
+	$a0 = { 6972652e636f6d2f75736572372f696e6465782e7068700067636c69622e657865000000766d74756e657200536f6674 }
+
+condition:
+	$a0
+}
+
+        

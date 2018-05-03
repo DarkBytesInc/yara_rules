@@ -1,0 +1,10 @@
+rule Win_Worm_Wohar_1
+{
+strings:
+	$a0 = { 7f7b26162042554e4e596dc92047f9b7f62e24452e730b87596f75204e6577b6dd7a275469bce62079187215f0235a219e5a246261d76ecd }
+
+condition:
+	$a0
+}
+
+        

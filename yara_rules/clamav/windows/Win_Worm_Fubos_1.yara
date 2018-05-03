@@ -1,0 +1,11 @@
+rule Win_Worm_Fubos_1
+{
+strings:
+	$a0 = { 6674776172655c4b617a61615c4c6f63616c436f }
+	$a1 = { 616c00000000ffffffff1500000068616c6c6f7361745f76352e34315f6b657967656e000000ffffffff0f0000006861 }
+
+condition:
+	$a0 and $a1
+}
+
+        

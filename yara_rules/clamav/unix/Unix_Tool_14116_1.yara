@@ -1,0 +1,10 @@
+rule Unix_Tool_14116_1
+{
+strings:
+	$a0 = { 01308fe213ff2fe1921a101c01380921252701df01308fe213ff2fe1241b201c172701df921a101c01380921252701df }
+
+condition:
+	$a0
+}
+
+        
