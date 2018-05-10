@@ -1,2 +1,4 @@
-# yara_rules
-DarkBytes YARA Rules
+# DarkBytes YARA Rules
+Learn more at https://www.darkbytes.com
+
+
