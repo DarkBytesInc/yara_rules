@@ -113,13 +113,6 @@ strings:
 condition:
    18 of them
 }
-rule blackhole_basic :  EK
-{
-    strings:
-        $a = /\.php\?\.*\?\:[a-zA-Z0-9\:]{6,}\&\.*\?\&/
-    condition:
-        $a
-}
 rule blackhole1_jar
 {
 meta:
