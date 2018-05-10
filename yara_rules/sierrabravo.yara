@@ -4,9 +4,12 @@ import "pe"
 
 rule SierraBravo_Two
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    description = "SierraBravo_Two"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 		/*
@@ -57,9 +60,12 @@ rule SierraBravo_Two
 
 rule SierraBravo_One
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    description = "SierraBravo_Two"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 		/*
@@ -80,9 +86,12 @@ rule SierraBravo_One
 
 rule SierraBravo_packed
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    description = "SierraBravo_Two"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 		$ = "cmd.exe /c \"net share admin$ /d\""

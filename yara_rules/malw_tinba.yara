@@ -4,15 +4,17 @@
 */
 
 rule Tinba2 : banking {
-        meta:
-                author = "n3sfox <n3sfox@gmail.com>"
-                date = "2015/11/07"
-                description = "Tinba 2 (DGA) banking trojan"
-                reference = "https://securityintelligence.com/tinba-malware-reloaded-and-attacking-banks-around-the-world"
-                filetype = "memory"
-                hash1 = "c7f662594f07776ab047b322150f6ed0"
-                hash2 = "dc71ef1e55f1ddb36b3c41b1b95ae586"
-                hash3 = "b788155cb82a7600f2ed1965cffc1e88"
+          meta:
+    author = "n3sfox <n3sfox@gmail.com>"
+    date = "2015/11/07"
+    description = "Tinba 2 (DGA) banking trojan"
+    reference = "https://securityintelligence.com/tinba-malware-reloaded-and-attacking-banks-around-the-world"
+    filetype = "memory"
+    hash1 = "c7f662594f07776ab047b322150f6ed0"
+    hash2 = "dc71ef1e55f1ddb36b3c41b1b95ae586"
+    hash3 = "b788155cb82a7600f2ed1965cffc1e88"
+    severity = "7"
+    type = "Malware"
 
         strings:
                 $str1 = "MapViewOfFile"

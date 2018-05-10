@@ -1,22 +1,24 @@
 
 rule PowerShell_Suite_Hacktools_Gen_Strings {
-   meta:
-      description = "Detects strings from scripts in the PowerShell-Suite repo"
-      author = "Florian Roth"
-      reference = "https://github.com/FuzzySecurity/PowerShell-Suite"
-      date = "2017-12-27"
-      hash1 = "79071ba5a984ee05903d566130467483c197cbc2537f25c1e3d7ae4772211fe0"
-      hash2 = "db31367410d0a9ffc9ed37f423a4b082639591be7f46aca91f5be261b23212d5"
-      hash3 = "4f51e7676a4d54c1962760ca0ac81beb28008451511af96652c31f4f40e8eb8e"
-      hash4 = "17ac9bb0c46838c65303f42a4a346fcba838ebd5833b875e81dd65c82701d8a8"
-      hash5 = "fa33aef619e620a88ecccb990e71c1e11ce2445f799979d23be2d1ad4321b6c6"
-      hash6 = "5542bd89005819bc4eef8dfc8a158183e5fd7a1438c84da35102588f5813a225"
-      hash7 = "c6a99faeba098eb411f0a9fcb772abac2af438fc155131ebfc93a00e3dcfad50"
-      hash8 = "a8e06ecf5a8c25619ce85f8a23f2416832cabb5592547609cfea8bd7fcfcc93d"
-      hash9 = "6aa5abf58904d347d441ac8852bd64b2bad3b5b03b518bdd06510931a6564d08"
-      hash10 = "5608f25930f99d78804be8c9c39bd33f4f8d14360dd1e4cc88139aa34c27376d"
-      hash11 = "68b6c0b5479ecede3050a2f44f8bb8783a22beeef4a258c4ff00974f5909b714"
-      hash12 = "da25010a22460bbaabff0f7004204aae7d830348e8a4543177b1f3383b2c3100"
+     meta:
+    description = "Detects strings from scripts in the PowerShell-Suite repo"
+    author = "Florian Roth"
+    reference = "https://github.com/FuzzySecurity/PowerShell-Suite"
+    date = "2017-12-27"
+    hash1 = "79071ba5a984ee05903d566130467483c197cbc2537f25c1e3d7ae4772211fe0"
+    hash2 = "db31367410d0a9ffc9ed37f423a4b082639591be7f46aca91f5be261b23212d5"
+    hash3 = "4f51e7676a4d54c1962760ca0ac81beb28008451511af96652c31f4f40e8eb8e"
+    hash4 = "17ac9bb0c46838c65303f42a4a346fcba838ebd5833b875e81dd65c82701d8a8"
+    hash5 = "fa33aef619e620a88ecccb990e71c1e11ce2445f799979d23be2d1ad4321b6c6"
+    hash6 = "5542bd89005819bc4eef8dfc8a158183e5fd7a1438c84da35102588f5813a225"
+    hash7 = "c6a99faeba098eb411f0a9fcb772abac2af438fc155131ebfc93a00e3dcfad50"
+    hash8 = "a8e06ecf5a8c25619ce85f8a23f2416832cabb5592547609cfea8bd7fcfcc93d"
+    hash9 = "6aa5abf58904d347d441ac8852bd64b2bad3b5b03b518bdd06510931a6564d08"
+    hash10 = "5608f25930f99d78804be8c9c39bd33f4f8d14360dd1e4cc88139aa34c27376d"
+    hash11 = "68b6c0b5479ecede3050a2f44f8bb8783a22beeef4a258c4ff00974f5909b714"
+    hash12 = "da25010a22460bbaabff0f7004204aae7d830348e8a4543177b1f3383b2c3100"
+    severity = "7"
+    type = "Exploit Kit"
    strings:
       $ = "[!] NtCreateThreadEx failed.." fullword ascii
       $ = "[?] Executing mmc.." ascii
@@ -44,12 +46,14 @@ rule PowerShell_Suite_Hacktools_Gen_Strings {
 }
 
 rule PowerShell_Suite_Eidolon {
-   meta:
-      description = "Detects PowerShell Suite Eidolon script - file Start-Eidolon.ps1"
-      author = "Florian Roth"
-      reference = "https://github.com/FuzzySecurity/PowerShell-Suite"
-      date = "2017-12-27"
-      hash1 = "db31367410d0a9ffc9ed37f423a4b082639591be7f46aca91f5be261b23212d5"
+     meta:
+    description = "Detects PowerShell Suite Eidolon script - file Start-Eidolon.ps1"
+    author = "Florian Roth"
+    reference = "https://github.com/FuzzySecurity/PowerShell-Suite"
+    date = "2017-12-27"
+    hash1 = "db31367410d0a9ffc9ed37f423a4b082639591be7f46aca91f5be261b23212d5"
+    severity = "7"
+    type = "Exploit Kit"
    strings:
       $ = "[+] Eidolon entry point:" ascii
       $ = "C:\\PS> Start-Eidolon -Target C:\\Some\\File.Path -Mimikatz -Verbose" fullword ascii

@@ -1,9 +1,11 @@
 rule hacktool_macos_ptoomey3_keychain_dumper
 {
-    meta:
-        description = "Keychain dumping utility."
-        reference = "https://github.com/ptoomey3/Keychain-Dumper"
-        author = "@mimeframe"
+      meta:
+    description = "Keychain dumping utility."
+    reference = "https://github.com/ptoomey3/Keychain-Dumper"
+    author = "@mimeframe"
+    severity = "5"
+    type = "Unknown"
     strings:
         $a1 = "keychain_dumper" wide ascii
         $a2 = "/var/Keychains/keychain-2.db" wide ascii

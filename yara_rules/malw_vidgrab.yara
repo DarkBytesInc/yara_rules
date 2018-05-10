@@ -7,10 +7,12 @@ import "pe"
 
 rule VidgrabCode : Vidgrab Family 
 {
-    meta:
-        description = "Vidgrab code tricks"
-        author = "Seth Hardy"
-        last_modified = "2014-06-20"
+      meta:
+    description = "Vidgrab code tricks"
+    author = "Seth Hardy"
+    last_modified = "2014-06-20"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $divbyzero = { B8 02 00 00 00 48 48 BA 02 00 00 00 83 F2 02 F7 F0 }
@@ -24,10 +26,12 @@ rule VidgrabCode : Vidgrab Family
 
 rule VidgrabStrings : Vidgrab Family
 {
-    meta:
-        description = "Vidgrab Identifying Strings"
-        author = "Seth Hardy"
-        last_modified = "2014-06-20"
+      meta:
+    description = "Vidgrab Identifying Strings"
+    author = "Seth Hardy"
+    last_modified = "2014-06-20"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $ = "IDI_ICON5" wide ascii
@@ -43,10 +47,12 @@ rule VidgrabStrings : Vidgrab Family
 
 rule Vidgrab : Family
 {
-    meta:
-        description = "Vidgrab"
-        author = "Seth Hardy"
-        last_modified = "2014-06-20"
+      meta:
+    description = "Vidgrab"
+    author = "Seth Hardy"
+    last_modified = "2014-06-20"
+    severity = "7"
+    type = "Malware"
         
     condition:
         VidgrabCode or VidgrabStrings

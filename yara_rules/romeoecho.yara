@@ -2,9 +2,12 @@ import "pe"
 
 rule RomeoEcho
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    description = "RomeoEcho"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 		$ = "%s %-20s %10lu %s"

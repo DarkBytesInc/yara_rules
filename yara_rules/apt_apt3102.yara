@@ -8,10 +8,12 @@ import "pe"
 rule APT3102Code
 {
 
-    meta:
-        description = "3102 code features"
-        author = "Seth Hardy"
-        last_modified = "2014-06-25"
+      meta:
+    description = "3102 code features"
+    author = "Seth Hardy"
+    last_modified = "2014-06-25"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $setupthread = { B9 02 07 00 00 BE ?? ?? ?? ?? 8B F8 6A 00 F3 A5 }
@@ -23,10 +25,12 @@ rule APT3102Code
 rule APT3102Strings
 {
     
-    meta:
-        description = "3102 Identifying Strings"
-        author = "Seth Hardy"
-        last_modified = "2014-06-25"
+      meta:
+    description = "3102 Identifying Strings"
+    author = "Seth Hardy"
+    last_modified = "2014-06-25"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $ = "rundll32_exec.dll\x00Update"

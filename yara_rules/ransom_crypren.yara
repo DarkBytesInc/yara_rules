@@ -1,8 +1,11 @@
 rule Ransom : Crypren{
-    meta:
-        weight = 1
-        Author = "@pekeinfo"
-        reference = "https://github.com/pekeinfo/DecryptCrypren"
+      meta:
+    weight = 1
+    Author = "@pekeinfo"
+    reference = "https://github.com/pekeinfo/DecryptCrypren"
+    description = "Ransom"
+    severity = "10"
+    type = "Ransomware"
     strings: 
         $a = "won't be able to recover your files anymore.</p>"
         $b = {6A 03 68 ?? ?? ?? ?? B9 74 F1 AE 00 E8 ?? ?? ?? ?? E8 ?? ?? ?? ?? 68 98 3A 00 00 FF D6 6A 00 68 ?? ?? ?? ?? 68 ?? ?? ?? ??}

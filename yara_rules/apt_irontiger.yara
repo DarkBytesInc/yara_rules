@@ -6,10 +6,12 @@
 rule IronTiger_ASPXSpy
 {
     
-    meta:
-        author = "Cyber Safety Solutions, Trend Micro"
-        description = "ASPXSpy detection. It might be used by other fraudsters"
-        reference = "http://goo.gl/T5fSJC"
+      meta:
+    author = "Cyber Safety Solutions, Trend Micro"
+    description = "ASPXSpy detection. It might be used by other fraudsters"
+    reference = "http://goo.gl/T5fSJC"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $str1 = "ASPXSpy" nocase wide ascii
@@ -23,10 +25,12 @@ rule IronTiger_ASPXSpy
 rule IronTiger_ChangePort_Toolkit_driversinstall 
 {
    
-    meta:
-        author = "Cyber Safety Solutions, Trend Micro"
-        description = "Iron Tiger Malware - Changeport Toolkit driverinstall"   
-        reference = "http://goo.gl/T5fSJC"
+      meta:
+    author = "Cyber Safety Solutions, Trend Micro"
+    description = "Iron Tiger Malware - Changeport Toolkit driverinstall"
+    reference = "http://goo.gl/T5fSJC"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $str1 = "openmydoor" nocase wide ascii
@@ -41,10 +45,12 @@ rule IronTiger_ChangePort_Toolkit_driversinstall
 rule IronTiger_ChangePort_Toolkit_ChangePortExe 
 {
    
-    meta:
-        author = "Cyber Safety Solutions, Trend Micro"
-        description = "Iron Tiger Malware - Toolkit ChangePort"
-        reference = "http://goo.gl/T5fSJC"
+      meta:
+    author = "Cyber Safety Solutions, Trend Micro"
+    description = "Iron Tiger Malware - Toolkit ChangePort"
+    reference = "http://goo.gl/T5fSJC"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $str1 = "Unable to alloc the adapter!" nocase wide ascii
@@ -60,10 +66,12 @@ rule IronTiger_ChangePort_Toolkit_ChangePortExe
 rule IronTiger_dllshellexc2010 
 {
     
-    meta:
-        author = "Cyber Safety Solutions, Trend Micro"
-        description = "dllshellexc2010 Exchange backdoor + remote shell"
-        reference = "http://goo.gl/T5fSJC"
+      meta:
+    author = "Cyber Safety Solutions, Trend Micro"
+    description = "dllshellexc2010 Exchange backdoor + remote shell"
+    reference = "http://goo.gl/T5fSJC"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $str1 = "Microsoft.Exchange.Clients.Auth.dll" nocase ascii wide
@@ -79,10 +87,12 @@ rule IronTiger_dllshellexc2010
 rule IronTiger_dnstunnel 
 {
    
-    meta:
-        author = "Cyber Safety Solutions, Trend Micro"
-        description = "This rule detects a dns tunnel tool used in Operation Iron Tiger"
-        reference = "http://goo.gl/T5fSJC"
+      meta:
+    author = "Cyber Safety Solutions, Trend Micro"
+    description = "This rule detects a dns tunnel tool used in Operation Iron Tiger"
+    reference = "http://goo.gl/T5fSJC"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $str1 = "\\DnsTunClient\\" nocase wide ascii
@@ -102,10 +112,12 @@ rule IronTiger_dnstunnel
 rule IronTiger_EFH3_encoder 
 {
   
-    meta:
-        author = "Cyber Safety Solutions, Trend Micro"
-        description = "Iron Tiger EFH3 Encoder"
-        reference = "http://goo.gl/T5fSJC"
+      meta:
+    author = "Cyber Safety Solutions, Trend Micro"
+    description = "Iron Tiger EFH3 Encoder"
+    reference = "http://goo.gl/T5fSJC"
+    severity = "10"
+    type = "Advanced Persistent Threat"
   
     strings:
         $str1 = "EFH3 [HEX] [SRCFILE] [DSTFILE]" nocase wide ascii
@@ -119,10 +131,12 @@ rule IronTiger_EFH3_encoder
 rule IronTiger_GetPassword_x64
 {
   
-    meta:
-        author = "Cyber Safety Solutions, Trend Micro"
-        description = "Iron Tiger Malware - GetPassword x64"
-        reference = "http://goo.gl/T5fSJC"
+      meta:
+    author = "Cyber Safety Solutions, Trend Micro"
+    description = "Iron Tiger Malware - GetPassword x64"
+    reference = "http://goo.gl/T5fSJC"
+    severity = "10"
+    type = "Advanced Persistent Threat"
   
     strings:
         $str1 = "(LUID ERROR)" nocase wide ascii
@@ -140,10 +154,12 @@ rule IronTiger_GetPassword_x64
 rule IronTiger_GetUserInfo
 {
     
-    meta:
-        author = "Cyber Safety Solutions, Trend Micro"
-        description = "Iron Tiger Malware - GetUserInfo"
-        reference = "http://goo.gl/T5fSJC"
+      meta:
+    author = "Cyber Safety Solutions, Trend Micro"
+    description = "Iron Tiger Malware - GetUserInfo"
+    reference = "http://goo.gl/T5fSJC"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $str1 = "getuserinfo username" nocase wide ascii
@@ -157,10 +173,12 @@ rule IronTiger_GetUserInfo
 rule IronTiger_Gh0stRAT_variant
 {
   
-    meta:
-        author = "Cyber Safety Solutions, Trend Micro"
-        description = "This is a detection for a s.exe variant seen in Op. Iron Tiger"
-        reference = "http://goo.gl/T5fSJC"
+      meta:
+    author = "Cyber Safety Solutions, Trend Micro"
+    description = "This is a detection for a s.exe variant seen in Op. Iron Tiger"
+    reference = "http://goo.gl/T5fSJC"
+    severity = "10"
+    type = "Advanced Persistent Threat"
   
     strings:
         $str1 = "Game Over Good Luck By Wind" nocase wide ascii
@@ -175,10 +193,12 @@ rule IronTiger_Gh0stRAT_variant
 rule IronTiger_GTalk_Trojan 
 {
   
-    meta:
-        author = "Cyber Safety Solutions, Trend Micro"
-        description = "Iron Tiger Malware - GTalk Trojan"
-        reference = "http://goo.gl/T5fSJC"
+      meta:
+    author = "Cyber Safety Solutions, Trend Micro"
+    description = "Iron Tiger Malware - GTalk Trojan"
+    reference = "http://goo.gl/T5fSJC"
+    severity = "10"
+    type = "Advanced Persistent Threat"
   
     strings:
         $str1 = "gtalklite.com" nocase wide ascii
@@ -192,10 +212,12 @@ rule IronTiger_GTalk_Trojan
 rule IronTiger_HTTPBrowser_Dropper 
 {
    
-    meta:
-        author = "Cyber Safety Solutions, Trend Micro"
-        description = "Iron Tiger Malware - HTTPBrowser Dropper"
-        reference = "http://goo.gl/T5fSJC"
+      meta:
+    author = "Cyber Safety Solutions, Trend Micro"
+    description = "Iron Tiger Malware - HTTPBrowser Dropper"
+    reference = "http://goo.gl/T5fSJC"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $str1 = ".dllUT" nocase wide ascii
@@ -209,10 +231,12 @@ rule IronTiger_HTTPBrowser_Dropper
 rule IronTiger_HTTP_SOCKS_Proxy_soexe
 {
    
-    meta:
-        author = "Cyber Safety Solutions, Trend Micro"
-        description = "Iron Tiger Toolset - HTTP SOCKS Proxy soexe"
-        reference = "http://goo.gl/T5fSJC"
+      meta:
+    author = "Cyber Safety Solutions, Trend Micro"
+    description = "Iron Tiger Toolset - HTTP SOCKS Proxy soexe"
+    reference = "http://goo.gl/T5fSJC"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $str1 = "listen SOCKET error." nocase wide ascii
@@ -228,10 +252,12 @@ rule IronTiger_HTTP_SOCKS_Proxy_soexe
 rule IronTiger_NBDDos_Gh0stvariant_dropper
 {
    
-    meta:
-        author = "Cyber Safety Solutions, Trend Micro"
-        description = "Iron Tiger Malware - NBDDos Gh0stvariant Dropper"
-        reference = "http://goo.gl/T5fSJC"
+      meta:
+    author = "Cyber Safety Solutions, Trend Micro"
+    description = "Iron Tiger Malware - NBDDos Gh0stvariant Dropper"
+    reference = "http://goo.gl/T5fSJC"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $str1 = "This service can't be stoped." nocase wide ascii
@@ -247,10 +273,12 @@ rule IronTiger_NBDDos_Gh0stvariant_dropper
 rule IronTiger_PlugX_DosEmulator
 {
    
-    meta:
-        author = "Cyber Safety Solutions, Trend Micro"
-        description = "Iron Tiger Malware - PlugX DosEmulator"  
-        reference = "http://goo.gl/T5fSJC"
+      meta:
+    author = "Cyber Safety Solutions, Trend Micro"
+    description = "Iron Tiger Malware - PlugX DosEmulator"
+    reference = "http://goo.gl/T5fSJC"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $str1 = "Dos Emluator Ver" nocase wide ascii
@@ -265,10 +293,12 @@ rule IronTiger_PlugX_DosEmulator
 rule IronTiger_PlugX_FastProxy
 {
    
-    meta:
-        author = "Cyber Safety Solutions, Trend Micro"
-        description = "Iron Tiger Malware - PlugX FastProxy"
-        reference = "http://goo.gl/T5fSJC"
+      meta:
+    author = "Cyber Safety Solutions, Trend Micro"
+    description = "Iron Tiger Malware - PlugX FastProxy"
+    reference = "http://goo.gl/T5fSJC"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $str1 = "SAFEPROXY HTServerTimer Quit!" nocase wide ascii
@@ -285,10 +315,12 @@ rule IronTiger_PlugX_FastProxy
 rule IronTiger_PlugX_Server
 {
    
-    meta:
-        author = "Cyber Safety Solutions, Trend Micro"
-        description = "Iron Tiger Malware - PlugX Server"
-        reference = "http://goo.gl/T5fSJC"
+      meta:
+    author = "Cyber Safety Solutions, Trend Micro"
+    description = "Iron Tiger Malware - PlugX Server"
+    reference = "http://goo.gl/T5fSJC"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $str1 = "\\UnitFrmManagerKeyLog.pas" nocase wide ascii
@@ -309,10 +341,12 @@ rule IronTiger_PlugX_Server
 rule IronTiger_ReadPWD86
 {
    
-    meta:
-        author = "Cyber Safety Solutions, Trend Micro"
-        description = "Iron Tiger Malware - ReadPWD86"
-        reference = "http://goo.gl/T5fSJC"
+      meta:
+    author = "Cyber Safety Solutions, Trend Micro"
+    description = "Iron Tiger Malware - ReadPWD86"
+    reference = "http://goo.gl/T5fSJC"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $str1 = "Fail To Load LSASRV" nocase wide ascii
@@ -326,10 +360,12 @@ rule IronTiger_ReadPWD86
 rule IronTiger_Ring_Gh0stvariant
 {
   
-    meta:
-        author = "Cyber Safety Solutions, Trend Micro"
-        description = "Iron Tiger Malware - Ring Gh0stvariant"
-        reference = "http://goo.gl/T5fSJC"
+      meta:
+    author = "Cyber Safety Solutions, Trend Micro"
+    description = "Iron Tiger Malware - Ring Gh0stvariant"
+    reference = "http://goo.gl/T5fSJC"
+    severity = "10"
+    type = "Advanced Persistent Threat"
   
     strings:
         $str1 = "RING RAT Exception" nocase wide ascii
@@ -345,10 +381,12 @@ rule IronTiger_Ring_Gh0stvariant
 rule IronTiger_wmiexec
 {
   
-    meta:
-        author = "Cyber Safety Solutions, Trend Micro"
-        description = "Iron Tiger Tool - wmi.vbs detection"
-        reference = "http://goo.gl/T5fSJC"
+      meta:
+    author = "Cyber Safety Solutions, Trend Micro"
+    description = "Iron Tiger Tool - wmi.vbs detection"
+    reference = "http://goo.gl/T5fSJC"
+    severity = "10"
+    type = "Advanced Persistent Threat"
   
     strings:
         $str1 = "Temp Result File , Change it to where you like" nocase wide ascii
@@ -374,13 +412,15 @@ rule IronTiger_wmiexec
 rule IronPanda_DNSTunClient 
 {
 
-    meta:
-        description = "Iron Panda malware DnsTunClient - file named.exe"
-        author = "Florian Roth"
-        reference = "https://goo.gl/E4qia9"
-        date = "2015-09-16"
-        score = 80
-        hash = "a08db49e198068709b7e52f16d00a10d72b4d26562c0d82b4544f8b0fb259431"
+      meta:
+    description = "Iron Panda malware DnsTunClient - file named.exe"
+    author = "Florian Roth"
+    reference = "https://goo.gl/E4qia9"
+    date = "2015-09-16"
+    score = 80
+    hash = "a08db49e198068709b7e52f16d00a10d72b4d26562c0d82b4544f8b0fb259431"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "dnstunclient -d or -domain <domain>" fullword ascii
@@ -402,12 +442,14 @@ rule IronPanda_DNSTunClient
 rule IronPanda_Malware1 
 {
 
-    meta:
-        description = "Iron Panda Malware"
-        author = "Florian Roth"
-        reference = "https://goo.gl/E4qia9"
-        date = "2015-09-16"
-        hash = "a0cee5822ddf254c254a5a0b7372c9d2b46b088a254a1208cb32f5fe7eca848a"
+      meta:
+    description = "Iron Panda Malware"
+    author = "Florian Roth"
+    reference = "https://goo.gl/E4qia9"
+    date = "2015-09-16"
+    hash = "a0cee5822ddf254c254a5a0b7372c9d2b46b088a254a1208cb32f5fe7eca848a"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "activedsimp.dll" fullword wide
@@ -423,12 +465,14 @@ rule IronPanda_Malware1
 rule IronPanda_Webshell_JSP 
 {
 
-    meta:
-        description = "Iron Panda Malware JSP"
-        author = "Florian Roth"
-        reference = "https://goo.gl/E4qia9"
-        date = "2015-09-16"
-        hash = "3be95477e1d9f3877b4355cff3fbcdd3589bb7f6349fd4ba6451e1e9d32b7fa6"
+      meta:
+    description = "Iron Panda Malware JSP"
+    author = "Florian Roth"
+    reference = "https://goo.gl/E4qia9"
+    date = "2015-09-16"
+    hash = "3be95477e1d9f3877b4355cff3fbcdd3589bb7f6349fd4ba6451e1e9d32b7fa6"
+    severity = "10"
+    type = "Advanced Persistent Threat"
   
     strings:
         $s1 = "Bin_ExecSql(\"exec master..xp_cmdshell'bcp \\\"select safile from \" + db + \"..bin_temp\\\" queryout \\\"\" + Bin_TextBox_SaveP" ascii
@@ -442,12 +486,14 @@ rule IronPanda_Webshell_JSP
 rule IronPanda_Malware_Htran 
 {
 
-    meta:
-        description = "Iron Panda Malware Htran"
-        author = "Florian Roth"
-        reference = "https://goo.gl/E4qia9"
-        date = "2015-09-16"
-        hash = "7903f94730a8508e9b272b3b56899b49736740cea5037ea7dbb4e690bcaf00e7"
+      meta:
+    description = "Iron Panda Malware Htran"
+    author = "Florian Roth"
+    reference = "https://goo.gl/E4qia9"
+    date = "2015-09-16"
+    hash = "7903f94730a8508e9b272b3b56899b49736740cea5037ea7dbb4e690bcaf00e7"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $s1 = "[-] Gethostbyname(%s) error:%s" fullword ascii
@@ -472,12 +518,14 @@ rule IronPanda_Malware_Htran
 rule IronPanda_Malware2 
 {
 
-    meta:
-        description = "Iron Panda Malware"
-        author = "Florian Roth"
-        reference = "https://goo.gl/E4qia9"
-        date = "2015-09-16"
-        hash = "a89c21dd608c51c4bf0323d640f816e464578510389f9edcf04cd34090decc91"
+      meta:
+    description = "Iron Panda Malware"
+    author = "Florian Roth"
+    reference = "https://goo.gl/E4qia9"
+    date = "2015-09-16"
+    hash = "a89c21dd608c51c4bf0323d640f816e464578510389f9edcf04cd34090decc91"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "\\setup.exe" fullword ascii
@@ -493,12 +541,14 @@ rule IronPanda_Malware2
 rule IronPanda_Malware3 
 {
 
-    meta:
-        description = "Iron Panda Malware"
-        author = "Florian Roth"
-        reference = "https://goo.gl/E4qia9"
-        date = "2015-09-16"
-        hash = "5cd2af844e718570ae7ba9773a9075738c0b3b75c65909437c43201ce596a742"
+      meta:
+    description = "Iron Panda Malware"
+    author = "Florian Roth"
+    reference = "https://goo.gl/E4qia9"
+    date = "2015-09-16"
+    hash = "5cd2af844e718570ae7ba9773a9075738c0b3b75c65909437c43201ce596a742"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "PluginDeflater.exe" fullword wide
@@ -515,12 +565,14 @@ rule IronPanda_Malware3
 rule IronPanda_Malware4 
 {
 
-    meta:
-        description = "Iron Panda Malware"
-        author = "Florian Roth"
-        reference = "https://goo.gl/E4qia9"
-        date = "2015-09-16"
-        hash = "0d6da946026154416f49df2283252d01ecfb0c41c27ef3bc79029483adc2240c"
+      meta:
+    description = "Iron Panda Malware"
+    author = "Florian Roth"
+    reference = "https://goo.gl/E4qia9"
+    date = "2015-09-16"
+    hash = "0d6da946026154416f49df2283252d01ecfb0c41c27ef3bc79029483adc2240c"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "TestPlugin.dll" fullword wide

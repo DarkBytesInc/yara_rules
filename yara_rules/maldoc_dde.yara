@@ -1,11 +1,13 @@
 rule Contains_DDE_Protocol
 {
-        meta:
-                author = "Nick Beede"
-                description = "Detect Dynamic Data Exchange protocol in doc/docx"
-                reference = "https://sensepost.com/blog/2017/macro-less-code-exec-in-msword/"
-                date = "2017-10-19"
-                filetype = "Office documents"
+          meta:
+    author = "Nick Beede"
+    description = "Detect Dynamic Data Exchange protocol in doc/docx"
+    reference = "https://sensepost.com/blog/2017/macro-less-code-exec-in-msword/"
+    date = "2017-10-19"
+    filetype = "Office documents"
+    severity = "7"
+    type = "Malware"
         
         strings:
                 $doc = {D0 CF 11 E0 A1 B1 1A E1}

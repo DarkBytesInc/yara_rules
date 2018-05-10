@@ -6,10 +6,12 @@ import "pe"
 
 rule PE_File_pyinstaller
 {
-    meta:
-        author = "Didier Stevens (https://DidierStevens.com)"
-        description = "Detect PE file produced by pyinstaller"
-        reference = "https://isc.sans.edu/diary/21057"
+      meta:
+    author = "Didier Stevens (https://DidierStevens.com)"
+    description = "Detect PE file produced by pyinstaller"
+    reference = "https://isc.sans.edu/diary/21057"
+    severity = "7"
+    type = "Malware"
     strings:
         $a = "pyi-windows-manifest-filename"
     condition:

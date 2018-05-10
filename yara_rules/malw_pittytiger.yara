@@ -1,7 +1,9 @@
 rule PittyTiger {
-  meta: 
+    meta:
     author = " (@chort0)"
     description = "Detect PittyTiger Trojan via common strings"
+    severity = "7"
+    type = "Malware"
     strings: 
       $ptUserAgent = "Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.; SV1)" // missing minor digit
       $ptFC001 = "FC001" fullword 

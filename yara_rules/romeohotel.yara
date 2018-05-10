@@ -2,11 +2,14 @@ import "pe"
 
 rule RomeoHotel
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
-		Source_64 = "440cb3f6dd07e2f9e3d3614fd23d3863ecfc08b463b0b327eedf08504f838c90"
-		Source_diskSpace = "1b1496f8f35d32a93c7f16ebff6e9b560a158cc6fce061491f91bc9f43ef5be4"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    Source_64 = "440cb3f6dd07e2f9e3d3614fd23d3863ecfc08b463b0b327eedf08504f838c90"
+    Source_diskSpace = "1b1496f8f35d32a93c7f16ebff6e9b560a158cc6fce061491f91bc9f43ef5be4"
+    description = "RomeoHotel"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 	/*

@@ -1,9 +1,11 @@
 rule hacktool_macos_keylogger_dannvix
 {
-    meta:
-        description = "A simple keylogger for macOS."
-        reference = "https://github.com/dannvix/keylogger-osx"
-        author = "@mimeframe"
+      meta:
+    description = "A simple keylogger for macOS."
+    reference = "https://github.com/dannvix/keylogger-osx"
+    author = "@mimeframe"
+    severity = "5"
+    type = "Unknown"
     strings:
         $a1 = "/var/log/keystroke.log" wide ascii
         $a2 = "<forward-delete>" wide ascii

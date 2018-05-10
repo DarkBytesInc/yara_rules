@@ -1,9 +1,11 @@
 rule hacktool_windows_moyix_creddump
 {
-    meta:
-        description = "creddump is a python tool to extract credentials and secrets from Windows registry hives."
-        reference = "https://github.com/moyix/creddump"
-        author = "@mimeframe"
+      meta:
+    description = "creddump is a python tool to extract credentials and secrets from Windows registry hives."
+    reference = "https://github.com/moyix/creddump"
+    author = "@mimeframe"
+    severity = "5"
+    type = "Unknown"
     strings:
         $a1 = "!@#$%^&*()qwertyUIOPAzxcvbnmQQQQQQQQQQQQ)(*@&%" wide ascii
         $a2 = "0123456789012345678901234567890123456789" wide ascii

@@ -6,11 +6,13 @@
 rule AthenaHTTP
 {
     
-    meta:
-        author = "Brian Wallace @botnet_hunter"
-        author_email = "bwall@ballastsecurity.net"
-        date = "2014-08-09"
-        description = "Identify Athena HTTP"
+      meta:
+    author = "Brian Wallace @botnet_hunter"
+    author_email = "bwall@ballastsecurity.net"
+    date = "2014-08-09"
+    description = "Identify Athena HTTP"
+    severity = "7"
+    type = "Malware"
     
     strings:
         $s1 = "%s(%s)"
@@ -31,10 +33,12 @@ rule AthenaHTTP
 rule AthenaHTTP_v2 
 {
     
-    meta:
-        author = "Jason Jones <jasonjones@arbor.net>"
-        description = "Athena HTTP identification"
-        source = "https://github.com/arbor/yara/blob/master/athena.yara"
+      meta:
+    author = "Jason Jones <jasonjones@arbor.net>"
+    description = "Athena HTTP identification"
+    source = "https://github.com/arbor/yara/blob/master/athena.yara"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $fmt_str1="|type:on_exec|uid:%s|priv:%s|arch:x%s|gend:%s|cores:%i|os:%s|ver:%s|net:%s|"
@@ -52,10 +56,12 @@ rule AthenaHTTP_v2
 rule AthenaIRC 
 {
 
-    meta:
-        author = "Jason Jones <jasonjones@arbor.net>"
-        description = "Athena IRC v1.8.x, 2.x identification"
-        source = "https://github.com/arbor/yara/blob/master/athena.yara"
+      meta:
+    author = "Jason Jones <jasonjones@arbor.net>"
+    description = "Athena IRC v1.8.x, 2.x identification"
+    source = "https://github.com/arbor/yara/blob/master/athena.yara"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $cmd1 = "ddos." fullword

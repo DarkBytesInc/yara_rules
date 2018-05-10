@@ -4,13 +4,16 @@
 */
 rule ransom_comodosec_mrcr1 {
 
-        meta:
-                author = " J from THL <j@techhelplist.com>"
-                date = "2017/01"
-                reference = "https://virustotal.com/en/file/75c82fd18fcf8a51bc1b32a89852d90978fa5e7a55281f42b0a1de98d14644fa/analysis/"
-                version = 1
-                maltype = "Ransomware"
-                filetype = "memory"
+          meta:
+    author = " J from THL <j@techhelplist.com>"
+    date = "2017/01"
+    reference = "https://virustotal.com/en/file/75c82fd18fcf8a51bc1b32a89852d90978fa5e7a55281f42b0a1de98d14644fa/analysis/"
+    version = 1
+    maltype = "Ransomware"
+    filetype = "memory"
+    description = "ransom_comodosec_mrcr1"
+    severity = "10"
+    type = "Ransomware"
 
         strings:
                 $text01 = "WebKitFormBoundary"

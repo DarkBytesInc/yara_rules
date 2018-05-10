@@ -9,12 +9,14 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule redSails_EXE {
-   meta:
-      description = "Detects Red Sails Hacktool by WinDivert references"
-      author = "Florian Roth"
-      reference = "https://github.com/BeetleChunks/redsails"
-      date = "2017-10-02"
-      hash1 = "7a7861d25b0c038d77838ecbd5ea5674650ad4f5faf7432a6f3cfeb427433fac"
+     meta:
+    description = "Detects Red Sails Hacktool by WinDivert references"
+    author = "Florian Roth"
+    reference = "https://github.com/BeetleChunks/redsails"
+    date = "2017-10-02"
+    hash1 = "7a7861d25b0c038d77838ecbd5ea5674650ad4f5faf7432a6f3cfeb427433fac"
+    severity = "5"
+    type = "Unknown"
    strings:
       $s1 = "bWinDivert64.dll" fullword ascii
       $s2 = "bWinDivert32.dll" fullword ascii
@@ -23,13 +25,15 @@ rule redSails_EXE {
 }
 
 rule redSails_PY {
-   meta:
-      description = "Detects Red Sails Hacktool - Python"
-      author = "Florian Roth"
-      reference = "https://github.com/BeetleChunks/redsails"
-      date = "2017-10-02"
-      hash1 = "6ebedff41992b9536fe9b1b704a29c8c1d1550b00e14055e3c6376f75e462661"
-      hash2 = "5ec20cb99030f48ba512cbc7998b943bebe49396b20cf578c26debbf14176e5e"
+     meta:
+    description = "Detects Red Sails Hacktool - Python"
+    author = "Florian Roth"
+    reference = "https://github.com/BeetleChunks/redsails"
+    date = "2017-10-02"
+    hash1 = "6ebedff41992b9536fe9b1b704a29c8c1d1550b00e14055e3c6376f75e462661"
+    hash2 = "5ec20cb99030f48ba512cbc7998b943bebe49396b20cf578c26debbf14176e5e"
+    severity = "5"
+    type = "Unknown"
    strings:
       $x1 = "Gained command shell on host" fullword ascii
       $x2 = "[!] Received an ERROR in shell()" fullword ascii

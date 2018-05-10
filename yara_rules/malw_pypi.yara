@@ -1,11 +1,13 @@
 rule MALW_FakePyPI
 {
-meta:
-	description = "Identifies fake PyPI Packages."
-	author = "@bartblaze"
-	reference = "http://www.nbu.gov.sk/skcsirt-sa-20170909-pypi/"
-	date = "2017-09"
-	tlp = "white"
+  meta:
+    description = "Identifies fake PyPI Packages."
+    author = "@bartblaze"
+    reference = "http://www.nbu.gov.sk/skcsirt-sa-20170909-pypi/"
+    date = "2017-09"
+    tlp = "white"
+    severity = "7"
+    type = "Malware"
 
 strings:	
 	$ = "# Welcome Here! :)"

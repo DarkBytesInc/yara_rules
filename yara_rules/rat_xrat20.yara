@@ -4,21 +4,22 @@
 */
 rule xRAT20 : RAT
 {
-meta:
-	author = "Rottweiler"
-	date = "2015-08-20"
-	description = "Identifies xRAT 2.0 samples"
-	maltype = "Remote Access Trojan"
-	hash0 = "cda610f9cba6b6242ebce9f31faf5d9c"
-	hash1 = "60d7b0d2dfe937ac6478807aa7043525"
-	hash2 = "d1b577fbfd25cc5b873b202cfe61b5b8"
-	hash3 = "1820fa722906569e3f209d1dab3d1360"
-	hash4 = "8993b85f5c138b0afacc3ff04a2d7871"
-	hash5 = "0c231ed8a800b0f17f897241f1d5f4e3"
-	hash1 = "60d7b0d2dfe937ac6478807aa7043525"
-	hash8 = "2c198e3e0e299a51e5d955bb83c62a5e"
-	sample_filetype = "exe"
-	yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Rottweiler"
+    date = "2015-08-20"
+    description = "Identifies xRAT 2.0 samples"
+    maltype = "Remote Access Trojan"
+    hash0 = "cda610f9cba6b6242ebce9f31faf5d9c"
+    hash1 = "60d7b0d2dfe937ac6478807aa7043525"
+    hash2 = "d1b577fbfd25cc5b873b202cfe61b5b8"
+    hash3 = "1820fa722906569e3f209d1dab3d1360"
+    hash4 = "8993b85f5c138b0afacc3ff04a2d7871"
+    hash5 = "0c231ed8a800b0f17f897241f1d5f4e3"
+    hash8 = "2c198e3e0e299a51e5d955bb83c62a5e"
+    sample_filetype = "exe"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Malware"
 strings:
 	$string0 = "GetDirectory: File not found" wide
 	$string1 = "<>m__Finally8"

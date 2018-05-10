@@ -5,12 +5,15 @@
 rule CyberGate : RAT
 {
 
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2014/04"
-		ref = "http://malwareconfig.com/stats/CyberGate"
-		maltype = "Remote Access Trojan"
-		filetype = "exe"
+	  meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/CyberGate"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "CyberGate"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$string1 = {23 23 23 23 40 23 23 23 23 E8 EE E9 F9 23 23 23 23 40 23 23 23 23}

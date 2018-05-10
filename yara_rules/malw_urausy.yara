@@ -6,9 +6,11 @@
 import "pe"
 
 rule urausy_skype_dat : memory {
-	meta:
-		author = "AlienVault Labs"
-		description = "Yara rule to match against memory of processes infected by Urausy skype.dat"
+	  meta:
+    author = "AlienVault Labs"
+    description = "Yara rule to match against memory of processes infected by Urausy skype.dat"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$a = "skype.dat" ascii wide
 		$b = "skype.ini" ascii wide

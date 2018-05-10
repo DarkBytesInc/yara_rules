@@ -18,12 +18,14 @@
 rule Binary_Drop_Certutil
 {
 
-    meta:
-        description = "Drop binary as base64 encoded cert trick"
-        author = "Florian Roth"
-        reference = "https://goo.gl/9DNn8q"
-        date = "2015-07-15"
-        score = 70
+      meta:
+    description = "Drop binary as base64 encoded cert trick"
+    author = "Florian Roth"
+    reference = "https://goo.gl/9DNn8q"
+    date = "2015-07-15"
+    score = 70
+    severity = "7"
+    type = "Malware"
 
     strings:
         $s0 = "echo -----BEGIN CERTIFICATE----- >" ascii
@@ -37,12 +39,14 @@ rule Binary_Drop_Certutil
 rule StegoKatz 
 {
 
-    meta:
-        description = "Encoded Mimikatz in other file types"
-        author = "Florian Roth"
-        reference = "https://goo.gl/jWPBBY"
-        date = "2015-09-11"
-        score = 70
+      meta:
+    description = "Encoded Mimikatz in other file types"
+    author = "Florian Roth"
+    reference = "https://goo.gl/jWPBBY"
+    date = "2015-09-11"
+    score = 70
+    severity = "7"
+    type = "Malware"
 
     strings:
         $s1 = "VC92Ny9TSXZMNk5jLy8vOUlqUTFVRlFNQTZMLysvdjlJaTh2L0ZUNXJBUUJJaTFRa1NFaUx6K2hWSS8vL1NJME44bklCQU9pZC92Ny9USTJjSkpBQUFBQXp3RW1MV3hCSmkyc1lTWXR6S0VtTDQxL0R6TXhNaTl4SmlWc0lUWWxMSUUySlF4aFZWbGRCVkVGVlFWWkJWMGlCN1BBQUFBQklnMlFrYUFDNE1BQUFBRW1MNkVTTmNPQ0pSQ1JnaVVRa1pFbU5RN0JKaTlsTWpRWFBGQU1BU0ls" ascii

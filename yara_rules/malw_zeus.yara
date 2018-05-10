@@ -7,11 +7,13 @@ import "pe"
 
 rule Windows_Malware_Zeus : Zeus_1134
     {
-            meta:
-                    author = "Xylitol xylitol@malwareint.com"
-                    date = "2014-03-03"
-                    description = "Match first two bytes, protocol and string present in Zeus 1.1.3.4"
-                    reference = "http://www.xylibox.com/2014/03/zeus-1134.html"
+              meta:
+    author = "Xylitol xylitol@malwareint.com"
+    date = "2014-03-03"
+    description = "Match first two bytes, protocol and string present in Zeus 1.1.3.4"
+    reference = "http://www.xylibox.com/2014/03/zeus-1134.html"
+    severity = "7"
+    type = "Malware"
                     
             strings:
                     $mz = {4D 5A}

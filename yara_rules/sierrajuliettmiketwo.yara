@@ -3,10 +3,13 @@ import "pe"
 
 rule RomeoJuliettMikeTwo
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
-		Source = "819722ba1c5b9d0b360c54cbdd3811d0cac1a9230720b3ed4815f78bcacb3653_d1ba9ba2987f59d99ce4bf09393c0521c4d1f2961c5aeed4e0bf86e78303d27c"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    Source = "819722ba1c5b9d0b360c54cbdd3811d0cac1a9230720b3ed4815f78bcacb3653_d1ba9ba2987f59d99ce4bf09393c0521c4d1f2961c5aeed4e0bf86e78303d27c"
+    description = "RomeoJuliettMikeTwo"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 	/*

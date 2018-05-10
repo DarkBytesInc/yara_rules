@@ -7,10 +7,12 @@
 */
 rule chinese_spam_spreader : webshell
 {
-    meta:
-        author      = "Vlad https://github.com/vlad-s"
-        date        = "2016/07/18"
-        description = "Catches chinese PHP spam files (autospreaders)"
+      meta:
+    author = "Vlad https://github.com/vlad-s"
+    date = "2016/07/18"
+    description = "Catches chinese PHP spam files (autospreaders)"
+    severity = "10"
+    type = "Webshell"
     strings:
         $a = "User-Agent: aQ0O010O"
         $b = "<font color='red'><b>Connection Error!</b></font>"
@@ -21,10 +23,12 @@ rule chinese_spam_spreader : webshell
 
 rule chinese_spam_echoer : webshell
 {
-    meta:
-        author      = "Vlad https://github.com/vlad-s"
-        date        = "2016/07/18"
-        description = "Catches chinese PHP spam files (printers)"
+      meta:
+    author = "Vlad https://github.com/vlad-s"
+    date = "2016/07/18"
+    description = "Catches chinese PHP spam files (printers)"
+    severity = "10"
+    type = "Webshell"
     strings:
         $a = "set_time_limit(0)"
         $b = "date_default_timezone_set('PRC');"

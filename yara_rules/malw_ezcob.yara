@@ -7,10 +7,12 @@ import "pe"
 
 rule EzcobStrings : Ezcob Family
 {
-    meta:
-        description = "Ezcob Identifying Strings"
-        author = "Seth Hardy"
-        last_modified = "2014-06-23"
+      meta:
+    description = "Ezcob Identifying Strings"
+    author = "Seth Hardy"
+    last_modified = "2014-06-23"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $ = "\x12F\x12F\x129\x12E\x12A\x12E\x12B\x12A\x12-\x127\x127\x128\x123\x12"
@@ -25,10 +27,12 @@ rule EzcobStrings : Ezcob Family
 
 rule Ezcob : Family
 {
-    meta:
-        description = "Ezcob"
-        author = "Seth Hardy"
-        last_modified = "2014-06-23"
+      meta:
+    description = "Ezcob"
+    author = "Seth Hardy"
+    last_modified = "2014-06-23"
+    severity = "7"
+    type = "Malware"
         
     condition:
         EzcobStrings

@@ -6,9 +6,12 @@
 rule CAP_HookExKeylogger
 {
 
-meta:
+  meta:
     author = "Brian C. Bell -- @biebsmalwareguy"
     reference = "https://github.com/DFIRnotes/rules/blob/master/CAP_HookExKeylogger.yar"
+    description = "CAP_HookExKeylogger"
+    severity = "7"
+    type = "Malware"
 
     strings:
     $str_Win32hookapi = "SetWindowsHookEx" nocase

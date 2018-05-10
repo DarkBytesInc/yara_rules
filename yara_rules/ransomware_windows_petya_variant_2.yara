@@ -1,10 +1,12 @@
 rule ransomware_windows_petya_variant_2
 {
-    meta:
-        description = "Petya Ransomware new variant June 2017 using ETERNALBLUE"
-        reference = "https://gist.github.com/vulnersCom/65fe44d27d29d7a5de4c176baba45759"
-        author = "@fusionrace"
-        md5 = "71b6a493388e7d0b40c83ce903bc6b04"
+      meta:
+    description = "Petya Ransomware new variant June 2017 using ETERNALBLUE"
+    reference = "https://gist.github.com/vulnersCom/65fe44d27d29d7a5de4c176baba45759"
+    author = "@fusionrace"
+    md5 = "71b6a493388e7d0b40c83ce903bc6b04"
+    severity = "10"
+    type = "Ransomware"
     strings:
         // psexec disguised - applicable to s1
         $s1 = "dllhost.dat" fullword wide

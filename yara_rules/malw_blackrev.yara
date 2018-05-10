@@ -6,11 +6,13 @@
 
 rule BlackRev
 {
-   meta:
-      author = "Dennis Schwarz"
-      date = "2013-05-21"
-      description = "Black Revolution DDoS Malware. http://www.arbornetworks.com/asert/2013/05/the-revolution-will-be-written-in-delphi/"
-      origin = "https://github.com/arbor/yara/blob/master/blackrev.yara"
+     meta:
+    author = "Dennis Schwarz"
+    date = "2013-05-21"
+    description = "Black Revolution DDoS Malware. http://www.arbornetworks.com/asert/2013/05/the-revolution-will-be-written-in-delphi/"
+    origin = "https://github.com/arbor/yara/blob/master/blackrev.yara"
+    severity = "7"
+    type = "Malware"
 
    strings: 
       $base1 = "http"

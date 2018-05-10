@@ -8,13 +8,15 @@ import "pe"
 rule SNOWGLOBE_Babar_Malware 
 {
 
-    meta:
-        description = "Detects the Babar Malware used in the SNOWGLOBE attacks - file babar.exe"
-        author = "Florian Roth"
-        reference = "http://motherboard.vice.com/read/meet-babar-a-new-malware-almost-certainly-created-by-france"
-        date = "2015/02/18"
-        hash = "27a0a98053f3eed82a51cdefbdfec7bb948e1f36"
-        score = 80
+      meta:
+    description = "Detects the Babar Malware used in the SNOWGLOBE attacks - file babar.exe"
+    author = "Florian Roth"
+    reference = "http://motherboard.vice.com/read/meet-babar-a-new-malware-almost-certainly-created-by-france"
+    date = "2015/02/18"
+    hash = "27a0a98053f3eed82a51cdefbdfec7bb948e1f36"
+    score = 80
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $mz = { 4d 5a }

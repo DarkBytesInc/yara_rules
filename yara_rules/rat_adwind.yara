@@ -4,10 +4,13 @@
 */
 rule Adwind_JAR_PACKA : binary RAT Frutas Unrecom AlienSpy
 {
- meta:
-  author = "Vitaly Kamluk, Vitaly.Kamluk@kaspersky.com"
-  reference = "https://securelist.com/securelist/files/2016/02/KL_AdwindPublicReport_2016.pdf"
-  last_modified = "2015-11-30"
+   meta:
+    author = "Vitaly Kamluk, Vitaly.Kamluk@kaspersky.com"
+    reference = "https://securelist.com/securelist/files/2016/02/KL_AdwindPublicReport_2016.pdf"
+    last_modified = "2015-11-30"
+    description = "Adwind_JAR_PACKA"
+    severity = "7"
+    type = "Malware"
  strings:
   $b1 = ".class" ascii
   $b2 = "c/a/a/" ascii
@@ -18,10 +21,13 @@ rule Adwind_JAR_PACKA : binary RAT Frutas Unrecom AlienSpy
   int16(0) == 0x4B50 and ($b1 and $b2 and $b3 and $b4 and $b5)
 }
 rule Adwind_JAR_PACKB : binary RAT Frutas Unrecom AlienSpy {
- meta:
-  author = "Vitaly Kamluk, Vitaly.Kamluk@kaspersky.com"
-  reference = "https://securelist.com/securelist/files/2016/02/KL_AdwindPublicReport_2016.pdf"
-  last_modified = "2015-11-30"
+   meta:
+    author = "Vitaly Kamluk, Vitaly.Kamluk@kaspersky.com"
+    reference = "https://securelist.com/securelist/files/2016/02/KL_AdwindPublicReport_2016.pdf"
+    last_modified = "2015-11-30"
+    description = "Adwind_JAR_PACKA"
+    severity = "7"
+    type = "Malware"
  strings:
   $c1 = "META-INF/MANIFEST.MF" ascii
   $c2 = "main/Start.class" ascii
@@ -32,22 +38,24 @@ rule Adwind_JAR_PACKB : binary RAT Frutas Unrecom AlienSpy {
 }
 rule crime_win_rat_AlienSpy: binary RAT Frutas Unrecom AlienSpy
 {
-meta:
-	description = "Alien Spy Remote Access Trojan"
-	author = "General Dynamics Fidelis Cybersecurity Solutions - Threat Research Team"
-	reference_1 = "www.fidelissecurity.com/sites/default/files/FTA_1015_Alienspy_FINAL.pdf"
-	reference_2 = "www.fidelissecurity.com/sites/default/files/AlienSpy-Configs2_1_2.csv"
-	date = "2015-04-04"
-	filetype = "Java"
-	hash_1 = "075fa0567d3415fbab3514b8aa64cfcb"
-	hash_2 = "818afea3040a887f191ee9d0579ac6ed"
-	hash_3 = "973de705f2f01e82c00db92eaa27912c"
-	hash_4 = "7f838907f9cc8305544bd0ad4cfd278e"
-	hash_5 = "071e12454731161d47a12a8c4b3adfea"
-	hash_6 = "a7d50760d49faff3656903c1130fd20b"
-	hash_7 = "f399afb901fcdf436a1b2a135da3ee39"
-	hash_8 = "3698a3630f80a632c0c7c12e929184fb"
-	hash_9 = "fdb674cadfa038ff9d931e376f89f1b6"
+  meta:
+    description = "Alien Spy Remote Access Trojan"
+    author = "General Dynamics Fidelis Cybersecurity Solutions - Threat Research Team"
+    reference_1 = "www.fidelissecurity.com/sites/default/files/FTA_1015_Alienspy_FINAL.pdf"
+    reference_2 = "www.fidelissecurity.com/sites/default/files/AlienSpy-Configs2_1_2.csv"
+    date = "2015-04-04"
+    filetype = "Java"
+    hash_1 = "075fa0567d3415fbab3514b8aa64cfcb"
+    hash_2 = "818afea3040a887f191ee9d0579ac6ed"
+    hash_3 = "973de705f2f01e82c00db92eaa27912c"
+    hash_4 = "7f838907f9cc8305544bd0ad4cfd278e"
+    hash_5 = "071e12454731161d47a12a8c4b3adfea"
+    hash_6 = "a7d50760d49faff3656903c1130fd20b"
+    hash_7 = "f399afb901fcdf436a1b2a135da3ee39"
+    hash_8 = "3698a3630f80a632c0c7c12e929184fb"
+    hash_9 = "fdb674cadfa038ff9d931e376f89f1b6"
+    severity = "7"
+    type = "Malware"
 
    strings:
 		

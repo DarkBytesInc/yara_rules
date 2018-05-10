@@ -8,12 +8,14 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule TeleBots_IntercepterNG {
-   meta:
-      description = "Detects TeleBots malware - IntercepterNG"
-      author = "Florian Roth"
-      reference = "https://goo.gl/4if3HG"
-      date = "2016-12-14"
-      hash1 = "5f9fef7974d37922ac91365588fbe7b544e13abbbde7c262fe30bade7026e118"
+     meta:
+    description = "Detects TeleBots malware - IntercepterNG"
+    author = "Florian Roth"
+    reference = "https://goo.gl/4if3HG"
+    date = "2016-12-14"
+    hash1 = "5f9fef7974d37922ac91365588fbe7b544e13abbbde7c262fe30bade7026e118"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "Usage: %s iface_num\\dump [mode] [w] [-gw] [-t1 ip]" fullword ascii
       $s2 = "Target%d found: %s - [%.2X-%.2X-%.2X-%.2X-%.2X-%.2X]" fullword ascii
@@ -28,12 +30,14 @@ rule TeleBots_IntercepterNG {
 }
 
 rule TeleBots_KillDisk_1 {
-   meta:
-      description = "Detects TeleBots malware - KillDisk"
-      author = "Florian Roth"
-      reference = "https://goo.gl/4if3HG"
-      date = "2016-12-14"
-      hash1 = "8246f709efa922a485e1ca32d8b0d10dc752618e8b3fce4d3dd58d10e4a6a16d"
+     meta:
+    description = "Detects TeleBots malware - KillDisk"
+    author = "Florian Roth"
+    reference = "https://goo.gl/4if3HG"
+    date = "2016-12-14"
+    hash1 = "8246f709efa922a485e1ca32d8b0d10dc752618e8b3fce4d3dd58d10e4a6a16d"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "Plug-And-Play Support Service" fullword wide
       $s2 = " /c \"echo Y|" fullword wide
@@ -47,12 +51,14 @@ rule TeleBots_KillDisk_1 {
 }
 
 rule TeleBots_KillDisk_2 {
-   meta:
-      description = "Detects TeleBots malware - KillDisk"
-      author = "Florian Roth"
-      reference = "https://goo.gl/4if3HG"
-      date = "2016-12-14"
-      hash1 = "26173c9ec8fd1c4f9f18f89683b23267f6f9d116196ed15655e9cb453af2890e"
+     meta:
+    description = "Detects TeleBots malware - KillDisk"
+    author = "Florian Roth"
+    reference = "https://goo.gl/4if3HG"
+    date = "2016-12-14"
+    hash1 = "26173c9ec8fd1c4f9f18f89683b23267f6f9d116196ed15655e9cb453af2890e"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "Plug-And-Play Support Service" fullword wide
       $s2 = " /c \"echo Y|" fullword wide
@@ -62,12 +68,14 @@ rule TeleBots_KillDisk_2 {
 }
 
 rule TeleBots_CredRaptor_Password_Stealer {
-   meta:
-      description = "Detects TeleBots malware - CredRaptor Password Stealer"
-      author = "Florian Roth"
-      reference = "https://goo.gl/4if3HG"
-      date = "2016-12-14"
-      hash1 = "50b990f6555055a265fde98324759dbc74619d6a7c49b9fd786775299bf77d26"
+     meta:
+    description = "Detects TeleBots malware - CredRaptor Password Stealer"
+    author = "Florian Roth"
+    reference = "https://goo.gl/4if3HG"
+    date = "2016-12-14"
+    hash1 = "50b990f6555055a265fde98324759dbc74619d6a7c49b9fd786775299bf77d26"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "C:\\Documents and Settings\\Administrator\\Desktop\\GetPAI\\Out\\IE.pdb" fullword ascii
       $s2 = "SELECT encryptedUsername, encryptedPassword, hostname,httpRealm FROM moz_logins" fullword ascii
@@ -80,12 +88,14 @@ rule TeleBots_CredRaptor_Password_Stealer {
 }
 
 rule TeleBots_VBS_Backdoor_1 {
-   meta:
-      description = "Detects TeleBots malware - VBS Backdoor"
-      author = "Florian Roth"
-      reference = "https://goo.gl/4if3HG"
-      date = "2016-12-14"
-      hash1 = "eb31a918ccc1643d069cf08b7958e2760e8551ba3b88ea9e5d496e07437273b2"
+     meta:
+    description = "Detects TeleBots malware - VBS Backdoor"
+    author = "Florian Roth"
+    reference = "https://goo.gl/4if3HG"
+    date = "2016-12-14"
+    hash1 = "eb31a918ccc1643d069cf08b7958e2760e8551ba3b88ea9e5d496e07437273b2"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "cmd = \"cmd.exe /c \" + arg + \" >\" + outfile +\" 2>&1\"" fullword ascii
       $s2 = "GetTemp = \"c:\\WINDOWS\\addins\"" fullword ascii
@@ -96,12 +106,14 @@ rule TeleBots_VBS_Backdoor_1 {
 }
 
 rule TeleBots_VBS_Backdoor_2 {
-   meta:
-      description = "Detects TeleBots malware - VBS Backdoor"
-      author = "Florian Roth"
-      reference = "https://goo.gl/4if3HG"
-      date = "2016-12-14"
-      hash1 = "1b2a5922b58c8060844b43e14dfa5b0c8b119f281f54a46f0f1c34accde71ddb"
+     meta:
+    description = "Detects TeleBots malware - VBS Backdoor"
+    author = "Florian Roth"
+    reference = "https://goo.gl/4if3HG"
+    date = "2016-12-14"
+    hash1 = "1b2a5922b58c8060844b43e14dfa5b0c8b119f281f54a46f0f1c34accde71ddb"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "cmd = \"cmd.exe /c \" + arg + \" \" + arg2" fullword ascii
       $s2 = "Dim WMI:  Set WMI = GetObject(\"winmgmts:\\\\.\\root\\cimv2\")" fullword ascii
@@ -111,12 +123,14 @@ rule TeleBots_VBS_Backdoor_2 {
 }
 
 rule TeleBots_Win64_Spy_KeyLogger_G {
-   meta:
-      description = "Detects TeleBots malware - Win64 Spy KeyLogger G"
-      author = "Florian Roth"
-      reference = "https://goo.gl/4if3HG"
-      date = "2016-12-14"
-      hash1 = "e3f134ae88f05463c4707a80f956a689fba7066bb5357f6d45cba312ad0db68e"
+     meta:
+    description = "Detects TeleBots malware - Win64 Spy KeyLogger G"
+    author = "Florian Roth"
+    reference = "https://goo.gl/4if3HG"
+    date = "2016-12-14"
+    hash1 = "e3f134ae88f05463c4707a80f956a689fba7066bb5357f6d45cba312ad0db68e"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "C:\\WRK\\GHook\\gHook\\x64\\Debug\\gHookx64.pdb" fullword ascii
       $s2 = "Install hooks error!" fullword wide

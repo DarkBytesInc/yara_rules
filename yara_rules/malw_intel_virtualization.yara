@@ -6,12 +6,13 @@
 import "pe"
 
 rule Intel_Virtualization_Wizard_exe {
-  meta:
+    meta:
     author = "cabrel@zerklabs.com"
     description = "Dynamic DLL abuse executable"
-
     file_1_seen = "2013-05-21"
     file_1_sha256 = "7787757ae851f4a162f46f794be1532ab78e1928185212bdab83b3106f28c708"
+    severity = "7"
+    type = "Malware"
 
   strings:
     $a = {4C 6F 61 64 53 54 52 49 4E 47}
@@ -24,12 +25,13 @@ rule Intel_Virtualization_Wizard_exe {
 }
 
 rule Intel_Virtualization_Wizard_dll {
-  meta:
+    meta:
     author = "cabrel@zerklabs.com"
     description = "Dynamic DLL (Malicious)"
-
     file_1_seen = "2013-05-21"
     file_1_sha256 = "485ae043b6a5758789f1d33766a26d8b45b9fde09cde0512aa32d4bd1ee04f28"
+    severity = "7"
+    type = "Malware"
 
   strings:
     $a = {48 3A 5C 46 61 73 74 5C 50 6C 75 67 28 68 6B 63 6D 64 29 5C}

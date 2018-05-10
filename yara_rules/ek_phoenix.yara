@@ -1,12 +1,14 @@
 rule phoenix_html : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Phoenix Exploit Kit Detection"
-   hash0 = "8395f08f1371eb7b2a2e131b92037f9a"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Phoenix Exploit Kit Detection"
+    hash0 = "8395f08f1371eb7b2a2e131b92037f9a"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string1 = "'></applet><body id"
    $string2 = "<applet mayscript"
@@ -23,13 +25,15 @@ condition:
 }
 rule phoenix_html10 : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Phoenix Exploit Kit Detection"
-   hash0 = "f5f8dceca74a50076070f2593e82ec43"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Phoenix Exploit Kit Detection"
+    hash0 = "f5f8dceca74a50076070f2593e82ec43"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "pae>crAeahoilL"
    $string1 = "D11C0002C0069733E60656F6462070D000402DFF200696E"
@@ -54,13 +58,15 @@ condition:
 }
 rule phoenix_html11 : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Phoenix Exploit Kit Detection"
-   hash0 = "be8c81288f9650e205ed13f3167ce256"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Phoenix Exploit Kit Detection"
+    hash0 = "be8c81288f9650e205ed13f3167ce256"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "D'0009F0C6941617C43427A76080001000F47020C606volv99,0,6,"
    $string1 = "';)nWd"
@@ -86,13 +92,15 @@ condition:
 }
 rule phoenix_html2 : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Phoenix Exploit Kit Detection"
-   hash0 = "2fd263f5d988a92715f4146a0006cb31"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Phoenix Exploit Kit Detection"
+    hash0 = "2fd263f5d988a92715f4146a0006cb31"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "Pec.lilsD)E)i-gonP(mgge.eOmn"
    $string1 = "(trt;oo"
@@ -117,13 +125,15 @@ condition:
 }
 rule phoenix_html3 : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Phoenix Exploit Kit Detection"
-   hash0 = "d7cacbff6438d866998fc8bfee18102d"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Phoenix Exploit Kit Detection"
+    hash0 = "d7cacbff6438d866998fc8bfee18102d"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "mtfla/,)asaf)'}"
    $string1 = "72267E7C'A3035CFC415DFAAA834B208D8C230FD303E2EFFE386BE05960C588C6E85650746E690C39F706F97DC74349BA134"
@@ -149,13 +159,15 @@ condition:
 }
 rule phoenix_html4 : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Phoenix Exploit Kit Detection"
-   hash0 = "61fde003211ac83c2884fbecefe1fc80"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Phoenix Exploit Kit Detection"
+    hash0 = "61fde003211ac83c2884fbecefe1fc80"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "/dr.php"
    $string1 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
@@ -176,13 +188,15 @@ condition:
 }
 rule phoenix_html5 : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Phoenix Exploit Kit Detection"
-   hash0 = "30afdca94d301905819e00a7458f4a4e"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Phoenix Exploit Kit Detection"
+    hash0 = "30afdca94d301905819e00a7458f4a4e"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "dtesu}"
    $string1 = "<textarea>function gvgsxoy(gwcqg1){return gwcqg1.replace(/"
@@ -206,13 +220,15 @@ condition:
 }
 rule phoenix_html6 : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Phoenix Exploit Kit Detection"
-   hash0 = "4aabb710cf04240d26c13dd2b0ccd6cc"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Phoenix Exploit Kit Detection"
+    hash0 = "4aabb710cf04240d26c13dd2b0ccd6cc"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "F4B6B2E67)A780A373A633;ast2316363677fa'es6F3635244"
    $string1 = "piia.a}rneecc.cnuoir"
@@ -237,13 +253,15 @@ condition:
 }
 rule phoenix_html7 : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Phoenix Exploit Kit Detection"
-   hash0 = "f0e1b391ec3ce515fd617648bec11681"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Phoenix Exploit Kit Detection"
+    hash0 = "f0e1b391ec3ce515fd617648bec11681"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "EBF0a0001B05D266503046C7A491A0C00044F0002035D0D0twl''WIN"
    $string1 = "ah80672528657"
@@ -268,13 +286,15 @@ condition:
 }
 rule phoenix_html8 : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Phoenix Exploit Kit Detection"
-   hash0 = "1c19a863fc4f8b13c0c7eb5e231bc3d1"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Phoenix Exploit Kit Detection"
+    hash0 = "1c19a863fc4f8b13c0c7eb5e231bc3d1"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "0x5)).replace(/"
    $string1 = "%A%%A%%nc(,145,9,84037,1711,,4121,56,1,,0505,,651,,3,514101,01,29,7868,90"
@@ -298,13 +318,15 @@ condition:
 }
 rule phoenix_html9 : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Phoenix Exploit Kit Detection"
-   hash0 = "742d012b9df0c27ed6ccf3b234db20db"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Phoenix Exploit Kit Detection"
+    hash0 = "742d012b9df0c27ed6ccf3b234db20db"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "tute)bbr:"
    $string1 = "nfho(tghRx"
@@ -330,13 +352,15 @@ condition:
 }
 rule phoenix_jar : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Phoenix Exploit Kit Detection"
-   hash0 = "a8a18219b02d30f44799415ff19c518e"
-   sample_filetype = "unknown"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Phoenix Exploit Kit Detection"
+    hash0 = "a8a18219b02d30f44799415ff19c518e"
+    sample_filetype = "unknown"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "r.JM,IM"
    $string1 = "qX$8$a"
@@ -354,13 +378,15 @@ condition:
 }
 rule phoenix_jar2 : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Phoenix Exploit Kit Detection"
-   hash0 = "989c5b5eaddf48010e62343d7a4db6f4"
-   sample_filetype = "unknown"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Phoenix Exploit Kit Detection"
+    hash0 = "989c5b5eaddf48010e62343d7a4db6f4"
+    sample_filetype = "unknown"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "a66d578f084.classeQ"
    $string1 = "a4cb9b1a8a5.class"
@@ -382,13 +408,15 @@ condition:
 }
 rule phoenix_jar3 : EK Jar
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Phoenix Exploit Kit Detection"
-   hash0 = "c5655c496949f8071e41ea9ac011cab2"
-   sample_filetype = "unknown"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Phoenix Exploit Kit Detection"
+    hash0 = "c5655c496949f8071e41ea9ac011cab2"
+    sample_filetype = "unknown"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "'> >$>"
    $string1 = "bpac/PK"
@@ -405,14 +433,16 @@ condition:
 }
 rule phoenix_pdf : EK PDF
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Phoenix Exploit Kit Detection"
-   hash0 = "16de68e66cab08d642a669bf377368da"
-   hash1 = "bab281fe0cf3a16a396550b15d9167d5"
-   sample_filetype = "pdf"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Phoenix Exploit Kit Detection"
+    hash0 = "16de68e66cab08d642a669bf377368da"
+    hash1 = "bab281fe0cf3a16a396550b15d9167d5"
+    sample_filetype = "pdf"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "0000000254 00000 n"
    $string1 = "0000000295 00000 n"
@@ -431,13 +461,15 @@ condition:
 }
 rule phoenix_pdf2 : EK PDF
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Phoenix Exploit Kit Detection"
-   hash0 = "33cb6c67f58609aa853e80f718ab106a"
-   sample_filetype = "pdf"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Phoenix Exploit Kit Detection"
+    hash0 = "33cb6c67f58609aa853e80f718ab106a"
+    sample_filetype = "pdf"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "\\nQb<%"
    $string1 = "0000000254 00000 n"
@@ -458,13 +490,15 @@ condition:
 }
 rule phoenix_pdf3 : EK PDF
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Phoenix Exploit Kit Detection"
-   hash0 = "bab281fe0cf3a16a396550b15d9167d5"
-   sample_filetype = "pdf"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Phoenix Exploit Kit Detection"
+    hash0 = "bab281fe0cf3a16a396550b15d9167d5"
+    sample_filetype = "pdf"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "trailer<</Root 1 0 R /Size 7>>"
    $string1 = "stream"

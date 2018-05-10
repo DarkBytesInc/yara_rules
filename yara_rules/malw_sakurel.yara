@@ -4,11 +4,12 @@
 */
 rule Sakurel_backdoor
 {
-	meta:
-		maltype = "Sakurel backdoor"
+	  meta:
+    maltype = "Sakurel backdoor"
     ref = "https://github.com/reed1713"
-		reference = "http://www.microsoft.com/security/portal/threat/encyclopedia/entry.aspx?Name=Trojan:Win32/Sakurel.A#tab=2"
-		description = "malware creates a process in the temp directory and performs the sysprep UAC bypass method."
+    description = "malware creates a process in the temp directory and performs the sysprep UAC bypass method."
+    severity = "7"
+    type = "Malware"
 	strings:
 		$type="Microsoft-Windows-Security-Auditing"
 		$eventid="4688"

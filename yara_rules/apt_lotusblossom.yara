@@ -1,11 +1,13 @@
 rule EliseLotusBlossom
 {
 
-meta:
+  meta:
     author = "Jose Ramon Palanco"
     date = "2015-06-23"
     description = "Elise Backdoor Trojan"
     ref = "https://www.paloaltonetworks.com/resources/research/unit42-operation-lotus-blossom.html"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
 strings:
     $magic = { 4d 5a }

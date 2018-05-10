@@ -10,12 +10,14 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule EternalRocks_taskhost {
-   meta:
-      description = "Detects EternalRocks Malware - file taskhost.exe"
-      author = "Florian Roth"
-      reference = "https://twitter.com/stamparm/status/864865144748298242"
-      date = "2017-05-18"
-      hash1 = "cf8533849ee5e82023ad7adbdbd6543cb6db596c53048b1a0c00b3643a72db30"
+     meta:
+    description = "Detects EternalRocks Malware - file taskhost.exe"
+    author = "Florian Roth"
+    reference = "https://twitter.com/stamparm/status/864865144748298242"
+    date = "2017-05-18"
+    hash1 = "cf8533849ee5e82023ad7adbdbd6543cb6db596c53048b1a0c00b3643a72db30"
+    severity = "7"
+    type = "Malware"
    strings:
       $x1 = "EternalRocks.exe" fullword wide
 
@@ -28,12 +30,14 @@ rule EternalRocks_taskhost {
 }
 
 rule EternalRocks_svchost {
-   meta:
-      description = "Detects EternalRocks Malware - file taskhost.exe"
-      author = "Florian Roth"
-      reference = "https://twitter.com/stamparm/status/864865144748298242"
-      date = "2017-05-18"
-      hash1 = "589af04a85dc66ec6b94123142a17cf194decd61f5d79e76183db026010e0d31"
+     meta:
+    description = "Detects EternalRocks Malware - file taskhost.exe"
+    author = "Florian Roth"
+    reference = "https://twitter.com/stamparm/status/864865144748298242"
+    date = "2017-05-18"
+    hash1 = "589af04a85dc66ec6b94123142a17cf194decd61f5d79e76183db026010e0d31"
+    severity = "7"
+    type = "Malware"
    strings:
       $s1 = "WczTkaJphruMyBOQmGuNRtSNTLEs" fullword ascii
       $s2 = "svchost.taskhost.exe" fullword ascii

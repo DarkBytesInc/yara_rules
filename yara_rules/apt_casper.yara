@@ -8,13 +8,15 @@ import "pe"
 rule Casper_Backdoor_x86
 {
 
-    meta:
-        description = "Casper French Espionage Malware - Win32/ProxyBot.B - x86 Payload http://goo.gl/VRJNLo"
-        author = "Florian Roth"
-        reference = "http://goo.gl/VRJNLo"
-        date = "2015/03/05"
-        hash = "f4c39eddef1c7d99283c7303c1835e99d8e498b0"
-        score = 80
+      meta:
+    description = "Casper French Espionage Malware - Win32/ProxyBot.B - x86 Payload http://goo.gl/VRJNLo"
+    author = "Florian Roth"
+    reference = "http://goo.gl/VRJNLo"
+    date = "2015/03/05"
+    hash = "f4c39eddef1c7d99283c7303c1835e99d8e498b0"
+    score = 80
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "\"svchost.exe\"" fullword wide
@@ -39,13 +41,15 @@ rule Casper_Backdoor_x86
 rule Casper_EXE_Dropper
 {
 
-    meta:
-        description = "Casper French Espionage Malware - Win32/ProxyBot.B - Dropper http://goo.gl/VRJNLo"
-        author = "Florian Roth"
-        reference = "http://goo.gl/VRJNLo"
-        date = "2015/03/05"
-        hash = "e4cc35792a48123e71a2c7b6aa904006343a157a"
-        score = 80
+      meta:
+    description = "Casper French Espionage Malware - Win32/ProxyBot.B - Dropper http://goo.gl/VRJNLo"
+    author = "Florian Roth"
+    reference = "http://goo.gl/VRJNLo"
+    date = "2015/03/05"
+    hash = "e4cc35792a48123e71a2c7b6aa904006343a157a"
+    score = 80
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "<Command>" fullword ascii
@@ -64,12 +68,14 @@ rule Casper_EXE_Dropper
 rule Casper_Included_Strings
 {
 
-    meta:
-        description = "Casper French Espionage Malware - String Match in File - http://goo.gl/VRJNLo"
-        author = "Florian Roth"
-        reference = "http://goo.gl/VRJNLo"
-        date = "2015/03/06"
-        score = 50
+      meta:
+    description = "Casper French Espionage Malware - String Match in File - http://goo.gl/VRJNLo"
+    author = "Florian Roth"
+    reference = "http://goo.gl/VRJNLo"
+    date = "2015/03/06"
+    score = 50
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $a0 = "cmd.exe /C FOR /L %%i IN (1,1,%d) DO IF EXIST"
@@ -90,12 +96,14 @@ rule Casper_Included_Strings
 rule Casper_SystemInformation_Output
 {
 
-    meta:
-        description = "Casper French Espionage Malware - System Info Output - http://goo.gl/VRJNLo"
-        author = "Florian Roth"
-        reference = "http://goo.gl/VRJNLo"
-        date = "2015/03/06"
-        score = 70
+      meta:
+    description = "Casper French Espionage Malware - System Info Output - http://goo.gl/VRJNLo"
+    author = "Florian Roth"
+    reference = "http://goo.gl/VRJNLo"
+    date = "2015/03/06"
+    score = 70
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $a0 = "***** SYSTEM INFORMATION ******"

@@ -7,11 +7,14 @@ import "pe"
 
 rule gholeeV1
 {
-    meta:
-	 Author = "@GelosSnake"
-    	 Date = "2014/08"
-    	 Description = "Gholee first discovered variant "
-	 Reference = "http://securityaffairs.co/wordpress/28170/cyber-crime/gholee-malware.html" 
+      meta:
+    Author = "@GelosSnake"
+    Date = "2014/08"
+    Description = "Gholee first discovered variant "
+    Reference = "http://securityaffairs.co/wordpress/28170/cyber-crime/gholee-malware.html"
+    description = "gholeeV1"
+    severity = "7"
+    type = "Malware"
 
     strings:
     	 $a = "sandbox_avg10_vc9_SP1_2011"
@@ -23,11 +26,14 @@ rule gholeeV1
 
 rule gholeeV2
 {
-   meta:
-	Author = "@GelosSnake"
-	Date = "2015-02-12"
-    	Description = "Gholee first discovered variant "
-	Reference = "http://securityaffairs.co/wordpress/28170/cyber-crime/gholee-malware.html" 
+     meta:
+    Author = "@GelosSnake"
+    Date = "2015-02-12"
+    Description = "Gholee first discovered variant "
+    Reference = "http://securityaffairs.co/wordpress/28170/cyber-crime/gholee-malware.html"
+    description = "gholeeV2"
+    severity = "7"
+    type = "Malware"
 
    strings:
 	$string0 = "RichHa"
@@ -55,13 +61,15 @@ rule gholeeV2
 
 rule MW_gholee_v1 : v1
 {
-meta:
+  meta:
     Author = "@GelosSnake"
     description = "http://securityaffairs.co/wordpress/28170/cyber-crime/gholee-malware.html"
     date = "2014-08"
     maltype = "Remote Access Trojan"
     sample_filetype = "dll"
     hash0 = "48573a150562c57742230583456b4c02"
+    severity = "7"
+    type = "Malware"
    
 strings:
     $a = "sandbox_avg10_vc9_SP1_2011"
@@ -73,15 +81,17 @@ condition:
  
 rule MW_gholee_v2 : v2
 {
-meta:
-        author = "@GelosSnake"
-        date = "2015-02-12"
-        description = "http://securityaffairs.co/wordpress/28170/cyber-crime/gholee-malware.html"
-        hash0 = "05523761ca296ec09afdf79477e5f18d"
-        hash1 = "08e424ac42e6efa361eccefdf3c13b21"
-        hash2 = "5730f925145f1a1cd8380197e01d9e06"
-        hash3 = "73461c8578dd9ab86d42984f30c04610"
-        sample_filetype = "dll"
+  meta:
+    author = "@GelosSnake"
+    date = "2015-02-12"
+    description = "http://securityaffairs.co/wordpress/28170/cyber-crime/gholee-malware.html"
+    hash0 = "05523761ca296ec09afdf79477e5f18d"
+    hash1 = "08e424ac42e6efa361eccefdf3c13b21"
+    hash2 = "5730f925145f1a1cd8380197e01d9e06"
+    hash3 = "73461c8578dd9ab86d42984f30c04610"
+    sample_filetype = "dll"
+    severity = "7"
+    type = "Malware"
 strings:
         $string0 = "RichHa"
         $string1 = "         (((((                  H" wide

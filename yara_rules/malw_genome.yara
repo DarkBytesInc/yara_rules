@@ -3,11 +3,13 @@
     long as you use it under this license.
 */
 rule genome {
-    meta:
-        author = "Brian Wallace @botnet_hunter"
-        author_email = "bwall@ballastsecurity.net"
-        date = "2014-09-07"
-        description = "Identify Genome"
+      meta:
+    author = "Brian Wallace @botnet_hunter"
+    author_email = "bwall@ballastsecurity.net"
+    date = "2014-09-07"
+    description = "Identify Genome"
+    severity = "7"
+    type = "Malware"
 	strings:
 	    $s1 = "Attempting to create more than one keyboard::Monitor instance"
         $s2 = "{Right windows}"

@@ -1,9 +1,11 @@
 rule hacktool_macos_manwhoami_mmetokendecrypt
 {
-    meta:
-        description = "This program decrypts / extracts all authorization tokens on macOS / OS X / OSX."
-        reference = "https://github.com/manwhoami/MMeTokenDecrypt"
-        author = "@mimeframe"
+      meta:
+    description = "This program decrypts / extracts all authorization tokens on macOS / OS X / OSX."
+    reference = "https://github.com/manwhoami/MMeTokenDecrypt"
+    author = "@mimeframe"
+    severity = "5"
+    type = "Unknown"
     strings:
         $a1 = "security find-generic-password -ws 'iCloud'" wide ascii
         $a2 = "ERROR getting iCloud Decryption Key" wide ascii

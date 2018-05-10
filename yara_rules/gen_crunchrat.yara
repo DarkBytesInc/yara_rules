@@ -1,11 +1,13 @@
 
 rule CrunchRAT {
-   meta:
-      description = "Detects CrunchRAT - file CrunchRAT.exe"
-      author = "Florian Roth"
-      reference = "https://github.com/t3ntman/CrunchRAT"
-      date = "2017-11-03"
-      hash1 = "58a07e96497745b6fd5075d569f17b0254c3e50b0234744e0487f7c5dddf7161"
+     meta:
+    description = "Detects CrunchRAT - file CrunchRAT.exe"
+    author = "Florian Roth"
+    reference = "https://github.com/t3ntman/CrunchRAT"
+    date = "2017-11-03"
+    hash1 = "58a07e96497745b6fd5075d569f17b0254c3e50b0234744e0487f7c5dddf7161"
+    severity = "7"
+    type = "Malware"
    strings:
       $x1 = "----CrunchRAT" fullword wide
       $x2 = "\\Debug\\CrunchRAT" ascii

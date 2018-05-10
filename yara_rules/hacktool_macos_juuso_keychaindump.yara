@@ -1,9 +1,11 @@
 rule hacktool_macos_juuso_keychaindump
 {
-    meta:
-        description = "For reading OS X keychain passwords as root."
-        reference = "https://github.com/juuso/keychaindump"
-        author = "@mimeframe"
+      meta:
+    description = "For reading OS X keychain passwords as root."
+    reference = "https://github.com/juuso/keychaindump"
+    author = "@mimeframe"
+    severity = "5"
+    type = "Unknown"
     strings:
         $a1 = "[-] Too many candidate keys to fit in memory" wide ascii
         $a2 = "[-] Could not allocate memory for key search" wide ascii

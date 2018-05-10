@@ -9,10 +9,12 @@ import "pe"
 
 rule dragos_crashoverride_suspcious
 {
-    meta: 
-        description = "CRASHOVERRIDE v1 Wiper" 
-        author = "Dragos Inc"
-        reference = "https://t.co/h8QaIP4FU8"
+      meta:
+    description = "CRASHOVERRIDE v1 Wiper"
+    author = "Dragos Inc"
+    reference = "https://t.co/h8QaIP4FU8"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     strings:
         $s0 = "SYS_BASCON.COM" fullword nocase wide 
         $s1 = ".pcmp" fullword nocase wide
@@ -24,19 +26,23 @@ rule dragos_crashoverride_suspcious
 }
 
 rule dragos_crashoverride_exporting_dlls {
-    meta: 
-        description = "CRASHOVERRIDE v1 Suspicious Export"
-        author = "Dragos Inc"
-        reference = "https://t.co/h8QaIP4FU8"
+      meta:
+    description = "CRASHOVERRIDE v1 Suspicious Export"
+    author = "Dragos Inc"
+    reference = "https://t.co/h8QaIP4FU8"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     condition:
         pe.exports("Crash") & pe.characteristics
 }
 
 rule dragos_crashoverride_name_search {
-    meta:
-        description = "CRASHOVERRIDE v1 Suspicious Strings and Export"
-        author = "Dragos Inc"
-        reference = "https://t.co/h8QaIP4FU8"
+      meta:
+    description = "CRASHOVERRIDE v1 Suspicious Strings and Export"
+    author = "Dragos Inc"
+    reference = "https://t.co/h8QaIP4FU8"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     strings:
         $s0 = "101.dll" fullword nocase wide
         $s1 = "Crash101.dll" fullword nocase wide

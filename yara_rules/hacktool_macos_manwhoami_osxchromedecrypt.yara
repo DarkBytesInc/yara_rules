@@ -1,9 +1,11 @@
 rule hacktool_macos_manwhoami_osxchromedecrypt
 {
-    meta:
-        description = "Decrypt Google Chrome / Chromium passwords and credit cards on macOS / OS X."
-        reference = "https://github.com/manwhoami/OSXChromeDecrypt"
-        author = "@mimeframe"
+      meta:
+    description = "Decrypt Google Chrome / Chromium passwords and credit cards on macOS / OS X."
+    reference = "https://github.com/manwhoami/OSXChromeDecrypt"
+    author = "@mimeframe"
+    severity = "5"
+    type = "Unknown"
     strings:
         $a1 = "Credit Cards for Chrome Profile" wide ascii
         $a2 = "Passwords for Chrome Profile" wide ascii

@@ -7,10 +7,12 @@ import "pe"
 
 rule WimmieShellcode : Wimmie Family 
 {
-    meta:
-        description = "Wimmie code features"
-        author = "Seth Hardy"
-        last_modified = "2014-07-17"
+      meta:
+    description = "Wimmie code features"
+    author = "Seth Hardy"
+    last_modified = "2014-07-17"
+    severity = "7"
+    type = "Malware"
         
     strings:
         // decryption loop
@@ -23,10 +25,12 @@ rule WimmieShellcode : Wimmie Family
 
 rule WimmieStrings : Wimmie Family
 {
-    meta:
-        description = "Strings used by Wimmie"
-        author = "Seth Hardy"
-        last_modified = "2014-07-17"
+      meta:
+    description = "Strings used by Wimmie"
+    author = "Seth Hardy"
+    last_modified = "2014-07-17"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $ = "\x00ScriptMan"
@@ -41,10 +45,12 @@ rule WimmieStrings : Wimmie Family
 
 rule Wimmie : Family
 {
-    meta:
-        description = "Wimmie family"
-        author = "Seth Hardy"
-        last_modified = "2014-07-17"
+      meta:
+    description = "Wimmie family"
+    author = "Seth Hardy"
+    last_modified = "2014-07-17"
+    severity = "7"
+    type = "Malware"
    
     condition:
         WimmieShellcode or WimmieStrings

@@ -1,12 +1,13 @@
 
 rule PowerShell_Susp_Parameter_Combo {
-   meta:
-      description = "Detects PowerShell invocation with suspicious parameters"
-      author = "Florian Roth"
-      reference = "https://goo.gl/uAic1X"
-      date = "2017-03-12"
-      score = 60
-      type = "file"
+     meta:
+    description = "Detects PowerShell invocation with suspicious parameters"
+    author = "Florian Roth"
+    reference = "https://goo.gl/uAic1X"
+    date = "2017-03-12"
+    score = 60
+    type = "file"
+    severity = "7"
    strings:
       /* Encoded Command */
       $a1 = " -enc " ascii nocase

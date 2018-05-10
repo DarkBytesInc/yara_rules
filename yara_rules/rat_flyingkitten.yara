@@ -7,11 +7,14 @@ import "pe"
 
 rule FlyingKitten : rat
 {
-    meta:
-        Author      = "CrowdStrike, Inc"
-        Date        = "2014/05/13"
-        Description = "Flying Kitten RAT"
-        Reference   = "http://blog.crowdstrike.com/cat-scratch-fever-crowdstrike-tracks-newly-reported-iranian-actor-flying-kitten"
+      meta:
+    Author = "CrowdStrike, Inc"
+    Date = "2014/05/13"
+    Description = "Flying Kitten RAT"
+    Reference = "http://blog.crowdstrike.com/cat-scratch-fever-crowdstrike-tracks-newly-reported-iranian-actor-flying-kitten"
+    description = "FlyingKitten"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $classpath = "Stealer.Properties.Resources.resources"
@@ -24,11 +27,14 @@ rule FlyingKitten : rat
 
 rule CSIT_14003_03 : installer RAT
 { 
-    meta:
-        Author      = "CrowdStrike, Inc"
-        Date        = "2014/05/13"
-        Description = "Flying Kitten Installer"
-        Reference   = "http://blog.crowdstrike.com/cat-scratch-fever-crowdstrike-tracks-newly-reported-iranian-actor-flying-kitten"
+      meta:
+    Author = "CrowdStrike, Inc"
+    Date = "2014/05/13"
+    Description = "Flying Kitten Installer"
+    Reference = "http://blog.crowdstrike.com/cat-scratch-fever-crowdstrike-tracks-newly-reported-iranian-actor-flying-kitten"
+    description = "CSIT_14003_03"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $exename = "IntelRapidStart.exe"

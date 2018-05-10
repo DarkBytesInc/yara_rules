@@ -2,11 +2,14 @@ import "pe"
 
 rule LimaAlfa
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
-		Source = "c9fbad7fc7ff7688776056be3a41714a1f91458a7b16c37c3c906d17daac2c8b"
-		Status = "Signature is too loose to be useful."
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    Source = "c9fbad7fc7ff7688776056be3a41714a1f91458a7b16c37c3c906d17daac2c8b"
+    Status = "Signature is too loose to be useful."
+    description = "LimaAlfa"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 	/*

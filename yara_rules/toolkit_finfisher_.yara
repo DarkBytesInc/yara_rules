@@ -7,9 +7,11 @@ import "pe"
 
 rule FinSpy_2
 {
-    meta:
-        description = "FinFisher FinSpy"
-	author = "botherder https://github.com/botherder"
+      meta:
+    description = "FinFisher FinSpy"
+    author = "botherder https://github.com/botherder"
+    severity = "7"
+    type = "Exploit Kit"
 
     strings:
         $password1 = /\/scomma kbd101\.sys/ wide ascii
@@ -68,9 +70,11 @@ rule FinSpy_2
 
 rule FinSpy
 {
-    meta:
-        description = "FinFisher FinSpy"
-        author = "AlienVault Labs"
+      meta:
+    description = "FinFisher FinSpy"
+    author = "AlienVault Labs"
+    severity = "7"
+    type = "Exploit Kit"
 
     strings:
         $filter1 = "$password14"

@@ -4,12 +4,13 @@ import "pe"
 
 rule WhiskeyBravo
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
-		Source = "74eac0461c40316689ac2d598f606caa3965195b22f23d5acefeedfcdf056c5b"
-		Source = "41badf10ef6f469dd1c3be201aba809f9c42f86ad77d7f83bc3895bfa289c635"
-		Source = "d079a266ed2a852c33cdac3df115d163ebbf2c8dae32d935e895cf8193163b13"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    Source = "d079a266ed2a852c33cdac3df115d163ebbf2c8dae32d935e895cf8193163b13"
+    description = "WhiskeyBravo"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 	/*

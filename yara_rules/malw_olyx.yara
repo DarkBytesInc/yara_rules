@@ -7,10 +7,12 @@ import "pe"
 
 rule OlyxCode : Olyx Family 
 {
-    meta:
-        description = "Olyx code tricks"
-        author = "Seth Hardy"
-        last_modified = "2014-06-19"
+      meta:
+    description = "Olyx code tricks"
+    author = "Seth Hardy"
+    last_modified = "2014-06-19"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $six = { C7 40 04 36 36 36 36 C7 40 08 36 36 36 36 }
@@ -22,10 +24,12 @@ rule OlyxCode : Olyx Family
 
 rule OlyxStrings : Olyx Family
 {
-    meta:
-        description = "Olyx Identifying Strings"
-        author = "Seth Hardy"
-        last_modified = "2014-06-19"
+      meta:
+    description = "Olyx Identifying Strings"
+    author = "Seth Hardy"
+    last_modified = "2014-06-19"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $ = "/Applications/Automator.app/Contents/MacOS/DockLight"
@@ -36,10 +40,12 @@ rule OlyxStrings : Olyx Family
 
 rule Olyx : Family
 {
-    meta:
-        description = "Olyx"
-        author = "Seth Hardy"
-        last_modified = "2014-06-19"
+      meta:
+    description = "Olyx"
+    author = "Seth Hardy"
+    last_modified = "2014-06-19"
+    severity = "7"
+    type = "Malware"
         
     condition:
         OlyxCode or OlyxStrings

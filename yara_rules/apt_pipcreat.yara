@@ -6,14 +6,16 @@
 rule APT_Win_Pipcreat 
 { 
 
-  meta: 
+    meta:
     author = "chort (@chort0)"
     description = "APT backdoor Pipcreat"
-    filetype = "pe,dll" 
+    filetype = "pe,dll"
     date = "2013-03"
-    MD5 = "f09d832bea93cf320986b53fce4b8397" // (incorrectly?) identified as Hupigon by many AV on VT 
+    MD5 = "f09d832bea93cf320986b53fce4b8397" // (incorrectly?) identified as Hupigon by many AV on VT
     Reference = "http://www.cyberengineeringservices.com/login-exe-analysis-trojan-pipcreat/"
     version = "1.0"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
   strings: 
     $strA = "pip creat failed" wide fullword 

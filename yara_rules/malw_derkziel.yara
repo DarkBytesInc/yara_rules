@@ -6,14 +6,16 @@
 rule Derkziel
 {
     
-    meta:
-        description = "Derkziel info stealer (Steam, Opera, Yandex, ...)"
-        author = "The Malware Hunter"
-        filetype = "pe"
-        date = "2015-11"
-        md5 = "f5956953b7a4acab2e6fa478c0015972"
-        site = "https://zoo.mlw.re/samples/f5956953b7a4acab2e6fa478c0015972"
-        reference = "https://bhf.su/threads/137898/"
+      meta:
+    description = "Derkziel info stealer (Steam, Opera, Yandex, ...)"
+    author = "The Malware Hunter"
+    filetype = "pe"
+    date = "2015-11"
+    md5 = "f5956953b7a4acab2e6fa478c0015972"
+    site = "https://zoo.mlw.re/samples/f5956953b7a4acab2e6fa478c0015972"
+    reference = "https://bhf.su/threads/137898/"
+    severity = "7"
+    type = "Malware"
     
     strings:
         $drz = "{!}DRZ{!}"

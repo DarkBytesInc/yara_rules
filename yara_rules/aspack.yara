@@ -1,9 +1,11 @@
 
 rule aspack {
-    meta:
-        description = "ASPack packed file"
-        block = false
-        quarantine = false
+      meta:
+    description = "ASPack packed file"
+    block = false
+    quarantine = false
+    severity = "5"
+    type = "Unknown"
 
     strings:
         $mz = "MZ"

@@ -9,12 +9,14 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule WinAgent_BadPatch_1 {
-   meta:
-      description = "Detects samples mentioned in BadPatch report"
-      author = "Florian Roth"
-      reference = "https://goo.gl/RvDwwA"
-      date = "2017-10-20"
-      hash1 = "285998bce9692e46652529685775aa05e3a5cb93ee4e65d021d2231256e92813"
+     meta:
+    description = "Detects samples mentioned in BadPatch report"
+    author = "Florian Roth"
+    reference = "https://goo.gl/RvDwwA"
+    date = "2017-10-20"
+    hash1 = "285998bce9692e46652529685775aa05e3a5cb93ee4e65d021d2231256e92813"
+    severity = "7"
+    type = "Malware"
    strings:
       $x1 = "J:\\newPatch\\downloader\\" wide
       $x2 = "L:\\rashed\\New code\\" wide
@@ -37,20 +39,22 @@ rule WinAgent_BadPatch_1 {
 }
 
 rule WinAgent_BadPatch_2 {
-   meta:
-      description = "Detects samples mentioned in BadPatch report"
-      author = "Florian Roth"
-      reference = "https://goo.gl/RvDwwA"
-      date = "2017-10-20"
-      hash1 = "106deff16a93c4a4624fe96e3274e1432921c56d5a430834775e5b98861c00ea"
-      hash2 = "ece76fdf7e33d05a757ef5ed020140d9367c7319022a889923bbfacccb58f4d7"
-      hash3 = "cf53fc8c9ce4e5797cc5ac6f71d4cbc0f2b15f2ed43f38048a5273f40bc09876"
-      hash4 = "802a39b22dfacdc2325f8a839377c903b4a7957503106ce6f7aed67e824b82c2"
-      hash5 = "278dba3857367824fc2d693b7d96cef4f06cb7fdc52260b1c804b9c90d43646d"
-      hash6 = "2941f75da0574c21e4772f015ef38bb623dd4d0c81c263523d431b0114dd847e"
-      hash7 = "46f3afae22e83344e4311482a9987ed851b2de282e8127f64d5901ac945713c0"
-      hash8 = "27752bbb01abc6abf50e1da3a59fefcce59618016619d68690e71ad9d4a3c247"
-      hash9 = "050610cfb3d3100841685826273546c829335a5f4e2e4260461b88367ad9502c"
+     meta:
+    description = "Detects samples mentioned in BadPatch report"
+    author = "Florian Roth"
+    reference = "https://goo.gl/RvDwwA"
+    date = "2017-10-20"
+    hash1 = "106deff16a93c4a4624fe96e3274e1432921c56d5a430834775e5b98861c00ea"
+    hash2 = "ece76fdf7e33d05a757ef5ed020140d9367c7319022a889923bbfacccb58f4d7"
+    hash3 = "cf53fc8c9ce4e5797cc5ac6f71d4cbc0f2b15f2ed43f38048a5273f40bc09876"
+    hash4 = "802a39b22dfacdc2325f8a839377c903b4a7957503106ce6f7aed67e824b82c2"
+    hash5 = "278dba3857367824fc2d693b7d96cef4f06cb7fdc52260b1c804b9c90d43646d"
+    hash6 = "2941f75da0574c21e4772f015ef38bb623dd4d0c81c263523d431b0114dd847e"
+    hash7 = "46f3afae22e83344e4311482a9987ed851b2de282e8127f64d5901ac945713c0"
+    hash8 = "27752bbb01abc6abf50e1da3a59fefcce59618016619d68690e71ad9d4a3c247"
+    hash9 = "050610cfb3d3100841685826273546c829335a5f4e2e4260461b88367ad9502c"
+    severity = "7"
+    type = "Malware"
    strings:
       $s1 = "myAction=shell_result&serialNumber=" fullword wide
       $s2 = "\\Appdata\\Local\\Google\\Chrome\\User Data\\Default\\Login Data.*" fullword wide

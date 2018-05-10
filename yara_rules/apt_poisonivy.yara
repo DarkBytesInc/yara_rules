@@ -1,12 +1,14 @@
 
 rule PoisonIvy_Sample_APT {
-	meta:
-		description = "Detects a PoisonIvy APT malware group"
-		author = "Florian Roth"
-		score = 70
-		reference = "VT Analysis"
-		date = "2015-06-03"
-		hash = "b874b76ff7b281c8baa80e4a71fc9be514093c70"
+	  meta:
+    description = "Detects a PoisonIvy APT malware group"
+    author = "Florian Roth"
+    score = 70
+    reference = "VT Analysis"
+    date = "2015-06-03"
+    hash = "b874b76ff7b281c8baa80e4a71fc9be514093c70"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "pidll.dll" fullword ascii /* score: '11.02' */
 		$s1 = "sens32.dll" fullword wide /* score: '11.015' */
@@ -20,13 +22,15 @@ rule PoisonIvy_Sample_APT {
 
 
 rule PoisonIvy_Sample_APT_2 {
-	meta:
-		description = "Detects a PoisonIvy Malware"
-		author = "Florian Roth"
-		score = 70
-		reference = "VT Analysis"
-		date = "2015-06-03"
-		hash = "333f956bf3d5fc9b32183e8939d135bc0fcc5770"
+	  meta:
+    description = "Detects a PoisonIvy Malware"
+    author = "Florian Roth"
+    score = 70
+    reference = "VT Analysis"
+    date = "2015-06-03"
+    hash = "333f956bf3d5fc9b32183e8939d135bc0fcc5770"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "pidll.dll" fullword ascii /* score: '11.02' */
 		$s1 = "sens32.dll" fullword wide /* score: '11.015' */
@@ -54,13 +58,15 @@ rule PoisonIvy_Sample_APT_2 {
 }
 
 rule PoisonIvy_Sample_APT_3 {
-	meta:
-		description = "Detects a PoisonIvy Malware"
-		author = "Florian Roth"
-		score = 70
-		reference = "VT Analysis"
-		date = "2015-06-03"
-		hash = "df3e1668ac20edecc12f2c1a873667ea1a6c3d6a"
+	  meta:
+    description = "Detects a PoisonIvy Malware"
+    author = "Florian Roth"
+    score = 70
+    reference = "VT Analysis"
+    date = "2015-06-03"
+    hash = "df3e1668ac20edecc12f2c1a873667ea1a6c3d6a"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "\\notepad.exe" fullword ascii /* score: '11.025' */
 		$s1 = "\\RasAuto.dll" fullword ascii /* score: '11.025' */
@@ -71,13 +77,15 @@ rule PoisonIvy_Sample_APT_3 {
 
 
 rule PoisonIvy_Sample_APT_4 {
-	meta:
-		description = "Detects a PoisonIvy Sample APT"
-		author = "Florian Roth"
-		score = 70
-		reference = "VT Analysis"
-		date = "2015-06-03"
-		hash = "558f0f0b728b6da537e2666fbf32f3c9c7bd4c0c"
+	  meta:
+    description = "Detects a PoisonIvy Sample APT"
+    author = "Florian Roth"
+    score = 70
+    reference = "VT Analysis"
+    date = "2015-06-03"
+    hash = "558f0f0b728b6da537e2666fbf32f3c9c7bd4c0c"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "Microsoft Software installation Service" fullword wide /* PEStudio Blacklist: strings */ /* score: '15.04' */
 		$s1 = "idll.dll" fullword ascii /* score: '11.02' */
@@ -93,13 +101,15 @@ rule PoisonIvy_Sample_APT_4 {
 }
 
 rule PoisonIvy_Sample_5 {
-	meta:
-		description = "Detects PoisonIvy RAT sample set"
-		author = "Florian Roth"
-		score = 70
-		reference = "VT Analysis"
-		date = "2015-06-03"
-		hash = "545e261b3b00d116a1d69201ece8ca78d9704eb2"
+	  meta:
+    description = "Detects PoisonIvy RAT sample set"
+    author = "Florian Roth"
+    score = 70
+    reference = "VT Analysis"
+    date = "2015-06-03"
+    hash = "545e261b3b00d116a1d69201ece8ca78d9704eb2"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "Microsoft Software installation Service" fullword wide /* PEStudio Blacklist: strings */ /* score: '15.04' */
 		$s2 = "pidll.dll" fullword ascii /* score: '11.02' */
@@ -114,14 +124,16 @@ condition:
 
 
 rule PoisonIvy_Sample_6 {
-	meta:
-		description = "Detects PoisonIvy RAT sample set"
-		author = "Florian Roth"
-		score = 70
-		reference = "VT Analysis"
-		date = "2015-06-03"
-		hash1 = "8c2630ab9b56c00fd748a631098fa4339f46d42b"
-		hash2 = "36b4cbc834b2f93a8856ff0e03b7a6897fb59bd3"
+	  meta:
+    description = "Detects PoisonIvy RAT sample set"
+    author = "Florian Roth"
+    score = 70
+    reference = "VT Analysis"
+    date = "2015-06-03"
+    hash1 = "8c2630ab9b56c00fd748a631098fa4339f46d42b"
+    hash2 = "36b4cbc834b2f93a8856ff0e03b7a6897fb59bd3"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$x1 = "124.133.252.150" fullword ascii /* score: '9.5' */
 		$x3 = "http://124.133.254.171/up/up.asp?id=%08x&pcname=%s" fullword ascii /* score: '24.01' */
@@ -152,13 +164,15 @@ rule PoisonIvy_Sample_6 {
 }
 
 rule PoisonIvy_Sample_7 {
-	meta:
-		description = "Detects PoisonIvy RAT sample set"
-		author = "Florian Roth"
-		score = 70
-		reference = "VT Analysis"
-		date = "2015-06-03"
-		hash = "9480cf544beeeb63ffd07442233eb5c5f0cf03b3"
+	  meta:
+    description = "Detects PoisonIvy RAT sample set"
+    author = "Florian Roth"
+    score = 70
+    reference = "VT Analysis"
+    date = "2015-06-03"
+    hash = "9480cf544beeeb63ffd07442233eb5c5f0cf03b3"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "Microsoft Software installation Service" fullword wide /* PEStudio Blacklist: strings */ /* score: '15.04' */
 		$s2 = "pidll.dll" fullword ascii /* score: '11.02' */
@@ -180,16 +194,18 @@ rule PoisonIvy_Sample_7 {
 /* Rule Set ----------------------------------------------------------------- */
 
 rule PoisonIvy_RAT_ssMUIDLL {
-	meta:
-		description = "Detects PoisonIvy RAT DLL mentioned in Palo Alto Blog in April 2016"
-		author = "Florian Roth (with the help of yarGen and Binarly)"
-		reference = "http://goo.gl/WiwtYT"
-		date = "2016-04-22"
-		hash1 = "7a424ad3f3106b87e8e82c7125834d7d8af8730a2a97485a639928f66d5f6bf4"
-		hash2 = "6eb7657603edb2b75ed01c004d88087abe24df9527b272605b8517a423557fe6"
-		hash3 = "2a6ef9dde178c4afe32fe676ff864162f104d85fac2439986de32366625dc083"
-		hash4 = "8b805f508879ecdc9bba711cfbdd570740c4825b969c1b4db980c134ac8fef1c"
-		hash5 = "ac99d4197e41802ff9f8852577955950332947534d8e2a0e3b6c1dd1715490d4"
+	  meta:
+    description = "Detects PoisonIvy RAT DLL mentioned in Palo Alto Blog in April 2016"
+    author = "Florian Roth (with the help of yarGen and Binarly)"
+    reference = "http://goo.gl/WiwtYT"
+    date = "2016-04-22"
+    hash1 = "7a424ad3f3106b87e8e82c7125834d7d8af8730a2a97485a639928f66d5f6bf4"
+    hash2 = "6eb7657603edb2b75ed01c004d88087abe24df9527b272605b8517a423557fe6"
+    hash3 = "2a6ef9dde178c4afe32fe676ff864162f104d85fac2439986de32366625dc083"
+    hash4 = "8b805f508879ecdc9bba711cfbdd570740c4825b969c1b4db980c134ac8fef1c"
+    hash5 = "ac99d4197e41802ff9f8852577955950332947534d8e2a0e3b6c1dd1715490d4"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "ssMUIDLL.dll" fullword ascii
 

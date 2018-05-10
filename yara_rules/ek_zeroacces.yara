@@ -1,12 +1,14 @@
 rule zeroaccess_css : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-27"
-   description = "ZeroAccess Exploit Kit Detection"
-   hash0 = "4944324bad3b020618444ee131dce3d0"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-27"
+    description = "ZeroAccess Exploit Kit Detection"
+    hash0 = "4944324bad3b020618444ee131dce3d0"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "close-mail{right:130px "
    $string1 = "ccc;box-shadow:0 0 5px 1px "
@@ -32,13 +34,15 @@ condition:
 }
 rule zeroaccess_css2 : EK css
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-27"
-   description = "ZeroAccess Exploit Kit Detection"
-   hash0 = "e300d6a36b9bfc3389f64021e78b1503"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-27"
+    description = "ZeroAccess Exploit Kit Detection"
+    hash0 = "e300d6a36b9bfc3389f64021e78b1503"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "er div.panel-hide{display:block;position:absolute;z-index:200;margin-top:-1.5em;}div.panel-pane div."
    $string1 = "ve.gif) right center no-repeat;}div.ctools-ajaxing{float:left;width:18px;background:url(http://cdn3."
@@ -57,13 +61,15 @@ condition:
 }
 rule zeroaccess_htm : EK html
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-27"
-   description = "ZeroAccess Exploit Kit Detection"
-   hash0 = "0e7d72749b60c8f05d4ff40da7e0e937"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-27"
+    description = "ZeroAccess Exploit Kit Detection"
+    hash0 = "0e7d72749b60c8f05d4ff40da7e0e937"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "screen.height:"
    $string1 = "</script></head><body onload"
@@ -87,13 +93,15 @@ condition:
 }
 rule zeroaccess_js : EK js
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-27"
-   description = "ZeroAccess Exploit Kit Detection"
-   hash0 = "a9f30483a197cfdc65b4a70b8eb738ab"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-27"
+    description = "ZeroAccess Exploit Kit Detection"
+    hash0 = "a9f30483a197cfdc65b4a70b8eb738ab"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "Square ad tag  (tile"
    $string1 = "  adRandNum "
@@ -119,13 +127,15 @@ condition:
 }
 rule zeroaccess_js2 : EK js
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-27"
-   description = "ZeroAccess Exploit Kit Detection"
-   hash0 = "b5fda04856b98c254d33548cc1c1216c"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-27"
+    description = "ZeroAccess Exploit Kit Detection"
+    hash0 = "b5fda04856b98c254d33548cc1c1216c"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "ApiClientConfig"
    $string1 = "function/.test(pa.toString())"
@@ -151,13 +161,15 @@ condition:
 }
 rule zeroaccess_js3 : EK js
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-27"
-   description = "ZeroAccess Exploit Kit Detection"
-   hash0 = "5f13fdfb53a3e60e93d7d1d7bbecff4f"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-27"
+    description = "ZeroAccess Exploit Kit Detection"
+    hash0 = "5f13fdfb53a3e60e93d7d1d7bbecff4f"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "document.createDocumentFragment();img.src"
    $string1 = "typeOf(events)"
@@ -180,13 +192,15 @@ condition:
 }
 rule zeroaccess_js4 : EK js
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-27"
-   description = "ZeroAccess Exploit Kit Detection"
-   hash0 = "268ae96254e423e9d670ebe172d1a444"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-27"
+    description = "ZeroAccess Exploit Kit Detection"
+    hash0 = "268ae96254e423e9d670ebe172d1a444"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = ").join("
    $string1 = "JSON.stringify:function(o){if(o"

@@ -3,11 +3,13 @@
 
 */
 rule Korplug_FAST {
-    meta:
-        description = "Rule to detect Korplug/PlugX FAST variant"
-        author = "Florian Roth"
-        date = "2015-08-20"
-        hash = "c437465db42268332543fbf6fd6a560ca010f19e0fd56562fb83fb704824b371"
+      meta:
+    description = "Rule to detect Korplug/PlugX FAST variant"
+    author = "Florian Roth"
+    date = "2015-08-20"
+    hash = "c437465db42268332543fbf6fd6a560ca010f19e0fd56562fb83fb704824b371"
+    severity = "7"
+    type = "Malware"
     strings:
         $x1 = "%s\\rundll32.exe \"%s\", ShadowPlay" fullword ascii
 
@@ -30,11 +32,13 @@ rule Korplug_FAST {
 
 rule Korplug
 { 
-	meta:
-		maltype = "Korplug Backdoor"
-        author = "https://github.com/reed1713"
-		reference = "http://www.symantec.com/connect/blogs/new-sample-backdoorkorplug-signed-stolen-certificate"
-		description = "IOC looks for events associated with the KORPLUG Backdoor linked to the recent operation greedy wonk activity."
+	  meta:
+    maltype = "Korplug Backdoor"
+    author = "https://github.com/reed1713"
+    reference = "http://www.symantec.com/connect/blogs/new-sample-backdoorkorplug-signed-stolen-certificate"
+    description = "IOC looks for events associated with the KORPLUG Backdoor linked to the recent operation greedy wonk activity."
+    severity = "7"
+    type = "Malware"
 		
 	strings:
 		$type="Microsoft-Windows-Security-Auditing"

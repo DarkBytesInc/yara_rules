@@ -9,14 +9,16 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule CACTUSTORCH {
-   meta:
-      description = "Detects CactusTorch Hacktool"
-      author = "Florian Roth"
-      reference = "https://github.com/mdsecactivebreach/CACTUSTORCH"
-      date = "2017-07-31"
-      hash1 = "314e6d7d863878b6dca46af165e7f08fedd42c054d7dc3828dc80b86a3a9b98c"
-      hash2 = "0305aa32d5f8484ca115bb4888880729af7f33ac99594ec1aa3c65644e544aea"
-      hash3 = "a52d802e34ac9d7d3539019d284b04ded3b8e197d5e3b38ed61f523c3d68baa7"
+     meta:
+    description = "Detects CactusTorch Hacktool"
+    author = "Florian Roth"
+    reference = "https://github.com/mdsecactivebreach/CACTUSTORCH"
+    date = "2017-07-31"
+    hash1 = "314e6d7d863878b6dca46af165e7f08fedd42c054d7dc3828dc80b86a3a9b98c"
+    hash2 = "0305aa32d5f8484ca115bb4888880729af7f33ac99594ec1aa3c65644e544aea"
+    hash3 = "a52d802e34ac9d7d3539019d284b04ded3b8e197d5e3b38ed61f523c3d68baa7"
+    severity = "5"
+    type = "Unknown"
    strings:
       $x1 = "$payload = shellcode(%options[\"listener\"], \"true\", \"x86\");" fullword ascii
       $x2 = "Copy the base64 encoded payload into the code variable below." fullword ascii

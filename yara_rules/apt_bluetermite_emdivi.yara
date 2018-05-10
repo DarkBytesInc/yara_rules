@@ -6,14 +6,16 @@
 rule Emdivi_SFX
  {
 
-    meta:
-        description = "Detects Emdivi malware in SFX Archive"
-        author = "Florian Roth @Cyber0ps"
-        reference = "https://securelist.com/blog/research/71876/new-activity-of-the-blue-termite-apt/"
-        date = "2015-08-20"
-        score = 70
-        hash1 = "7a3c81b2b3c14b9cd913692347019887b607c54152b348d6d3ccd3ecfd406196"
-        hash2 = "8c3df4e4549db3ce57fc1f7b1b2dfeedb7ba079f654861ca0b608cbfa1df0f6b"
+      meta:
+    description = "Detects Emdivi malware in SFX Archive"
+    author = "Florian Roth @Cyber0ps"
+    reference = "https://securelist.com/blog/research/71876/new-activity-of-the-blue-termite-apt/"
+    date = "2015-08-20"
+    score = 70
+    hash1 = "7a3c81b2b3c14b9cd913692347019887b607c54152b348d6d3ccd3ecfd406196"
+    hash2 = "8c3df4e4549db3ce57fc1f7b1b2dfeedb7ba079f654861ca0b608cbfa1df0f6b"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $x1 = "Setup=unsecess.exe" fullword ascii
@@ -29,17 +31,19 @@ rule Emdivi_SFX
 rule Emdivi_Gen1 
 {
 
-    meta:
-        description = "Detects Emdivi Malware"
-        author = "Florian Roth @Cyber0ps"
-        reference = "https://securelist.com/blog/research/71876/new-activity-of-the-blue-termite-apt/"
-        date = "2015-08-20"
-        score = 80
-        super_rule = 1
-        hash1 = "17e646ca2558a65ffe7aa185ba75d5c3a573c041b897355c2721e9a8ca5fee24"
-        hash2 = "3553c136b4eba70eec5d80abe44bd7c7c33ab1b65de617dbb7be5025c9cf01f1"
-        hash3 = "6a331c4e654dd8ddaa2c69d260aa5f4f76f243df8b5019d62d4db5ae5c965662"
-        hash4 = "90d07ea2bb80ed52b007f57d0d9a79430cd50174825c43d5746a16ee4f94ea86"
+      meta:
+    description = "Detects Emdivi Malware"
+    author = "Florian Roth @Cyber0ps"
+    reference = "https://securelist.com/blog/research/71876/new-activity-of-the-blue-termite-apt/"
+    date = "2015-08-20"
+    score = 80
+    super_rule = 1
+    hash1 = "17e646ca2558a65ffe7aa185ba75d5c3a573c041b897355c2721e9a8ca5fee24"
+    hash2 = "3553c136b4eba70eec5d80abe44bd7c7c33ab1b65de617dbb7be5025c9cf01f1"
+    hash3 = "6a331c4e654dd8ddaa2c69d260aa5f4f76f243df8b5019d62d4db5ae5c965662"
+    hash4 = "90d07ea2bb80ed52b007f57d0d9a79430cd50174825c43d5746a16ee4f94ea86"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $x1 = "wmic nteventlog where filename=\"SecEvent\" call cleareventlog" fullword wide
@@ -61,16 +65,18 @@ rule Emdivi_Gen1
 rule Emdivi_Gen2 
 {
 
-    meta:
-        description = "Detects Emdivi Malware"
-        author = "Florian Roth @Cyber0ps"
-        reference = "https://securelist.com/blog/research/71876/new-activity-of-the-blue-termite-apt/"
-        date = "2015-08-20"
-        super_rule = 1
-        score = 80
-        hash1 = "9a351885bf5f6fec466f30021088504d96e9db10309622ed198184294717add1"
-        hash2 = "a5be7cb1f37030c9f9211c71e0fbe01dae19ff0e6560c5aab393621f18a7d012"
-        hash3 = "9183abb9b639699cd2ad28d375febe1f34c14679b7638d1a79edb49d920524a4"
+      meta:
+    description = "Detects Emdivi Malware"
+    author = "Florian Roth @Cyber0ps"
+    reference = "https://securelist.com/blog/research/71876/new-activity-of-the-blue-termite-apt/"
+    date = "2015-08-20"
+    super_rule = 1
+    score = 80
+    hash1 = "9a351885bf5f6fec466f30021088504d96e9db10309622ed198184294717add1"
+    hash2 = "a5be7cb1f37030c9f9211c71e0fbe01dae19ff0e6560c5aab393621f18a7d012"
+    hash3 = "9183abb9b639699cd2ad28d375febe1f34c14679b7638d1a79edb49d920524a4"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $s1 = "%TEMP%\\IELogs\\" fullword ascii
@@ -88,15 +94,17 @@ rule Emdivi_Gen2
 rule Emdivi_Gen3 
 {
 
-    meta:
-        description = "Detects Emdivi Malware"
-        author = "Florian Roth @Cyber0ps"
-        reference = "https://securelist.com/blog/research/71876/new-activity-of-the-blue-termite-apt/"
-        date = "2015-08-20"
-        super_rule = 1
-        score = 80
-        hash1 = "008f4f14cf64dc9d323b6cb5942da4a99979c4c7d750ec1228d8c8285883771e"
-        hash2 = "a94bf485cebeda8e4b74bbe2c0a0567903a13c36b9bf60fab484a9b55207fe0d"
+      meta:
+    description = "Detects Emdivi Malware"
+    author = "Florian Roth @Cyber0ps"
+    reference = "https://securelist.com/blog/research/71876/new-activity-of-the-blue-termite-apt/"
+    date = "2015-08-20"
+    super_rule = 1
+    score = 80
+    hash1 = "008f4f14cf64dc9d323b6cb5942da4a99979c4c7d750ec1228d8c8285883771e"
+    hash2 = "a94bf485cebeda8e4b74bbe2c0a0567903a13c36b9bf60fab484a9b55207fe0d"
+    severity = "10"
+    type = "Advanced Persistent Threat"
   
     strings:
         $x1 = "Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 5.1; SV1; .NET CLR 2.0.50727.42)" fullword ascii
@@ -114,19 +122,21 @@ rule Emdivi_Gen3
 rule Emdivi_Gen4
  {
 
-    meta:
-        description = "Detects Emdivi Malware"
-        author = "Florian Roth @Cyber0ps"
-        reference = "https://securelist.com/blog/research/71876/new-activity-of-the-blue-termite-apt/"
-        date = "2015-08-20"
-        super_rule = 1
-        score = 80
-        hash1 = "008f4f14cf64dc9d323b6cb5942da4a99979c4c7d750ec1228d8c8285883771e"
-        hash2 = "17e646ca2558a65ffe7aa185ba75d5c3a573c041b897355c2721e9a8ca5fee24"
-        hash3 = "3553c136b4eba70eec5d80abe44bd7c7c33ab1b65de617dbb7be5025c9cf01f1"
-        hash4 = "6a331c4e654dd8ddaa2c69d260aa5f4f76f243df8b5019d62d4db5ae5c965662"
-        hash5 = "90d07ea2bb80ed52b007f57d0d9a79430cd50174825c43d5746a16ee4f94ea86"
-        hash6 = "a94bf485cebeda8e4b74bbe2c0a0567903a13c36b9bf60fab484a9b55207fe0d"
+      meta:
+    description = "Detects Emdivi Malware"
+    author = "Florian Roth @Cyber0ps"
+    reference = "https://securelist.com/blog/research/71876/new-activity-of-the-blue-termite-apt/"
+    date = "2015-08-20"
+    super_rule = 1
+    score = 80
+    hash1 = "008f4f14cf64dc9d323b6cb5942da4a99979c4c7d750ec1228d8c8285883771e"
+    hash2 = "17e646ca2558a65ffe7aa185ba75d5c3a573c041b897355c2721e9a8ca5fee24"
+    hash3 = "3553c136b4eba70eec5d80abe44bd7c7c33ab1b65de617dbb7be5025c9cf01f1"
+    hash4 = "6a331c4e654dd8ddaa2c69d260aa5f4f76f243df8b5019d62d4db5ae5c965662"
+    hash5 = "90d07ea2bb80ed52b007f57d0d9a79430cd50174825c43d5746a16ee4f94ea86"
+    hash6 = "a94bf485cebeda8e4b74bbe2c0a0567903a13c36b9bf60fab484a9b55207fe0d"
+    severity = "10"
+    type = "Advanced Persistent Threat"
   
     strings:
         $s1 = ".http_port\", " fullword wide

@@ -1,7 +1,9 @@
 rule PowershellDdiRc4 {
-  meta:
-	author = "FDD"
-	description = "Rule for Powershell DDI RC4 detection"
+    meta:
+    author = "FDD"
+    description = "Rule for Powershell DDI RC4 detection"
+    severity = "7"
+    type = "Exploit Kit"
   strings:
 	$Net = "new-object system.net.webclient" nocase
 	$Download = "downloaddata(" nocase

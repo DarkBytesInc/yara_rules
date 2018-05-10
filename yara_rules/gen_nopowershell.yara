@@ -6,13 +6,15 @@
 */
 
 rule No_PowerShell {
-	meta:
-		description = "Detects an C# executable used to circumvent PowerShell detection - file nps.exe"
-		author = "Florian Roth"
-		reference = "https://github.com/Ben0xA/nps"
-		date = "2016-05-21"
-		score = 80
-		hash1 = "64f811b99eb4ae038c88c67ee0dc9b150445e68a2eb35ff1a0296533ae2edd71"
+	  meta:
+    description = "Detects an C# executable used to circumvent PowerShell detection - file nps.exe"
+    author = "Florian Roth"
+    reference = "https://github.com/Ben0xA/nps"
+    date = "2016-05-21"
+    score = 80
+    hash1 = "64f811b99eb4ae038c88c67ee0dc9b150445e68a2eb35ff1a0296533ae2edd71"
+    severity = "7"
+    type = "Exploit Kit"
 	strings:
 		$s1 = "nps.exe -encodedcommand {base64_encoded_command}" fullword wide
 		$s2 = "c:\\Development\\ghps\\nps\\nps\\obj\\x86\\Release\\nps.pdb" fullword ascii

@@ -1,8 +1,10 @@
 rule malware_sakula_xorloop {
-  meta:
+    meta:
     description = "XOR loops from Sakula malware"
     author = "David Cannings"
     md5 = "fc6497fe708dbda9355139721b6181e7"
+    severity = "7"
+    type = "Malware"
 
   strings:
     $mz = "MZ"
@@ -18,10 +20,12 @@ rule malware_sakula_xorloop {
 }
 
 rule malware_sakula_memory {
-  meta:
+    meta:
     description = "Sakula malware - strings after unpacking (memory rule)"
     author = "David Cannings"
     md5 = "b3852b9e7f2b8954be447121bb6b65c3"
+    severity = "7"
+    type = "Malware"
 
   strings:
     $str01 = "cmd.exe /c ping 127.0.0.1 & del \"%s\""
@@ -44,9 +48,11 @@ rule malware_sakula_memory {
 }
 
 rule malware_sakula_shellcode {
-  meta:
+    meta:
     description = "Sakula shellcode - taken from decoded setup.msi but may not be unique enough to identify Sakula"
     author = "David Cannings"
+    severity = "7"
+    type = "Malware"
 
   strings:
     /*

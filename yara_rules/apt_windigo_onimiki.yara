@@ -37,7 +37,7 @@
 rule onimiki
 {
 
-  meta:
+    meta:
     description = "Linux/Onimiki malicious DNS server"
     malware = "Linux/Onimiki"
     operation = "Windigo"
@@ -47,6 +47,8 @@ rule onimiki
     contact = "windigo@eset.sk"
     source = "https://github.com/eset/malware-ioc/"
     license = "BSD 2-Clause"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
   strings:
     // code from offset: 0x46CBCD

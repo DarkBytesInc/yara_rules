@@ -9,16 +9,18 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule CrimsonRAT_Mar18_1 {
-   meta:
-      description = "Detects CrimsonRAT malware"
-      author = "Florian Roth"
-      reference = "Internal Research"
-      date = "2018-03-06"
-      hash1 = "acf2e8013b6fafcf436d5a05049896504ffa2e982bca05155d19981d1931c611"
-      hash2 = "7ca6e5ef1d346ec35993c910128a3526b098a07445131784a9358bf5679e3975"
-      hash3 = "be4264973de9886caedae1cb707586588d0da85ac7a2ad277db4258033ea12a8"
-      hash4 = "acf2e8013b6fafcf436d5a05049896504ffa2e982bca05155d19981d1931c611"
-      hash5 = "ff52b4a64ed7caeab00350e493968dbdb159aeb545fcba67d83ab9b158464de4"
+     meta:
+    description = "Detects CrimsonRAT malware"
+    author = "Florian Roth"
+    reference = "Internal Research"
+    date = "2018-03-06"
+    hash1 = "acf2e8013b6fafcf436d5a05049896504ffa2e982bca05155d19981d1931c611"
+    hash2 = "7ca6e5ef1d346ec35993c910128a3526b098a07445131784a9358bf5679e3975"
+    hash3 = "be4264973de9886caedae1cb707586588d0da85ac7a2ad277db4258033ea12a8"
+    hash4 = "acf2e8013b6fafcf436d5a05049896504ffa2e982bca05155d19981d1931c611"
+    hash5 = "ff52b4a64ed7caeab00350e493968dbdb159aeb545fcba67d83ab9b158464de4"
+    severity = "7"
+    type = "Malware"
    strings:
       $x1 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run|" wide
       $x2 = "\\Release\\RTLBot.pdb" ascii

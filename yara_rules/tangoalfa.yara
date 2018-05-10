@@ -1,8 +1,11 @@
 rule TangoAlfa
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    description = "TangoAlfa"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 		// $firewall is a shared code string

@@ -7,11 +7,13 @@ import "pe"
 
 rule leverage_a
 {
-	meta:
-		author = "earada@alienvault.com"
-		version = "1.0"
-		description = "OSX/Leverage.A"
-		date = "2013/09"
+	  meta:
+    author = "earada@alienvault.com"
+    version = "1.0"
+    description = "OSX/Leverage.A"
+    date = "2013/09"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$a1 = "ioreg -l | grep \"IOPlatformSerialNumber\" | awk -F"
 		$a2 = "+:Users:Shared:UserEvent.app:Contents:MacOS:"

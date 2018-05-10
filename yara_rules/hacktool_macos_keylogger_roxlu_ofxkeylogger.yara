@@ -1,9 +1,11 @@
 rule hacktool_macos_keylogger_roxlu_ofxkeylogger
 {
-    meta:
-        description = "ofxKeylogger keylogger."
-        reference = "https://github.com/roxlu/ofxKeylogger"
-        author = "@mimeframe"
+      meta:
+    description = "ofxKeylogger keylogger."
+    reference = "https://github.com/roxlu/ofxKeylogger"
+    author = "@mimeframe"
+    severity = "5"
+    type = "Unknown"
     strings:
         $a1 = "keylogger_init" wide ascii
         $a2 = "install_keylogger_hook function not found in dll." wide ascii

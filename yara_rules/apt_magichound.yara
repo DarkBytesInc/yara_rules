@@ -8,12 +8,14 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule APT_PupyRAT_PY {
-   meta:
-      description = "Detects Pupy RAT"
-      author = "Florian Roth"
-      reference = "https://www.secureworks.com/blog/iranian-pupyrat-bites-middle-eastern-organizations"
-      date = "2017-02-17"
-      hash1 = "8d89f53b0a6558d6bb9cdbc9f218ef699f3c87dd06bc03dd042290dedc18cb71"
+     meta:
+    description = "Detects Pupy RAT"
+    author = "Florian Roth"
+    reference = "https://www.secureworks.com/blog/iranian-pupyrat-bites-middle-eastern-organizations"
+    date = "2017-02-17"
+    hash1 = "8d89f53b0a6558d6bb9cdbc9f218ef699f3c87dd06bc03dd042290dedc18cb71"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $x1 = "reflective_inject_dll" fullword ascii
       $x2 = "ImportError: pupy builtin module not found !" fullword ascii
@@ -29,14 +31,16 @@ rule APT_PupyRAT_PY {
 /* Super Rules ------------------------------------------------------------- */
 
 rule APT_MagicHound_MalMacro {
-   meta:
-      description = "Detects malicious macro / powershell in Office document"
-      author = "Florian Roth"
-      reference = "https://www.secureworks.com/blog/iranian-pupyrat-bites-middle-eastern-organizations"
-      date = "2017-02-17"
-      super_rule = 1
-      hash1 = "66d24a529308d8ab7b27ddd43a6c2db84107b831257efb664044ec4437f9487b"
-      hash2 = "e5b643cb6ec30d0d0b458e3f2800609f260a5f15c4ac66faf4ebf384f7976df6"
+     meta:
+    description = "Detects malicious macro / powershell in Office document"
+    author = "Florian Roth"
+    reference = "https://www.secureworks.com/blog/iranian-pupyrat-bites-middle-eastern-organizations"
+    date = "2017-02-17"
+    super_rule = 1
+    hash1 = "66d24a529308d8ab7b27ddd43a6c2db84107b831257efb664044ec4437f9487b"
+    hash2 = "e5b643cb6ec30d0d0b458e3f2800609f260a5f15c4ac66faf4ebf384f7976df6"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "powershell.exe " fullword ascii
       $s2 = "CommandButton1_Click" fullword ascii

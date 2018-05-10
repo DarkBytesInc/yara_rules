@@ -2,23 +2,17 @@ rule ROKRAT_loader : TAU DPRK APT
 
 {
 
-meta:
-
+  meta:
     author = "CarbonBlack Threat Research" //JMyers
-
     date = "2018-Jan-11"
-
     description = "Designed to catch loader observed used with ROKRAT malware"
-    
     reference = "https://www.carbonblack.com/2018/02/27/threat-analysis-rokrat-malware/"
-
     rule_version = 1
-
-  	yara_version = "3.7.0"
-
+    yara_version = "3.7.0"
     TLP = "White"
-
-  	exemplar_hashes = "e1546323dc746ed2f7a5c973dcecc79b014b68bdd8a6230239283b4f775f4bbd"
+    exemplar_hashes = "e1546323dc746ed2f7a5c973dcecc79b014b68bdd8a6230239283b4f775f4bbd"
+    severity = "7"
+    type = "Malware"
 
 strings:
 
@@ -89,23 +83,17 @@ rule ROKRAT_payload : TAU DPRK APT
 
 {
 
-meta:
-
+  meta:
     author = "CarbonBlack Threat Research" //JMyers
-
     date = "2018-Jan-11"
-
     description = "Designed to catch loader observed used with ROKRAT malware"
-    
     reference = "https://www.carbonblack.com/2018/02/27/threat-analysis-rokrat-malware/"
-
     rule_version = 1
-
-  	yara_version = "3.7.0"
-
+    yara_version = "3.7.0"
     TLP = "White"
-
-  	exemplar_hashes = "e200517ab9482e787a59e60accc8552bd0c844687cd0cf8ec4238ed2fc2fa573"
+    exemplar_hashes = "e200517ab9482e787a59e60accc8552bd0c844687cd0cf8ec4238ed2fc2fa573"
+    severity = "7"
+    type = "Malware"
 
 strings:
 

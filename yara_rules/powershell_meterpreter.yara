@@ -1,7 +1,9 @@
 rule PowershellMeterpreter {
-  meta:
-	author = "FDD"
-	description = "Rule for Powershell DFSP detection"
+    meta:
+    author = "FDD"
+    description = "Rule for Powershell DFSP detection"
+    severity = "7"
+    type = "Exploit Kit"
   strings:
 	$Net = "New-Object Net.WebClient" nocase
 	$Download = "downloadstring(" nocase

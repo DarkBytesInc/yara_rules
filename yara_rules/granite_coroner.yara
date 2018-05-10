@@ -1,7 +1,9 @@
 
 rule granite_coroner_dropper {
-    meta:
-        description = "Payload dropper for password theft or keylogging"
+      meta:
+    description = "Payload dropper for password theft or keylogging"
+    severity = "5"
+    type = "Unknown"
 
     strings:
         $mz = "MZ"
@@ -30,28 +32,11 @@ rule granite_coroner_dropper {
         $cypher_cryptor
 }
 
-rule granite_jocasteluvium {
-    strings:
-        $mz = "MZ"
-
-        // 8B805E07CCA42BE8FC98C8BCF8D0C7C2
-        $string1 = "JumpID(\"\",\"%s\")"
-        $string2 = " - Clipboard - "
-        $string3 = "Content-Type: application/x-www-form-urlencoded"
-        $string4 = "text="
-        $string5 = "[Num Lock]"
-        $string6 = "[PrtScr]"
-        $string7 = "msgss.exe"
-        $string8 = "User Interface Manager" wide
-
-    condition:
-        $mz at 0 and 7 of ($string*)
-}
-
-
 rule coroner_bolshiecharity {
-    meta:
-        description = "Password extraction utility"
+      meta:
+    description = "Password extraction utility"
+    severity = "5"
+    type = "Unknown"
 
     strings:
         $mz = "MZ"

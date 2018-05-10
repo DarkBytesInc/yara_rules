@@ -8,13 +8,15 @@ import "pe"
 rule rtf_Kaba_jDoe
 {
 
-meta:
+  meta:
     author = "@patrickrolsen"
     maltype = "APT.Kaba"
     filetype = "RTF"
     version = "0.1"
     description = "fe439af268cd3de3a99c21ea40cf493f, d0e0e68a88dce443b24453cc951cf55f, b563af92f144dea7327c9597d9de574e, and def0c9a4c732c3a1e8910db3f9451620"
     date = "2013-12-10"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
 strings:
     $magic1 = { 7b 5c 72 74 30 31 } // {\rt01

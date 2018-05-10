@@ -6,9 +6,11 @@
 rule CorkowDLL
 {
 
-    meta:
-        description = "Rule to detect the Corkow DLL files"
-        reference = "IB-Group | http://www.group-ib.ru/brochures/Group-IB-Corkow-Report-EN.pdf"
+      meta:
+    description = "Rule to detect the Corkow DLL files"
+    reference = "IB-Group | http://www.group-ib.ru/brochures/Group-IB-Corkow-Report-EN.pdf"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $mz = { 4d 5a }

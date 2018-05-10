@@ -8,12 +8,14 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule Metasploit_Loader_RSMudge {
-	meta:
-		description = "Detects a Metasploit Loader by RSMudge - file loader.exe"
-		author = "Florian Roth"
-		reference = "https://github.com/rsmudge/metasploit-loader"
-		date = "2016-04-20"
-		hash1 = "afe34bfe2215b048915b1d55324f1679d598a0741123bc24274d4edc6e395a8d"
+	  meta:
+    description = "Detects a Metasploit Loader by RSMudge - file loader.exe"
+    author = "Florian Roth"
+    reference = "https://github.com/rsmudge/metasploit-loader"
+    date = "2016-04-20"
+    hash1 = "afe34bfe2215b048915b1d55324f1679d598a0741123bc24274d4edc6e395a8d"
+    severity = "7"
+    type = "Exploit Kit"
 	strings:
 		$s1 = "Could not resolve target" fullword ascii
 		$s2 = "Could not connect to target" fullword ascii

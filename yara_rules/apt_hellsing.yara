@@ -7,11 +7,14 @@ import "pe"
 rule apt_hellsing_implantstrings
 { 
   
-    meta:
-        Author = "Costin Raiu, Kaspersky Lab"
-        Date = "2015-04-07"
-        Description = "detection for Hellsing implants"
-        Reference = "http://securelist.com/analysis/publications/69567/the-chronicles-of-the-hellsing-apt-the-empire-strikes-back"
+      meta:
+    Author = "Costin Raiu, Kaspersky Lab"
+    Date = "2015-04-07"
+    Description = "detection for Hellsing implants"
+    Reference = "http://securelist.com/analysis/publications/69567/the-chronicles-of-the-hellsing-apt-the-empire-strikes-back"
+    description = "apt_hellsing_implantstrings"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings: 
         $mz="MZ"
@@ -38,11 +41,14 @@ rule apt_hellsing_implantstrings
 rule apt_hellsing_installer
 {
     
-    meta:
-        Author = "Costin Raiu, Kaspersky Lab"
-        Date = "2015-04-07"
-        Description = "detection for Hellsing xweber/msger installers"
-        Reference = "http://securelist.com/analysis/publications/69567/the-chronicles-of-the-hellsing-apt-the-empire-strikes-back" 
+      meta:
+    Author = "Costin Raiu, Kaspersky Lab"
+    Date = "2015-04-07"
+    Description = "detection for Hellsing xweber/msger installers"
+    Reference = "http://securelist.com/analysis/publications/69567/the-chronicles-of-the-hellsing-apt-the-empire-strikes-back"
+    description = "apt_hellsing_installer"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings: 
         $mz="MZ"
@@ -64,11 +70,14 @@ rule apt_hellsing_installer
 rule apt_hellsing_proxytool
 {
     
-    meta:
-        Author = "Costin Raiu, Kaspersky Lab"
-        Date = "2015-04-07"
-        Description = "detection for Hellsing proxy testing tool"
-        Reference = "http://securelist.com/analysis/publications/69567/the-chronicles-of-the-hellsing-apt-the-empire-strikes-back" 
+      meta:
+    Author = "Costin Raiu, Kaspersky Lab"
+    Date = "2015-04-07"
+    Description = "detection for Hellsing proxy testing tool"
+    Reference = "http://securelist.com/analysis/publications/69567/the-chronicles-of-the-hellsing-apt-the-empire-strikes-back"
+    description = "apt_hellsing_proxytool"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings: 
         $mz="MZ"
@@ -86,11 +95,14 @@ rule apt_hellsing_proxytool
 rule apt_hellsing_xkat 
 {
     
-    meta:
-        Author = "Costin Raiu, Kaspersky Lab"
-        Date = "2015-04-07"
-        Description = "detection for Hellsing xKat tool"
-        Reference = "http://securelist.com/analysis/publications/69567/the-chronicles-of-the-hellsing-apt-the-empire-strikes-back"
+      meta:
+    Author = "Costin Raiu, Kaspersky Lab"
+    Date = "2015-04-07"
+    Description = "detection for Hellsing xKat tool"
+    Reference = "http://securelist.com/analysis/publications/69567/the-chronicles-of-the-hellsing-apt-the-empire-strikes-back"
+    description = "apt_hellsing_xkat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $mz="MZ"
@@ -114,11 +126,14 @@ rule apt_hellsing_xkat
 rule apt_hellsing_msgertype2
 {
     
-    meta:
-        Author = "Costin Raiu, Kaspersky Lab"
-        Date = "2015-04-07"
-        Description = "detection for Hellsing msger type 2 implants"
-        Reference = "http://securelist.com/analysis/publications/69567/the-chronicles-of-the-hellsing-apt-the-empire-strikes-back"
+      meta:
+    Author = "Costin Raiu, Kaspersky Lab"
+    Date = "2015-04-07"
+    Description = "detection for Hellsing msger type 2 implants"
+    Reference = "http://securelist.com/analysis/publications/69567/the-chronicles-of-the-hellsing-apt-the-empire-strikes-back"
+    description = "apt_hellsing_msgertype2"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $mz="MZ"
@@ -136,11 +151,14 @@ rule apt_hellsing_msgertype2
 rule apt_hellsing_irene
 {
     
-    meta:
-        Author = "Costin Raiu, Kaspersky Lab"
-        Date = "2015-04-07"
-        Description = "detection for Hellsing msger irene installer"
-        Reference = "http://securelist.com/analysis/publications/69567/the-chronicles-of-the-hellsing-apt-the-empire-strikes-back"
+      meta:
+    Author = "Costin Raiu, Kaspersky Lab"
+    Date = "2015-04-07"
+    Description = "detection for Hellsing msger irene installer"
+    Reference = "http://securelist.com/analysis/publications/69567/the-chronicles-of-the-hellsing-apt-the-empire-strikes-back"
+    description = "apt_hellsing_irene"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings: 
         $mz="MZ"

@@ -4,10 +4,12 @@
 */
 rule TRITON_ICS_FRAMEWORK
 {
-      meta:
-          author = "nicholas.carr @itsreallynick"
-          md5 = "0face841f7b2953e7c29c064d6886523"
-          description = "TRITON framework recovered during Mandiant ICS incident response"
+        meta:
+    author = "nicholas.carr @itsreallynick"
+    md5 = "0face841f7b2953e7c29c064d6886523"
+    description = "TRITON framework recovered during Mandiant ICS incident response"
+    severity = "7"
+    type = "Malware"
       strings:
           $python_compiled = ".pyc" nocase ascii wide
           $python_module_01 = "__module__" nocase ascii wide

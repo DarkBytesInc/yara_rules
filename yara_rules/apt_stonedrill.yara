@@ -10,13 +10,14 @@ import "pe"
 import "math"
 
 rule susp_file_enumerator_with_encrypted_resource_101 {
-   meta:
-      copyright = "Kaspersky Lab"
-      description = "Generic detection for samples that enumerate files with encrypted resource called 101"
-      hash = "2cd0a5f1e9bcce6807e57ec8477d222a"
-      hash = "c843046e54b755ec63ccb09d0a689674"
-      reference = "https://securelist.com/blog/research/77725/from-shamoon-to-stonedrill/"
-      version = "1.4"
+     meta:
+    copyright = "Kaspersky Lab"
+    description = "Generic detection for samples that enumerate files with encrypted resource called 101"
+    hash = "c843046e54b755ec63ccb09d0a689674"
+    reference = "https://securelist.com/blog/research/77725/from-shamoon-to-stonedrill/"
+    version = "1.4"
+    severity = "7"
+    type = "Malware"
    strings:
       $mz = "This program cannot be run in DOS mode."
       $a1 = "FindFirstFile" ascii wide nocase
@@ -40,13 +41,15 @@ rule susp_file_enumerator_with_encrypted_resource_101 {
 }
 
 rule StoneDrill_main_sub {
-   meta:
-      author = "Kaspersky Lab"
-      description = "Rule to detect StoneDrill (decrypted) samples"
-      hash1 = "d01781f1246fd1b64e09170bd6600fe1"
-      hash2 = "ac3c25534c076623192b9381f926ba0d"
-      reference = "https://securelist.com/blog/research/77725/from-shamoon-to-stonedrill/"
-      version = "1.0"
+     meta:
+    author = "Kaspersky Lab"
+    description = "Rule to detect StoneDrill (decrypted) samples"
+    hash1 = "d01781f1246fd1b64e09170bd6600fe1"
+    hash2 = "ac3c25534c076623192b9381f926ba0d"
+    reference = "https://securelist.com/blog/research/77725/from-shamoon-to-stonedrill/"
+    version = "1.0"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $code = {B8 08 00 FE 7F FF 30 8F 44 24 ?? 68 B4 0F 00 00 FF 15 ?? ?? ?? 00 B8 08 00 FE 7F FF 30 8F 44 24 ?? 8B ?? 24 [1 - 4] 2B ?? 24 [6] F7 ?1 [5 - 12] 00}
    condition:
@@ -61,10 +64,12 @@ rule StoneDrill_main_sub {
 */
 
 rule StoneDrill_BAT_1 {
-   meta:
-      author = "Florian Roth"
-      description = "Rule to detect Batch file from StoneDrill report"
-      reference = "https://securelist.com/blog/research/77725/from-shamoon-to-stonedrill/"
+     meta:
+    author = "Florian Roth"
+    description = "Rule to detect Batch file from StoneDrill report"
+    reference = "https://securelist.com/blog/research/77725/from-shamoon-to-stonedrill/"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "set u100=" ascii
       $s2 = "set u200=service" ascii fullword
@@ -76,10 +81,12 @@ rule StoneDrill_BAT_1 {
 }
 
 rule StoneDrill_Service_Install {
-   meta:
-      author = "Florian Roth"
-      description = "Rule to detect Batch file from StoneDrill report"
-      reference = "https://securelist.com/blog/research/77725/from-shamoon-to-stonedrill/"
+     meta:
+    author = "Florian Roth"
+    description = "Rule to detect Batch file from StoneDrill report"
+    reference = "https://securelist.com/blog/research/77725/from-shamoon-to-stonedrill/"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "127.0.0.1 >nul && sc config" ascii
       $s2 = "LocalService\" && ping -n" ascii fullword
@@ -90,12 +97,14 @@ rule StoneDrill_Service_Install {
 }
 
 rule StoneDrill_ntssrvr32 {
-   meta:
-      description = "Detects malware from StoneDrill threat report"
-      author = "Florian Roth"
-      reference = "https://securelist.com/blog/research/77725/from-shamoon-to-stonedrill/"
-      date = "2017-03-07"
-      hash1 = "394a7ebad5dfc13d6c75945a61063470dc3b68f7a207613b79ef000e1990909b"
+     meta:
+    description = "Detects malware from StoneDrill threat report"
+    author = "Florian Roth"
+    reference = "https://securelist.com/blog/research/77725/from-shamoon-to-stonedrill/"
+    date = "2017-03-07"
+    hash1 = "394a7ebad5dfc13d6c75945a61063470dc3b68f7a207613b79ef000e1990909b"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "g\\system32\\" fullword wide
       $s2 = "ztvttw" fullword wide
@@ -109,12 +118,14 @@ rule StoneDrill_ntssrvr32 {
 }
 
 rule StoneDrill_Malware_2 {
-   meta:
-      description = "Detects malware from StoneDrill threat report"
-      author = "Florian Roth"
-      reference = "https://securelist.com/blog/research/77725/from-shamoon-to-stonedrill/"
-      date = "2017-03-07"
-      hash1 = "69530d78c86031ce32583c6800f5ffc629acacb18aac4c8bb5b0e915fc4cc4db"
+     meta:
+    description = "Detects malware from StoneDrill threat report"
+    author = "Florian Roth"
+    reference = "https://securelist.com/blog/research/77725/from-shamoon-to-stonedrill/"
+    date = "2017-03-07"
+    hash1 = "69530d78c86031ce32583c6800f5ffc629acacb18aac4c8bb5b0e915fc4cc4db"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "cmd /c WMIC Process Call Create \"C:\\Windows\\System32\\Wscript.exe //NOLOGO " fullword wide
       $s2 = "C:\\ProgramData\\InternetExplorer" fullword wide
@@ -134,15 +145,17 @@ rule StoneDrill_Malware_2 {
 }
 
 rule StoneDrill {
-   meta:
-      description = "Detects malware from StoneDrill threat report"
-      author = "Florian Roth"
-      reference = "https://securelist.com/blog/research/77725/from-shamoon-to-stonedrill/"
-      date = "2017-03-07"
-      super_rule = 1
-      hash1 = "2bab3716a1f19879ca2e6d98c518debb107e0ed8e1534241f7769193807aac83"
-      hash2 = "62aabce7a5741a9270cddac49cd1d715305c1d0505e620bbeaec6ff9b6fd0260"
-      hash3 = "69530d78c86031ce32583c6800f5ffc629acacb18aac4c8bb5b0e915fc4cc4db"
+     meta:
+    description = "Detects malware from StoneDrill threat report"
+    author = "Florian Roth"
+    reference = "https://securelist.com/blog/research/77725/from-shamoon-to-stonedrill/"
+    date = "2017-03-07"
+    super_rule = 1
+    hash1 = "2bab3716a1f19879ca2e6d98c518debb107e0ed8e1534241f7769193807aac83"
+    hash2 = "62aabce7a5741a9270cddac49cd1d715305c1d0505e620bbeaec6ff9b6fd0260"
+    hash3 = "69530d78c86031ce32583c6800f5ffc629acacb18aac4c8bb5b0e915fc4cc4db"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $x1 = "C-Dlt-C-Trsh-T.tmp" fullword wide
       $x2 = "C-Dlt-C-Org-T.vbs" fullword wide
@@ -157,12 +170,14 @@ rule StoneDrill {
 }
 
 rule StoneDrill_VBS_1 {
-   meta:
-      description = "Detects malware from StoneDrill threat report"
-      author = "Florian Roth"
-      reference = "https://securelist.com/blog/research/77725/from-shamoon-to-stonedrill/"
-      date = "2017-03-07"
-      hash1 = "0f4d608a87e36cb0dbf1b2d176ecfcde837070a2b2a049d532d3d4226e0c9587"
+     meta:
+    description = "Detects malware from StoneDrill threat report"
+    author = "Florian Roth"
+    reference = "https://securelist.com/blog/research/77725/from-shamoon-to-stonedrill/"
+    date = "2017-03-07"
+    hash1 = "0f4d608a87e36cb0dbf1b2d176ecfcde837070a2b2a049d532d3d4226e0c9587"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $x1 = "wmic /NameSpace:\\\\root\\default Class StdRegProv Call SetStringValue hDefKey = \"&H80000001\" sSubKeyName = \"Software\\Micros" ascii
       $x2 = "ping 1.0.0.0 -n 1 -w 20000 > nul" fullword ascii

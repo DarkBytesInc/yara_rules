@@ -5,11 +5,13 @@
 
 rule Kovter
 { 
-	meta:
-		maltype = "Kovter"
+	  meta:
+    maltype = "Kovter"
     reference = "http://blog.airbuscybersecurity.com/post/2016/03/FILELESS-MALWARE-%E2%80%93-A-BEHAVIOURAL-ANALYSIS-OF-KOVTER-PERSISTENCE"
-		date = "9-19-2016"
-		description = "fileless malware"
+    date = "9-19-2016"
+    description = "fileless malware"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$type="Microsoft-Windows-Security-Auditing" wide ascii
 		$eventid="4688" wide ascii

@@ -6,12 +6,14 @@
 */
 
 rule SharpCat {
-	meta:
-		description = "Detects command shell SharpCat - file SharpCat.exe"
-		author = "Florian Roth"
-		reference = "https://github.com/Cn33liz/SharpCat"
-		date = "2016-06-10"
-		hash1 = "96dcdf68b06c3609f486f9d560661f4fec9fe329e78bd300ad3e2a9f07e332e9"
+	  meta:
+    description = "Detects command shell SharpCat - file SharpCat.exe"
+    author = "Florian Roth"
+    reference = "https://github.com/Cn33liz/SharpCat"
+    date = "2016-06-10"
+    hash1 = "96dcdf68b06c3609f486f9d560661f4fec9fe329e78bd300ad3e2a9f07e332e9"
+    severity = "5"
+    type = "Unknown"
 	strings:
 		$x1 = "ShellZz" fullword ascii
 		$s2 = "C:\\Windows\\System32\\cmd.exe" fullword wide

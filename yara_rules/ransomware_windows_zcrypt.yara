@@ -1,10 +1,12 @@
 rule ransomware_windows_zcrypt
 {
-    meta:
-        description = "Zcrypt will encrypt data and append the .zcrypt extension to the filenames"
-        reference = "https://blog.malwarebytes.com/threat-analysis/2016/06/zcrypt-ransomware/"
-        author = "@fusionrace"
-        md5 = "d1e75b274211a78d9c5d38c8ff2e1778"
+      meta:
+    description = "Zcrypt will encrypt data and append the .zcrypt extension to the filenames"
+    reference = "https://blog.malwarebytes.com/threat-analysis/2016/06/zcrypt-ransomware/"
+    author = "@fusionrace"
+    md5 = "d1e75b274211a78d9c5d38c8ff2e1778"
+    severity = "10"
+    type = "Ransomware"
     strings:
         // unique strings
         $u1 = "How to Buy Bitcoins" ascii wide

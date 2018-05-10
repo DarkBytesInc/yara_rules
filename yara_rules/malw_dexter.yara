@@ -8,12 +8,14 @@ import "pe"
 rule Dexter_Malware 
 {
 
-    meta:
-        description = "Detects the Dexter Trojan/Agent http://goo.gl/oBvy8b"
-        author = "Florian Roth"
-        reference = "http://goo.gl/oBvy8b"
-        date = "2015/02/10"
-        score = 70
+      meta:
+    description = "Detects the Dexter Trojan/Agent http://goo.gl/oBvy8b"
+    author = "Florian Roth"
+    reference = "http://goo.gl/oBvy8b"
+    date = "2015/02/10"
+    score = 70
+    severity = "7"
+    type = "Malware"
 
     strings:
         $s0 = "Java Security Plugin" fullword wide
@@ -28,11 +30,13 @@ rule Dexter_Malware
 rule dexter_strings
 {
    
-    meta:
-        author = "Brian Wallace @botnet_hunter"
-        author_email = "bwall@ballastsecurity.net"
-        date = "2014-09-10"
-        description = "Identify Dexter POSGrabber"
+      meta:
+    author = "Brian Wallace @botnet_hunter"
+    author_email = "bwall@ballastsecurity.net"
+    date = "2014-09-10"
+    description = "Identify Dexter POSGrabber"
+    severity = "7"
+    type = "Malware"
    
     strings:
         $s1 = "UpdateMutex:"

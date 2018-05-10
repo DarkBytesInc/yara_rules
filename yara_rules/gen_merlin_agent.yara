@@ -1,11 +1,13 @@
 
 rule merlinAgent {
-	meta:
-		description = "Detects Merlin agent"
-		filetype = "pe, elf, mach"
-		author = "Hilko Bengen"
-		reference = "https://github.com/Ne0nd0g/merlin"
-		date = "2017-12-26"
+	  meta:
+    description = "Detects Merlin agent"
+    filetype = "pe, elf, mach"
+    author = "Hilko Bengen"
+    reference = "https://github.com/Ne0nd0g/merlin"
+    date = "2017-12-26"
+    severity = "5"
+    type = "Unknown"
 	strings:
 		$x1 = "Command output:\x0d\x0a\x0d\x0a%s"
 		$x2 = "[-]Connecting to web server at %s to update agent configuration information."

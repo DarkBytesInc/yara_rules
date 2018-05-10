@@ -3,14 +3,16 @@
 
 */
 rule BernhardPOS {
-     meta:
-          author = "Nick Hoffman / Jeremy Humble"
-          last_update = "2015-07-14"
-          source = "Morphick Inc."
-          description = "BernhardPOS Credit Card dumping tool"
-          reference = "http://morphick.com/blog/2015/7/14/bernhardpos-new-pos-malware-discovered-by-morphick"
-          md5 = "e49820ef02ba5308ff84e4c8c12e7c3d"
-          score = 70
+       meta:
+    author = "Nick Hoffman / Jeremy Humble"
+    last_update = "2015-07-14"
+    source = "Morphick Inc."
+    description = "BernhardPOS Credit Card dumping tool"
+    reference = "http://morphick.com/blog/2015/7/14/bernhardpos-new-pos-malware-discovered-by-morphick"
+    md5 = "e49820ef02ba5308ff84e4c8c12e7c3d"
+    score = 70
+    severity = "5"
+    type = "Unknown"
      strings:
           $shellcode_kernel32_with_junk_code = { 33 c0 83 ?? ?? 83 ?? ?? 64 a1 30 00 00 00 83 ?? ?? 83 ?? ?? 8b 40 0c 83 ?? ?? 83 ?? ?? 8b 40 14 83 ?? ?? 83 ?? ?? 8b 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 8b 00 83 ?? ?? 83 ?? ?? 8b 40 10 83 ?? ?? }
           $mutex_name = "OPSEC_BERNHARD" 

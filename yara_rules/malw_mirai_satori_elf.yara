@@ -20,9 +20,11 @@ private rule is__Mirai_Satori_gen {
 }
 
 rule Mirai_Satori {
-	meta:
-		description = "Detects Mirai Satori MALW"
-		date = "2018-01-09"
+	  meta:
+    description = "Detects Mirai Satori MALW"
+    date = "2018-01-09"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$hexsts01 = { 63 71 75 ?? 62 6B 77 62 75 }

@@ -8,9 +8,12 @@ import "pe"
 rule LIGHTDART_APT1
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $s1 = "ret.log" wide ascii
@@ -26,9 +29,12 @@ rule LIGHTDART_APT1
 rule AURIGA_APT1
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $s1 = "superhard corp." wide ascii
@@ -46,9 +52,12 @@ rule AURIGA_APT1
 rule AURIGA_driver_APT1
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $s1 = "Services\\riodrv32" wide ascii
@@ -65,9 +74,12 @@ rule AURIGA_driver_APT1
 rule BANGAT_APT1
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $s1 = "superhard corp." wide ascii
@@ -89,9 +101,12 @@ rule BANGAT_APT1
 rule BISCUIT_GREENCAT_APT1
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $s1 = "zxdosml" wide ascii
@@ -108,9 +123,12 @@ rule BISCUIT_GREENCAT_APT1
 rule BOUNCER_APT1
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $s1 = "*Qd9kdgba33*%Wkda0Qd3kvn$*&><(*&%$E#%$#1234asdgKNAg@!gy565dtfbasdg" wide ascii
@@ -125,9 +143,12 @@ rule BOUNCER_APT1
 rule BOUNCER_DLL_APT1
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $s1 = "new_connection_to_bounce():" wide ascii
@@ -140,9 +161,12 @@ rule BOUNCER_DLL_APT1
 rule CALENDAR_APT1
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
        
     strings:
         $s1 = "content" wide ascii
@@ -163,9 +187,12 @@ rule CALENDAR_APT1
 rule COMBOS_APT1
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $s1 = "Mozilla4.0 (compatible; MSIE 7.0; Win32)" wide ascii
@@ -183,9 +210,12 @@ rule COMBOS_APT1
 rule DAIRY_APT1
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $s1 = "Mozilla/4.0 (compatible; MSIE 7.0;)" wide ascii
@@ -201,9 +231,12 @@ rule DAIRY_APT1
 rule GLOOXMAIL_APT1
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $s1 = "Kill process success!" wide ascii
@@ -219,9 +252,12 @@ rule GLOOXMAIL_APT1
 rule GOGGLES_APT1
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $s1 = "Kill process success!" wide ascii
@@ -236,9 +272,12 @@ rule GOGGLES_APT1
 
 rule HACKSFASE1_APT1
 {
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $s1 = {cb 39 82 49 42 be 1f 3a}
@@ -250,9 +289,12 @@ rule HACKSFASE1_APT1
 rule HACKSFASE2_APT1
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $s1 = "Send to Server failed." wide ascii
@@ -266,9 +308,12 @@ rule HACKSFASE2_APT1
 rule KURTON_APT1
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $s1 = "Mozilla/4.0 (compatible; MSIE8.0; Windows NT 5.1)" wide ascii
@@ -283,9 +328,12 @@ rule KURTON_APT1
 rule LONGRUN_APT1
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $s1 = "Mozilla/4.0 (compatible; Windows NT 5.1; MSIE 7.0; Trident/4.0)" wide ascii
@@ -300,9 +348,12 @@ rule LONGRUN_APT1
 rule MACROMAIL_APT1
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $s1 = "svcMsn.dll" wide ascii
@@ -317,9 +368,12 @@ rule MACROMAIL_APT1
 rule MANITSME_APT1
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $s1 = "Install an Service hosted by SVCHOST." wide ascii
@@ -340,9 +394,12 @@ rule MANITSME_APT1
 rule MINIASP_APT1
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $s1 = "miniasp" wide ascii
@@ -358,9 +415,12 @@ rule MINIASP_APT1
 rule NEWSREELS_APT1
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $s1 = "Mozilla/4.0 (compatible; Windows NT 5.1; MSIE 7.0)" wide ascii
@@ -379,9 +439,12 @@ rule NEWSREELS_APT1
 rule SEASALT_APT1
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
       
     strings:
         $s1 = "User-Agent: Mozilla/4.0 (compatible; MSIE 5.00; Windows 98) KSMM" wide ascii
@@ -397,9 +460,12 @@ rule SEASALT_APT1
 rule STARSYPOUND_APT1
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $s1 = "*(SY)# cmd" wide ascii
@@ -414,9 +480,12 @@ rule STARSYPOUND_APT1
 rule SWORD_APT1
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
        
     strings:
         $s1 = "@***@*@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@>>>" wide ascii
@@ -431,9 +500,12 @@ rule SWORD_APT1
 rule thequickbrow_APT1
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $s1 = "thequickbrownfxjmpsvalzydg" wide ascii
@@ -445,9 +517,12 @@ rule thequickbrow_APT1
 rule TABMSGSQL_APT1
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $s1 = "letusgohtppmmv2.0.0.1" wide ascii
@@ -463,9 +538,12 @@ rule TABMSGSQL_APT1
 rule CCREWBACK1
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $a = "postvalue" wide ascii
@@ -487,9 +565,12 @@ rule CCREWBACK1
 rule TrojanCookies_CCREW
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
      strings:
         $a = "sleep:" wide ascii
@@ -505,9 +586,12 @@ rule TrojanCookies_CCREW
 rule GEN_CCREW1
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $a = "W!r@o#n$g" wide ascii
@@ -520,9 +604,12 @@ rule GEN_CCREW1
 rule Elise
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
        
     strings:
         $a = "SetElise.pdb" wide ascii
@@ -534,9 +621,12 @@ rule Elise
 rule EclipseSunCloudRAT
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $a = "Eclipse_A" wide ascii
@@ -553,9 +643,12 @@ rule EclipseSunCloudRAT
 rule MoonProject
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
        
     strings:
         $a = "Serverfile is smaller than Clientfile" wide ascii
@@ -570,9 +663,12 @@ rule MoonProject
 rule ccrewDownloader1
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $a = {DD B5 61 F0 20 47 20 57 D6 65 9C CB 31 1B 65 42}
@@ -584,9 +680,12 @@ rule ccrewDownloader1
 rule ccrewDownloader2
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $a = "3gZFQOBtY3sifNOl" wide ascii
@@ -600,9 +699,12 @@ rule ccrewDownloader2
 rule ccrewMiniasp
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
 
   strings:
@@ -615,9 +717,12 @@ rule ccrewMiniasp
 
 rule ccrewSSLBack2
 {
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $a = {39 82 49 42 BE 1F 3A}
@@ -629,9 +734,12 @@ rule ccrewSSLBack2
 rule ccrewSSLBack3
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $a = "SLYHKAAY" wide ascii
@@ -643,9 +751,12 @@ rule ccrewSSLBack3
 rule ccrewSSLBack1
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $a = "!@#%$^#@!" wide ascii
@@ -658,9 +769,12 @@ rule ccrewSSLBack1
 rule ccrewDownloader3
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $a = "ejlcmbv" wide ascii
@@ -678,9 +792,12 @@ rule ccrewDownloader3
 rule ccrewQAZ
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $a = "!QAZ@WSX" wide ascii
@@ -692,9 +809,12 @@ rule ccrewQAZ
 rule metaxcd
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $a = "<meta xcd=" wide ascii
@@ -706,9 +826,12 @@ rule metaxcd
 rule MiniASP
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $KEY = { 71 30 6E 63 39 77 38 65 64 61 6F 69 75 6B 32 6D 7A 72 66 79 33 78 74 31 70 35 6C 73 36 37 67 34 62 76 68 6A }
@@ -721,9 +844,12 @@ rule MiniASP
 rule DownloaderPossibleCCrew
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $a = "%s?%.6u" wide ascii
@@ -739,9 +865,12 @@ rule DownloaderPossibleCCrew
 rule APT1_MAPIGET
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $s1 = "%s\\Attachment.dat" wide ascii
@@ -757,9 +886,12 @@ rule APT1_MAPIGET
 rule APT1_LIGHTBOLT
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $str1 = "bits.exe" wide ascii
@@ -774,9 +906,12 @@ rule APT1_LIGHTBOLT
 rule APT1_GETMAIL
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $stra1 = "pls give the FULL path" wide ascii
@@ -793,9 +928,12 @@ rule APT1_GETMAIL
 rule APT1_GDOCUPLOAD
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $str1 = "name=\"GALX\"" wide ascii
@@ -810,9 +948,12 @@ rule APT1_GDOCUPLOAD
 rule APT1_WEBC2_Y21K
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $1 = "Y29ubmVjdA" wide ascii // connect
@@ -828,9 +969,12 @@ rule APT1_WEBC2_Y21K
 rule APT1_WEBC2_YAHOO
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $http1 = "HTTP/1.0" wide ascii
@@ -844,9 +988,12 @@ rule APT1_WEBC2_YAHOO
 rule APT1_WEBC2_UGX
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $persis = "SOFTWARE\\MICROSOFT\\WINDOWS\\CURRENTVERSION\\RUN" wide ascii
@@ -863,9 +1010,12 @@ rule APT1_WEBC2_UGX
 rule APT1_WEBC2_TOCK
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $1 = "InprocServer32" wide ascii
@@ -879,9 +1029,12 @@ rule APT1_WEBC2_TOCK
 rule APT1_WEBC2_TABLE
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $msg1 = "Fail To Execute The Command" wide ascii
@@ -898,9 +1051,12 @@ rule APT1_WEBC2_TABLE
 rule APT1_WEBC2_RAVE
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $1 = "iniet.exe" wide ascii
@@ -915,9 +1071,12 @@ rule APT1_WEBC2_RAVE
 rule APT1_WEBC2_QBP
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $1 = "2010QBP" wide ascii
@@ -933,9 +1092,12 @@ rule APT1_WEBC2_QBP
 rule APT1_WEBC2_HEAD
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $1 = "Ready!" wide ascii
@@ -950,9 +1112,12 @@ rule APT1_WEBC2_HEAD
 rule APT1_WEBC2_GREENCAT
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $1 = "reader_sl.exe" wide ascii
@@ -967,9 +1132,12 @@ rule APT1_WEBC2_GREENCAT
 rule APT1_WEBC2_DIV
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $1 = "3DC76854-C328-43D7-9E07-24BF894F8EF5" wide ascii
@@ -984,9 +1152,12 @@ rule APT1_WEBC2_DIV
 rule APT1_WEBC2_CSON
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $httpa1 = "/Default.aspx?INDEX=" wide ascii
@@ -1003,9 +1174,12 @@ rule APT1_WEBC2_CSON
 rule APT1_WEBC2_CLOVER
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $msg1 = "BUILD ERROR!" wide ascii
@@ -1022,9 +1196,12 @@ rule APT1_WEBC2_CLOVER
 
 rule APT1_WEBC2_BOLID
 {
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
       
     strings:
         $vm = "VMProtect" wide ascii
@@ -1037,9 +1214,12 @@ rule APT1_WEBC2_BOLID
 rule APT1_WEBC2_ADSPACE
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $1 = "<!---HEADER ADSPACE style=" wide ascii
@@ -1052,9 +1232,12 @@ rule APT1_WEBC2_ADSPACE
 rule APT1_WEBC2_AUSOV
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $1 = "ntshrui.dll" wide ascii
@@ -1070,9 +1253,12 @@ rule APT1_WEBC2_AUSOV
 rule APT1_WARP
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $err1 = "exception..." wide ascii
@@ -1088,9 +1274,12 @@ rule APT1_WARP
 rule APT1_TARSIP_ECLIPSE
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $1 = "\\pipe\\ssnp" wide ascii
@@ -1105,9 +1294,12 @@ rule APT1_TARSIP_ECLIPSE
 rule APT1_TARSIP_MOON
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $s1 = "\\XiaoME\\SunCloud-Code\\moon" wide ascii
@@ -1128,9 +1320,12 @@ rule APT1_TARSIP_MOON
 rule APT1_payloads
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $pay1 = "rusinfo.exe" wide ascii
@@ -1176,9 +1371,12 @@ rule APT1_payloads
 rule APT1_RARSilent_EXE_PDF
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $winrar1 = "WINRAR.SFX" wide ascii
@@ -1191,9 +1389,12 @@ rule APT1_RARSilent_EXE_PDF
 rule APT1_aspnetreport
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $url = "aspnet_client/report.asp" wide ascii
@@ -1240,9 +1441,12 @@ rule APT1_aspnetreport
 rule APT1_Revird_svc
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $dll1 = "nwwwks.dll" wide ascii
@@ -1262,9 +1466,12 @@ rule APT1_Revird_svc
 rule APT1_dbg_mess
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $dbg1 = "Down file ok!" wide ascii
@@ -1316,9 +1523,12 @@ rule APT1_dbg_mess
 rule APT1_known_malicious_RARSilent
 {
 
-    meta:
-        author = "AlienVault Labs"
-        info = "CommentCrew-threat-apt1"
+      meta:
+    author = "AlienVault Labs"
+    info = "CommentCrew-threat-apt1"
+    description = "LIGHTDART_APT1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $str1 = "Analysis And Outlook.doc" wide ascii

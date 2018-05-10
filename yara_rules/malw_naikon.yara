@@ -7,10 +7,12 @@ import "pe"
 
 rule NaikonCode : Naikon Family 
 {
-    meta:
-        description = "Naikon code features"
-        author = "Seth Hardy"
-        last_modified = "2014-06-25"
+      meta:
+    description = "Naikon code features"
+    author = "Seth Hardy"
+    last_modified = "2014-06-25"
+    severity = "7"
+    type = "Malware"
     
     strings:
         // decryption
@@ -24,10 +26,12 @@ rule NaikonCode : Naikon Family
 
 rule NaikonStrings : Naikon Family
 {
-    meta:
-        description = "Naikon Identifying Strings"
-        author = "Seth Hardy"
-        last_modified = "2014-06-25"
+      meta:
+    description = "Naikon Identifying Strings"
+    author = "Seth Hardy"
+    last_modified = "2014-06-25"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $ = "NOKIAN95/WEB"
@@ -42,22 +46,25 @@ rule NaikonStrings : Naikon Family
 
 rule Naikon : Family
 {
-    meta:
-        description = "Naikon"
-        author = "Seth Hardy"
-        last_modified = "2014-06-25"
+      meta:
+    description = "Naikon"
+    author = "Seth Hardy"
+    last_modified = "2014-06-25"
+    severity = "7"
+    type = "Malware"
         
     condition:
         NaikonCode or NaikonStrings
 }
 rule Backdoor_Naikon_APT_Sample1 {
-	meta:
-		description = "Detects backdoors related to the Naikon APT"
-		author = "Florian Roth"
-		reference = "https://goo.gl/7vHyvh"
-		date = "2015-05-14"
-		hash = "d5716c80cba8554eb79eecfb4aa3d99faf0435a1833ec5ef51f528146c758eba"
-		hash = "f5ab8e49c0778fa208baad660fe4fa40fc8a114f5f71614afbd6dcc09625cb96"
+	  meta:
+    description = "Detects backdoors related to the Naikon APT"
+    author = "Florian Roth"
+    reference = "https://goo.gl/7vHyvh"
+    date = "2015-05-14"
+    hash = "f5ab8e49c0778fa208baad660fe4fa40fc8a114f5f71614afbd6dcc09625cb96"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$x0 = "GET http://%s:%d/aspxabcdef.asp?%s HTTP/1.1" fullword ascii
 		$x1 = "POST http://%s:%d/aspxabcdefg.asp?%s HTTP/1.1" fullword ascii

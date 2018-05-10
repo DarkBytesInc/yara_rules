@@ -6,8 +6,11 @@
 rule apt_nix_elf_derusbi
 {
 
-    meta:
-        Author = "@seifreed"
+      meta:
+    Author = "@seifreed"
+    description = "apt_nix_elf_derusbi"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $ = "LxMain"
@@ -55,8 +58,11 @@ rule apt_nix_elf_derusbi
 rule apt_nix_elf_derusbi_kernelModule
 {
 
-    meta:
-        Author = "@seifreed"
+      meta:
+    Author = "@seifreed"
+    description = "apt_nix_elf_derusbi"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $ = "__this_module"
@@ -87,8 +93,11 @@ rule apt_nix_elf_derusbi_kernelModule
 rule apt_nix_elf_Derusbi_Linux_SharedMemCreation
 {
 
-    meta:
-        Author = "@seifreed"
+      meta:
+    Author = "@seifreed"
+    description = "apt_nix_elf_derusbi"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $byte1 = { B6 03 00 00 ?? 40 00 00 00 ?? 0D 5F 01 82 }
@@ -100,8 +109,11 @@ rule apt_nix_elf_Derusbi_Linux_SharedMemCreation
 rule apt_nix_elf_Derusbi_Linux_Strings
 {
 
-    meta:
-        Author = "@seifreed"
+      meta:
+    Author = "@seifreed"
+    description = "apt_nix_elf_derusbi"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $a1 = "loadso" wide ascii fullword
@@ -126,8 +138,11 @@ rule apt_nix_elf_Derusbi_Linux_Strings
 rule apt_win_exe_trojan_derusbi
 {
 
-   meta:
-        Author = "@seifreed"
+     meta:
+    Author = "@seifreed"
+    description = "apt_nix_elf_derusbi"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
    strings:
         $sa_1 = "USB" wide ascii
@@ -183,11 +198,14 @@ rule apt_win_exe_trojan_derusbi
 rule Trojan_Derusbi
 {
 
-    meta:
-        Author = "RSA_IR"
-        Date     = "4Sept13"
-        File     = "derusbi_variants v 1.3"
-        MD5      = " c0d4c5b669cc5b51862db37e972d31ec "
+      meta:
+    Author = "RSA_IR"
+    Date = "4Sept13"
+    File = "derusbi_variants v 1.3"
+    MD5 = " c0d4c5b669cc5b51862db37e972d31ec "
+    description = "Trojan_Derusbi"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $b1 = {8b 15 ?? ?? ?? ?? 8b ce d3 ea 83 c6 ?? 30 90 ?? ?? ?? ?? 40 3b 05 ?? ?? ?? ?? 72 ??}
@@ -206,9 +224,15 @@ rule Trojan_Derusbi
 rule APT_Derusbi_DeepPanda
 {
 
-meta:
+    meta:
     author = "ThreatConnect Intelligence Research Team"
+    description = "APT_Derusbi_Gen"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     reference = "http://www.crowdstrike.com/sites/default/files/AdversaryIntelligenceReport_DeepPanda_0.pdf"
+    description = "APT_Derusbi_DeepPanda"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
 strings:
     $D = "Dom4!nUserP4ss" wide ascii
@@ -221,8 +245,11 @@ condition:
 rule APT_Derusbi_Gen
 {
 
-meta:
+  meta:
     author = "ThreatConnect Intelligence Research Team"
+    description = "APT_Derusbi_Gen"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
 strings:
     $2 = "273ce6-b29f-90d618c0" wide ascii
@@ -253,10 +280,12 @@ condition:
 rule derusbi_kernel
 {
 
-    meta:
-        description = "Derusbi Driver version"
-        date = "2015-12-09"
-        author = "Airbus Defence and Space Cybersecurity CSIRT - Fabien Perigaud"
+      meta:
+    description = "Derusbi Driver version"
+    date = "2015-12-09"
+    author = "Airbus Defence and Space Cybersecurity CSIRT - Fabien Perigaud"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $token1 = "$$$--Hello"
@@ -272,10 +301,12 @@ rule derusbi_kernel
 rule derusbi_linux
 {
 
-    meta:
-        description = "Derusbi Server Linux version"
-        date = "2015-12-09"
-        author = "Airbus Defence and Space Cybersecurity CSIRT - Fabien Perigaud"
+      meta:
+    description = "Derusbi Server Linux version"
+    date = "2015-12-09"
+    author = "Airbus Defence and Space Cybersecurity CSIRT - Fabien Perigaud"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $PS1 = "PS1=RK# \\u@\\h:\\w \\$"
@@ -298,16 +329,18 @@ rule derusbi_linux
 rule Derusbi_Kernel_Driver_WD_UDFS
 {
 
-    meta:
-        description = "Detects Derusbi Kernel Driver"
-        author = "Florian Roth"
-        reference = "http://blog.airbuscybersecurity.com/post/2015/11/Newcomers-in-the-Derusbi-family"
-        date = "2015-12-15"
-        score = 80
-        hash1 = "1b449121300b0188ff9f6a8c399fb818d0cf53fd36cf012e6908a2665a27f016"
-        hash2 = "50174311e524b97ea5cb4f3ea571dd477d1f0eee06cd3ed73af39a15f3e6484a"
-        hash3 = "6cdb65dbfb2c236b6d149fd9836cb484d0608ea082cf5bd88edde31ad11a0d58"
-        hash4 = "e27fb16dce7fff714f4b05f2cef53e1919a34d7ec0e595f2eaa155861a213e59"
+      meta:
+    description = "Detects Derusbi Kernel Driver"
+    author = "Florian Roth"
+    reference = "http://blog.airbuscybersecurity.com/post/2015/11/Newcomers-in-the-Derusbi-family"
+    date = "2015-12-15"
+    score = 80
+    hash1 = "1b449121300b0188ff9f6a8c399fb818d0cf53fd36cf012e6908a2665a27f016"
+    hash2 = "50174311e524b97ea5cb4f3ea571dd477d1f0eee06cd3ed73af39a15f3e6484a"
+    hash3 = "6cdb65dbfb2c236b6d149fd9836cb484d0608ea082cf5bd88edde31ad11a0d58"
+    hash4 = "e27fb16dce7fff714f4b05f2cef53e1919a34d7ec0e595f2eaa155861a213e59"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "\\\\.\\pipe\\usbpcex%d" fullword wide
@@ -329,12 +362,14 @@ condition:
 rule Derusbi_Code_Signing_Cert
 {
 
-    meta:
-        description = "Detects an executable signed with a certificate also used for Derusbi Trojan - suspicious"
-        author = "Florian Roth"
-        reference = "http://blog.airbuscybersecurity.com/post/2015/11/Newcomers-in-the-Derusbi-family"
-        date = "2015-12-15"
-        score = 40
+      meta:
+    description = "Detects an executable signed with a certificate also used for Derusbi Trojan - suspicious"
+    author = "Florian Roth"
+    reference = "http://blog.airbuscybersecurity.com/post/2015/11/Newcomers-in-the-Derusbi-family"
+    date = "2015-12-15"
+    score = 40
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
    strings:
       $s1 = "Fuqing Dawu Technology Co.,Ltd.0" fullword ascii
@@ -348,12 +383,14 @@ rule Derusbi_Code_Signing_Cert
 rule XOR_4byte_Key
 {
 
-    meta:
-        description = "Detects an executable encrypted with a 4 byte XOR (also used for Derusbi Trojan)"
-        author = "Florian Roth"
-        reference = "http://blog.airbuscybersecurity.com/post/2015/11/Newcomers-in-the-Derusbi-family"
-        date = "2015-12-15"
-        score = 60
+      meta:
+    description = "Detects an executable encrypted with a 4 byte XOR (also used for Derusbi Trojan)"
+    author = "Florian Roth"
+    reference = "http://blog.airbuscybersecurity.com/post/2015/11/Newcomers-in-the-Derusbi-family"
+    date = "2015-12-15"
+    score = 60
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
    strings:
       /* Op Code */
@@ -375,9 +412,12 @@ rule XOR_4byte_Key
 rule apt_win32_dll_bergard_pgv_pvid_variant
 {
 
-    meta:
-        copyright = "Fidelis Cybersecurity"
-        reference = "http://www.threatgeek.com/2016/05/turbo-twist-two-64-bit-derusbi-strains-converge.html"
+      meta:
+    copyright = "Fidelis Cybersecurity"
+    reference = "http://www.threatgeek.com/2016/05/turbo-twist-two-64-bit-derusbi-strains-converge.html"
+    description = "apt_win32_dll_bergard_pgv_pvid_variant"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $ = "Accept:"

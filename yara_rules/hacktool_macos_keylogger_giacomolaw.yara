@@ -1,9 +1,11 @@
 rule hacktool_macos_keylogger_giacomolaw
 {
-    meta:
-        description = "A simple keylogger for macOS."
-        reference = "https://github.com/GiacomoLaw/Keylogger"
-        author = "@mimeframe"
+      meta:
+    description = "A simple keylogger for macOS."
+    reference = "https://github.com/GiacomoLaw/Keylogger"
+    author = "@mimeframe"
+    severity = "5"
+    type = "Unknown"
     strings:
         $a1 = "ERROR: Unable to access keystroke log file. Please make sure you have the correct permissions." wide ascii
         $a2 = "ERROR: Unable to create event tap." wide ascii

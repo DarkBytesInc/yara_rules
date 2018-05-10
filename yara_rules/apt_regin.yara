@@ -9,13 +9,15 @@ import "pe"
 rule Regin_APT_KernelDriver_Generic_A 
 {
 
-    meta:
-        description = "Generic rule for Regin APT kernel driver Malware - Symantec http://t.co/qu53359Cb2"
-        author = "@Malwrsignatures - included in APT Scanner THOR"
-        date = "23.11.14"
-        hash1 = "187044596bc1328efa0ed636d8aa4a5c"
-        hash2 = "06665b96e293b23acc80451abb413e50"
-        hash3 = "d240f06e98c8d3e647cbf4d442d79475"
+      meta:
+    description = "Generic rule for Regin APT kernel driver Malware - Symantec http://t.co/qu53359Cb2"
+    author = "@Malwrsignatures - included in APT Scanner THOR"
+    date = "23.11.14"
+    hash1 = "187044596bc1328efa0ed636d8aa4a5c"
+    hash2 = "06665b96e293b23acc80451abb413e50"
+    hash3 = "d240f06e98c8d3e647cbf4d442d79475"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $m0 = { 4d 5a 90 00 03 00 00 00 04 00 00 00 ff ff 00 00 b8 } 
@@ -38,23 +40,25 @@ rule Regin_APT_KernelDriver_Generic_A
 rule Regin_APT_KernelDriver_Generic_B 
 {
 
-    meta:
-        description = "Generic rule for Regin APT kernel driver Malware - Symantec http://t.co/qu53359Cb2"
-        author = "@Malwrsignatures - included in APT Scanner THOR"
-        date = "23.11.14"
-        hash1 = "ffb0b9b5b610191051a7bdf0806e1e47"
-        hash2 = "bfbe8c3ee78750c3a520480700e440f8"
-        hash3 = "b29ca4f22ae7b7b25f79c1d4a421139d"
-        hash4 = "06665b96e293b23acc80451abb413e50"
-        hash5 = "2c8b9d2885543d7ade3cae98225e263b"
-        hash6 = "4b6b86c7fec1c574706cecedf44abded"
-        hash7 = "187044596bc1328efa0ed636d8aa4a5c"
-        hash8 = "d240f06e98c8d3e647cbf4d442d79475"
-        hash9 = "6662c390b2bbbd291ec7987388fc75d7"
-        hash10 = "1c024e599ac055312a4ab75b3950040a"
-        hash11 = "ba7bb65634ce1e30c1e5415be3d1db1d"
-        hash12 = "b505d65721bb2453d5039a389113b566"
-        hash13 = "b269894f434657db2b15949641a67532"
+      meta:
+    description = "Generic rule for Regin APT kernel driver Malware - Symantec http://t.co/qu53359Cb2"
+    author = "@Malwrsignatures - included in APT Scanner THOR"
+    date = "23.11.14"
+    hash1 = "ffb0b9b5b610191051a7bdf0806e1e47"
+    hash2 = "bfbe8c3ee78750c3a520480700e440f8"
+    hash3 = "b29ca4f22ae7b7b25f79c1d4a421139d"
+    hash4 = "06665b96e293b23acc80451abb413e50"
+    hash5 = "2c8b9d2885543d7ade3cae98225e263b"
+    hash6 = "4b6b86c7fec1c574706cecedf44abded"
+    hash7 = "187044596bc1328efa0ed636d8aa4a5c"
+    hash8 = "d240f06e98c8d3e647cbf4d442d79475"
+    hash9 = "6662c390b2bbbd291ec7987388fc75d7"
+    hash10 = "1c024e599ac055312a4ab75b3950040a"
+    hash11 = "ba7bb65634ce1e30c1e5415be3d1db1d"
+    hash12 = "b505d65721bb2453d5039a389113b566"
+    hash13 = "b269894f434657db2b15949641a67532"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $m0 = { 4d 5a 90 00 03 00 00 00 04 00 00 00 ff ff 00 00 b8 } 
@@ -86,12 +90,14 @@ rule Regin_APT_KernelDriver_Generic_B
 rule Regin_APT_KernelDriver_Generic_C 
 {
 
-    meta:
-        description = "Generic rule for Regin APT kernel driver Malware - Symantec http://t.co/qu53359Cb2"
-        author = "@Malwrsignatures - included in APT Scanner THOR"
-        date = "23.11.14"
-        hash1 = "e0895336617e0b45b312383814ec6783556d7635"
-        hash2 = "732298fa025ed48179a3a2555b45be96f7079712"      
+      meta:
+    description = "Generic rule for Regin APT kernel driver Malware - Symantec http://t.co/qu53359Cb2"
+    author = "@Malwrsignatures - included in APT Scanner THOR"
+    date = "23.11.14"
+    hash1 = "e0895336617e0b45b312383814ec6783556d7635"
+    hash2 = "732298fa025ed48179a3a2555b45be96f7079712"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $m0 = { 4d 5a 90 00 03 00 00 00 04 00 00 00 ff ff 00 00 b8 }    
@@ -113,11 +119,13 @@ rule Regin_APT_KernelDriver_Generic_C
 rule Regin_sig_svcsstat 
 {
 
-    meta:
-        description = "Detects svcstat from Regin report - file svcsstat.exe_sample"
-        author = "@MalwrSignatures"
-        date = "26.11.14"
-        hash = "5164edc1d54f10b7cb00a266a1b52c623ab005e2"
+      meta:
+    description = "Detects svcstat from Regin report - file svcsstat.exe_sample"
+    author = "@MalwrSignatures"
+    date = "26.11.14"
+    hash = "5164edc1d54f10b7cb00a266a1b52c623ab005e2"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "Service Control Manager" fullword ascii
@@ -135,11 +143,13 @@ rule Regin_sig_svcsstat
 rule Regin_Sample_1 
 {
 
-    meta:
-        description = "Auto-generated rule - file-3665415_sys"
-        author = "@MalwrSignatures"
-        date = "26.11.14"
-        hash = "773d7fab06807b5b1bc2d74fa80343e83593caf2"
+      meta:
+    description = "Auto-generated rule - file-3665415_sys"
+    author = "@MalwrSignatures"
+    date = "26.11.14"
+    hash = "773d7fab06807b5b1bc2d74fa80343e83593caf2"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "Getting PortName/Identifier failed - %x" fullword ascii
@@ -166,11 +176,13 @@ rule Regin_Sample_1
 rule Regin_Sample_2 
 {
 
-    meta:
-        description = "Auto-generated rule - file hiddenmod_hookdisk_and_kdbg_8949d000.bin"
-        author = "@MalwrSignatures"
-        date = "26.11.14"
-        hash = "a7b285d4b896b66fce0ebfcd15db53b3a74a0400"
+      meta:
+    description = "Auto-generated rule - file hiddenmod_hookdisk_and_kdbg_8949d000.bin"
+    author = "@MalwrSignatures"
+    date = "26.11.14"
+    hash = "a7b285d4b896b66fce0ebfcd15db53b3a74a0400"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "\\SYSTEMROOT\\system32\\lsass.exe" fullword wide
@@ -198,11 +210,13 @@ rule Regin_Sample_2
 rule Regin_Sample_3 
 {
 
-    meta:
-        description = "Detects Regin Backdoor sample fe1419e9dde6d479bd7cda27edd39fafdab2668d498931931a2769b370727129"
-        author = "@Malwrsignatures"
-        date = "27.11.14"
-        hash = "fe1419e9dde6d479bd7cda27edd39fafdab2668d498931931a2769b370727129"       
+      meta:
+    description = "Detects Regin Backdoor sample fe1419e9dde6d479bd7cda27edd39fafdab2668d498931931a2769b370727129"
+    author = "@Malwrsignatures"
+    date = "27.11.14"
+    hash = "fe1419e9dde6d479bd7cda27edd39fafdab2668d498931931a2769b370727129"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $hd = { fe ba dc fe }
@@ -228,12 +242,14 @@ rule Regin_Sample_3
 rule Regin_Sample_Set_1 
 {
 
-    meta:
-        description = "Auto-generated rule - file SHF-000052 and ndisips.sys"
-        author = "@MalwrSignatures"
-        date = "26.11.14"
-        hash1 = "8487a961c8244004c9276979bb4b0c14392fc3b8"
-        hash2 = "bcf3461d67b39a427c83f9e39b9833cfec977c61"      
+      meta:
+    description = "Auto-generated rule - file SHF-000052 and ndisips.sys"
+    author = "@MalwrSignatures"
+    date = "26.11.14"
+    hash1 = "8487a961c8244004c9276979bb4b0c14392fc3b8"
+    hash2 = "bcf3461d67b39a427c83f9e39b9833cfec977c61"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "HAL.dll" fullword ascii
@@ -265,12 +281,14 @@ rule Regin_Sample_Set_1
 rule Regin_Sample_Set_2 
 {
 
-    meta:
-        description = "Detects Regin Backdoor sample 4139149552b0322f2c5c993abccc0f0d1b38db4476189a9f9901ac0d57a656be and e420d0cf7a7983f78f5a15e6cb460e93c7603683ae6c41b27bf7f2fa34b2d935"
-        author = "@MalwrSignatures"
-        date = "27.11.14"
-        hash1 = "4139149552b0322f2c5c993abccc0f0d1b38db4476189a9f9901ac0d57a656be"
-        hash2 = "e420d0cf7a7983f78f5a15e6cb460e93c7603683ae6c41b27bf7f2fa34b2d935"
+      meta:
+    description = "Detects Regin Backdoor sample 4139149552b0322f2c5c993abccc0f0d1b38db4476189a9f9901ac0d57a656be and e420d0cf7a7983f78f5a15e6cb460e93c7603683ae6c41b27bf7f2fa34b2d935"
+    author = "@MalwrSignatures"
+    date = "27.11.14"
+    hash1 = "4139149552b0322f2c5c993abccc0f0d1b38db4476189a9f9901ac0d57a656be"
+    hash2 = "e420d0cf7a7983f78f5a15e6cb460e93c7603683ae6c41b27bf7f2fa34b2d935"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $hd = { fe ba dc fe }    
@@ -299,13 +317,15 @@ rule Regin_Sample_Set_2
 rule apt_regin_legspin 
 {
 
-    meta:
-        copyright = "Kaspersky Lab"
-        description = "Rule to detect Regin's Legspin module"
-        version = "1.0"
-        last_modified = "2015-01-22"
-        reference = "https://securelist.com/blog/research/68438/an-analysis-of-regins-hopscotch-and-legspin/"
-        md5 = "29105f46e4d33f66fee346cfd099d1cc"
+      meta:
+    copyright = "Kaspersky Lab"
+    description = "Rule to detect Regin's Legspin module"
+    version = "1.0"
+    last_modified = "2015-01-22"
+    reference = "https://securelist.com/blog/research/68438/an-analysis-of-regins-hopscotch-and-legspin/"
+    md5 = "29105f46e4d33f66fee346cfd099d1cc"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $mz="MZ"
@@ -325,13 +345,15 @@ rule apt_regin_legspin
 rule apt_regin_hopscotch 
 {
 
-    meta:
-        copyright = "Kaspersky Lab"
-        description = "Rule to detect Regin's Hopscotch module"
-        version = "1.0"
-        last_modified = "2015-01-22"
-        reference = "https://securelist.com/blog/research/68438/an-analysis-of-regins-hopscotch-and-legspin/"
-        md5 = "6c34031d7a5fc2b091b623981a8ae61c"
+      meta:
+    copyright = "Kaspersky Lab"
+    description = "Rule to detect Regin's Hopscotch module"
+    version = "1.0"
+    last_modified = "2015-01-22"
+    reference = "https://securelist.com/blog/research/68438/an-analysis-of-regins-hopscotch-and-legspin/"
+    md5 = "6c34031d7a5fc2b091b623981a8ae61c"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $mz="MZ"
@@ -352,11 +374,13 @@ rule apt_regin_hopscotch
 rule apt_regin_2011_32bit_stage1 
 {
     
-    meta:
-        copyright = "Kaspersky Lab"
-        description = "Rule to detect Regin 32 bit stage 1 loaders"
-        version = "1.0"
-        last_modified = "2014-11-18"
+      meta:
+    copyright = "Kaspersky Lab"
+    description = "Rule to detect Regin 32 bit stage 1 loaders"
+    version = "1.0"
+    last_modified = "2014-11-18"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $key1={331015EA261D38A7}
@@ -371,11 +395,13 @@ rule apt_regin_2011_32bit_stage1
 rule apt_regin_rc5key 
 {
     
-    meta:
-        copyright = "Kaspersky Lab"
-        description = "Rule to detect Regin RC5 decryption keys"
-        version = "1.0"
-        last_modified = "2014-11-18"
+      meta:
+    copyright = "Kaspersky Lab"
+    description = "Rule to detect Regin RC5 decryption keys"
+    version = "1.0"
+    last_modified = "2014-11-18"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $key1={73 23 1F 43 93 E1 9F 2F 99 0C 17 81 5C FF B4 01}
@@ -388,12 +414,14 @@ rule apt_regin_rc5key
 rule apt_regin_vfs 
 {
     
-    meta:
-        copyright = "Kaspersky Lab"
-        author = "Kaspersky Lab"
-        description = "Rule to detect Regin VFSes"
-        version = "1.0"
-        last_modified = "2014-11-18"
+      meta:
+    copyright = "Kaspersky Lab"
+    author = "Kaspersky Lab"
+    description = "Rule to detect Regin VFSes"
+    version = "1.0"
+    last_modified = "2014-11-18"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $a1={00 02 00 08 00 08 03 F6 D7 F3 52}
@@ -408,12 +436,14 @@ rule apt_regin_vfs
 rule apt_regin_dispatcher_disp_dll 
 {
 
-    meta:
-        copyright = "Kaspersky Lab"
-        author = "Kaspersky Lab"
-        description = "Rule to detect Regin disp.dll dispatcher"
-        version = "1.0"
-        last_modified = "2014-11-18"
+      meta:
+    copyright = "Kaspersky Lab"
+    author = "Kaspersky Lab"
+    description = "Rule to detect Regin disp.dll dispatcher"
+    version = "1.0"
+    last_modified = "2014-11-18"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $mz="MZ"
@@ -430,15 +460,15 @@ rule apt_regin_dispatcher_disp_dll
 rule apt_regin_2013_64bit_stage1 
 {
     
-    meta:
-        copyright = "Kaspersky Lab"
-        description = "Rule to detect Regin 64 bit stage 1 loaders"
-        version = "1.0"
-        last_modified = "2014-11-18"
-        filename="wshnetc.dll"
-        md5="bddf5afbea2d0eed77f2ad4e9a4f044d"
-        filename="wsharp.dll"
-        md5="c053a0a3f1edcbbfc9b51bc640e808ce"
+      meta:
+    copyright = "Kaspersky Lab"
+    description = "Rule to detect Regin 64 bit stage 1 loaders"
+    version = "1.0"
+    last_modified = "2014-11-18"
+    filename = "wsharp.dll"
+    md5 = "c053a0a3f1edcbbfc9b51bc640e808ce"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $mz="MZ"

@@ -7,11 +7,13 @@ import "pe"
 
 rule IceID_Bank_trojan {
 
-	meta:
-		description = "Detects IcedID..adjusted several times"
-		author = "unixfreaxjp"
-		org = "MalwareMustDie"
-		date = "2018-01-14"
+	  meta:
+    description = "Detects IcedID..adjusted several times"
+    author = "unixfreaxjp"
+    org = "MalwareMustDie"
+    date = "2018-01-14"
+    severity = "7"
+    type = "Malware"
     
 	strings:
 		$header = { 4D 5A }

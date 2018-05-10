@@ -2,12 +2,14 @@
 /* Various rules - see the references */
 
 rule PS_AMSI_Bypass {
-   meta:
-      description = "Detects PowerShell AMSI Bypass"
-      author = "Florian Roth"
-      reference = "https://gist.github.com/mattifestation/46d6a2ebb4a1f4f0e7229503dc012ef1"
-      date = "2017-07-19"
-      score = 70
+     meta:
+    description = "Detects PowerShell AMSI Bypass"
+    author = "Florian Roth"
+    reference = "https://gist.github.com/mattifestation/46d6a2ebb4a1f4f0e7229503dc012ef1"
+    date = "2017-07-19"
+    score = 70
+    severity = "7"
+    type = "Malware"
    strings:
       $s1 = ".GetField('amsiContext',[Reflection.BindingFlags]'NonPublic,Static')." ascii nocase
    condition:
@@ -15,12 +17,14 @@ rule PS_AMSI_Bypass {
 }
 
 rule JS_Suspicious_Obfuscation_Dropbox {
-   meta:
-      description = "Detects PowerShell AMSI Bypass"
-      author = "Florian Roth"
-      reference = "https://twitter.com/ItsReallyNick/status/887705105239343104"
-      date = "2017-07-19"
-      score = 70
+     meta:
+    description = "Detects PowerShell AMSI Bypass"
+    author = "Florian Roth"
+    reference = "https://twitter.com/ItsReallyNick/status/887705105239343104"
+    date = "2017-07-19"
+    score = 70
+    severity = "7"
+    type = "Malware"
    strings:
       $x1 = "j\"+\"a\"+\"v\"+\"a\"+\"s\"+\"c\"+\"r\"+\"i\"+\"p\"+\"t\""
       $x2 = "script:https://www.dropbox.com" ascii
@@ -29,12 +33,14 @@ rule JS_Suspicious_Obfuscation_Dropbox {
 }
 
 rule JS_Suspicious_MSHTA_Bypass {
-   meta:
-      description = "Detects MSHTA Bypass"
-      author = "Florian Roth"
-      reference = "https://twitter.com/ItsReallyNick/status/887705105239343104"
-      date = "2017-07-19"
-      score = 70
+     meta:
+    description = "Detects MSHTA Bypass"
+    author = "Florian Roth"
+    reference = "https://twitter.com/ItsReallyNick/status/887705105239343104"
+    date = "2017-07-19"
+    score = 70
+    severity = "7"
+    type = "Malware"
    strings:
       $s1 = "mshtml,RunHTMLApplication" ascii
       $s2 = "new ActiveXObject(\"WScript.Shell\").Run(" ascii
@@ -44,12 +50,14 @@ rule JS_Suspicious_MSHTA_Bypass {
 }
 
 rule JavaScript_Run_Suspicious {
-   meta:
-      description = "Detects a suspicious Javascript Run command"
-      author = "Florian Roth"
-      reference = "https://twitter.com/craiu/status/900314063560998912"
-      score = 60
-      date = "2017-08-23"
+     meta:
+    description = "Detects a suspicious Javascript Run command"
+    author = "Florian Roth"
+    reference = "https://twitter.com/craiu/status/900314063560998912"
+    score = 60
+    date = "2017-08-23"
+    severity = "7"
+    type = "Malware"
    strings:
       $s1 = "w = new ActiveXObject(" ascii
       $s2 = " w.Run(r);" fullword ascii
@@ -67,12 +75,14 @@ private rule MSI {
 }
 
 rule Certutil_Decode_OR_Download {
-   meta:
-      description = "Certutil Decode"
-      author = "Florian Roth"
-      reference = "Internal Research"
-      score = 40
-      date = "2017-08-29"
+     meta:
+    description = "Certutil Decode"
+    author = "Florian Roth"
+    reference = "Internal Research"
+    score = 40
+    date = "2017-08-29"
+    severity = "7"
+    type = "Malware"
    strings:
       $a1 = "certutil -decode " ascii wide
       $a2 = "certutil  -decode " ascii wide
@@ -85,13 +95,15 @@ rule Certutil_Decode_OR_Download {
 }
 
 rule Suspicious_JS_script_content {
-   meta:
-      description = "Detects suspicious statements in JavaScript files"
-      author = "Florian Roth"
-      reference = "Research on Leviathan https://goo.gl/MZ7dRg"
-      date = "2017-12-02"
-      score = 70
-      hash1 = "fc0fad39b461eb1cfc6be57932993fcea94fca650564271d1b74dd850c81602f"
+     meta:
+    description = "Detects suspicious statements in JavaScript files"
+    author = "Florian Roth"
+    reference = "Research on Leviathan https://goo.gl/MZ7dRg"
+    date = "2017-12-02"
+    score = 70
+    hash1 = "fc0fad39b461eb1cfc6be57932993fcea94fca650564271d1b74dd850c81602f"
+    severity = "7"
+    type = "Malware"
    strings:
       $x1 = "new ActiveXObject('WScript.Shell')).Run('cmd /c " ascii
       $x2 = ".Run('regsvr32 /s /u /i:" ascii
@@ -102,13 +114,15 @@ rule Suspicious_JS_script_content {
 }
 
 rule Universal_Exploit_Strings {
-   meta:
-      description = "Detects a group of strings often used in exploit codes"
-      author = "Florian Roth"
-      reference = "not set"
-      date = "2017-12-02"
-      score = 50
-      hash1 = "9b07dacf8a45218ede6d64327c38478640ff17d0f1e525bd392c002e49fe3629"
+     meta:
+    description = "Detects a group of strings often used in exploit codes"
+    author = "Florian Roth"
+    reference = "not set"
+    date = "2017-12-02"
+    score = 50
+    hash1 = "9b07dacf8a45218ede6d64327c38478640ff17d0f1e525bd392c002e49fe3629"
+    severity = "7"
+    type = "Malware"
    strings:
       $s1 = "Exploit" fullword ascii
       $s2 = "Payload" fullword ascii
@@ -119,14 +133,16 @@ rule Universal_Exploit_Strings {
 }
 
 rule VBS_Obfuscated_Mal_Feb18_1  {
-   meta:
-      description = "Detects malicious obfuscated VBS observed in February 2018"
-      author = "Florian Roth"
-      reference = "https://goo.gl/zPsn83"
-      date = "2018-02-12"
-      hash1 = "06960cb721609fe5a857fe9ca3696a84baba88d06c20920370ddba1b0952a8ab"
-      hash2 = "c5c0e28093e133d03c3806da0061a35776eed47d351e817709d2235b95d3a036"
-      hash3 = "e1765a2b10e2ff10235762b9c65e9f5a4b3b47d292933f1a710e241fe0417a74"
+     meta:
+    description = "Detects malicious obfuscated VBS observed in February 2018"
+    author = "Florian Roth"
+    reference = "https://goo.gl/zPsn83"
+    date = "2018-02-12"
+    hash1 = "06960cb721609fe5a857fe9ca3696a84baba88d06c20920370ddba1b0952a8ab"
+    hash2 = "c5c0e28093e133d03c3806da0061a35776eed47d351e817709d2235b95d3a036"
+    hash3 = "e1765a2b10e2ff10235762b9c65e9f5a4b3b47d292933f1a710e241fe0417a74"
+    severity = "7"
+    type = "Malware"
    strings:
       $x1 = "A( Array( (1* 2^1 )+" ascii
       $x2 = ".addcode(A( Array(" ascii

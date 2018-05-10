@@ -1,9 +1,11 @@
 rule rovnix_downloader : downloader 
 {
-	meta:
-		author="Intel Security"
-		description="Rovnix downloader with sinkhole checks"
-		reference = "https://blogs.mcafee.com/mcafee-labs/rovnix-downloader-sinkhole-time-checks/"
+	  meta:
+    author = "Intel Security"
+    description = "Rovnix downloader with sinkhole checks"
+    reference = "https://blogs.mcafee.com/mcafee-labs/rovnix-downloader-sinkhole-time-checks/"
+    severity = "7"
+    type = "Malware"
 	strings:
 			$sink1= "control"
 			$sink2 = "sink"

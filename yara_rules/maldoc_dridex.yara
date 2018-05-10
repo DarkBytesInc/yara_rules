@@ -6,16 +6,18 @@
 import "pe"
 
 rule Dridex_Trojan_XML : maldoc {
-	meta:
-		description = "Dridex Malware in XML Document"
-		author = "Florian Roth @4nc4p"
-		reference = "https://threatpost.com/dridex-banking-trojan-spreading-via-macros-in-xml-files/111503"
-		date = "2015/03/08"
-		hash1 = "88d98e18ed996986d26ce4149ae9b2faee0bc082"
-		hash2 = "3b2d59adadf5ff10829bb5c27961b22611676395"
-		hash3 = "e528671b1b32b3fa2134a088bfab1ba46b468514"
-		hash4 = "981369cd53c022b434ee6d380aa9884459b63350"
-		hash5 = "96e1e7383457293a9b8f2c75270b58da0e630bea"
+	  meta:
+    description = "Dridex Malware in XML Document"
+    author = "Florian Roth @4nc4p"
+    reference = "https://threatpost.com/dridex-banking-trojan-spreading-via-macros-in-xml-files/111503"
+    date = "2015/03/08"
+    hash1 = "88d98e18ed996986d26ce4149ae9b2faee0bc082"
+    hash2 = "3b2d59adadf5ff10829bb5c27961b22611676395"
+    hash3 = "e528671b1b32b3fa2134a088bfab1ba46b468514"
+    hash4 = "981369cd53c022b434ee6d380aa9884459b63350"
+    hash5 = "96e1e7383457293a9b8f2c75270b58da0e630bea"
+    severity = "7"
+    type = "Malware"
 	strings:
 		// can be ascii or wide formatted - therefore no restriction
 		$c_xml      = "<?xml version="
@@ -39,12 +41,14 @@ rule Dridex_Trojan_XML : maldoc {
 */
 
 rule PHISH_02Dez2015_dropped_p0o6543f {
-	meta:
-		description = "Phishing Wave - file p0o6543f.exe"
-		author = "Florian Roth"
-		reference = "http://myonlinesecurity.co.uk/purchase-order-124658-gina-harrowell-clinimed-limited-word-doc-or-excel-xls-spreadsheet-malware/"
-		date = "2015-12-02"
-		hash = "db788d6d3a8ed1a6dc9626852587f475e7671e12fa9c9faa73b7277886f1e210"
+	  meta:
+    description = "Phishing Wave - file p0o6543f.exe"
+    author = "Florian Roth"
+    reference = "http://myonlinesecurity.co.uk/purchase-order-124658-gina-harrowell-clinimed-limited-word-doc-or-excel-xls-spreadsheet-malware/"
+    date = "2015-12-02"
+    hash = "db788d6d3a8ed1a6dc9626852587f475e7671e12fa9c9faa73b7277886f1e210"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$s1 = "netsh.exe" fullword wide
 		$s2 = "routemon.exe" fullword wide
@@ -60,12 +64,14 @@ rule PHISH_02Dez2015_dropped_p0o6543f {
 }
 
 rule PHISH_02Dez2015_attach_P_ORD_C_10156_124658 {
-	meta:
-		description = "Phishing Wave - file P-ORD-C-10156-124658.xls"
-		author = "Florian Roth"
-		reference = "http://myonlinesecurity.co.uk/purchase-order-124658-gina-harrowell-clinimed-limited-word-doc-or-excel-xls-spreadsheet-malware/"
-		date = "2015-12-02"
-		hash = "bc252ede5302240c2fef8bc0291ad5a227906b4e70929a737792e935a5fee209"
+	  meta:
+    description = "Phishing Wave - file P-ORD-C-10156-124658.xls"
+    author = "Florian Roth"
+    reference = "http://myonlinesecurity.co.uk/purchase-order-124658-gina-harrowell-clinimed-limited-word-doc-or-excel-xls-spreadsheet-malware/"
+    date = "2015-12-02"
+    hash = "bc252ede5302240c2fef8bc0291ad5a227906b4e70929a737792e935a5fee209"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$s1 = "Execute" ascii
 		$s2 = "Process WriteParameterFiles" fullword ascii

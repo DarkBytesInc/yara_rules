@@ -7,10 +7,12 @@ import "pe"
 
 rule T5000Strings : T5000 Family
 {
-    meta:
-        description = "T5000 Identifying Strings"
-        author = "Seth Hardy"
-        last_modified = "2014-06-26"
+      meta:
+    description = "T5000 Identifying Strings"
+    author = "Seth Hardy"
+    last_modified = "2014-06-26"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $ = "_tmpR.vbs"
@@ -34,10 +36,12 @@ rule T5000Strings : T5000 Family
 
 rule T5000 : Family
 {
-    meta:
-        description = "T5000"
-        author = "Seth Hardy"
-        last_modified = "2014-06-26"
+      meta:
+    description = "T5000"
+    author = "Seth Hardy"
+    last_modified = "2014-06-26"
+    severity = "7"
+    type = "Malware"
         
     condition:
         T5000Strings

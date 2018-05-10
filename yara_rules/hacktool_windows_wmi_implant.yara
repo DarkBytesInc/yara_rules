@@ -1,9 +1,11 @@
 rule hacktool_windows_wmi_implant
 {
-    meta:
-        description = "A PowerShell based tool that is designed to act like a RAT"
-        reference = "https://www.fireeye.com/blog/threat-research/2017/03/wmimplant_a_wmi_ba.html"
-        author = "@fusionrace"
+      meta:
+    description = "A PowerShell based tool that is designed to act like a RAT"
+    reference = "https://www.fireeye.com/blog/threat-research/2017/03/wmimplant_a_wmi_ba.html"
+    author = "@fusionrace"
+    severity = "5"
+    type = "Unknown"
     strings:
         $s1 = "This really isn't applicable unless you are using WMImplant interactively." fullword ascii wide
         $s2 = "What command do you want to run on the remote system? >" fullword ascii wide

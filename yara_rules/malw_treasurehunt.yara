@@ -5,12 +5,15 @@
 
 rule TreasureHunt
   {
-    meta:
-      author = "Minerva Labs"
-      ref ="http://www.minerva-labs.com/#!Cybercriminals-Adopt-the-Mossad-Emblem/c7a5/573da2d60cf2f90ca6f6e3ed"
-      date = "2016/06"
-      maltype = "Point of Sale (POS) Malware"
-      filetype = "exe"
+      meta:
+    author = "Minerva Labs"
+    ref = "http://www.minerva-labs.com/#!Cybercriminals-Adopt-the-Mossad-Emblem/c7a5/573da2d60cf2f90ca6f6e3ed"
+    date = "2016/06"
+    maltype = "Point of Sale (POS) Malware"
+    filetype = "exe"
+    description = "TreasureHunt"
+    severity = "7"
+    type = "Malware"
 
     strings:
       $a = "treasureHunter.pdb"

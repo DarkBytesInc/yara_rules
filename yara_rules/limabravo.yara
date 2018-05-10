@@ -2,10 +2,13 @@ import "pe"
 
 rule LimaBravo
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
-		Source = "Mwsagent.dll"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    Source = "Mwsagent.dll"
+    description = "LimaBravo"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 	/*

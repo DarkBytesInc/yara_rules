@@ -1,11 +1,13 @@
 
 rule Gen_Trojan_Mikey {
-	meta:
-		description = "Trojan Mikey - file sample_mikey.exe"
-		author = "Florian Roth"
-		date = "2015-05-07"
-		hash = "a8e6c3ca056b3ff2495d7728654b780735b3a4cb"
-		score = 70
+	  meta:
+    description = "Trojan Mikey - file sample_mikey.exe"
+    author = "Florian Roth"
+    date = "2015-05-07"
+    hash = "a8e6c3ca056b3ff2495d7728654b780735b3a4cb"
+    score = 70
+    severity = "7"
+    type = "Malware"
 	strings:
 		$s0 = "nuR\\noisreVtnerruC\\swodniW\\tfosorciM\\ERAWTFOS" fullword ascii 
 						/* reversed string 'SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run' */

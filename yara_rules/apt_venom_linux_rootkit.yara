@@ -8,11 +8,13 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule Venom_Rootkit {
-   meta:
-      description = "Venom Linux Rootkit"
-      author = "Florian Roth"
-      reference = "https://security.web.cern.ch/security/venom.shtml"
-      date = "2017-01-12"
+     meta:
+    description = "Venom Linux Rootkit"
+    author = "Florian Roth"
+    reference = "https://security.web.cern.ch/security/venom.shtml"
+    date = "2017-01-12"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "%%VENOM%CTRL%MODE%%" ascii fullword
       $s2 = "%%VENOM%OK%OK%%" ascii fullword

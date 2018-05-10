@@ -1,10 +1,12 @@
 
 rule Invoke_PSImage {
-   meta:
-      description = "Detects a command to execute PowerShell from String"
-      author = "Florian Roth"
-      reference = "https://github.com/peewpw/Invoke-PSImage"
-      date = "2017-12-16"
+     meta:
+    description = "Detects a command to execute PowerShell from String"
+    author = "Florian Roth"
+    reference = "https://github.com/peewpw/Invoke-PSImage"
+    date = "2017-12-16"
+    severity = "5"
+    type = "Unknown"
    strings:
       $ = "IEX([System.Text.Encoding]::ASCII.GetString(" ascii wide
       $ = "System.Drawing.Bitmap((a Net.WebClient).OpenRead(" ascii wide

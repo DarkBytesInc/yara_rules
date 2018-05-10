@@ -2,10 +2,13 @@ import "pe"
 
 rule RomeoBravo
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
-		Source = "95314a7af76ec36cfba1a02b67c2b81526a04e3b2f9b8fb9b383ffcbcc5a3d9b"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    Source = "95314a7af76ec36cfba1a02b67c2b81526a04e3b2f9b8fb9b383ffcbcc5a3d9b"
+    description = "RomeoBravo"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 	/*

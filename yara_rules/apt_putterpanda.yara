@@ -6,13 +6,15 @@
 rule APT_Malware_PutterPanda_Rel 
 {
 
-    meta:
-        description = "Detects an APT malware related to PutterPanda"
-        author = "Florian Roth"
-        score = 70
-        reference = "VT Analysis"
-        date = "2015-06-03"
-        hash = "5367e183df155e3133d916f7080ef973f7741d34"
+      meta:
+    description = "Detects an APT malware related to PutterPanda"
+    author = "Florian Roth"
+    score = 70
+    reference = "VT Analysis"
+    date = "2015-06-03"
+    hash = "5367e183df155e3133d916f7080ef973f7741d34"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x0 = "app.stream-media.net" fullword ascii /* score: '12.03' */
@@ -36,13 +38,15 @@ rule APT_Malware_PutterPanda_Rel
 rule APT_Malware_PutterPanda_Rel_2 
 {
 
-    meta:
-        description = "APT Malware related to PutterPanda Group"
-        author = "Florian Roth"
-        score = 70
-        reference = "VT Analysis"
-        date = "2015-06-03"
-        hash = "f97e01ee04970d1fc4d988a9e9f0f223ef2a6381"
+      meta:
+    description = "APT Malware related to PutterPanda Group"
+    author = "Florian Roth"
+    score = 70
+    reference = "VT Analysis"
+    date = "2015-06-03"
+    hash = "f97e01ee04970d1fc4d988a9e9f0f223ef2a6381"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "http://update.konamidata.com/test/zl/sophos/td/result/rz.dat?" fullword ascii /* PEStudio Blacklist: strings */ /* score: '28.01' */
@@ -69,13 +73,15 @@ rule APT_Malware_PutterPanda_Rel_2
 rule APT_Malware_PutterPanda_PSAPI 
 {
 
-    meta:
-        description = "Detects a malware related to Putter Panda"
-        author = "Florian Roth"
-        score = 70
-        reference = "VT Analysis"
-        date = "2015-06-03"
-        hash = "f93a7945a33145bb6c106a51f08d8f44eab1cdf5"
+      meta:
+    description = "Detects a malware related to Putter Panda"
+    author = "Florian Roth"
+    score = 70
+    reference = "VT Analysis"
+    date = "2015-06-03"
+    hash = "f93a7945a33145bb6c106a51f08d8f44eab1cdf5"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "LOADER ERROR" fullword ascii /* PEStudio Blacklist: strings */ /* score: '12.03' */
@@ -91,13 +97,15 @@ rule APT_Malware_PutterPanda_PSAPI
 rule APT_Malware_PutterPanda_WUAUCLT 
 {
 
-    meta:
-        description = "Detects a malware related to Putter Panda"
-        author = "Florian Roth"
-        score = 70
-        reference = "VT Analysis"
-        date = "2015-06-03"
-        hash = "fd5ca5a2d444865fa8320337467313e4026b9f78"
+      meta:
+    description = "Detects a malware related to Putter Panda"
+    author = "Florian Roth"
+    score = 70
+    reference = "VT Analysis"
+    date = "2015-06-03"
+    hash = "fd5ca5a2d444865fa8320337467313e4026b9f78"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $x0 = "WUAUCLT.EXE" fullword wide /* PEStudio Blacklist: strings */ /* score: '20.01' */
@@ -120,15 +128,17 @@ rule APT_Malware_PutterPanda_WUAUCLT
 rule APT_Malware_PutterPanda_Gen1 
 {
 
-    meta:
-        description = "Detects a malware "
-        author = "YarGen Rule Generator"
-        reference = "not set"
-        date = "2015-06-03"
-        super_rule = 1
-        hash0 = "bf1d385e637326a63c4d2f253dc211e6a5436b6a"
-        hash1 = "76459bcbe072f9c29bb9703bc72c7cd46a692796"
-        hash2 = "e105a7a3a011275002aec4b930c722e6a7ef52ad"
+      meta:
+    description = "Detects a malware "
+    author = "YarGen Rule Generator"
+    reference = "not set"
+    date = "2015-06-03"
+    super_rule = 1
+    hash0 = "bf1d385e637326a63c4d2f253dc211e6a5436b6a"
+    hash1 = "76459bcbe072f9c29bb9703bc72c7cd46a692796"
+    hash2 = "e105a7a3a011275002aec4b930c722e6a7ef52ad"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "%s%duserid=%dthreadid=%dgroupid=%d" fullword ascii /* PEStudio Blacklist: strings */ /* score: '22.02' */
@@ -146,13 +156,15 @@ rule APT_Malware_PutterPanda_Gen1
 rule Malware_MsUpdater_String_in_EXE  
 {
 
-    meta:
-        description = "MSUpdater String in Executable"
-        author = "Florian Roth"
-        score = 50
-        reference = "VT Analysis"
-        date = "2015-06-03"
-        hash = "b1a2043b7658af4d4c9395fa77fde18ccaf549bb"
+      meta:
+    description = "MSUpdater String in Executable"
+    author = "Florian Roth"
+    score = 50
+    reference = "VT Analysis"
+    date = "2015-06-03"
+    hash = "b1a2043b7658af4d4c9395fa77fde18ccaf549bb"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "msupdate.exe" fullword wide /* PEStudio Blacklist: strings */ /* score: '20.01' */
@@ -172,13 +184,15 @@ rule Malware_MsUpdater_String_in_EXE
 rule APT_Malware_PutterPanda_MsUpdater_3 
 {
 
-    meta:
-        description = "Detects Malware related to PutterPanda - MSUpdater"
-        author = "Florian Roth"
-        score = 70
-        reference = "VT Analysis"
-        date = "2015-06-03"
-        hash = "464149ff23f9c7f4ab2f5cadb76a4f41f969bed0"
+      meta:
+    description = "Detects Malware related to PutterPanda - MSUpdater"
+    author = "Florian Roth"
+    score = 70
+    reference = "VT Analysis"
+    date = "2015-06-03"
+    hash = "464149ff23f9c7f4ab2f5cadb76a4f41f969bed0"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "msupdater.exe" fullword ascii /* PEStudio Blacklist: strings */ /* score: '20.02' */
@@ -193,13 +207,15 @@ rule APT_Malware_PutterPanda_MsUpdater_3
 rule APT_Malware_PutterPanda_MsUpdater_1 
 {
 
-    meta:
-        description = "Detects Malware related to PutterPanda - MSUpdater"
-        author = "Florian Roth"
-        score = 70
-        reference = "VT Analysis"
-        date = "2015-06-03"
-        hash = "b55072b67543f58c096571c841a560c53d72f01a"
+      meta:
+    description = "Detects Malware related to PutterPanda - MSUpdater"
+    author = "Florian Roth"
+    score = 70
+    reference = "VT Analysis"
+    date = "2015-06-03"
+    hash = "b55072b67543f58c096571c841a560c53d72f01a"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x0 = "msupdate.exe" fullword wide /* PEStudio Blacklist: strings */ /* score: '20.01' */
@@ -217,13 +233,15 @@ rule APT_Malware_PutterPanda_MsUpdater_1
 rule APT_Malware_PutterPanda_MsUpdater_2 
 {
 
-    meta:
-        description = "Detects Malware related to PutterPanda - MSUpdater"
-        author = "Florian Roth"
-        score = 70
-        reference = "VT Analysis"
-        date = "2015-06-03"
-        hash = "365b5537e3495f8ecfabe2597399b1f1226879b1"
+      meta:
+    description = "Detects Malware related to PutterPanda - MSUpdater"
+    author = "Florian Roth"
+    score = 70
+    reference = "VT Analysis"
+    date = "2015-06-03"
+    hash = "365b5537e3495f8ecfabe2597399b1f1226879b1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $s0 = "winsta0\\default" fullword ascii /* PEStudio Blacklist: strings */ /* score: '4.99' */ /* Goodware String - occured 6 times */
@@ -255,18 +273,20 @@ rule APT_Malware_PutterPanda_MsUpdater_2
 rule APT_Malware_PutterPanda_Gen4 
 {
 
-    meta:
-        description = "Detects Malware related to PutterPanda"
-        author = "Florian Roth"
-        score = 70
-        reference = "VT Analysis"
-        date = "2015-06-03"
-        super_rule = 1
-        hash0 = "71a8378fa8e06bcf8ee9f019c807c6bfc58dca0c"
-        hash1 = "8fdd6e5ed9d69d560b6fdd5910f80e0914893552"
-        hash2 = "3c4a762175326b37035a9192a981f7f4cc2aa5f0"
-        hash3 = "598430b3a9b5576f03cc4aed6dc2cd8a43324e1e"
-        hash4 = "6522b81b38747f4aa09c98fdaedaed4b00b21689"
+      meta:
+    description = "Detects Malware related to PutterPanda"
+    author = "Florian Roth"
+    score = 70
+    reference = "VT Analysis"
+    date = "2015-06-03"
+    super_rule = 1
+    hash0 = "71a8378fa8e06bcf8ee9f019c807c6bfc58dca0c"
+    hash1 = "8fdd6e5ed9d69d560b6fdd5910f80e0914893552"
+    hash2 = "3c4a762175326b37035a9192a981f7f4cc2aa5f0"
+    hash3 = "598430b3a9b5576f03cc4aed6dc2cd8a43324e1e"
+    hash4 = "6522b81b38747f4aa09c98fdaedaed4b00b21689"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "rz.dat" fullword ascii /* score: '10.00' */

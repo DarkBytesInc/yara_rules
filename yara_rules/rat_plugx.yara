@@ -7,10 +7,12 @@ import "pe"
 
 rule PlugXStrings : PlugX Family
 {
-    meta:
-        description = "PlugX Identifying Strings"
-        author = "Seth Hardy"
-        last_modified = "2014-06-12"
+      meta:
+    description = "PlugX Identifying Strings"
+    author = "Seth Hardy"
+    last_modified = "2014-06-12"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $BootLDR = "boot.ldr" wide ascii
@@ -25,13 +27,15 @@ rule PlugXStrings : PlugX Family
 
 rule plugX : rat
 {
-	meta:
-		author = "Jean-Philippe Teissier / @Jipe_"
-		description = "PlugX RAT"
-		date = "2014-05-13"
-		filetype = "memory"
-		version = "1.0" 
-		ref1 = "https://github.com/mattulm/IR-things/blob/master/volplugs/plugx.py"
+	  meta:
+    author = "Jean-Philippe Teissier / @Jipe_"
+    description = "PlugX RAT"
+    date = "2014-05-13"
+    filetype = "memory"
+    version = "1.0"
+    ref1 = "https://github.com/mattulm/IR-things/blob/master/volplugs/plugx.py"
+    severity = "7"
+    type = "Malware"
 		
 	strings:
 		$v1a = { 47 55 4C 50 00 00 00 00 }
@@ -48,11 +52,13 @@ rule plugX : rat
 
 rule PlugX_mw
 { 
-	meta:
-		maltype = "plugX"
-		author = "https://github.com/reed1713"
-		reference = "http://www.fireeye.com/blog/technical/targeted-attack/2014/02/operation-greedywonk-multiple-economic-and-foreign-policy-sites-compromised-serving-up-flash-zero-day-exploit.html"
-		description = "Malware creates a randomized directory within the appdata roaming directory and launches the malware. Should see multiple events for create process rundll32.exe and iexplorer.exe as it repeatedly uses iexplorer to launch the rundll32 process."
+	  meta:
+    maltype = "plugX"
+    author = "https://github.com/reed1713"
+    reference = "http://www.fireeye.com/blog/technical/targeted-attack/2014/02/operation-greedywonk-multiple-economic-and-foreign-policy-sites-compromised-serving-up-flash-zero-day-exploit.html"
+    description = "Malware creates a randomized directory within the appdata roaming directory and launches the malware. Should see multiple events for create process rundll32.exe and iexplorer.exe as it repeatedly uses iexplorer to launch the rundll32 process."
+    severity = "7"
+    type = "Malware"
 	strings:
 		$type="Microsoft-Windows-Security-Auditing"
 		$eventid="4688"

@@ -7,12 +7,14 @@
 */
 
 rule Bytes_used_in_AES_key_generation {
-   meta:
-      author = "NCSC"
-      description = "Detects Backdoor.goodor"
-      reference = "https://www.ncsc.gov.uk/alerts/hostile-state-actors-compromising-uk-organisations-focus-engineering-and-industrial-control"
-      date = "2018/04/06"
-      hash = "b5278301da06450fe4442a25dda2d83d21485be63598642573f59c59e980ad46"
+     meta:
+    author = "NCSC"
+    description = "Detects Backdoor.goodor"
+    reference = "https://www.ncsc.gov.uk/alerts/hostile-state-actors-compromising-uk-organisations-focus-engineering-and-industrial-control"
+    date = "2018/04/06"
+    hash = "b5278301da06450fe4442a25dda2d83d21485be63598642573f59c59e980ad46"
+    severity = "7"
+    type = "Malware"
    strings:
       $a1 = {35 34 36 35 4B 4A 55 54 5E 49 55 5F 29 7B 68 36 35 67 34 36 64 66 35 68}
       /* $a2 = {fb ff ff ff 00 00}  disabled due to performance issues */
@@ -21,12 +23,14 @@ rule Bytes_used_in_AES_key_generation {
 }
 
 rule Partial_Implant_ID {
-   meta:
-      author = "NCSC"
-      description = "Detects implant from NCSC report"
-      reference = "https://www.ncsc.gov.uk/alerts/hostile-state-actors-compromising-uk-organisations-focus-engineering-and-industrial-control"
-      date = "2018/04/06"
-      hash = "b5278301da06450fe4442a25dda2d83d21485be63598642573f59c59e980ad46"
+     meta:
+    author = "NCSC"
+    description = "Detects implant from NCSC report"
+    reference = "https://www.ncsc.gov.uk/alerts/hostile-state-actors-compromising-uk-organisations-focus-engineering-and-industrial-control"
+    date = "2018/04/06"
+    hash = "b5278301da06450fe4442a25dda2d83d21485be63598642573f59c59e980ad46"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $a1 = {38 38 31 34 35 36 46 43}
       /* $a2 = {fb ff ff ff 00 00} disabled due to performance issues */
@@ -35,12 +39,14 @@ rule Partial_Implant_ID {
 }
 
 rule Sleep_Timer_Choice {
-   meta:
-      author = "NCSC"
-      description = "Detects malware from NCSC report"
-      reference = "https://www.ncsc.gov.uk/alerts/hostile-state-actors-compromising-uk-organisations-focus-engineering-and-industrial-control"
-      date = "2018/04/06"
-      hash = "b5278301da06450fe4442a25dda2d83d21485be63598642573f59c59e980ad46"
+     meta:
+    author = "NCSC"
+    description = "Detects malware from NCSC report"
+    reference = "https://www.ncsc.gov.uk/alerts/hostile-state-actors-compromising-uk-organisations-focus-engineering-and-industrial-control"
+    date = "2018/04/06"
+    hash = "b5278301da06450fe4442a25dda2d83d21485be63598642573f59c59e980ad46"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $a1 = {8b0424b90f00000083f9ff743499f7f98d420f}
       /* $a2 = {fb ff ff ff 00 00} disabled due to performance issues */
@@ -49,12 +55,14 @@ rule Sleep_Timer_Choice {
 }
 
 rule User_Function_String {
-   meta:
-      author = "NCSC"
-      description = "Detects user function string from NCSC report"
-      reference = "https://www.ncsc.gov.uk/alerts/hostile-state-actors-compromising-uk-organisations-focus-engineering-and-industrial-control"
-      date = "2018/04/06"
-      hash = "b5278301da06450fe4442a25dda2d83d21485be63598642573f59c59e980ad46"
+     meta:
+    author = "NCSC"
+    description = "Detects user function string from NCSC report"
+    reference = "https://www.ncsc.gov.uk/alerts/hostile-state-actors-compromising-uk-organisations-focus-engineering-and-industrial-control"
+    date = "2018/04/06"
+    hash = "b5278301da06450fe4442a25dda2d83d21485be63598642573f59c59e980ad46"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       /* $b1 = {fb ff ff ff 00 00} disabled due to performance issues */
       $a2 = "e.RandomHashString"
@@ -67,12 +75,14 @@ rule User_Function_String {
 }
 
 rule generic_shellcode_downloader_specific {
-  meta:
+    meta:
     author = "NCSC"
     description = "Detects Doorshell from NCSC report"
     reference = "https://www.ncsc.gov.uk/alerts/hostile-state-actors-compromising-uk-organisations-focus-engineering-and-industrial-control"
     date = "2018/04/06"
     hash = "b8bc0611a7fd321d2483a0a9a505251e15c22402e0cfdc62c0258af53ed3658a"
+    severity = "10"
+    type = "Advanced Persistent Threat"
   strings:
     $push1 = {68 6C 6C 6F 63}
     $push2 = {68 75 61 6C 41}
@@ -84,12 +94,14 @@ rule generic_shellcode_downloader_specific {
 }
 
 rule Batch_Script_To_Run_PsExec {
-   meta:
-      author = "NCSC"
-      description = "Detects malicious batch file from NCSC report"
-      reference = "https://www.ncsc.gov.uk/alerts/hostile-state-actors-compromising-uk-organisations-focus-engineering-and-industrial-control"
-      date = "2018/04/06"
-      hash = "b7d7c4bc8f9fd0e461425747122a431f93062358ed36ce281147998575ee1a18"
+     meta:
+    author = "NCSC"
+    description = "Detects malicious batch file from NCSC report"
+    reference = "https://www.ncsc.gov.uk/alerts/hostile-state-actors-compromising-uk-organisations-focus-engineering-and-industrial-control"
+    date = "2018/04/06"
+    hash = "b7d7c4bc8f9fd0e461425747122a431f93062358ed36ce281147998575ee1a18"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $ = "Tokens=1 delims=" ascii
       $ = "SET ws=%1" ascii
@@ -101,12 +113,14 @@ rule Batch_Script_To_Run_PsExec {
 }
 
 rule Batch_Powershell_Invoke_Inveigh {
-   meta:
-      author = "NCSC"
-      description = "Detects malicious batch file from NCSC report"
-      reference = "https://www.ncsc.gov.uk/alerts/hostile-state-actors-compromising-uk-organisations-focus-engineering-and-industrial-control"
-      date = "2018/04/06"
-      hash = "0a6b1b29496d4514f6485e78680ec4cd0296ef4d21862d8bf363900a4f8e3fd2"
+     meta:
+    author = "NCSC"
+    description = "Detects malicious batch file from NCSC report"
+    reference = "https://www.ncsc.gov.uk/alerts/hostile-state-actors-compromising-uk-organisations-focus-engineering-and-industrial-control"
+    date = "2018/04/06"
+    hash = "0a6b1b29496d4514f6485e78680ec4cd0296ef4d21862d8bf363900a4f8e3fd2"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $ = "Inveigh.ps1" ascii
       $ = "Invoke-Inveigh" ascii
@@ -117,11 +131,13 @@ rule Batch_Powershell_Invoke_Inveigh {
 }
 
 rule lnk_detect {
-   meta:
-      author = "NCSC"
-      description = "Detects malicious LNK file from NCSC report"
-      reference = "https://www.ncsc.gov.uk/alerts/hostile-state-actors-compromising-uk-organisations-focus-engineering-and-industrial-control"
-      date = "2018/04/06"
+     meta:
+    author = "NCSC"
+    description = "Detects malicious LNK file from NCSC report"
+    reference = "https://www.ncsc.gov.uk/alerts/hostile-state-actors-compromising-uk-organisations-focus-engineering-and-industrial-control"
+    date = "2018/04/06"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $lnk_magic = {4C 00 00 00 01 14 02 00 00 00 00 00 C0 00 00 00 00 00 00 46}
       $lnk_target = {41 00 55 00 54 00 4F 00 45 00 58 00 45 00 43 00 2E 00 42 00 41 00 54}
@@ -141,12 +157,14 @@ rule lnk_detect {
 }
 
 rule RDP_Brute_Strings {
-   meta:
-      author = "NCSC"
-      description = "Detects RDP brute forcer from NCSC report"
-      reference = "https://www.ncsc.gov.uk/alerts/hostile-state-actors-compromising-uk-organisations-focus-engineering-and-industrial-control"
-      date = "2018/04/06"
-      hash = "8234bf8a1b53efd2a452780a69666d1aedcec9eb1bb714769283ccc2c2bdcc65"
+     meta:
+    author = "NCSC"
+    description = "Detects RDP brute forcer from NCSC report"
+    reference = "https://www.ncsc.gov.uk/alerts/hostile-state-actors-compromising-uk-organisations-focus-engineering-and-industrial-control"
+    date = "2018/04/06"
+    hash = "8234bf8a1b53efd2a452780a69666d1aedcec9eb1bb714769283ccc2c2bdcc65"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $ = "RDP Brute" ascii wide
       $ = "RdpChecker" ascii
@@ -165,12 +183,14 @@ rule RDP_Brute_Strings {
 }
 
 rule Z_WebShell {
-   meta:
-      author = "NCSC"
-      description = "Detects Z Webshell from NCSC report"
-      reference = "https://www.ncsc.gov.uk/alerts/hostile-state-actors-compromising-uk-organisations-focus-engineering-and-industrial-control"
-      date = "2018/04/06"
-      hash = "ace12552f3a980f1eed4cadb02afe1bfb851cafc8e58fb130e1329719a07dbf0"
+     meta:
+    author = "NCSC"
+    description = "Detects Z Webshell from NCSC report"
+    reference = "https://www.ncsc.gov.uk/alerts/hostile-state-actors-compromising-uk-organisations-focus-engineering-and-industrial-control"
+    date = "2018/04/06"
+    hash = "ace12552f3a980f1eed4cadb02afe1bfb851cafc8e58fb130e1329719a07dbf0"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $ = "Z_PostBackJS" ascii wide
       $ = "z_file_download" ascii wide

@@ -8,11 +8,14 @@ import "pe"
 
 rule Win32OPCHavex
 {
-    meta:
-        Author      = "BAE Systems"
-        Date        = "2014/06/23"
-        Description = "Rule for identifying OPC version of HAVEX"
-        Reference   = "www.f-secure.com/weblog/archives/00002718.html"
+      meta:
+    Author = "BAE Systems"
+    Date = "2014/06/23"
+    Description = "Rule for identifying OPC version of HAVEX"
+    Reference = "www.f-secure.com/weblog/archives/00002718.html"
+    description = "Win32OPCHavex"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $mzhdr = "MZ"
@@ -33,11 +36,14 @@ rule Win32OPCHavex
 
 rule Win32FertgerHavex
 {
-    meta:
-        Author      = "BAE Systems"
-        Date        = "2014/06/23"
-        Description = "Rule for identifying Fertger version of HAVEX"
-        Reference   = "www.f-secure.com/weblog/archives/00002718.html"
+      meta:
+    Author = "BAE Systems"
+    Date = "2014/06/23"
+    Description = "Rule for identifying Fertger version of HAVEX"
+    Reference = "www.f-secure.com/weblog/archives/00002718.html"
+    description = "Win32FertgerHavex"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $mz = "MZ"
@@ -55,11 +61,14 @@ rule Win32FertgerHavex
 
 rule Havex_Trojan_PHP_Server
 {
-    meta:
-        Author      = "Florian Roth"
-        Date        = "2014/06/24"
-        Description = "Detects the PHP server component of the Havex RAT"
-        Reference   = "www.f-secure.com/weblog/archives/00002718.html"
+      meta:
+    Author = "Florian Roth"
+    Date = "2014/06/24"
+    Description = "Detects the PHP server component of the Havex RAT"
+    Reference = "www.f-secure.com/weblog/archives/00002718.html"
+    description = "Havex_Trojan_PHP_Server"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $s1 = "havex--></body></head>"

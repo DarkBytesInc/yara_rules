@@ -5,11 +5,13 @@
 
 rule MIME_MSO_ActiveMime_base64 : maldoc
 {
-	meta:
-		author = "Martin Willing (https://evild3ad.com)"
-		description = "Detect MIME MSO Base64 encoded ActiveMime file"
-		date = "2016-02-28"
-		filetype = "Office documents"
+	  meta:
+    author = "Martin Willing (https://evild3ad.com)"
+    description = "Detect MIME MSO Base64 encoded ActiveMime file"
+    date = "2016-02-28"
+    filetype = "Office documents"
+    severity = "7"
+    type = "Malware"
 		
 	strings:
 		$mime = "MIME-Version:"

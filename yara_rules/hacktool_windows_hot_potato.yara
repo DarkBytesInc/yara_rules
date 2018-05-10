@@ -1,9 +1,11 @@
 rule hacktool_windows_hot_potato
 {
-    meta:
-        description = "https://foxglovesecurity.com/2016/01/16/hot-potato/"
-        reference = "https://github.com/foxglovesec/Potato"
-        author = "@mimeframe"
+      meta:
+    description = "https://foxglovesecurity.com/2016/01/16/hot-potato/"
+    reference = "https://github.com/foxglovesec/Potato"
+    author = "@mimeframe"
+    severity = "5"
+    type = "Unknown"
     strings:
         $a1 = "Parsing initial NTLM auth..." wide ascii
         $a2 = "Got PROPFIND for /test..." wide ascii

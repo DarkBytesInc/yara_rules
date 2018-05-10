@@ -3,10 +3,13 @@ import "pe"
 
 rule RomeoWhiskey_Two
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
-		Source = "a8d88714f0bc643e76163d1b8972565e78a159292d45a8218d0ad0754c8f561d"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    Source = "a8d88714f0bc643e76163d1b8972565e78a159292d45a8218d0ad0754c8f561d"
+    description = "RomeoWhiskey_Two"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 	/*
@@ -40,10 +43,13 @@ rule RomeoWhiskey_Two
 
 rule RomeoWhiskey_One
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
-		Source = "5d21e865d57e9798ac7c14a6ad09c4034d103f3ea993295dcdf8a208ea825ad7"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    Source = "5d21e865d57e9798ac7c14a6ad09c4034d103f3ea993295dcdf8a208ea825ad7"
+    description = "RomeoWhiskey_One"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 	/*

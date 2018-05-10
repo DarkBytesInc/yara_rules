@@ -8,10 +8,12 @@ import "pe"
 rule Bublik
 {
    
-    meta:
-        author="Kevin Falcoz"
-        date="29/09/2013"
-        description="Bublik Trojan Downloader"
+      meta:
+    author = "Kevin Falcoz"
+    date = "29/09/2013"
+    description = "Bublik Trojan Downloader"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $signature1={63 6F 6E 73 6F 6C 61 73}

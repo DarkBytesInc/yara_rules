@@ -7,10 +7,12 @@ import "pe"
 
 rule CookiesStrings
 {
-    meta:
-        description = "Cookies Identifying Strings"
-        author = "Seth Hardy"
-        last_modified = "2014-06-20"
+      meta:
+    description = "Cookies Identifying Strings"
+    author = "Seth Hardy"
+    last_modified = "2014-06-20"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $zip1 = "ntdll.exePK"
@@ -35,10 +37,12 @@ rule CookiesStrings
 
 rule Cookies
 {
-    meta:
-        description = "Cookies"
-        author = "Seth Hardy"
-        last_modified = "2014-06-20"
+      meta:
+    description = "Cookies"
+    author = "Seth Hardy"
+    last_modified = "2014-06-20"
+    severity = "7"
+    type = "Malware"
         
     condition:
         CookiesStrings

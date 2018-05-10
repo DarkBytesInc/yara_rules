@@ -8,8 +8,11 @@ import "pe"
 rule APT_NGO_wuaclt
 {
    
-   meta:
+     meta:
     author = "AlienVault Labs"
+    description = "APT_NGO_wuaclt"
+    severity = "10"
+    type = "Advanced Persistent Threat"
   
   strings:
     $a = "%%APPDATA%%\\Microsoft\\wuauclt\\wuauclt.dat"
@@ -29,8 +32,11 @@ rule APT_NGO_wuaclt
 
 rule APT_NGO_wuaclt_PDF
 {
-        meta:
-            author = "AlienVault Labs"
+          meta:
+    author = "AlienVault Labs"
+    description = "APT_NGO_wuaclt_PDF"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $pdf  = "%PDF" nocase

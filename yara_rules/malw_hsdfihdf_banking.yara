@@ -3,13 +3,15 @@
 */
 rule Hsdfihdf: banking malware 
 {
-meta:
-	author = "Adam Ziaja <adam@adamziaja.com> http://adamziaja.com"
-	date = "2014-04-06"
-	description = "Polish banking malware"
-	hash0 = "db1675c74a444fd35383d9a45631cada"
-	hash1 = "f48ba39df38056449a3e9a1a7289f657"
-	filetype = "exe"
+  meta:
+    author = "Adam Ziaja <adam@adamziaja.com> http://adamziaja.com"
+    date = "2014-04-06"
+    description = "Polish banking malware"
+    hash0 = "db1675c74a444fd35383d9a45631cada"
+    hash1 = "f48ba39df38056449a3e9a1a7289f657"
+    filetype = "exe"
+    severity = "7"
+    type = "Malware"
 strings:
 	$s0 = "ANSI_CHARSET"
 	$s1 = "][Vee_d_["

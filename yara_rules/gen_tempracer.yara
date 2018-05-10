@@ -8,12 +8,14 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule TempRacer {
-	meta:
-		description = "Detects privilege escalation tool - file TempRacer.exe"
-		author = "Florian Roth"
-		reference = "http://www.darknet.org.uk/2016/03/tempracer-windows-privilege-escalation-tool/"
-		date = "2016-03-30"
-		hash = "e17d80c4822d16371d75e1440b6ac44af490b71fbee1010a3e8a5eca94d22bb3"
+	  meta:
+    description = "Detects privilege escalation tool - file TempRacer.exe"
+    author = "Florian Roth"
+    reference = "http://www.darknet.org.uk/2016/03/tempracer-windows-privilege-escalation-tool/"
+    date = "2016-03-30"
+    hash = "e17d80c4822d16371d75e1440b6ac44af490b71fbee1010a3e8a5eca94d22bb3"
+    severity = "5"
+    type = "Unknown"
 	strings:
 		$s1 = "\\obj\\Release\\TempRacer.pdb" ascii
 		$s2 = "[+] Injecting into " fullword wide

@@ -6,12 +6,13 @@
 rule Atmos_Malware
 {
     
-    meta:
-        description = "Generic Spyware.Citadel.Atmos Signature"
-        author = "xylitol@temari.fr"
-        reference = "http://www.xylibox.com/2016/02/citadel-0011-atmos.html"
-        date = "20/08/2016"
-        // May only the challenge guide you
+      meta:
+    description = "Generic Spyware.Citadel.Atmos Signature"
+    author = "xylitol@temari.fr"
+    reference = "http://www.xylibox.com/2016/02/citadel-0011-atmos.html"
+    date = "20/08/2016"
+    severity = "7"
+    type = "Malware"
 
     strings:
         // Check for the presence of MZ and kutuzov license identifier
@@ -56,12 +57,13 @@ rule Atmos_Malware
 rule Atmos_Packed_Malware 
 {
    
-    meta:
+      meta:
     description = "Second Generic Spyware.Citadel.Atmos signture when builder add a packed layer"
     author = "xylitol@temari.fr"
     reference = "http://www.xylibox.com/2016/02/citadel-0011-atmos.html"
     date = "20/08/2016"
-    // May only the challenge guide you
+    severity = "7"
+    type = "Malware"
 
     strings:
         $MZ = {4D 5A}
@@ -84,12 +86,13 @@ rule Atmos_Packed_Malware
 rule Atmos_Builder
 {
     
-    meta:
-        description = "Generic signature for Hacktool.Atmos.Builder cracked version"
-        author = "xylitol@temari.fr"
-        reference = "http://www.xylibox.com/2016/02/citadel-0011-atmos.html"
-        date = "20/08/2016"
-        // May only the challenge guide you
+      meta:
+    description = "Generic signature for Hacktool.Atmos.Builder cracked version"
+    author = "xylitol@temari.fr"
+    reference = "http://www.xylibox.com/2016/02/citadel-0011-atmos.html"
+    date = "20/08/2016"
+    severity = "7"
+    type = "Malware"
 
     strings:
         // Check for the presence of MZ, kutuzov license identifier, and good hardware ID

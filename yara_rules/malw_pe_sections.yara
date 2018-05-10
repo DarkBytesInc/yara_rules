@@ -7,13 +7,14 @@ import "pe"
 
 rule suspicious_packer_section : packer PE {
 
-    meta:
-
-        author = "@j0sm1"
-        date = "2016/10/21"
-        description = "The packer/protector section names/keywords"
-        reference = "http://www.hexacorn.com/blog/2012/10/14/random-stats-from-1-2m-samples-pe-section-names/"
-        filetype = "binary"
+      meta:
+    author = "@j0sm1"
+    date = "2016/10/21"
+    description = "The packer/protector section names/keywords"
+    reference = "http://www.hexacorn.com/blog/2012/10/14/random-stats-from-1-2m-samples-pe-section-names/"
+    filetype = "binary"
+    severity = "7"
+    type = "Malware"
 
     strings:
 

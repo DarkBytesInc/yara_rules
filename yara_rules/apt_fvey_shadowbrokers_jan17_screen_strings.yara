@@ -14,11 +14,13 @@
 rule FVEY_ShadowBrokers_Jan17_Screen_Strings 
 {
 
-   meta:
-      description = "Detects strings derived from the ShadowBroker's leak of Windows tools/exploits"
-      author = "Florian Roth"
-      reference = "https://bit.no.com:43110/theshadowbrokers.bit/post/message7/"
-      date = "2017-01-08"
+     meta:
+    description = "Detects strings derived from the ShadowBroker's leak of Windows tools/exploits"
+    author = "Florian Roth"
+    reference = "https://bit.no.com:43110/theshadowbrokers.bit/post/message7/"
+    date = "2017-01-08"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
    strings:
       $x1 = "Danderspritz" ascii wide fullword

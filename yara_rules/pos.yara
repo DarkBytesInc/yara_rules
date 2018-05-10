@@ -6,10 +6,13 @@
 
 rule blackpos_v2
 {
-meta:
-	author = "@patrickrolsen"
-	version = "0.1"
-	reference = "http://blog.nuix.com/2014/09/08/blackpos-v2-new-variant-or-different-family"
+  meta:
+    author = "@patrickrolsen"
+    version = "0.1"
+    reference = "http://blog.nuix.com/2014/09/08/blackpos-v2-new-variant-or-different-family"
+    description = "blackpos_v2"
+    severity = "5"
+    type = "Unknown"
 strings:
 	$s1 = "Usage: -[start|stop|install|uninstall"
 	$s2 = "\\SYSTEM32\\sc.exe config LanmanWorkstation"
@@ -21,9 +24,12 @@ condition:
 
 rule dump_tool
 {
-meta:
-	author = "@patrickrolsen"
-	reference = "Related to pwdump6 and fgdump tools"
+  meta:
+    author = "@patrickrolsen"
+    reference = "Related to pwdump6 and fgdump tools"
+    description = "dump_tool"
+    severity = "5"
+    type = "Unknown"
 strings:
 	$s1 = "lsremora"
 	$s2 = "servpw"
@@ -37,12 +43,15 @@ condition:
 
 rule osql_tool
 {
-meta:
-	author = "@patrickrolsen"
-	reference = "O/I SQL - SQL query tool"
-	filetype = "EXE"
-	version = "0.1"
-	date = "1/30/2014"
+  meta:
+    author = "@patrickrolsen"
+    reference = "O/I SQL - SQL query tool"
+    filetype = "EXE"
+    version = "0.1"
+    date = "1/30/2014"
+    description = "osql_tool"
+    severity = "5"
+    type = "Unknown"
 strings:
 	$s1 = "osql\\src"
 	$s2 = "OSQLUSER"
@@ -54,9 +63,12 @@ condition:
 
 rule misc_pos
 {
-meta:
-	author = "@patrickrolsen"
-	reference = "POS Malware"
+  meta:
+    author = "@patrickrolsen"
+    reference = "POS Malware"
+    description = "misc_pos"
+    severity = "5"
+    type = "Unknown"
 strings:
 	$s1 = "KAPTOXA"
 	$s2 = "cmd /c net start %s"
@@ -70,9 +82,12 @@ condition:
 
 rule unknown
 {
-meta:
-	author = "@patrickrolsen"
-	reference = "Unknown POS"
+  meta:
+    author = "@patrickrolsen"
+    reference = "Unknown POS"
+    description = "unknown"
+    severity = "5"
+    type = "Unknown"
 strings:
 	$s1 = "a.exe" wide
 	$s2 = "Can anyone test" wide
@@ -83,9 +98,12 @@ condition:
 
 rule regex_pos
 {
-meta:
-	author = "@patrickrolsen"
-	reference = "POS malware - Regex"
+  meta:
+    author = "@patrickrolsen"
+    reference = "POS malware - Regex"
+    description = "regex_pos"
+    severity = "5"
+    type = "Unknown"
 strings:
 	$n1 = "REGEXEND" nocase
 	$n2 = "RegExpr" nocase
@@ -107,9 +125,12 @@ condition:
 
 rule regexpr_pos
 {
-meta:
-	author = "@patrickrolsen"
-	reference = "POS malware - RegExpr"
+  meta:
+    author = "@patrickrolsen"
+    reference = "POS malware - RegExpr"
+    description = "regexpr_pos"
+    severity = "5"
+    type = "Unknown"
 strings:
 	$s1 = "RegExpr" nocase
 	$s2 = "Data.txt"
@@ -121,9 +142,12 @@ condition:
 
 rule reg_pos
 {
-meta:
-	author = "@patrickrolsen"
-	reference = "POS malware - RegExpr"
+  meta:
+    author = "@patrickrolsen"
+    reference = "POS malware - RegExpr"
+    description = "regexpr_pos"
+    severity = "5"
+    type = "Unknown"
 strings:
 	$s1 = "T1_FOUND: %s"
 	$s2 = "id=%s&log=%s"
@@ -134,9 +158,12 @@ condition:
 
 rule sets_pos
 {
-meta:
-	author = "@patrickrolsen"
-	reference = "POS malware - Sets"
+  meta:
+    author = "@patrickrolsen"
+    reference = "POS malware - Sets"
+    description = "sets_pos"
+    severity = "5"
+    type = "Unknown"
 strings:
 	$s1 = "GET /sets.txt"
 condition:
@@ -145,9 +172,12 @@ condition:
 
 rule monitor_tool_pos
 {
-meta:
-	author = "@patrickrolsen"
-	reference = "POS malware - Monitoring Tool??"
+  meta:
+    author = "@patrickrolsen"
+    reference = "POS malware - Monitoring Tool??"
+    description = "monitor_tool_pos"
+    severity = "5"
+    type = "Unknown"
 strings:
 	$s1 = "RCPT TO"
 	$s2 = "MAIL FROM"
@@ -163,9 +193,12 @@ condition:
 
 rule pstgdump
 {
-meta:
-	author = "@patrickrolsen"
-	reference = "pstgdump"
+  meta:
+    author = "@patrickrolsen"
+    reference = "pstgdump"
+    description = "pstgdump"
+    severity = "5"
+    type = "Unknown"
 strings:
 	$s1 = "fgdump\\pstgdump"
 	$s2 = "pstgdump"
@@ -176,9 +209,12 @@ condition:
 
 rule keyfinder_tool
 {
-meta:
-	author = "@patrickrolsen"
-	reference = "Magical Jelly Bean KeyFinder"
+  meta:
+    author = "@patrickrolsen"
+    reference = "Magical Jelly Bean KeyFinder"
+    description = "keyfinder_tool"
+    severity = "5"
+    type = "Unknown"
 strings:
 	$s1 = "chgxp.vbs"
 	$s2 = "officekey.exe"
@@ -190,9 +226,12 @@ condition:
 
 rule memdump_diablo
 {
-meta:
-	author = "@patrickrolsen"
-	reference = "Process Memory Dumper - DiabloHorn"
+  meta:
+    author = "@patrickrolsen"
+    reference = "Process Memory Dumper - DiabloHorn"
+    description = "memdump_diablo"
+    severity = "5"
+    type = "Unknown"
 strings:
 	$s1 = "DiabloHorn"
 	$s2 = "Process Memory Dumper"
@@ -206,9 +245,12 @@ condition:
 
 rule blazingtools
 {
-meta:
-	author = "@patrickrolsen"
-	reference = "Blazing Tools - http://www.blazingtools.com (Keyloggers)"
+  meta:
+    author = "@patrickrolsen"
+    reference = "Blazing Tools - http://www.blazingtools.com (Keyloggers)"
+    description = "blazingtools"
+    severity = "5"
+    type = "Unknown"
 strings:
 	$s1 = "blazingtools.com"
 	$s2 = "Keystrokes" wide
@@ -219,9 +261,12 @@ condition:
 
 rule sysocmgr
 {
-meta:
-	author = "@patrickrolsen"
-	reference = "System stand-alone Optional Component Manager - http://support.microsoft.com/kb/222444"
+  meta:
+    author = "@patrickrolsen"
+    reference = "System stand-alone Optional Component Manager - http://support.microsoft.com/kb/222444"
+    description = "sysocmgr"
+    severity = "5"
+    type = "Unknown"
 strings:
 	$s1 = "SYSOCMGR.EXE" wide
 	$s2 = "System stand-alone Optional Component Manager" wide
@@ -231,9 +276,12 @@ condition:
 
 rule lacy_keylogger
 {
-meta:
-	author = "@patrickrolsen"
-	reference = "Appears to be a form of keylogger."
+  meta:
+    author = "@patrickrolsen"
+    reference = "Appears to be a form of keylogger."
+    description = "lacy_keylogger"
+    severity = "5"
+    type = "Unknown"
 strings:
 	$s1 = "Lacy.exe" wide
 	$s2 = "Bldg Chive Duel Rip Query" wide
@@ -243,9 +291,12 @@ condition:
 
 rule searchinject
 {
-meta:
-	author = "@patrickrolsen"
-	reference = "Usage: SearchInject <PID1>[PID2][PID3] - It loads Searcher.dll (appears to be hard coded)"
+  meta:
+    author = "@patrickrolsen"
+    reference = "Usage: SearchInject <PID1>[PID2][PID3] - It loads Searcher.dll (appears to be hard coded)"
+    description = "searchinject"
+    severity = "5"
+    type = "Unknown"
 strings:
 	$s1 = "SearchInject"
 	$s2 = "inject base:"
@@ -256,9 +307,12 @@ condition:
 
 rule heistenberg_pos
 {
-meta:
-	author = "@patrickrolsen"
-	reference = "POS Malware"
+  meta:
+    author = "@patrickrolsen"
+    reference = "POS Malware"
+    description = "misc_pos"
+    severity = "5"
+    type = "Unknown"
 strings:
 	$s1 = "KARTOXA"
 	$s2 = "dmpz.log"
@@ -271,12 +325,15 @@ condition:
 
 rule pos_jack
 {
-meta:
-	author = "@patrickrolsen"
-	maltype = "Point of Sale (POS) Malware"
-	version = "0.1"
-	reference = "http://blog.spiderlabs.com/2014/02/jackpos-the-house-always-wins.html"
-	date = "2/22/2014"
+  meta:
+    author = "@patrickrolsen"
+    maltype = "Point of Sale (POS) Malware"
+    version = "0.1"
+    reference = "http://blog.spiderlabs.com/2014/02/jackpos-the-house-always-wins.html"
+    date = "2/22/2014"
+    description = "pos_jack"
+    severity = "5"
+    type = "Unknown"
 strings:
 	$pdb1 = "\\ziedpirate.ziedpirate-PC\\"
 	$pdb2 = "\\sop\\sop\\"
@@ -286,12 +343,14 @@ condition:
 
 rule pos_memory_scrapper_
 {
-meta:
-	author = "@patrickrolsen"
-	maltype = "Point of Sale (POS) Malware Memory Scraper"
-	version = "0.3"
-	description = "POS Memory Scraper"
-	date = "01/30/2014"
+  meta:
+    author = "@patrickrolsen"
+    maltype = "Point of Sale (POS) Malware Memory Scraper"
+    version = "0.3"
+    description = "POS Memory Scraper"
+    date = "01/30/2014"
+    severity = "5"
+    type = "Unknown"
 strings:
 	$s1 = "kartoxa" nocase
 	$s2 = "CC2 region:"
@@ -308,13 +367,15 @@ condition:
 
 rule pos_malwre_dexter_stardust
 {
-meta:
-	author = "@patrickrolsen"
-	maltype = "Dexter Malware - StarDust Variant"
-	version = "0.1"
-	description = "Table 2 arbornetworks.com/asert/wp-content/uploads/2013/12/Dexter-and-Project-Hook-Break-the-Bank.pdf"
-	reference = "16b596de4c0e4d2acdfdd6632c80c070, 2afaa709ef5260184cbda8b521b076e1, and e3dd1dc82ddcfaf410372ae7e6b2f658"
-	date = "12/30/2013"
+  meta:
+    author = "@patrickrolsen"
+    maltype = "Dexter Malware - StarDust Variant"
+    version = "0.1"
+    description = "Table 2 arbornetworks.com/asert/wp-content/uploads/2013/12/Dexter-and-Project-Hook-Break-the-Bank.pdf"
+    reference = "16b596de4c0e4d2acdfdd6632c80c070, 2afaa709ef5260184cbda8b521b076e1, and e3dd1dc82ddcfaf410372ae7e6b2f658"
+    date = "12/30/2013"
+    severity = "7"
+    type = "Malware"
 strings:
 	$s1 = "ceh_3\\.\\ceh_4\\..\\ceh_6"
 	$s2 = "Yatoed3fe3rex23030am39497403"
@@ -326,13 +387,15 @@ condition:
     
 rule pos_malware_project_hook
 {
-meta:
-	author = "@patrickrolsen"
-	maltype = "Project Hook"
-	version = "0.1"
-	description = "Table 1 arbornetworks.com/asert/wp-content/uploads/2013/12/Dexter-and-Project-Hook-Break-the-Bank.pdf"
-	reference = "759154d20849a25315c4970fe37eac59"
-	date = "12/30/2013"
+  meta:
+    author = "@patrickrolsen"
+    maltype = "Project Hook"
+    version = "0.1"
+    description = "Table 1 arbornetworks.com/asert/wp-content/uploads/2013/12/Dexter-and-Project-Hook-Break-the-Bank.pdf"
+    reference = "759154d20849a25315c4970fe37eac59"
+    date = "12/30/2013"
+    severity = "7"
+    type = "Malware"
 strings:
 	$s1 = "CallImage.exe"
 	$s2 = "BurpSwim"
@@ -344,12 +407,14 @@ condition:
 
 rule pdb_strings_Rescator
 {
-meta:
-	author = "@patrickrolsen"
-	maltype = "Target Attack"
-	version = "0.3"
-	description = "Rescator PDB strings within binaries"
-	date = "01/30/2014"
+  meta:
+    author = "@patrickrolsen"
+    maltype = "Target Attack"
+    version = "0.3"
+    description = "Rescator PDB strings within binaries"
+    date = "01/30/2014"
+    severity = "5"
+    type = "Unknown"
 strings:
 	$pdb1 = "\\Projects\\Rescator" nocase
 condition:
@@ -358,13 +423,15 @@ condition:
 
 rule pos_uploader
 {
-meta:
-	author = "@patrickrolsen"
-	maltype = "Point of Sale (POS) Malware"
+  meta:
+    author = "@patrickrolsen"
+    maltype = "Point of Sale (POS) Malware"
     reference = "http://blogs.mcafee.com/mcafee-labs/analyzing-the-target-point-of-sale-malware"
-	version = "0.1"
-	description = "Testing the base64 encoded file in sys32"
-	date = "01/30/2014"
+    version = "0.1"
+    description = "Testing the base64 encoded file in sys32"
+    date = "01/30/2014"
+    severity = "5"
+    type = "Unknown"
 strings:
 	$s1 = "cmd /c net start %s"
 	$s2 = "ftp -s:%s"
@@ -376,13 +443,15 @@ condition:
 
 rule winxml_dll
 {
-meta:
-	author = "@patrickrolsen"
-	maltype = "Point of Sale (POS) Malware"
+  meta:
+    author = "@patrickrolsen"
+    maltype = "Point of Sale (POS) Malware"
     reference = "ce0296e2d77ec3bb112e270fc260f274"
-	version = "0.1"
-	description = "Testing the base64 encoded file in sys32"
-	date = "01/30/2014"
+    version = "0.1"
+    description = "Testing the base64 encoded file in sys32"
+    date = "01/30/2014"
+    severity = "5"
+    type = "Unknown"
 strings:
 	$s1 = "\\system32\\winxml.dll"
 	//$s2 = "cmd /c net start %s"
@@ -396,14 +465,16 @@ condition:
 
 rule pos_chewbacca
 {
-meta:
-	author = "@patrickrolsen"
-	maltype = "Point of Sale (POS) Malware"
+  meta:
+    author = "@patrickrolsen"
+    maltype = "Point of Sale (POS) Malware"
     reference = "https://www.securelist.com/en/blog/208214185/ChewBacca_a_new_episode_of_Tor_based_Malware"
     hashes = "21f8b9d9a6fa3a0cd3a3f0644636bf09, 28bc48ac4a92bde15945afc0cee0bd54"
-	version = "0.2"
-	description = "Testing the base64 encoded file in sys32"
-	date = "01/30/2014"
+    version = "0.2"
+    description = "Testing the base64 encoded file in sys32"
+    date = "01/30/2014"
+    severity = "5"
+    type = "Unknown"
 strings:
 	$s1 = "tor -f <torrc>"
 	$s2 = "tor_"

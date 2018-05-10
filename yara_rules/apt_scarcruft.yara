@@ -1,11 +1,13 @@
 
 rule Scarcruft_malware_Feb18_1 {
-   meta:
-      description = "Detects Scarcruft malware - February 2018"
-      author = "Florian rootpath"
-      reference = "https://twitter.com/craiu/status/959477129795731458"
-      date = "2018-02-03"
-      score = 90
+     meta:
+    description = "Detects Scarcruft malware - February 2018"
+    author = "Florian rootpath"
+    reference = "https://twitter.com/craiu/status/959477129795731458"
+    date = "2018-02-03"
+    score = 90
+    severity = "7"
+    type = "Malware"
    strings:
       $x1 = "d:\\HighSchool\\version 13\\2ndBD\\T+M\\" ascii
       $x2 = "cmd.exe /C ping 0.1.1.2" wide

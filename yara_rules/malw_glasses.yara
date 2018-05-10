@@ -7,10 +7,12 @@ import "pe"
 
 rule GlassesCode : Glasses Family 
 {
-    meta:
-        description = "Glasses code features"
-        author = "Seth Hardy"
-        last_modified = "2014-07-22"
+      meta:
+    description = "Glasses code features"
+    author = "Seth Hardy"
+    last_modified = "2014-07-22"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $ = { B8 AB AA AA AA F7 E1 D1 EA 8D 04 52 2B C8 }
@@ -22,10 +24,12 @@ rule GlassesCode : Glasses Family
 
 rule GlassesStrings : Glasses Family
 {
-    meta:
-        description = "Strings used by Glasses"
-        author = "Seth Hardy"
-        last_modified = "2014-07-22"
+      meta:
+    description = "Strings used by Glasses"
+    author = "Seth Hardy"
+    last_modified = "2014-07-22"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $ = "thequickbrownfxjmpsvalzydg"
@@ -39,10 +43,12 @@ rule GlassesStrings : Glasses Family
 
 rule Glasses : Family
 {
-    meta:
-        description = "Glasses family"
-        author = "Seth Hardy"
-        last_modified = "2014-07-22"
+      meta:
+    description = "Glasses family"
+    author = "Seth Hardy"
+    last_modified = "2014-07-22"
+    severity = "7"
+    type = "Malware"
    
     condition:
         GlassesCode or GlassesStrings

@@ -8,11 +8,13 @@ import "pe"
 rule WaterBug_wipbot_2013_core_PDF 
 {
 
-    meta:
-        description = "Symantec Waterbug Attack - Trojan.Wipbot 2014 core PDF"
-        author = "Symantec Security Response"
-        date = "22.01.2015"
-        reference = "http://t.co/rF35OaAXrl"
+      meta:
+    description = "Symantec Waterbug Attack - Trojan.Wipbot 2014 core PDF"
+    author = "Symantec Security Response"
+    date = "22.01.2015"
+    reference = "http://t.co/rF35OaAXrl"
+    severity = "10"
+    type = "Advanced Persistent Threat"
  
     strings:
         $PDF = "%PDF-"
@@ -26,11 +28,13 @@ rule WaterBug_wipbot_2013_core_PDF
 rule WaterBug_wipbot_2013_dll 
 {
 
-    meta:
-        description = "Symantec Waterbug Attack - Trojan.Wipbot 2014 Down.dll component"
-        author = "Symantec Security Response"
-        date = "22.01.2015"
-        reference = "http://t.co/rF35OaAXrl"        
+      meta:
+    description = "Symantec Waterbug Attack - Trojan.Wipbot 2014 Down.dll component"
+    author = "Symantec Security Response"
+    date = "22.01.2015"
+    reference = "http://t.co/rF35OaAXrl"
+    severity = "10"
+    type = "Advanced Persistent Threat"
   
     strings:
         $string1 = "/%s?rank=%s"
@@ -46,11 +50,13 @@ rule WaterBug_wipbot_2013_dll
 rule WaterBug_wipbot_2013_core 
 {
 
-    meta:
-        description = "Symantec Waterbug Attack - Trojan.Wipbot core + core; garbage appended data (PDF Exploit leftovers) + wipbot dropper; fake AdobeRd32 Error"
-        author = "Symantec Security Response"
-        date = "22.01.2015"
-        reference = "http://t.co/rF35OaAXrl"            
+      meta:
+    description = "Symantec Waterbug Attack - Trojan.Wipbot core + core; garbage appended data (PDF Exploit leftovers) + wipbot dropper; fake AdobeRd32 Error"
+    author = "Symantec Security Response"
+    date = "22.01.2015"
+    reference = "http://t.co/rF35OaAXrl"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $mz = "MZ"
@@ -65,11 +71,13 @@ rule WaterBug_wipbot_2013_core
 rule WaterBug_turla_dropper 
 {
 
-    meta:
-        description = "Symantec Waterbug Attack - Trojan Turla Dropper"
-        author = "Symantec Security Response"
-        date = "22.01.2015"
-        reference = "http://t.co/rF35OaAXrl"
+      meta:
+    description = "Symantec Waterbug Attack - Trojan Turla Dropper"
+    author = "Symantec Security Response"
+    date = "22.01.2015"
+    reference = "http://t.co/rF35OaAXrl"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings: 
         $a = {0F 31 14 31 20 31 3C 31 85 31 8C 31 A8 31 B1 31 D1 31 8B 32 91 32 B6 32 C4 32 6C 33 AC 33 10 34}
@@ -82,11 +90,13 @@ rule WaterBug_turla_dropper
 rule WaterBug_fa_malware 
 { 
 
-    meta: 
-        description = "Symantec Waterbug Attack - FA malware variant"
-        author = "Symantec Security Response"
-        date = "22.01.2015"
-        reference = "http://t.co/rF35OaAXrl"
+      meta:
+    description = "Symantec Waterbug Attack - FA malware variant"
+    author = "Symantec Security Response"
+    date = "22.01.2015"
+    reference = "http://t.co/rF35OaAXrl"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $mz = "MZ"
@@ -105,11 +115,13 @@ rule WaterBug_fa_malware
 rule WaterBug_sav 
 {
 
-    meta: 
-        description = "Symantec Waterbug Attack - SAV Malware"
-        author = "Symantec Security Response"
-        date = "22.01.2015"
-        reference = "http://t.co/rF35OaAXrl"    
+      meta:
+    description = "Symantec Waterbug Attack - SAV Malware"
+    author = "Symantec Security Response"
+    date = "22.01.2015"
+    reference = "http://t.co/rF35OaAXrl"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $mz = "MZ"

@@ -5,12 +5,14 @@
 */
 rule PoS_Malware_fastpos : FastPOS POS keylogger
 {
-meta:
-author = "Trend Micro, Inc."
-date = "2016-05-18"
-description = "Used to detect FastPOS keyloggger + scraper"
-reference = "http://documents.trendmicro.com/assets/fastPOS-quick-and-easy-credit-card-theft.pdf"
-sample_filetype = "exe"
+  meta:
+    author = "Trend Micro, Inc."
+    date = "2016-05-18"
+    description = "Used to detect FastPOS keyloggger + scraper"
+    reference = "http://documents.trendmicro.com/assets/fastPOS-quick-and-easy-credit-card-theft.pdf"
+    sample_filetype = "exe"
+    severity = "5"
+    type = "Unknown"
 strings:
 $string1 = "uniqyeidclaxemain"
 $string2 = "http://%s/cdosys.php"

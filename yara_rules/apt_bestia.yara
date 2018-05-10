@@ -3,7 +3,7 @@
 */
 rule APT_bestia
 {
-meta:
+  meta:
     author = "Adam Ziaja <adam@adamziaja.com> http://adamziaja.com"
     date = "2014-03-19"
     description = "Bestia.3.02.012.07 malware used in APT attacks on Polish government"
@@ -12,6 +12,8 @@ meta:
     hash1 = "7d9a806e0da0b869b10870dd6c7692c5"
     maltype = "apt"
     filetype = "exe"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 strings:
     /* generated with https://github.com/Xen0ph0n/YaraGenerator */
     $string0 = "u4(UeK"

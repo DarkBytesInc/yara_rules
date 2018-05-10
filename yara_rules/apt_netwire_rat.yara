@@ -9,13 +9,15 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule Susp_Indicators_EXE {
-   meta:
-      description = "Detects packed NullSoft Inst EXE with characteristics of NetWire RAT"
-      author = "Florian Roth"
-      reference = "https://pastebin.com/8qaiyPxs"
-      date = "2018-01-05"
-      score = 60
-      hash1 = "6de7f0276afa633044c375c5c630740af51e29b6a6f17a64fbdd227c641727a4"
+     meta:
+    description = "Detects packed NullSoft Inst EXE with characteristics of NetWire RAT"
+    author = "Florian Roth"
+    reference = "https://pastebin.com/8qaiyPxs"
+    date = "2018-01-05"
+    score = 60
+    hash1 = "6de7f0276afa633044c375c5c630740af51e29b6a6f17a64fbdd227c641727a4"
+    severity = "7"
+    type = "Malware"
    strings:
       $s1 = "Software\\Microsoft\\Windows\\CurrentVersion"
       $s2 = "Error! Bad token or internal error" fullword ascii
@@ -28,12 +30,14 @@ rule Susp_Indicators_EXE {
 }
 
 rule Suspicious_BAT_Strings {
-   meta:
-      description = "Detects a string also used in Netwire RAT auxilliary"
-      author = "Florian Roth"
-      score = 60
-      reference = "https://pastebin.com/8qaiyPxs"
-      date = "2018-01-05"
+     meta:
+    description = "Detects a string also used in Netwire RAT auxilliary"
+    author = "Florian Roth"
+    score = 60
+    reference = "https://pastebin.com/8qaiyPxs"
+    date = "2018-01-05"
+    severity = "7"
+    type = "Malware"
    strings:
       $s1 = "ping 192.0.2.2 -n 1" ascii
    condition:
@@ -41,12 +45,14 @@ rule Suspicious_BAT_Strings {
 }
 
 rule Malicious_BAT_Strings {
-   meta:
-      description = "Detects a string also used in Netwire RAT auxilliary"
-      author = "Florian Roth"
-      score = 60
-      reference = "https://pastebin.com/8qaiyPxs"
-      date = "2018-01-05"
+     meta:
+    description = "Detects a string also used in Netwire RAT auxilliary"
+    author = "Florian Roth"
+    score = 60
+    reference = "https://pastebin.com/8qaiyPxs"
+    date = "2018-01-05"
+    severity = "7"
+    type = "Malware"
    strings:
       $s1 = "call :deleteSelf&exit /b"
    condition:

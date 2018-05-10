@@ -4,10 +4,12 @@
 
 rule Ponmocup : plugins memory
 {
- 			meta: 
- 					description = "Ponmocup plugin detection (memory)"
- 					author = "Danny Heppener, Fox-IT"
- 					reference = "https://foxitsecurity.files.wordpress.com/2015/12/foxit-whitepaper_ponmocup_1_1.pdf"
+ 			  meta:
+    description = "Ponmocup plugin detection (memory)"
+    author = "Danny Heppener, Fox-IT"
+    reference = "https://foxitsecurity.files.wordpress.com/2015/12/foxit-whitepaper_ponmocup_1_1.pdf"
+    severity = "7"
+    type = "Malware"
  			strings:
 					 $1100 = {4D 5A 90 [29] 4C 04}
 					 $1201 = {4D 5A 90 [29] B1 04}
@@ -62,10 +64,12 @@ $1802,$1803,$2001,$2002,$2003,$2004,$2500,$2501,$2550,$2600,$2610,$2700,$2701,$2
 */
 import "pe"
 rule Trj_Ponmocup {
-        meta:
-                author = "Centro Criptológico Nacional (CCN)"
-                ref ="https://www.ccn-cert.cni.es/informes/informes-ccn-cert-publicos.html"
-                description = "Ponmocup Installer"
+          meta:
+    author = "Centro Criptológico Nacional (CCN)"
+    ref = "https://www.ccn-cert.cni.es/informes/informes-ccn-cert-publicos.html"
+    description = "Ponmocup Installer"
+    severity = "7"
+    type = "Malware"
         strings:
                 $mz = { 4d 5a }
                 $pac = { 48 8F BB 54 5F 3E 4F 4E }
@@ -75,10 +79,12 @@ rule Trj_Ponmocup {
 }
 
 rule Trj_Ponmocup_Downloader {
-        meta:
-                author = "Centro Criptológico Nacional (CCN)"
-                ref ="https://www.ccn-cert.cni.es/informes/informes-ccn-cert-publicos.html"
-                description = "Ponmocup Downloader"
+          meta:
+    author = "Centro Criptológico Nacional (CCN)"
+    ref = "https://www.ccn-cert.cni.es/informes/informes-ccn-cert-publicos.html"
+    description = "Ponmocup Downloader"
+    severity = "7"
+    type = "Malware"
         strings:
                 $mz = { 4d 5a }
                 $vb5 = "VB5" fullword ascii
@@ -89,10 +95,12 @@ rule Trj_Ponmocup_Downloader {
 }
 
 rule Trj_Ponmocup_dll {
-        meta:
-                author = "Centro Criptológico Nacional (CCN)"
-                ref ="https://www.ccn-cert.cni.es/informes/informes-ccn-cert-publicos.html"
-                description = "Ponmocup Bot DLL"
+          meta:
+    author = "Centro Criptológico Nacional (CCN)"
+    ref = "https://www.ccn-cert.cni.es/informes/informes-ccn-cert-publicos.html"
+    description = "Ponmocup Bot DLL"
+    severity = "7"
+    type = "Malware"
         strings:
                 $mz = { 4d 5a }
                 $pck = { 00 81 23 00 33 3E 00 00 3B F4 56 00 00 00 7D 00 }

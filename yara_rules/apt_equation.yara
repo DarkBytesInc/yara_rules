@@ -10,12 +10,14 @@ import "pe"
 rule apt_equation_exploitlib_mutexes
 {
 
-    meta:
-        copyright = "Kaspersky Lab"
-        description = "Rule to detect Equation group's Exploitation library http://goo.gl/ivt8EW"
-        version = "1.0"
-        last_modified = "2015-02-16"
-        reference = "http://securelist.com/blog/research/68750/equation-the-death-star-of-malware-galaxy/"
+      meta:
+    copyright = "Kaspersky Lab"
+    description = "Rule to detect Equation group's Exploitation library http://goo.gl/ivt8EW"
+    version = "1.0"
+    last_modified = "2015-02-16"
+    reference = "http://securelist.com/blog/research/68750/equation-the-death-star-of-malware-galaxy/"
+    severity = "7"
+    type = "Exploit Kit"
 
     strings:
         $mz="MZ"
@@ -32,12 +34,14 @@ rule apt_equation_exploitlib_mutexes
 rule apt_equation_doublefantasy_genericresource
 {
 
-    meta:
-        copyright = "Kaspersky Lab"
-        description = "Rule to detect DoubleFantasy encoded config http://goo.gl/ivt8EW"
-        version = "1.0"
-        last_modified = "2015-02-16"
-        reference = "http://securelist.com/blog/research/68750/equation-the-death-star-of-malware-galaxy/"
+      meta:
+    copyright = "Kaspersky Lab"
+    description = "Rule to detect DoubleFantasy encoded config http://goo.gl/ivt8EW"
+    version = "1.0"
+    last_modified = "2015-02-16"
+    reference = "http://securelist.com/blog/research/68750/equation-the-death-star-of-malware-galaxy/"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $mz="MZ"
@@ -52,12 +56,14 @@ rule apt_equation_doublefantasy_genericresource
 rule apt_equation_equationlaser_runtimeclasses
 {
 
-    meta:
-        copyright = "Kaspersky Lab"
-        description = "Rule to detect the EquationLaser malware"
-        version = "1.0"
-        last_modified = "2015-02-16"
-        reference = "https://securelist.com/blog/"
+      meta:
+    copyright = "Kaspersky Lab"
+    description = "Rule to detect the EquationLaser malware"
+    version = "1.0"
+    last_modified = "2015-02-16"
+    reference = "https://securelist.com/blog/"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $a1="?a73957838_2@@YAXXZ"
@@ -74,12 +80,14 @@ rule apt_equation_equationlaser_runtimeclasses
 rule apt_equation_cryptotable
 {
 
-    meta:
-        copyright = "Kaspersky Lab"
-        description = "Rule to detect the crypto library used in Equation group malware"
-        version = "1.0"
-        last_modified = "2015-02-16"
-        reference = "https://securelist.com/blog/"
+      meta:
+    copyright = "Kaspersky Lab"
+    description = "Rule to detect the crypto library used in Equation group malware"
+    version = "1.0"
+    last_modified = "2015-02-16"
+    reference = "https://securelist.com/blog/"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $a={37 DF E8 B6 C7 9C 0B AE 91 EF F0 3B 90 C6 80 85 5D 19 4B 45 44 12 3C E2 0D 5C 1C 7B C4 FF D6 05 17 14 4F 03 74 1E 41 DA 8F 7D DE 7E 99 F1 35 AC B8 46 93 CE 23 82 07 EB 2B D4 72 71 40 F3 B0 F7 78 D7 4C D1 55 1A 39 83 18 FA E1 9A 56 B1 96 AB A6 30 C5 5F BE 0C 50 C1}
@@ -93,12 +101,14 @@ rule apt_equation_cryptotable
 rule Equation_Kaspersky_TripleFantasy_1
 {
 
-    meta:
-        description = "Equation Group Malware - TripleFantasy http://goo.gl/ivt8EW"
-        author = "Florian Roth"
-        reference = "http://goo.gl/ivt8EW"
-        date = "2015/02/16"
-        hash = "b2b2cd9ca6f5864ef2ac6382b7b6374a9fb2cbe9"
+      meta:
+    description = "Equation Group Malware - TripleFantasy http://goo.gl/ivt8EW"
+    author = "Florian Roth"
+    reference = "http://goo.gl/ivt8EW"
+    date = "2015/02/16"
+    hash = "b2b2cd9ca6f5864ef2ac6382b7b6374a9fb2cbe9"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $mz = { 4d 5a }
@@ -124,12 +134,14 @@ rule Equation_Kaspersky_TripleFantasy_1
 rule Equation_Kaspersky_DoubleFantasy_1
 {
 
-    meta:
-        description = "Equation Group Malware - DoubleFantasy"
-        author = "Florian Roth"
-        reference = "http://goo.gl/ivt8EW"
-        date = "2015/02/16"
-        hash = "d09b4b6d3244ac382049736ca98d7de0c6787fa2"
+      meta:
+    description = "Equation Group Malware - DoubleFantasy"
+    author = "Florian Roth"
+    reference = "http://goo.gl/ivt8EW"
+    date = "2015/02/16"
+    hash = "d09b4b6d3244ac382049736ca98d7de0c6787fa2"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $mz = { 4d 5a }
@@ -153,12 +165,14 @@ rule Equation_Kaspersky_DoubleFantasy_1
 rule Equation_Kaspersky_GROK_Keylogger
 {
 
-    meta:
-        description = "Equation Group Malware - GROK keylogger"
-        author = "Florian Roth"
-        reference = "http://goo.gl/ivt8EW"
-        date = "2015/02/16"
-        hash = "50b8f125ed33233a545a1aac3c9d4bb6aa34b48f"
+      meta:
+    description = "Equation Group Malware - GROK keylogger"
+    author = "Florian Roth"
+    reference = "http://goo.gl/ivt8EW"
+    date = "2015/02/16"
+    hash = "50b8f125ed33233a545a1aac3c9d4bb6aa34b48f"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $mz = { 4d 5a }
@@ -183,12 +197,14 @@ rule Equation_Kaspersky_GROK_Keylogger
 rule Equation_Kaspersky_GreyFishInstaller
 {
 
-    meta:
-        description = "Equation Group Malware - Grey Fish"
-        author = "Florian Roth"
-        reference = "http://goo.gl/ivt8EW"
-        date = "2015/02/16"
-        hash = "58d15d1581f32f36542f3e9fb4b1fc84d2a6ba35"
+      meta:
+    description = "Equation Group Malware - Grey Fish"
+    author = "Florian Roth"
+    reference = "http://goo.gl/ivt8EW"
+    date = "2015/02/16"
+    hash = "58d15d1581f32f36542f3e9fb4b1fc84d2a6ba35"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "DOGROUND.exe" fullword wide
@@ -202,12 +218,14 @@ rule Equation_Kaspersky_GreyFishInstaller
 rule Equation_Kaspersky_EquationDrugInstaller
 {
 
-    meta:
-        description = "Equation Group Malware - EquationDrug installer LUTEUSOBSTOS"
-        author = "Florian Roth"
-        reference = "http://goo.gl/ivt8EW"
-        date = "2015/02/16"
-        hash = "61fab1b8451275c7fd580895d9c68e152ff46417"
+      meta:
+    description = "Equation Group Malware - EquationDrug installer LUTEUSOBSTOS"
+    author = "Florian Roth"
+    reference = "http://goo.gl/ivt8EW"
+    date = "2015/02/16"
+    hash = "61fab1b8451275c7fd580895d9c68e152ff46417"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $mz = { 4d 5a }
@@ -229,12 +247,14 @@ rule Equation_Kaspersky_EquationDrugInstaller
 rule Equation_Kaspersky_EquationLaserInstaller
 {
 
-    meta:
-        description = "Equation Group Malware - EquationLaser Installer"
-        author = "Florian Roth"
-        reference = "http://goo.gl/ivt8EW"
-        date = "2015/02/16"
-        hash = "5e1f56c1e57fbff96d4999db1fd6dd0f7d8221df"
+      meta:
+    description = "Equation Group Malware - EquationLaser Installer"
+    author = "Florian Roth"
+    reference = "http://goo.gl/ivt8EW"
+    date = "2015/02/16"
+    hash = "5e1f56c1e57fbff96d4999db1fd6dd0f7d8221df"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $mz = { 4d 5a }
@@ -255,12 +275,14 @@ rule Equation_Kaspersky_EquationLaserInstaller
 rule Equation_Kaspersky_FannyWorm
 {
 
-    meta:
-        description = "Equation Group Malware - Fanny Worm"
-        author = "Florian Roth"
-        reference = "http://goo.gl/ivt8EW"
-        date = "2015/02/16"
-        hash = "1f0ae54ac3f10d533013f74f48849de4e65817a7"
+      meta:
+    description = "Equation Group Malware - Fanny Worm"
+    author = "Florian Roth"
+    reference = "http://goo.gl/ivt8EW"
+    date = "2015/02/16"
+    hash = "1f0ae54ac3f10d533013f74f48849de4e65817a7"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $mz = { 4d 5a }
@@ -291,12 +313,14 @@ rule Equation_Kaspersky_FannyWorm
 rule Equation_Kaspersky_HDD_reprogramming_module 
 {
 
-    meta:
-        description = "Equation Group Malware - HDD reprogramming module"
-        author = "Florian Roth"
-        reference = "http://goo.gl/ivt8EW"
-        date = "2015/02/16"
-        hash = "ff2b50f371eb26f22eb8a2118e9ab0e015081500"
+      meta:
+    description = "Equation Group Malware - HDD reprogramming module"
+    author = "Florian Roth"
+    reference = "http://goo.gl/ivt8EW"
+    date = "2015/02/16"
+    hash = "ff2b50f371eb26f22eb8a2118e9ab0e015081500"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $mz = { 4d 5a }
@@ -312,12 +336,14 @@ rule Equation_Kaspersky_HDD_reprogramming_module
 rule Equation_Kaspersky_EOP_Package 
 {
 
-    meta:
-        description = "Equation Group Malware - EoP package and malware launcher"
-        author = "Florian Roth"
-        reference = "http://goo.gl/ivt8EW"
-        date = "2015/02/16"
-        hash = "2bd1b1f5b4384ce802d5d32d8c8fd3d1dc04b962"
+      meta:
+    description = "Equation Group Malware - EoP package and malware launcher"
+    author = "Florian Roth"
+    reference = "http://goo.gl/ivt8EW"
+    date = "2015/02/16"
+    hash = "2bd1b1f5b4384ce802d5d32d8c8fd3d1dc04b962"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $mz = { 4d 5a }
@@ -336,12 +362,14 @@ rule Equation_Kaspersky_EOP_Package
 rule Equation_Kaspersky_TripleFantasy_Loader 
 {
 
-    meta:
-        description = "Equation Group Malware - TripleFantasy Loader"
-        author = "Florian Roth"
-        reference = "http://goo.gl/ivt8EW"
-        date = "2015/02/16"
-        hash = "4ce6e77a11b443cc7cbe439b71bf39a39d3d7fa3"
+      meta:
+    description = "Equation Group Malware - TripleFantasy Loader"
+    author = "Florian Roth"
+    reference = "http://goo.gl/ivt8EW"
+    date = "2015/02/16"
+    hash = "4ce6e77a11b443cc7cbe439b71bf39a39d3d7fa3"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $mz = { 4d 5a }
@@ -364,12 +392,14 @@ rule Equation_Kaspersky_TripleFantasy_Loader
 rule Equation_Kaspersky_SuspiciousString 
 {
   
-    meta:
-        description = "Equation Group Malware - suspicious string found in sample"
-        author = "Florian Roth"
-        reference = "http://goo.gl/ivt8EW"
-        date = "2015/02/17"
-        score = 60
+      meta:
+    description = "Equation Group Malware - suspicious string found in sample"
+    author = "Florian Roth"
+    reference = "http://goo.gl/ivt8EW"
+    date = "2015/02/17"
+    score = 60
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $mz = { 4d 5a }
@@ -389,12 +419,14 @@ rule Equation_Kaspersky_SuspiciousString
 rule EquationDrug_NetworkSniffer1
 {
 
-    meta:
-        description = "EquationDrug - Backdoor driven by network sniffer - mstcp32.sys, fat32.sys"
-        author = "Florian Roth @4nc4p"
-        reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
-        date = "2015/03/11"
-        hash = "26e787997a338d8111d96c9a4c103cf8ff0201ce"
+      meta:
+    description = "EquationDrug - Backdoor driven by network sniffer - mstcp32.sys, fat32.sys"
+    author = "Florian Roth @4nc4p"
+    reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
+    date = "2015/03/11"
+    hash = "26e787997a338d8111d96c9a4c103cf8ff0201ce"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "Microsoft(R) Windows (TM) Operating System" fullword wide
@@ -413,12 +445,14 @@ rule EquationDrug_NetworkSniffer1
 rule EquationDrug_CompatLayer_UnilayDLL 
 {
 
-    meta:
-        description = "EquationDrug - Unilay.DLL"
-        author = "Florian Roth @4nc4p"
-        reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
-        date = "2015/03/11"
-        hash = "a3a31937956f161beba8acac35b96cb74241cd0f"
+      meta:
+    description = "EquationDrug - Unilay.DLL"
+    author = "Florian Roth @4nc4p"
+    reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
+    date = "2015/03/11"
+    hash = "a3a31937956f161beba8acac35b96cb74241cd0f"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $mz = { 4d 5a }
@@ -431,12 +465,14 @@ rule EquationDrug_CompatLayer_UnilayDLL
 rule EquationDrug_HDDSSD_Op 
 {
 
-    meta:
-        description = "EquationDrug - HDD/SSD firmware operation - nls_933w.dll"
-        author = "Florian Roth @4nc4p"
-        reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
-        date = "2015/03/11"
-        hash = "ff2b50f371eb26f22eb8a2118e9ab0e015081500"
+      meta:
+    description = "EquationDrug - HDD/SSD firmware operation - nls_933w.dll"
+    author = "Florian Roth @4nc4p"
+    reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
+    date = "2015/03/11"
+    hash = "ff2b50f371eb26f22eb8a2118e9ab0e015081500"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "nls_933w.dll" fullword ascii
@@ -448,12 +484,14 @@ rule EquationDrug_HDDSSD_Op
 rule EquationDrug_NetworkSniffer2 
 {
 
-    meta:
-        description = "EquationDrug - Network Sniffer - tdip.sys"
-        author = "Florian Roth @4nc4p"
-        reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
-        date = "2015/03/11"
-        hash = "7e3cd36875c0e5ccb076eb74855d627ae8d4627f"
+      meta:
+    description = "EquationDrug - Network Sniffer - tdip.sys"
+    author = "Florian Roth @4nc4p"
+    reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
+    date = "2015/03/11"
+    hash = "7e3cd36875c0e5ccb076eb74855d627ae8d4627f"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "Microsoft(R) Windows (TM) Operating System" fullword wide
@@ -472,12 +510,14 @@ rule EquationDrug_NetworkSniffer2
 rule EquationDrug_NetworkSniffer3 
 {
 
-    meta:
-        description = "EquationDrug - Network Sniffer - tdip.sys"
-        author = "Florian Roth @4nc4p"
-        reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
-        date = "2015/03/11"
-        hash = "14599516381a9646cd978cf962c4f92386371040"
+      meta:
+    description = "EquationDrug - Network Sniffer - tdip.sys"
+    author = "Florian Roth @4nc4p"
+    reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
+    date = "2015/03/11"
+    hash = "14599516381a9646cd978cf962c4f92386371040"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "Corporation. All rights reserved." fullword wide
@@ -492,12 +532,14 @@ rule EquationDrug_NetworkSniffer3
 rule EquationDrug_VolRec_Driver 
 {
 
-    meta:
-        description = "EquationDrug - Collector plugin for Volrec - msrstd.sys"
-        author = "Florian Roth @4nc4p"
-        reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
-        date = "2015/03/11"
-        hash = "ee2b504ad502dc3fed62d6483d93d9b1221cdd6c"
+      meta:
+    description = "EquationDrug - Collector plugin for Volrec - msrstd.sys"
+    author = "Florian Roth @4nc4p"
+    reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
+    date = "2015/03/11"
+    hash = "ee2b504ad502dc3fed62d6483d93d9b1221cdd6c"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "msrstd.sys" fullword wide
@@ -511,12 +553,14 @@ rule EquationDrug_VolRec_Driver
 rule EquationDrug_KernelRootkit 
 {
 
-    meta:
-        description = "EquationDrug - Kernel mode stage 0 and rootkit (Windows 2000 and above) - msndsrv.sys"
-        author = "Florian Roth @4nc4p"
-        reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
-        date = "2015/03/11"
-        hash = "597715224249e9fb77dc733b2e4d507f0cc41af6"
+      meta:
+    description = "EquationDrug - Kernel mode stage 0 and rootkit (Windows 2000 and above) - msndsrv.sys"
+    author = "Florian Roth @4nc4p"
+    reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
+    date = "2015/03/11"
+    hash = "597715224249e9fb77dc733b2e4d507f0cc41af6"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "Microsoft(R) Windows (TM) Operating System" fullword wide
@@ -535,12 +579,14 @@ rule EquationDrug_KernelRootkit
 rule EquationDrug_Keylogger 
 {
 
-    meta:
-        description = "EquationDrug - Key/clipboard logger driver - msrtvd.sys"
-        author = "Florian Roth @4nc4p"
-        reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
-        date = "2015/03/11"
-        hash = "b93aa17b19575a6e4962d224c5801fb78e9a7bb5"
+      meta:
+    description = "EquationDrug - Key/clipboard logger driver - msrtvd.sys"
+    author = "Florian Roth @4nc4p"
+    reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
+    date = "2015/03/11"
+    hash = "b93aa17b19575a6e4962d224c5801fb78e9a7bb5"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "\\registry\\machine\\software\\Microsoft\\Windows NT\\CurrentVersion" fullword wide
@@ -555,12 +601,14 @@ rule EquationDrug_Keylogger
 rule EquationDrug_NetworkSniffer4 
 {
 
-    meta:
-        description = "EquationDrug - Network-sniffer/patcher - atmdkdrv.sys"
-        author = "Florian Roth @4nc4p"
-        reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
-        date = "2015/03/11"
-        hash = "cace40965f8600a24a2457f7792efba3bd84d9ba"
+      meta:
+    description = "EquationDrug - Network-sniffer/patcher - atmdkdrv.sys"
+    author = "Florian Roth @4nc4p"
+    reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
+    date = "2015/03/11"
+    hash = "cace40965f8600a24a2457f7792efba3bd84d9ba"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "Copyright 1999 RAVISENT Technologies Inc." fullword wide
@@ -583,12 +631,14 @@ rule EquationDrug_NetworkSniffer4
 rule EquationDrug_PlatformOrchestrator 
 {
 
-    meta:
-        description = "EquationDrug - Platform orchestrator - mscfg32.dll, svchost32.dll"
-        author = "Florian Roth @4nc4p"
-        reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
-        date = "2015/03/11"
-        hash = "febc4f30786db7804008dc9bc1cebdc26993e240"
+      meta:
+    description = "EquationDrug - Platform orchestrator - mscfg32.dll, svchost32.dll"
+    author = "Florian Roth @4nc4p"
+    reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
+    date = "2015/03/11"
+    hash = "febc4f30786db7804008dc9bc1cebdc26993e240"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $s0 = "SERVICES.EXE" fullword wide
@@ -605,12 +655,14 @@ rule EquationDrug_PlatformOrchestrator
 rule EquationDrug_NetworkSniffer5 
 {
 
-    meta:
-        description = "EquationDrug - Network-sniffer/patcher - atmdkdrv.sys"
-        author = "Florian Roth @4nc4p"
-        reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
-        date = "2015/03/11"
-        hash = "09399b9bd600d4516db37307a457bc55eedcbd17"
+      meta:
+    description = "EquationDrug - Network-sniffer/patcher - atmdkdrv.sys"
+    author = "Florian Roth @4nc4p"
+    reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
+    date = "2015/03/11"
+    hash = "09399b9bd600d4516db37307a457bc55eedcbd17"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "Microsoft(R) Windows (TM) Operating System" fullword wide
@@ -627,12 +679,14 @@ rule EquationDrug_NetworkSniffer5
 rule EquationDrug_FileSystem_Filter 
 {
 
-    meta:
-        description = "EquationDrug - Filesystem filter driver – volrec.sys, scsi2mgr.sys"
-        author = "Florian Roth @4nc4p"
-        reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
-        date = "2015/03/11"
-        hash = "57fa4a1abbf39f4899ea76543ebd3688dcc11e13"
+      meta:
+    description = "EquationDrug - Filesystem filter driver – volrec.sys, scsi2mgr.sys"
+    author = "Florian Roth @4nc4p"
+    reference = "http://securelist.com/blog/research/69203/inside-the-equationdrug-espionage-platform/"
+    date = "2015/03/11"
+    hash = "57fa4a1abbf39f4899ea76543ebd3688dcc11e13"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "volrec.sys" fullword wide
@@ -646,11 +700,13 @@ rule EquationDrug_FileSystem_Filter
 rule apt_equation_keyword 
 {
 
-    meta:
-        description = "Rule to detect Equation group's keyword in executable file"
-        author = "Florian Roth @4nc4p"
-        last_modified = "2015-09-26"
-        reference = "http://securelist.com/blog/research/68750/equation-the-death-star-of-malware-galaxy/"
+      meta:
+    description = "Rule to detect Equation group's keyword in executable file"
+    author = "Florian Roth @4nc4p"
+    last_modified = "2015-09-26"
+    reference = "http://securelist.com/blog/research/68750/equation-the-death-star-of-malware-galaxy/"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
          $a1 = "Backsnarf_AB25" wide

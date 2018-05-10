@@ -8,10 +8,12 @@ import "pe"
 rule Trj_Elex_Installer_NSIS 
 {
    
-    meta:
-        author = "Centro Criptológico Nacional (CCN)"
-        description = "Elex Installer NSIS"
-        ref = "https://www.ccn-cert.cni.es/informes/informes-ccn-cert-publicos.html"
+      meta:
+    author = "Centro Criptológico Nacional (CCN)"
+    description = "Elex Installer NSIS"
+    ref = "https://www.ccn-cert.cni.es/informes/informes-ccn-cert-publicos.html"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $mz = { 4d 5a }
@@ -25,10 +27,12 @@ rule Trj_Elex_Installer_NSIS
 rule Trj_Elex_Installer 
 {
 
-    meta:
-        author = "Centro Criptológico Nacional (CCN)"
-        description = "Elex Installer"
-        ref = "https://www.ccn-cert.cni.es/informes/informes-ccn-cert-publicos.html"
+      meta:
+    author = "Centro Criptológico Nacional (CCN)"
+    description = "Elex Installer"
+    ref = "https://www.ccn-cert.cni.es/informes/informes-ccn-cert-publicos.html"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $mz = { 4d 5a }
@@ -43,10 +47,12 @@ rule Trj_Elex_Installer
 rule Trj_Elex_Service32 
 {
 
-    meta:
-        author = "Centro Criptológico Nacional (CCN)"
-        description = "Elex Service 32 bits"
-        ref = "https://www.ccn-cert.cni.es/informes/informes-ccn-cert-publicos.html"
+      meta:
+    author = "Centro Criptológico Nacional (CCN)"
+    description = "Elex Service 32 bits"
+    ref = "https://www.ccn-cert.cni.es/informes/informes-ccn-cert-publicos.html"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $mz = { 4d 5a }
@@ -61,10 +67,12 @@ rule Trj_Elex_Service32
 rule Trj_Elex_Service64 
 {
     
-    meta:
-        author = "Centro Criptológico Nacional (CCN)"
-        description = "Elex Service 64 bits"
-        ref = "https://www.ccn-cert.cni.es/informes/informes-ccn-cert-publicos.html"
+      meta:
+    author = "Centro Criptológico Nacional (CCN)"
+    description = "Elex Service 64 bits"
+    ref = "https://www.ccn-cert.cni.es/informes/informes-ccn-cert-publicos.html"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $mz = { 4d 5a }
@@ -79,10 +87,12 @@ rule Trj_Elex_Service64
 rule Trj_Elex_Dll32 
 {
 
-    meta:
-        author = "Centro Criptológico Nacional (CCN)"
-        description = "Elex DLL 32 bits"
-        ref = "https://www.ccn-cert.cni.es/informes/informes-ccn-cert-publicos.html"
+      meta:
+    author = "Centro Criptológico Nacional (CCN)"
+    description = "Elex DLL 32 bits"
+    ref = "https://www.ccn-cert.cni.es/informes/informes-ccn-cert-publicos.html"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $mz = { 4d 5a }
@@ -96,10 +106,12 @@ rule Trj_Elex_Dll32
 rule Trj_Elex_Dll64 
 {
 
-    meta:
-        author = "Centro Criptológico Nacional (CCN)"
-        description = "Elex DLL 64 bits"
-        ref = "https://www.ccn-cert.cni.es/informes/informes-ccn-cert-publicos.html"
+      meta:
+    author = "Centro Criptológico Nacional (CCN)"
+    description = "Elex DLL 64 bits"
+    ref = "https://www.ccn-cert.cni.es/informes/informes-ccn-cert-publicos.html"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $mz = { 4d 5a }

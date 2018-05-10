@@ -6,10 +6,12 @@
 rule DDosTf
 {
 
-meta:
+  meta:
     author = "benkow_ - MalwareMustDie"
     reference = "http://blog.malwaremustdie.org/2016/01/mmd-0048-2016-ddostf-new-elf-windows.html"
     description = "Rule to detect ELF.DDosTf infection"
+    severity = "7"
+    type = "Malware"
 
 strings:
     $st0 = "ddos.tf"

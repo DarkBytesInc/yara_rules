@@ -6,11 +6,13 @@
 import "pe"
 
 rule MS17_010_WanaCry_worm {
-	meta:
-		description = "Worm exploiting MS17-010 and dropping WannaCry Ransomware"
-		author = "Felipe Molina (@felmoltor)"
-		reference = "https://www.exploit-db.com/exploits/41987/"
-		date = "2017/05/12"
+	  meta:
+    description = "Worm exploiting MS17-010 and dropping WannaCry Ransomware"
+    author = "Felipe Molina (@felmoltor)"
+    reference = "https://www.exploit-db.com/exploits/41987/"
+    date = "2017/05/12"
+    severity = "10"
+    type = "Ransomware"
 	strings:
 		$ms17010_str1="PC NETWORK PROGRAM 1.0"
 		$ms17010_str2="LANMAN1.0"
@@ -35,8 +37,10 @@ rule by the sample hashes.  Add, share, rinse and repeat!
  
 rule WannaDecryptor: WannaDecryptor
 {
-        meta:
-                description = "Detection for common strings of WannaDecryptor"
+          meta:
+    description = "Detection for common strings of WannaDecryptor"
+    severity = "10"
+    type = "Ransomware"
  
         strings:
                 $id1 = "taskdl.exe"
@@ -53,12 +57,14 @@ rule WannaDecryptor: WannaDecryptor
 
 rule Wanna_Sample_84c82835a5d21bbcf75a61706d8ab549: Wanna_Sample_84c82835a5d21bbcf75a61706d8ab549
 {
-        meta:
-                description = "Specific sample match for WannaCryptor"
-                MD5 = "84c82835a5d21bbcf75a61706d8ab549"
-                SHA1 = "5ff465afaabcbf0150d1a3ab2c2e74f3a4426467"
-                SHA256 = "ed01ebfbc9eb5bbea545af4d01bf5f1071661840480439c6e5babe8e080e41aa"
-                INFO = "Looks for 'taskdl' and 'taskse' at known offsets"
+          meta:
+    description = "Specific sample match for WannaCryptor"
+    MD5 = "84c82835a5d21bbcf75a61706d8ab549"
+    SHA1 = "5ff465afaabcbf0150d1a3ab2c2e74f3a4426467"
+    SHA256 = "ed01ebfbc9eb5bbea545af4d01bf5f1071661840480439c6e5babe8e080e41aa"
+    INFO = "Looks for 'taskdl' and 'taskse' at known offsets"
+    severity = "10"
+    type = "Ransomware"
  
         strings:
                 $taskdl = { 00 74 61 73 6b 64 6c }
@@ -70,12 +76,14 @@ rule Wanna_Sample_84c82835a5d21bbcf75a61706d8ab549: Wanna_Sample_84c82835a5d21bb
 
 rule Wanna_Sample_4da1f312a214c07143abeeafb695d904: Wanna_Sample_4da1f312a214c07143abeeafb695d904
 {
-        meta:
-                description = "Specific sample match for WannaCryptor"
-                MD5 = "4da1f312a214c07143abeeafb695d904"
-                SHA1 = "b629f072c9241fd2451f1cbca2290197e72a8f5e"
-                SHA256 = "aee20f9188a5c3954623583c6b0e6623ec90d5cd3fdec4e1001646e27664002c"
-                INFO = "Looks for offsets of r.wry and s.wry instances"
+          meta:
+    description = "Specific sample match for WannaCryptor"
+    MD5 = "4da1f312a214c07143abeeafb695d904"
+    SHA1 = "b629f072c9241fd2451f1cbca2290197e72a8f5e"
+    SHA256 = "aee20f9188a5c3954623583c6b0e6623ec90d5cd3fdec4e1001646e27664002c"
+    INFO = "Looks for offsets of r.wry and s.wry instances"
+    severity = "10"
+    type = "Ransomware"
  
         strings:
                 $rwnry = { 72 2e 77 72 79 }
@@ -86,12 +94,14 @@ rule Wanna_Sample_4da1f312a214c07143abeeafb695d904: Wanna_Sample_4da1f312a214c07
 }
 rule NHS_Strain_Wanna: NHS_Strain_Wanna
 {
-        meta:
-                description = "Detection for worm-strain bundle of Wcry, DOublePulsar"
-                MD5 = "db349b97c37d22f5ea1d1841e3c89eb4"
-                SHA1 = "e889544aff85ffaf8b0d0da705105dee7c97fe26"
-                SHA256 = "24d004a104d4d54034dbcffc2a4b19a11f39008a575aa614ea04703480b1022c"
-                INFO = "Looks for specific offsets of c.wnry and t.wnry strings"
+          meta:
+    description = "Detection for worm-strain bundle of Wcry, DOublePulsar"
+    MD5 = "db349b97c37d22f5ea1d1841e3c89eb4"
+    SHA1 = "e889544aff85ffaf8b0d0da705105dee7c97fe26"
+    SHA256 = "24d004a104d4d54034dbcffc2a4b19a11f39008a575aa614ea04703480b1022c"
+    INFO = "Looks for specific offsets of c.wnry and t.wnry strings"
+    severity = "10"
+    type = "Ransomware"
  
         strings:
                 $cwnry = { 63 2e 77 6e 72 79 }
@@ -102,13 +112,15 @@ rule NHS_Strain_Wanna: NHS_Strain_Wanna
 }
 rule ransom_telefonica : TELEF
 {
-  meta:
+    meta:
     author = "Jaume Martin <@Xumeiquer>"
     description = "Ransmoware Telefonica"
     date = "2017-05-13"
     reference = "http://www.elmundo.es/tecnologia/2017/05/12/59158a8ce5fdea194f8b4616.html"
     md5 = "7f7ccaa16fb15eb1c7399d422f8363e8"
     sha256 = "2584e1521065e45ec3c17767c065429038fc6291c091097ea8b22c8a502c41dd"
+    severity = "10"
+    type = "Ransomware"
   strings:
     $a = "RegCreateKeyW" wide ascii nocase
     $b = "cmd.exe /c"
@@ -121,12 +133,14 @@ rule ransom_telefonica : TELEF
 }
 
 rule Wanna_Cry_Ransomware_Generic {
-       meta:
-              description = "Detects WannaCry Ransomware on Disk and in Virtual Page"
-              author = "US-CERT Code Analysis Team"
-              reference = "not set"                                        
-              date = "2017/05/12"
-       hash0 = "4DA1F312A214C07143ABEEAFB695D904"
+         meta:
+    description = "Detects WannaCry Ransomware on Disk and in Virtual Page"
+    author = "US-CERT Code Analysis Team"
+    reference = "not set"
+    date = "2017/05/12"
+    hash0 = "4DA1F312A214C07143ABEEAFB695D904"
+    severity = "10"
+    type = "Ransomware"
        strings:
               $s0 = {410044004D0049004E0024}
               $s1 = "WannaDecryptor"
@@ -148,12 +162,14 @@ rule Wanna_Cry_Ransomware_Generic {
               $s0 and $s1 and $s2 and $s3 or $s4 and $s5 and $s6 and $s7 or $s8 and $s9 and $s10 or $s11 and $s12 or $s13 or $s14 or $s15
 }
 rule WannaCry_Ransomware {
-   meta:
-      description = "Detects WannaCry Ransomware"
-      author = "Florian Roth (with the help of binar.ly)"
-      reference = "https://goo.gl/HG2j5T"
-      date = "2017-05-12"
-      hash1 = "ed01ebfbc9eb5bbea545af4d01bf5f1071661840480439c6e5babe8e080e41aa"
+     meta:
+    description = "Detects WannaCry Ransomware"
+    author = "Florian Roth (with the help of binar.ly)"
+    reference = "https://goo.gl/HG2j5T"
+    date = "2017-05-12"
+    hash1 = "ed01ebfbc9eb5bbea545af4d01bf5f1071661840480439c6e5babe8e080e41aa"
+    severity = "10"
+    type = "Ransomware"
    strings:
       $x1 = "icacls . /grant Everyone:F /T /C /Q" fullword ascii
       $x2 = "taskdl.exe" fullword ascii
@@ -183,14 +199,16 @@ rule WannaCry_Ransomware {
 }
 
 rule WannaCry_Ransomware_Gen {
-   meta:
-      description = "Detects WannaCry Ransomware"
-      author = "Florian Roth (based on rule by US CERT)"
-      reference = "https://www.us-cert.gov/ncas/alerts/TA17-132A"
-      date = "2017-05-12"
-      hash1 = "9fe91d542952e145f2244572f314632d93eb1e8657621087b2ca7f7df2b0cb05"
-      hash2 = "8e5b5841a3fe81cade259ce2a678ccb4451725bba71f6662d0cc1f08148da8df"
-      hash3 = "4384bf4530fb2e35449a8e01c7e0ad94e3a25811ba94f7847c1e6612bbb45359"
+     meta:
+    description = "Detects WannaCry Ransomware"
+    author = "Florian Roth (based on rule by US CERT)"
+    reference = "https://www.us-cert.gov/ncas/alerts/TA17-132A"
+    date = "2017-05-12"
+    hash1 = "9fe91d542952e145f2244572f314632d93eb1e8657621087b2ca7f7df2b0cb05"
+    hash2 = "8e5b5841a3fe81cade259ce2a678ccb4451725bba71f6662d0cc1f08148da8df"
+    hash3 = "4384bf4530fb2e35449a8e01c7e0ad94e3a25811ba94f7847c1e6612bbb45359"
+    severity = "10"
+    type = "Ransomware"
    strings:
       $s1 = "__TREEID__PLACEHOLDER__" fullword ascii
       $s2 = "__USERID__PLACEHOLDER__" fullword ascii
@@ -202,12 +220,14 @@ rule WannaCry_Ransomware_Gen {
 }
 
 rule WannCry_m_vbs {
-   meta:
-      description = "Detects WannaCry Ransomware VBS"
-      author = "Florian Roth"
-      reference = "https://goo.gl/HG2j5T"
-      date = "2017-05-12"
-      hash1 = "51432d3196d9b78bdc9867a77d601caffd4adaa66dcac944a5ba0b3112bbea3b"
+     meta:
+    description = "Detects WannaCry Ransomware VBS"
+    author = "Florian Roth"
+    reference = "https://goo.gl/HG2j5T"
+    date = "2017-05-12"
+    hash1 = "51432d3196d9b78bdc9867a77d601caffd4adaa66dcac944a5ba0b3112bbea3b"
+    severity = "10"
+    type = "Ransomware"
    strings:
       $x1 = ".TargetPath = \"C:\\@" ascii
       $x2 = ".CreateShortcut(\"C:\\@" ascii
@@ -217,12 +237,14 @@ rule WannCry_m_vbs {
 }
 
 rule WannCry_BAT {
-   meta:
-      description = "Detects WannaCry Ransomware BATCH File"
-      author = "Florian Roth"
-      reference = "https://goo.gl/HG2j5T"
-      date = "2017-05-12"
-      hash1 = "f01b7f52e3cb64f01ddc248eb6ae871775ef7cb4297eba5d230d0345af9a5077"
+     meta:
+    description = "Detects WannaCry Ransomware BATCH File"
+    author = "Florian Roth"
+    reference = "https://goo.gl/HG2j5T"
+    date = "2017-05-12"
+    hash1 = "f01b7f52e3cb64f01ddc248eb6ae871775ef7cb4297eba5d230d0345af9a5077"
+    severity = "10"
+    type = "Ransomware"
    strings:
       $s1 = "@.exe\">> m.vbs" ascii
       $s2 = "cscript.exe //nologo m.vbs" fullword ascii
@@ -233,12 +255,14 @@ rule WannCry_BAT {
 }
 
 rule WannaCry_RansomNote {
-   meta:
-      description = "Detects WannaCry Ransomware Note"
-      author = "Florian Roth"
-      reference = "https://goo.gl/HG2j5T"
-      date = "2017-05-12"
-      hash1 = "4a25d98c121bb3bd5b54e0b6a5348f7b09966bffeec30776e5a731813f05d49e"
+     meta:
+    description = "Detects WannaCry Ransomware Note"
+    author = "Florian Roth"
+    reference = "https://goo.gl/HG2j5T"
+    date = "2017-05-12"
+    hash1 = "4a25d98c121bb3bd5b54e0b6a5348f7b09966bffeec30776e5a731813f05d49e"
+    severity = "10"
+    type = "Ransomware"
    strings:
       $s1 = "A:  Don't worry about decryption." fullword ascii
       $s2 = "Q:  What's wrong with my files?" fullword ascii
@@ -249,14 +273,15 @@ rule WannaCry_RansomNote {
 /* Kaspersky Rule */
 
 rule lazaruswannacry {
-   meta:
-      description = "Rule based on shared code between Feb 2017 Wannacry sample and Lazarus backdoor from Feb 2015 discovered by Neel Mehta"
-      date = "2017-05-15"
-      reference = "https://twitter.com/neelmehta/status/864164081116225536"
-      author = "Costin G. Raiu, Kaspersky Lab"
-      version = "1.0"
-      hash = "9c7c7149387a1c79679a87dd1ba755bc"
-      hash = "ac21c8ad899727137c4b94458d7aa8d8"
+     meta:
+    description = "Rule based on shared code between Feb 2017 Wannacry sample and Lazarus backdoor from Feb 2015 discovered by Neel Mehta"
+    date = "2017-05-15"
+    reference = "https://twitter.com/neelmehta/status/864164081116225536"
+    author = "Costin G. Raiu, Kaspersky Lab"
+    version = "1.0"
+    hash = "ac21c8ad899727137c4b94458d7aa8d8"
+    severity = "10"
+    type = "Ransomware"
    strings:
       $a1 = { 51 53 55 8B 6C 24 10 56 57 6A 20 8B 45 00 8D 75 04 24 01 0C 01 46 89 45 00 C6 46 FF 03 C6 06 01 46 56 E8 }
       $a2 = { 03 00 04 00 05 00 06 00 08 00 09 00 0A 00 0D 00 10 00 11 00 12 00 13 00 14 00 15 00 16 00 2F 00 30 00 31 00 32 00 33 00 34 00 35 00 36 00 37 00 38 00 39 00 3C 00 3D 00 3E 00 3F 00 40 00 41 00 44 00 45 00 46 00 62 00 63 00 64 00 66 00 67 00 68 00 69 00 6A 00 6B 00 84 00 87 00 88 00 96 00 FF 00 01 C0 02 C0 03 C0 04 C0 05 C0 06 C0 07 C0 08 C0 09 C0 0A C0 0B C0 0C C0 0D C0 0E C0 0F C0 10 C0 11 C0 12 C0 13 C0 14 C0 23 C0 24 C0 27 C0 2B C0 2C C0 FF FE }
@@ -287,10 +312,12 @@ strings:
 
 rule WannaCry_SMB_Exploit
 {
- meta:
- 	description = "WannaCry SMB Exploit"
- 	reference = "https://www.cylance.com/en_us/blog/threat-spotlight-inside-the-wannacry-attack.html"
- 	date = "2017-05-12"
+   meta:
+    description = "WannaCry SMB Exploit"
+    reference = "https://www.cylance.com/en_us/blog/threat-spotlight-inside-the-wannacry-attack.html"
+    date = "2017-05-12"
+    severity = "10"
+    type = "Ransomware"
  
  strings:
  	$s1 = { 53 4D 42 72 00 00 00 00 18 53 C0 00 00 00 00 00 00 00 00 00 00 00 00 00 00 FF FE 00 00 40 00 00 62 00 02 50 43 20 4E 45 54 57 4F 52 4B 20 50 52 4F 47 52 41 4D 20 31 2E 30 00 02 4C 41 4E 4D 41 4E 31 2E 30 00 02 57 69 6E 64 6F 77 73 20 66 6F 72 20 57 6F 72 6B 67 72 6F 75 70 73 20 33 2E 31 61 00 02 4C 4D 31 2E 32 58 30 30 32 00 02 4C 41 4E 4D 41 4E 32 2E 31 00 02 4E 54 20 4C 4D 20 30 2E 31 32 00 00 00 00 00 00 00 88 FF 53 4D 42 73 00 00 00 00 18 07 C0 }
@@ -345,15 +372,13 @@ condition:
 
 rule wannacry_memory_ransom : wannacry_memory_ransom {
 
-meta:
-
-description = "Detects WannaCryptor spreaded during 2017-May-12th campaign and variants in memory"
-
-author = "Blueliv"
-
-reference = "https://blueliv.com/research/wannacrypt-malware-analysis/"
-
-date = "2017-05-15"
+  meta:
+    description = "Detects WannaCryptor spreaded during 2017-May-12th campaign and variants in memory"
+    author = "Blueliv"
+    reference = "https://blueliv.com/research/wannacrypt-malware-analysis/"
+    date = "2017-05-15"
+    severity = "10"
+    type = "Ransomware"
 
 strings:
 
@@ -375,15 +400,13 @@ all of them
 
 rule worm_ms17_010 : worm_ms17_010 {
 
-meta:
-
-description = "Detects Worm used during 2017-May-12th WannaCry campaign, which is based on ETERNALBLUE"
-
-author = "Blueliv"
-
-reference = "https://blueliv.com/research/wannacrypt-malware-analysis/"
-
-date = "2017-05-15"
+  meta:
+    description = "Detects Worm used during 2017-May-12th WannaCry campaign, which is based on ETERNALBLUE"
+    author = "Blueliv"
+    reference = "https://blueliv.com/research/wannacrypt-malware-analysis/"
+    date = "2017-05-15"
+    severity = "10"
+    type = "Ransomware"
 
 strings:
 

@@ -1,6 +1,8 @@
 rule MiniAsp3_mem : memory { 
-  meta: author = "chort (@chort0)"
-  description = "Detect MiniASP3 in memory"
+    meta:
+    description = "Detect MiniASP3 in memory"
+    severity = "7"
+    type = "Malware"
   strings: 
     $pdb = "MiniAsp3\\Release\\MiniAsp.pdb" fullword 
     $httpAbout = "http://%s/about.htm" fullword 

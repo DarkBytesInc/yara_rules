@@ -5,12 +5,14 @@
 rule bin_ndisk  
 {
     
-    meta:
-        description = "Hacking Team Disclosure Sample - file ndisk.sys"
-        author = "Florian Roth"
-        reference = "https://www.virustotal.com/en/file/a03a6ed90b89945a992a8c69f716ec3c743fa1d958426f4c50378cca5bef0a01/analysis/1436184181/"
-        date = "2015-07-07"
-        hash = "cf5089752ba51ae827971272a5b761a4ab0acd84"
+      meta:
+    description = "Hacking Team Disclosure Sample - file ndisk.sys"
+    author = "Florian Roth"
+    reference = "https://www.virustotal.com/en/file/a03a6ed90b89945a992a8c69f716ec3c743fa1d958426f4c50378cca5bef0a01/analysis/1436184181/"
+    date = "2015-07-07"
+    hash = "cf5089752ba51ae827971272a5b761a4ab0acd84"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $s1 = "\\Registry\\Machine\\System\\ControlSet00%d\\services\\ndisk.sys" fullword wide
@@ -29,12 +31,14 @@ rule bin_ndisk
 rule Hackingteam_Elevator_DLL 
 {
 
-    meta:
-        description = "Hacking Team Disclosure Sample - file elevator.dll"
-        author = "Florian Roth"
-        reference = "http://t.co/EG0qtVcKLh"
-        date = "2015-07-07"
-        hash = "b7ec5d36ca702cc9690ac7279fd4fea28d8bd060"
+      meta:
+    description = "Hacking Team Disclosure Sample - file elevator.dll"
+    author = "Florian Roth"
+    reference = "http://t.co/EG0qtVcKLh"
+    date = "2015-07-07"
+    hash = "b7ec5d36ca702cc9690ac7279fd4fea28d8bd060"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $s1 = "\\sysnative\\CI.dll" fullword ascii
@@ -55,14 +59,16 @@ rule Hackingteam_Elevator_DLL
 rule HackingTeam_Elevator_EXE 
 {
 
-    meta:
-        description = "Hacking Team Disclosure Sample - file elevator.exe"
-        author = "Florian Roth"
-        reference = "Hacking Team Disclosure elevator.c"
-        date = "2015-07-07"
-        hash1 = "40a10420b9d49f87527bc0396b19ec29e55e9109e80b52456891243791671c1c"
-        hash2 = "92aec56a859679917dffa44bd4ffeb5a8b2ee2894c689abbbcbe07842ec56b8d"
-        hash = "9261693b67b6e379ad0e57598602712b8508998c0cb012ca23139212ae0009a1"
+      meta:
+    description = "Hacking Team Disclosure Sample - file elevator.exe"
+    author = "Florian Roth"
+    reference = "Hacking Team Disclosure elevator.c"
+    date = "2015-07-07"
+    hash1 = "40a10420b9d49f87527bc0396b19ec29e55e9109e80b52456891243791671c1c"
+    hash2 = "92aec56a859679917dffa44bd4ffeb5a8b2ee2894c689abbbcbe07842ec56b8d"
+    hash = "9261693b67b6e379ad0e57598602712b8508998c0cb012ca23139212ae0009a1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "CRTDLL.DLL" fullword ascii
@@ -85,9 +91,11 @@ rule HackingTeam_Elevator_EXE
 rule RCS_Backdoor
 {
     
-    meta:
-        description = "Hacking Team RCS Backdoor"
-        author = "botherder https://github.com/botherder"
+      meta:
+    description = "Hacking Team RCS Backdoor"
+    author = "botherder https://github.com/botherder"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $filter1 = "$debug3"
@@ -111,9 +119,11 @@ rule RCS_Backdoor
 rule RCS_Scout
 {
     
-    meta:
-        description = "Hacking Team RCS Scout"
-        author = "botherder https://github.com/botherder"
+      meta:
+    description = "Hacking Team RCS Scout"
+    author = "botherder https://github.com/botherder"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $filter1 = "$engine5"

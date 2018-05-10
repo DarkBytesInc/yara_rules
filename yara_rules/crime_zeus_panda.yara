@@ -9,12 +9,14 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule Zeus_Panda {
-   meta:
-      description = "Detects ZEUS Panda Malware"
-      author = "Florian Roth"
-      reference = "https://cyberwtf.files.wordpress.com/2017/07/panda-whitepaper.pdf"
-      date = "2017-08-04"
-      hash1 = "bd956b2e81731874995b9b92e20f75dbf67ac5f12f9daa194525e1b673c7f83c"
+     meta:
+    description = "Detects ZEUS Panda Malware"
+    author = "Florian Roth"
+    reference = "https://cyberwtf.files.wordpress.com/2017/07/panda-whitepaper.pdf"
+    date = "2017-08-04"
+    hash1 = "bd956b2e81731874995b9b92e20f75dbf67ac5f12f9daa194525e1b673c7f83c"
+    severity = "7"
+    type = "Malware"
    strings:
       $x1 = "SER32.dll" fullword ascii
       $x2 = "/c start \"\" \"%s\"" fullword wide

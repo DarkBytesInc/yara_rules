@@ -1,13 +1,15 @@
 rule Powerstager
 {
-    meta:
-      author = "Jeff White - jwhite@paloaltonetworks.com @noottrak"
-      date = "02JAN2018"
-      hash1 = "758097319d61e2744fb6b297f0bff957c6aab299278c1f56a90fba197795a0fa" //x86
-      hash2 = "83e714e72d9f3c500cad610c4772eae6152a232965191f0125c1c6f97004b7b5" //x64
-      description = "Detects PowerStager Windows executable, both x86 and x64"
-      reference = "https://researchcenter.paloaltonetworks.com/2018/01/unit42-powerstager-analysis/"
-      reference2 = "https://github.com/z0noxz/powerstager"
+      meta:
+    author = "Jeff White - jwhite@paloaltonetworks.com @noottrak"
+    date = "02JAN2018"
+    hash1 = "758097319d61e2744fb6b297f0bff957c6aab299278c1f56a90fba197795a0fa" //x86
+    hash2 = "83e714e72d9f3c500cad610c4772eae6152a232965191f0125c1c6f97004b7b5" //x64
+    description = "Detects PowerStager Windows executable, both x86 and x64"
+    reference = "https://researchcenter.paloaltonetworks.com/2018/01/unit42-powerstager-analysis/"
+    reference2 = "https://github.com/z0noxz/powerstager"
+    severity = "7"
+    type = "Exploit Kit"
     
     strings:
       $filename = /%s\\[a-zA-Z0-9]{12}/

@@ -14,12 +14,14 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule d4fe01ea13cf9926c2cf51d0ffbd78f9a110f4b9 {
-	meta:
-		description = "Auto-generated rule - file d4fe01ea13cf9926c2cf51d0ffbd78f9a110f4b9.codex"
-		author = "YarGen Rule Generator"
-		reference = "not set"
-		date = "2016-07-21"
-		hash1 = "d1dc9b2905264da34dc97d6c005810fbcc99be1a6b4b41f883bb179dbcacba6e"
+	  meta:
+    description = "Auto-generated rule - file d4fe01ea13cf9926c2cf51d0ffbd78f9a110f4b9.codex"
+    author = "YarGen Rule Generator"
+    reference = "not set"
+    date = "2016-07-21"
+    hash1 = "d1dc9b2905264da34dc97d6c005810fbcc99be1a6b4b41f883bb179dbcacba6e"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$s1 = ":&:-:=:J:O:\\:m:r:" fullword ascii
 		$s2 = "6)6/666;6N6W6^6c6t6y6" fullword ascii
@@ -50,12 +52,14 @@ rule d4fe01ea13cf9926c2cf51d0ffbd78f9a110f4b9 {
 }
 
 rule sig_7acb8d6d4c062c3097a7d31df103bc4d018519f9 {
-	meta:
-		description = "Auto-generated rule - file 7acb8d6d4c062c3097a7d31df103bc4d018519f9.codex"
-		author = "YarGen Rule Generator"
-		reference = "not set"
-		date = "2016-07-21"
-		hash1 = "e1607486cbb2d111d5df314fe58948aa0dc5897f56f7fd763c62bb30651380e3"
+	  meta:
+    description = "Auto-generated rule - file 7acb8d6d4c062c3097a7d31df103bc4d018519f9.codex"
+    author = "YarGen Rule Generator"
+    reference = "not set"
+    date = "2016-07-21"
+    hash1 = "e1607486cbb2d111d5df314fe58948aa0dc5897f56f7fd763c62bb30651380e3"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$s1 = "5(666Z6c6" fullword ascii
 		$s2 = "Wlm;y%UD%d" fullword ascii
@@ -86,12 +90,14 @@ rule sig_7acb8d6d4c062c3097a7d31df103bc4d018519f9 {
 }
 
 rule sig_5783b35b2eace55a5762df27fcb0b0fb28371b3e {
-	meta:
-		description = "Auto-generated rule - file 5783b35b2eace55a5762df27fcb0b0fb28371b3e.codex"
-		author = "YarGen Rule Generator"
-		reference = "not set"
-		date = "2016-07-21"
-		hash1 = "72513534f2e0f3e77a22023b887df3718c9df70686eb0ae58cbbde2f90f447e4"
+	  meta:
+    description = "Auto-generated rule - file 5783b35b2eace55a5762df27fcb0b0fb28371b3e.codex"
+    author = "YarGen Rule Generator"
+    reference = "not set"
+    date = "2016-07-21"
+    hash1 = "72513534f2e0f3e77a22023b887df3718c9df70686eb0ae58cbbde2f90f447e4"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$s1 = "B+P:\\6" fullword ascii
 		$s2 = "6.666K6S6d6l6}6" fullword ascii
@@ -122,12 +128,14 @@ rule sig_5783b35b2eace55a5762df27fcb0b0fb28371b3e {
 }
 
 rule sig_2fb404bdcebc7acbeb598f8a2ddbecf48c60b113 {
-	meta:
-		description = "Auto-generated rule - file 2fb404bdcebc7acbeb598f8a2ddbecf48c60b113.codex"
-		author = "YarGen Rule Generator"
-		reference = "not set"
-		date = "2016-07-21"
-		hash1 = "4f39d3e70ed1278d5fa83ed9f148ca92383ec662ac34635f7e56cc42eeaee948"
+	  meta:
+    description = "Auto-generated rule - file 2fb404bdcebc7acbeb598f8a2ddbecf48c60b113.codex"
+    author = "YarGen Rule Generator"
+    reference = "not set"
+    date = "2016-07-21"
+    hash1 = "4f39d3e70ed1278d5fa83ed9f148ca92383ec662ac34635f7e56cc42eeaee948"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$s1 = ":%:0:;:F:Q:\\:p:|:" fullword ascii
 		$s2 = "6.666>6F6N6V6^6f6n6v6~6" fullword ascii
@@ -160,15 +168,17 @@ rule sig_2fb404bdcebc7acbeb598f8a2ddbecf48c60b113 {
 /* Super Rules ------------------------------------------------------------- */
 
 rule _84b76d765e7357fa5402b5af97d351424a8edf03_d0f90c1b3ebd79a816b5597a49ae8257df697591_da24c17f75cf0b7d6c5ab01832a827ee4b4c52eb_0 {
-	meta:
-		description = "Auto-generated rule - from files 84b76d765e7357fa5402b5af97d351424a8edf03.codex, d0f90c1b3ebd79a816b5597a49ae8257df697591.codex, da24c17f75cf0b7d6c5ab01832a827ee4b4c52eb.codex"
-		author = "YarGen Rule Generator"
-		reference = "not set"
-		date = "2016-07-21"
-		super_rule = 1
-		hash1 = "add7ed26bc5bcacdf3159fcde71bdd429feeef94dff7d3b22bc9af9deb471c48"
-		hash2 = "a9a62edbafa5932894ed53319c924932b94a0ccdf15644764256eed39fd46d86"
-		hash3 = "efcc9e0377cf83a73bd5fbe42a51a2330936b8e362fc2ab99af6d932079893d9"
+	  meta:
+    description = "Auto-generated rule - from files 84b76d765e7357fa5402b5af97d351424a8edf03.codex, d0f90c1b3ebd79a816b5597a49ae8257df697591.codex, da24c17f75cf0b7d6c5ab01832a827ee4b4c52eb.codex"
+    author = "YarGen Rule Generator"
+    reference = "not set"
+    date = "2016-07-21"
+    super_rule = 1
+    hash1 = "add7ed26bc5bcacdf3159fcde71bdd429feeef94dff7d3b22bc9af9deb471c48"
+    hash2 = "a9a62edbafa5932894ed53319c924932b94a0ccdf15644764256eed39fd46d86"
+    hash3 = "efcc9e0377cf83a73bd5fbe42a51a2330936b8e362fc2ab99af6d932079893d9"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$s1 = ":\":':,:5:=:B:K:P:U:^:c:h:q:v:{:" fullword ascii
 		$s2 = "Y@.hdd \\" fullword ascii
@@ -1139,15 +1149,17 @@ rule _84b76d765e7357fa5402b5af97d351424a8edf03_d0f90c1b3ebd79a816b5597a49ae8257d
 		( uint16(0) == 0x5a4d and filesize < 900KB and ( 5 of ($s*) )and 1 of ($op*) ) or ( all of them )
 }
 rule _370c433dd61ec21d2677cfe02ef93a5f32a2b50d_5bf48d77bade79f2421ae3d258fe8262c043fb8f_08bdf374b28b234e824797145206f4df79eac6ea_1 {
-	meta:
-		description = "Auto-generated rule - from files 370c433dd61ec21d2677cfe02ef93a5f32a2b50d.codex, 5bf48d77bade79f2421ae3d258fe8262c043fb8f.codex, 08bdf374b28b234e824797145206f4df79eac6ea.codex"
-		author = "YarGen Rule Generator"
-		reference = "not set"
-		date = "2016-07-21"
-		super_rule = 1
-		hash1 = "29b4498ac81d654b52cd0a32bdf29ed955f046ef9db1e0eba7da47ab2f950a3e"
-		hash2 = "84ab50a9e325f64a54d84fb6798d8e74f46c21fd8b935d6c47a44bb140effad9"
-		hash3 = "3f326fb6a79842c657efa09b71ce5e46dc110dd324bfabfcd32730d86de0bcf5"
+	  meta:
+    description = "Auto-generated rule - from files 370c433dd61ec21d2677cfe02ef93a5f32a2b50d.codex, 5bf48d77bade79f2421ae3d258fe8262c043fb8f.codex, 08bdf374b28b234e824797145206f4df79eac6ea.codex"
+    author = "YarGen Rule Generator"
+    reference = "not set"
+    date = "2016-07-21"
+    super_rule = 1
+    hash1 = "29b4498ac81d654b52cd0a32bdf29ed955f046ef9db1e0eba7da47ab2f950a3e"
+    hash2 = "84ab50a9e325f64a54d84fb6798d8e74f46c21fd8b935d6c47a44bb140effad9"
+    hash3 = "3f326fb6a79842c657efa09b71ce5e46dc110dd324bfabfcd32730d86de0bcf5"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$s1 = ":$:+:2:9:@:G:N:U:\\:s:" fullword ascii
 		$s2 = "6%6+606<6H6M6\\6b6g6v6}6" fullword ascii

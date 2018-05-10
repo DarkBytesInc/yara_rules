@@ -1,10 +1,12 @@
 
 rule ACE_Containing_EXE {
-    meta:
-        author = "Florian Roth - based on Nick Hoffman' rule - Morphick Inc"
-        description = "Looks for ACE Archives containing an exe/scr file"
-        date = "2015-09-09"
-        score = 50
+      meta:
+    author = "Florian Roth - based on Nick Hoffman' rule - Morphick Inc"
+    description = "Looks for ACE Archives containing an exe/scr file"
+    date = "2015-09-09"
+    score = 50
+    severity = "5"
+    type = "Unknown"
     strings:
         $header = { 2a 2a 41 43 45 2a 2a }
         $extensions1 = ".exe" 

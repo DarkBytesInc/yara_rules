@@ -8,15 +8,17 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule IronGate_APT_Step7ProSim_Gen {
-	meta:
-		description = "Detects IronGate APT Malware - Step7ProSim DLL"
-		author = "Florian Roth"
-		reference = "https://goo.gl/Mr6M2J"
-		date = "2016-06-04"
-		score = 90
-		hash1 = "0539af1a0cc7f231af8f135920a990321529479f6534c3b64e571d490e1514c3"
-		hash2 = "fa8400422f3161206814590768fc1a27cf6420fc5d322d52e82899ac9f49e14f"
-		hash3 = "5ab1672b15de9bda84298e0bb226265af09b70a9f0b26d6dfb7bdd6cbaed192d"
+	  meta:
+    description = "Detects IronGate APT Malware - Step7ProSim DLL"
+    author = "Florian Roth"
+    reference = "https://goo.gl/Mr6M2J"
+    date = "2016-06-04"
+    score = 90
+    hash1 = "0539af1a0cc7f231af8f135920a990321529479f6534c3b64e571d490e1514c3"
+    hash2 = "fa8400422f3161206814590768fc1a27cf6420fc5d322d52e82899ac9f49e14f"
+    hash3 = "5ab1672b15de9bda84298e0bb226265af09b70a9f0b26d6dfb7bdd6cbaed192d"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$x1 = "\\obj\\Release\\Step7ProSim.pdb" ascii
 
@@ -38,13 +40,15 @@ rule IronGate_APT_Step7ProSim_Gen {
 }
 
 rule IronGate_PyInstaller_update_EXE {
-	meta:
-		description = "Detects a PyInstaller file named update.exe as mentioned in the IronGate APT"
-		author = "Florian Roth"
-		reference = "https://goo.gl/Mr6M2J"
-		date = "2016-06-04"
-		score = 60
-		hash1 = "2044712ceb99972d025716f0f16aa039550e22a63000d2885f7b7cd50f6834e0"
+	  meta:
+    description = "Detects a PyInstaller file named update.exe as mentioned in the IronGate APT"
+    author = "Florian Roth"
+    reference = "https://goo.gl/Mr6M2J"
+    date = "2016-06-04"
+    score = 60
+    hash1 = "2044712ceb99972d025716f0f16aa039550e22a63000d2885f7b7cd50f6834e0"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "bpython27.dll" fullword ascii
 		$s5 = "%s%s.exe" fullword ascii
@@ -61,13 +65,15 @@ rule IronGate_PyInstaller_update_EXE {
 /* Other tools used in the APT ---------------------------------------------- */
 
 rule Nirsoft_NetResView {
-	meta:
-		description = "Detects NirSoft NetResView - utility that displays the list of all network resources"
-		author = "Florian Roth"
-		reference = "https://goo.gl/Mr6M2J"
-		date = "2016-06-04"
-		score = 40
-		hash1 = "83f0352c14fa62ae159ab532d85a2b481900fed50d32cc757aa3f4ccf6a13bee"
+	  meta:
+    description = "Detects NirSoft NetResView - utility that displays the list of all network resources"
+    author = "Florian Roth"
+    reference = "https://goo.gl/Mr6M2J"
+    date = "2016-06-04"
+    score = 40
+    hash1 = "83f0352c14fa62ae159ab532d85a2b481900fed50d32cc757aa3f4ccf6a13bee"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "NetResView.exe" fullword wide
 		$s2 = "2005 - 2013 Nir Sofer" wide

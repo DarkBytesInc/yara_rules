@@ -8,12 +8,14 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule WindowsShell_s3 {
-	meta:
-		description = "Detects simple Windows shell - file s3.exe"
-		author = "Florian Roth"
-		reference = "https://github.com/odzhan/shells/"
-		date = "2016-03-26"
-		hash = "344575a58db288c9b5dacc654abc36d38db2e645acff05e894ff51183c61357d"
+	  meta:
+    description = "Detects simple Windows shell - file s3.exe"
+    author = "Florian Roth"
+    reference = "https://github.com/odzhan/shells/"
+    date = "2016-03-26"
+    hash = "344575a58db288c9b5dacc654abc36d38db2e645acff05e894ff51183c61357d"
+    severity = "5"
+    type = "Unknown"
 	strings:
 		$s1 = "cmd                  - execute cmd.exe" fullword ascii
 		$s2 = "\\\\.\\pipe\\%08X" fullword ascii
@@ -29,12 +31,14 @@ rule WindowsShell_s3 {
 }
 
 rule WindosShell_s1 {
-	meta:
-		description = "Detects simple Windows shell - file s1.exe"
-		author = "Florian Roth"
-		reference = "https://github.com/odzhan/shells/"
-		date = "2016-03-26"
-		hash = "4a397497cfaf91e05a9b9d6fa6e335243cca3f175d5d81296b96c13c624818bd"
+	  meta:
+    description = "Detects simple Windows shell - file s1.exe"
+    author = "Florian Roth"
+    reference = "https://github.com/odzhan/shells/"
+    date = "2016-03-26"
+    hash = "4a397497cfaf91e05a9b9d6fa6e335243cca3f175d5d81296b96c13c624818bd"
+    severity = "5"
+    type = "Unknown"
 	strings:
 		$s1 = "[ executing cmd.exe" fullword ascii
 		$s2 = "[ simple remote shell for windows v1" fullword ascii
@@ -49,12 +53,14 @@ rule WindosShell_s1 {
 }
 
 rule WindowsShell_s4 {
-	meta:
-		description = "Detects simple Windows shell - file s4.exe"
-		author = "Florian Roth"
-		reference = "https://github.com/odzhan/shells/"
-		date = "2016-03-26"
-		hash = "f00a1af494067b275407c449b11dfcf5cb9b59a6fac685ebd3f0eb193337e1d6"
+	  meta:
+    description = "Detects simple Windows shell - file s4.exe"
+    author = "Florian Roth"
+    reference = "https://github.com/odzhan/shells/"
+    date = "2016-03-26"
+    hash = "f00a1af494067b275407c449b11dfcf5cb9b59a6fac685ebd3f0eb193337e1d6"
+    severity = "5"
+    type = "Unknown"
 	strings:
 		$s1 = "cmd                  - execute cmd.exe" fullword ascii
 		$s2 = "\\\\.\\pipe\\%08X" fullword ascii
@@ -71,17 +77,19 @@ rule WindowsShell_s4 {
 /* Super Rules ------------------------------------------------------------- */
 
 rule WindowsShell_Gen {
-	meta:
-		description = "Detects simple Windows shell - from files keygen.exe, s1.exe, s2.exe, s3.exe, s4.exe"
-		author = "Florian Roth"
-		reference = "https://github.com/odzhan/shells/"
-		date = "2016-03-26"
-		super_rule = 1
-		hash1 = "a7c3d85eabac01e7a7ec914477ea9f17e3020b3b2f8584a46a98eb6a2a7611c5"
-		hash2 = "4a397497cfaf91e05a9b9d6fa6e335243cca3f175d5d81296b96c13c624818bd"
-		hash3 = "df0693caae2e5914e63e9ee1a14c1e9506f13060faed67db5797c9e61f3907f0"
-		hash4 = "344575a58db288c9b5dacc654abc36d38db2e645acff05e894ff51183c61357d"
-		hash5 = "f00a1af494067b275407c449b11dfcf5cb9b59a6fac685ebd3f0eb193337e1d6"
+	  meta:
+    description = "Detects simple Windows shell - from files keygen.exe, s1.exe, s2.exe, s3.exe, s4.exe"
+    author = "Florian Roth"
+    reference = "https://github.com/odzhan/shells/"
+    date = "2016-03-26"
+    super_rule = 1
+    hash1 = "a7c3d85eabac01e7a7ec914477ea9f17e3020b3b2f8584a46a98eb6a2a7611c5"
+    hash2 = "4a397497cfaf91e05a9b9d6fa6e335243cca3f175d5d81296b96c13c624818bd"
+    hash3 = "df0693caae2e5914e63e9ee1a14c1e9506f13060faed67db5797c9e61f3907f0"
+    hash4 = "344575a58db288c9b5dacc654abc36d38db2e645acff05e894ff51183c61357d"
+    hash5 = "f00a1af494067b275407c449b11dfcf5cb9b59a6fac685ebd3f0eb193337e1d6"
+    severity = "5"
+    type = "Unknown"
 	strings:
 		$s0 = "[ %c%c requires parameter" fullword ascii
 		$s1 = "[ %s : %i" fullword ascii
@@ -91,14 +99,16 @@ rule WindowsShell_Gen {
 }
 
 rule WindowsShell_Gen2 {
-	meta:
-		description = "Detects simple Windows shell - from files s3.exe, s4.exe"
-		author = "Florian Roth"
-		reference = "https://github.com/odzhan/shells/"
-		date = "2016-03-26"
-		super_rule = 1
-		hash1 = "344575a58db288c9b5dacc654abc36d38db2e645acff05e894ff51183c61357d"
-		hash2 = "f00a1af494067b275407c449b11dfcf5cb9b59a6fac685ebd3f0eb193337e1d6"
+	  meta:
+    description = "Detects simple Windows shell - from files s3.exe, s4.exe"
+    author = "Florian Roth"
+    reference = "https://github.com/odzhan/shells/"
+    date = "2016-03-26"
+    super_rule = 1
+    hash1 = "344575a58db288c9b5dacc654abc36d38db2e645acff05e894ff51183c61357d"
+    hash2 = "f00a1af494067b275407c449b11dfcf5cb9b59a6fac685ebd3f0eb193337e1d6"
+    severity = "5"
+    type = "Unknown"
 	strings:
 		$s1 = "cmd                  - execute cmd.exe" fullword ascii
 		$s2 = "get <remote> <local> - download file" fullword ascii

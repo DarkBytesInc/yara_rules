@@ -6,12 +6,14 @@
 */
 
 rule Reveal_MemoryCredentials {
-	meta:
-		description = "Auto-generated rule - file Reveal-MemoryCredentials.ps1"
-		author = "Florian Roth"
-		reference = "https://github.com/giMini/RWMC/"
-		date = "2015-08-31"
-		hash = "893c26818c424d0ff549c1fbfa11429f36eecd16ee69330c442c59a82ce6adea"
+	  meta:
+    description = "Auto-generated rule - file Reveal-MemoryCredentials.ps1"
+    author = "Florian Roth"
+    reference = "https://github.com/giMini/RWMC/"
+    date = "2015-08-31"
+    hash = "893c26818c424d0ff549c1fbfa11429f36eecd16ee69330c442c59a82ce6adea"
+    severity = "7"
+    type = "Exploit Kit"
 	strings:
 		$s1 = "$dumpAProcessPath = \"C:\\Windows\\temp\\msdsc.exe\"" fullword ascii
 		$s2 = "$user = Get-ADUser -Filter {UserPrincipalName -like $loginPlainText -or sAMAccountName -like $loginPlainText}" fullword ascii
@@ -22,12 +24,14 @@ rule Reveal_MemoryCredentials {
 }
 
 rule MiniDumpTest_msdsc {
-	meta:
-		description = "Auto-generated rule - file msdsc.exe"
-		author = "Florian Roth"
-		reference = "https://github.com/giMini/RWMC/"
-		date = "2015-08-31"
-		hash = "477034933918c433f521ba63d2df6a27cc40a5833a78497c11fb0994d2fd46ba"
+	  meta:
+    description = "Auto-generated rule - file msdsc.exe"
+    author = "Florian Roth"
+    reference = "https://github.com/giMini/RWMC/"
+    date = "2015-08-31"
+    hash = "477034933918c433f521ba63d2df6a27cc40a5833a78497c11fb0994d2fd46ba"
+    severity = "7"
+    type = "Exploit Kit"
 	strings:
 		$s1 = "MiniDumpTest1.exe" fullword wide
 		$s2 = "MiniDumpWithTokenInformation" fullword ascii

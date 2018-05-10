@@ -1,11 +1,14 @@
 rule xRAT : RAT
 {
-    meta:
-        author = " Kevin Breen <kevin@techanarchy.net>"
-        date = "2014/04"
-        ref = "http://malwareconfig.com/stats/xRat"
-        maltype = "Remote Access Trojan"
-        filetype = "exe"
+      meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/xRat"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "xRAT"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $v1a = "DecodeProductKey"

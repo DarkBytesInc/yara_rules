@@ -6,13 +6,15 @@
 rule SeaDuke_Sample 
 {
 
-    meta:
-        description = "SeaDuke Malware - file 3eb86b7b067c296ef53e4857a74e09f12c2b84b666fc130d1f58aec18bc74b0d"
-        author = "Florian Roth"
-        reference = "http://goo.gl/MJ0c2M"
-        date = "2015-07-14"
-        score = 70
-        hash = "d2e570129a12a47231a1ecb8176fa88a1bf415c51dabd885c513d98b15f75d4e"
+      meta:
+    description = "SeaDuke Malware - file 3eb86b7b067c296ef53e4857a74e09f12c2b84b666fc130d1f58aec18bc74b0d"
+    author = "Florian Roth"
+    reference = "http://goo.gl/MJ0c2M"
+    date = "2015-07-14"
+    score = 70
+    hash = "d2e570129a12a47231a1ecb8176fa88a1bf415c51dabd885c513d98b15f75d4e"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "bpython27.dll" fullword ascii

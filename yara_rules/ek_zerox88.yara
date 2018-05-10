@@ -1,12 +1,14 @@
 rule zerox88_js2
 {
-meta:
-	author = "Josh Berry"
-	date = "2016-06-26"
-	description = "0x88 Exploit Kit Detection"
-	hash0 = "cad8b652338f5e3bc93069c8aa329301"
-	sample_filetype = "js-html"
-	yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "0x88 Exploit Kit Detection"
+    hash0 = "cad8b652338f5e3bc93069c8aa329301"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
 	$string0 = "function gSH() {"
 	$string1 = "200 HEIGHT"
@@ -25,13 +27,15 @@ condition:
 }
 rule zerox88_js3
 {
-meta:
-	author = "Josh Berry"
-	date = "2016-06-26"
-	description = "0x88 Exploit Kit Detection"
-	hash0 = "9df0ac2fa92e602ec11bac53555e2d82"
-	sample_filetype = "js-html"
-	yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "0x88 Exploit Kit Detection"
+    hash0 = "9df0ac2fa92e602ec11bac53555e2d82"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
 	$string0 = " new ActiveXObject(szHTTP); "
 	$string1 = " Csa2;"

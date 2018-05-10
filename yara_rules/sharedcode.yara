@@ -3,10 +3,13 @@ import "pe"
 
 rule Caracachs: sharedcode
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
-		Source = "eff542ac8e37db48821cb4e5a7d95c044fff27557763de3a891b40ebeb52cc55.ex_"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    Source = "eff542ac8e37db48821cb4e5a7d95c044fff27557763de3a891b40ebeb52cc55.ex_"
+    description = "Caracachs:"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 	/*
@@ -35,10 +38,13 @@ rule Caracachs: sharedcode
 
 rule StringDotSimplified: sharedcode
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
-		Source = "eff542ac8e37db48821cb4e5a7d95c044fff27557763de3a891b40ebeb52cc55.ex_"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    Source = "eff542ac8e37db48821cb4e5a7d95c044fff27557763de3a891b40ebeb52cc55.ex_"
+    description = "Caracachs:"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 	/*
@@ -62,10 +68,13 @@ rule StringDotSimplified: sharedcode
 
 rule FakeTLS_ServerHelloGetSelectedCipher: sharedcode
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
-		Source = "eff542ac8e37db48821cb4e5a7d95c044fff27557763de3a891b40ebeb52cc55.ex_"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    Source = "eff542ac8e37db48821cb4e5a7d95c044fff27557763de3a891b40ebeb52cc55.ex_"
+    description = "Caracachs:"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 	/*
@@ -92,10 +101,13 @@ rule FakeTLS_ServerHelloGetSelectedCipher: sharedcode
 
 rule XORDecodeA7: sharedcode
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
-		Source = "eff542ac8e37db48821cb4e5a7d95c044fff27557763de3a891b40ebeb52cc55.ex_"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    Source = "eff542ac8e37db48821cb4e5a7d95c044fff27557763de3a891b40ebeb52cc55.ex_"
+    description = "Caracachs:"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 	/*
@@ -122,10 +134,13 @@ rule XORDecodeA7: sharedcode
 
 rule DynamicAPILoading: sharedcode
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
-		Source = "eff542ac8e37db48821cb4e5a7d95c044fff27557763de3a891b40ebeb52cc55.ex_"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    Source = "eff542ac8e37db48821cb4e5a7d95c044fff27557763de3a891b40ebeb52cc55.ex_"
+    description = "Caracachs:"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 	/*
@@ -162,10 +177,13 @@ rule DynamicAPILoading: sharedcode
 
 rule DNSCalcStyleEncodeAndDecode: sharedcode
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
-		Source = "975522bc3e07f7aa2c4a5457e6cc16c49a148b9f731134b8971983225835577e"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    Source = "975522bc3e07f7aa2c4a5457e6cc16c49a148b9f731134b8971983225835577e"
+    description = "DNSCalcStyleEncodeAndDecode:"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 	/*
@@ -186,10 +204,13 @@ rule DNSCalcStyleEncodeAndDecode: sharedcode
 
 rule GenerateTLSClientHelloPacket_Test: sharedcode
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
-		Source = "eff542ac8e37db48821cb4e5a7d95c044fff27557763de3a891b40ebeb52cc55.ex_"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    Source = "eff542ac8e37db48821cb4e5a7d95c044fff27557763de3a891b40ebeb52cc55.ex_"
+    description = "Caracachs:"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 	/*
@@ -208,10 +229,13 @@ rule GenerateTLSClientHelloPacket_Test: sharedcode
 
 rule RC4SboxKeyGen: sharedcode
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
-		Source = "RT_RCDATA_101.bin.bin"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    Source = "RT_RCDATA_101.bin.bin"
+    description = "RC4SboxKeyGen:"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 	/*
@@ -233,10 +257,13 @@ rule RC4SboxKeyGen: sharedcode
 
 rule RandomTimestampGenerator: sharedcode
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
-		Source = "RT_RCDATA_101.bin.bin joanap baseline sample"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    Source = "RT_RCDATA_101.bin.bin joanap baseline sample"
+    description = "RandomTimestampGenerator:"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 	/*
@@ -279,10 +306,13 @@ rule RandomTimestampGenerator: sharedcode
 
 rule CPUInfoExtraction
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
-		Source = "Cmd10010_296fcc9d611ca1b8f8288192d6d854cf4072853010cc65cb0c7f958626999fbd.bin"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    Source = "Cmd10010_296fcc9d611ca1b8f8288192d6d854cf4072853010cc65cb0c7f958626999fbd.bin"
+    description = "CPUInfoExtraction"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 	/*

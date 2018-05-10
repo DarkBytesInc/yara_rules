@@ -1,12 +1,14 @@
 import "pe"
 
 rule APT28_HospitalityMalware_document {
-   meta:
-      description = "Yara Rule for APT28_Hospitality_Malware document identification"
-      author = "CSE CybSec Enterprise - Z-Lab"
-      reference = "http://csecybsec.com/download/zlab/APT28_Hospitality_Malware_report.pdf"
-      last_updated = "2017-10-02"
-      tlp = "white"
+     meta:
+    description = "Yara Rule for APT28_Hospitality_Malware document identification"
+    author = "CSE CybSec Enterprise - Z-Lab"
+    reference = "http://csecybsec.com/download/zlab/APT28_Hospitality_Malware_report.pdf"
+    last_updated = "2017-10-02"
+    tlp = "white"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       /* this string identifies the malicious payload */
       $a = {75 52 B9 ED 1B D6 83 0F DB 24 CA 87 4F 5F 25 36 BF 66 BA}
@@ -17,12 +19,14 @@ rule APT28_HospitalityMalware_document {
 }
 
 rule APT28_HospitalityMalware_mvtband_file {
-   meta:
-      description = "Yara Rule for mvtband.dll malware"
-      author = "CSE CybSec Enterprise - Z-Lab"
-      reference = "http://csecybsec.com/download/zlab/APT28_Hospitality_Malware_report.pdf"
-      last_updated = "2017-10-02"
-      tlp = "white"
+     meta:
+    description = "Yara Rule for mvtband.dll malware"
+    author = "CSE CybSec Enterprise - Z-Lab"
+    reference = "http://csecybsec.com/download/zlab/APT28_Hospitality_Malware_report.pdf"
+    last_updated = "2017-10-02"
+    tlp = "white"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $a = "DGMNOEP"
       $b = {C7 45 94 0A 25 73 30 8D 45 94}  // two significant instructions

@@ -8,12 +8,14 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule OpCloudHopper_Malware_1 {
-   meta:
-      description = "Detects malware from Operation Cloud Hopper"
-      author = "Florian Roth"
-      reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
-      date = "2017-04-03"
-      hash1 = "27876dc5e6f746ff6003450eeea5e98de5d96cbcba9e4694dad94ca3e9fb1ddc"
+     meta:
+    description = "Detects malware from Operation Cloud Hopper"
+    author = "Florian Roth"
+    reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
+    date = "2017-04-03"
+    hash1 = "27876dc5e6f746ff6003450eeea5e98de5d96cbcba9e4694dad94ca3e9fb1ddc"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "zok]\\\\\\ZZYYY666564444" fullword ascii
       $s2 = "z{[ZZYUKKKIIGGGGGGGGGGGGG" fullword ascii
@@ -24,12 +26,14 @@ rule OpCloudHopper_Malware_1 {
 }
 
 rule OpCloudHopper_Malware_2 {
-   meta:
-      description = "Detects malware from Operation Cloud Hopper"
-      author = "Florian Roth"
-      reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
-      date = "2017-04-03"
-      hash1 = "c1dbf481b2c3ba596b3542c7dc4e368f322d5c9950a78197a4ddbbaacbd07064"
+     meta:
+    description = "Detects malware from Operation Cloud Hopper"
+    author = "Florian Roth"
+    reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
+    date = "2017-04-03"
+    hash1 = "c1dbf481b2c3ba596b3542c7dc4e368f322d5c9950a78197a4ddbbaacbd07064"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $x1 = "sERvEr.Dll" fullword ascii
       $x2 = "ToolbarF.dll" fullword wide
@@ -52,12 +56,14 @@ rule OpCloudHopper_Malware_2 {
 }
 
 rule OpCloudHopper_Malware_3 {
-   meta:
-      description = "Detects malware from Operation Cloud Hopper"
-      author = "Florian Roth"
-      reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
-      date = "2017-04-03"
-      hash1 = "c21eaadf9ffc62ca4673e27e06c16447f103c0cf7acd8db6ac5c8bd17805e39d"
+     meta:
+    description = "Detects malware from Operation Cloud Hopper"
+    author = "Florian Roth"
+    reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
+    date = "2017-04-03"
+    hash1 = "c21eaadf9ffc62ca4673e27e06c16447f103c0cf7acd8db6ac5c8bd17805e39d"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s6 = "operator \"\" " fullword ascii
       $s7 = "zok]\\\\\\ZZYYY666564444" fullword ascii
@@ -72,12 +78,14 @@ rule OpCloudHopper_Malware_3 {
 }
 
 rule OpCloudHopper_Dropper_1 {
-   meta:
-      description = "Detects malware from Operation Cloud Hopper"
-      author = "Florian Roth"
-      reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
-      date = "2017-04-03"
-      hash1 = "411571368804578826b8f24f323617f51b068809b1c769291b21125860dc3f4e"
+     meta:
+    description = "Detects malware from Operation Cloud Hopper"
+    author = "Florian Roth"
+    reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
+    date = "2017-04-03"
+    hash1 = "411571368804578826b8f24f323617f51b068809b1c769291b21125860dc3f4e"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "{\\version2}{\\edmins0}{\\nofpages1}{\\nofwords11}{\\nofchars69}{\\*\\company google}{\\nofcharsws79}{\\vern24611}{\\*\\password" ascii
    condition:
@@ -85,12 +93,14 @@ rule OpCloudHopper_Dropper_1 {
 }
 
 rule OpCloudHopper_Malware_4 {
-   meta:
-      description = "Detects malware from Operation Cloud Hopper"
-      author = "Florian Roth"
-      reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
-      date = "2017-04-03"
-      hash1 = "ae6b45a92384f6e43672e617c53a44225e2944d66c1ffb074694526386074145"
+     meta:
+    description = "Detects malware from Operation Cloud Hopper"
+    author = "Florian Roth"
+    reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
+    date = "2017-04-03"
+    hash1 = "ae6b45a92384f6e43672e617c53a44225e2944d66c1ffb074694526386074145"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s6 = "operator \"\" " fullword ascii
       $s9 = "InvokeMainViaCRT" fullword ascii
@@ -100,12 +110,14 @@ rule OpCloudHopper_Malware_4 {
 }
 
 rule OpCloudHopper_Malware_5 {
-   meta:
-      description = "Detects malware from Operation Cloud Hopper"
-      author = "Florian Roth"
-      reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
-      date = "2017-04-03"
-      hash1 = "beb1bc03bb0fba7b0624f8b2330226f8a7da6344afd68c5bc526f9d43838ef01"
+     meta:
+    description = "Detects malware from Operation Cloud Hopper"
+    author = "Florian Roth"
+    reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
+    date = "2017-04-03"
+    hash1 = "beb1bc03bb0fba7b0624f8b2330226f8a7da6344afd68c5bc526f9d43838ef01"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $x1 = "CWINDOWSSYSTEMROOT" fullword ascii
       $x2 = "YJ_D_KROPOX_M_NUJI_OLY_S_JU_MOOK" fullword ascii
@@ -120,12 +132,14 @@ rule OpCloudHopper_Malware_5 {
 }
 
 rule OpCloudHopper_Malware_6 {
-   meta:
-      description = "Detects malware from Operation Cloud Hopper"
-      author = "Florian Roth"
-      reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
-      date = "2017-04-03"
-      hash1 = "aabebea87f211d47f72d662e2449009f83eac666d81b8629cf57219d0ce31af6"
+     meta:
+    description = "Detects malware from Operation Cloud Hopper"
+    author = "Florian Roth"
+    reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
+    date = "2017-04-03"
+    hash1 = "aabebea87f211d47f72d662e2449009f83eac666d81b8629cf57219d0ce31af6"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "YDNCCOVZKXGRVQPOBRNXXQVNQYXBBCONCOQEGYELIRBEYOVODGXCOXTHXPCXNGUCHRVWKKZSYQMAOWWGHRSPRGSEUWYMEFZHRTHO" fullword ascii
       $s2 = "psychiatry.dat" fullword ascii
@@ -136,12 +150,14 @@ rule OpCloudHopper_Malware_6 {
 }
 
 rule OpCloudHopper_Malware_7 {
-   meta:
-      description = "Detects malware from Operation Cloud Hopper"
-      author = "Florian Roth"
-      reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
-      date = "2017-04-03"
-      hash1 = "44a7bea8a08f4c2feb74c6a00ff1114ba251f3dc6922ea5ffab9e749c98cbdce"
+     meta:
+    description = "Detects malware from Operation Cloud Hopper"
+    author = "Florian Roth"
+    reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
+    date = "2017-04-03"
+    hash1 = "44a7bea8a08f4c2feb74c6a00ff1114ba251f3dc6922ea5ffab9e749c98cbdce"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $x1 = "jepsjepsjepsjepsjepsjepsjepsjepsjepsjeps" fullword ascii
       $x2 = "extOextOextOextO" fullword ascii
@@ -150,13 +166,15 @@ rule OpCloudHopper_Malware_7 {
 }
 
 rule OpCloudHopper_Malware_8 {
-   meta:
-      description = "Detects malware from Operation Cloud Hopper"
-      author = "Florian Roth"
-      reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
-      date = "2017-04-03"
-      hash1 = "19aa5019f3c00211182b2a80dd9675721dac7cfb31d174436d3b8ec9f97d898b"
-      hash2 = "5cebc133ae3b6afee27beb7d3cdb5f3d675c3f12b7204531f453e99acdaa87b1"
+     meta:
+    description = "Detects malware from Operation Cloud Hopper"
+    author = "Florian Roth"
+    reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
+    date = "2017-04-03"
+    hash1 = "19aa5019f3c00211182b2a80dd9675721dac7cfb31d174436d3b8ec9f97d898b"
+    hash2 = "5cebc133ae3b6afee27beb7d3cdb5f3d675c3f12b7204531f453e99acdaa87b1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "WSHELL32.dll" fullword wide
       $s2 = "operator \"\" " fullword ascii
@@ -169,12 +187,14 @@ rule OpCloudHopper_Malware_8 {
 }
 
 rule OpCloudHopper_Malware_9 {
-   meta:
-      description = "Detects malware from Operation Cloud Hopper"
-      author = "Florian Roth"
-      reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
-      date = "2017-04-03"
-      hash1 = "f0002b912135bcee83f901715002514fdc89b5b8ed7585e07e482331e4a56c06"
+     meta:
+    description = "Detects malware from Operation Cloud Hopper"
+    author = "Florian Roth"
+    reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
+    date = "2017-04-03"
+    hash1 = "f0002b912135bcee83f901715002514fdc89b5b8ed7585e07e482331e4a56c06"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "MsMpEng.exe" fullword ascii
       $op0 = { 2b c7 50 e8 22 83 ff ff ff b6 c0 } /* Opcode */
@@ -183,12 +203,14 @@ rule OpCloudHopper_Malware_9 {
 }
 
 rule OpCloudHopper_Malware_10 {
-   meta:
-      description = "Detects malware from Operation Cloud Hopper"
-      author = "Florian Roth"
-      reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
-      date = "2017-04-03"
-      hash1 = "5b4028728d8011a2003b7ce6b9ec663dd6a60b7adcc20e2125da318e2d9e13f4"
+     meta:
+    description = "Detects malware from Operation Cloud Hopper"
+    author = "Florian Roth"
+    reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
+    date = "2017-04-03"
+    hash1 = "5b4028728d8011a2003b7ce6b9ec663dd6a60b7adcc20e2125da318e2d9e13f4"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $x1 = "bakshell.EXE" fullword wide
       $s19 = "bakshell Applicazione MFC" fullword wide
@@ -198,12 +220,14 @@ rule OpCloudHopper_Malware_10 {
 }
 
 rule OpCloudHopper_Malware_11 {
-   meta:
-      description = "Detects malware from Operation Cloud Hopper"
-      author = "Florian Roth"
-      reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
-      date = "2017-04-03"
-      hash1 = "a80f6c57f772f20d63021c8971a280c19e8eafe7cc7088344c598d84026dda15"
+     meta:
+    description = "Detects malware from Operation Cloud Hopper"
+    author = "Florian Roth"
+    reference = "https://www.pwc.co.uk/issues/cyber-security-data-privacy/insights/operation-cloud-hopper.html"
+    date = "2017-04-03"
+    hash1 = "a80f6c57f772f20d63021c8971a280c19e8eafe7cc7088344c598d84026dda15"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $x1 = "IOGVWDWCXZVRHTE" fullword ascii
 
@@ -223,12 +247,14 @@ rule OpCloudHopper_Malware_11 {
 /* Rule Set ----------------------------------------------------------------- */
 
 rule OpCloudHopper_lockdown {
-   meta:
-      description = "Tools related to Operation Cloud Hopper"
-      author = "Florian Roth"
-      reference = "https://github.com/maaaaz/impacket-examples-windows"
-      date = "2017-04-07"
-      hash1 = "8ca61cef74573d9c1d19b8191c23cbd2b7a1195a74eaba037377e5ee232b1dc5"
+     meta:
+    description = "Tools related to Operation Cloud Hopper"
+    author = "Florian Roth"
+    reference = "https://github.com/maaaaz/impacket-examples-windows"
+    date = "2017-04-07"
+    hash1 = "8ca61cef74573d9c1d19b8191c23cbd2b7a1195a74eaba037377e5ee232b1dc5"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "lockdown.dll" fullword ascii
       $s3 = "mfeann.exe" fullword ascii
@@ -237,11 +263,13 @@ rule OpCloudHopper_lockdown {
 }
 
 rule OpCloudHopper_WindowXarBot {
-   meta:
-      description = "Malware related to Operation Cloud Hopper"
-      author = "Florian Roth"
-      reference = "https://www.pwc.co.uk/cyber-security/pdf/cloud-hopper-annex-b-final.pdf"
-      date = "2017-04-07"
+     meta:
+    description = "Malware related to Operation Cloud Hopper"
+    author = "Florian Roth"
+    reference = "https://www.pwc.co.uk/cyber-security/pdf/cloud-hopper-annex-b-final.pdf"
+    date = "2017-04-07"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "\\Release\\WindowXarbot.pdb" ascii
    condition:
@@ -249,11 +277,13 @@ rule OpCloudHopper_WindowXarBot {
 }
 
 rule OpCloudHopper_WmiDLL_inMemory {
-   meta:
-      description = "Malware related to Operation Cloud Hopper - Page 25"
-      author = "Florian Roth"
-      reference = "https://www.pwc.co.uk/cyber-security/pdf/cloud-hopper-annex-b-final.pdf"
-      date = "2017-04-07"
+     meta:
+    description = "Malware related to Operation Cloud Hopper - Page 25"
+    author = "Florian Roth"
+    reference = "https://www.pwc.co.uk/cyber-security/pdf/cloud-hopper-annex-b-final.pdf"
+    date = "2017-04-07"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "wmi.dll 2>&1" ascii
    condition:
@@ -261,12 +291,14 @@ rule OpCloudHopper_WmiDLL_inMemory {
 }
 
 rule VBS_WMIExec_Tool_Apr17_1 {
-   meta:
-      description = "Tools related to Operation Cloud Hopper"
-      author = "Florian Roth"
-      reference = "https://github.com/maaaaz/impacket-examples-windows"
-      date = "2017-04-07"
-      hash1 = "21bc328ed8ae81151e7537c27c0d6df6d47ba8909aebd61333e32155d01f3b11"
+     meta:
+    description = "Tools related to Operation Cloud Hopper"
+    author = "Florian Roth"
+    reference = "https://github.com/maaaaz/impacket-examples-windows"
+    date = "2017-04-07"
+    hash1 = "21bc328ed8ae81151e7537c27c0d6df6d47ba8909aebd61333e32155d01f3b11"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $x1 = "strNetUse = \"cmd.exe /c net use \\\\\" & host" fullword ascii
       $x2 = "localcmd = \"cmd.exe /c \" & command " ascii

@@ -7,17 +7,19 @@
 */
 
 rule UBoatRAT {
-   meta:
-      description = "Detects UBoat RAT Samples"
-      author = "Florian Roth"
-      reference = "https://researchcenter.paloaltonetworks.com/2017/11/unit42-uboatrat-navigates-east-asia/"
-      date = "2017-11-29"
-      hash1 = "04873dbd63279228a0a4bb1184933b64adb880e874bd3d14078161d06e232c9b"
-      hash2 = "7b32f401e2ad577e8398b2975ecb5c5ce68c5b07717b1e0d762f90a6fbd8add1"
-      hash3 = "42d8a84cd49ff3afacf3d549fbab1fa80d5eda0c8625938b6d32e18004b0edac"
-      hash4 = "6bea49e4260f083ed6b73e100550ecd22300806071f4a6326e0544272a84526c"
-      hash5 = "cf832f32b8d27cf9911031910621c21bd3c20e71cc062716923304dacf4dadb7"
-      hash6 = "bf7c6e911f14a1f8679c9b0c2b183d74d5accd559e17297adcd173d76755e271"
+     meta:
+    description = "Detects UBoat RAT Samples"
+    author = "Florian Roth"
+    reference = "https://researchcenter.paloaltonetworks.com/2017/11/unit42-uboatrat-navigates-east-asia/"
+    date = "2017-11-29"
+    hash1 = "04873dbd63279228a0a4bb1184933b64adb880e874bd3d14078161d06e232c9b"
+    hash2 = "7b32f401e2ad577e8398b2975ecb5c5ce68c5b07717b1e0d762f90a6fbd8add1"
+    hash3 = "42d8a84cd49ff3afacf3d549fbab1fa80d5eda0c8625938b6d32e18004b0edac"
+    hash4 = "6bea49e4260f083ed6b73e100550ecd22300806071f4a6326e0544272a84526c"
+    hash5 = "cf832f32b8d27cf9911031910621c21bd3c20e71cc062716923304dacf4dadb7"
+    hash6 = "bf7c6e911f14a1f8679c9b0c2b183d74d5accd559e17297adcd173d76755e271"
+    severity = "7"
+    type = "Malware"
    strings:
       $s1 = "URLDownloadToFileA" ascii
       $s2 = "GetModuleFileNameW" ascii
@@ -48,12 +50,14 @@ rule UBoatRAT {
 }
 
 rule UBoatRAT_Dropper {
-   meta:
-      description = "Detects UBoatRAT Dropper"
-      author = "Florian Roth"
-      reference = "https://researchcenter.paloaltonetworks.com/2017/11/unit42-uboatrat-navigates-east-asia/"
-      date = "2017-11-29"
-      hash1 = "f4c659238ffab95e87894d2c556f887774dce2431e8cb87f881df4e4d26253a3"
+     meta:
+    description = "Detects UBoatRAT Dropper"
+    author = "Florian Roth"
+    reference = "https://researchcenter.paloaltonetworks.com/2017/11/unit42-uboatrat-navigates-east-asia/"
+    date = "2017-11-29"
+    hash1 = "f4c659238ffab95e87894d2c556f887774dce2431e8cb87f881df4e4d26253a3"
+    severity = "7"
+    type = "Malware"
    strings:
       $s1 = "GetCurrenvackageId" fullword ascii
       $s2 = "fghijklmnopq" fullword ascii

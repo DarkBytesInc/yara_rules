@@ -2,12 +2,14 @@ import "pe"
 
 rule KiloAlfa
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
-		type = "Keylogger"
-		SourceForDnscalcVariant1 = "b855d05ef7ab6582864c9b35052a1073a6eb7d0c7e9d97f524ec062715d71321"
-		SourceForDnscalcVariant2 = "ddde628be8cd5db768b807510ae1319888e6c4550a5b9a0d54e17b9ec4aaa256"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    type = "Keylogger"
+    SourceForDnscalcVariant1 = "b855d05ef7ab6582864c9b35052a1073a6eb7d0c7e9d97f524ec062715d71321"
+    SourceForDnscalcVariant2 = "ddde628be8cd5db768b807510ae1319888e6c4550a5b9a0d54e17b9ec4aaa256"
+    description = "KiloAlfa"
+    severity = "5"
 		
 	strings:
 		/*

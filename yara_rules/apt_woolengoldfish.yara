@@ -8,13 +8,15 @@ import "pe"
 rule WoolenGoldfish_Sample_1 
 {
 
-    meta:
-        description = "Detects a operation Woolen-Goldfish sample - http://goo.gl/NpJpVZ"
-        author = "Florian Roth"
-        reference = "http://goo.gl/NpJpVZ"
-        date = "2015/03/25"
-        score = 60
-        hash = "7ad0eb113bc575363a058f4bf21dbab8c8f7073a"
+      meta:
+    description = "Detects a operation Woolen-Goldfish sample - http://goo.gl/NpJpVZ"
+    author = "Florian Roth"
+    reference = "http://goo.gl/NpJpVZ"
+    date = "2015/03/25"
+    score = 60
+    hash = "7ad0eb113bc575363a058f4bf21dbab8c8f7073a"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $s1 = "Cannot execute (%d)" fullword ascii
@@ -27,16 +29,18 @@ rule WoolenGoldfish_Sample_1
 rule WoolenGoldfish_Generic_1 
 {
 
-    meta:
-        description = "Detects a operation Woolen-Goldfish sample - http://goo.gl/NpJpVZ"
-        author = "Florian Roth"
-        reference = "http://goo.gl/NpJpVZ"
-        date = "2015/03/25"
-        score = 90
-        super_rule = 1
-        hash0 = "5d334e0cb4ff58859e91f9e7f1c451ffdc7544c3"
-        hash1 = "d5b2b30fe2d4759c199e3659d561a50f88a7fb2e"
-        hash2 = "a42f1ad2360833baedd2d5f59354c4fc3820c475"
+      meta:
+    description = "Detects a operation Woolen-Goldfish sample - http://goo.gl/NpJpVZ"
+    author = "Florian Roth"
+    reference = "http://goo.gl/NpJpVZ"
+    date = "2015/03/25"
+    score = 90
+    super_rule = 1
+    hash0 = "5d334e0cb4ff58859e91f9e7f1c451ffdc7544c3"
+    hash1 = "d5b2b30fe2d4759c199e3659d561a50f88a7fb2e"
+    hash2 = "a42f1ad2360833baedd2d5f59354c4fc3820c475"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $x0 = "Users\\Wool3n.H4t\\"
@@ -58,16 +62,18 @@ rule WoolenGoldfish_Generic_1
 rule WoolenGoldfish_Generic_2 
 {
 
-    meta:
-        description = "Detects a operation Woolen-Goldfish sample - http://goo.gl/NpJpVZ"
-        author = "Florian Roth"
-        reference = "http://goo.gl/NpJpVZ"
-        date = "2015/03/25"
-        score = 90
-        hash1 = "47b1c9caabe3ae681934a33cd6f3a1b311fd7f9f"
-        hash2 = "62172eee1a4591bde2658175dd5b8652d5aead2a"
-        hash3 = "7fef48e1303e40110798dfec929ad88f1ad4fbd8"
-        hash4 = "c1edf6e3a271cf06030cc46cbd90074488c05564"
+      meta:
+    description = "Detects a operation Woolen-Goldfish sample - http://goo.gl/NpJpVZ"
+    author = "Florian Roth"
+    reference = "http://goo.gl/NpJpVZ"
+    date = "2015/03/25"
+    score = 90
+    hash1 = "47b1c9caabe3ae681934a33cd6f3a1b311fd7f9f"
+    hash2 = "62172eee1a4591bde2658175dd5b8652d5aead2a"
+    hash3 = "7fef48e1303e40110798dfec929ad88f1ad4fbd8"
+    hash4 = "c1edf6e3a271cf06030cc46cbd90074488c05564"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $s0 = "modules\\exploits\\littletools\\agent_wrapper\\release" ascii
@@ -79,14 +85,16 @@ rule WoolenGoldfish_Generic_2
 rule WoolenGoldfish_Generic_3 
 {
 
-    meta:
-        description = "Detects a operation Woolen-Goldfish sample - http://goo.gl/NpJpVZ"
-        author = "Florian Roth"
-        reference = "http://goo.gl/NpJpVZ"
-        date = "2015/03/25"
-        score = 90
-        hash1 = "86222ef166474e53f1eb6d7e6701713834e6fee7"
-        hash2 = "e8dbcde49c7f760165ebb0cb3452e4f1c24981f5"
+      meta:
+    description = "Detects a operation Woolen-Goldfish sample - http://goo.gl/NpJpVZ"
+    author = "Florian Roth"
+    reference = "http://goo.gl/NpJpVZ"
+    date = "2015/03/25"
+    score = 90
+    hash1 = "86222ef166474e53f1eb6d7e6701713834e6fee7"
+    hash2 = "e8dbcde49c7f760165ebb0cb3452e4f1c24981f5"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $x1 = "... get header FATAL ERROR !!!  %d bytes read > header_size" fullword ascii

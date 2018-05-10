@@ -7,10 +7,12 @@ import "pe"
 
 rule SafeNetCode : SafeNet Family 
 {
-    meta:
-        description = "SafeNet code features"
-        author = "Seth Hardy"
-        last_modified = "2014-07-16"
+      meta:
+    description = "SafeNet code features"
+    author = "Seth Hardy"
+    last_modified = "2014-07-16"
+    severity = "7"
+    type = "Malware"
         
     strings:
         // add edi, 14h; cmp edi, 50D0F8h
@@ -21,10 +23,12 @@ rule SafeNetCode : SafeNet Family
 
 rule SafeNetStrings : SafeNet Family
 {
-    meta:
-        description = "Strings used by SafeNet"
-        author = "Seth Hardy"
-        last_modified = "2014-07-16"
+      meta:
+    description = "Strings used by SafeNet"
+    author = "Seth Hardy"
+    last_modified = "2014-07-16"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $ = "6dNfg8Upn5fBzGgj8licQHblQvLnUY19z5zcNKNFdsDhUzuI8otEsBODrzFCqCKr"
@@ -40,8 +44,10 @@ rule SafeNetStrings : SafeNet Family
 
 rule SafeNet : Family
 {
-    meta:
-        description = "SafeNet family"
+      meta:
+    description = "SafeNet family"
+    severity = "7"
+    type = "Malware"
         
     condition:
         SafeNetCode or SafeNetStrings

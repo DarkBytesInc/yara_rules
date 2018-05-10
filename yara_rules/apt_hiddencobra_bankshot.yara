@@ -9,20 +9,22 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule HiddenCobra_BANKSHOT_Gen {
-   meta:
-      description = "Detects Hidden Cobra BANKSHOT trojan"
-      author = "Florian Roth"
-      reference = "https://www.us-cert.gov/HIDDEN-COBRA-North-Korean-Malicious-Cyber-Activity"
-      date = "2017-12-26"
-      hash1 = "89775a2fbb361d6507de6810d2ca71711d5103b113179f1e1411ccf75e6fc486"
-      hash2 = "8b2d084a8bb165b236d3e5436d6cb6fa1fda6431f99c4f34973dc735b4f2d247"
-      hash3 = "b766ee0f46c92a746f6db3773735ee245f36c1849de985bbc3a37b15f7187f24"
-      hash4 = "daf5facbd67f949981f8388a6ca38828de2300cb702ad530e005430782802b75"
-      hash5 = "ef6f8b43caa25c5f9c7749e52c8ab61e8aec8053b9f073edeca4b35312a0a699"
-      hash6 = "d900ee8a499e288a11f1c75e151569b518864e14c58cc72c47f95309956b3eff"
-      hash7 = "ec44ecd57401b3c78d849115f08ff046011b6eb933898203b7641942d4ee3af9"
-      hash8 = "3e6d575b327a1474f4767803f94799140e16a729e7d00f1bea40cd6174d8a8a6"
-      hash9 = "6db37a52517653afe608fd84cc57a2d12c4598c36f521f503fd8413cbef9adca"
+     meta:
+    description = "Detects Hidden Cobra BANKSHOT trojan"
+    author = "Florian Roth"
+    reference = "https://www.us-cert.gov/HIDDEN-COBRA-North-Korean-Malicious-Cyber-Activity"
+    date = "2017-12-26"
+    hash1 = "89775a2fbb361d6507de6810d2ca71711d5103b113179f1e1411ccf75e6fc486"
+    hash2 = "8b2d084a8bb165b236d3e5436d6cb6fa1fda6431f99c4f34973dc735b4f2d247"
+    hash3 = "b766ee0f46c92a746f6db3773735ee245f36c1849de985bbc3a37b15f7187f24"
+    hash4 = "daf5facbd67f949981f8388a6ca38828de2300cb702ad530e005430782802b75"
+    hash5 = "ef6f8b43caa25c5f9c7749e52c8ab61e8aec8053b9f073edeca4b35312a0a699"
+    hash6 = "d900ee8a499e288a11f1c75e151569b518864e14c58cc72c47f95309956b3eff"
+    hash7 = "ec44ecd57401b3c78d849115f08ff046011b6eb933898203b7641942d4ee3af9"
+    hash8 = "3e6d575b327a1474f4767803f94799140e16a729e7d00f1bea40cd6174d8a8a6"
+    hash9 = "6db37a52517653afe608fd84cc57a2d12c4598c36f521f503fd8413cbef9adca"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "Mozilla/4.0 (compatible; MSIE 8.0; Win32)" fullword wide
       $s2 = "rHTTP/1.1 200 Connection established" fullword wide
@@ -63,12 +65,15 @@ rule HiddenCobra_BANKSHOT_Gen {
 /* US CERT Rule */
 
 rule Unauthorized_Proxy_Server_RAT {
-   meta:
-      author = "US-CERT Code Analysis Team"
-      reference = "https://www.us-cert.gov/HIDDEN-COBRA-North-Korean-Malicious-Cyber-Activity"
-      hash1 = "C74E289AD927E81D2A1A56BC73E394AB"
-      hash2 = "2950E3741D7AF69E0CA0C5013ABC4209"
-      desscription = "Detects Proxy Server RAT"
+     meta:
+    author = "US-CERT Code Analysis Team"
+    reference = "https://www.us-cert.gov/HIDDEN-COBRA-North-Korean-Malicious-Cyber-Activity"
+    hash1 = "C74E289AD927E81D2A1A56BC73E394AB"
+    hash2 = "2950E3741D7AF69E0CA0C5013ABC4209"
+    desscription = "Detects Proxy Server RAT"
+    description = "Unauthorized_Proxy_Server_RAT"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s0 = {8A043132C288043125FF00000003C299F73D40404900A14440490003D0413BCF72DE5E5FC3}
       $s1 = {8A04318844241432C28804318B44241425FF00000003C299F73D40404900A14440490003D0413BCF72D65E5FC3}

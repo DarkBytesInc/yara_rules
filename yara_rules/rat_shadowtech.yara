@@ -7,9 +7,11 @@ import "pe"
 
 rule ShadowTech_2
 {
-    meta:
-        description = "ShadowTech RAT"
-	author = "botherder https://github.com/botherder"
+      meta:
+    description = "ShadowTech RAT"
+    author = "botherder https://github.com/botherder"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $string1 = /\#(S)trings/
@@ -23,12 +25,15 @@ rule ShadowTech_2
 }
 rule ShadowTech
 {
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2014/04"
-		ref = "http://malwareconfig.com/stats/ShadowTech"
-		maltype = "Remote Access Trojan"
-		filetype = "exe"
+	  meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/ShadowTech"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "ShadowTech"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$a = "ShadowTech" nocase

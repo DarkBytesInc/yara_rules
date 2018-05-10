@@ -6,10 +6,12 @@
 rule apt_sofacy_xtunnel
 {
 
-    meta:
-        author = "Claudio Guarnieri"
-        description = "Sofacy Malware - German Bundestag"
-        score = 75
+      meta:
+    author = "Claudio Guarnieri"
+    description = "Sofacy Malware - German Bundestag"
+    score = 75
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $xaps = ":\\PROJECT\\XAPS_"
@@ -32,13 +34,15 @@ rule apt_sofacy_xtunnel
 rule Sofacy_Bundestag_Winexe
 {
 
-    meta:
-        description = "Winexe tool used by Sofacy group in Bundestag APT"
-        author = "Florian Roth"
-        reference = "http://dokumente.linksfraktion.de/inhalt/report-orig.pdf"
-        date = "2015-06-19"
-        hash = "5130f600cd9a9cdc82d4bad938b20cbd2f699aadb76e7f3f1a93602330d9997d"
-        score = 70
+      meta:
+    description = "Winexe tool used by Sofacy group in Bundestag APT"
+    author = "Florian Roth"
+    reference = "http://dokumente.linksfraktion.de/inhalt/report-orig.pdf"
+    date = "2015-06-19"
+    hash = "5130f600cd9a9cdc82d4bad938b20cbd2f699aadb76e7f3f1a93602330d9997d"
+    score = 70
+    severity = "10"
+    type = "Advanced Persistent Threat"
   
     strings:
         $s1 = "\\\\.\\pipe\\ahexec" fullword ascii 
@@ -51,13 +55,15 @@ rule Sofacy_Bundestag_Winexe
 rule Sofacy_Bundestag_Mal2 
 {
 
-    meta:
-        description = "Sofacy Group Malware Sample 2"
-        author = "Florian Roth"
-        reference = "http://dokumente.linksfraktion.de/inhalt/report-orig.pdf"
-        date = "2015-06-19"
-        hash = "566ab945f61be016bfd9e83cc1b64f783b9b8deb891e6d504d3442bc8281b092"
-        score = 70
+      meta:
+    description = "Sofacy Group Malware Sample 2"
+    author = "Florian Roth"
+    reference = "http://dokumente.linksfraktion.de/inhalt/report-orig.pdf"
+    date = "2015-06-19"
+    hash = "566ab945f61be016bfd9e83cc1b64f783b9b8deb891e6d504d3442bc8281b092"
+    score = 70
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $x1 = "PROJECT\\XAPS_OBJECTIVE_DLL\\" ascii
@@ -71,13 +77,15 @@ rule Sofacy_Bundestag_Mal2
 rule Sofacy_Bundestag_Mal3 
 {
 
-    meta:
-        description = "Sofacy Group Malware Sample 3"
-        author = "Florian Roth"
-        reference = "http://dokumente.linksfraktion.de/inhalt/report-orig.pdf"
-        date = "2015-06-19"
-        hash = "5f6b2a0d1d966fc4f1ed292b46240767f4acb06c13512b0061b434ae2a692fa1"
-        score = 70
+      meta:
+    description = "Sofacy Group Malware Sample 3"
+    author = "Florian Roth"
+    reference = "http://dokumente.linksfraktion.de/inhalt/report-orig.pdf"
+    date = "2015-06-19"
+    hash = "5f6b2a0d1d966fc4f1ed292b46240767f4acb06c13512b0061b434ae2a692fa1"
+    score = 70
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $s1 = "shell\\open\\command=\"System Volume Information\\USBGuard.exe\" install" fullword ascii 
@@ -100,12 +108,14 @@ rule Sofacy_Bundestag_Mal3
 rule Sofacy_Bundestag_Batch 
 {
 
-    meta:
-        description = "Sofacy Bundestags APT Batch Script"
-        author = "Florian Roth"
-        reference = "http://dokumente.linksfraktion.de/inhalt/report-orig.pdf"
-        date = "2015-06-19"
-        score = 70
+      meta:
+    description = "Sofacy Bundestags APT Batch Script"
+    author = "Florian Roth"
+    reference = "http://dokumente.linksfraktion.de/inhalt/report-orig.pdf"
+    date = "2015-06-19"
+    score = 70
+    severity = "10"
+    type = "Advanced Persistent Threat"
  
     strings:
         $s1 = "for %%G in (.pdf, .xls, .xlsx, .doc, .docx) do (" ascii 

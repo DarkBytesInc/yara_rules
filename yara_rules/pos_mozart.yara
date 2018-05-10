@@ -4,10 +4,12 @@
 */
 rule Mozart
 {
-   meta:
-       author = "Nick Hoffman - Morphick Inc"
-       description = "Detects samples of the Mozart POS RAM scraping utility"
-       reference = "http://securitykitten.github.io/the-mozart-ram-scraper/"
+     meta:
+    author = "Nick Hoffman - Morphick Inc"
+    description = "Detects samples of the Mozart POS RAM scraping utility"
+    reference = "http://securitykitten.github.io/the-mozart-ram-scraper/"
+    severity = "5"
+    type = "Unknown"
    strings:
        $pdb = "z:\\Slender\\mozart\\mozart\\Release\\mozart.pdb" nocase wide ascii
        $output = {67 61 72 62 61 67 65 2E 74 6D 70 00}

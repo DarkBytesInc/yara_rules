@@ -5,13 +5,14 @@
 
 rule Contains_hidden_PE_File_inside_a_sequence_of_numbers : maldoc
 {
-	meta:
-		author = "Martin Willing (https://evild3ad.com)"
-		description = "Detect a hidden PE file inside a sequence of numbers (comma separated)"
-		reference = "http://blog.didierstevens.com/2016/01/07/blackenergy-xls-dropper/"
-		reference = "http://www.welivesecurity.com/2016/01/04/blackenergy-trojan-strikes-again-attacks-ukrainian-electric-power-industry/"
-		date = "2016-01-09"
-		filetype = "decompressed VBA macro code"
+	  meta:
+    author = "Martin Willing (https://evild3ad.com)"
+    description = "Detect a hidden PE file inside a sequence of numbers (comma separated)"
+    reference = "http://www.welivesecurity.com/2016/01/04/blackenergy-trojan-strikes-again-attacks-ukrainian-electric-power-industry/"
+    date = "2016-01-09"
+    filetype = "decompressed VBA macro code"
+    severity = "7"
+    type = "Malware"
 		
 	strings:
 		$a = "= Array(" // Array of bytes

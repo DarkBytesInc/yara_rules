@@ -1,11 +1,13 @@
 /* Disabled due to Benjamin Delphys sig overlap
 rule LSASS_memory_dump_file {
-   meta:
-      description = "Detects a LSASS memory dump file"
-      author = "Florian Roth"
-      date = "2015/03/31"
-      memory = 0
-      score = 50
+     meta:
+    description = "Detects a LSASS memory dump file"
+    author = "Florian Roth"
+    date = "2015/03/31"
+    memory = 0
+    score = 50
+    severity = "5"
+    type = "Unknown"
    strings:
       $s1 = "lsass.exe" ascii fullword
       $s2 = "wdigest.DLL" wide nocase
@@ -27,12 +29,14 @@ rule NTLM_Dump_Output {
 }
 
 rule Gsecdump_password_dump_file {
-   meta:
-      description = "Detects a gsecdump output file"
-      author = "Florian Roth"
-      reference = "https://t.co/OLIj1yVJ4m"
-      date = "2018-03-06"
-      score = 65
+     meta:
+    description = "Detects a gsecdump output file"
+    author = "Florian Roth"
+    reference = "https://t.co/OLIj1yVJ4m"
+    date = "2018-03-06"
+    score = 65
+    severity = "5"
+    type = "Unknown"
    strings:
       $x1 = "Administrator(current):500:" ascii
    condition:

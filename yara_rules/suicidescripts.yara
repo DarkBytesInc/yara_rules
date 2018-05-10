@@ -2,9 +2,12 @@
 
 rule SuicideScriptL1
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    description = "SuicideScriptL1"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 		$ = ":L1\ndel \"%s\"\nif exist \"%s\" goto L1\ndel \"%s\"\n"
@@ -14,9 +17,12 @@ rule SuicideScriptL1
 
 rule SuicideScriptR1_Multi
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    description = "SuicideScriptL1"
+    severity = "5"
+    type = "Unknown"
 	
 	strings:
 		$ = "\" goto R1\ndel /a \""
@@ -29,9 +35,12 @@ rule SuicideScriptR1_Multi
 rule SuicideScriptR
 {
 	// joanap, joanapCleaner
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    description = "SuicideScriptL1"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 		$ = ":R\nIF NOT EXIST %s GOTO E\ndel /a %s\nGOTO R\n:E\ndel /a d.bat"

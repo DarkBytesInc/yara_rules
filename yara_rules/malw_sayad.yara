@@ -7,11 +7,14 @@ import "pe"
 
 rule Vinsula_Sayad_Binder : infostealer binder
 {
-    meta:
-        Author      = "Vinsula, Inc"
-        Date        = "2014/06/20"
-        Description = "Sayad Infostealer Binder"
-        Reference   = "http://vinsula.com/2014/07/20/sayad-flying-kitten-infostealer-malware/"
+      meta:
+    Author = "Vinsula, Inc"
+    Date = "2014/06/20"
+    Description = "Sayad Infostealer Binder"
+    Reference = "http://vinsula.com/2014/07/20/sayad-flying-kitten-infostealer-malware/"
+    description = "Vinsula_Sayad_Binder"
+    severity = "7"
+    type = "Malware"
 
     strings: 
         $pdbstr = "\\Projects\\C#\\Sayad\\Source\\Binder\\obj\\Debug\\Binder.pdb" 
@@ -26,11 +29,14 @@ rule Vinsula_Sayad_Binder : infostealer binder
 
 rule Vinsula_Sayad_Client : infostealer
 {
-    meta:
-        Author      = "Vinsula, Inc"
-        Date        = "2014/06/20"
-        Description = "Sayad Infostealer Client"
-        Reference   = "http://vinsula.com/2014/07/20/sayad-flying-kitten-infostealer-malware/"
+      meta:
+    Author = "Vinsula, Inc"
+    Date = "2014/06/20"
+    Description = "Sayad Infostealer Client"
+    Reference = "http://vinsula.com/2014/07/20/sayad-flying-kitten-infostealer-malware/"
+    description = "Vinsula_Sayad_Client"
+    severity = "7"
+    type = "Malware"
 
     strings: 
         $pdbstr = "\\Projects\\C#\\Sayad\\Source\\Client\\bin\\x86\\Debug\\Client.pdb" 

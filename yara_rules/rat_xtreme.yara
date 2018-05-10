@@ -7,9 +7,11 @@ import "pe"
 
 rule Xtreme
 {
-    meta:
-        description = "Xtreme RAT"
-	author = "botherder https://github.com/botherder"
+      meta:
+    description = "Xtreme RAT"
+    author = "botherder https://github.com/botherder"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $string1 = /(X)tremeKeylogger/ wide ascii
@@ -32,10 +34,12 @@ rule Xtreme
 
 rule xtreme_rat : Trojan
 {
-	meta:
-		author="Kevin Falcoz"
-		date="23/02/2013"
-		description="Xtreme RAT"
+	  meta:
+    author = "Kevin Falcoz"
+    date = "23/02/2013"
+    description = "Xtreme RAT"
+    severity = "7"
+    type = "Malware"
 	
 	strings:
 		$signature1={58 00 54 00 52 00 45 00 4D 00 45} /*X.T.R.E.M.E*/
@@ -46,10 +50,12 @@ rule xtreme_rat : Trojan
 
 rule XtremeRATCode : XtremeRAT Family 
 {
-    meta:
-        description = "XtremeRAT code features"
-        author = "Seth Hardy"
-        last_modified = "2014-07-09"
+      meta:
+    description = "XtremeRAT code features"
+    author = "Seth Hardy"
+    last_modified = "2014-07-09"
+    severity = "7"
+    type = "Malware"
     
     strings:
         // call; fstp st
@@ -63,10 +69,12 @@ rule XtremeRATCode : XtremeRAT Family
 
 rule XtremeRATStrings : XtremeRAT Family
 {
-    meta:
-        description = "XtremeRAT Identifying Strings"
-        author = "Seth Hardy"
-        last_modified = "2014-07-09"
+      meta:
+    description = "XtremeRAT Identifying Strings"
+    author = "Seth Hardy"
+    last_modified = "2014-07-09"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $ = "dqsaazere"
@@ -78,10 +86,12 @@ rule XtremeRATStrings : XtremeRAT Family
 
 rule XtremeRAT : Family
 {
-    meta:
-        description = "XtremeRAT"
-        author = "Seth Hardy"
-        last_modified = "2014-07-09"
+      meta:
+    description = "XtremeRAT"
+    author = "Seth Hardy"
+    last_modified = "2014-07-09"
+    severity = "7"
+    type = "Malware"
         
     condition:
         XtremeRATCode or XtremeRATStrings
@@ -89,12 +99,14 @@ rule XtremeRAT : Family
 
 rule xtremrat : rat
 {
-	meta:
-		author = "Jean-Philippe Teissier / @Jipe_"
-		description = "Xtrem RAT v3.5"
-		date = "2012-07-12" 
-		version = "1.0" 
-		filetype = "memory"
+	  meta:
+    author = "Jean-Philippe Teissier / @Jipe_"
+    description = "Xtrem RAT v3.5"
+    date = "2012-07-12"
+    version = "1.0"
+    filetype = "memory"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$a = "XTREME" wide
@@ -111,9 +123,12 @@ rule xtremrat : rat
 
 rule xtreme_rat_0
 { 
-	meta:
-		maltype = "Xtreme RAT"
-		reference = "http://blog.trendmicro.com/trendlabs-security-intelligence/xtreme-rat-targets-israeli-government/"
+	  meta:
+    maltype = "Xtreme RAT"
+    reference = "http://blog.trendmicro.com/trendlabs-security-intelligence/xtreme-rat-targets-israeli-government/"
+    description = "xtreme_rat_0"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$type="Microsoft-Windows-Security-Auditing"
 		$eventid="5156"
@@ -128,10 +143,13 @@ rule xtreme_rat_0
 
 rule xtreme_rat_1
 { 
-	meta:
-		maltype = "Xtreme RAT"
-		ref = "https://github.com/reed1713"
-		reference = "http://blog.trendmicro.com/trendlabs-security-intelligence/xtreme-rat-targets-israeli-government/"
+	  meta:
+    maltype = "Xtreme RAT"
+    ref = "https://github.com/reed1713"
+    reference = "http://blog.trendmicro.com/trendlabs-security-intelligence/xtreme-rat-targets-israeli-government/"
+    description = "xtreme_rat_1"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$type="Microsoft-Windows-Security-Auditing"
 		$eventid="5156"

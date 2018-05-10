@@ -9,12 +9,14 @@
 
 
 rule StreamEx_ShellCrew {
-   meta:
-      description = "Detects a "
-      author = "Cylance"
-      reference = "https://blog.cylance.com/shell-crew-variants-continue-to-fly-under-big-avs-radar"
-      date = "2017-02-09"
-      score = 80
+     meta:
+    description = "Detects a "
+    author = "Cylance"
+    reference = "https://blog.cylance.com/shell-crew-variants-continue-to-fly-under-big-avs-radar"
+    date = "2017-02-09"
+    score = 80
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $a = "0r+8DQY97XGB5iZ4Vf3KsEt61HLoTOuIqJPp2AlncRCgSxUWyebhMdmzvFjNwka="
       $b = {34 ?? 88 04 11 48 63 C3 48 FF C1 48 3D D8 03 00 00}
@@ -37,12 +39,14 @@ rule StreamEx_ShellCrew {
 /* Rule Set ----------------------------------------------------------------- */
 
 rule ShellCrew_StreamEx_1 {
-   meta:
-      description = "Auto-generated rule - file 81f411415aefa5ad7f7ed2365d9a18d0faf33738617afc19215b69c23f212c07"
-      author = "Florian Roth"
-      reference = "https://blog.cylance.com/shell-crew-variants-continue-to-fly-under-big-avs-radar"
-      date = "2017-02-10"
-      hash1 = "81f411415aefa5ad7f7ed2365d9a18d0faf33738617afc19215b69c23f212c07"
+     meta:
+    description = "Auto-generated rule - file 81f411415aefa5ad7f7ed2365d9a18d0faf33738617afc19215b69c23f212c07"
+    author = "Florian Roth"
+    reference = "https://blog.cylance.com/shell-crew-variants-continue-to-fly-under-big-avs-radar"
+    date = "2017-02-10"
+    hash1 = "81f411415aefa5ad7f7ed2365d9a18d0faf33738617afc19215b69c23f212c07"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $x1 = "cmd.exe /c  \"%s\"" fullword wide
       $s3 = "uac\\bin\\install_test.pdb" fullword ascii
@@ -55,12 +59,14 @@ rule ShellCrew_StreamEx_1 {
 }
 
 rule ShellCrew_StreamEx_1_msi {
-   meta:
-      description = "Auto-generated rule - file msi.dll"
-      author = "Florian Roth"
-      reference = "https://blog.cylance.com/shell-crew-variants-continue-to-fly-under-big-avs-radar"
-      date = "2017-02-10"
-      hash1 = "8c9048e2f5ea2ef9516cac06dc0fba8a7e97754468c0d9dc1e5f7bce6dbda2cc"
+     meta:
+    description = "Auto-generated rule - file msi.dll"
+    author = "Florian Roth"
+    reference = "https://blog.cylance.com/shell-crew-variants-continue-to-fly-under-big-avs-radar"
+    date = "2017-02-10"
+    hash1 = "8c9048e2f5ea2ef9516cac06dc0fba8a7e97754468c0d9dc1e5f7bce6dbda2cc"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $x1 = "msi.dll.eng" fullword wide
 
@@ -74,14 +80,16 @@ rule ShellCrew_StreamEx_1_msi {
 }
 
 rule ShellCrew_StreamEx_1_msi_dll {
-   meta:
-      description = "Auto-generated rule - file msi.dll.eng"
-      author = "Florian Roth"
-      reference = "https://blog.cylance.com/shell-crew-variants-continue-to-fly-under-big-avs-radar"
-      date = "2017-02-10"
-      hash1 = "883108119d2f4db066fa82e37aa49ecd2dbdacda67eb936b96720663ed6565ce"
-      hash2 = "5311f862d7c824d13eea8293422211e94fb406d95af0ae51358accd4835aaef8"
-      hash3 = "191cbeffa36657ab1ef3939da023cacbc9de0285bbe7775069c3d6e18b372c3f"
+     meta:
+    description = "Auto-generated rule - file msi.dll.eng"
+    author = "Florian Roth"
+    reference = "https://blog.cylance.com/shell-crew-variants-continue-to-fly-under-big-avs-radar"
+    date = "2017-02-10"
+    hash1 = "883108119d2f4db066fa82e37aa49ecd2dbdacda67eb936b96720663ed6565ce"
+    hash2 = "5311f862d7c824d13eea8293422211e94fb406d95af0ae51358accd4835aaef8"
+    hash3 = "191cbeffa36657ab1ef3939da023cacbc9de0285bbe7775069c3d6e18b372c3f"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "NDOGDUA" fullword ascii
       $s2 = "NsrdsrN" fullword ascii

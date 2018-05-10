@@ -1,10 +1,12 @@
 rule ransomware_windows_HDDCryptorA
 {
-    meta:
-        description = "The HDDCryptor ransomware encrypts local harddisks as well as resources in network shares via Server Message Block (SMB)"
-        reference = "http://blog.trendmicro.com/trendlabs-security-intelligence/bksod-by-ransomware-hddcryptor-uses-commercial-tools-to-encrypt-network-shares-and-lock-hdds/"
-        author = "@fusionrace"
-        md5 = "498bdcfb93d13fecaf92e96f77063abf"
+      meta:
+    description = "The HDDCryptor ransomware encrypts local harddisks as well as resources in network shares via Server Message Block (SMB)"
+    reference = "http://blog.trendmicro.com/trendlabs-security-intelligence/bksod-by-ransomware-hddcryptor-uses-commercial-tools-to-encrypt-network-shares-and-lock-hdds/"
+    author = "@fusionrace"
+    md5 = "498bdcfb93d13fecaf92e96f77063abf"
+    severity = "10"
+    type = "Ransomware"
     strings:
         // unique strings
         $u1 = "You are Hacked" fullword ascii wide

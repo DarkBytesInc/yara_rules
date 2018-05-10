@@ -4,13 +4,15 @@
 */
 rule AnglerEKredirector : EK
 {
-   meta:
-      description = "Angler Exploit Kit Redirector"
-      ref = "http://blog.xanda.org/2015/08/28/yara-rule-for-angler-ek-redirector-js/"
-      author = "adnan.shukor@gmail.com"
-      date = "08-July-2015"
-      impact = "5"
-      version = "1"
+     meta:
+    description = "Angler Exploit Kit Redirector"
+    ref = "http://blog.xanda.org/2015/08/28/yara-rule-for-angler-ek-redirector-js/"
+    author = "adnan.shukor@gmail.com"
+    date = "08-July-2015"
+    impact = "5"
+    version = "1"
+    severity = "7"
+    type = "Exploit Kit"
    strings:
       $ekr1 = "<script>var date = new Date(new Date().getTime() + 60*60*24*7*1000);" fullword
       $ekr2 = "document.cookie=\"PHP_SESSION_PHP="
@@ -22,13 +24,15 @@ rule AnglerEKredirector : EK
 }
 rule angler_flash : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Angler Exploit Kit Detection"
-   hash0 = "8081397c30b53119716c374dd58fc653"
-   sample_filetype = "unknown"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Angler Exploit Kit Detection"
+    hash0 = "8081397c30b53119716c374dd58fc653"
+    sample_filetype = "unknown"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "(9OOSp"
    $string1 = "r$g@ 0'[A"
@@ -50,13 +54,15 @@ condition:
 }
 rule angler_flash2 : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Angler Exploit Kit Detection"
-   hash0 = "23812c5a1d33c9ce61b0882f860d79d6"
-   sample_filetype = "unknown"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Angler Exploit Kit Detection"
+    hash0 = "23812c5a1d33c9ce61b0882f860d79d6"
+    sample_filetype = "unknown"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "4yOOUj"
    $string1 = "CSvI4e"
@@ -78,13 +84,15 @@ condition:
 }
 rule angler_flash4 : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Angler Exploit Kit Detection"
-   hash0 = "dbb3f5e90c05602d92e5d6e12f8c1421"
-   sample_filetype = "unknown"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Angler Exploit Kit Detection"
+    hash0 = "dbb3f5e90c05602d92e5d6e12f8c1421"
+    sample_filetype = "unknown"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "_u;cwD;"
    $string1 = "lhNp74"
@@ -108,13 +116,15 @@ condition:
 }
 rule angler_flash5 : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Angler Exploit Kit Detection"
-   hash0 = "9f809272e59ee9ecd71093035b31eec6"
-   sample_filetype = "unknown"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Angler Exploit Kit Detection"
+    hash0 = "9f809272e59ee9ecd71093035b31eec6"
+    sample_filetype = "unknown"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "0k%2{u"
    $string1 = "\\Pb@(R"
@@ -134,13 +144,15 @@ condition:
 }
 rule angler_flash_uncompressed : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Angler Exploit Kit Detection"
-   hash0 = "2543855d992b2f9a576f974c2630d851"
-   sample_filetype = "unknown"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Angler Exploit Kit Detection"
+    hash0 = "2543855d992b2f9a576f974c2630d851"
+    sample_filetype = "unknown"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "DisplayObjectContainer"
    $string1 = "Xtime2"
@@ -165,13 +177,15 @@ condition:
 }
 rule angler_html : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Angler Exploit Kit Detection"
-   hash0 = "afca949ab09c5583a2ea5b2006236666"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Angler Exploit Kit Detection"
+    hash0 = "afca949ab09c5583a2ea5b2006236666"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = " A9 3E AF D5 9AQ FA 14 BC F2 A0H EA 7FfJ A58 A3 B1 BD 85 DB F3 B4 B6 FB B2 B4 14 82 19 88 28 D0 EA 2"
    $string1 = " 2BS 25 26p 20 3F 81 0E D3 9C 84 C7 EC C3 C41M C48 D3 B5N 09 C2z 98 7B 09. DF 05 5EQ DF A3 B6 EE D5 "
@@ -197,13 +211,15 @@ condition:
 }
 rule angler_html2 : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Angler Exploit Kit Detection"
-   hash0 = "6c926bf25d1a8a80ab988c8a34c0102e"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Angler Exploit Kit Detection"
+    hash0 = "6c926bf25d1a8a80ab988c8a34c0102e"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "E 06 E7i 1E 91q 9C D0J 1D 9B 14 E7g 1D DD ECK 20c 40 C6 0C AFR5 3D 03 9Em EC 0CB C9 A9 DFw C9 ADP 5B"
    $string1 = "14Bc 5C 3Bp CB 2A 12 3D A56 AA 14 87 E3 81 8A 80h 27 1C 3A4 CE 12 AE FAy F0 8A 21 B8I AD 1E B9 2C D1"
@@ -229,13 +245,15 @@ condition:
 }
 rule angler_jar : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Angler Exploit Kit Detection"
-   hash0 = "3de78737b728811af38ea780de5f5ed7"
-   sample_filetype = "unknown"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Angler Exploit Kit Detection"
+    hash0 = "3de78737b728811af38ea780de5f5ed7"
+    sample_filetype = "unknown"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "myftysbrth"
    $string1 = "classPK"
@@ -252,13 +270,15 @@ condition:
 }
 rule angler_js : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Angler Exploit Kit Detection"
-   hash0 = "482d6c24a824103f0bcd37fa59e19452"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Angler Exploit Kit Detection"
+    hash0 = "482d6c24a824103f0bcd37fa59e19452"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "    2654435769,   Be"
    $string1 = "DFOMIqka "

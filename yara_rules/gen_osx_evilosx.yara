@@ -1,10 +1,12 @@
 rule OSX_backdoor_EvilOSX {
-    meta:
-        description = "EvilOSX MacOS/OSX backdoor"
-        author = "John Lambert @JohnLaTwC"
-        reference = "https://github.com/Marten4n6/EvilOSX, https://twitter.com/JohnLaTwC/status/966139336436498432"
-        date = "2018-02-23"
-        hash = "89e5b8208daf85f549d9b7df8e2a062e47f15a5b08462a4224f73c0a6223972a"
+      meta:
+    description = "EvilOSX MacOS/OSX backdoor"
+    author = "John Lambert @JohnLaTwC"
+    reference = "https://github.com/Marten4n6/EvilOSX, https://twitter.com/JohnLaTwC/status/966139336436498432"
+    date = "2018-02-23"
+    hash = "89e5b8208daf85f549d9b7df8e2a062e47f15a5b08462a4224f73c0a6223972a"
+    severity = "5"
+    type = "Unknown"
 
     strings:
         $h1 = /#!\/usr\/bin\/env\s+python/

@@ -6,12 +6,14 @@
 rule citadel13xy
 {
     
-    meta:
-        author = "Jean-Philippe Teissier / @Jipe_"
-        description = "Citadel 1.5.x.y trojan banker"
-        date = "2013-01-12" 
-        version = "1.0" 
-        filetype = "memory"
+      meta:
+    author = "Jean-Philippe Teissier / @Jipe_"
+    description = "Citadel 1.5.x.y trojan banker"
+    date = "2013-01-12"
+    version = "1.0"
+    filetype = "memory"
+    severity = "7"
+    type = "Malware"
    
     strings:
         $a = "Coded by BRIAN KREBS for personnal use only. I love my job & wife."
@@ -30,11 +32,12 @@ rule citadel13xy
 rule Citadel_Malware
 {
     
-    meta:
-        author = "xylitol@temari.fr"
-        date = "2015-10-08" 
-        description = "Search for nss3.dll pattern indicating an hexed copy of Citadel malware to work on firefox > v23.0"
-        // May only the challenge guide you
+      meta:
+    author = "xylitol@temari.fr"
+    date = "2015-10-08"
+    description = "Search for nss3.dll pattern indicating an hexed copy of Citadel malware to work on firefox > v23.0"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $s1 = "Coded by BRIAN KREBS for personal use only. I love my job & wife" wide ascii

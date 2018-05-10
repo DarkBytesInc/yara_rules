@@ -14,11 +14,13 @@
 
 rule EQGRP_noclient_3_0_5 
 {
-    meta:
-        description = "Detects tool from EQGRP toolset - file noclient-3.0.5.3"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-15"
+      meta:
+    description = "Detects tool from EQGRP toolset - file noclient-3.0.5.3"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-15"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "-C %s 127.0.0.1\" scripme -F -t JACKPOPIN4 '&" fullword ascii
@@ -34,11 +36,13 @@ rule EQGRP_noclient_3_0_5
 rule EQGRP_installdate 
 {
 
-    meta:
-        description = "Detects tool from EQGRP toolset - file installdate.pl"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-15"
+      meta:
+    description = "Detects tool from EQGRP toolset - file installdate.pl"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-15"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "#Provide hex or EP log as command-line argument or as input" fullword ascii
@@ -55,11 +59,13 @@ rule EQGRP_installdate
 rule EQGRP_teflondoor 
 {
 
-    meta:
-        description = "Detects tool from EQGRP toolset - file teflondoor.exe"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-15"
+      meta:
+    description = "Detects tool from EQGRP toolset - file teflondoor.exe"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-15"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "%s: abort.  Code is %d.  Message is '%s'" fullword ascii
@@ -78,11 +84,13 @@ rule EQGRP_teflondoor
 rule EQGRP_durablenapkin_solaris_2_0_1 
 {
 
-    meta:
-        description = "Detects tool from EQGRP toolset - file durablenapkin.solaris.2.0.1.1"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-15"
+      meta:
+    description = "Detects tool from EQGRP toolset - file durablenapkin.solaris.2.0.1.1"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-15"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "recv_ack: %s: Service not supplied by provider" fullword ascii
@@ -98,11 +106,13 @@ rule EQGRP_durablenapkin_solaris_2_0_1
 rule EQGRP_teflonhandle 
 {
 
-    meta:
-        description = "Detects tool from EQGRP toolset - file teflonhandle.exe"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-15"
+      meta:
+    description = "Detects tool from EQGRP toolset - file teflonhandle.exe"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-15"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "%s [infile] [outfile] /k 0x[%i character hex key] </g>" fullword ascii
@@ -118,11 +128,13 @@ rule EQGRP_teflonhandle
 rule EQGRP_false 
 {
 
-    meta:
-        description = "Detects tool from EQGRP toolset - file false.exe"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-15"
+      meta:
+    description = "Detects tool from EQGRP toolset - file false.exe"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-15"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = { 00 25 64 2E 0A 00 00 00 00 25 64 2E 0A 00 00 00
@@ -142,11 +154,13 @@ rule EQGRP_false
 rule EQGRP_bc_genpkt 
 {
 
-    meta:
-        description = "Detects tool from EQGRP toolset - file bc-genpkt"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-15"
+      meta:
+    description = "Detects tool from EQGRP toolset - file bc-genpkt"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-15"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "load auxiliary object=%s requested by file=%s" fullword ascii
@@ -164,11 +178,13 @@ rule EQGRP_bc_genpkt
 rule EQGRP_dn_1_0_2_1 
 {
 
-    meta:
-        description = "Detects tool from EQGRP toolset - file dn.1.0.2.1.linux"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-15"
+      meta:
+    description = "Detects tool from EQGRP toolset - file dn.1.0.2.1.linux"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-15"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "Valid commands are: SMAC, DMAC, INT, PACK, DONE, GO" fullword ascii
@@ -183,12 +199,14 @@ rule EQGRP_dn_1_0_2_1
 rule EQGRP_morel 
 {
 
-    meta:
-        description = "Detects tool from EQGRP toolset - file morel.exe"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-15"
-        hash1 = "a9152e67f507c9a179bb8478b58e5c71c444a5a39ae3082e04820a0613cd6d9f"
+      meta:
+    description = "Detects tool from EQGRP toolset - file morel.exe"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-15"
+    hash1 = "a9152e67f507c9a179bb8478b58e5c71c444a5a39ae3082e04820a0613cd6d9f"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "%d - %d, %d" fullword ascii
@@ -202,12 +220,14 @@ rule EQGRP_morel
 rule EQGRP_bc_parser 
 {
 
-    meta:
-        description = "Detects tool from EQGRP toolset - file bc-parser"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-15"
-        hash1 = "879f2f1ae5d18a3a5310aeeafec22484607649644e5ecb7d8a72f0877ac19cee"
+      meta:
+    description = "Detects tool from EQGRP toolset - file bc-parser"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-15"
+    hash1 = "879f2f1ae5d18a3a5310aeeafec22484607649644e5ecb7d8a72f0877ac19cee"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "*** Target may be susceptible to FALSEMOREL      ***" fullword ascii
@@ -220,11 +240,13 @@ rule EQGRP_bc_parser
 rule EQGRP_1212 
 {
 
-    meta:
-        description = "Detects tool from EQGRP toolset - file 1212.pl"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-15"
+      meta:
+    description = "Detects tool from EQGRP toolset - file 1212.pl"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-15"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "if (!(($srcip,$dstip,$srcport,$dstport) = ($line=~/^([a-f0-9]{8})([a-f0-9]{8})([a-f0-9]{4})([a-f0-9]{4})$/)))" fullword ascii
@@ -241,11 +263,13 @@ rule EQGRP_1212
 rule EQGRP_1212_dehex 
 {
 
-    meta:
-        description = "Detects tool from EQGRP toolset - from files 1212.pl, dehex.pl"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-15"
+      meta:
+    description = "Detects tool from EQGRP toolset - from files 1212.pl, dehex.pl"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-15"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "return \"ERROR:$line is not a valid address\";" fullword ascii
@@ -270,12 +294,14 @@ rule EQGRP_1212_dehex
 rule install_get_persistent_filenames 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file install_get_persistent_filenames"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "4a50ec4bf42087e932e9e67e0ea4c09e52a475d351981bb4c9851fda02b35291"
+      meta:
+    description = "EQGRP Toolset Firewall - file install_get_persistent_filenames"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "4a50ec4bf42087e932e9e67e0ea4c09e52a475d351981bb4c9851fda02b35291"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "Generates the persistence file name and prints it out." fullword ascii
@@ -287,12 +313,14 @@ rule install_get_persistent_filenames
 rule EQGRP_create_dns_injection
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file create_dns_injection.py"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "488f3cc21db0688d09e13eb85a197a1d37902612c3e302132c84e07bc42b1c32"
+      meta:
+    description = "EQGRP Toolset Firewall - file create_dns_injection.py"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "488f3cc21db0688d09e13eb85a197a1d37902612c3e302132c84e07bc42b1c32"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "Name:   A hostname: 'host.network.com', a decimal numeric offset within" fullword ascii
@@ -305,12 +333,14 @@ rule EQGRP_create_dns_injection
 rule EQGRP_screamingplow 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file screamingplow.sh"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "c7f4104c4607a03a1d27c832e1ebfc6ab252a27a1709015b5f1617b534f0090a"
+      meta:
+    description = "EQGRP Toolset Firewall - file screamingplow.sh"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "c7f4104c4607a03a1d27c832e1ebfc6ab252a27a1709015b5f1617b534f0090a"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "What is the name of your PBD:" fullword ascii
@@ -323,12 +353,14 @@ rule EQGRP_screamingplow
 rule EQGRP_MixText 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file MixText.py"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "e4d24e30e6cc3a0aa0032dbbd2b68c60bac216bef524eaf56296430aa05b3795"
+      meta:
+    description = "EQGRP Toolset Firewall - file MixText.py"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "e4d24e30e6cc3a0aa0032dbbd2b68c60bac216bef524eaf56296430aa05b3795"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "BinStore enabled implants." fullword ascii
@@ -340,12 +372,14 @@ rule EQGRP_MixText
 rule EQGRP_tunnel_state_reader 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file tunnel_state_reader"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "49d48ca1ec741f462fde80da68b64dfa5090855647520d29e345ef563113616c"
+      meta:
+    description = "EQGRP Toolset Firewall - file tunnel_state_reader"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "49d48ca1ec741f462fde80da68b64dfa5090855647520d29e345ef563113616c"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "Active connections will be maintained for this tunnel. Timeout:" fullword ascii
@@ -358,12 +392,14 @@ rule EQGRP_tunnel_state_reader
 rule EQGRP_payload 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file payload.py"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "21bed6d699b1fbde74cbcec93575c9694d5bea832cd191f59eb3e4140e5c5e07"
+      meta:
+    description = "EQGRP Toolset Firewall - file payload.py"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "21bed6d699b1fbde74cbcec93575c9694d5bea832cd191f59eb3e4140e5c5e07"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "can't find target version module!" fullword ascii
@@ -376,12 +412,14 @@ rule EQGRP_payload
 rule EQGRP_eligiblecandidate 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file eligiblecandidate.py"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "c4567c00734dedf1c875ecbbd56c1561a1610bedb4621d9c8899acec57353d86"
+      meta:
+    description = "EQGRP Toolset Firewall - file eligiblecandidate.py"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "c4567c00734dedf1c875ecbbd56c1561a1610bedb4621d9c8899acec57353d86"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $o1 = "Connection timed out. Only a problem if the callback was not received." fullword ascii
@@ -396,12 +434,14 @@ rule EQGRP_eligiblecandidate
 rule EQGRP_BUSURPER_2211_724 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file BUSURPER-2211-724.exe"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "d809d6ff23a9eee53d2132d2c13a9ac5d0cb3037c60e229373fc59a4f14bc744"
+      meta:
+    description = "EQGRP Toolset Firewall - file BUSURPER-2211-724.exe"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "d809d6ff23a9eee53d2132d2c13a9ac5d0cb3037c60e229373fc59a4f14bc744"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = ".got_loader" fullword ascii
@@ -417,12 +457,14 @@ rule EQGRP_BUSURPER_2211_724
 rule EQGRP_networkProfiler_orderScans 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file networkProfiler_orderScans.sh"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "ea986ddee09352f342ac160e805312e3a901e58d2beddf79cd421443ba8c9898"
+      meta:
+    description = "EQGRP Toolset Firewall - file networkProfiler_orderScans.sh"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "ea986ddee09352f342ac160e805312e3a901e58d2beddf79cd421443ba8c9898"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "Unable to save off predefinedScans directory" fullword ascii
@@ -435,12 +477,14 @@ rule EQGRP_networkProfiler_orderScans
 rule EQGRP_epicbanana_2_1_0_1 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file epicbanana_2.1.0.1.py"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "4b13cc183c3aaa8af43ef3721e254b54296c8089a0cd545ee3b867419bb66f61"
+      meta:
+    description = "EQGRP Toolset Firewall - file epicbanana_2.1.0.1.py"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "4b13cc183c3aaa8af43ef3721e254b54296c8089a0cd545ee3b867419bb66f61"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "failed to create version-specific payload" fullword ascii
@@ -453,12 +497,14 @@ rule EQGRP_epicbanana_2_1_0_1
 rule EQGRP_sniffer_xml2pcap 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file sniffer_xml2pcap"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "f5e5d75cfcd86e5c94b0e6f21bbac886c7e540698b1556d88a83cc58165b8e42"
+      meta:
+    description = "EQGRP Toolset Firewall - file sniffer_xml2pcap"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "f5e5d75cfcd86e5c94b0e6f21bbac886c7e540698b1556d88a83cc58165b8e42"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "-s/--srcip <sourceIP>  Use given source IP (if sniffer doesn't collect source IP)" fullword ascii
@@ -471,12 +517,14 @@ rule EQGRP_sniffer_xml2pcap
 rule EQGRP_BananaAid 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file BananaAid"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "7a4fb825e63dc612de81bc83313acf5eccaa7285afc05941ac1fef199279519f"
+      meta:
+    description = "EQGRP Toolset Firewall - file BananaAid"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "7a4fb825e63dc612de81bc83313acf5eccaa7285afc05941ac1fef199279519f"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "(might have to delete key in ~/.ssh/known_hosts on linux box)" fullword ascii
@@ -491,12 +539,14 @@ rule EQGRP_BananaAid
 rule EQGRP_bo 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file bo"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "aa8b363073e8ae754b1836c30f440d7619890ded92fb5b97c73294b15d22441d"
+      meta:
+    description = "EQGRP Toolset Firewall - file bo"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "aa8b363073e8ae754b1836c30f440d7619890ded92fb5b97c73294b15d22441d"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "ERROR: failed to open %s: %d" fullword ascii
@@ -512,12 +562,14 @@ rule EQGRP_bo
 rule EQGRP_SecondDate_2211 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file SecondDate-2211.exe"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "2337d0c81474d03a02c404cada699cf1b86c3c248ea808d4045b86305daa2607"
+      meta:
+    description = "EQGRP Toolset Firewall - file SecondDate-2211.exe"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "2337d0c81474d03a02c404cada699cf1b86c3c248ea808d4045b86305daa2607"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "SD_processControlPacket" fullword ascii
@@ -532,12 +584,14 @@ rule EQGRP_SecondDate_2211
 rule EQGRP_config_jp1_UA 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file config_jp1_UA.pl"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "2f50b6e9891e4d7fd24cc467e7f5cfe348f56f6248929fec4bbee42a5001ae56"
+      meta:
+    description = "EQGRP Toolset Firewall - file config_jp1_UA.pl"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "2f50b6e9891e4d7fd24cc467e7f5cfe348f56f6248929fec4bbee42a5001ae56"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "This program will configure a JETPLOW Userarea file." fullword ascii
@@ -552,12 +606,14 @@ rule EQGRP_config_jp1_UA
 rule EQGRP_userscript 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file userscript.FW"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "5098ff110d1af56115e2c32f332ff6e3973fb7ceccbd317637c9a72a3baa43d7"
+      meta:
+    description = "EQGRP Toolset Firewall - file userscript.FW"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "5098ff110d1af56115e2c32f332ff6e3973fb7ceccbd317637c9a72a3baa43d7"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "Are you sure? Don't forget that NETSCREEN firewalls require BANANALIAR!! " fullword ascii
@@ -569,12 +625,14 @@ rule EQGRP_userscript
 rule EQGRP_BBALL_M50FW08_2201 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file BBALL_M50FW08-2201.exe"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "80c0b68adb12bf3c15eff9db70a57ab999aad015da99c4417fdfd28156d8d3f7"
+      meta:
+    description = "EQGRP Toolset Firewall - file BBALL_M50FW08-2201.exe"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "80c0b68adb12bf3c15eff9db70a57ab999aad015da99c4417fdfd28156d8d3f7"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = ".got_loader" fullword ascii
@@ -591,12 +649,14 @@ rule EQGRP_BBALL_M50FW08_2201
 rule EQGRP_BUSURPER_3001_724 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file BUSURPER-3001-724.exe"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "6b558a6b8bf3735a869365256f9f2ad2ed75ccaa0eefdc61d6274df4705e978b"
+      meta:
+    description = "EQGRP Toolset Firewall - file BUSURPER-3001-724.exe"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "6b558a6b8bf3735a869365256f9f2ad2ed75ccaa0eefdc61d6274df4705e978b"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "IMPLANT" fullword ascii
@@ -610,12 +670,14 @@ rule EQGRP_BUSURPER_3001_724
 rule EQGRP_workit 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file workit.py"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "fb533b4d255b4e6072a4fa2e1794e38a165f9aa66033340c2f4f8fd1da155fac"
+      meta:
+    description = "EQGRP Toolset Firewall - file workit.py"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "fb533b4d255b4e6072a4fa2e1794e38a165f9aa66033340c2f4f8fd1da155fac"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "macdef init > /tmp/.netrc;" fullword ascii
@@ -637,12 +699,14 @@ rule EQGRP_workit
 rule EQGRP_tinyhttp_setup 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file tinyhttp_setup.sh"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "3d12c83067a9f40f2f5558d3cf3434bbc9a4c3bb9d66d0e3c0b09b9841c766a0"
+      meta:
+    description = "EQGRP Toolset Firewall - file tinyhttp_setup.sh"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "3d12c83067a9f40f2f5558d3cf3434bbc9a4c3bb9d66d0e3c0b09b9841c766a0"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $x1 = "firefox http://127.0.0.1:8000/$_name" fullword ascii
@@ -657,12 +721,14 @@ rule EQGRP_tinyhttp_setup
 rule EQGRP_shellcode 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file shellcode.py"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "ac9decb971dd44127a6ca0d35ac153951f0735bb4df422733046098eca8f8b7f"
+      meta:
+    description = "EQGRP Toolset Firewall - file shellcode.py"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "ac9decb971dd44127a6ca0d35ac153951f0735bb4df422733046098eca8f8b7f"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "execute_post = '\\xe8\\x00\\x00\\x00\\x00\\x5d\\xbe\\xef\\xbe\\xad\\xde\\x89\\xf7\\x89\\xec\\x29\\xf4\\xb8\\x03\\x00\\x00\\x00" ascii
@@ -680,12 +746,14 @@ rule EQGRP_shellcode
 rule EQGRP_EPBA 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file EPBA.script"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "53e1af1b410ace0934c152b5df717d8a5a8f5fdd8b9eb329a44d94c39b066ff7"
+      meta:
+    description = "EQGRP Toolset Firewall - file EPBA.script"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "53e1af1b410ace0934c152b5df717d8a5a8f5fdd8b9eb329a44d94c39b066ff7"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "./epicbanana_2.0.0.1.py -t 127.0.0.1 --proto=ssh --username=cisco --password=cisco --target_vers=asa804 --mem=NA -p 22 " fullword ascii
@@ -702,12 +770,14 @@ rule EQGRP_EPBA
 
 rule EQGRP_BPIE 
 {
-    meta:
-        description = "EQGRP Toolset Firewall - file BPIE-2201.exe"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "697e80cf2595c85f7c931693946d295994c55da17a400f2c9674014f130b4688"
+      meta:
+    description = "EQGRP Toolset Firewall - file BPIE-2201.exe"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "697e80cf2595c85f7c931693946d295994c55da17a400f2c9674014f130b4688"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "profProcessPacket" fullword ascii
@@ -726,12 +796,14 @@ rule EQGRP_BPIE
 rule EQGRP_jetplow_SH 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file jetplow.sh"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "ee266f84a1a4ccf2e789a73b0a11242223ed6eba6868875b5922aea931a2199c"
+      meta:
+    description = "EQGRP Toolset Firewall - file jetplow.sh"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "ee266f84a1a4ccf2e789a73b0a11242223ed6eba6868875b5922aea931a2199c"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "cd /current/bin/FW/BANANAGLEE/$bgver/Install/LP/jetplow" fullword ascii
@@ -746,12 +818,14 @@ rule EQGRP_jetplow_SH
 rule EQGRP_BBANJO 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file BBANJO-3011.exe"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "f09c2f90464781a08436321f6549d350ecef3d92b4f25b95518760f5d4c9b2c3"
+      meta:
+    description = "EQGRP Toolset Firewall - file BBANJO-3011.exe"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "f09c2f90464781a08436321f6549d350ecef3d92b4f25b95518760f5d4c9b2c3"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "get_lsl_interfaces" fullword ascii
@@ -769,12 +843,14 @@ rule EQGRP_BBANJO
 rule EQGRP_BPATROL_2201 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file BPATROL-2201.exe"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "aa892750b893033eed2fedb2f4d872f79421174eb217f0c34a933c424ae66395"
+      meta:
+    description = "EQGRP Toolset Firewall - file BPATROL-2201.exe"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "aa892750b893033eed2fedb2f4d872f79421174eb217f0c34a933c424ae66395"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "dumpConfig" fullword ascii
@@ -790,12 +866,14 @@ rule EQGRP_BPATROL_2201
 rule EQGRP_extrabacon 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file extrabacon_1.1.0.1.py"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "59d60835fe200515ece36a6e87e642ee8059a40cb04ba5f4b9cce7374a3e7735"
+      meta:
+    description = "EQGRP Toolset Firewall - file extrabacon_1.1.0.1.py"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "59d60835fe200515ece36a6e87e642ee8059a40cb04ba5f4b9cce7374a3e7735"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "To disable password checking on target:" fullword ascii
@@ -811,12 +889,14 @@ rule EQGRP_extrabacon
 rule EQGRP_sploit_py 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file sploit.py"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "0316d70a5bbf068a7fc791e08e816015d04ec98f088a7ff42af8b9e769b8d1f6"
+      meta:
+    description = "EQGRP Toolset Firewall - file sploit.py"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "0316d70a5bbf068a7fc791e08e816015d04ec98f088a7ff42af8b9e769b8d1f6"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "the --spoof option requires 3 or 4 fields as follows redir_ip" ascii
@@ -830,12 +910,14 @@ rule EQGRP_sploit_py
 rule EQGRP_uninstallPBD 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file uninstallPBD.bat"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "692fdb449f10057a114cf2963000f52ce118d9a40682194838006c66af159bd0"
+      meta:
+    description = "EQGRP Toolset Firewall - file uninstallPBD.bat"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "692fdb449f10057a114cf2963000f52ce118d9a40682194838006c66af159bd0"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "memset 00e9a05c 4 38845b88" fullword ascii
@@ -849,12 +931,14 @@ rule EQGRP_uninstallPBD
 rule EQGRP_BICECREAM 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file BICECREAM-2140"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "4842076af9ba49e6dfae21cf39847b4172c06a0bd3d2f1ca6f30622e14b77210"
+      meta:
+    description = "EQGRP Toolset Firewall - file BICECREAM-2140"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "4842076af9ba49e6dfae21cf39847b4172c06a0bd3d2f1ca6f30622e14b77210"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "Could not connect to target device: %s:%d. Please check IP address." fullword ascii
@@ -874,12 +958,14 @@ rule EQGRP_BICECREAM
 rule EQGRP_create_http_injection 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file create_http_injection.py"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "de52f5621b4f3896d4bd1fb93ee8be827e71a2b189a9f8552b68baed062a992d"
+      meta:
+    description = "EQGRP Toolset Firewall - file create_http_injection.py"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "de52f5621b4f3896d4bd1fb93ee8be827e71a2b189a9f8552b68baed062a992d"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "required by SECONDDATE" fullword ascii
@@ -895,12 +981,14 @@ rule EQGRP_create_http_injection
 rule EQGRP_BFLEA_2201 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file BFLEA-2201.exe"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "15e8c743770e44314496c5f27b6297c5d7a4af09404c4aa507757e0cc8edc79e"
+      meta:
+    description = "EQGRP Toolset Firewall - file BFLEA-2201.exe"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "15e8c743770e44314496c5f27b6297c5d7a4af09404c4aa507757e0cc8edc79e"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = ".got_loader" fullword ascii
@@ -918,12 +1006,14 @@ rule EQGRP_BFLEA_2201
 rule EQGRP_BpfCreator_RHEL4 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file BpfCreator-RHEL4"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "bd7303393409623cabf0fcf2127a0b81fae52fe40a0d2b8db0f9f092902bbd92"
+      meta:
+    description = "EQGRP Toolset Firewall - file BpfCreator-RHEL4"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "bd7303393409623cabf0fcf2127a0b81fae52fe40a0d2b8db0f9f092902bbd92"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "usage %s \"<tcpdump pcap string>\" <outfile>" fullword ascii
@@ -939,12 +1029,14 @@ rule EQGRP_BpfCreator_RHEL4
 rule EQGRP_StoreFc 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file StoreFc.py"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "f155cce4eecff8598243a721389046ae2b6ca8ba6cb7b4ac00fd724601a56108"
+      meta:
+    description = "EQGRP Toolset Firewall - file StoreFc.py"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "f155cce4eecff8598243a721389046ae2b6ca8ba6cb7b4ac00fd724601a56108"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "Usage: StoreFc.py --configFile=<path to xml file> --implantFile=<path to BinStore implant> [--outputFile=<file to write the conf" ascii
@@ -958,12 +1050,14 @@ rule EQGRP_StoreFc
 rule EQGRP_hexdump 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file hexdump.py"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "95a9a6a8de60d3215c1c9f82d2d8b2640b42f5cabdc8b50bd1f4be2ea9d7575a"
+      meta:
+    description = "EQGRP Toolset Firewall - file hexdump.py"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "95a9a6a8de60d3215c1c9f82d2d8b2640b42f5cabdc8b50bd1f4be2ea9d7575a"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "def hexdump(x,lead=\"[+] \",out=sys.stdout):" fullword ascii
@@ -978,12 +1072,14 @@ rule EQGRP_hexdump
 rule EQGRP_BBALL 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - file BBALL_E28F6-2201.exe"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        hash1 = "498fc9f20b938b8111adfa3ca215325f265a08092eefd5300c4168876deb7bf6"
+      meta:
+    description = "EQGRP Toolset Firewall - file BBALL_E28F6-2201.exe"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    hash1 = "498fc9f20b938b8111adfa3ca215325f265a08092eefd5300c4168876deb7bf6"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "Components/Modules/BiosModule/Implant/E28F6/../e28f640j3_asm.S" fullword ascii
@@ -1003,14 +1099,16 @@ rule EQGRP_BBALL
 rule EQGRP_BARPUNCH_BPICKER 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - from files BARPUNCH-3110, BPICKER-3100"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        super_rule = 1
-        hash1 = "830538fe8c981ca386c6c7d55635ac61161b23e6e25d96280ac2fc638c2d82cc"
-        hash2 = "d859ce034751cac960825268a157ced7c7001d553b03aec54e6794ff66185e6f"
+      meta:
+    description = "EQGRP Toolset Firewall - from files BARPUNCH-3110, BPICKER-3100"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    super_rule = 1
+    hash1 = "830538fe8c981ca386c6c7d55635ac61161b23e6e25d96280ac2fc638c2d82cc"
+    hash2 = "d859ce034751cac960825268a157ced7c7001d553b03aec54e6794ff66185e6f"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "--cmd %x --idkey %s --sport %i --dport %i --lp %s --implant %s --bsize %hu --logdir %s --lptimeout %u" fullword ascii
@@ -1026,19 +1124,21 @@ rule EQGRP_BARPUNCH_BPICKER
 rule EQGRP_Implants_Gen6 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - from files BananaUsurper-2120, BLIAR-2110, BLIQUER-2230, BLIQUER-3030, BLIQUER-3120, BPICKER-3100, writeJetPlow-2130"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        super_rule = 1
-        hash1 = "3366b4bbf265716869a487203a8ac39867920880990493dd4dd8385e42b0c119"
-        hash2 = "05031898f3d52a5e05de119868c0ec7caad3c9f3e9780e12f6f28b02941895a4"
-        hash3 = "d9756e3ba272cd4502d88f4520747e9e69d241dee6561f30423840123c1a7939"
-        hash4 = "8e4a76c4b50350b67cabbb2fed47d781ee52d8d21121647b0c0356498aeda2a2"
-        hash5 = "6059bec5cf297266079d52dbb29ab9b9e0b35ce43f718022b5b5f760c1976ec3"
-        hash6 = "d859ce034751cac960825268a157ced7c7001d553b03aec54e6794ff66185e6f"
-        hash7 = "464b4c01f93f31500d2d770360d23bdc37e5ad4885e274a629ea86b2accb7a5c"
+      meta:
+    description = "EQGRP Toolset Firewall - from files BananaUsurper-2120, BLIAR-2110, BLIQUER-2230, BLIQUER-3030, BLIQUER-3120, BPICKER-3100, writeJetPlow-2130"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    super_rule = 1
+    hash1 = "3366b4bbf265716869a487203a8ac39867920880990493dd4dd8385e42b0c119"
+    hash2 = "05031898f3d52a5e05de119868c0ec7caad3c9f3e9780e12f6f28b02941895a4"
+    hash3 = "d9756e3ba272cd4502d88f4520747e9e69d241dee6561f30423840123c1a7939"
+    hash4 = "8e4a76c4b50350b67cabbb2fed47d781ee52d8d21121647b0c0356498aeda2a2"
+    hash5 = "6059bec5cf297266079d52dbb29ab9b9e0b35ce43f718022b5b5f760c1976ec3"
+    hash6 = "d859ce034751cac960825268a157ced7c7001d553b03aec54e6794ff66185e6f"
+    hash7 = "464b4c01f93f31500d2d770360d23bdc37e5ad4885e274a629ea86b2accb7a5c"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "LP.c:pixSecurity - Improper number of bytes read in Security/Interface Information" fullword ascii
@@ -1058,20 +1158,22 @@ rule EQGRP_Implants_Gen6
 rule EQGRP_Implants_Gen5 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - from files BananaUsurper-2120, BARPUNCH-3110, BLIAR-2110, BLIQUER-2230, BLIQUER-3030, BLIQUER-3120, BPICKER-3100, writeJetPlow-2130"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        super_rule = 1
-        hash1 = "3366b4bbf265716869a487203a8ac39867920880990493dd4dd8385e42b0c119"
-        hash2 = "830538fe8c981ca386c6c7d55635ac61161b23e6e25d96280ac2fc638c2d82cc"
-        hash3 = "05031898f3d52a5e05de119868c0ec7caad3c9f3e9780e12f6f28b02941895a4"
-        hash4 = "d9756e3ba272cd4502d88f4520747e9e69d241dee6561f30423840123c1a7939"
-        hash5 = "8e4a76c4b50350b67cabbb2fed47d781ee52d8d21121647b0c0356498aeda2a2"
-        hash6 = "6059bec5cf297266079d52dbb29ab9b9e0b35ce43f718022b5b5f760c1976ec3"
-        hash7 = "d859ce034751cac960825268a157ced7c7001d553b03aec54e6794ff66185e6f"
-        hash8 = "464b4c01f93f31500d2d770360d23bdc37e5ad4885e274a629ea86b2accb7a5c"
+      meta:
+    description = "EQGRP Toolset Firewall - from files BananaUsurper-2120, BARPUNCH-3110, BLIAR-2110, BLIQUER-2230, BLIQUER-3030, BLIQUER-3120, BPICKER-3100, writeJetPlow-2130"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    super_rule = 1
+    hash1 = "3366b4bbf265716869a487203a8ac39867920880990493dd4dd8385e42b0c119"
+    hash2 = "830538fe8c981ca386c6c7d55635ac61161b23e6e25d96280ac2fc638c2d82cc"
+    hash3 = "05031898f3d52a5e05de119868c0ec7caad3c9f3e9780e12f6f28b02941895a4"
+    hash4 = "d9756e3ba272cd4502d88f4520747e9e69d241dee6561f30423840123c1a7939"
+    hash5 = "8e4a76c4b50350b67cabbb2fed47d781ee52d8d21121647b0c0356498aeda2a2"
+    hash6 = "6059bec5cf297266079d52dbb29ab9b9e0b35ce43f718022b5b5f760c1976ec3"
+    hash7 = "d859ce034751cac960825268a157ced7c7001d553b03aec54e6794ff66185e6f"
+    hash8 = "464b4c01f93f31500d2d770360d23bdc37e5ad4885e274a629ea86b2accb7a5c"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $x1 = "Module and Implant versions do not match.  This module is not compatible with the target implant" fullword ascii
@@ -1086,14 +1188,16 @@ rule EQGRP_Implants_Gen5
 rule EQGRP_pandarock 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - from files pandarock_v1.11.1.1.bin, pit"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        super_rule = 1
-        hash1 = "1214e282ac7258e616ebd76f912d4b2455d1b415b7216823caa3fc0d09045a5f"
-        hash2 = "c8a151df7605cb48feb8be2ab43ec965b561d2b6e2a837d645fdf6a6191ab5fe"
+      meta:
+    description = "EQGRP Toolset Firewall - from files pandarock_v1.11.1.1.bin, pit"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    super_rule = 1
+    hash1 = "1214e282ac7258e616ebd76f912d4b2455d1b415b7216823caa3fc0d09045a5f"
+    hash2 = "c8a151df7605cb48feb8be2ab43ec965b561d2b6e2a837d645fdf6a6191ab5fe"
+    severity = "10"
+    type = "Advanced Persistent Threat"
   
     strings:
         $x1 = "* Not attempting to execute \"%s\" command" fullword ascii
@@ -1115,14 +1219,16 @@ rule EQGRP_pandarock
 rule EQGRP_BananaUsurper_writeJetPlow
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - from files BananaUsurper-2120, writeJetPlow-2130"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        super_rule = 1
-        hash1 = "3366b4bbf265716869a487203a8ac39867920880990493dd4dd8385e42b0c119"
-        hash2 = "464b4c01f93f31500d2d770360d23bdc37e5ad4885e274a629ea86b2accb7a5c"
+      meta:
+    description = "EQGRP Toolset Firewall - from files BananaUsurper-2120, writeJetPlow-2130"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    super_rule = 1
+    hash1 = "3366b4bbf265716869a487203a8ac39867920880990493dd4dd8385e42b0c119"
+    hash2 = "464b4c01f93f31500d2d770360d23bdc37e5ad4885e274a629ea86b2accb7a5c"
+    severity = "10"
+    type = "Advanced Persistent Threat"
  
     strings:
         $x1 = "Implant Version-Specific Values:" fullword ascii
@@ -1137,16 +1243,18 @@ rule EQGRP_BananaUsurper_writeJetPlow
 rule EQGRP_Implants_Gen4 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - from files BLIAR-2110, BLIQUER-2230, BLIQUER-3030, BLIQUER-3120"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        super_rule = 1
-        hash1 = "05031898f3d52a5e05de119868c0ec7caad3c9f3e9780e12f6f28b02941895a4"
-        hash2 = "d9756e3ba272cd4502d88f4520747e9e69d241dee6561f30423840123c1a7939"
-        hash3 = "8e4a76c4b50350b67cabbb2fed47d781ee52d8d21121647b0c0356498aeda2a2"
-        hash4 = "6059bec5cf297266079d52dbb29ab9b9e0b35ce43f718022b5b5f760c1976ec3"
+      meta:
+    description = "EQGRP Toolset Firewall - from files BLIAR-2110, BLIQUER-2230, BLIQUER-3030, BLIQUER-3120"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    super_rule = 1
+    hash1 = "05031898f3d52a5e05de119868c0ec7caad3c9f3e9780e12f6f28b02941895a4"
+    hash2 = "d9756e3ba272cd4502d88f4520747e9e69d241dee6561f30423840123c1a7939"
+    hash3 = "8e4a76c4b50350b67cabbb2fed47d781ee52d8d21121647b0c0356498aeda2a2"
+    hash4 = "6059bec5cf297266079d52dbb29ab9b9e0b35ce43f718022b5b5f760c1976ec3"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "Command has not yet been coded" fullword ascii
@@ -1162,18 +1270,20 @@ rule EQGRP_Implants_Gen4
 rule EQGRP_Implants_Gen3 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - from files BARPUNCH-3110, BLIAR-2110, BLIQUER-2230, BLIQUER-3030, BLIQUER-3120, BPICKER-3100"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        super_rule = 1
-        hash1 = "830538fe8c981ca386c6c7d55635ac61161b23e6e25d96280ac2fc638c2d82cc"
-        hash2 = "05031898f3d52a5e05de119868c0ec7caad3c9f3e9780e12f6f28b02941895a4"
-        hash3 = "d9756e3ba272cd4502d88f4520747e9e69d241dee6561f30423840123c1a7939"
-        hash4 = "8e4a76c4b50350b67cabbb2fed47d781ee52d8d21121647b0c0356498aeda2a2"
-        hash5 = "6059bec5cf297266079d52dbb29ab9b9e0b35ce43f718022b5b5f760c1976ec3"
-        hash6 = "d859ce034751cac960825268a157ced7c7001d553b03aec54e6794ff66185e6f"
+      meta:
+    description = "EQGRP Toolset Firewall - from files BARPUNCH-3110, BLIAR-2110, BLIQUER-2230, BLIQUER-3030, BLIQUER-3120, BPICKER-3100"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    super_rule = 1
+    hash1 = "830538fe8c981ca386c6c7d55635ac61161b23e6e25d96280ac2fc638c2d82cc"
+    hash2 = "05031898f3d52a5e05de119868c0ec7caad3c9f3e9780e12f6f28b02941895a4"
+    hash3 = "d9756e3ba272cd4502d88f4520747e9e69d241dee6561f30423840123c1a7939"
+    hash4 = "8e4a76c4b50350b67cabbb2fed47d781ee52d8d21121647b0c0356498aeda2a2"
+    hash5 = "6059bec5cf297266079d52dbb29ab9b9e0b35ce43f718022b5b5f760c1976ec3"
+    hash6 = "d859ce034751cac960825268a157ced7c7001d553b03aec54e6794ff66185e6f"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "incomplete and must be removed manually.)" fullword ascii
@@ -1188,14 +1298,16 @@ rule EQGRP_Implants_Gen3
 rule EQGRP_BLIAR_BLIQUER 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - from files BLIAR-2110, BLIQUER-2230"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        super_rule = 1
-        hash1 = "05031898f3d52a5e05de119868c0ec7caad3c9f3e9780e12f6f28b02941895a4"
-        hash2 = "d9756e3ba272cd4502d88f4520747e9e69d241dee6561f30423840123c1a7939"
+      meta:
+    description = "EQGRP Toolset Firewall - from files BLIAR-2110, BLIQUER-2230"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    super_rule = 1
+    hash1 = "05031898f3d52a5e05de119868c0ec7caad3c9f3e9780e12f6f28b02941895a4"
+    hash2 = "d9756e3ba272cd4502d88f4520747e9e69d241dee6561f30423840123c1a7939"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "Do you wish to activate the implant that is already on the firewall? (y/n): " fullword ascii
@@ -1223,14 +1335,16 @@ rule EQGRP_BLIAR_BLIQUER
 rule EQGRP_sploit 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - from files sploit.py, sploit.py"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        super_rule = 1
-        hash1 = "0316d70a5bbf068a7fc791e08e816015d04ec98f088a7ff42af8b9e769b8d1f6"
-        hash2 = "0316d70a5bbf068a7fc791e08e816015d04ec98f088a7ff42af8b9e769b8d1f6"
+      meta:
+    description = "EQGRP Toolset Firewall - from files sploit.py, sploit.py"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    super_rule = 1
+    hash1 = "0316d70a5bbf068a7fc791e08e816015d04ec98f088a7ff42af8b9e769b8d1f6"
+    hash2 = "0316d70a5bbf068a7fc791e08e816015d04ec98f088a7ff42af8b9e769b8d1f6"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "print \"[+] Connecting to %s:%s\" % (self.params.dst['ip'], self.params.dst['port'])" fullword ascii
@@ -1249,18 +1363,20 @@ rule EQGRP_sploit
 rule EQGRP_Implants_Gen2 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - from files BananaUsurper-2120, BLIAR-2110, BLIQUER-2230, BLIQUER-3030, BLIQUER-3120, writeJetPlow-2130"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        super_rule = 1
-        hash1 = "3366b4bbf265716869a487203a8ac39867920880990493dd4dd8385e42b0c119"
-        hash2 = "05031898f3d52a5e05de119868c0ec7caad3c9f3e9780e12f6f28b02941895a4"
-        hash3 = "d9756e3ba272cd4502d88f4520747e9e69d241dee6561f30423840123c1a7939"
-        hash4 = "8e4a76c4b50350b67cabbb2fed47d781ee52d8d21121647b0c0356498aeda2a2"
-        hash5 = "6059bec5cf297266079d52dbb29ab9b9e0b35ce43f718022b5b5f760c1976ec3"
-        hash6 = "464b4c01f93f31500d2d770360d23bdc37e5ad4885e274a629ea86b2accb7a5c"
+      meta:
+    description = "EQGRP Toolset Firewall - from files BananaUsurper-2120, BLIAR-2110, BLIQUER-2230, BLIQUER-3030, BLIQUER-3120, writeJetPlow-2130"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    super_rule = 1
+    hash1 = "3366b4bbf265716869a487203a8ac39867920880990493dd4dd8385e42b0c119"
+    hash2 = "05031898f3d52a5e05de119868c0ec7caad3c9f3e9780e12f6f28b02941895a4"
+    hash3 = "d9756e3ba272cd4502d88f4520747e9e69d241dee6561f30423840123c1a7939"
+    hash4 = "8e4a76c4b50350b67cabbb2fed47d781ee52d8d21121647b0c0356498aeda2a2"
+    hash5 = "6059bec5cf297266079d52dbb29ab9b9e0b35ce43f718022b5b5f760c1976ec3"
+    hash6 = "464b4c01f93f31500d2d770360d23bdc37e5ad4885e274a629ea86b2accb7a5c"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $x1 = "Modules persistence file written successfully" fullword ascii
@@ -1283,21 +1399,23 @@ rule EQGRP_Implants_Gen2
 rule EQGRP_Implants_Gen1 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - from files BananaUsurper-2120, BARPUNCH-3110, BLIAR-2110, BLIQUER-2230, BLIQUER-3030, BLIQUER-3120, BPICKER-3100, lpexe, writeJetPlow-2130"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        super_rule = 1
-        hash1 = "3366b4bbf265716869a487203a8ac39867920880990493dd4dd8385e42b0c119"
-        hash2 = "830538fe8c981ca386c6c7d55635ac61161b23e6e25d96280ac2fc638c2d82cc"
-        hash3 = "05031898f3d52a5e05de119868c0ec7caad3c9f3e9780e12f6f28b02941895a4"
-        hash4 = "d9756e3ba272cd4502d88f4520747e9e69d241dee6561f30423840123c1a7939"
-        hash5 = "8e4a76c4b50350b67cabbb2fed47d781ee52d8d21121647b0c0356498aeda2a2"
-        hash6 = "6059bec5cf297266079d52dbb29ab9b9e0b35ce43f718022b5b5f760c1976ec3"
-        hash7 = "d859ce034751cac960825268a157ced7c7001d553b03aec54e6794ff66185e6f"
-        hash8 = "ee3e3487a9582181892e27b4078c5a3cb47bb31fc607634468cc67753f7e61d7"
-        hash9 = "464b4c01f93f31500d2d770360d23bdc37e5ad4885e274a629ea86b2accb7a5c"
+      meta:
+    description = "EQGRP Toolset Firewall - from files BananaUsurper-2120, BARPUNCH-3110, BLIAR-2110, BLIQUER-2230, BLIQUER-3030, BLIQUER-3120, BPICKER-3100, lpexe, writeJetPlow-2130"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    super_rule = 1
+    hash1 = "3366b4bbf265716869a487203a8ac39867920880990493dd4dd8385e42b0c119"
+    hash2 = "830538fe8c981ca386c6c7d55635ac61161b23e6e25d96280ac2fc638c2d82cc"
+    hash3 = "05031898f3d52a5e05de119868c0ec7caad3c9f3e9780e12f6f28b02941895a4"
+    hash4 = "d9756e3ba272cd4502d88f4520747e9e69d241dee6561f30423840123c1a7939"
+    hash5 = "8e4a76c4b50350b67cabbb2fed47d781ee52d8d21121647b0c0356498aeda2a2"
+    hash6 = "6059bec5cf297266079d52dbb29ab9b9e0b35ce43f718022b5b5f760c1976ec3"
+    hash7 = "d859ce034751cac960825268a157ced7c7001d553b03aec54e6794ff66185e6f"
+    hash8 = "ee3e3487a9582181892e27b4078c5a3cb47bb31fc607634468cc67753f7e61d7"
+    hash9 = "464b4c01f93f31500d2d770360d23bdc37e5ad4885e274a629ea86b2accb7a5c"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $s1 = "WARNING:  Session may not have been closed!" fullword ascii
@@ -1316,14 +1434,16 @@ rule EQGRP_Implants_Gen1
 rule EQGRP_eligiblebombshell_generic 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - from files eligiblebombshell_1.2.0.1.py, eligiblebombshell_1.2.0.1.py"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        super_rule = 1
-        hash1 = "dd0e3ae6e1039a755bf6cb28bf726b4d6ab4a1da2392ba66d114a43a55491eb1"
-        hash2 = "dd0e3ae6e1039a755bf6cb28bf726b4d6ab4a1da2392ba66d114a43a55491eb1"
+      meta:
+    description = "EQGRP Toolset Firewall - from files eligiblebombshell_1.2.0.1.py, eligiblebombshell_1.2.0.1.py"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    super_rule = 1
+    hash1 = "dd0e3ae6e1039a755bf6cb28bf726b4d6ab4a1da2392ba66d114a43a55491eb1"
+    hash2 = "dd0e3ae6e1039a755bf6cb28bf726b4d6ab4a1da2392ba66d114a43a55491eb1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
   
     strings:
         $s1 = "logging.error(\"       Perhaps you should run with --scan?\")" fullword ascii
@@ -1337,14 +1457,16 @@ rule EQGRP_eligiblebombshell_generic
 rule EQGRP_ssh_telnet_29 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - from files ssh.py, telnet.py"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
-        super_rule = 1
-        hash1 = "630d464b1d08c4dfd0bd50552bee2d6a591fb0b5597ecebaa556a3c3d4e0aa4e"
-        hash2 = "07f4c60505f4d5fb5c4a76a8c899d9b63291444a3980d94c06e1d5889ae85482"
+      meta:
+    description = "EQGRP Toolset Firewall - from files ssh.py, telnet.py"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    super_rule = 1
+    hash1 = "630d464b1d08c4dfd0bd50552bee2d6a591fb0b5597ecebaa556a3c3d4e0aa4e"
+    hash2 = "07f4c60505f4d5fb5c4a76a8c899d9b63291444a3980d94c06e1d5889ae85482"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $s1 = "received prompt, we're in" fullword ascii
@@ -1364,11 +1486,13 @@ rule EQGRP_ssh_telnet_29
 rule EQGRP_tinyexec 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - from files tinyexec"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
+      meta:
+    description = "EQGRP Toolset Firewall - from files tinyexec"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = { 73 68 73 74 72 74 61 62 00 2E 74 65 78 74 }
@@ -1381,11 +1505,13 @@ rule EQGRP_tinyexec
 rule EQGRP_callbacks 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - Callback addresses"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
+      meta:
+    description = "EQGRP Toolset Firewall - Callback addresses"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "30.40.50.60:9342" fullword ascii wide /* DoD */
@@ -1397,11 +1523,13 @@ rule EQGRP_callbacks
 rule EQGRP_Extrabacon_Output 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - Extrabacon exploit output"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
+      meta:
+    description = "EQGRP Toolset Firewall - Extrabacon exploit output"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "|###[ SNMPresponse ]###" fullword ascii
@@ -1417,11 +1545,13 @@ rule EQGRP_Extrabacon_Output
 rule EQGRP_Unique_Strings 
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - Unique strings"
-        author = "Florian Roth"
-        reference = "Research"
-        date = "2016-08-16"
+      meta:
+    description = "EQGRP Toolset Firewall - Unique strings"
+    author = "Florian Roth"
+    reference = "Research"
+    date = "2016-08-16"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "/BananaGlee/ELIGIBLEBOMB" ascii
@@ -1434,11 +1564,13 @@ rule EQGRP_Unique_Strings
 rule EQGRP_RC5_RC6_Opcode
 {
 
-    meta:
-        description = "EQGRP Toolset Firewall - RC5 / RC6 opcode"
-        author = "Florian Roth"
-        reference = "https://securelist.com/blog/incidents/75812/the-equation-giveaway/"
-        date = "2016-08-17"
+      meta:
+    description = "EQGRP Toolset Firewall - RC5 / RC6 opcode"
+    author = "Florian Roth"
+    reference = "https://securelist.com/blog/incidents/75812/the-equation-giveaway/"
+    date = "2016-08-17"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         /*

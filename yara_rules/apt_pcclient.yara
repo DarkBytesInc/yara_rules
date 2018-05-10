@@ -8,13 +8,15 @@ import "pe"
 rule backdoor_apt_pcclient
 {
 
-    meta:
-        author = "@patrickrolsen"
-        maltype = "APT.PCCLient"
-        filetype = "DLL"
-        version = "0.1"
-        description = "Detects the dropper: 869fa4dfdbabfabe87d334f85ddda234 AKA dw20.dll/msacm32.drv dropped by 4a85af37de44daf5917f545c6fd03902 (RTF)"
-        date = "2012-10"
+      meta:
+    author = "@patrickrolsen"
+    maltype = "APT.PCCLient"
+    filetype = "DLL"
+    version = "0.1"
+    description = "Detects the dropper: 869fa4dfdbabfabe87d334f85ddda234 AKA dw20.dll/msacm32.drv dropped by 4a85af37de44daf5917f545c6fd03902 (RTF)"
+    date = "2012-10"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $magic = { 4d 5a } // MZ

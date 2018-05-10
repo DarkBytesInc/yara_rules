@@ -7,10 +7,12 @@ import "pe"
 
 rule Insta11Code : Insta11 Family 
 {
-    meta:
-        description = "Insta11 code features"
-        author = "Seth Hardy"
-        last_modified = "2014-06-23"
+      meta:
+    description = "Insta11 code features"
+    author = "Seth Hardy"
+    last_modified = "2014-06-23"
+    severity = "7"
+    type = "Malware"
     
     strings:
         // jmp $+5; push 423h
@@ -22,10 +24,12 @@ rule Insta11Code : Insta11 Family
 
 rule Insta11Strings : Insta11 Family
 {
-    meta:
-        description = "Insta11 Identifying Strings"
-        author = "Seth Hardy"
-        last_modified = "2014-06-23"
+      meta:
+    description = "Insta11 Identifying Strings"
+    author = "Seth Hardy"
+    last_modified = "2014-06-23"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $ = "XTALKER7"
@@ -40,10 +44,12 @@ rule Insta11Strings : Insta11 Family
 
 rule Insta11 : Family
 {
-    meta:
-        description = "Insta11"
-        author = "Seth Hardy"
-        last_modified = "2014-06-23"
+      meta:
+    description = "Insta11"
+    author = "Seth Hardy"
+    last_modified = "2014-06-23"
+    severity = "7"
+    type = "Malware"
         
     condition:
         Insta11Code or Insta11Strings

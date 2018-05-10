@@ -2,10 +2,13 @@ import "pe"
 
 rule RomeoDelta
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
-		Source = "1df2af99fb3b6e31067b06df07b96d0ed0632f85111541a416da9ceda709237c"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    Source = "1df2af99fb3b6e31067b06df07b96d0ed0632f85111541a416da9ceda709237c"
+    description = "RomeoDelta"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 	/*

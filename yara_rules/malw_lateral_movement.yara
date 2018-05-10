@@ -5,10 +5,12 @@
 
 rule lateral_movement
 { 
-	meta:
-		date = "3/12/2014"
-		author = "https://github.com/reed1713"
+	  meta:
+    date = "3/12/2014"
+    author = "https://github.com/reed1713"
     description = "methodology sig looking for signs of lateral movement"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$type="Microsoft-Windows-Security-Auditing"
 		$eventid="4688"

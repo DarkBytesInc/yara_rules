@@ -9,12 +9,14 @@
 */
 
 rule PowerShell_Case_Anomaly {
-   meta:
-      description = "Detects obfuscated PowerShell hacktools"
-      author = "Florian Roth"
-      reference = "https://twitter.com/danielhbohannon/status/905096106924761088"
-      date = "2017-08-11"
-      score = 70
+     meta:
+    description = "Detects obfuscated PowerShell hacktools"
+    author = "Florian Roth"
+    reference = "https://twitter.com/danielhbohannon/status/905096106924761088"
+    date = "2017-08-11"
+    score = 70
+    severity = "7"
+    type = "Malware"
    strings:
       // first detect 'powershell' keyword case insensitive
       $s1 = "powershell" fullword nocase ascii wide
@@ -53,12 +55,14 @@ rule PowerShell_Case_Anomaly {
 }
 
 rule WScriptShell_Case_Anomaly {
-   meta:
-      description = "Detects obfuscated wscript.shell commands"
-      author = "Florian Roth"
-      reference = "Internal Research"
-      date = "2017-09-11"
-      score = 60
+     meta:
+    description = "Detects obfuscated wscript.shell commands"
+    author = "Florian Roth"
+    reference = "Internal Research"
+    date = "2017-09-11"
+    score = 60
+    severity = "7"
+    type = "Malware"
    strings:
       // first detect powershell keyword case insensitive
       $s1 = "WScript.Shell\").Run" nocase ascii wide

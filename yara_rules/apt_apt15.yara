@@ -11,12 +11,14 @@
 import "pe"
 
 rule APT15_Malware_Mar18_RoyalCli {
-   meta:
-      description = "Detects malware from APT 15 report by NCC Group"
-      author = "Florian Roth"
-      reference = "https://goo.gl/HZ5XMN"
-      date = "2018-03-10"
-      hash1 = "6df9b712ff56009810c4000a0ad47e41b7a6183b69416251e060b5c80cd05785"
+     meta:
+    description = "Detects malware from APT 15 report by NCC Group"
+    author = "Florian Roth"
+    reference = "https://goo.gl/HZ5XMN"
+    date = "2018-03-10"
+    hash1 = "6df9b712ff56009810c4000a0ad47e41b7a6183b69416251e060b5c80cd05785"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "\\Release\\RoyalCli.pdb" ascii
       $s2 = "%snewcmd.exe" fullword ascii
@@ -30,12 +32,14 @@ rule APT15_Malware_Mar18_RoyalCli {
 }
 
 rule APT15_Malware_Mar18_RoyalDNS {
-   meta:
-      description = "Detects malware from APT 15 report by NCC Group"
-      author = "Florian Roth"
-      reference = "https://goo.gl/HZ5XMN"
-      date = "2018-03-10"
-      hash1 = "bc937f6e958b339f6925023bc2af375d669084e9551fd3753e501ef26e36b39d"
+     meta:
+    description = "Detects malware from APT 15 report by NCC Group"
+    author = "Florian Roth"
+    reference = "https://goo.gl/HZ5XMN"
+    date = "2018-03-10"
+    hash1 = "bc937f6e958b339f6925023bc2af375d669084e9551fd3753e501ef26e36b39d"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $x1 = "del c:\\windows\\temp\\r.exe /f /q" fullword ascii
       $x2 = "%s\\r.exe" fullword ascii
@@ -55,12 +59,14 @@ rule APT15_Malware_Mar18_RoyalDNS {
 }
 
 rule APT15_Malware_Mar18_BS2005 {
-   meta:
-      description = "Detects malware from APT 15 report by NCC Group"
-      author = "Florian Roth"
-      reference = "https://goo.gl/HZ5XMN"
-      date = "2018-03-10"
-      hash1 = "750d9eecd533f89b8aa13aeab173a1cf813b021b6824bc30e60f5db6fa7b950b"
+     meta:
+    description = "Detects malware from APT 15 report by NCC Group"
+    author = "Florian Roth"
+    reference = "https://goo.gl/HZ5XMN"
+    date = "2018-03-10"
+    hash1 = "750d9eecd533f89b8aa13aeab173a1cf813b021b6824bc30e60f5db6fa7b950b"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $x1 = "AAAAKQAASCMAABi+AABnhEBj8vep7VRoAEPRWLweGc0/eiDrXGajJXRxbXsTXAcZAABK4QAAPWwAACzWAAByrg==" fullword ascii
       $x2 = "AAAAKQAASCMAABi+AABnhKv3kXJJousn5YzkjGF46eE3G8ZGse4B9uoqJo8Q2oF0AABK4QAAPWwAACzWAAByrg==" fullword ascii
@@ -81,12 +87,14 @@ rule APT15_Malware_Mar18_BS2005 {
 }
 
 rule APT15_Malware_Mar18_MSExchangeTool {
-   meta:
-      description = "Detects malware from APT 15 report by NCC Group"
-      author = "Florian Roth"
-      reference = "https://goo.gl/HZ5XMN"
-      date = "2018-03-10"
-      hash1 = "16b868d1bef6be39f69b4e976595e7bd46b6c0595cf6bc482229dbb9e64f1bce"
+     meta:
+    description = "Detects malware from APT 15 report by NCC Group"
+    author = "Florian Roth"
+    reference = "https://goo.gl/HZ5XMN"
+    date = "2018-03-10"
+    hash1 = "16b868d1bef6be39f69b4e976595e7bd46b6c0595cf6bc482229dbb9e64f1bce"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "\\Release\\EWSTEW.pdb" ascii
       $s2 = "EWSTEW.exe" fullword wide
@@ -108,10 +116,12 @@ rule APT15_Malware_Mar18_MSExchangeTool {
 */
 
 rule clean_apt15_patchedcmd{
-   meta:
-      author = "Ahmed Zaki"
-      description = "This is a patched CMD. This is the CMD that RoyalCli uses."
-      sha256 = "90d1f65cfa51da07e040e066d4409dc8a48c1ab451542c894a623bc75c14bf8f"
+     meta:
+    author = "Ahmed Zaki"
+    description = "This is a patched CMD. This is the CMD that RoyalCli uses."
+    sha256 = "90d1f65cfa51da07e040e066d4409dc8a48c1ab451542c894a623bc75c14bf8f"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $ = "eisableCMD" wide
       $ = "%WINDOWS_COPYRIGHT%" wide
@@ -122,10 +132,12 @@ rule clean_apt15_patchedcmd{
 }
 
 rule malware_apt15_royalcli_1{
-   meta:
-      description = "Generic strings found in the Royal CLI tool"
-      author = "David Cannings"
-      sha256 = "6df9b712ff56009810c4000a0ad47e41b7a6183b69416251e060b5c80cd05785"
+     meta:
+    description = "Generic strings found in the Royal CLI tool"
+    author = "David Cannings"
+    sha256 = "6df9b712ff56009810c4000a0ad47e41b7a6183b69416251e060b5c80cd05785"
+    severity = "7"
+    type = "Malware"
    strings:
       $ = "%s~clitemp%08x.tmp" fullword
       $ = "%s /c %s>%s" fullword
@@ -142,9 +154,11 @@ rule malware_apt15_royalcli_1{
 }
 
 rule malware_apt15_royalcli_2{
-   meta:
-      author = "Nikolaos Pantazopoulos"
-      description = "APT15 RoyalCli backdoor"
+     meta:
+    author = "Nikolaos Pantazopoulos"
+    description = "APT15 RoyalCli backdoor"
+    severity = "7"
+    type = "Malware"
    strings:
       $string1 = "%shkcmd.exe" fullword
       $string2 = "myRObject" fullword
@@ -157,10 +171,12 @@ rule malware_apt15_royalcli_2{
 
 /*
 rule malware_apt15_bs2005{
-   meta:
-      author = "Ahmed Zaki"
-      md5 = "ed21ce2beee56f0a0b1c5a62a80c128b"
-      description = "APT15 bs2005"
+     meta:
+    author = "Ahmed Zaki"
+    md5 = "ed21ce2beee56f0a0b1c5a62a80c128b"
+    description = "APT15 bs2005"
+    severity = "7"
+    type = "Malware"
    strings:
       $ = "%s&%s&%s&%s" wide ascii
       $ = "%s\\%s" wide ascii fullword
@@ -183,10 +199,12 @@ rule malware_apt15_bs2005{
 */
 
 rule malware_apt15_royaldll {
-   meta:
-      author = "David Cannings"
-      description = "DLL implant, originally rights.dll and runs as a service"
-      sha256 = "bc937f6e958b339f6925023bc2af375d669084e9551fd3753e501ef26e36b39d"
+     meta:
+    author = "David Cannings"
+    description = "DLL implant, originally rights.dll and runs as a service"
+    sha256 = "bc937f6e958b339f6925023bc2af375d669084e9551fd3753e501ef26e36b39d"
+    severity = "7"
+    type = "Malware"
    strings:
       /*
       56                push    esi
@@ -231,10 +249,12 @@ rule malware_apt15_royaldll {
 }
 
 rule malware_apt15_royaldll_2 {
-   meta:
-      author = "Ahmed Zaki"
-      sha256 = "bc937f6e958b339f6925023bc2af375d669084e9551fd3753e501ef26e36b39d"
-      description = "DNS backdoor used by APT15"
+     meta:
+    author = "Ahmed Zaki"
+    sha256 = "bc937f6e958b339f6925023bc2af375d669084e9551fd3753e501ef26e36b39d"
+    description = "DNS backdoor used by APT15"
+    severity = "7"
+    type = "Malware"
    strings:
       $= "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Svchost" wide ascii
       $= "netsvcs" wide ascii fullword
@@ -248,10 +268,12 @@ rule malware_apt15_royaldll_2 {
 }
 
 rule malware_apt15_exchange_tool {
-   meta:
-      author = "Ahmed Zaki"
-      md5 = "d21a7e349e796064ce10f2f6ede31c71"
-      description = "This is a an exchange enumeration/hijacking tool used by an APT 15"
+     meta:
+    author = "Ahmed Zaki"
+    md5 = "d21a7e349e796064ce10f2f6ede31c71"
+    description = "This is a an exchange enumeration/hijacking tool used by an APT 15"
+    severity = "7"
+    type = "Malware"
    strings:
       $s1= "subjectname" fullword
       $s2= "sendername" fullword
@@ -269,9 +291,11 @@ rule malware_apt15_exchange_tool {
 }
 
 rule malware_apt15_generic {
-   meta:
-      author = "David Cannings"
-      description = "Find generic data potentially relating to AP15 tools"
+     meta:
+    author = "David Cannings"
+    description = "Find generic data potentially relating to AP15 tools"
+    severity = "7"
+    type = "Malware"
    strings:
        // Appears to be from copy/paste code
        $str01 = "myWObject" fullword

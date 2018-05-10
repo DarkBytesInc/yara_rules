@@ -1,12 +1,14 @@
 rule fragus_htm : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Fragus Exploit Kit Detection"
-   hash0 = "f76deec07a61b4276acc22beef41ea47"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Fragus Exploit Kit Detection"
+    hash0 = "f76deec07a61b4276acc22beef41ea47"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = ">Hello, "
    $string1 = "http://www.clantemplates.com"
@@ -30,13 +32,15 @@ condition:
 }
 rule fragus_js : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Fragus Exploit Kit Detection"
-   hash0 = "f234c11b5da9a782cb1e554f520a66cf"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Fragus Exploit Kit Detection"
+    hash0 = "f234c11b5da9a782cb1e554f520a66cf"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "));ELI6Q3PZ"
    $string1 = "VGhNU2pWQmMyUXhPSFI2TTNCVGVEUXpSR3huYm1aeE5UaFhXRFI0ZFhCQVMxWkRNVGh0V0hZNFZVYzBXWFJpTVRoVFpFUklaVGxG"
@@ -62,13 +66,15 @@ condition:
 }
 rule fragus_js2 : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Fragus Exploit Kit Detection"
-   hash0 = "f234c11b5da9a782cb1e554f520a66cf"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Fragus Exploit Kit Detection"
+    hash0 = "f234c11b5da9a782cb1e554f520a66cf"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "(ELI6Q3PZ"
    $string1 = "SnJTbVJqV2tOa09VbGZSMHcwY0ZWZmRrRjBjRFY0Y3psVmNGVjROWGhBV0RZNGJWZzBVa1J4TjNCVlgwVmlhRjkyZURaS1NWOUhj"
@@ -93,13 +99,15 @@ condition:
 }
 rule fragus_js_flash : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Fragus Exploit Kit Detection"
-   hash0 = "377431417b34de8592afecaea9aab95d"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Fragus Exploit Kit Detection"
+    hash0 = "377431417b34de8592afecaea9aab95d"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "document.appendChild(bdy);try{for (i"
    $string1 = "0; i<10; i"
@@ -122,13 +130,15 @@ condition:
 }
 rule fragus_js_java : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Fragus Exploit Kit Detection"
-   hash0 = "7398e435e68a2fa31607518befef30fb"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Fragus Exploit Kit Detection"
+    hash0 = "7398e435e68a2fa31607518befef30fb"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "I></XML><SPAN DATASRC"
    $string1 = "setTimeout('vparivatel()',8000);function vparivatel(){document.write('<iframe src"
@@ -153,13 +163,15 @@ condition:
 }
 rule fragus_js_quicktime : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Fragus Exploit Kit Detection"
-   hash0 = "6bfc7bb877e1a79be24bd9563c768ffd"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Fragus Exploit Kit Detection"
+    hash0 = "6bfc7bb877e1a79be24bd9563c768ffd"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "                setTimeout("
    $string1 = "wnd.location"
@@ -182,13 +194,15 @@ condition:
 }
 rule fragus_js_vml : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Fragus Exploit Kit Detection"
-   hash0 = "8ab72337c815e0505fcfbc97686c3562"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Fragus Exploit Kit Detection"
+    hash0 = "8ab72337c815e0505fcfbc97686c3562"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = " 0x100000;"
    $string1 = "            var gg "

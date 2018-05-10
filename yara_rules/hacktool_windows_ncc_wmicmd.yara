@@ -1,9 +1,11 @@
 rule hacktool_windows_ncc_wmicmd
 {
-    meta:
-        description = "Command shell wrapper for WMI"
-        reference = "https://github.com/nccgroup/WMIcmd"
-        author = "@mimeframe"
+      meta:
+    description = "Command shell wrapper for WMI"
+    reference = "https://github.com/nccgroup/WMIcmd"
+    author = "@mimeframe"
+    severity = "5"
+    type = "Unknown"
     strings:
         $a1 = "Need to specify a username, domain and password for non local connections" wide ascii
         $a2 = "WS-Management is running on the remote host" wide ascii

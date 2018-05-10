@@ -5,11 +5,13 @@
 rule apt_backspace
 {
 
-    meta:
-        description = "Detects APT backspace"
-        author = "Bit Byte Bitten"
-        date = "2015-05-14"
-        hash = "6cbfeb7526de65eb2e3c848acac05da1e885636d17c1c45c62ad37e44cd84f99"
+      meta:
+    description = "Detects APT backspace"
+    author = "Bit Byte Bitten"
+    date = "2015-05-14"
+    hash = "6cbfeb7526de65eb2e3c848acac05da1e885636d17c1c45c62ad37e44cd84f99"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $s1 = "!! Use Splice Socket !!"

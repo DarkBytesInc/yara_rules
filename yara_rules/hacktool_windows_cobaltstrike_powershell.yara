@@ -1,9 +1,11 @@
 rule hacktool_windows_cobaltstrike_powershell
 {
-    meta:
-        description = "Detection of the PowerShell payloads from Cobalt Strike"
-        reference = "https://www.cobaltstrike.com/help-payload-generator"
-        author = "@javutin, @joseselvi"
+      meta:
+    description = "Detection of the PowerShell payloads from Cobalt Strike"
+    reference = "https://www.cobaltstrike.com/help-payload-generator"
+    author = "@javutin, @joseselvi"
+    severity = "7"
+    type = "Exploit Kit"
     strings:
         $ps1 = "Set-StrictMode -Version 2"
         $ps2 = "func_get_proc_address"

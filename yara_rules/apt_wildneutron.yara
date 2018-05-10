@@ -6,13 +6,15 @@
 rule WildNeutron_Sample_1 
 {
 
-    meta:
-        description = "Wild Neutron APT Sample Rule - file 2b5065a3d0e0b8252a987ef5f29d9e1935c5863f5718b83440e68dc53c21fa94"
-        author = "Florian Roth"
-        reference = "https://securelist.com/blog/research/71275/wild-neutron-economic-espionage-threat-actor-returns-with-new-tricks/"
-        date = "2015-07-10"
-        score = 60
-        hash = "2b5065a3d0e0b8252a987ef5f29d9e1935c5863f5718b83440e68dc53c21fa94"
+      meta:
+    description = "Wild Neutron APT Sample Rule - file 2b5065a3d0e0b8252a987ef5f29d9e1935c5863f5718b83440e68dc53c21fa94"
+    author = "Florian Roth"
+    reference = "https://securelist.com/blog/research/71275/wild-neutron-economic-espionage-threat-actor-returns-with-new-tricks/"
+    date = "2015-07-10"
+    score = 60
+    hash = "2b5065a3d0e0b8252a987ef5f29d9e1935c5863f5718b83440e68dc53c21fa94"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "LiveUpdater.exe" fullword wide /* PEStudio Blacklist: strings */ /* score: '25.00' */
@@ -34,13 +36,15 @@ rule WildNeutron_Sample_1
 rule WildNeutron_Sample_2 
 {
 
-    meta:
-        description = "Wild Neutron APT Sample Rule - file 8d80f9ef55324212759f4b6070cb8fce18a008ae9dd8b9598553206654d13a6f"
-        author = "Florian Roth"
-        reference = "https://securelist.com/blog/research/71275/wild-neutron-economic-espionage-threat-actor-returns-with-new-tricks/"
-        date = "2015-07-10"
-        score = 60
-        hash = "8d80f9ef55324212759f4b6070cb8fce18a008ae9dd8b9598553206654d13a6f"
+      meta:
+    description = "Wild Neutron APT Sample Rule - file 8d80f9ef55324212759f4b6070cb8fce18a008ae9dd8b9598553206654d13a6f"
+    author = "Florian Roth"
+    reference = "https://securelist.com/blog/research/71275/wild-neutron-economic-espionage-threat-actor-returns-with-new-tricks/"
+    date = "2015-07-10"
+    score = 60
+    hash = "8d80f9ef55324212759f4b6070cb8fce18a008ae9dd8b9598553206654d13a6f"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "rundll32.exe \"%s\",#1" fullword wide /* PEStudio Blacklist: strings */ /* score: '33.00' */
@@ -59,13 +63,15 @@ rule WildNeutron_Sample_2
 rule WildNeutron_Sample_3 
 {
 
-    meta:
-        description = "Wild Neutron APT Sample Rule - file c2c761cde3175f6e40ed934f2e82c76602c81e2128187bab61793ddb3bc686d0"
-        author = "Florian Roth"
-        reference = "https://securelist.com/blog/research/71275/wild-neutron-economic-espionage-threat-actor-returns-with-new-tricks/"
-        date = "2015-07-10"
-        score = 60
-        hash = "c2c761cde3175f6e40ed934f2e82c76602c81e2128187bab61793ddb3bc686d0"
+      meta:
+    description = "Wild Neutron APT Sample Rule - file c2c761cde3175f6e40ed934f2e82c76602c81e2128187bab61793ddb3bc686d0"
+    author = "Florian Roth"
+    reference = "https://securelist.com/blog/research/71275/wild-neutron-economic-espionage-threat-actor-returns-with-new-tricks/"
+    date = "2015-07-10"
+    score = 60
+    hash = "c2c761cde3175f6e40ed934f2e82c76602c81e2128187bab61793ddb3bc686d0"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $x1 = "178.162.197.9" fullword ascii /* score: '9.00' */
@@ -85,13 +91,15 @@ rule WildNeutron_Sample_3
 rule WildNeutron_Sample_4 
 {
 
-    meta:
-        description = "Wild Neutron APT Sample Rule - file b4005530193bc523d3e0193c3c53e2737ae3bf9f76d12c827c0b5cd0dcbaae45"
-        author = "Florian Roth"
-        reference = "https://securelist.com/blog/research/71275/wild-neutron-economic-espionage-threat-actor-returns-with-new-tricks/"
-        date = "2015-07-10"
-        score = 60
-        hash = "b4005530193bc523d3e0193c3c53e2737ae3bf9f76d12c827c0b5cd0dcbaae45"
+      meta:
+    description = "Wild Neutron APT Sample Rule - file b4005530193bc523d3e0193c3c53e2737ae3bf9f76d12c827c0b5cd0dcbaae45"
+    author = "Florian Roth"
+    reference = "https://securelist.com/blog/research/71275/wild-neutron-economic-espionage-threat-actor-returns-with-new-tricks/"
+    date = "2015-07-10"
+    score = 60
+    hash = "b4005530193bc523d3e0193c3c53e2737ae3bf9f76d12c827c0b5cd0dcbaae45"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "WinRAT-Win32-Release.exe" fullword ascii /* score: '22.00' */
@@ -111,13 +119,15 @@ rule WildNeutron_Sample_4
 rule WildNeutron_Sample_5 
 {
 
-    meta:
-        description = "Wild Neutron APT Sample Rule - file 1604e36ccef5fa221b101d7f043ad7f856b84bf1a80774aa33d91c2a9a226206"
-        author = "Florian Roth"
-        reference = "https://securelist.com/blog/research/71275/wild-neutron-economic-espionage-threat-actor-returns-with-new-tricks/"
-        date = "2015-07-10"
-        score = 60
-        hash = "1604e36ccef5fa221b101d7f043ad7f856b84bf1a80774aa33d91c2a9a226206"
+      meta:
+    description = "Wild Neutron APT Sample Rule - file 1604e36ccef5fa221b101d7f043ad7f856b84bf1a80774aa33d91c2a9a226206"
+    author = "Florian Roth"
+    reference = "https://securelist.com/blog/research/71275/wild-neutron-economic-espionage-threat-actor-returns-with-new-tricks/"
+    date = "2015-07-10"
+    score = 60
+    hash = "1604e36ccef5fa221b101d7f043ad7f856b84bf1a80774aa33d91c2a9a226206"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "LiveUpdater.exe" fullword wide /* PEStudio Blacklist: strings */ /* score: '25.00' */
@@ -138,13 +148,15 @@ rule WildNeutron_Sample_5
 rule WildNeutron_Sample_6 
 {
 
-    meta:
-        description = "Wild Neutron APT Sample Rule - file 4bd548fe07b19178281edb1ee81c9711525dab03dc0b6676963019c44cc75865"
-        author = "Florian Roth"
-        reference = "https://securelist.com/blog/research/71275/wild-neutron-economic-espionage-threat-actor-returns-with-new-tricks/"
-        date = "2015-07-10"
-        score = 60
-        hash = "4bd548fe07b19178281edb1ee81c9711525dab03dc0b6676963019c44cc75865"
+      meta:
+    description = "Wild Neutron APT Sample Rule - file 4bd548fe07b19178281edb1ee81c9711525dab03dc0b6676963019c44cc75865"
+    author = "Florian Roth"
+    reference = "https://securelist.com/blog/research/71275/wild-neutron-economic-espionage-threat-actor-returns-with-new-tricks/"
+    date = "2015-07-10"
+    score = 60
+    hash = "4bd548fe07b19178281edb1ee81c9711525dab03dc0b6676963019c44cc75865"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "mshtaex.exe" fullword wide /* score: '20.00' */
@@ -156,13 +168,15 @@ rule WildNeutron_Sample_6
 rule WildNeutron_Sample_7 
 {
 
-    meta:
-        description = "Wild Neutron APT Sample Rule - file a14d31eb965ea8a37ebcc3b5635099f2ca08365646437c770212d534d504ff3c"
-        author = "Florian Roth"
-        reference = "https://securelist.com/blog/research/71275/wild-neutron-economic-espionage-threat-actor-returns-with-new-tricks/"
-        date = "2015-07-10"
-        score = 60
-        hash = "a14d31eb965ea8a37ebcc3b5635099f2ca08365646437c770212d534d504ff3c"
+      meta:
+    description = "Wild Neutron APT Sample Rule - file a14d31eb965ea8a37ebcc3b5635099f2ca08365646437c770212d534d504ff3c"
+    author = "Florian Roth"
+    reference = "https://securelist.com/blog/research/71275/wild-neutron-economic-espionage-threat-actor-returns-with-new-tricks/"
+    date = "2015-07-10"
+    score = 60
+    hash = "a14d31eb965ea8a37ebcc3b5635099f2ca08365646437c770212d534d504ff3c"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "checking match for '%s' user %s host %s addr %s" fullword ascii /* PEStudio Blacklist: strings */ /* score: '24.00' */
@@ -185,13 +199,15 @@ rule WildNeutron_Sample_7
 rule WildNeutron_Sample_8 
 {
 
-    meta:
-        description = "Wild Neutron APT Sample Rule - file 758e6b519f6c0931ff93542b767524fc1eab589feb5cfc3854c77842f9785c92"
-        author = "Florian Roth"
-        reference = "https://securelist.com/blog/research/71275/wild-neutron-economic-espionage-threat-actor-returns-with-new-tricks/"
-        date = "2015-07-10"
-        score = 60
-        hash = "758e6b519f6c0931ff93542b767524fc1eab589feb5cfc3854c77842f9785c92"
+      meta:
+    description = "Wild Neutron APT Sample Rule - file 758e6b519f6c0931ff93542b767524fc1eab589feb5cfc3854c77842f9785c92"
+    author = "Florian Roth"
+    reference = "https://securelist.com/blog/research/71275/wild-neutron-economic-espionage-threat-actor-returns-with-new-tricks/"
+    date = "2015-07-10"
+    score = 60
+    hash = "758e6b519f6c0931ff93542b767524fc1eab589feb5cfc3854c77842f9785c92"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "RunFile: couldn't load SHELL32.DLL!" fullword ascii /* PEStudio Blacklist: strings */ /* score: '27.00' */
@@ -223,13 +239,15 @@ rule WildNeutron_Sample_8
 rule WildNeutron_Sample_9 
 {
 
-    meta:
-        description = "Wild Neutron APT Sample Rule - file 781eb1e17349009fbae46aea5c59d8e5b68ae0b42335cb035742f6b0f4e4087e"
-        author = "Florian Roth"
-        reference = "https://securelist.com/blog/research/71275/wild-neutron-economic-espionage-threat-actor-returns-with-new-tricks/"
-        date = "2015-07-10"
-        score = 60
-        hash = "781eb1e17349009fbae46aea5c59d8e5b68ae0b42335cb035742f6b0f4e4087e"
+      meta:
+    description = "Wild Neutron APT Sample Rule - file 781eb1e17349009fbae46aea5c59d8e5b68ae0b42335cb035742f6b0f4e4087e"
+    author = "Florian Roth"
+    reference = "https://securelist.com/blog/research/71275/wild-neutron-economic-espionage-threat-actor-returns-with-new-tricks/"
+    date = "2015-07-10"
+    score = 60
+    hash = "781eb1e17349009fbae46aea5c59d8e5b68ae0b42335cb035742f6b0f4e4087e"
+    severity = "10"
+    type = "Advanced Persistent Threat"
  
     strings:
         $s0 = "http://get.adobe.com/flashplayer/" fullword wide /* PEStudio Blacklist: strings */ /* score: '30.00' */
@@ -248,13 +266,15 @@ rule WildNeutron_Sample_9
 rule WildNeutron_Sample_10 
 {
 
-    meta:
-        description = "Wild Neutron APT Sample Rule - file 1d3bdabb350ba5a821849893dabe5d6056bf7ba1ed6042d93174ceeaa5d6dad7"
-        author = "Florian Roth"
-        reference = "https://securelist.com/blog/research/71275/wild-neutron-economic-espionage-threat-actor-returns-with-new-tricks/"
-        date = "2015-07-10"
-        score = 60
-        hash = "1d3bdabb350ba5a821849893dabe5d6056bf7ba1ed6042d93174ceeaa5d6dad7"
+      meta:
+    description = "Wild Neutron APT Sample Rule - file 1d3bdabb350ba5a821849893dabe5d6056bf7ba1ed6042d93174ceeaa5d6dad7"
+    author = "Florian Roth"
+    reference = "https://securelist.com/blog/research/71275/wild-neutron-economic-espionage-threat-actor-returns-with-new-tricks/"
+    date = "2015-07-10"
+    score = 60
+    hash = "1d3bdabb350ba5a821849893dabe5d6056bf7ba1ed6042d93174ceeaa5d6dad7"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $n1 = "/c for /L %%i in (1,1,2) DO ping 127.0.0.1 -n 3 & type %%windir%%\\notepad.exe > %s & del /f %s" fullword ascii /* PEStudio Blacklist: strings */ /* score: '46.00' */        
@@ -290,16 +310,18 @@ rule WildNeutron_Sample_10
 rule WildNeutron_javacpl 
 {
 
-    meta:
-        description = "Wild Neutron APT Sample Rule - from files 683f5b476f8ffe87ec22b8bab57f74da4a13ecc3a5c2cbf951999953c2064fc9, 758e6b519f6c0931ff93542b767524fc1eab589feb5cfc3854c77842f9785c92, 8ca7ed720babb32a6f381769ea00e16082a563704f8b672cb21cf11843f4da7a"
-        author = "Florian Roth"
-        reference = "https://securelist.com/blog/research/71275/wild-neutron-economic-espionage-threat-actor-returns-with-new-tricks/"
-        date = "2015-07-10"
-        score = 60
-        super_rule = 1
-        hash1 = "683f5b476f8ffe87ec22b8bab57f74da4a13ecc3a5c2cbf951999953c2064fc9"
-        hash2 = "758e6b519f6c0931ff93542b767524fc1eab589feb5cfc3854c77842f9785c92"
-        hash3 = "8ca7ed720babb32a6f381769ea00e16082a563704f8b672cb21cf11843f4da7a"
+      meta:
+    description = "Wild Neutron APT Sample Rule - from files 683f5b476f8ffe87ec22b8bab57f74da4a13ecc3a5c2cbf951999953c2064fc9, 758e6b519f6c0931ff93542b767524fc1eab589feb5cfc3854c77842f9785c92, 8ca7ed720babb32a6f381769ea00e16082a563704f8b672cb21cf11843f4da7a"
+    author = "Florian Roth"
+    reference = "https://securelist.com/blog/research/71275/wild-neutron-economic-espionage-threat-actor-returns-with-new-tricks/"
+    date = "2015-07-10"
+    score = 60
+    super_rule = 1
+    hash1 = "683f5b476f8ffe87ec22b8bab57f74da4a13ecc3a5c2cbf951999953c2064fc9"
+    hash2 = "758e6b519f6c0931ff93542b767524fc1eab589feb5cfc3854c77842f9785c92"
+    hash3 = "8ca7ed720babb32a6f381769ea00e16082a563704f8b672cb21cf11843f4da7a"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $x1 = "javacpl.exe" fullword wide /* score: '3.00' */ /* Goodware String - occured 2 times */

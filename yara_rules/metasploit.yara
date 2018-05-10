@@ -1,7 +1,9 @@
 rule meterpreter_reverse_tcp_shellcode {
-    meta:
-        author = "FDD @ Cuckoo sandbox"
-        description = "Rule for metasploit's  meterpreter reverse tcp raw shellcode"
+      meta:
+    author = "FDD @ Cuckoo sandbox"
+    description = "Rule for metasploit's  meterpreter reverse tcp raw shellcode"
+    severity = "7"
+    type = "Exploit Kit"
 
     strings:
         $s1 = { fce8 8?00 0000 60 }     // shellcode prologe in metasploit
@@ -17,11 +19,13 @@ rule meterpreter_reverse_tcp_shellcode {
 }
 
 rule meterpreter_reverse_tcp_shellcode_rev1 {
-    meta:
-        author = "FDD @ Cuckoo sandbox"
-        description = "Meterpreter reverse TCP shell rev1"
-        LHOST = 0xae
-        LPORT = 0xb5
+      meta:
+    author = "FDD @ Cuckoo sandbox"
+    description = "Meterpreter reverse TCP shell rev1"
+    LHOST = 0xae
+    LPORT = 0xb5
+    severity = "7"
+    type = "Exploit Kit"
 
     strings:
         $s1 = { 6a00 53ff d5 }
@@ -31,11 +35,13 @@ rule meterpreter_reverse_tcp_shellcode_rev1 {
 }
 
 rule meterpreter_reverse_tcp_shellcode_rev2 {
-    meta:
-        author = "FDD @ Cuckoo sandbox"
-        description = "Meterpreter reverse TCP shell rev2"
-        LHOST = 194
-        LPORT = 201
+      meta:
+    author = "FDD @ Cuckoo sandbox"
+    description = "Meterpreter reverse TCP shell rev2"
+    LHOST = 194
+    LPORT = 201
+    severity = "7"
+    type = "Exploit Kit"
 
     strings:
         $s1 = { 75ec c3 }
@@ -45,9 +51,11 @@ rule meterpreter_reverse_tcp_shellcode_rev2 {
 }
 
 rule meterpreter_reverse_tcp_shellcode_domain {
-    meta:
-        author = "FDD @ Cuckoo sandbox"
-        description = "Variant used if the user specifies a domain instead of a hard-coded IP"
+      meta:
+    author = "FDD @ Cuckoo sandbox"
+    description = "Variant used if the user specifies a domain instead of a hard-coded IP"
+    severity = "7"
+    type = "Exploit Kit"
 
     strings:
         $s1 = { a928 3480 }             // Checksum for gethostbyname
@@ -58,11 +66,13 @@ rule meterpreter_reverse_tcp_shellcode_domain {
 }
 
 rule metasploit_download_exec_shellcode_rev1 {
-    meta:
-        author = "FDD @ Cuckoo Sandbox"
-        description = "Rule for metasploit's download and exec shellcode"
-        name = "Metasploit download & exec payload"
-        URL = 185
+      meta:
+    author = "FDD @ Cuckoo Sandbox"
+    description = "Rule for metasploit's download and exec shellcode"
+    name = "Metasploit download & exec payload"
+    URL = 185
+    severity = "7"
+    type = "Exploit Kit"
 
     strings:
         $s1 = { fce8 8?00 0000 60 }     // shellcode prologe in metasploit
@@ -80,11 +90,13 @@ rule metasploit_download_exec_shellcode_rev1 {
 }
 
 rule metasploit_download_exec_shellcode_rev2 {
-    meta:
-        author = "FDD @ Cuckoo Sandbox"
-        description = "Rule for metasploit's download and exec shellcode"
-        name = "Metasploit download & exec payload"
-        URL = 185
+      meta:
+    author = "FDD @ Cuckoo Sandbox"
+    description = "Rule for metasploit's download and exec shellcode"
+    name = "Metasploit download & exec payload"
+    URL = 185
+    severity = "7"
+    type = "Exploit Kit"
 
     strings:
         $s1 = { fce8 8?00 0000 60 }     // shellcode prologe in metasploit
@@ -101,10 +113,12 @@ rule metasploit_download_exec_shellcode_rev2 {
 }
 
 rule metasploit_bind_shell {
-    meta:
-        author = "FDD @ Cuckoo Sandbox"
-        description = "Rule for metasploit's bind shell shellcode"
-        name = "Metasploit bind shell payload"
+      meta:
+    author = "FDD @ Cuckoo Sandbox"
+    description = "Rule for metasploit's bind shell shellcode"
+    name = "Metasploit bind shell payload"
+    severity = "7"
+    type = "Exploit Kit"
 
     strings:
         $s1 = { fce8 8?00 0000 60 }     // shellcode prologe in metasploit

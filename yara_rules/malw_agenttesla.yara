@@ -1,11 +1,13 @@
 
 rule Agenttesla
 {
-    meta:
-        description = "Detecting HTML strings used by Agent Tesla malware"
-        author = "Stormshield"
-        reference = "https://thisissecurity.stormshield.com/2018/01/12/agent-tesla-campaign/"
-        version = "1.0"
+      meta:
+    description = "Detecting HTML strings used by Agent Tesla malware"
+    author = "Stormshield"
+    reference = "https://thisissecurity.stormshield.com/2018/01/12/agent-tesla-campaign/"
+    version = "1.0"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $html_username    = "<br>UserName&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: " wide ascii

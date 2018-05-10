@@ -2,10 +2,13 @@ import "pe"
 
 rule UniformAlfa
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
-		Source = "a24377681cf56c712e544af01ac8a5dbaa81d16851a17a147bbf5132890d7437"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    Source = "a24377681cf56c712e544af01ac8a5dbaa81d16851a17a147bbf5132890d7437"
+    description = "UniformAlfa"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 	/*

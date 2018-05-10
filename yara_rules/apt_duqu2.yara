@@ -5,11 +5,13 @@
 rule apt_duqu2_loaders 
 { 
 
-    meta:
-		copyright = "Kaspersky Lab"
-		description = "Rule to detect Duqu 2.0 samples"
-		last_modified = "2015-06-09"
-		version = "1.0"
+      meta:
+    copyright = "Kaspersky Lab"
+    description = "Rule to detect Duqu 2.0 samples"
+    last_modified = "2015-06-09"
+    version = "1.0"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
 		$a1 = "{AAFFC4F0-E04B-4C7C-B40A-B45DE971E81E}" wide 
@@ -36,11 +38,13 @@ rule apt_duqu2_loaders
 rule apt_duqu2_drivers 
 { 
 
-    meta:
-		copyright = "Kaspersky Lab"
-		description = "Rule to detect Duqu 2.0 drivers"
-		last_modified = "2015-06-09"
-		version = "1.0"
+      meta:
+    copyright = "Kaspersky Lab"
+    description = "Rule to detect Duqu 2.0 drivers"
+    last_modified = "2015-06-09"
+    version = "1.0"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	
     strings:
 		$a1 = "\\DosDevices\\port_optimizer" wide nocase 
@@ -59,24 +63,26 @@ rule apt_duqu2_drivers
 rule Duqu2_Generic1 
 {
 
-    meta:
-		description = "Kaspersky APT Report - Duqu2 Sample - Generic Rule"
-		author = "Florian Roth"
-		reference = "https://goo.gl/7yKyOj"
-		date = "2015-06-10"
-		super_rule = 1
-		hash0 = "3f9168facb13429105a749d35569d1e91465d313"
-		hash1 = "0a574234615fb2382d85cd6d1a250d6c437afecc"
-		hash2 = "38447ed1d5e3454fe17699f86c0039f30cc64cde"
-		hash3 = "5282d073ee1b3f6ce32222ccc2f6066e2ca9c172"
-		hash4 = "edfca3f0196788f7fde22bd92a8817a957c10c52"
-		hash5 = "6a4ffa6ca4d6fde8a30b6c8739785f4bd2b5c415"
-		hash6 = "00170bf9983e70e8dd4f7afe3a92ce1d12664467"
-		hash7 = "32f8689fd18c723339414618817edec6239b18f3"
-		hash8 = "f860acec9920bc009a1ad5991f3d5871c2613672"
-		hash9 = "413ba509e41c526373f991d1244bc7c7637d3e13"
-		hash10 = "29cd99a9b6d11a09615b3f9ef63f1f3cffe7ead8"
-		hash11 = "dfe1cb775719b529138e054e7246717304db00b1"
+      meta:
+    description = "Kaspersky APT Report - Duqu2 Sample - Generic Rule"
+    author = "Florian Roth"
+    reference = "https://goo.gl/7yKyOj"
+    date = "2015-06-10"
+    super_rule = 1
+    hash0 = "3f9168facb13429105a749d35569d1e91465d313"
+    hash1 = "0a574234615fb2382d85cd6d1a250d6c437afecc"
+    hash2 = "38447ed1d5e3454fe17699f86c0039f30cc64cde"
+    hash3 = "5282d073ee1b3f6ce32222ccc2f6066e2ca9c172"
+    hash4 = "edfca3f0196788f7fde22bd92a8817a957c10c52"
+    hash5 = "6a4ffa6ca4d6fde8a30b6c8739785f4bd2b5c415"
+    hash6 = "00170bf9983e70e8dd4f7afe3a92ce1d12664467"
+    hash7 = "32f8689fd18c723339414618817edec6239b18f3"
+    hash8 = "f860acec9920bc009a1ad5991f3d5871c2613672"
+    hash9 = "413ba509e41c526373f991d1244bc7c7637d3e13"
+    hash10 = "29cd99a9b6d11a09615b3f9ef63f1f3cffe7ead8"
+    hash11 = "dfe1cb775719b529138e054e7246717304db00b1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	
     strings:
 		$s0 = "Global\\{B54E3268-DE1E-4c1e-A667-2596751403AD}" fullword wide
@@ -92,14 +98,16 @@ rule Duqu2_Generic1
 rule APT_Kaspersky_Duqu2_procexp 
 {
 
-    meta:
-		description = "Kaspersky APT Report - Duqu2 Sample - Malicious MSI"
-		author = "Florian Roth"
-		reference = "https://goo.gl/7yKyOj"
-		date = "2015-06-10"
-		hash1 = "2422835716066b6bcecb045ddd4f1fbc9486667a"
-		hash2 = "b120620b5d82b05fee2c2153ceaf305807fa9f79"
-		hash3 = "288ebfe21a71f83b5575dfcc92242579fb13910d"
+      meta:
+    description = "Kaspersky APT Report - Duqu2 Sample - Malicious MSI"
+    author = "Florian Roth"
+    reference = "https://goo.gl/7yKyOj"
+    date = "2015-06-10"
+    hash1 = "2422835716066b6bcecb045ddd4f1fbc9486667a"
+    hash2 = "b120620b5d82b05fee2c2153ceaf305807fa9f79"
+    hash3 = "288ebfe21a71f83b5575dfcc92242579fb13910d"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	
     strings:
 		$x1 = "svcmsi_32.dll" fullword wide
@@ -117,12 +125,14 @@ rule APT_Kaspersky_Duqu2_procexp
 rule APT_Kaspersky_Duqu2_SamsungPrint 
 {
 
-    meta:
-		description = "Kaspersky APT Report - Duqu2 Sample - file 2a9a5afc342cde12c6eb9a91ad29f7afdfd8f0fb17b983dcfddceccfbc17af69"
-		author = "Florian Roth"
-		reference = "https://goo.gl/7yKyOj"
-		date = "2015-06-10"
-		hash = "ce39f41eb4506805efca7993d3b0b506ab6776ca"
+      meta:
+    description = "Kaspersky APT Report - Duqu2 Sample - file 2a9a5afc342cde12c6eb9a91ad29f7afdfd8f0fb17b983dcfddceccfbc17af69"
+    author = "Florian Roth"
+    reference = "https://goo.gl/7yKyOj"
+    date = "2015-06-10"
+    hash = "ce39f41eb4506805efca7993d3b0b506ab6776ca"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	
     strings:
 		$s0 = "Installer for printer drivers and applications" fullword wide /* PEStudio Blacklist: strings */
@@ -139,12 +149,14 @@ rule APT_Kaspersky_Duqu2_SamsungPrint
 rule APT_Kaspersky_Duqu2_msi3_32 
 {
 
-    meta:
-		description = "Kaspersky APT Report - Duqu2 Sample - file d8a849654ab97debaf28ae5b749c3b1ff1812ea49978713853333db48c3972c3"
-		author = "Florian Roth"
-		reference = "https://goo.gl/7yKyOj"
-		date = "2015-06-10"
-		hash = "53d9ef9e0267f10cc10f78331a9e491b3211046b"
+      meta:
+    description = "Kaspersky APT Report - Duqu2 Sample - file d8a849654ab97debaf28ae5b749c3b1ff1812ea49978713853333db48c3972c3"
+    author = "Florian Roth"
+    reference = "https://goo.gl/7yKyOj"
+    date = "2015-06-10"
+    hash = "53d9ef9e0267f10cc10f78331a9e491b3211046b"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	
     strings:
 		$s0 = "ProcessUserAccounts" fullword ascii /* PEStudio Blacklist: strings */

@@ -8,13 +8,15 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule Pirpi_1609_A {
-	meta:
-		description = "Detects Pirpi Backdoor - and other malware (generic rule)"
-		author = "Florian Roth"
-		reference = "http://goo.gl/igxLyF"
-		date = "2016-09-08"
-		hash1 = "2a5a0bc350e774bd784fc25090518626b65a3ce10c7401f44a1616ea2ae32f4c"
-		hash2 = "8caa179ec20b6e3938d17132980e0b9fe8ef753a70052f7e857b339427eb0f78"
+	  meta:
+    description = "Detects Pirpi Backdoor - and other malware (generic rule)"
+    author = "Florian Roth"
+    reference = "http://goo.gl/igxLyF"
+    date = "2016-09-08"
+    hash1 = "2a5a0bc350e774bd784fc25090518626b65a3ce10c7401f44a1616ea2ae32f4c"
+    hash2 = "8caa179ec20b6e3938d17132980e0b9fe8ef753a70052f7e857b339427eb0f78"
+    severity = "5"
+    type = "Unknown"
 	strings:
 		$x1 = "expand.exe1.gif" fullword ascii
 
@@ -41,12 +43,14 @@ rule Pirpi_1609_A {
 }
 
 rule Pirpi_1609_B {
-	meta:
-		description = "Detects Pirpi Backdoor"
-		author = "Florian Roth"
-		reference = "http://goo.gl/igxLyF"
-		date = "2016-09-08"
-		hash1 = "498b98c02e19f4b03dc6a3a8b6ff8761ef2c0fedda846ced4b6f1c87b52468e7"
+	  meta:
+    description = "Detects Pirpi Backdoor"
+    author = "Florian Roth"
+    reference = "http://goo.gl/igxLyF"
+    date = "2016-09-08"
+    hash1 = "498b98c02e19f4b03dc6a3a8b6ff8761ef2c0fedda846ced4b6f1c87b52468e7"
+    severity = "5"
+    type = "Unknown"
 	strings:
 		$s1 = "tconn <ip> <port> //set temp connect value, and disconnect." fullword ascii
 		$s2 = "E* ListenCheckSsl SslRecv fd(%d) Error ret:%d %d" fullword ascii

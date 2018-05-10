@@ -7,10 +7,12 @@ import "pe"
 
 rule CryptoLocker_set1
 {
-meta:
-	author = "Christiaan Beek, Christiaan_Beek@McAfee.com"
-	date = "2014-04-13"
-	description = "Detection of Cryptolocker Samples"
+  meta:
+    author = "Christiaan Beek, Christiaan_Beek@McAfee.com"
+    date = "2014-04-13"
+    description = "Detection of Cryptolocker Samples"
+    severity = "10"
+    type = "Ransomware"
 	
 strings:
 	$string0 = "static"
@@ -37,10 +39,12 @@ condition:
 
 rule CryptoLocker_rule2
 {
-meta:
-	author = "Christiaan Beek, Christiaan_Beek@McAfee.com"
-	date = "2014-04-14"
-	description = "Detection of CryptoLocker Variants"
+  meta:
+    author = "Christiaan Beek, Christiaan_Beek@McAfee.com"
+    date = "2014-04-14"
+    description = "Detection of CryptoLocker Variants"
+    severity = "10"
+    type = "Ransomware"
 strings:
 	$string0 = "2.0.1.7" wide
 	$string1 = "    <security>"
@@ -64,16 +68,18 @@ condition:
 }
 
 rule SVG_LoadURL {
-	meta:
-		description = "Detects a tiny SVG file that loads an URL (as seen in CryptoWall malware infections)"
-		author = "Florian Roth"
-		reference = "http://goo.gl/psjCCc"
-		date = "2015-05-24"
-		hash1 = "ac8ef9df208f624be9c7e7804de55318"
-		hash2 = "3b9e67a38569ebe8202ac90ad60c52e0"
-		hash3 = "7e2be5cc785ef7711282cea8980b9fee"
-		hash4 = "4e2c6f6b3907ec882596024e55c2b58b"
-		score = 50
+	  meta:
+    description = "Detects a tiny SVG file that loads an URL (as seen in CryptoWall malware infections)"
+    author = "Florian Roth"
+    reference = "http://goo.gl/psjCCc"
+    date = "2015-05-24"
+    hash1 = "ac8ef9df208f624be9c7e7804de55318"
+    hash2 = "3b9e67a38569ebe8202ac90ad60c52e0"
+    hash3 = "7e2be5cc785ef7711282cea8980b9fee"
+    hash4 = "4e2c6f6b3907ec882596024e55c2b58b"
+    score = 50
+    severity = "10"
+    type = "Ransomware"
 	strings:
 		$s1 = "</svg>" nocase
 		$s2 = "<script>" nocase
@@ -83,11 +89,13 @@ rule SVG_LoadURL {
 }
 rule BackdoorFCKG: CTB_Locker_Ransomware
 {
-meta:
-author = "ISG"
-date = "2015-01-20"
-reference = "https://blogs.mcafee.com/mcafee-labs/rise-backdoor-fckq-ctb-locker"
-description = "CTB_Locker"
+  meta:
+    author = "ISG"
+    date = "2015-01-20"
+    reference = "https://blogs.mcafee.com/mcafee-labs/rise-backdoor-fckq-ctb-locker"
+    description = "CTB_Locker"
+    severity = "10"
+    type = "Ransomware"
 
 strings:
 $string0 = "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"

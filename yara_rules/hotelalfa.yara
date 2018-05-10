@@ -2,10 +2,13 @@ import "pe"
 
 rule HotelAlfa
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
-		Source = "58dab205ecb1e0972027eb92f68cec6d208e5ab5.ex_"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    Source = "58dab205ecb1e0972027eb92f68cec6d208e5ab5.ex_"
+    description = "HotelAlfa"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 	

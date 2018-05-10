@@ -1,9 +1,11 @@
 rule hacktool_macos_keylogger_skreweverything_swift
 {
-    meta:
-        description = "It is a simple and easy to use keylogger for macOS written in Swift."
-        reference = "https://github.com/SkrewEverything/Swift-Keylogger"
-        author = "@mimeframe"
+      meta:
+    description = "It is a simple and easy to use keylogger for macOS written in Swift."
+    reference = "https://github.com/SkrewEverything/Swift-Keylogger"
+    author = "@mimeframe"
+    severity = "5"
+    type = "Unknown"
     strings:
         $a1 = "Can't create directories!" wide ascii
         $a2 = "Can't create manager" wide ascii

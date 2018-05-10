@@ -12,17 +12,18 @@
 rule Unit78020_Malware_Gen1 
 {
 
-    meta:
-        description = "Detects malware by Chinese APT PLA Unit 78020 - Generic Rule"
-        author = "Florian Roth"
-        reference = "http://threatconnect.com/camerashy/?utm_campaign=CameraShy"
-        date = "2015-09-24"
-        hash1 = "2b15e614fb54bca7031f64ab6caa1f77b4c07dac186826a6cd2e254090675d72"
-        hash2 = "76c586e89c30a97e583c40ebe3f4ba75d5e02e52959184c4ce0a46b3aac54edd"
-        hash3 = "2625a0d91d3cdbbc7c4a450c91e028e3609ff96c4f2a5a310ae20f73e1bc32ac"
-        hash4 = "5c62b1d16e6180f22a0cb59c99a7743f44cb4a41e4e090b9733d1fb687c8efa2"
-        hash5 = "7b73bf2d80a03eb477242967628da79924fbe06cc67c4dcdd2bdefccd6e0e1af"
-        hash6 = "88c5be84afe20c91e4024160303bafb044f98aa5fbf8c9f9997758a014238790"
+      meta:
+    description = "Detects malware by Chinese APT PLA Unit 78020 - Generic Rule"
+    author = "Florian Roth"
+    date = "2015-09-24"
+    hash1 = "2b15e614fb54bca7031f64ab6caa1f77b4c07dac186826a6cd2e254090675d72"
+    hash2 = "76c586e89c30a97e583c40ebe3f4ba75d5e02e52959184c4ce0a46b3aac54edd"
+    hash3 = "2625a0d91d3cdbbc7c4a450c91e028e3609ff96c4f2a5a310ae20f73e1bc32ac"
+    hash4 = "5c62b1d16e6180f22a0cb59c99a7743f44cb4a41e4e090b9733d1fb687c8efa2"
+    hash5 = "7b73bf2d80a03eb477242967628da79924fbe06cc67c4dcdd2bdefccd6e0e1af"
+    hash6 = "88c5be84afe20c91e4024160303bafb044f98aa5fbf8c9f9997758a014238790"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "greensky27.vicp.net" fullword wide
@@ -67,12 +68,13 @@ rule Unit78020_Malware_Gen1
 rule Unit78020_Malware_1  
 {
 
-    meta:
-        description = "Detects malware by Chinese APT PLA Unit 78020 - Specific Rule - msictl.exe"
-        author = "Florian Roth"
-        reference = "http://threatconnect.com/camerashy/?utm_campaign=CameraShy"
-        date = "2015-09-24"
-        hash = "a93d01f1cc2d18ced2f3b2b78319aadc112f611ab8911ae9e55e13557c1c791a"
+      meta:
+    description = "Detects malware by Chinese APT PLA Unit 78020 - Specific Rule - msictl.exe"
+    author = "Florian Roth"
+    date = "2015-09-24"
+    hash = "a93d01f1cc2d18ced2f3b2b78319aadc112f611ab8911ae9e55e13557c1c791a"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $s1 = "%ProgramFiles%\\Internet Explorer\\iexplore.exe" fullword ascii
@@ -89,15 +91,16 @@ rule Unit78020_Malware_1
 rule Unit78020_Malware_Gen2 
 {
 
-    meta:
-        description = "Detects malware by Chinese APT PLA Unit 78020 - Generic Rule"
-        author = "Florian Roth"
-        reference = "http://threatconnect.com/camerashy/?utm_campaign=CameraShy"
-        date = "2015-09-24"
-        super_rule = 1
-        hash1 = "76c586e89c30a97e583c40ebe3f4ba75d5e02e52959184c4ce0a46b3aac54edd"
-        hash2 = "7b73bf2d80a03eb477242967628da79924fbe06cc67c4dcdd2bdefccd6e0e1af"
-        hash3 = "981e2fa1ae4145359036b46e8b53cc5da37dd2311204859761bd91572f025e8a"
+      meta:
+    description = "Detects malware by Chinese APT PLA Unit 78020 - Generic Rule"
+    author = "Florian Roth"
+    date = "2015-09-24"
+    super_rule = 1
+    hash1 = "76c586e89c30a97e583c40ebe3f4ba75d5e02e52959184c4ce0a46b3aac54edd"
+    hash2 = "7b73bf2d80a03eb477242967628da79924fbe06cc67c4dcdd2bdefccd6e0e1af"
+    hash3 = "981e2fa1ae4145359036b46e8b53cc5da37dd2311204859761bd91572f025e8a"
+    severity = "10"
+    type = "Advanced Persistent Threat"
   
    strings:
         $s0 = "-GetModuleFileNameExW" fullword ascii
@@ -114,14 +117,15 @@ rule Unit78020_Malware_Gen2
 rule Unit78020_Malware_Gen3 
 {
 
-    meta:
-        description = "Detects malware by Chinese APT PLA Unit 78020 - Generic Rule - Chong"
-        author = "Florian Roth"
-        reference = "http://threatconnect.com/camerashy/?utm_campaign=CameraShy"
-        date = "2015-09-24"
-        super_rule = 1
-        hash1 = "2625a0d91d3cdbbc7c4a450c91e028e3609ff96c4f2a5a310ae20f73e1bc32ac"
-        hash2 = "5c62b1d16e6180f22a0cb59c99a7743f44cb4a41e4e090b9733d1fb687c8efa2"
+      meta:
+    description = "Detects malware by Chinese APT PLA Unit 78020 - Generic Rule - Chong"
+    author = "Florian Roth"
+    date = "2015-09-24"
+    super_rule = 1
+    hash1 = "2625a0d91d3cdbbc7c4a450c91e028e3609ff96c4f2a5a310ae20f73e1bc32ac"
+    hash2 = "5c62b1d16e6180f22a0cb59c99a7743f44cb4a41e4e090b9733d1fb687c8efa2"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $x1 = "GET http://%ws:%d/%d%s%dHTTP/1.1" fullword ascii

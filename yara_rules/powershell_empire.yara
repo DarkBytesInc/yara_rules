@@ -1,7 +1,9 @@
 rule PowershellEmpire {
-  meta:
-	author = "FDD"
-	description = "Rule for Powershell Empire post-exploitation tool"
+    meta:
+    author = "FDD"
+    description = "Rule for Powershell Empire post-exploitation tool"
+    severity = "7"
+    type = "Exploit Kit"
   strings:
 	$UserAgent = "Mozilla/5.0 (Windows NT 6.1; WOW64; Trident/7.0; rv:11.0) like Gecko"
 	$UAString = "User-Agent"

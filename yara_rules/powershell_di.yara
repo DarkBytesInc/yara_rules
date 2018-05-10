@@ -1,7 +1,9 @@
 rule PowershellDI {
-  meta:
-	author = "FDD"
-	description = "Extract Download/Invoke calls from powershell script"
+    meta:
+    author = "FDD"
+    description = "Extract Download/Invoke calls from powershell script"
+    severity = "7"
+    type = "Exploit Kit"
   strings:
 	$d1 = /downloaddata\([^)]+\)/ nocase
 	$d2 = /downloadstring\([^)]+\)/ nocase

@@ -7,9 +7,11 @@ import "pe"
 
 rule DarkComet_1 : RAT
 {
-    meta:
-        description = "DarkComet RAT"
-	author = "botherder https://github.com/botherder"
+      meta:
+    description = "DarkComet RAT"
+    author = "botherder https://github.com/botherder"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $bot1 = /(#)BOT#OpenUrl/ wide ascii
@@ -40,12 +42,14 @@ rule DarkComet_1 : RAT
 
 rule DarkComet_2 : rat
 {
-	meta:
-		description = "DarkComet" 
-		author = "Jean-Philippe Teissier / @Jipe_"
-		date = "2013-01-12"
-		filetype = "memory"
-		version = "1.0" 
+	  meta:
+    description = "DarkComet"
+    author = "Jean-Philippe Teissier / @Jipe_"
+    date = "2013-01-12"
+    filetype = "memory"
+    version = "1.0"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$a = "#BEGIN DARKCOMET DATA --"
@@ -59,12 +63,15 @@ rule DarkComet_2 : rat
 }
 rule DarkComet_3 : RAT
 {
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2014/04"
-		ref = "http://malwareconfig.com/stats/DarkComet"
-		maltype = "Remote Access Trojan"
-		filetype = "exe"
+	  meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/DarkComet"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "DarkComet_3"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		// Versions 2x
@@ -84,12 +91,14 @@ rule DarkComet_3 : RAT
 
 rule DarkComet_Keylogger_File  : RAT
 {
-	meta:
-		author = "Florian Roth"
-		description = "Looks like a keylogger file created by DarkComet Malware"
-		date = "25.07.14"
-		reference = "https://raw.githubusercontent.com/Neo23x0/Loki/master/signatures/thor-hacktools.yar"
-		score = 50
+	  meta:
+    author = "Florian Roth"
+    description = "Looks like a keylogger file created by DarkComet Malware"
+    date = "25.07.14"
+    reference = "https://raw.githubusercontent.com/Neo23x0/Loki/master/signatures/thor-hacktools.yar"
+    score = 50
+    severity = "7"
+    type = "Malware"
 	strings:
 		$magic = "::"
 		$entry = /\n:: [A-Z]/
@@ -98,8 +107,11 @@ rule DarkComet_Keylogger_File  : RAT
 		($magic at 0) and #entry > 10 and #timestamp > 10
 }
 rule DarkComet_4  : RAT
-{	meta:
-		reference = "https://github.com/bwall/bamfdetect/blob/master/BAMF_Detect/modules/yara/darkcomet.yara"
+{	  meta:
+    reference = "https://github.com/bwall/bamfdetect/blob/master/BAMF_Detect/modules/yara/darkcomet.yara"
+    description = "DarkComet_4"
+    severity = "7"
+    type = "Malware"
 	strings:
 	    $a1 = "#BOT#"
 	    $a2 = "WEBCAMSTOP"
@@ -113,10 +125,12 @@ rule DarkComet_4  : RAT
 
 rule DarkComet_5
 { 
-	meta:
-		maltype = "DarkComet RAT"
-		author = "https://github.com/reed1713"
-		description = "Malware creates the MSDCSC directory, which is a common path utilized by DarkComet, as well as the mutex pattern."
+	  meta:
+    maltype = "DarkComet RAT"
+    author = "https://github.com/reed1713"
+    description = "Malware creates the MSDCSC directory, which is a common path utilized by DarkComet, as well as the mutex pattern."
+    severity = "7"
+    type = "Malware"
 	strings:
 		$type="Microsoft-Windows-Security-Auditing"
 		$eventid="4688"

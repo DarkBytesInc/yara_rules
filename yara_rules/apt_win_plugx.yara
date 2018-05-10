@@ -8,11 +8,13 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule PlugX_J16_Gen {
-	meta:
-		description = "Detects PlugX Malware samples from June 2016"
-		author = "Florian Roth"
-		reference = "VT Research"
-		date = "2016-06-08"
+	  meta:
+    description = "Detects PlugX Malware samples from June 2016"
+    author = "Florian Roth"
+    reference = "VT Research"
+    date = "2016-06-08"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$x1 = "%WINDIR%\\SYSTEM32\\SERVICES.EXE" fullword wide
 		$x2 = "\\\\.\\PIPE\\RUN_AS_USER(%d)" fullword wide
@@ -38,11 +40,13 @@ rule PlugX_J16_Gen {
 }
 
 rule PlugX_J16_Gen2 {
-	meta:
-		description = "Detects PlugX Malware Samples from June 2016"
-		author = "Florian Roth"
-		reference = "VT Research"
-		date = "2016-06-08"
+	  meta:
+    description = "Detects PlugX Malware Samples from June 2016"
+    author = "Florian Roth"
+    reference = "VT Research"
+    date = "2016-06-08"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "XPlugKeyLogger.cpp" fullword ascii
 		$s2 = "XPlugProcess.cpp" fullword ascii

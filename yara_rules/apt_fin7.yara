@@ -5,11 +5,12 @@
 rule fin7_functions
 {
 
-    meta:
-
-        author="@j0sm1"
-        url="https://www.securityartwork.es/2017/06/16/analisis-del-powershell-usado-fin7/"
-        description="Detect functions coded with ROR edi,D"
+      meta:
+    author = "@j0sm1"
+    url = "https://www.securityartwork.es/2017/06/16/analisis-del-powershell-usado-fin7/"
+    description = "Detect functions coded with ROR edi,D"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
 

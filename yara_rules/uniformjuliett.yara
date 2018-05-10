@@ -1,9 +1,12 @@
 rule UniformJuliett
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
-		Source = "Cmd03000_1a6f62e1630d512c3b67bfdbff26270177585c82802ffa834b768ff47be0a008.bin"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    Source = "Cmd03000_1a6f62e1630d512c3b67bfdbff26270177585c82802ffa834b768ff47be0a008.bin"
+    description = "UniformJuliett"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 		/*

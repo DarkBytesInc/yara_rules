@@ -15,16 +15,18 @@
 rule TidePool_Malware
 {
 
-    meta:
-        description = "Detects TidePool malware mentioned in Ke3chang report by Palo Alto Networks"
-        author = "Florian Roth"
-        reference = "http://goo.gl/m2CXWR"
-        date = "2016-05-24"
-        hash1 = "9d0a47bdf00f7bd332ddd4cf8d95dd11ebbb945dda3d72aac512512b48ad93ba"
-        hash2 = "67c4e8ab0f12fae7b4aeb66f7e59e286bd98d3a77e5a291e8d58b3cfbc1514ed"
-        hash3 = "2252dcd1b6afacde3f94d9557811bb769c4f0af3cb7a48ffe068d31bb7c30e18"
-        hash4 = "38f2c86041e0446730479cdb9c530298c0c4936722975c4e7446544fd6dcac9f"
-        hash5 = "9d0a47bdf00f7bd332ddd4cf8d95dd11ebbb945dda3d72aac512512b48ad93ba"
+      meta:
+    description = "Detects TidePool malware mentioned in Ke3chang report by Palo Alto Networks"
+    author = "Florian Roth"
+    reference = "http://goo.gl/m2CXWR"
+    date = "2016-05-24"
+    hash1 = "9d0a47bdf00f7bd332ddd4cf8d95dd11ebbb945dda3d72aac512512b48ad93ba"
+    hash2 = "67c4e8ab0f12fae7b4aeb66f7e59e286bd98d3a77e5a291e8d58b3cfbc1514ed"
+    hash3 = "2252dcd1b6afacde3f94d9557811bb769c4f0af3cb7a48ffe068d31bb7c30e18"
+    hash4 = "38f2c86041e0446730479cdb9c530298c0c4936722975c4e7446544fd6dcac9f"
+    hash5 = "9d0a47bdf00f7bd332ddd4cf8d95dd11ebbb945dda3d72aac512512b48ad93ba"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "Content-Disposition: form-data; name=\"m1.jpg\"" fullword ascii

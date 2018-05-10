@@ -10,12 +10,14 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule APT34_Malware_HTA {
-   meta:
-      description = "Detects APT 34 malware"
-      author = "Florian Roth"
-      reference = "https://www.fireeye.com/blog/threat-research/2017/12/targeted-attack-in-middle-east-by-apt34.html"
-      date = "2017-12-07"
-      hash1 = "f6fa94cc8efea0dbd7d4d4ca4cf85ac6da97ee5cf0c59d16a6aafccd2b9d8b9a"
+     meta:
+    description = "Detects APT 34 malware"
+    author = "Florian Roth"
+    reference = "https://www.fireeye.com/blog/threat-research/2017/12/targeted-attack-in-middle-east-by-apt34.html"
+    date = "2017-12-07"
+    hash1 = "f6fa94cc8efea0dbd7d4d4ca4cf85ac6da97ee5cf0c59d16a6aafccd2b9d8b9a"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $x1 = "WshShell.run \"cmd.exe /C C:\\ProgramData\\" ascii
       $x2 = ".bat&ping 127.0.0.1 -n 6 > nul&wscript  /b" ascii
@@ -30,12 +32,14 @@ rule APT34_Malware_HTA {
 }
 
 rule APT34_Malware_Exeruner {
-   meta:
-      description = "Detects APT 34 malware"
-      author = "Florian Roth"
-      reference = "https://www.fireeye.com/blog/threat-research/2017/12/targeted-attack-in-middle-east-by-apt34.html"
-      date = "2017-12-07"
-      hash1 = "c75c85acf0e0092d688a605778425ba4cb2a57878925eee3dc0f4dd8d636a27a"
+     meta:
+    description = "Detects APT 34 malware"
+    author = "Florian Roth"
+    reference = "https://www.fireeye.com/blog/threat-research/2017/12/targeted-attack-in-middle-east-by-apt34.html"
+    date = "2017-12-07"
+    hash1 = "c75c85acf0e0092d688a605778425ba4cb2a57878925eee3dc0f4dd8d636a27a"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $x1 = "\\obj\\Debug\\exeruner.pdb" ascii
       $x2 = "\"wscript.shell`\")`nShell0.run" wide

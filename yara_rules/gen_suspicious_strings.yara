@@ -1,11 +1,13 @@
 
 rule Ping_Command_in_EXE {
-   meta:
-      description = "Detects an suspicious ping command execution in an executable"
-      author = "Florian Roth"
-      reference = "Internal Research"
-      date = "2016-11-03"
-      score = 60
+     meta:
+    description = "Detects an suspicious ping command execution in an executable"
+    author = "Florian Roth"
+    reference = "Internal Research"
+    date = "2016-11-03"
+    score = 60
+    severity = "5"
+    type = "Unknown"
    strings:
       $x1 = "cmd /c ping 127.0.0.1 -n " ascii
    condition:
@@ -13,12 +15,14 @@ rule Ping_Command_in_EXE {
 }
 
 rule GoogleBot_UserAgent {
-   meta:
-      description = "Detects the GoogleBot UserAgent String in an Executable"
-      author = "Florian Roth"
-      reference = "Internal Research"
-      date = "2017-01-27"
-      score = 65
+     meta:
+    description = "Detects the GoogleBot UserAgent String in an Executable"
+    author = "Florian Roth"
+    reference = "Internal Research"
+    date = "2017-01-27"
+    score = 65
+    severity = "5"
+    type = "Unknown"
    strings:
       $x1 = "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)" fullword ascii
 
@@ -28,11 +32,13 @@ rule GoogleBot_UserAgent {
 }
 
 rule Gen_Net_LocalGroup_Administrators_Add_Command {
-   meta:
-      description = "Detects an executable that contains a command to add a user account to the local administrators group"
-      author = "Florian Roth"
-      reference = "Internal Research"
-      date = "2017-07-08"
+     meta:
+    description = "Detects an executable that contains a command to add a user account to the local administrators group"
+    author = "Florian Roth"
+    reference = "Internal Research"
+    date = "2017-07-08"
+    severity = "7"
+    type = "Malware"
    strings:
       $x1 = /net localgroup administrators [a-zA-Z0-9]{1,16} \/add/ nocase ascii
    condition:
@@ -40,12 +46,13 @@ rule Gen_Net_LocalGroup_Administrators_Add_Command {
 }
 
 rule Suspicious_Script_Running_from_HTTP {
-   meta:
-      description = "Detects a suspicious "
-      author = "Florian Roth"
-      reference = "https://www.hybrid-analysis.com/sample/a112274e109c5819d54aa8de89b0e707b243f4929a83e77439e3ff01ed218a35?environmentId=100"
-      score = 50
-      date = "2017-08-20"
+     meta:
+    description = "Detects a suspicious "
+    author = "Florian Roth"
+    score = 50
+    date = "2017-08-20"
+    severity = "5"
+    type = "Unknown"
    strings:
       $s1 = "cmd /C script:http://" ascii nocase
       $s2 = "cmd /C script:https://" ascii nocase
@@ -56,12 +63,14 @@ rule Suspicious_Script_Running_from_HTTP {
 }
 
 rule ReconCommands_in_File {
-   meta:
-      description = "Detects various recon commands in a single file"
-      author = "Florian Roth"
-      reference = "https://twitter.com/haroonmeer/status/939099379834658817"
-      date = "2017-12-11"
-      score = 40
+     meta:
+    description = "Detects various recon commands in a single file"
+    author = "Florian Roth"
+    reference = "https://twitter.com/haroonmeer/status/939099379834658817"
+    date = "2017-12-11"
+    score = 40
+    severity = "5"
+    type = "Unknown"
    strings:
       $ = "tasklist"
       $ = "net time"
@@ -76,12 +85,14 @@ rule ReconCommands_in_File {
 }
 
 rule VBS_dropper_script_Dec17_1 {
-   meta:
-      description = "Detects a supicious VBS script that drops an executable"
-      author = "Florian Roth"
-      reference = "Internal Research"
-      date = "2018-01-01"
-      score = 80
+     meta:
+    description = "Detects a supicious VBS script that drops an executable"
+    author = "Florian Roth"
+    reference = "Internal Research"
+    date = "2018-01-01"
+    score = 80
+    severity = "5"
+    type = "Unknown"
    strings:
       $s1 = "TVpTAQEAAAAEAA" // 14 samples in goodware archive
       $s2 = "TVoAAAAAAAAAAA" // 26 samples in goodware archive
@@ -95,11 +106,13 @@ rule VBS_dropper_script_Dec17_1 {
 }
 
 rule SUSP_PDB_Strings_Keylogger_Backdoor {
-   meta:
-      description = "Detects PDB strings used in backdoors or keyloggers"
-      author = "Florian Roth"
-      reference = "Internal Research"
-      date = "2018-03-23"
+     meta:
+    description = "Detects PDB strings used in backdoors or keyloggers"
+    author = "Florian Roth"
+    reference = "Internal Research"
+    date = "2018-03-23"
+    severity = "5"
+    type = "Unknown"
    strings:
       $ = "\\Release\\PrivilegeEscalation"
       $ = "\\Release\\KeyLogger"

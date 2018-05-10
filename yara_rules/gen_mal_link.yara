@@ -1,11 +1,13 @@
 
 rule LNK_Malicious_Nov1 {
-   meta:
-      description = "Detects a malicious LNK file"
-      author = "Florian Roth"
-      reference = "https://www.virustotal.com/en/file/ee069edc46a18698fa99b6d2204895e6a516af1a306ea986a798b178f289ecd6/analysis/"
-      date = "2017-11-06"
-      score = 60
+     meta:
+    description = "Detects a malicious LNK file"
+    author = "Florian Roth"
+    reference = "https://www.virustotal.com/en/file/ee069edc46a18698fa99b6d2204895e6a516af1a306ea986a798b178f289ecd6/analysis/"
+    date = "2017-11-06"
+    score = 60
+    severity = "7"
+    type = "Malware"
    strings:
       $c1 = "C:\\Windows\\System32\\cmd.exe" ascii wide
 

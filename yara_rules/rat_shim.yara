@@ -1,10 +1,12 @@
 rule shimrat: RAT
 {
- meta:
-  description = "Detects ShimRat and the ShimRat loader"
-  author = "Yonathan Klijnsma (yonathan.klijnsma@fox-it.com)"
-  date = "20/11/2015"
-  ref = "https://blog.fox-it.com/2016/06/15/mofang-a-politically-motivated-information-stealing-adversary/"
+   meta:
+    description = "Detects ShimRat and the ShimRat loader"
+    author = "Yonathan Klijnsma (yonathan.klijnsma@fox-it.com)"
+    date = "20/11/2015"
+    ref = "https://blog.fox-it.com/2016/06/15/mofang-a-politically-motivated-information-stealing-adversary/"
+    severity = "7"
+    type = "Malware"
   
  strings:
   $dll = ".dll"
@@ -28,11 +30,13 @@ rule shimrat: RAT
 
 rule shimratreporter: RAT
 {
- meta:
-  description = "Detects ShimRatReporter"
-  author = "Yonathan Klijnsma (yonathan.klijnsma@fox-it.com)"
-  date = "20/11/2015"
-  ref = "https://blog.fox-it.com/2016/06/15/mofang-a-politically-motivated-information-stealing-adversary/"
+   meta:
+    description = "Detects ShimRatReporter"
+    author = "Yonathan Klijnsma (yonathan.klijnsma@fox-it.com)"
+    date = "20/11/2015"
+    ref = "https://blog.fox-it.com/2016/06/15/mofang-a-politically-motivated-information-stealing-adversary/"
+    severity = "7"
+    type = "Malware"
 
 
  strings:

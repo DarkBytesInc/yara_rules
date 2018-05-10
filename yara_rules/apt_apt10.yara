@@ -1,11 +1,13 @@
 /* US CERT Rule */
 
 rule Dropper_DeploysMalwareViaSideLoading {
-meta:
-        description = "Detect a dropper used to deploy an implant via side loading. This dropper has specifically been observed deploying REDLEAVES & PlugX"
-        author = "USG"
-        true_positive = "5262cb9791df50fafcb2fbd5f93226050b51efe400c2924eecba97b7ce437481: drops REDLEAVES. 6392e0701a77ea25354b1f40f5b867a35c0142abde785a66b83c9c8d2c14c0c3: drops plugx. "
-        reference = "https://www.us-cert.gov/ncas/alerts/TA17-117A"
+  meta:
+    description = "Detect a dropper used to deploy an implant via side loading. This dropper has specifically been observed deploying REDLEAVES & PlugX"
+    author = "USG"
+    true_positive = "5262cb9791df50fafcb2fbd5f93226050b51efe400c2924eecba97b7ce437481: drops REDLEAVES. 6392e0701a77ea25354b1f40f5b867a35c0142abde785a66b83c9c8d2c14c0c3: drops plugx. "
+    reference = "https://www.us-cert.gov/ncas/alerts/TA17-117A"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
 strings:
         $UniqueString = {2e 6c 6e 6b [0-14] 61 76 70 75 69 2e 65 78 65} // ".lnk" near "avpui.exe"
@@ -16,11 +18,13 @@ condition:
 }
 
 rule REDLEAVES_DroppedFile_ImplantLoader_Starburn {
-meta:
-        description = "Detect the DLL responsible for loading and deobfuscating the DAT file containing shellcode and core REDLEAVES RAT"
-        author = "USG"
-        true_positive = "7f8a867a8302fe58039a6db254d335ae" // StarBurn.dll
-        reference = "https://www.us-cert.gov/ncas/alerts/TA17-117A"
+  meta:
+    description = "Detect the DLL responsible for loading and deobfuscating the DAT file containing shellcode and core REDLEAVES RAT"
+    author = "USG"
+    true_positive = "7f8a867a8302fe58039a6db254d335ae" // StarBurn.dll
+    reference = "https://www.us-cert.gov/ncas/alerts/TA17-117A"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 strings:
         $XOR_Loop = {32 0c 3a 83 c2 02 88 0e 83 fa 08 [4-14] 32 0c 3a 83 c2 02 88 0e 83 fa 10} // Deobfuscation loop
 condition:
@@ -28,11 +32,13 @@ condition:
 }
 
 rule REDLEAVES_DroppedFile_ObfuscatedShellcodeAndRAT_handkerchief {
-meta:
-        description = "Detect obfuscated .dat file containing shellcode and core REDLEAVES RAT"
-        author = "USG"
-        true_positive = "fb0c714cd2ebdcc6f33817abe7813c36" // handkerchief.dat
-        reference = "https://www.us-cert.gov/ncas/alerts/TA17-117A"
+  meta:
+    description = "Detect obfuscated .dat file containing shellcode and core REDLEAVES RAT"
+    author = "USG"
+    true_positive = "fb0c714cd2ebdcc6f33817abe7813c36" // handkerchief.dat
+    reference = "https://www.us-cert.gov/ncas/alerts/TA17-117A"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
 strings:
         $RedleavesStringObfu = {73 64 65 5e 60 74 75 74 6c 6f 60 6d 5e 6d 64 60 77 64 72 5e 65 6d 6d 6c 60 68 6f 2f 65 6d 6d} // This is 'red_autumnal_leaves_dllmain.dll' XOR'd with 0x01
@@ -41,10 +47,12 @@ condition:
 }
 
 rule REDLEAVES_CoreImplant_UniqueStrings {
-meta:
-        description = "Strings identifying the core REDLEAVES RAT in its deobfuscated state"
-        author = "USG"
-        reference = "https://www.us-cert.gov/ncas/alerts/TA17-117A"
+  meta:
+    description = "Strings identifying the core REDLEAVES RAT in its deobfuscated state"
+    author = "USG"
+    reference = "https://www.us-cert.gov/ncas/alerts/TA17-117A"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
 strings:
         $unique2 = "RedLeavesSCMDSimulatorMutex" nocase wide ascii
@@ -56,18 +64,20 @@ condition:
 
 rule PLUGX_RedLeaves
 {
-meta:
-        author = "US-CERT Code Analysis Team"
-        date = "03042017"
-        incident = "10118538"
-        date = "2017/04/03"
-        MD5_1 = "598FF82EA4FB52717ACAFB227C83D474"
-        MD5_2 = "7D10708A518B26CC8C3CBFBAA224E032"
-        MD5_3 = "AF406D35C77B1E0DF17F839E36BCE630"
-        MD5_4 = "6EB9E889B091A5647F6095DCD4DE7C83"
-        MD5_5 = "566291B277534B63EAFC938CDAAB8A399E41AF7D"
-        info = "Detects specific RedLeaves and PlugX binaries"
-        reference = "https://www.us-cert.gov/ncas/alerts/TA17-117A"
+  meta:
+    author = "US-CERT Code Analysis Team"
+    date = "2017/04/03"
+    incident = "10118538"
+    MD5_1 = "598FF82EA4FB52717ACAFB227C83D474"
+    MD5_2 = "7D10708A518B26CC8C3CBFBAA224E032"
+    MD5_3 = "AF406D35C77B1E0DF17F839E36BCE630"
+    MD5_4 = "6EB9E889B091A5647F6095DCD4DE7C83"
+    MD5_5 = "566291B277534B63EAFC938CDAAB8A399E41AF7D"
+    info = "Detects specific RedLeaves and PlugX binaries"
+    reference = "https://www.us-cert.gov/ncas/alerts/TA17-117A"
+    description = "PLUGX_RedLeaves"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
 strings:
         $s0 = { 80343057403D2FD0010072F433C08BFF80343024403D2FD0010072F4 }
@@ -88,9 +98,12 @@ condition:
 
 rule Ham_backdoor
 {
-meta:
-        author = "Cylance Spear Team"
-        reference = "https://www.cylance.com/en_us/blog/the-deception-project-a-new-japanese-centric-threat.html"
+  meta:
+    author = "Cylance Spear Team"
+    reference = "https://www.cylance.com/en_us/blog/the-deception-project-a-new-japanese-centric-threat.html"
+    description = "Ham_backdoor"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 strings:
         $a = {8D 14 3E 8B 7D FC 8A 0C 11 32 0C 38 40 8B 7D 10 88 0A 8B 4D 08 3B C3}
         $b = {8D 0C 1F 8B 5D F8 8A 04 08 32 04 1E 46 8B 5D 10 88 01 8B 45 08 3B F2}
@@ -100,9 +113,12 @@ condition:
 
 rule Tofu_Backdoor
 {
-meta:
-        author = "Cylance Spear Team"
-        reference = "https://www.cylance.com/en_us/blog/the-deception-project-a-new-japanese-centric-threat.html"
+  meta:
+    author = "Cylance Spear Team"
+    reference = "https://www.cylance.com/en_us/blog/the-deception-project-a-new-japanese-centric-threat.html"
+    description = "Ham_backdoor"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 strings:
 	$a = "Cookies: Sym1.0"
 	$b = "\\\\.\\pipe\\1[12345678]"

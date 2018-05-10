@@ -7,10 +7,12 @@ import "pe"
 
 rule FavoriteCode : Favorite Family 
 {
-    meta:
-        description = "Favorite code features"
-        author = "Seth Hardy"
-        last_modified = "2014-06-24"
+      meta:
+    description = "Favorite code features"
+    author = "Seth Hardy"
+    last_modified = "2014-06-24"
+    severity = "7"
+    type = "Malware"
     
     strings:
         // standard string hiding
@@ -23,10 +25,12 @@ rule FavoriteCode : Favorite Family
 
 rule FavoriteStrings : Favorite Family
 {
-    meta:
-        description = "Favorite Identifying Strings"
-        author = "Seth Hardy"
-        last_modified = "2014-06-24"
+      meta:
+    description = "Favorite Identifying Strings"
+    author = "Seth Hardy"
+    last_modified = "2014-06-24"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $string1 = "!QAZ4rfv"

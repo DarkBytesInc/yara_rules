@@ -1,7 +1,9 @@
 rule PowerWorm {
-	meta:
-		author = "FDD @ Cuckoo Sandbox"
-		description = "Rule for PowerWorm script detection"
+	  meta:
+    author = "FDD @ Cuckoo Sandbox"
+    description = "Rule for PowerWorm script detection"
+    severity = "7"
+    type = "Exploit Kit"
 
 	strings:
 		/* .onion URL for payload */

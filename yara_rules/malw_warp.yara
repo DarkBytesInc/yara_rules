@@ -7,10 +7,12 @@ import "pe"
 
 rule WarpCode : Warp Family 
 {
-    meta:
-        description = "Warp code features"
-        author = "Seth Hardy"
-        last_modified = "2014-07-10"
+      meta:
+    description = "Warp code features"
+    author = "Seth Hardy"
+    last_modified = "2014-07-10"
+    severity = "7"
+    type = "Malware"
     
     strings:
         // character replacement
@@ -22,10 +24,12 @@ rule WarpCode : Warp Family
 
 rule WarpStrings : Warp Family
 {
-    meta:
-        description = "Warp Identifying Strings"
-        author = "Seth Hardy"
-        last_modified = "2014-07-10"
+      meta:
+    description = "Warp Identifying Strings"
+    author = "Seth Hardy"
+    last_modified = "2014-07-10"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $ = "/2011/n325423.shtml?"
@@ -38,10 +42,12 @@ rule WarpStrings : Warp Family
 
 rule Warp : Family
 {
-    meta:
-        description = "Warp"
-        author = "Seth Hardy"
-        last_modified = "2014-07-10"
+      meta:
+    description = "Warp"
+    author = "Seth Hardy"
+    last_modified = "2014-07-10"
+    severity = "7"
+    type = "Malware"
         
     condition:
         WarpCode or WarpStrings

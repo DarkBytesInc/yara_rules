@@ -10,13 +10,15 @@
 rule Sofacy_Jun16_Sample1  
 {
 
-    meta:
-        description = "Detects Sofacy Malware mentioned in PaloAltoNetworks APT report"
-        author = "Florian Roth"
-        reference = "http://goo.gl/mzAa97"
-        date = "2016-06-14"
-        score = 85
-        hash1 = "be1cfa10fcf2668ae01b98579b345ebe87dab77b6b1581c368d1aba9fd2f10a0"
+      meta:
+    description = "Detects Sofacy Malware mentioned in PaloAltoNetworks APT report"
+    author = "Florian Roth"
+    reference = "http://goo.gl/mzAa97"
+    date = "2016-06-14"
+    score = 85
+    hash1 = "be1cfa10fcf2668ae01b98579b345ebe87dab77b6b1581c368d1aba9fd2f10a0"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "clconfg.dll" fullword ascii
@@ -29,15 +31,17 @@ rule Sofacy_Jun16_Sample1
 rule Sofacy_Jun16_Sample2  
 {
 
-    meta:
-        description = "Detects Sofacy Malware mentioned in PaloAltoNetworks APT report"
-        author = "Florian Roth"
-        reference = "http://goo.gl/mzAa97"
-        date = "2016-06-14"
-        score = 85
-        hash1 = "57d230ddaf92e2d0504e5bb12abf52062114fb8980c5ecc413116b1d6ffedf1b"
-        hash2 = "69940a20ab9abb31a03fcefe6de92a16ed474bbdff3288498851afc12a834261"
-        hash3 = "aeeab3272a2ed2157ebf67f74c00fafc787a2b9bbaa17a03be1e23d4cb273632"
+      meta:
+    description = "Detects Sofacy Malware mentioned in PaloAltoNetworks APT report"
+    author = "Florian Roth"
+    reference = "http://goo.gl/mzAa97"
+    date = "2016-06-14"
+    score = 85
+    hash1 = "57d230ddaf92e2d0504e5bb12abf52062114fb8980c5ecc413116b1d6ffedf1b"
+    hash2 = "69940a20ab9abb31a03fcefe6de92a16ed474bbdff3288498851afc12a834261"
+    hash3 = "aeeab3272a2ed2157ebf67f74c00fafc787a2b9bbaa17a03be1e23d4cb273632"
+    severity = "10"
+    type = "Advanced Persistent Threat"
  
     strings:
         $x1 = "DGMNOEP" fullword ascii
@@ -54,13 +58,15 @@ rule Sofacy_Jun16_Sample2
 rule Sofacy_Jun16_Sample3 
 {
 
-    meta:
-        description = "Detects Sofacy Malware mentioned in PaloAltoNetworks APT report"
-        author = "Florian Roth"
-        reference = "http://goo.gl/mzAa97"
-        date = "2016-06-14"
-        score = 85
-        hash1 = "c2551c4e6521ac72982cb952503a2e6f016356e02ee31dea36c713141d4f3785"
+      meta:
+    description = "Detects Sofacy Malware mentioned in PaloAltoNetworks APT report"
+    author = "Florian Roth"
+    reference = "http://goo.gl/mzAa97"
+    date = "2016-06-14"
+    score = 85
+    hash1 = "c2551c4e6521ac72982cb952503a2e6f016356e02ee31dea36c713141d4f3785"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $s1 = "ASLIiasiuqpssuqkl713h" fullword wide

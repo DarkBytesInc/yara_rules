@@ -16,13 +16,15 @@
 rule Apolmy_Privesc_Trojan 
 {
 
-    meta:
-        description = "Apolmy Privilege Escalation Trojan used in APT Terracotta"
-        author = "Florian Roth"
-        reference = "https://blogs.rsa.com/terracotta-vpn-enabler-of-advanced-threat-anonymity/"
-        date = "2015-08-04"
-        score = 80
-        hash = "d7bd289e6cee228eb46a1be1fcdc3a2bd5251bc1eafb59f8111756777d8f373d"
+      meta:
+    description = "Apolmy Privilege Escalation Trojan used in APT Terracotta"
+    author = "Florian Roth"
+    reference = "https://blogs.rsa.com/terracotta-vpn-enabler-of-advanced-threat-anonymity/"
+    date = "2015-08-04"
+    score = 80
+    hash = "d7bd289e6cee228eb46a1be1fcdc3a2bd5251bc1eafb59f8111756777d8f373d"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "[%d] Failed, %08X" fullword ascii
@@ -36,13 +38,15 @@ rule Apolmy_Privesc_Trojan
 rule Mithozhan_Trojan 
 {
 
-    meta:
-        description = "Mitozhan Trojan used in APT Terracotta"
-        author = "Florian Roth"
-        reference = "https://blogs.rsa.com/terracotta-vpn-enabler-of-advanced-threat-anonymity/"
-        date = "2015-08-04"
-        score = 70
-        hash = "8553b945e2d4b9f45c438797d6b5e73cfe2899af1f9fd87593af4fd7fb51794a"
+      meta:
+    description = "Mitozhan Trojan used in APT Terracotta"
+    author = "Florian Roth"
+    reference = "https://blogs.rsa.com/terracotta-vpn-enabler-of-advanced-threat-anonymity/"
+    date = "2015-08-04"
+    score = 70
+    hash = "8553b945e2d4b9f45c438797d6b5e73cfe2899af1f9fd87593af4fd7fb51794a"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $s1 = "adbrowser" fullword wide 
@@ -56,12 +60,14 @@ rule Mithozhan_Trojan
 rule RemoteExec_Tool 
 {
 
-    meta:
-        description = "Remote Access Tool used in APT Terracotta"
-        author = "Florian Roth"
-        reference = "https://blogs.rsa.com/terracotta-vpn-enabler-of-advanced-threat-anonymity/"
-        date = "2015-08-04"
-        hash = "a550131e106ff3c703666f15d55d9bc8c816d1cb9ac1b73c2e29f8aa01e53b78"
+      meta:
+    description = "Remote Access Tool used in APT Terracotta"
+    author = "Florian Roth"
+    reference = "https://blogs.rsa.com/terracotta-vpn-enabler-of-advanced-threat-anonymity/"
+    date = "2015-08-04"
+    hash = "a550131e106ff3c703666f15d55d9bc8c816d1cb9ac1b73c2e29f8aa01e53b78"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "cmd.exe /q /c \"%s\"" fullword ascii 
@@ -80,16 +86,18 @@ rule RemoteExec_Tool
 rule LiuDoor_Malware_1 
 {
 
-    meta:
-        description = "Liudoor Trojan used in Terracotta APT"
-        author = "Florian Roth"
-        reference = "https://blogs.rsa.com/terracotta-vpn-enabler-of-advanced-threat-anonymity/"
-        date = "2015-08-04"
-        score = 70
-        super_rule = 1
-        hash1 = "deed6e2a31349253143d4069613905e1dfc3ad4589f6987388de13e33ac187fc"
-        hash2 = "4575e7fc8f156d1d499aab5064a4832953cd43795574b4c7b9165cdc92993ce5"
-        hash3 = "ad1a507709c75fe93708ce9ca1227c5fefa812997ed9104ff9adfec62a3ec2bb"
+      meta:
+    description = "Liudoor Trojan used in Terracotta APT"
+    author = "Florian Roth"
+    reference = "https://blogs.rsa.com/terracotta-vpn-enabler-of-advanced-threat-anonymity/"
+    date = "2015-08-04"
+    score = 70
+    super_rule = 1
+    hash1 = "deed6e2a31349253143d4069613905e1dfc3ad4589f6987388de13e33ac187fc"
+    hash2 = "4575e7fc8f156d1d499aab5064a4832953cd43795574b4c7b9165cdc92993ce5"
+    hash3 = "ad1a507709c75fe93708ce9ca1227c5fefa812997ed9104ff9adfec62a3ec2bb"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "svchostdllserver.dll" fullword ascii 
@@ -104,15 +112,17 @@ rule LiuDoor_Malware_1
 rule LiuDoor_Malware_2 
 {
 
-    meta:
-        description = "Liudoor Trojan used in Terracotta APT"
-        author = "Florian Roth"
-        reference = "https://blogs.rsa.com/terracotta-vpn-enabler-of-advanced-threat-anonymity/"
-        date = "2015-08-04"
-        score = 70
-        super_rule = 1
-        hash1 = "f3fb68b21490ded2ae7327271d3412fbbf9d705c8003a195a705c47c98b43800"
-        hash2 = "e42b8385e1aecd89a94a740a2c7cd5ef157b091fabd52cd6f86e47534ca2863e"
+      meta:
+    description = "Liudoor Trojan used in Terracotta APT"
+    author = "Florian Roth"
+    reference = "https://blogs.rsa.com/terracotta-vpn-enabler-of-advanced-threat-anonymity/"
+    date = "2015-08-04"
+    score = 70
+    super_rule = 1
+    hash1 = "f3fb68b21490ded2ae7327271d3412fbbf9d705c8003a195a705c47c98b43800"
+    hash2 = "e42b8385e1aecd89a94a740a2c7cd5ef157b091fabd52cd6f86e47534ca2863e"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "svchostdllserver.dll" fullword ascii 
@@ -129,16 +139,17 @@ rule LiuDoor_Malware_2
 rule liudoor
 {
 
-    meta:
-        author = "RSA FirstWatch"
-        date = "2015-07-23"
-        description = "Detects Liudoor daemon backdoor"
-        hash0 = "78b56bc3edbee3a425c96738760ee406"
-        hash1 = "5aa0510f6f1b0e48f0303b9a4bfc641e"
-        hash2 = "531d30c8ee27d62e6fbe855299d0e7de"
-        hash3 = "2be2ac65fd97ccc97027184f0310f2f3"
-        hash4 = "6093505c7f7ec25b1934d3657649ef07"
-        type = "Win32 DLL"
+      meta:
+    author = "RSA FirstWatch"
+    date = "2015-07-23"
+    description = "Detects Liudoor daemon backdoor"
+    hash0 = "78b56bc3edbee3a425c96738760ee406"
+    hash1 = "5aa0510f6f1b0e48f0303b9a4bfc641e"
+    hash2 = "531d30c8ee27d62e6fbe855299d0e7de"
+    hash3 = "2be2ac65fd97ccc97027184f0310f2f3"
+    hash4 = "6093505c7f7ec25b1934d3657649ef07"
+    type = "Win32 DLL"
+    severity = "10"
 
     strings:
         $string0 = "Succ"

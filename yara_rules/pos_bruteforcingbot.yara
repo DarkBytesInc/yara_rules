@@ -5,12 +5,14 @@
 
 rule POS_bruteforcing_bot
 { 
-	meta:
-		maltype = "botnet"
+	  meta:
+    maltype = "botnet"
     ref = "https://github.com/reed1713"
-		reference = "http://www.alienvault.com/open-threat-exchange/blog/botnet-bruteforcing-point-of-sale-via-remote-desktop"
-		date = "3/11/2014"
-		description = "botnet bruteforcing POS terms via RDP"
+    reference = "http://www.alienvault.com/open-threat-exchange/blog/botnet-bruteforcing-point-of-sale-via-remote-desktop"
+    date = "3/11/2014"
+    description = "botnet bruteforcing POS terms via RDP"
+    severity = "5"
+    type = "Unknown"
 	strings:
 		$type="Microsoft-Windows-Security-Auditing"
 		$eventid="4688"

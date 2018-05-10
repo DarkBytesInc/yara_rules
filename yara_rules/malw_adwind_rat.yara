@@ -1,10 +1,12 @@
 rule Adwind
 {
-meta:
-        author="Asaf Aprozper, asafa AT minerva-labs.com"
-        description = "Adwind RAT"
-        reference = "https://minerva-labs.com/post/adwind-and-other-evasive-java-rats"
-        last_modified = "2017-06-25"
+  meta:
+    author = "Asaf Aprozper, asafa AT minerva-labs.com"
+    description = "Adwind RAT"
+    reference = "https://minerva-labs.com/post/adwind-and-other-evasive-java-rats"
+    last_modified = "2017-06-25"
+    severity = "7"
+    type = "Malware"
 strings:
         $a0 = "META-INF/MANIFEST.MF"
         $a1 = /Main(\$)Q[0-9][0-9][0-9][0-9]/

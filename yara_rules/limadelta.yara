@@ -2,10 +2,13 @@ import "pe"
 
 rule LimaDelta
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
-		Source = "81e6118a6d8bf8994ce93f940059217481bfd15f2757c48c589983a6af54cfcc"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    Source = "81e6118a6d8bf8994ce93f940059217481bfd15f2757c48c589983a6af54cfcc"
+    description = "LimaDelta"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 	/*

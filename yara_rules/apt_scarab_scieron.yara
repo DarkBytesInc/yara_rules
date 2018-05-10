@@ -7,10 +7,13 @@ import "pe"
 
 rule Scieron
 {
-    meta:
-        author = "Symantec Security Response"
-        ref = "http://www.symantec.com/connect/tr/blogs/scarab-attackers-took-aim-select-russian-targets-2012"
-        date = "22.01.15"
+      meta:
+    author = "Symantec Security Response"
+    ref = "http://www.symantec.com/connect/tr/blogs/scarab-attackers-took-aim-select-russian-targets-2012"
+    date = "22.01.15"
+    description = "Scieron"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         // .text:10002069 66 83 F8 2C                       cmp     ax, ','

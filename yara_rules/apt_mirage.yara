@@ -7,10 +7,12 @@ import "pe"
 
 rule MirageStrings
 {
-    meta:
-        description = "Mirage Identifying Strings"
-        author = "Seth Hardy"
-        last_modified = "2014-06-25"
+      meta:
+    description = "Mirage Identifying Strings"
+    author = "Seth Hardy"
+    last_modified = "2014-06-25"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $ = "Neo,welcome to the desert of real." wide ascii
@@ -22,10 +24,12 @@ rule MirageStrings
 
 rule Mirage
 {
-    meta:
-        description = "Mirage"
-        author = "Seth Hardy"
-        last_modified = "2014-06-25"
+      meta:
+    description = "Mirage"
+    author = "Seth Hardy"
+    last_modified = "2014-06-25"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     condition:
         MirageStrings
@@ -33,11 +37,14 @@ rule Mirage
 
 rule Mirage_APT
 {
-    meta:
-        Author      = "Silas Cutler"
-        Date        = "yyyy/mm/dd"
-        Description = "Malware related to APT campaign"
-        Reference   = "Useful link"
+      meta:
+    Author = "Silas Cutler"
+    Date = "yyyy/mm/dd"
+    Description = "Malware related to APT campaign"
+    Reference = "Useful link"
+    description = "Mirage_APT"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $a1 = "welcome to the desert of the real"

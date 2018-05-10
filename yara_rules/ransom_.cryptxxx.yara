@@ -6,11 +6,13 @@ rule Ransom_CryptXXX_Dropper
     /*
       Regla para detectar el dropper de Ransom.CryptXXX con MD5 d01fd2bb8c6296d51be297978af8b3a1
     */
-    meta:
-        description = "Regla para detectar RANSOM.CRYPTXXX"
-        author      = "CCN-CERT"
-        version     = "1.0"
-        ref = "https://www.ccn-cert.cni.es/seguridad-al-dia/comunicados-ccn-cert/4002-publicado-el-informe-del-codigo-danino-ransom-cryptxxx.html"
+      meta:
+    description = "Regla para detectar RANSOM.CRYPTXXX"
+    author = "CCN-CERT"
+    version = "1.0"
+    ref = "https://www.ccn-cert.cni.es/seguridad-al-dia/comunicados-ccn-cert/4002-publicado-el-informe-del-codigo-danino-ransom-cryptxxx.html"
+    severity = "10"
+    type = "Ransomware"
     strings:
         $a = { 50 65 31 57 58 43 46 76 59 62 48 6F 35 }
         $b = { 43 00 3A 00 5C 00 42 00 49 00 45 00 52 00 5C 00 51 00 6D 00 6B 00 4E 00 52 00 4C 00 46 00 00 }
@@ -23,11 +25,13 @@ rule Ransom_CryptXXX_Real
     /*
       Regla para detectar el codigo Ransom.CryptXXX fuera del dropper con MD5 ae06248ab3c02e1c2ca9d53b9a155199
     */
-    meta:
-        description = "Regla para detectar Ransom.CryptXXX original"
-        author      = "CCN-CERT"
-        version     = "1.0"
-        ref = "https://www.ccn-cert.cni.es/seguridad-al-dia/comunicados-ccn-cert/4002-publicado-el-informe-del-codigo-danino-ransom-cryptxxx.html"
+      meta:
+    description = "Regla para detectar Ransom.CryptXXX original"
+    author = "CCN-CERT"
+    version = "1.0"
+    ref = "https://www.ccn-cert.cni.es/seguridad-al-dia/comunicados-ccn-cert/4002-publicado-el-informe-del-codigo-danino-ransom-cryptxxx.html"
+    severity = "10"
+    type = "Ransomware"
     strings:
         $a = { 52 59 47 40 4A 41 59 5D 52 00 00 00 FF FF FF FF }
 		$b = { 06 00 00 00 52 59 47 40 40 5A 00 00 FF FF FF FF }

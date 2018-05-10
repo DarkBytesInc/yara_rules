@@ -2,10 +2,13 @@ import "pe"
 
 rule SierraCharlie
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
-		Source = "f4750e1d82b08318bdc1eb6d3399dee52750250f7959a5e4f83245449f399698.bin"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    Source = "f4750e1d82b08318bdc1eb6d3399dee52750250f7959a5e4f83245449f399698.bin"
+    description = "SierraCharlie"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 	/*

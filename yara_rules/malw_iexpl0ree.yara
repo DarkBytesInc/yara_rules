@@ -7,10 +7,12 @@ import "pe"
 
 rule iexpl0reCode : iexpl0ree Family 
 {
-    meta:
-        description = "iexpl0re code features"
-        author = "Seth Hardy"
-        last_modified = "2014-07-21"
+      meta:
+    description = "iexpl0re code features"
+    author = "Seth Hardy"
+    last_modified = "2014-07-21"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $ = { 47 83 FF 64 0F 8C 6D FF FF FF 33 C0 5F 5E 5B C9 C3 }
@@ -27,10 +29,12 @@ rule iexpl0reCode : iexpl0ree Family
 
 rule iexpl0reStrings : iexpl0re Family
 {
-    meta:
-        description = "Strings used by iexpl0re"
-        author = "Seth Hardy"
-        last_modified = "2014-07-21"
+      meta:
+    description = "Strings used by iexpl0re"
+    author = "Seth Hardy"
+    last_modified = "2014-07-21"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $ = "%USERPROFILE%\\IEXPL0RE.EXE"
@@ -53,10 +57,12 @@ rule iexpl0reStrings : iexpl0re Family
 
 rule iexpl0re : Family
 {
-    meta:
-        description = "iexpl0re family"
-        author = "Seth Hardy"
-        last_modified = "2014-07-21"
+      meta:
+    description = "iexpl0re family"
+    author = "Seth Hardy"
+    last_modified = "2014-07-21"
+    severity = "7"
+    type = "Malware"
    
     condition:
         iexpl0reCode or iexpl0reStrings

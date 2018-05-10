@@ -1,14 +1,15 @@
 rule APT_Liudoor {
-    meta:
-        author = "RSA FirstWatch"
-        date = "2015-07-23"
-        description = "Detects Liudoor daemon backdoor"
-        hash0 = "78b56bc3edbee3a425c96738760ee406"
-        hash1 = "5aa0510f6f1b0e48f0303b9a4bfc641e"
-        hash2 = "531d30c8ee27d62e6fbe855299d0e7de"
-        hash3 = "2be2ac65fd97ccc97027184f0310f2f3"
-        hash4 = "6093505c7f7ec25b1934d3657649ef07"
-        type = "Win32 DLL"
+      meta:
+    author = "RSA FirstWatch"
+    date = "2015-07-23"
+    description = "Detects Liudoor daemon backdoor"
+    hash0 = "78b56bc3edbee3a425c96738760ee406"
+    hash1 = "5aa0510f6f1b0e48f0303b9a4bfc641e"
+    hash2 = "531d30c8ee27d62e6fbe855299d0e7de"
+    hash3 = "2be2ac65fd97ccc97027184f0310f2f3"
+    hash4 = "6093505c7f7ec25b1934d3657649ef07"
+    type = "Win32 DLL"
+    severity = "10"
     strings:
         $string0 = "Succ"
         $string1 = "Fail"

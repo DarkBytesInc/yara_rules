@@ -8,12 +8,15 @@ import "pe"
 rule Backdoor_APT_Mongal
 {
 
-    meta:
-        author = "@patrickrolsen"
-        maltype = "Backdoor.APT.Mongall"
-        version = "0.1"
-        reference = "fd69a799e21ccb308531ce6056944842" 
-        date = "01/04/2014"
+      meta:
+    author = "@patrickrolsen"
+    maltype = "Backdoor.APT.Mongall"
+    version = "0.1"
+    reference = "fd69a799e21ccb308531ce6056944842"
+    date = "01/04/2014"
+    description = "Backdoor_APT_Mongal"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $author  = "author user"
@@ -28,10 +31,12 @@ rule Backdoor_APT_Mongal
 
 rule MongalCode
 {
-    meta:
-        description = "Mongal code features"
-        author = "Seth Hardy"
-        last_modified = "2014-07-15"
+      meta:
+    description = "Mongal code features"
+    author = "Seth Hardy"
+    last_modified = "2014-07-15"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         // gettickcount value checking
@@ -44,10 +49,12 @@ rule MongalCode
 rule MongalStrings
 {
     
-    meta:
-        description = "Mongal Identifying Strings"
-        author = "Seth Hardy"
-        last_modified = "2014-07-15"
+      meta:
+    description = "Mongal Identifying Strings"
+    author = "Seth Hardy"
+    last_modified = "2014-07-15"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $ = "NSCortr.dll"
@@ -61,10 +68,12 @@ rule MongalStrings
 rule Mongal 
 {
     
-    meta:
-        description = "Mongal"
-        author = "Seth Hardy"
-        last_modified = "2014-07-15"
+      meta:
+    description = "Mongal"
+    author = "Seth Hardy"
+    last_modified = "2014-07-15"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     condition:
         MongalCode or MongalStrings

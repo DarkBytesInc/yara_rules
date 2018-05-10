@@ -13,10 +13,12 @@
 */
 
 rule RockLoader{
-meta:
-name = "RockLoader"
-description = "RockLoader Malware"
-author = "@seanmw"
+  meta:
+    name = "RockLoader"
+    description = "RockLoader Malware"
+    author = "@seanmw"
+    severity = "7"
+    type = "Malware"
 strings:
 $hdr = {4d 5a 90 00}
 $op1 = {39 45 f0 0f 8e b0 00 00 00}

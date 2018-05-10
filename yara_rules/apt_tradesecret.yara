@@ -7,9 +7,11 @@
 rule apt_all_JavaScript_ScanboxFramework_obfuscated
 
 {
-              meta:
-                    
-                    ref = "https://www.fidelissecurity.com/TradeSecret"
+                meta:
+    ref = "https://www.fidelissecurity.com/TradeSecret"
+    description = "apt_all_JavaScript_ScanboxFramework_obfuscated"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
                   strings:
 

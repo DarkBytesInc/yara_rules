@@ -7,11 +7,13 @@ import "pe"
 rule Careto_SGH 
 {
 
-    meta:
-        author = "AlienVault (Alberto Ortega)"
-        description = "TheMask / Careto SGH component signature"
-        reference = "www.securelist.com/en/downloads/vlpdfs/unveilingthemask_v1.0.pdf"
-        date = "2014/02/11"
+      meta:
+    author = "AlienVault (Alberto Ortega)"
+    description = "TheMask / Careto SGH component signature"
+    reference = "www.securelist.com/en/downloads/vlpdfs/unveilingthemask_v1.0.pdf"
+    date = "2014/02/11"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $m1 = "PGPsdkDriver" ascii wide fullword
@@ -26,11 +28,13 @@ rule Careto_SGH
 rule Careto_OSX_SBD 
 {
 
-    meta:
-        author = "AlienVault (Alberto Ortega)"
-        description = "TheMask / Careto OSX component signature"
-        reference = "www.securelist.com/en/downloads/vlpdfs/unveilingthemask_v1.0.pdf"
-        date = "2014/02/11"
+      meta:
+    author = "AlienVault (Alberto Ortega)"
+    description = "TheMask / Careto OSX component signature"
+    reference = "www.securelist.com/en/downloads/vlpdfs/unveilingthemask_v1.0.pdf"
+    date = "2014/02/11"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         /* XORed "/dev/null strdup() setuid(geteuid())" */
@@ -43,11 +47,13 @@ rule Careto_OSX_SBD
 rule Careto_CnC 
 {
 
-    meta:
-        author = "AlienVault (Alberto Ortega)"
-        description = "TheMask / Careto CnC communication signature"
-        reference = "www.securelist.com/en/downloads/vlpdfs/unveilingthemask_v1.0.pdf"
-        date = "2014/02/11"
+      meta:
+    author = "AlienVault (Alberto Ortega)"
+    description = "TheMask / Careto CnC communication signature"
+    reference = "www.securelist.com/en/downloads/vlpdfs/unveilingthemask_v1.0.pdf"
+    date = "2014/02/11"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $1 = "cgi-bin/commcgi.cgi" ascii wide
@@ -62,11 +68,13 @@ rule Careto_CnC
 rule Careto_CnC_domains 
 {
 
-    meta:
-        author = "AlienVault (Alberto Ortega)"
-        description = "TheMask / Careto known command and control domains"
-        reference = "www.securelist.com/en/downloads/vlpdfs/unveilingthemask_v1.0.pdf"
-        date = "2014/02/11"
+      meta:
+    author = "AlienVault (Alberto Ortega)"
+    description = "TheMask / Careto known command and control domains"
+    reference = "www.securelist.com/en/downloads/vlpdfs/unveilingthemask_v1.0.pdf"
+    date = "2014/02/11"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $1 = "linkconf.net" ascii wide nocase

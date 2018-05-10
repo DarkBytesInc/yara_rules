@@ -32,14 +32,16 @@ import "pe"
 
 rule generic_carbon
 {
-  meta:
-    author      = "ESET Research"
-    date        = "2017-03-30"
+    meta:
+    author = "ESET Research"
+    date = "2017-03-30"
     description = "Turla Carbon malware"
-    reference   = "https://www.welivesecurity.com/2017/03/30/carbon-paper-peering-turlas-second-stage-backdoor/"
+    reference = "https://www.welivesecurity.com/2017/03/30/carbon-paper-peering-turlas-second-stage-backdoor/"
     source = "https://github.com/eset/malware-ioc/"
     contact = "github@eset.com"
     license = "BSD 2-Clause"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
   strings:
     $s1 = "ModStart"
@@ -52,14 +54,16 @@ rule generic_carbon
 
 rule carbon_metadata
 {
-  meta:
-    author      = "ESET Research"
-    date        = "2017-03-30"
+    meta:
+    author = "ESET Research"
+    date = "2017-03-30"
     description = "Turla Carbon malware"
-    reference   = "https://www.welivesecurity.com/2017/03/30/carbon-paper-peering-turlas-second-stage-backdoor/"
+    reference = "https://www.welivesecurity.com/2017/03/30/carbon-paper-peering-turlas-second-stage-backdoor/"
     source = "https://github.com/eset/malware-ioc/"
     contact = "github@eset.com"
     license = "BSD 2-Clause"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
    condition:
       (pe.version_info["InternalName"] contains "SERVICE.EXE" or

@@ -7,10 +7,12 @@ import "pe"
 
 rule nAspyUpdateCode : nAspyUpdate Family 
 {
-    meta:
-        description = "nAspyUpdate code features"
-        author = "Seth Hardy"
-        last_modified = "2014-07-14"
+      meta:
+    description = "nAspyUpdate code features"
+    author = "Seth Hardy"
+    last_modified = "2014-07-14"
+    severity = "7"
+    type = "Malware"
     
     strings:
         // decryption loop in dropper
@@ -22,10 +24,12 @@ rule nAspyUpdateCode : nAspyUpdate Family
 
 rule nAspyUpdateStrings : nAspyUpdate Family
 {
-    meta:
-        description = "nAspyUpdate Identifying Strings"
-        author = "Seth Hardy"
-        last_modified = "2014-07-14"
+      meta:
+    description = "nAspyUpdate Identifying Strings"
+    author = "Seth Hardy"
+    last_modified = "2014-07-14"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $ = "\\httpclient.txt"
@@ -39,10 +43,12 @@ rule nAspyUpdateStrings : nAspyUpdate Family
 
 rule nAspyUpdate : Family
 {
-    meta:
-        description = "nAspyUpdate"
-        author = "Seth Hardy"
-        last_modified = "2014-07-14"
+      meta:
+    description = "nAspyUpdate"
+    author = "Seth Hardy"
+    last_modified = "2014-07-14"
+    severity = "7"
+    type = "Malware"
         
     condition:
         nAspyUpdateCode or nAspyUpdateStrings

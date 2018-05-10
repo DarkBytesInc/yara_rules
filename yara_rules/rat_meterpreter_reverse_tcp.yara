@@ -3,9 +3,11 @@
 
 */
 rule Meterpreter_Reverse_Tcp { 
-  meta: // This is the standard backdoor/RAT from Metasploit, could be used by any actor 
-    author = "chort (@chort0)" 
-    description = "Meterpreter reverse TCP backdoor in memory. Tested on Win7x64." 
+    meta:
+    author = "chort (@chort0)"
+    description = "Meterpreter reverse TCP backdoor in memory. Tested on Win7x64."
+    severity = "7"
+    type = "Malware"
   strings: 
     $a = { 4d 45 54 45 52 50 52 45 54 45 52 5f 54 52 41 4e 53 50 4f 52 54 5f 53 53 4c [32-48] 68 74 74 70 73 3a 2f 2f 58 58 58 58 58 58 } // METERPRETER_TRANSPORT_SSL … https://XXXXXX 
     $b = { 4d 45 54 45 52 50 52 45 54 45 52 5f 55 41 } // METERPRETER_UA 

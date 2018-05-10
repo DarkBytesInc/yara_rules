@@ -6,12 +6,14 @@
 import "pe"
 rule NetWiredRC_B : RAT
 {
-	meta:
-		description = "NetWiredRC"
-		author = "Jean-Philippe Teissier / @Jipe_"
-		date = "2014-12-23"
-		filetype = "memory"
-		version = "1.1" 
+	  meta:
+    description = "NetWiredRC"
+    author = "Jean-Philippe Teissier / @Jipe_"
+    date = "2014-12-23"
+    filetype = "memory"
+    version = "1.1"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$mutex = "LmddnIkX"

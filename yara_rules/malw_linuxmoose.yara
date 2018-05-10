@@ -46,14 +46,17 @@ private rule is_elf
 
 rule moose
 {
-    meta:
-        Author      = "Thomas Dupuy"
-        Date        = "2015/04/21"
-        Description = "Linux/Moose malware"
-        Reference   = "http://www.welivesecurity.com/wp-content/uploads/2015/05/Dissecting-LinuxMoose.pdf"
-        Source = "https://github.com/eset/malware-ioc/"
-        Contact = "github@eset.com"
-        License = "BSD 2-Clause"
+      meta:
+    Author = "Thomas Dupuy"
+    Date = "2015/04/21"
+    Description = "Linux/Moose malware"
+    Reference = "http://www.welivesecurity.com/wp-content/uploads/2015/05/Dissecting-LinuxMoose.pdf"
+    Source = "https://github.com/eset/malware-ioc/"
+    Contact = "github@eset.com"
+    License = "BSD 2-Clause"
+    description = "moose"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $s0 = "Status: OK"

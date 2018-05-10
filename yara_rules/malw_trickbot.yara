@@ -4,9 +4,11 @@
 */
 rule MALW_trickbot_bankBot : Trojan
 {
-meta:
- author = "Marc Salinas @Bondey_m"
- description = "Detects Trickbot Banking Trojan"
+  meta:
+    author = "Marc Salinas @Bondey_m"
+    description = "Detects Trickbot Banking Trojan"
+    severity = "7"
+    type = "Malware"
 strings:
 $str_trick_01 = "moduleconfig"
 $str_trick_02 = "Start"
@@ -19,9 +21,11 @@ all of ($str_trick_*)
 rule MALW_systeminfo_trickbot_module :
 Trojan
 {
-meta:
-author = "Marc Salinas @Bondey_m"
-description = "Detects systeminfo module from Trickbot Trojan"
+  meta:
+    author = "Marc Salinas @Bondey_m"
+    description = "Detects systeminfo module from Trickbot Trojan"
+    severity = "7"
+    type = "Malware"
 strings:
 $str_systeminf_01 = "<program>"
 $str_systeminf_02 = "<service>"
@@ -35,9 +39,11 @@ all of ($str_systeminf_*)
 }
 rule MALW_dllinject_trickbot_module : Trojan
 {
-meta:
-author = "Marc Salinas @Bondey_m"
-description = " Detects dllinject module from Trickbot Trojan"
+  meta:
+    author = "Marc Salinas @Bondey_m"
+    description = " Detects dllinject module from Trickbot Trojan"
+    severity = "7"
+    type = "Malware"
 strings:
 $str_dllinj_01 = "user_pref("
 $str_dllinj_02 = "<ignore_mask>"
@@ -49,9 +55,11 @@ all of ($str_dllinj_*)
 rule MALW_mailsercher_trickbot_module :
 Trojan
 {
-meta:
-author = "Marc Salinas @Bondey_m"
-description = " Detects mailsearcher module from Trickbot Trojan"
+  meta:
+    author = "Marc Salinas @Bondey_m"
+    description = " Detects mailsearcher module from Trickbot Trojan"
+    severity = "7"
+    type = "Malware"
 strings:
 $str_mails_01 = "mailsearcher"
 $str_mails_02 = "handler"

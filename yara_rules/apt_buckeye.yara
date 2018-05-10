@@ -8,11 +8,13 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule Buckeye_Osinfo {
-	meta:
-		description = "Detects OSinfo tool used by the Buckeye APT group"
-		author = "Florian Roth"
-		reference = "http://www.symantec.com/connect/blogs/buckeye-cyberespionage-group-shifts-gaze-us-hong-kong"
-		date = "2016-09-05"
+	  meta:
+    description = "Detects OSinfo tool used by the Buckeye APT group"
+    author = "Florian Roth"
+    reference = "http://www.symantec.com/connect/blogs/buckeye-cyberespionage-group-shifts-gaze-us-hong-kong"
+    date = "2016-09-05"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "-s ShareInfo ShareDir" fullword ascii
 		$s2 = "-a Local And Global Group User Info" fullword ascii
@@ -26,12 +28,14 @@ rule Buckeye_Osinfo {
 }
 
 rule RemoteCmd {
-	meta:
-		description = "Detects a remote access tool used by APT groups - file RemoteCmd.exe"
-		author = "Florian Roth"
-		reference = "http://goo.gl/igxLyF"
-		date = "2016-09-08"
-		hash1 = "5264d1de687432f8346617ac88ffcb31e025e43fc3da1dad55882b17b44f1f8b"
+	  meta:
+    description = "Detects a remote access tool used by APT groups - file RemoteCmd.exe"
+    author = "Florian Roth"
+    reference = "http://goo.gl/igxLyF"
+    date = "2016-09-08"
+    hash1 = "5264d1de687432f8346617ac88ffcb31e025e43fc3da1dad55882b17b44f1f8b"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "RemoteCmd.exe" fullword wide
 		$s2 = "\\Release\\RemoteCmd.pdb" fullword ascii
@@ -44,12 +48,14 @@ rule RemoteCmd {
 }
 
 rule ChromePass {
-	meta:
-		description = "Detects a tool used by APT groups - file ChromePass.exe"
-		author = "Florian Roth"
-		reference = "http://goo.gl/igxLyF"
-		date = "2016-09-08"
-		hash1 = "5ff43049ae18d03dcc74f2be4a870c7056f6cfb5eb636734cca225140029de9a"
+	  meta:
+    description = "Detects a tool used by APT groups - file ChromePass.exe"
+    author = "Florian Roth"
+    reference = "http://goo.gl/igxLyF"
+    date = "2016-09-08"
+    hash1 = "5ff43049ae18d03dcc74f2be4a870c7056f6cfb5eb636734cca225140029de9a"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$x1 = "\\Release\\ChromePass.pdb" fullword ascii
 		$x2 = "Windows Protect folder for getting the encryption keys" wide

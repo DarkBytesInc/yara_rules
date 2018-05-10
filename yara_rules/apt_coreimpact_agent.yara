@@ -4,12 +4,14 @@
 
 
 rule CoreImpact_sysdll_exe {
-	meta:
-		description = "Detects a malware sysdll.exe from the Rocket Kitten APT"
-		author = "Florian Roth"
-		score = 70
-		date = "27.12.2014"
-		hash = "f89a4d4ae5cca6d69a5256c96111e707"
+	  meta:
+    description = "Detects a malware sysdll.exe from the Rocket Kitten APT"
+    author = "Florian Roth"
+    score = 70
+    date = "27.12.2014"
+    hash = "f89a4d4ae5cca6d69a5256c96111e707"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "d:\\nightly\\sandbox_avg10_vc9_SP1_2011\\source\\avg10\\avg9_all_vs90\\bin\\Rele" ascii
 		

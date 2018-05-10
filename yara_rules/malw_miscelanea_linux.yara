@@ -8,11 +8,13 @@ import "pe"
 
 rule LinuxAESDDoS
 {
-    meta:
-	Author = "@benkow_"
-	Date = "2014/09/12"
-	Description = "Strings inside"
-        Reference = "http://www.kernelmode.info/forum/viewtopic.php?f=16&t=3483"
+      meta:
+    Author = "@benkow_"
+    Date = "2014/09/12"
+    Description = "Strings inside"
+    description = "LinuxAESDDoS"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $a = "3AES"
@@ -25,11 +27,13 @@ rule LinuxAESDDoS
 
 rule LinuxBillGates 
 {
-    meta:
-       Author      = "@benkow_"
-       Date        = "2014/08/11" 
-       Description = "Strings inside"
-       Reference   = "http://www.kernelmode.info/forum/viewtopic.php?f=16&t=3429" 
+      meta:
+    Author = "@benkow_"
+    Date = "2014/08/11"
+    Description = "Strings inside"
+    description = "LinuxBillGates"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $a= "12CUpdateGates"
@@ -41,11 +45,13 @@ rule LinuxBillGates
 
 rule LinuxElknot
 {
-    meta:
-	Author      = "@benkow_"
-        Date        = "2013/12/24" 
-        Description = "Strings inside"
-        Reference   = "http://www.kernelmode.info/forum/viewtopic.php?f=16&t=3099"
+      meta:
+    Author = "@benkow_"
+    Date = "2013/12/24"
+    Description = "Strings inside"
+    description = "LinuxElknot"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $a = "ZN8CUtility7DeCryptEPciPKci"
@@ -57,11 +63,13 @@ rule LinuxElknot
 
 rule LinuxMrBlack
 {
-    meta:
-	Author      = "@benkow_"
-        Date        = "2014/09/12" 
-        Description = "Strings inside"
-        Reference   = "http://www.kernelmode.info/forum/viewtopic.php?f=16&t=3483"
+      meta:
+    Author = "@benkow_"
+    Date = "2014/09/12"
+    Description = "Strings inside"
+    description = "LinuxMrBlack"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $a = "Mr.Black"
@@ -72,12 +80,13 @@ rule LinuxMrBlack
 
 rule LinuxTsunami
 {
-    meta:
-	
-		Author      = "@benkow_"
-		Date        = "2014/09/12" 
-		Description = "Strings inside"
-		Reference   = "http://www.kernelmode.info/forum/viewtopic.php?f=16&t=3483"
+      meta:
+    Author = "@benkow_"
+    Date = "2014/09/12"
+    Description = "Strings inside"
+    description = "LinuxTsunami"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $a = "PRIVMSG %s :[STD]Hitting %s"
@@ -89,9 +98,12 @@ rule LinuxTsunami
 
 rule rootkit
 {
-	meta:
-                author="xorseed"
-                reference= "https://stuff.rop.io/"
+	  meta:
+    author = "xorseed"
+    reference = "https://stuff.rop.io/"
+    description = "rootkit"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$sys1 = "sys_write" nocase ascii wide	
 		$sys2 = "sys_getdents" nocase ascii wide
@@ -133,9 +145,12 @@ rule rootkit
 
 rule exploit
 {
-        meta:
-                author="xorseed"
-                reference= "https://stuff.rop.io/"
+          meta:
+    author = "xorseed"
+    reference = "https://stuff.rop.io/"
+    description = "rootkit"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$xpl1 = "set_fs_root" nocase ascii wide
 		$xpl2 = "set_fs_pwd" nocase ascii wide
@@ -157,9 +172,12 @@ rule exploit
 
 rule ldpreload
 {
-        meta:
-                author="xorseed"
-                reference= "https://stuff.rop.io/"
+          meta:
+    author = "xorseed"
+    reference = "https://stuff.rop.io/"
+    description = "rootkit"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$a = "dlopen" nocase ascii wide
 		$b = "dlsym" nocase ascii wide

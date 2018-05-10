@@ -107,14 +107,17 @@ private rule PotaoSecondStage
 rule Potao
 {
 
-    meta:
-        Author      = "Anton Cherepanov"
-        Date        = "2015/07/29"
-        Description = "Operation Potao"
-        Reference   = "http://www.welivesecurity.com/wp-content/uploads/2015/07/Operation-Potao-Express_final_v2.pdf"
-        Source = "https://github.com/eset/malware-ioc/"
-        Contact = "threatintel@eset.com"
-        License = "BSD 2-Clause"
+      meta:
+    Author = "Anton Cherepanov"
+    Date = "2015/07/29"
+    Description = "Operation Potao"
+    Reference = "http://www.welivesecurity.com/wp-content/uploads/2015/07/Operation-Potao-Express_final_v2.pdf"
+    Source = "https://github.com/eset/malware-ioc/"
+    Contact = "threatintel@eset.com"
+    License = "BSD 2-Clause"
+    description = "Potao"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     condition:
         PotaoDecoy or PotaoDll or PotaoUSB or PotaoSecondStage

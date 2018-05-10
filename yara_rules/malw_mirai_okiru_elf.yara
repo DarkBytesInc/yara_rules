@@ -25,10 +25,12 @@ private rule is__Mirai_gen7 {
 }
 
 rule Mirai_Okiru {
-	meta:
-		description = "Detects Mirai Okiru MALW"
-		reference = "https://www.reddit.com/r/LinuxMalware/comments/7p00i3/quick_notes_for_okiru_satori_variant_of_mirai/"
-		date = "2018-01-05"
+	  meta:
+    description = "Detects Mirai Okiru MALW"
+    reference = "https://www.reddit.com/r/LinuxMalware/comments/7p00i3/quick_notes_for_okiru_satori_variant_of_mirai/"
+    date = "2018-01-05"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$hexsts01 = { 68 7f 27 70 60 62 73 3c 27 28 65 6e 69 28 65 72 }

@@ -53,9 +53,11 @@ private rule is__elf {
 
 rule Linux_Httpsd_malware_ARM {
   
-	meta:
-		description = "Detects Linux/Httpsd ARMv5"
-		date = "2017-12-31"
+	  meta:
+    description = "Detects Linux/Httpsd ARMv5"
+    date = "2017-12-31"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$hexsts01 = { f0 4f 2d e9 1e db 4d e2 ec d0 4d e2 01 40 a0 e1 } // main
@@ -71,9 +73,11 @@ rule Linux_Httpsd_malware_ARM {
 
 rule Linux_Httpsd_malware_i686 {
 
-	meta:
-		description = "Detects ELF Linux/Httpsd i686"
-		date = "2018-01-02"
+	  meta:
+    description = "Detects ELF Linux/Httpsd i686"
+    date = "2018-01-02"
+    severity = "7"
+    type = "Malware"
 
 	
 	strings:

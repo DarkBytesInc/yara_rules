@@ -2,9 +2,12 @@ import "pe"
 
 rule SierraJuliettMikeOne
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    description = "SierraJuliettMikeOne"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 		$commKey = { 10 20 30 40 50 60 70 80 90 11 12 13 1A FF EE 48 }

@@ -7,10 +7,12 @@ import "pe"
 
 rule RooterCode : Rooter Family 
 {
-    meta:
-        description = "Rooter code features"
-        author = "Seth Hardy"
-        last_modified = "2014-07-10"
+      meta:
+    description = "Rooter code features"
+    author = "Seth Hardy"
+    last_modified = "2014-07-10"
+    severity = "7"
+    type = "Malware"
     
     strings:
         // xor 0x30 decryption
@@ -22,10 +24,12 @@ rule RooterCode : Rooter Family
 
 rule RooterStrings : Rooter Family
 {
-    meta:
-        description = "Rooter Identifying Strings"
-        author = "Seth Hardy"
-        last_modified = "2014-07-10"
+      meta:
+    description = "Rooter Identifying Strings"
+    author = "Seth Hardy"
+    last_modified = "2014-07-10"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $group1 = "seed\x00"
@@ -41,10 +45,12 @@ rule RooterStrings : Rooter Family
 
 rule Rooter : Family
 {
-    meta:
-        description = "Rooter"
-        author = "Seth Hardy"
-        last_modified = "2014-07-10"
+      meta:
+    description = "Rooter"
+    author = "Seth Hardy"
+    last_modified = "2014-07-10"
+    severity = "7"
+    type = "Malware"
         
     condition:
         RooterCode or RooterStrings
@@ -52,10 +58,12 @@ rule Rooter : Family
 
 rule RookieStrings : Rookie Family
 {
-    meta:
-        description = "Rookie Identifying Strings"
-        author = "Seth Hardy"
-        last_modified = "2014-06-25"
+      meta:
+    description = "Rookie Identifying Strings"
+    author = "Seth Hardy"
+    last_modified = "2014-06-25"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $ = "RookIE/1.0"
@@ -66,10 +74,12 @@ rule RookieStrings : Rookie Family
 
 rule RookieCode : Rookie Family 
 {
-    meta:
-        description = "Rookie code features"
-        author = "Seth Hardy"
-        last_modified = "2014-06-25"
+      meta:
+    description = "Rookie code features"
+    author = "Seth Hardy"
+    last_modified = "2014-06-25"
+    severity = "7"
+    type = "Malware"
         
     strings:
         // hidden AutoConfigURL
@@ -85,10 +95,12 @@ rule RookieCode : Rookie Family
 
 rule Rookie : Family
 {
-    meta:
-        description = "Rookie"
-        author = "Seth Hardy"
-        last_modified = "2014-06-25"
+      meta:
+    description = "Rookie"
+    author = "Seth Hardy"
+    last_modified = "2014-06-25"
+    severity = "7"
+    type = "Malware"
         
     condition:
         RookieCode or RookieStrings

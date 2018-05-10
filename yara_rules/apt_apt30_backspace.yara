@@ -8,13 +8,15 @@
 */
 
 rule APT30_Generic_H {
-	meta:
-		description = "FireEye APT30 Report Sample - file db3e5c2f2ce07c2d3fa38d6fc1ceb854"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash1 = "2a4c8752f3e7fde0139421b8d5713b29c720685d"
-		hash2 = "4350e906d590dca5fcc90ed3215467524e0a4e3d"
+	  meta:
+    description = "FireEye APT30 Report Sample - file db3e5c2f2ce07c2d3fa38d6fc1ceb854"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash1 = "2a4c8752f3e7fde0139421b8d5713b29c720685d"
+    hash2 = "4350e906d590dca5fcc90ed3215467524e0a4e3d"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "\\Temp1020.txt" fullword ascii
 		$s1 = "Xmd.Txe" fullword ascii
@@ -24,12 +26,14 @@ rule APT30_Generic_H {
 }
 
 rule APT30_Sample_2 {
-	meta:
-		description = "FireEye APT30 Report Sample - file c4dec6d69d8035d481e4f2c86f580e81"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "0359ffbef6a752ee1a54447b26e272f4a5a35167"
+	  meta:
+    description = "FireEye APT30 Report Sample - file c4dec6d69d8035d481e4f2c86f580e81"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "0359ffbef6a752ee1a54447b26e272f4a5a35167"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "ForZRLnkWordDlg.EXE" fullword wide
 		$s1 = "ForZRLnkWordDlg Microsoft " fullword wide
@@ -41,12 +45,14 @@ rule APT30_Sample_2 {
 }
 
 rule APT30_Sample_3 {
-	meta:
-		description = "FireEye APT30 Report Sample - file 59e055cee87d8faf6f701293e5830b5a"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "d0320144e65c9af0052f8dee0419e8deed91b61b"
+	  meta:
+    description = "FireEye APT30 Report Sample - file 59e055cee87d8faf6f701293e5830b5a"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "d0320144e65c9af0052f8dee0419e8deed91b61b"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s5 = "Software\\Mic" ascii
 		$s6 = "HHOSTR" ascii
@@ -58,18 +64,20 @@ rule APT30_Sample_3 {
 }
 
 rule APT30_Generic_C {
-	meta:
-		description = "FireEye APT30 Report Sample - file 0c4fcef3b583d0ffffc2b14b9297d3a4"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash1 = "8667f635fe089c5e2c666b3fe22eaf3ff8590a69"
-		hash2 = "0c4fcef3b583d0ffffc2b14b9297d3a4"
-		hash3 = "37aee58655f5859e60ece6b249107b87"
-		hash4 = "4154548e1f8e9e7eb39d48a4cd75bcd1"
-		hash5 = "a2e0203e665976a13cdffb4416917250"
-		hash6 = "b4ae0004094b37a40978ef06f311a75e"
-		hash7 = "e39756bc99ee1b05e5ee92a1cdd5faf4"
+	  meta:
+    description = "FireEye APT30 Report Sample - file 0c4fcef3b583d0ffffc2b14b9297d3a4"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash1 = "8667f635fe089c5e2c666b3fe22eaf3ff8590a69"
+    hash2 = "0c4fcef3b583d0ffffc2b14b9297d3a4"
+    hash3 = "37aee58655f5859e60ece6b249107b87"
+    hash4 = "4154548e1f8e9e7eb39d48a4cd75bcd1"
+    hash5 = "a2e0203e665976a13cdffb4416917250"
+    hash6 = "b4ae0004094b37a40978ef06f311a75e"
+    hash7 = "e39756bc99ee1b05e5ee92a1cdd5faf4"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "MYUSER32.dll" fullword ascii
 		$s1 = "MYADVAPI32.dll" fullword ascii
@@ -80,12 +88,14 @@ rule APT30_Generic_C {
 }
 
 rule APT30_Sample_4 {
-	meta:
-		description = "FireEye APT30 Report Sample - file 6ba315275561d99b1eb8fc614ff0b2b3"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "75367d8b506031df5923c2d8d7f1b9f643a123cd"
+	  meta:
+    description = "FireEye APT30 Report Sample - file 6ba315275561d99b1eb8fc614ff0b2b3"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "75367d8b506031df5923c2d8d7f1b9f643a123cd"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "GetStartupIn" ascii
 		$s1 = "enMutex" ascii
@@ -98,12 +108,14 @@ rule APT30_Sample_4 {
 }
 
 rule APT30_Sample_5 {
-	meta:
-		description = "FireEye APT30 Report Sample - file ebf42e8b532e2f3b19046b028b5dfb23"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "1a2dd2a0555dc746333e7c956c58f7c4cdbabd4b"
+	  meta:
+    description = "FireEye APT30 Report Sample - file ebf42e8b532e2f3b19046b028b5dfb23"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "1a2dd2a0555dc746333e7c956c58f7c4cdbabd4b"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "Version 4.7.3001" fullword wide
 		$s1 = "Copyright (c) Microsoft Corporation 2004" fullword wide
@@ -115,12 +127,14 @@ rule APT30_Sample_5 {
 }
 
 rule APT30_Sample_6 {
-	meta:
-		description = "FireEye APT30 Report Sample - file ee1b23c97f809151805792f8778ead74"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "00e69b059ad6b51b76bc476a115325449d10b4c0"
+	  meta:
+    description = "FireEye APT30 Report Sample - file ee1b23c97f809151805792f8778ead74"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "00e69b059ad6b51b76bc476a115325449d10b4c0"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "GreateProcessA" fullword ascii
 		$s1 = "Ternel32.dll" fullword ascii
@@ -129,12 +143,14 @@ rule APT30_Sample_6 {
 }
 
 rule APT30_Sample_7 {
-	meta:
-		description = "FireEye APT30 Report Sample - file 74b87086887e0c67ffb035069b195ac7"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "868d1f4c106a08bd2e5af4f23139f0e0cd798fba"
+	  meta:
+    description = "FireEye APT30 Report Sample - file 74b87086887e0c67ffb035069b195ac7"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "868d1f4c106a08bd2e5af4f23139f0e0cd798fba"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "datain" fullword ascii
 		$s3 = "C:\\Prog" ascii
@@ -147,16 +163,18 @@ rule APT30_Sample_7 {
 }
 
 rule APT30_Generic_E {
-	meta:
-		description = "FireEye APT30 Report Sample - file 8ff473bedbcc77df2c49a91167b1abeb"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash1 = "1dbb584e19499e26398fb0a7aa2a01b7"
-		hash2 = "572c9cd4388699347c0b2edb7c6f5e25"
-		hash3 = "8ff473bedbcc77df2c49a91167b1abeb"
-		hash4 = "a813eba27b2166620bd75029cc1f04b0"
-		hash5 = "b5546842e08950bc17a438d785b5a019"
+	  meta:
+    description = "FireEye APT30 Report Sample - file 8ff473bedbcc77df2c49a91167b1abeb"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash1 = "1dbb584e19499e26398fb0a7aa2a01b7"
+    hash2 = "572c9cd4388699347c0b2edb7c6f5e25"
+    hash3 = "8ff473bedbcc77df2c49a91167b1abeb"
+    hash4 = "a813eba27b2166620bd75029cc1f04b0"
+    hash5 = "b5546842e08950bc17a438d785b5a019"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "Nkfvtyvn}" ascii
 		$s6 = "----------------g_nAV=%d,hWnd:0x%X,className:%s,Title:%s,(%d,%d,%d,%d),BOOL=%d" fullword ascii
@@ -165,12 +183,14 @@ rule APT30_Generic_E {
 }
 
 rule APT30_Sample_8 {
-	meta:
-		description = "FireEye APT30 Report Sample - file 44b98f22155f420af4528d17bb4a5ec8"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "9531e21652143b8b129ab8c023dc05fef2a17cc3"
+	  meta:
+    description = "FireEye APT30 Report Sample - file 44b98f22155f420af4528d17bb4a5ec8"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "9531e21652143b8b129ab8c023dc05fef2a17cc3"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "ateProcessA" ascii
 		$s1 = "Ternel32.dllFQ" fullword ascii
@@ -181,18 +201,20 @@ rule APT30_Sample_8 {
 }
 
 rule APT30_Generic_B {
-	meta:
-		description = "FireEye APT30 Report Sample - file 29395c528693b69233c1c12bef8a64b3"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash1 = "0fcb4ffe2eb391421ec876286c9ddb6c"
-		hash2 = "29395c528693b69233c1c12bef8a64b3"
-		hash3 = "4c6b21e98ca03e0ef0910e07cef45dac"
-		hash4 = "550459b31d8dabaad1923565b7e50242"
-		hash5 = "65232a8d555d7c4f7bc0d7c5da08c593"
-		hash6 = "853a20f5fc6d16202828df132c41a061"
-		hash7 = "ed151602dea80f39173c2f7b1dd58e06"
+	  meta:
+    description = "FireEye APT30 Report Sample - file 29395c528693b69233c1c12bef8a64b3"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash1 = "0fcb4ffe2eb391421ec876286c9ddb6c"
+    hash2 = "29395c528693b69233c1c12bef8a64b3"
+    hash3 = "4c6b21e98ca03e0ef0910e07cef45dac"
+    hash4 = "550459b31d8dabaad1923565b7e50242"
+    hash5 = "65232a8d555d7c4f7bc0d7c5da08c593"
+    hash6 = "853a20f5fc6d16202828df132c41a061"
+    hash7 = "ed151602dea80f39173c2f7b1dd58e06"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s2 = "Moziea/4.0" ascii
 	condition:
@@ -200,13 +222,15 @@ rule APT30_Generic_B {
 }
 
 rule APT30_Generic_I {
-	meta:
-		description = "FireEye APT30 Report Sample - file fe211c7a081c1dac46e3935f7c614549"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash1 = "fe211c7a081c1dac46e3935f7c614549"
-		hash2 = "8c9db773d387bf9b3f2b6a532e4c937c"
+	  meta:
+    description = "FireEye APT30 Report Sample - file fe211c7a081c1dac46e3935f7c614549"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash1 = "fe211c7a081c1dac46e3935f7c614549"
+    hash2 = "8c9db773d387bf9b3f2b6a532e4c937c"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "Copyright 2012 Google Inc. All rights reserved." fullword wide
 		$s1 = "(Prxy%c-%s:%u)" fullword ascii
@@ -216,12 +240,14 @@ rule APT30_Generic_I {
 }
 
 rule APT30_Sample_9 {
-	meta:
-		description = "FireEye APT30 Report Sample - file e3ae3cbc024e39121c87d73e87bb2210"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "442bf8690401a2087a340ce4a48151c39101652f"
+	  meta:
+    description = "FireEye APT30 Report Sample - file e3ae3cbc024e39121c87d73e87bb2210"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "442bf8690401a2087a340ce4a48151c39101652f"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "\\Windo" ascii
 		$s2 = "oHHOSTR" ascii
@@ -236,12 +262,14 @@ rule APT30_Sample_9 {
 		filesize < 100KB and uint16(0) == 0x5A4D and all of them
 }
 rule APT30_Sample_10 {
-	meta:
-		description = "FireEye APT30 Report Sample - file 8c713117af4ca6bbd69292a78069e75b"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "eb518cda3c4f4e6938aaaee07f1f7db8ee91c901"
+	  meta:
+    description = "FireEye APT30 Report Sample - file 8c713117af4ca6bbd69292a78069e75b"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "eb518cda3c4f4e6938aaaee07f1f7db8ee91c901"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "Version 4.7.3001" fullword wide
 		$s1 = "Copyright (c) Microsoft Corporation 2004" fullword wide
@@ -255,12 +283,14 @@ rule APT30_Sample_10 {
 }
 
 rule APT30_Sample_11 {
-	meta:
-		description = "FireEye APT30 Report Sample - file d97aace631d6f089595f5ce177f54a39"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "59066d5d1ee3ad918111ed6fcaf8513537ff49a6"
+	  meta:
+    description = "FireEye APT30 Report Sample - file d97aace631d6f089595f5ce177f54a39"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "59066d5d1ee3ad918111ed6fcaf8513537ff49a6"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "System\\CurrentControlSet\\control\\ComputerName\\ComputerName" fullword ascii
 		$s1 = "msofscan.exe" fullword wide
@@ -282,12 +312,14 @@ rule APT30_Sample_11 {
 }
 
 rule APT30_Sample_12 {
-	meta:
-		description = "FireEye APT30 Report Sample - file c95cd106c1fecbd500f4b97566d8dc96"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "b02b5720ff0f73f01eb2ba029a58b645c987c4bc"
+	  meta:
+    description = "FireEye APT30 Report Sample - file c95cd106c1fecbd500f4b97566d8dc96"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "b02b5720ff0f73f01eb2ba029a58b645c987c4bc"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "Richic" fullword ascii
 		$s1 = "Accept: image/gif, */*" fullword ascii
@@ -297,12 +329,14 @@ rule APT30_Sample_12 {
 }
 
 rule APT30_Sample_13 {
-	meta:
-		description = "FireEye APT30 Report Sample - file 95bb314fe8fdbe4df31a6d23b0d378bc"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "a359f705a833c4a4254443b87645fd579aa94bcf"
+	  meta:
+    description = "FireEye APT30 Report Sample - file 95bb314fe8fdbe4df31a6d23b0d378bc"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "a359f705a833c4a4254443b87645fd579aa94bcf"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "msofscan.exe" fullword wide
 		$s1 = "Microsoft? is a registered trademark of Microsoft Corporation." fullword wide
@@ -315,12 +349,14 @@ rule APT30_Sample_13 {
 }
 
 rule APT30_Sample_14 {
-	meta:
-		description = "FireEye APT30 Report Sample - file 6f931c15789d234881be8ae8ccfe33f4"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "b0740175d20eab79a5d62cdbe0ee1a89212a8472"
+	  meta:
+    description = "FireEye APT30 Report Sample - file 6f931c15789d234881be8ae8ccfe33f4"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "b0740175d20eab79a5d62cdbe0ee1a89212a8472"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "AdobeReader.exe" fullword wide
 		$s1 = "yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy" fullword ascii
@@ -332,12 +368,14 @@ rule APT30_Sample_14 {
 }
 
 rule APT30_Sample_15 {
-	meta:
-		description = "FireEye APT30 Report Sample - file e26a2afaaddfb09d9ede505c6f1cc4e3"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "7a8576804a2bbe4e5d05d1718f90b6a4332df027"
+	  meta:
+    description = "FireEye APT30 Report Sample - file e26a2afaaddfb09d9ede505c6f1cc4e3"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "7a8576804a2bbe4e5d05d1718f90b6a4332df027"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "\\Windo" ascii
 		$s2 = "HHOSTR"  ascii
@@ -350,12 +388,14 @@ rule APT30_Sample_15 {
 }
 
 rule APT30_Sample_16 {
-	meta:
-		description = "FireEye APT30 Report Sample - file 37e568bed4ae057e548439dc811b4d3a"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "066d06ac08b48d3382d46bbeda6ad411b6d6130e"
+	  meta:
+    description = "FireEye APT30 Report Sample - file 37e568bed4ae057e548439dc811b4d3a"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "066d06ac08b48d3382d46bbeda6ad411b6d6130e"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "\\Temp1020.txt" fullword ascii
 		$s1 = "cmcbqyjs" fullword ascii
@@ -368,16 +408,18 @@ rule APT30_Sample_16 {
 }
 
 rule APT30_Generic_A {
-	meta:
-		description = "FireEye APT30 Report Sample - file af1c1c5d8031c4942630b6a10270d8f4"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash1 = "9f49aa1090fa478b9857e15695be4a89f8f3e594"
-		hash2 = "396116cfb51cee090822913942f6ccf81856c2fb"
-		hash3 = "fef9c3b4b35c226501f7d60816bb00331a904d5b"
-		hash4 = "7c9a13f1fdd6452fb6d62067f958bfc5fec1d24e"
-		hash5 = "5257ba027abe3a2cf397bfcae87b13ab9c1e9019"
+	  meta:
+    description = "FireEye APT30 Report Sample - file af1c1c5d8031c4942630b6a10270d8f4"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash1 = "9f49aa1090fa478b9857e15695be4a89f8f3e594"
+    hash2 = "396116cfb51cee090822913942f6ccf81856c2fb"
+    hash3 = "fef9c3b4b35c226501f7d60816bb00331a904d5b"
+    hash4 = "7c9a13f1fdd6452fb6d62067f958bfc5fec1d24e"
+    hash5 = "5257ba027abe3a2cf397bfcae87b13ab9c1e9019"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s5 = "WPVWhhiA" fullword ascii
 		$s6 = "VPWVhhiA" fullword ascii
@@ -388,12 +430,14 @@ rule APT30_Generic_A {
 }
 
 rule APT30_Sample_17 {
-	meta:
-		description = "FireEye APT30 Report Sample - file 23813c5bf6a7af322b40bd2fd94bd42e"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "c3aa52ff1d19e8fc6704777caf7c5bd120056845"
+	  meta:
+    description = "FireEye APT30 Report Sample - file 23813c5bf6a7af322b40bd2fd94bd42e"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "c3aa52ff1d19e8fc6704777caf7c5bd120056845"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "Nkfvtyvn}]ty}ztU" fullword ascii
 		$s4 = "IEXPL0RE" fullword ascii
@@ -401,12 +445,14 @@ rule APT30_Sample_17 {
 		filesize < 100KB and uint16(0) == 0x5A4D and all of them
 }
 rule APT30_Sample_18 {
-	meta:
-		description = "FireEye APT30 Report Sample - file b2138a57f723326eda5a26d2dec56851"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "355436a16d7a2eba8a284b63bb252a8bb1644751"
+	  meta:
+    description = "FireEye APT30 Report Sample - file b2138a57f723326eda5a26d2dec56851"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "355436a16d7a2eba8a284b63bb252a8bb1644751"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "w.km-nyc.com" fullword ascii
 		$s1 = "tscv.exe" fullword ascii
@@ -421,15 +467,14 @@ rule APT30_Sample_18 {
 }
 
 rule APT30_Generic_G {
-	meta:
-		description = "FireEye APT30 Report Sample - file 53f1358cbc298da96ec56e9a08851b4b"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "1612b392d6145bfb0c43f8a48d78c75f"
-		hash = "53f1358cbc298da96ec56e9a08851b4b"
-		hash = "c2acc9fc9b0f050ec2103d3ba9cb11c0"
-		hash = "f18be055fae2490221c926e2ad55ab11"
+	  meta:
+    description = "FireEye APT30 Report Sample - file 53f1358cbc298da96ec56e9a08851b4b"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "f18be055fae2490221c926e2ad55ab11"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "%s\\%s\\%s=%s" fullword ascii
 		$s1 = "Copy File %s OK!" fullword ascii
@@ -442,12 +487,14 @@ rule APT30_Generic_G {
 }
 
 rule APT30_Sample_19 {
-	meta:
-		description = "FireEye APT30 Report Sample - file 5d4f2871fd1818527ebd65b0ff930a77"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "cfa438449715b61bffa20130df8af778ef011e15"
+	  meta:
+    description = "FireEye APT30 Report Sample - file 5d4f2871fd1818527ebd65b0ff930a77"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "cfa438449715b61bffa20130df8af778ef011e15"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "C:\\Program Files\\Common Files\\System\\wab32" fullword ascii
 		$s1 = "%s,Volume:%s,Type:%s,TotalSize:%uMB,FreeSize:%uMB" fullword ascii
@@ -467,12 +514,14 @@ rule APT30_Sample_19 {
 }
 
 rule APT30_Generic_E_v2 {
-	meta:
-		description = "FireEye APT30 Report Sample - file 71f25831681c19ea17b2f2a84a41bbfb"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "eca53a9f6251ddf438508b28d8a483f91b99a3fd"
+	  meta:
+    description = "FireEye APT30 Report Sample - file 71f25831681c19ea17b2f2a84a41bbfb"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "eca53a9f6251ddf438508b28d8a483f91b99a3fd"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "Nkfvtyvn}duf_Z}{Ys" fullword ascii
 		$s1 = "Nkfvtyvn}*Zrswru1i" fullword ascii
@@ -483,12 +532,14 @@ rule APT30_Generic_E_v2 {
 }
 
 rule APT30_Sample_20 {
-	meta:
-		description = "FireEye APT30 Report Sample - file 5ae51243647b7d03a5cb20dccbc0d561"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "b1c37632e604a5d1f430c9351f87eb9e8ea911c0"
+	  meta:
+    description = "FireEye APT30 Report Sample - file 5ae51243647b7d03a5cb20dccbc0d561"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "b1c37632e604a5d1f430c9351f87eb9e8ea911c0"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "dizhi.gif" fullword ascii
 		$s2 = "Mozilla/u" ascii
@@ -503,12 +554,14 @@ rule APT30_Sample_20 {
 }
 
 rule APT30_Sample_21 {
-	meta:
-		description = "FireEye APT30 Report Sample - file 78c4fcee5b7fdbabf3b9941225d95166"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "d315daa61126616a79a8582145777d8a1565c615"
+	  meta:
+    description = "FireEye APT30 Report Sample - file 78c4fcee5b7fdbabf3b9941225d95166"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "d315daa61126616a79a8582145777d8a1565c615"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "Service.dll" fullword ascii
 		$s1 = "(%s:%s %s)" fullword ascii
@@ -519,12 +572,14 @@ rule APT30_Sample_21 {
 }
 
 rule APT30_Sample_22 {
-	meta:
-		description = "FireEye APT30 Report Sample - file fad06d7b4450c4631302264486611ec3"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "0d17a58c24753e5f8fd5276f62c8c7394d8e1481"
+	  meta:
+    description = "FireEye APT30 Report Sample - file fad06d7b4450c4631302264486611ec3"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "0d17a58c24753e5f8fd5276f62c8c7394d8e1481"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "(\\TEMP" fullword ascii
 		$s2 = "Windows\\Cur" fullword ascii
@@ -537,15 +592,17 @@ rule APT30_Sample_22 {
 }
 
 rule APT30_Generic_F {
-	meta:
-		description = "FireEye APT30 Report Sample - file 4c10a1efed25b828e4785d9526507fbc"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash1 = "09010917cd00dc8ddd21aeb066877aa2"
-		hash2 = "4c10a1efed25b828e4785d9526507fbc"
-		hash3 = "b7b282c9e3eca888cbdb5a856e07e8bd"
-		hash4 = "df1799845b51300b03072c6569ab96d5"
+	  meta:
+    description = "FireEye APT30 Report Sample - file 4c10a1efed25b828e4785d9526507fbc"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash1 = "09010917cd00dc8ddd21aeb066877aa2"
+    hash2 = "4c10a1efed25b828e4785d9526507fbc"
+    hash3 = "b7b282c9e3eca888cbdb5a856e07e8bd"
+    hash4 = "df1799845b51300b03072c6569ab96d5"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "\\~zlzl.exe" fullword ascii
 		$s2 = "\\Internet Exp1orer" fullword ascii
@@ -555,12 +612,14 @@ rule APT30_Generic_F {
 }
 
 rule APT30_Sample_23 {
-	meta:
-		description = "FireEye APT30 Report Sample - file a5ca2c5b4d8c0c1bc93570ed13dcab1a"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "9865e24aadb4480bd3c182e50e0e53316546fc01"
+	  meta:
+    description = "FireEye APT30 Report Sample - file a5ca2c5b4d8c0c1bc93570ed13dcab1a"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "9865e24aadb4480bd3c182e50e0e53316546fc01"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "hostid" ascii
 		$s1 = "\\Window" ascii
@@ -575,12 +634,14 @@ rule APT30_Sample_23 {
 }
 
 rule APT30_Sample_24 {
-	meta:
-		description = "FireEye APT30 Report Sample - file 062fe1336459a851bd0ea271bb2afe35"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "572caa09f2b600daa941c60db1fc410bef8d1771"
+	  meta:
+    description = "FireEye APT30 Report Sample - file 062fe1336459a851bd0ea271bb2afe35"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "572caa09f2b600daa941c60db1fc410bef8d1771"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "dizhi.gif" fullword ascii
 		$s3 = "Mozilla/4.0" fullword ascii
@@ -594,12 +655,14 @@ rule APT30_Sample_24 {
 }
 
 rule APT30_Sample_25 {
-	meta:
-		description = "FireEye APT30 Report Sample - file c4c068200ad8033a0f0cf28507b51842"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "44a21c8b3147fabc668fee968b62783aa9d90351"
+	  meta:
+    description = "FireEye APT30 Report Sample - file c4c068200ad8033a0f0cf28507b51842"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "44a21c8b3147fabc668fee968b62783aa9d90351"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "C:\\WINDOWS" fullword ascii
 		$s2 = "aragua" fullword ascii
@@ -613,12 +676,14 @@ rule APT30_Sample_25 {
 }
 
 rule APT30_Sample_26 {
-	meta:
-		description = "FireEye APT30 Report Sample - file 428fc53c84e921ac518e54a5d055f54a"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "e26588113417bf68cb0c479638c9cd99a48e846d"
+	  meta:
+    description = "FireEye APT30 Report Sample - file 428fc53c84e921ac518e54a5d055f54a"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "e26588113417bf68cb0c479638c9cd99a48e846d"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "forcegue" fullword ascii
 		$s3 = "Windows\\Cur" fullword ascii
@@ -632,17 +697,19 @@ rule APT30_Sample_26 {
 }
 
 rule APT30_Generic_D {
-	meta:
-		description = "FireEye APT30 Report Sample - file 597805832d45d522c4882f21db800ecf"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash1 = "35dfb55f419f476a54241f46e624a1a4"
-		hash2 = "4fffcbdd4804f6952e0daf2d67507946"
-		hash3 = "597805832d45d522c4882f21db800ecf"
-		hash4 = "6bd422d56e85024e67cc12207e330984"
-		hash5 = "82e13f3031130bd9d567c46a9c71ef2b"
-		hash6 = "b79d87ff6de654130da95c73f66c15fa"
+	  meta:
+    description = "FireEye APT30 Report Sample - file 597805832d45d522c4882f21db800ecf"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash1 = "35dfb55f419f476a54241f46e624a1a4"
+    hash2 = "4fffcbdd4804f6952e0daf2d67507946"
+    hash3 = "597805832d45d522c4882f21db800ecf"
+    hash4 = "6bd422d56e85024e67cc12207e330984"
+    hash5 = "82e13f3031130bd9d567c46a9c71ef2b"
+    hash6 = "b79d87ff6de654130da95c73f66c15fa"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "Windows Security Service Feedback" fullword wide
 		$s1 = "wssfmgr.exe" fullword wide
@@ -655,12 +722,14 @@ rule APT30_Generic_D {
 }
 
 rule APT30_Sample_27 {
-	meta:
-		description = "FireEye APT30 Report Sample - file d38e02eac7e3b299b46ff2607dd0f288"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "959573261ca1d7e5ddcd19447475b2139ca24fe1"
+	  meta:
+    description = "FireEye APT30 Report Sample - file d38e02eac7e3b299b46ff2607dd0f288"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "959573261ca1d7e5ddcd19447475b2139ca24fe1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "Mozilla/4.0" fullword ascii
 		$s1 = "dizhi.gif" fullword ascii
@@ -674,13 +743,15 @@ rule APT30_Sample_27 {
 }
 
 rule APT30_Sample_28 {
-	meta:
-		description = "FireEye APT30 Report Sample - file e62a63307deead5c9fcca6b9a2d51fb0"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash1 = "e62a63307deead5c9fcca6b9a2d51fb0"
-		hash2 = "5b590798da581c894d8a87964763aa8b"
+	  meta:
+    description = "FireEye APT30 Report Sample - file e62a63307deead5c9fcca6b9a2d51fb0"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash1 = "e62a63307deead5c9fcca6b9a2d51fb0"
+    hash2 = "5b590798da581c894d8a87964763aa8b"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "www.flyeagles.com" fullword ascii
 		$s1 = "iexplore.exe" fullword ascii
@@ -702,12 +773,14 @@ rule APT30_Sample_28 {
 }
 
 rule APT30_Sample_29 {
-	meta:
-		description = "FireEye APT30 Report Sample - file 1b81b80ff0edf57da2440456d516cc90"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "44492c53715d7c79895904543843a321491cb23a"
+	  meta:
+    description = "FireEye APT30 Report Sample - file 1b81b80ff0edf57da2440456d516cc90"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "44492c53715d7c79895904543843a321491cb23a"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "LSSAS.exe" fullword ascii
 		$s1 = "Software\\Microsoft\\FlashDiskInf" fullword ascii
@@ -722,12 +795,14 @@ rule APT30_Sample_29 {
 }
 
 rule APT30_Sample_30 {
-	meta:
-		description = "FireEye APT30 Report Sample - file bf8616bbed6d804a3dea09b230c2ab0c"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "3b684fa40b4f096e99fbf535962c7da5cf0b4528"
+	  meta:
+    description = "FireEye APT30 Report Sample - file bf8616bbed6d804a3dea09b230c2ab0c"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "3b684fa40b4f096e99fbf535962c7da5cf0b4528"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "5.1.2600.2180 (xpsp_sp2_rtm.040803-2158)" fullword wide
 		$s3 = "RnhwtxtkyLRRMf{jJ}ny" fullword ascii
@@ -739,12 +814,14 @@ rule APT30_Sample_30 {
 }
 
 rule APT30_Sample_31 {
-	meta:
-		description = "FireEye APT30 Report Sample - file d8e68db503f4155ed1aeba95d1f5e3e4"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "8b4271167655787be1988574446125eae5043aca"
+	  meta:
+    description = "FireEye APT30 Report Sample - file d8e68db503f4155ed1aeba95d1f5e3e4"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "8b4271167655787be1988574446125eae5043aca"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "\\ZJRsv.tem" fullword ascii
 		$s1 = "forceguest" fullword ascii
@@ -756,17 +833,19 @@ rule APT30_Sample_31 {
 }
 
 rule APT30_Generic_J {
-	meta:
-		description = "FireEye APT30 Report Sample - file baff5262ae01a9217b10fcd5dad9d1d5"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash1 = "49aca228674651cba776be727bdb7e60"
-		hash2 = "5c7a6b3d1b85fad17333e02608844703"
-		hash3 = "649fa64127fef1305ba141dd58fb83a5"
-		hash4 = "9982fd829c0048c8f89620691316763a"
-		hash5 = "baff5262ae01a9217b10fcd5dad9d1d5"
-		hash6 = "9982fd829c0048c8f89620691316763a"
+	  meta:
+    description = "FireEye APT30 Report Sample - file baff5262ae01a9217b10fcd5dad9d1d5"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash1 = "49aca228674651cba776be727bdb7e60"
+    hash2 = "5c7a6b3d1b85fad17333e02608844703"
+    hash3 = "649fa64127fef1305ba141dd58fb83a5"
+    hash4 = "9982fd829c0048c8f89620691316763a"
+    hash5 = "baff5262ae01a9217b10fcd5dad9d1d5"
+    hash6 = "9982fd829c0048c8f89620691316763a"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "Launcher.EXE" fullword wide
 		$s1 = "Symantec Security Technologies" fullword wide
@@ -787,12 +866,14 @@ rule APT30_Generic_J {
 }
 
 rule APT30_Microfost {
-	meta:
-		description = "FireEye APT30 Report Sample - file 310a4a62ba3765cbf8e8bbb9f324c503"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "57169cb4b8ef7a0d7ebd7aa039d1a1efd6eb639e"
+	  meta:
+    description = "FireEye APT30 Report Sample - file 310a4a62ba3765cbf8e8bbb9f324c503"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "57169cb4b8ef7a0d7ebd7aa039d1a1efd6eb639e"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "Copyright (c) 2007 Microfost All Rights Reserved" fullword wide
 		$s2 = "Microfost" fullword wide
@@ -801,12 +882,14 @@ rule APT30_Microfost {
 }
 
 rule APT30_Generic_K {
-	meta:
-		description = "FireEye APT30 Report Sample - file b5a343d11e1f7340de99118ce9fc1bbb"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "142bc01ad412799a7f9ffed994069fecbd5a2f93"
+	  meta:
+    description = "FireEye APT30 Report Sample - file b5a343d11e1f7340de99118ce9fc1bbb"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "142bc01ad412799a7f9ffed994069fecbd5a2f93"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$x1 = "Maybe a Encrypted Flash" fullword ascii
 
@@ -830,12 +913,14 @@ rule APT30_Generic_K {
 }
 
 rule APT30_Sample_33 {
-	meta:
-		description = "FireEye APT30 Report Sample - file 5eaf3deaaf2efac92c73ada82a651afe"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "72c568ee2dd75406858c0294ccfcf86ad0e390e4"
+	  meta:
+    description = "FireEye APT30 Report Sample - file 5eaf3deaaf2efac92c73ada82a651afe"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "72c568ee2dd75406858c0294ccfcf86ad0e390e4"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "Version 4.7.3001" fullword wide
 		$s1 = "msmsgr.exe" fullword wide
@@ -850,12 +935,14 @@ rule APT30_Sample_33 {
 }
 
 rule APT30_Sample_34 {
-	meta:
-		description = "FireEye APT30 Report Sample - file a9e8e402a7ee459e4896d0ba83543684"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "216868edbcdd067bd2a9cce4f132d33ba9c0d818"
+	  meta:
+    description = "FireEye APT30 Report Sample - file a9e8e402a7ee459e4896d0ba83543684"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "216868edbcdd067bd2a9cce4f132d33ba9c0d818"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "dizhi.gif" ascii
 		$s1 = "eagles.vip.nse" ascii
@@ -869,12 +956,14 @@ rule APT30_Sample_34 {
 }
 
 rule APT30_Sample_35 {
-	meta:
-		description = "FireEye APT30 Report Sample - file 414854a9b40f7757ed7bfc6a1b01250f"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "df48a7cd6c4a8f78f5847bad3776abc0458499a6"
+	  meta:
+    description = "FireEye APT30 Report Sample - file 414854a9b40f7757ed7bfc6a1b01250f"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "df48a7cd6c4a8f78f5847bad3776abc0458499a6"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "WhBoyIEXPLORE.EXE.exe" fullword ascii
 		$s5 = "Startup>A" fullword ascii
@@ -884,12 +973,14 @@ rule APT30_Sample_35 {
 }
 
 rule APT30_Sample_1 {
-	meta:
-		description = "FireEye APT30 Report Sample - file 4c6b21e98ca03e0ef0910e07cef45dac"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		hash = "8cea83299af8f5ec6c278247e649c9d91d4cf3bc"
+	  meta:
+    description = "FireEye APT30 Report Sample - file 4c6b21e98ca03e0ef0910e07cef45dac"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    hash = "8cea83299af8f5ec6c278247e649c9d91d4cf3bc"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "#hostid" fullword ascii
 		$s1 = "\\Windows\\C" ascii
@@ -901,19 +992,21 @@ rule APT30_Sample_1 {
 }
 
 rule APT30_Generic_1 {
-	meta:
-		description = "FireEye APT30 Report Sample"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		super_rule = 1
-		hash0 = "aaa5c64200ff0818c56ebe4c88bcc1143216c536"
-		hash1 = "cb4263cab467845dae9fae427e3bbeb31c6a14c2"
-		hash2 = "b69b95db8a55a050d6d6c0cba13d73975b8219ca"
-		hash3 = "5c29e21bbe8873778f9363258f5e570dddcadeb9"
-		hash4 = "d5cb07d178963f2dea2c754d261185ecc94e09d6"
-		hash5 = "626dcdd7357e1f8329e9137d0f9883f57ec5c163"
-		hash6 = "843997b36ed80d3aeea3c822cb5dc446b6bfa7b9"
+	  meta:
+    description = "FireEye APT30 Report Sample"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    super_rule = 1
+    hash0 = "aaa5c64200ff0818c56ebe4c88bcc1143216c536"
+    hash1 = "cb4263cab467845dae9fae427e3bbeb31c6a14c2"
+    hash2 = "b69b95db8a55a050d6d6c0cba13d73975b8219ca"
+    hash3 = "5c29e21bbe8873778f9363258f5e570dddcadeb9"
+    hash4 = "d5cb07d178963f2dea2c754d261185ecc94e09d6"
+    hash5 = "626dcdd7357e1f8329e9137d0f9883f57ec5c163"
+    hash6 = "843997b36ed80d3aeea3c822cb5dc446b6bfa7b9"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "%s\\%s.txt" fullword
 		$s1 = "\\ldsysinfo.txt" fullword
@@ -933,42 +1026,44 @@ rule APT30_Generic_1 {
 		filesize < 250KB and uint16(0) == 0x5A4D and all of them
 }
 rule APT30_Generic_2 {
-	meta:
-		description = "FireEye APT30 Report Sample - from many files"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		super_rule = 1
-		hash0 = "aba8b9fa213e5e2f1f0404d13fecc20ea8651b57"
-		hash1 = "7f11f5c9475240e5dd2eea7726c9229972cffc1f"
-		hash2 = "94d3f91d1e50ecea729617729013c3d143bf2c3e"
-		hash3 = "7e516ec04f28c76d67b8111ddfe58bbd628362cc"
-		hash4 = "6b27bc0b0460b0a25b45d897ed4f399106c284d9"
-		hash5 = "6df5b4b3da0964153bad22fb1f69483ae8316655"
-		hash6 = "b68bce61dfd8763c3003480ba4066b3cb1ef126e"
-		hash7 = "cc124682246d098740cfa7d20aede850d49b6597"
-		hash8 = "1ef415bca310575944934fc97b0aa720943ba512"
-		hash9 = "0559ab9356dcc869da18b2c96f48b76478c472b3"
-		hash10 = "f15272042a4f9324ad5de884bd50f4072f4bdde3"
-		hash11 = "1d93d5f5463cdf85e3c22c56ed1381957f4efaac"
-		hash12 = "b6f1fb0f8a2fb92a3c60e154f24cfbca1984529f"
-		hash13 = "9967a99a1b627ddb6899919e32a0f544ea498b48"
-		hash14 = "95a3c812ca0ad104f045b26c483495129bcf37ca"
-		hash15 = "bde9a72b2113d18b4fa537cc080d8d8ba1a231e8"
-		hash16 = "ce1f53e06feab1e92f07ed544c288bf39c6fce19"
-		hash17 = "72dae031d885dbf492c0232dd1c792ab4785a2dc"
-		hash18 = "a2ccba46e40d0fb0dd3e1dba160ecbb5440862ec"
-		hash19 = "c8007b59b2d495029cdf5b7b8fc8a5a1f7aa7611"
-		hash20 = "9c6f470e2f326a055065b2501077c89f748db763"
-		hash21 = "af3e232559ef69bdf2ee9cd96434dcec58afbe5a"
-		hash22 = "e72e67ba32946c2702b7662c510cc1242cffe802"
-		hash23 = "8fc0b1618b61dce5f18eba01809301cb7f021b35"
-		hash24 = "6a8159da055dac928ba7c98ea1cdbe6dfb4a3c22"
-		hash25 = "47463412daf0b0a410d3ccbb7ea294db5ff42311"
-		hash26 = "e6efa0ccfddda7d7d689efeb28894c04ebc72be2"
-		hash27 = "43a3fc9a4fee43252e9a570492e4efe33043e710"
-		hash28 = "7406ebef11ca9f97c101b37f417901c70ab514b1"
-		hash29 = "53ed9b22084f89b4b595938e320f20efe65e0409"
+	  meta:
+    description = "FireEye APT30 Report Sample - from many files"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    super_rule = 1
+    hash0 = "aba8b9fa213e5e2f1f0404d13fecc20ea8651b57"
+    hash1 = "7f11f5c9475240e5dd2eea7726c9229972cffc1f"
+    hash2 = "94d3f91d1e50ecea729617729013c3d143bf2c3e"
+    hash3 = "7e516ec04f28c76d67b8111ddfe58bbd628362cc"
+    hash4 = "6b27bc0b0460b0a25b45d897ed4f399106c284d9"
+    hash5 = "6df5b4b3da0964153bad22fb1f69483ae8316655"
+    hash6 = "b68bce61dfd8763c3003480ba4066b3cb1ef126e"
+    hash7 = "cc124682246d098740cfa7d20aede850d49b6597"
+    hash8 = "1ef415bca310575944934fc97b0aa720943ba512"
+    hash9 = "0559ab9356dcc869da18b2c96f48b76478c472b3"
+    hash10 = "f15272042a4f9324ad5de884bd50f4072f4bdde3"
+    hash11 = "1d93d5f5463cdf85e3c22c56ed1381957f4efaac"
+    hash12 = "b6f1fb0f8a2fb92a3c60e154f24cfbca1984529f"
+    hash13 = "9967a99a1b627ddb6899919e32a0f544ea498b48"
+    hash14 = "95a3c812ca0ad104f045b26c483495129bcf37ca"
+    hash15 = "bde9a72b2113d18b4fa537cc080d8d8ba1a231e8"
+    hash16 = "ce1f53e06feab1e92f07ed544c288bf39c6fce19"
+    hash17 = "72dae031d885dbf492c0232dd1c792ab4785a2dc"
+    hash18 = "a2ccba46e40d0fb0dd3e1dba160ecbb5440862ec"
+    hash19 = "c8007b59b2d495029cdf5b7b8fc8a5a1f7aa7611"
+    hash20 = "9c6f470e2f326a055065b2501077c89f748db763"
+    hash21 = "af3e232559ef69bdf2ee9cd96434dcec58afbe5a"
+    hash22 = "e72e67ba32946c2702b7662c510cc1242cffe802"
+    hash23 = "8fc0b1618b61dce5f18eba01809301cb7f021b35"
+    hash24 = "6a8159da055dac928ba7c98ea1cdbe6dfb4a3c22"
+    hash25 = "47463412daf0b0a410d3ccbb7ea294db5ff42311"
+    hash26 = "e6efa0ccfddda7d7d689efeb28894c04ebc72be2"
+    hash27 = "43a3fc9a4fee43252e9a570492e4efe33043e710"
+    hash28 = "7406ebef11ca9f97c101b37f417901c70ab514b1"
+    hash29 = "53ed9b22084f89b4b595938e320f20efe65e0409"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "%s\\%s\\KB985109.log" fullword
 		$s1 = "%s\\%s\\KB989109.log" fullword
@@ -988,15 +1083,17 @@ rule APT30_Generic_2 {
 }
 
 rule APT30_Generic_3 {
-	meta:
-		description = "FireEye APT30 Report Sample"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		super_rule = 1
-		hash0 = "b90ac3e58ed472829e2562023e6e892d2d61ac44"
-		hash1 = "342036ace2e9e6d504b0dec6399e4fa92de46c12"
-		hash2 = "5cdf397dfd9eb66ff5ff636777f6982c1254a37a"
+	  meta:
+    description = "FireEye APT30 Report Sample"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    super_rule = 1
+    hash0 = "b90ac3e58ed472829e2562023e6e892d2d61ac44"
+    hash1 = "342036ace2e9e6d504b0dec6399e4fa92de46c12"
+    hash2 = "5cdf397dfd9eb66ff5ff636777f6982c1254a37a"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "Acrobat.exe" fullword wide
 		$s14 = "********************************" fullword
@@ -1006,16 +1103,18 @@ rule APT30_Generic_3 {
 }
 
 rule APT30_Generic_4 {
-	meta:
-		description = "FireEye APT30 Report Sample"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		super_rule = 1
-		hash0 = "bb390f99bfde234bbed59f6a0d962ba874b2396c"
-		hash1 = "b47e20ac5889700438dc241f28f4e224070810d2"
-		hash2 = "a9a50673ac000a313f3ddba55d63d9773b9f4143"
-		hash3 = "ac96d7f5957aef09bd983465c497de24c6d17a92"
+	  meta:
+    description = "FireEye APT30 Report Sample"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    super_rule = 1
+    hash0 = "bb390f99bfde234bbed59f6a0d962ba874b2396c"
+    hash1 = "b47e20ac5889700438dc241f28f4e224070810d2"
+    hash2 = "a9a50673ac000a313f3ddba55d63d9773b9f4143"
+    hash3 = "ac96d7f5957aef09bd983465c497de24c6d17a92"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "del NetEagle_Scout.bat" fullword
 		$s1 = "NetEagle_Scout.bat" fullword
@@ -1036,15 +1135,17 @@ rule APT30_Generic_4 {
 }
 
 rule APT30_Generic_5 {
-	meta:
-		description = "FireEye APT30 Report Sample"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		super_rule = 1
-		hash0 = "cb4833220c508182c0ccd4e0d5a867d6c4e675f8"
-		hash1 = "dfc9a87df2d585c479ab02602133934b055d156f"
-		hash2 = "bf59d5ff7d38ec5ffb91296e002e8742baf24db5"
+	  meta:
+    description = "FireEye APT30 Report Sample"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    super_rule = 1
+    hash0 = "cb4833220c508182c0ccd4e0d5a867d6c4e675f8"
+    hash1 = "dfc9a87df2d585c479ab02602133934b055d156f"
+    hash2 = "bf59d5ff7d38ec5ffb91296e002e8742baf24db5"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "regsvr32 /s \"%ProgramFiles%\\Norton360\\Engine\\5.1.0.29\\ashelper.dll\"" fullword
 		$s1 = "name=\"ftpserver.exe\"/>" fullword
@@ -1057,15 +1158,17 @@ rule APT30_Generic_5 {
 }
 
 rule APT30_Generic_6 {
-	meta:
-		description = "FireEye APT30 Report Sample"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		super_rule = 1
-		hash0 = "b9aafb575d3d1732cb8fdca5ea226cebf86ea3c9"
-		hash1 = "2c5e347083b77c9ead9e75d41e2fabe096460bba"
-		hash2 = "5d39a567b50c74c4a921b5f65713f78023099933"
+	  meta:
+    description = "FireEye APT30 Report Sample"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    super_rule = 1
+    hash0 = "b9aafb575d3d1732cb8fdca5ea226cebf86ea3c9"
+    hash1 = "2c5e347083b77c9ead9e75d41e2fabe096460bba"
+    hash2 = "5d39a567b50c74c4a921b5f65713f78023099933"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "GetStar" fullword
 		$s1 = ".rdUaS" fullword
@@ -1078,15 +1181,17 @@ rule APT30_Generic_6 {
 }
 
 rule APT30_Generic_7 {
-	meta:
-		description = "FireEye APT30 Report Sample"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		super_rule = 1
-		hash0 = "2415f661046fdbe3eea8cd276b6f13354019b1a6"
-		hash1 = "e814914079af78d9f1b71000fee3c29d31d9b586"
-		hash2 = "0263de239ccef669c47399856d481e3361408e90"
+	  meta:
+    description = "FireEye APT30 Report Sample"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    super_rule = 1
+    hash0 = "2415f661046fdbe3eea8cd276b6f13354019b1a6"
+    hash1 = "e814914079af78d9f1b71000fee3c29d31d9b586"
+    hash2 = "0263de239ccef669c47399856d481e3361408e90"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "Xjapor_*ata" fullword
 		$s2 = "Xjapor_o*ata" fullword
@@ -1095,15 +1200,17 @@ rule APT30_Generic_7 {
 		filesize < 100KB and uint16(0) == 0x5A4D and all of them
 }
 rule APT30_Generic_8 {
-	meta:
-		description = "FireEye APT30 Report Sample"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		super_rule = 1
-		hash0 = "b47e20ac5889700438dc241f28f4e224070810d2"
-		hash1 = "a9a50673ac000a313f3ddba55d63d9773b9f4143"
-		hash2 = "ac96d7f5957aef09bd983465c497de24c6d17a92"
+	  meta:
+    description = "FireEye APT30 Report Sample"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    super_rule = 1
+    hash0 = "b47e20ac5889700438dc241f28f4e224070810d2"
+    hash1 = "a9a50673ac000a313f3ddba55d63d9773b9f4143"
+    hash2 = "ac96d7f5957aef09bd983465c497de24c6d17a92"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "Windows NT4.0" fullword
 		$s1 = "Windows NT3.51" fullword
@@ -1120,16 +1227,18 @@ rule APT30_Generic_8 {
 }
 
 rule APT30_Generic_9 {
-	meta:
-		description = "FireEye APT30 Report Sample"
-		author = "Florian Roth"
-		reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
-		date = "2015/04/13"
-		super_rule = 1
-		hash0 = "00d9949832dc3533592c2ce06a403ef19deddce9"
-		hash1 = "27a2b981d4c0bb8c3628bfe990db4619ddfdff74"
-		hash2 = "05f66492c163ec2a24c6a87c7a43028c5f632437"
-		hash3 = "263f094da3f64e72ef8dc3d02be4fb33de1fdb96"
+	  meta:
+    description = "FireEye APT30 Report Sample"
+    author = "Florian Roth"
+    reference = "https://www2.fireeye.com/rs/fireye/images/rpt-apt30.pdf"
+    date = "2015/04/13"
+    super_rule = 1
+    hash0 = "00d9949832dc3533592c2ce06a403ef19deddce9"
+    hash1 = "27a2b981d4c0bb8c3628bfe990db4619ddfdff74"
+    hash2 = "05f66492c163ec2a24c6a87c7a43028c5f632437"
+    hash3 = "263f094da3f64e72ef8dc3d02be4fb33de1fdb96"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "%s\\%s\\$NtRecDoc$" fullword
 		$s1 = "%s(%u)%s" fullword

@@ -5,9 +5,11 @@
 
 rule XOR_DDosv1 : DDoS
 {
-  meta:
+    meta:
     author = "Akamai CSIRT"
     description = "Rule to detect XOR DDos infection"
+    severity = "7"
+    type = "Malware"
   strings:
     $st0 = "BB2FA36AAA9541F0"
     $st1 = "md5="

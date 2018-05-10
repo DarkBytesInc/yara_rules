@@ -7,12 +7,14 @@ import "pe"
 
 rule skeleton_key_patcher
 {
-	meta:
-		description = "Skeleton Key Patcher from Dell SecureWorks Report http://goo.gl/aAk3lN"
-		author = "Dell SecureWorks Counter Threat Unit"
-		reference = "http://goo.gl/aAk3lN"
-		date = "2015/01/13"
-		score = 70
+	  meta:
+    description = "Skeleton Key Patcher from Dell SecureWorks Report http://goo.gl/aAk3lN"
+    author = "Dell SecureWorks Counter Threat Unit"
+    reference = "http://goo.gl/aAk3lN"
+    date = "2015/01/13"
+    score = 70
+    severity = "7"
+    type = "Malware"
 	strings:
 		$target_process = "lsass.exe" wide
 		$dll1 = "cryptdll.dll"
@@ -29,12 +31,14 @@ rule skeleton_key_patcher
 
 rule skeleton_key_injected_code
 {
-	meta:
-		description = "Skeleton Key injected Code http://goo.gl/aAk3lN"
-		author = "Dell SecureWorks Counter Threat Unit"
-		reference = "http://goo.gl/aAk3lN"
-		date = "2015/01/13"
-		score = 70
+	  meta:
+    description = "Skeleton Key injected Code http://goo.gl/aAk3lN"
+    author = "Dell SecureWorks Counter Threat Unit"
+    reference = "http://goo.gl/aAk3lN"
+    date = "2015/01/13"
+    score = 70
+    severity = "7"
+    type = "Malware"
 	strings:
 		$injected = { 33 C0 85 C9 0F 95 C0 48 8B 8C 24 40 01 00 00 48 33 CC E8 4D 02 00 00 48 81 C4 58 01 00 00 C3 }
 

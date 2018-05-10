@@ -10,12 +10,14 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule Backdoor_Redosdru_Jun17 {
-   meta:
-      description = "Detects malware Redosdru - file systemHome.exe"
-      author = "Florian Roth"
-      reference = "https://goo.gl/OOB3mH"
-      date = "2017-06-04"
-      hash1 = "4f49e17b457ef202ab0be905691ef2b2d2b0a086a7caddd1e70dd45e5ed3b309"
+     meta:
+    description = "Detects malware Redosdru - file systemHome.exe"
+    author = "Florian Roth"
+    reference = "https://goo.gl/OOB3mH"
+    date = "2017-06-04"
+    hash1 = "4f49e17b457ef202ab0be905691ef2b2d2b0a086a7caddd1e70dd45e5ed3b309"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $x1 = "%s\\%d.gho" fullword ascii
       $x2 = "%s\\nt%s.dll" fullword ascii
@@ -34,12 +36,14 @@ rule Backdoor_Redosdru_Jun17 {
 }
 
 rule Backdoor_Nitol_Jun17 {
-   meta:
-      description = "Detects malware backdoor Nitol - file wyawou.exe - Attention: this rule also matches on Upatre Downloader"
-      author = "Florian Roth"
-      reference = "https://goo.gl/OOB3mH"
-      date = "2017-06-04"
-      hash1 = "cba19d228abf31ec8afab7330df3c9da60cd4dae376552b503aea6d7feff9946"
+     meta:
+    description = "Detects malware backdoor Nitol - file wyawou.exe - Attention: this rule also matches on Upatre Downloader"
+    author = "Florian Roth"
+    reference = "https://goo.gl/OOB3mH"
+    date = "2017-06-04"
+    hash1 = "cba19d228abf31ec8afab7330df3c9da60cd4dae376552b503aea6d7feff9946"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $x1 = "User-Agent:Mozilla/4.0 (compatible; MSIE %d.00; Windows NT %d.0; MyIE 3.01)" fullword ascii
       $x2 = "User-Agent:Mozilla/4.0 (compatible; MSIE %d.0; Windows NT %d.1; SV1)" fullword ascii

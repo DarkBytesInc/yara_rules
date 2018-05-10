@@ -4,9 +4,11 @@
 */
 rule NionSpy : win32
 {
-meta:
-description = "Triggers on old and new variants of W32/NionSpy file infector"
-reference = "https://blogs.mcafee.com/mcafee-labs/taking-a-close-look-at-data-stealing-nionspy-file-infector"
+  meta:
+    description = "Triggers on old and new variants of W32/NionSpy file infector"
+    reference = "https://blogs.mcafee.com/mcafee-labs/taking-a-close-look-at-data-stealing-nionspy-file-infector"
+    severity = "7"
+    type = "Malware"
 strings:
 $variant2015_infmarker = "aCfG92KXpcSo4Y94BnUrFmnNk27EhW6CqP5EnT"
 $variant2013_infmarker = "ad6af8bd5835d19cc7fdc4c62fdf02a1"

@@ -6,9 +6,11 @@
 import "pe"
 
 rule ws_f0xy_downloader {
-  meta:
+    meta:
     description = "f0xy malware downloader"
     author = "Nick Griffin (Websense)"
+    severity = "7"
+    type = "Malware"
 
   strings:
     $mz="MZ"

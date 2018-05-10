@@ -9,11 +9,13 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule POSHSPY_Malware {
-   meta:
-      description = "Detects"
-      author = "Florian Roth"
-      reference = "https://www.fireeye.com/blog/threat-research/2017/03/dissecting_one_ofap.html"
-      date = "2017-07-15"
+     meta:
+    description = "Detects"
+    author = "Florian Roth"
+    reference = "https://www.fireeye.com/blog/threat-research/2017/03/dissecting_one_ofap.html"
+    date = "2017-07-15"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $x1 = "function sWP($cN, $pN, $aK, $aI)" fullword ascii
       $x2 = "$aeK = [byte[]] (0x69, 0x87, 0x0b, 0xf2" ascii

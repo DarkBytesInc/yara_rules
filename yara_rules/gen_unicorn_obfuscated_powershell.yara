@@ -1,11 +1,13 @@
 rule gen_unicorn_obfuscated_powershell {
-    meta:
-        description = "PowerShell payload obfuscated by Unicorn toolkit"
-        author = "John Lambert @JohnLaTwC"
-        date = "2018-04-03"
-        hash = "b93d2fe6a671a6a967f31d5b3a0a16d4f93abcaf25188a2bbdc0894087adb10d"
-        hash2 = "1afb9795cb489abce39f685a420147a2875303a07c32bf7eec398125300a460b"
-        reference = "https://github.com/trustedsec/unicorn/"
+      meta:
+    description = "PowerShell payload obfuscated by Unicorn toolkit"
+    author = "John Lambert @JohnLaTwC"
+    date = "2018-04-03"
+    hash = "b93d2fe6a671a6a967f31d5b3a0a16d4f93abcaf25188a2bbdc0894087adb10d"
+    hash2 = "1afb9795cb489abce39f685a420147a2875303a07c32bf7eec398125300a460b"
+    reference = "https://github.com/trustedsec/unicorn/"
+    severity = "7"
+    type = "Exploit Kit"
     strings:
         $h1 = "powershell"
         $sa1 = ".value.toString() 'JAB"

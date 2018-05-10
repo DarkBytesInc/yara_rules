@@ -1,12 +1,14 @@
 rule sakura_jar : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Sakura Exploit Kit Detection"
-   hash0 = "a566ba2e3f260c90e01366e8b0d724eb"
-   sample_filetype = "unknown"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Sakura Exploit Kit Detection"
+    hash0 = "a566ba2e3f260c90e01366e8b0d724eb"
+    sample_filetype = "unknown"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "Rotok.classPK"
    $string1 = "nnnolg"
@@ -31,13 +33,15 @@ condition:
 }
 rule sakura_jar2 : EK jar
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Sakura Exploit Kit Detection"
-   hash0 = "d21b4e2056e5ef9f9432302f445bcbe1"
-   sample_filetype = "unknown"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Sakura Exploit Kit Detection"
+    hash0 = "d21b4e2056e5ef9f9432302f445bcbe1"
+    sample_filetype = "unknown"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "getProperty"
    $string1 = "java/io/FileNotFoundException"

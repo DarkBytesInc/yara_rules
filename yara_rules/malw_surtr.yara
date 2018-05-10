@@ -6,10 +6,12 @@
 import "pe"
 
 rule RSharedStrings : Surtr Family {
-	meta:
-		description = "identifiers for remote and gmremote"
-		author = "Katie Kleemola"
-		last_updated = "07-21-2014"
+	  meta:
+    description = "identifiers for remote and gmremote"
+    author = "Katie Kleemola"
+    last_updated = "07-21-2014"
+    severity = "7"
+    type = "Malware"
 	
 	strings:
 		$ = "nView_DiskLoydb" wide
@@ -25,10 +27,12 @@ rule RSharedStrings : Surtr Family {
 }
 
 rule RemoteStrings : Remote Variant Surtr Family {
-	meta:
-		description = "indicators for remote.dll - surtr stage 2"
-		author = "Katie Kleemola"
-		last_updated = "07-21-2014"
+	  meta:
+    description = "indicators for remote.dll - surtr stage 2"
+    author = "Katie Kleemola"
+    last_updated = "07-21-2014"
+    severity = "7"
+    type = "Malware"
 	
 	strings:
 		$ = "\x00Remote.dll\x00"
@@ -40,10 +44,12 @@ rule RemoteStrings : Remote Variant Surtr Family {
 }
 
 rule GmRemoteStrings : GmRemote Variant Family Surtr {
-	meta:
-		description = "identifiers for gmremote: surtr stage 2"
-		author = "Katie Kleemola"
-		last_updated = "07-21-2014"
+	  meta:
+    description = "identifiers for gmremote: surtr stage 2"
+    author = "Katie Kleemola"
+    last_updated = "07-21-2014"
+    severity = "7"
+    type = "Malware"
 	
 	strings:
 		$ = "\x00x86_GmRemote.dll\x00"
@@ -63,30 +69,36 @@ rule GmRemoteStrings : GmRemote Variant Family Surtr {
 
 
 rule GmRemote : Family Surtr Variant GmRemote {
-	meta:
-		description = "identifier for gmremote"
-		author = "Katie Kleemola"
-		last_updated = "07-25-2014"
+	  meta:
+    description = "identifier for gmremote"
+    author = "Katie Kleemola"
+    last_updated = "07-25-2014"
+    severity = "7"
+    type = "Malware"
 	
 	condition:
 		RSharedStrings and GmRemoteStrings
 }
 
 rule Remote : Family Surtr Variant Remote {
-	meta:
-		description = "identifier for remote"
-		author = "Katie Kleemola"
-		last_updated = "07-25-2014"
+	  meta:
+    description = "identifier for remote"
+    author = "Katie Kleemola"
+    last_updated = "07-25-2014"
+    severity = "7"
+    type = "Malware"
 	
 	condition:
 		RSharedStrings and RemoteStrings
 }
 
 rule SurtrStrings : Surtr Family {	
-	meta: 
-		author = "Katie Kleemola"
-		description = "Strings for Surtr"
-		last_updated = "2014-07-16"
+	  meta:
+    author = "Katie Kleemola"
+    description = "Strings for Surtr"
+    last_updated = "2014-07-16"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$ = "\x00soul\x00"
@@ -105,10 +117,12 @@ rule SurtrStrings : Surtr Family {
 }
 
 rule SurtrCode : Surtr Family {
-	meta: 
-		author = "Katie Kleemola"
-		description = "Code features for Surtr Stage1"
-		last_updated = "2014-07-16"
+	  meta:
+    author = "Katie Kleemola"
+    description = "Code features for Surtr Stage1"
+    last_updated = "2014-07-16"
+    severity = "7"
+    type = "Malware"
 	
 	strings:
 		//decrypt config
@@ -124,10 +138,12 @@ rule SurtrCode : Surtr Family {
 }
 
 rule Surtr : Family {
-	meta:
-		author = "Katie Kleemola"
-		description = "Rule for Surtr Stage One"
-		last_updated = "2014-07-16"
+	  meta:
+    author = "Katie Kleemola"
+    description = "Rule for Surtr Stage One"
+    last_updated = "2014-07-16"
+    severity = "7"
+    type = "Malware"
 
 	condition:
 		SurtrStrings or SurtrCode

@@ -1,12 +1,15 @@
 rule apt_win32_dll_rat_hiZorRAT
 {
-	meta:
-      dexcription = "Detects hiZor RAT"
-		hash1 = "75d3d1f23628122a64a2f1b7ef33f5cf"
-		hash2 = "d9821468315ccd3b9ea03161566ef18e"
-		hash3 = "b9af5f5fd434a65d7aa1b55f5441c90a"
-      ref1 = "http://www.threatgeek.com/2016/01/introducing-hi-zor-rat.html"
-      reference = "https://www.fidelissecurity.com/sites/default/files/FTA_1020_Fidelis_Inocnation_FINAL.pdf"
+	  meta:
+    dexcription = "Detects hiZor RAT"
+    hash1 = "75d3d1f23628122a64a2f1b7ef33f5cf"
+    hash2 = "d9821468315ccd3b9ea03161566ef18e"
+    hash3 = "b9af5f5fd434a65d7aa1b55f5441c90a"
+    ref1 = "http://www.threatgeek.com/2016/01/introducing-hi-zor-rat.html"
+    reference = "https://www.fidelissecurity.com/sites/default/files/FTA_1020_Fidelis_Inocnation_FINAL.pdf"
+    description = "apt_win32_dll_rat_hiZorRAT"
+    severity = "7"
+    type = "Malware"
 	strings:
 		// Part of the encoded User-Agent = Mozilla
 		$s1 = { c7 [5] 40 00 62 00 c7 [5] 77 00 64 00 c7 [5] 61 00 61 00 c7 [5] 6c 00 }

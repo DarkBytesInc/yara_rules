@@ -1,12 +1,14 @@
 rule zeus_js : EK
 {
-meta:
-	author = "Josh Berry"
-	date = "2016-06-26"
-	description = "Zeus Exploit Kit Detection"
-	hash0 = "c87ac7a25168df49a64564afb04dc961"
-	sample_filetype = "js-html"
-	yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Zeus Exploit Kit Detection"
+    hash0 = "c87ac7a25168df49a64564afb04dc961"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
 	$string0 = "var jsmLastMenu "
 	$string1 = "position:absolute; z-index:99' "

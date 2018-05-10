@@ -11,12 +11,14 @@ import "pe"
 rule FiveEyes_QUERTY_Malwareqwerty_20121 
 {
 
-    meta:
-        description = "FiveEyes QUERTY Malware - file 20121.xml"
-        author = "Florian Roth"
-        reference = "http://www.spiegel.de/media/media-35668.pdf"
-        date = "2015/01/18"
-        hash = "8263fb58350f3b1d3c4220a602421232d5e40726"
+      meta:
+    description = "FiveEyes QUERTY Malware - file 20121.xml"
+    author = "Florian Roth"
+    reference = "http://www.spiegel.de/media/media-35668.pdf"
+    date = "2015/01/18"
+    hash = "8263fb58350f3b1d3c4220a602421232d5e40726"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "<configFileName>20121_cmdDef.xml</configFileName>" fullword ascii
@@ -38,12 +40,14 @@ rule FiveEyes_QUERTY_Malwareqwerty_20121
 rule FiveEyes_QUERTY_Malwaresig_20123_sys 
 {
    
-    meta:
-        description = "FiveEyes QUERTY Malware - file 20123.sys.bin"
-        author = "Florian Roth"
-        reference = "http://www.spiegel.de/media/media-35668.pdf"
-        date = "2015/01/18"
-        hash = "a0f0087bd1f8234d5e847363d7e15be8a3e6f099"
+      meta:
+    description = "FiveEyes QUERTY Malware - file 20123.sys.bin"
+    author = "Florian Roth"
+    reference = "http://www.spiegel.de/media/media-35668.pdf"
+    date = "2015/01/18"
+    hash = "a0f0087bd1f8234d5e847363d7e15be8a3e6f099"
+    severity = "10"
+    type = "Advanced Persistent Threat"
   
     strings:
         $s0 = "20123.dll" fullword ascii
@@ -59,12 +63,14 @@ rule FiveEyes_QUERTY_Malwaresig_20123_sys
 rule FiveEyes_QUERTY_Malwaresig_20123_cmdDef 
 {
   
-    meta:
-        description = "FiveEyes QUERTY Malware - file 20123_cmdDef.xml"
-        author = "Florian Roth"
-        reference = "http://www.spiegel.de/media/media-35668.pdf"
-        date = "2015/01/18"
-        hash = "7b08fc77629f6caaf8cc4bb5f91be6b53e19a3cd"
+      meta:
+    description = "FiveEyes QUERTY Malware - file 20123_cmdDef.xml"
+    author = "Florian Roth"
+    reference = "http://www.spiegel.de/media/media-35668.pdf"
+    date = "2015/01/18"
+    hash = "7b08fc77629f6caaf8cc4bb5f91be6b53e19a3cd"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
    strings:
         $s0 = "<shortDescription>Keystroke Collector</shortDescription>" fullword ascii
@@ -96,12 +102,14 @@ rule FiveEyes_QUERTY_Malwaresig_20123_cmdDef
 rule FiveEyes_QUERTY_Malwaresig_20121_dll 
 {
     
-    meta:
-        description = "FiveEyes QUERTY Malware - file 20121.dll.bin"
-        author = "Florian Roth"
-        reference = "http://www.spiegel.de/media/media-35668.pdf"
-        date = "2015/01/18"
-        hash = "89504d91c5539a366e153894c1bc17277116342b"
+      meta:
+    description = "FiveEyes QUERTY Malware - file 20121.dll.bin"
+    author = "Florian Roth"
+    reference = "http://www.spiegel.de/media/media-35668.pdf"
+    date = "2015/01/18"
+    hash = "89504d91c5539a366e153894c1bc17277116342b"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $s0 = "WarriorPride\\production2.0\\package\\E_Wzowski" ascii
@@ -114,12 +122,14 @@ rule FiveEyes_QUERTY_Malwaresig_20121_dll
 rule FiveEyes_QUERTY_Malwareqwerty_20123 
 {
 
-    meta:
-        description = "FiveEyes QUERTY Malware - file 20123.xml"
-        author = "Florian Roth"
-        reference = "http://www.spiegel.de/media/media-35668.pdf"
-        date = "2015/01/18"
-        hash = "edc7228b2e27df9e7ff9286bddbf4e46adb51ed9"
+      meta:
+    description = "FiveEyes QUERTY Malware - file 20123.xml"
+    author = "Florian Roth"
+    reference = "http://www.spiegel.de/media/media-35668.pdf"
+    date = "2015/01/18"
+    hash = "edc7228b2e27df9e7ff9286bddbf4e46adb51ed9"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "<!-- edited with XMLSPY v5 rel. 4 U (http://www.xmlspy.com) by TEAM (RENEGADE) -" ascii
@@ -142,12 +152,14 @@ rule FiveEyes_QUERTY_Malwareqwerty_20123
 rule FiveEyes_QUERTY_Malwaresig_20120_dll 
 {
 
-    meta:
-        description = "FiveEyes QUERTY Malware - file 20120.dll.bin"
-        author = "Florian Roth"
-        reference = "http://www.spiegel.de/media/media-35668.pdf"
-        date = "2015/01/18"
-        hash = "6811bfa3b8cda5147440918f83c40237183dbd25"
+      meta:
+    description = "FiveEyes QUERTY Malware - file 20120.dll.bin"
+    author = "Florian Roth"
+    reference = "http://www.spiegel.de/media/media-35668.pdf"
+    date = "2015/01/18"
+    hash = "6811bfa3b8cda5147440918f83c40237183dbd25"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "\\QwLog_%d-%02d-%02d-%02d%02d%02d.txt" fullword wide
@@ -179,12 +191,14 @@ rule FiveEyes_QUERTY_Malwaresig_20120_dll
 rule FiveEyes_QUERTY_Malwaresig_20120_cmdDef 
 {
 
-    meta:
-        description = "FiveEyes QUERTY Malware - file 20120_cmdDef.xml"
-        author = "Florian Roth"
-        reference = "http://www.spiegel.de/media/media-35668.pdf"
-        date = "2015/01/18"
-        hash = "cda9ceaf0a39d6b8211ce96307302a53dfbd71ea"
+      meta:
+    description = "FiveEyes QUERTY Malware - file 20120_cmdDef.xml"
+    author = "Florian Roth"
+    reference = "http://www.spiegel.de/media/media-35668.pdf"
+    date = "2015/01/18"
+    hash = "cda9ceaf0a39d6b8211ce96307302a53dfbd71ea"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "This PPC gets the current keystroke log." fullword ascii
@@ -216,12 +230,14 @@ rule FiveEyes_QUERTY_Malwaresig_20120_cmdDef
 rule FiveEyes_QUERTY_Malwareqwerty_20120 
 {
 
-    meta:
-        description = "FiveEyes QUERTY Malware - file 20120.xml"
-        author = "Florian Roth"
-        reference = "http://www.spiegel.de/media/media-35668.pdf"
-        date = "2015/01/18"
-        hash = "597082f05bfd3225587d480c30f54a7a1326a892"
+      meta:
+    description = "FiveEyes QUERTY Malware - file 20120.xml"
+    author = "Florian Roth"
+    reference = "http://www.spiegel.de/media/media-35668.pdf"
+    date = "2015/01/18"
+    hash = "597082f05bfd3225587d480c30f54a7a1326a892"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "<configFileName>20120_cmdDef.xml</configFileName>" fullword ascii
@@ -243,12 +259,14 @@ rule FiveEyes_QUERTY_Malwareqwerty_20120
 rule FiveEyes_QUERTY_Malwaresig_20121_cmdDef 
 {
 
-    meta:
-        description = "FiveEyes QUERTY Malware - file 20121_cmdDef.xml"
-        author = "Florian Roth"
-        reference = "http://www.spiegel.de/media/media-35668.pdf"
-        date = "2015/01/18"
-        hash = "64ac06aa4e8d93ea6063eade7ce9687b1d035907"
+      meta:
+    description = "FiveEyes QUERTY Malware - file 20121_cmdDef.xml"
+    author = "Florian Roth"
+    reference = "http://www.spiegel.de/media/media-35668.pdf"
+    date = "2015/01/18"
+    hash = "64ac06aa4e8d93ea6063eade7ce9687b1d035907"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "<shortDescription>Keystroke Logger Plugin.</shortDescription>" fullword ascii

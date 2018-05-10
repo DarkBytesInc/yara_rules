@@ -8,11 +8,14 @@ import "pe"
 rule KeyBoy_Dropper
 {
 
-    meta:
-        Author      = "Rapid7 Labs"
-        Date        = "2013/06/07"
-        Description = "Strings inside"
-        Reference   = "https://community.rapid7.com/community/infosec/blog/2013/06/07/keyboy-targeted-attacks-against-vietnam-and-india"
+      meta:
+    Author = "Rapid7 Labs"
+    Date = "2013/06/07"
+    Description = "Strings inside"
+    Reference = "https://community.rapid7.com/community/infosec/blog/2013/06/07/keyboy-targeted-attacks-against-vietnam-and-india"
+    description = "KeyBoy_Dropper"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $1 = "I am Admin"
@@ -29,11 +32,14 @@ rule KeyBoy_Dropper
 rule KeyBoy_Backdoor
 {
 
-    meta:
-        Author      = "Rapid7 Labs"
-        Date        = "2013/06/07"
-        Description = "Strings inside"
-        Reference   = "https://community.rapid7.com/community/infosec/blog/2013/06/07/keyboy-targeted-attacks-against-vietnam-and-india"
+      meta:
+    Author = "Rapid7 Labs"
+    Date = "2013/06/07"
+    Description = "Strings inside"
+    Reference = "https://community.rapid7.com/community/infosec/blog/2013/06/07/keyboy-targeted-attacks-against-vietnam-and-india"
+    description = "KeyBoy_Dropper"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $1 = "$login$"
@@ -59,11 +65,14 @@ rule KeyBoy_Backdoor
 rule new_keyboy_export
 {
 
-    meta:
-        author = "Matt Brooks, @cmatthewbrooks"
-        desc = "Matches the new 2016 sample's export"
-        date = "2016-08-28"
-        md5 = "495adb1b9777002ecfe22aaf52fcee93"
+      meta:
+    author = "Matt Brooks, @cmatthewbrooks"
+    desc = "Matches the new 2016 sample's export"
+    date = "2016-08-28"
+    md5 = "495adb1b9777002ecfe22aaf52fcee93"
+    description = "new_keyboy_export"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     condition:
         //MZ header //PE signature //The malware family seems to share many exports //but this is the new kid on the block.
@@ -73,11 +82,14 @@ rule new_keyboy_export
 rule new_keyboy_header_codes
 {
 
-    meta:
-        author = "Matt Brooks, @cmatthewbrooks"
-        desc = "Matches the 2016 sample's header codes"
-        date = "2016-08-28"
-        md5 = "495adb1b9777002ecfe22aaf52fcee93"
+      meta:
+    author = "Matt Brooks, @cmatthewbrooks"
+    desc = "Matches the 2016 sample's header codes"
+    date = "2016-08-28"
+    md5 = "495adb1b9777002ecfe22aaf52fcee93"
+    description = "new_keyboy_header_codes"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "*l*" wide fullword
@@ -105,11 +117,14 @@ rule new_keyboy_header_codes
 rule keyboy_commands
 {
 
-    meta:
-        author = "Matt Brooks, @cmatthewbrooks"
-        desc = "Matches the 2016 sample's sent and received commands"
-        date = "2016-08-28"
-        md5 = "495adb1b9777002ecfe22aaf52fcee93"
+      meta:
+    author = "Matt Brooks, @cmatthewbrooks"
+    desc = "Matches the 2016 sample's sent and received commands"
+    date = "2016-08-28"
+    md5 = "495adb1b9777002ecfe22aaf52fcee93"
+    description = "keyboy_commands"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "Update" wide fullword
@@ -133,11 +148,14 @@ rule keyboy_commands
 rule keyboy_errors
 {
 
-    meta:
-        author = "Matt Brooks, @cmatthewbrooks"
-        desc = "Matches the sample's shell error2 log statements"
-        date = "2016-08-28"
-        md5 = "495adb1b9777002ecfe22aaf52fcee93"
+      meta:
+    author = "Matt Brooks, @cmatthewbrooks"
+    desc = "Matches the sample's shell error2 log statements"
+    date = "2016-08-28"
+    md5 = "495adb1b9777002ecfe22aaf52fcee93"
+    description = "keyboy_errors"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         //These strings are in ASCII pre-2015 and UNICODE in 2016
@@ -176,11 +194,14 @@ rule keyboy_errors
 rule keyboy_systeminfo
 {
 
-    meta:
-        author = "Matt Brooks, @cmatthewbrooks"
-        desc = "Matches the system information format before sending to C2"
-        date = "2016-08-28"
-        md5 = "495adb1b9777002ecfe22aaf52fcee93"
+      meta:
+    author = "Matt Brooks, @cmatthewbrooks"
+    desc = "Matches the system information format before sending to C2"
+    date = "2016-08-28"
+    md5 = "495adb1b9777002ecfe22aaf52fcee93"
+    description = "keyboy_systeminfo"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         //These strings are ASCII pre-2015 and UNICODE in 2016
@@ -208,11 +229,14 @@ rule keyboy_systeminfo
 rule keyboy_related_exports
 {
 
-    meta:
-        author = "Matt Brooks, @cmatthewbrooks"
-        desc = "Matches the new 2016 sample's export"
-        date = "2016-08-28"
-        md5 = "495adb1b9777002ecfe22aaf52fcee93"
+      meta:
+    author = "Matt Brooks, @cmatthewbrooks"
+    desc = "Matches the new 2016 sample's export"
+    date = "2016-08-28"
+    md5 = "495adb1b9777002ecfe22aaf52fcee93"
+    description = "new_keyboy_export"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     condition:
         //MZ header //PE signature //The malware family seems to share many exports //but this is the new kid on the block.
@@ -227,10 +251,13 @@ rule keyboy_related_exports
 rule keyboy_init_config_section
 {
 
-    meta:
-        author = "Matt Brooks, @cmatthewbrooks"
-        desc = "Matches the Init section where the config is stored"
-        date = "2016-08-28"
+      meta:
+    author = "Matt Brooks, @cmatthewbrooks"
+    desc = "Matches the Init section where the config is stored"
+    date = "2016-08-28"
+    description = "keyboy_init_config_section"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     condition:
         //MZ header //PE signature //Payloads are normally smaller but the new dropper we spotted //is a bit larger. //Observed virtual sizes of the .Init section vary but they've //always been 1024, 2048, or 4096 bytes.

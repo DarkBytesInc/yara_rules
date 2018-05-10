@@ -7,10 +7,12 @@ import "pe"
 
 rule NSFreeCode : NSFree Family 
 {
-    meta:
-        description = "NSFree code features"
-        author = "Seth Hardy"
-        last_modified = "2014-06-24"
+      meta:
+    description = "NSFree code features"
+    author = "Seth Hardy"
+    last_modified = "2014-06-24"
+    severity = "7"
+    type = "Malware"
     
     strings:
         // push vars then look for MZ
@@ -24,10 +26,12 @@ rule NSFreeCode : NSFree Family
 
 rule NSFreeStrings : NSFree Family
 {
-    meta:
-        description = "NSFree Identifying Strings"
-        author = "Seth Hardy"
-        last_modified = "2014-06-24"
+      meta:
+    description = "NSFree Identifying Strings"
+    author = "Seth Hardy"
+    last_modified = "2014-06-24"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $ = "\\MicNS\\" nocase
@@ -41,10 +45,12 @@ rule NSFreeStrings : NSFree Family
 
 rule NSFree : Family
 {
-    meta:
-        description = "NSFree"
-        author = "Seth Hardy"
-        last_modified = "2014-06-24"
+      meta:
+    description = "NSFree"
+    author = "Seth Hardy"
+    last_modified = "2014-06-24"
+    severity = "7"
+    type = "Malware"
         
     condition:
         NSFreeCode or NSFreeStrings

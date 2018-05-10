@@ -1,9 +1,11 @@
 rule hacktool_macos_keylogger_logkext
 {
-    meta:
-        description = "LogKext is an open source keylogger for Mac OS X, a product of FSB software."
-        reference = "https://github.com/SlEePlEs5/logKext"
-        author = "@mimeframe"
+      meta:
+    description = "LogKext is an open source keylogger for Mac OS X, a product of FSB software."
+    reference = "https://github.com/SlEePlEs5/logKext"
+    author = "@mimeframe"
+    severity = "5"
+    type = "Unknown"
     strings:
         // daemon
         $a1 = "logKextPassKey" wide ascii

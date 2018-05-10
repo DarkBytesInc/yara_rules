@@ -12,12 +12,14 @@
 rule GRIZZLY_STEPPE_Malware_1
 {
 
-   meta:
-      description = "Auto-generated rule - file HRDG022184_certclint.dll"
-      author = "Florian Roth"
-      reference = "https://goo.gl/WVflzO"
-      date = "2016-12-29"
-      hash1 = "9f918fb741e951a10e68ce6874b839aef5a26d60486db31e509f8dcaa13acec5"
+     meta:
+    description = "Auto-generated rule - file HRDG022184_certclint.dll"
+    author = "Florian Roth"
+    reference = "https://goo.gl/WVflzO"
+    date = "2016-12-29"
+    hash1 = "9f918fb741e951a10e68ce6874b839aef5a26d60486db31e509f8dcaa13acec5"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
    strings:
       $s1 = "S:\\Lidstone\\renewing\\HA\\disable\\In.pdb" fullword ascii
@@ -34,13 +36,15 @@ rule GRIZZLY_STEPPE_Malware_1
 rule GRIZZLY_STEPPE_Malware_2
 {
 
-   meta:
-      description = "Auto-generated rule - file 9acba7e5f972cdd722541a23ff314ea81ac35d5c0c758eb708fb6e2cc4f598a0"
-      author = "Florian Roth"
-      reference = "https://goo.gl/WVflzO"
-      date = "2016-12-29"
-      hash1 = "9acba7e5f972cdd722541a23ff314ea81ac35d5c0c758eb708fb6e2cc4f598a0"
-      hash2 = "55058d3427ce932d8efcbe54dccf97c9a8d1e85c767814e34f4b2b6a6b305641"
+     meta:
+    description = "Auto-generated rule - file 9acba7e5f972cdd722541a23ff314ea81ac35d5c0c758eb708fb6e2cc4f598a0"
+    author = "Florian Roth"
+    reference = "https://goo.gl/WVflzO"
+    date = "2016-12-29"
+    hash1 = "9acba7e5f972cdd722541a23ff314ea81ac35d5c0c758eb708fb6e2cc4f598a0"
+    hash2 = "55058d3427ce932d8efcbe54dccf97c9a8d1e85c767814e34f4b2b6a6b305641"
+    severity = "10"
+    type = "Advanced Persistent Threat"
       
    strings:
       $x1 = "GoogleCrashReport.dll" fullword ascii
@@ -57,11 +61,13 @@ rule GRIZZLY_STEPPE_Malware_2
 rule PAS_TOOL_PHP_WEB_KIT_mod 
 {
    
-   meta:
-      description = "Detects PAS Tool PHP Web Kit"
-      reference = "https://www.us-cert.gov/security-publications/GRIZZLY-STEPPE-Russian-Malicious-Cyber-Activity"
-      author = "US CERT - modified by Florian Roth due to performance reasons"
-      date = "2016/12/29"
+     meta:
+    description = "Detects PAS Tool PHP Web Kit"
+    reference = "https://www.us-cert.gov/security-publications/GRIZZLY-STEPPE-Russian-Malicious-Cyber-Activity"
+    author = "US CERT - modified by Florian Roth due to performance reasons"
+    date = "2016/12/29"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
    strings:
       $php = "<?php"
@@ -79,11 +85,13 @@ rule PAS_TOOL_PHP_WEB_KIT_mod
 rule WebShell_PHP_Web_Kit_v3
 {
 
-   meta:
-      description = "Detects PAS Tool PHP Web Kit"
-      reference = "https://github.com/wordfence/grizzly"
-      author = "Florian Roth"
-      date = "2016/01/01"
+     meta:
+    description = "Detects PAS Tool PHP Web Kit"
+    reference = "https://github.com/wordfence/grizzly"
+    author = "Florian Roth"
+    date = "2016/01/01"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
    strings:
       $php = "<?php $"
@@ -99,11 +107,13 @@ rule WebShell_PHP_Web_Kit_v3
 rule WebShell_PHP_Web_Kit_v4
 {
 
-   meta:
-      description = "Detects PAS Tool PHP Web Kit"
-      reference = "https://github.com/wordfence/grizzly"
-      author = "Florian Roth"
-      date = "2016/01/01"
+     meta:
+    description = "Detects PAS Tool PHP Web Kit"
+    reference = "https://github.com/wordfence/grizzly"
+    author = "Florian Roth"
+    date = "2016/01/01"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
    strings:
       $php = "<?php $"

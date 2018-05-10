@@ -6,10 +6,12 @@
 rule BangatCode
 {
     
-    meta:
-        description = "Bangat code features"
-        author = "Seth Hardy"
-        last_modified = "2014-07-10"
+      meta:
+    description = "Bangat code features"
+    author = "Seth Hardy"
+    last_modified = "2014-07-10"
+    severity = "7"
+    type = "Malware"
     
     strings:
         // dec [ebp + procname], push eax, push edx, call get procaddress
@@ -22,10 +24,12 @@ rule BangatCode
 rule BangatStrings
 {
     
-    meta:
-        description = "Bangat Identifying Strings"
-        author = "Seth Hardy"
-        last_modified = "2014-07-10"
+      meta:
+    description = "Bangat Identifying Strings"
+    author = "Seth Hardy"
+    last_modified = "2014-07-10"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $lib1 = "DreatePipe"
@@ -42,10 +46,12 @@ rule BangatStrings
 
 rule Bangat
 {
-    meta:
-        description = "Bangat"
-        author = "Seth Hardy"
-        last_modified = "2014-07-10"
+      meta:
+    description = "Bangat"
+    author = "Seth Hardy"
+    last_modified = "2014-07-10"
+    severity = "7"
+    type = "Malware"
         
     condition:
         BangatCode or BangatStrings

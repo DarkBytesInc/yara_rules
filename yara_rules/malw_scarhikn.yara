@@ -7,10 +7,12 @@ import "pe"
 
 rule ScarhiknStrings : Scarhikn Family
 {
-    meta:
-        description = "Scarhikn Identifying Strings"
-        author = "Seth Hardy"
-        last_modified = "2014-06-25"
+      meta:
+    description = "Scarhikn Identifying Strings"
+    author = "Seth Hardy"
+    last_modified = "2014-06-25"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $ = "9887___skej3sd"
@@ -24,10 +26,12 @@ rule ScarhiknStrings : Scarhikn Family
 
 rule ScarhiknCode : Scarhikn Family 
 {
-    meta:
-        description = "Scarhikn code features"
-        author = "Seth Hardy"
-        last_modified = "2014-06-25"
+      meta:
+    description = "Scarhikn code features"
+    author = "Seth Hardy"
+    last_modified = "2014-06-25"
+    severity = "7"
+    type = "Malware"
     
     strings:
         // decryption
@@ -40,10 +44,12 @@ rule ScarhiknCode : Scarhikn Family
 
 rule Scarhikn : Family
 {
-    meta:
-        description = "Scarhikn"
-        author = "Seth Hardy"
-        last_modified = "2014-06-25"
+      meta:
+    description = "Scarhikn"
+    author = "Seth Hardy"
+    last_modified = "2014-06-25"
+    severity = "7"
+    type = "Malware"
         
     condition:
         ScarhiknCode or ScarhiknStrings

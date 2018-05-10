@@ -9,13 +9,15 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule MAL_Envrial_Jan18_1 {
-   meta:
-      description = "Detects Encrial credential stealer malware"
-      author = "Florian Roth"
-      reference = "https://twitter.com/malwrhunterteam/status/953313514629853184"
-      date = "2018-01-21"
-      hash1 = "9ae3aa2c61f7895ba6b1a3f85fbe36c8697287dc7477c5a03d32cf994fdbce85"
-      hash2 = "9edd8f0e22340ecc45c5f09e449aa85d196f3f506ff3f44275367df924b95c5d"
+     meta:
+    description = "Detects Encrial credential stealer malware"
+    author = "Florian Roth"
+    reference = "https://twitter.com/malwrhunterteam/status/953313514629853184"
+    date = "2018-01-21"
+    hash1 = "9ae3aa2c61f7895ba6b1a3f85fbe36c8697287dc7477c5a03d32cf994fdbce85"
+    hash2 = "9edd8f0e22340ecc45c5f09e449aa85d196f3f506ff3f44275367df924b95c5d"
+    severity = "7"
+    type = "Malware"
    strings:
       $x1 = "/Evrial/master/domen" wide
 

@@ -8,10 +8,12 @@ import "pe"
 rule APT9002Code 
 {
     
-    meta:
-        description = "9002 code features"
-        author = "Seth Hardy"
-        last_modified = "2014-06-25"
+      meta:
+    description = "9002 code features"
+    author = "Seth Hardy"
+    last_modified = "2014-06-25"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         // start code block
@@ -26,10 +28,12 @@ rule APT9002Code
 rule APT9002Strings
 {
     
-    meta:
-        description = "9002 Identifying Strings"
-        author = "Seth Hardy"
-        last_modified = "2014-06-25"
+      meta:
+    description = "9002 Identifying Strings"
+    author = "Seth Hardy"
+    last_modified = "2014-06-25"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $ = "POST http://%ls:%d/%x HTTP/1.1"
@@ -47,10 +51,12 @@ rule APT9002Strings
 rule APT9002 
 {
     
-    meta:
-        description = "9002"
-        author = "Seth Hardy"
-        last_modified = "2014-06-25"
+      meta:
+    description = "9002"
+    author = "Seth Hardy"
+    last_modified = "2014-06-25"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     condition:
         APT9002Code or APT9002Strings
@@ -59,11 +65,14 @@ rule APT9002
 rule FE_APT_9002
 {
     
-    meta:
-        Author      = "FireEye Labs"
-        Date        = "2013/11/10"
-        Description = "Strings inside"
-        Reference   = "Useful link"
+      meta:
+    Author = "FireEye Labs"
+    Date = "2013/11/10"
+    Description = "Strings inside"
+    Reference = "Useful link"
+    description = "FE_APT_9002"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $mz = { 4d 5a }

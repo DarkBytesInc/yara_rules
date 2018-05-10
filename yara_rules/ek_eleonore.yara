@@ -1,12 +1,14 @@
 rule eleonore_jar : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Eleonore Exploit Kit Detection"
-   hash0 = "ad829f4315edf9c2611509f3720635d2"
-   sample_filetype = "unknown"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Eleonore Exploit Kit Detection"
+    hash0 = "ad829f4315edf9c2611509f3720635d2"
+    sample_filetype = "unknown"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "r.JM,IM"
    $string1 = "dev/s/DyesyasZ.classPK"
@@ -26,13 +28,15 @@ condition:
 }
 rule eleonore_jar2 : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Eleonore Exploit Kit Detection"
-   hash0 = "94e99de80c357d01e64abf7dc5bd0ebd"
-   sample_filetype = "unknown"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Eleonore Exploit Kit Detection"
+    hash0 = "94e99de80c357d01e64abf7dc5bd0ebd"
+    sample_filetype = "unknown"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "META-INF/MANIFEST.MFManifest-Version: 1.0"
    $string1 = "wPVvVyz"
@@ -54,13 +58,15 @@ condition:
 }
 rule eleonore_jar3 : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Eleonore Exploit Kit Detection"
-   hash0 = "f65f3b9b809ebf221e73502480ab6ea7"
-   sample_filetype = "unknown"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Eleonore Exploit Kit Detection"
+    hash0 = "f65f3b9b809ebf221e73502480ab6ea7"
+    sample_filetype = "unknown"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "16lNYF2V"
    $string1 = "META-INF/MANIFEST.MFPK"
@@ -80,13 +86,15 @@ condition:
 }
 rule eleonore_js : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Eleonore Exploit Kit Detection"
-   hash0 = "08f8488f1122f2388a0fd65976b9becd"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Eleonore Exploit Kit Detection"
+    hash0 = "08f8488f1122f2388a0fd65976b9becd"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "var de"
    $string1 = "sdjk];"
@@ -105,13 +113,15 @@ condition:
 }
 rule eleonore_js2 : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Eleonore Exploit Kit Detection"
-   hash0 = "2f5ace22e886972a8dccc6aa5deb1e79"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Eleonore Exploit Kit Detection"
+    hash0 = "2f5ace22e886972a8dccc6aa5deb1e79"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "var dfshk "
    $string1 = "arrow_next_down"
@@ -134,13 +144,15 @@ condition:
 }
 rule eleonore_js3 : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "Eleonore Exploit Kit Detection"
-   hash0 = "9dcb8cd8d4f418324f83d914ab4d4650"
-   sample_filetype = "js-html"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "Eleonore Exploit Kit Detection"
+    hash0 = "9dcb8cd8d4f418324f83d914ab4d4650"
+    sample_filetype = "js-html"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "@mozilla.org/file/directory_service;1"
    $string1 = "var exe "

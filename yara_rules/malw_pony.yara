@@ -2,11 +2,13 @@
     This Yara ruleset is under the GNU-GPLv2 license (http://www.gnu.org/licenses/gpl-2.0.html) and open to any user or organization, as    long as you use it under this license.
 */
 rule pony {
-    meta:
-        author = "Brian Wallace @botnet_hunter"
-        author_email = "bwall@ballastsecurity.net"
-        date = "2014-08-16"
-        description = "Identify Pony"
+      meta:
+    author = "Brian Wallace @botnet_hunter"
+    author_email = "bwall@ballastsecurity.net"
+    date = "2014-08-16"
+    description = "Identify Pony"
+    severity = "7"
+    type = "Malware"
 	strings:
     	$s1 = "{%08X-%04X-%04X-%02X%02X-%02X%02X%02X%02X%02X%02X}"
     	$s2 = "YUIPWDFILE0YUIPKDFILE0YUICRYPTED0YUI1.0"

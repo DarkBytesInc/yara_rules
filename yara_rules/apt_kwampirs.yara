@@ -1,10 +1,12 @@
 rule MAL_Kwampirs_Apr18 {
-    meta:
-        author = "Symantec"
-        family = "Kwampirs"
-        description = "Kwampirs dropper and main payload components"
-        reference = "https://www.symantec.com/blogs/threat-intelligence/orangeworm-targets-healthcare-us-europe-asia"
-        date = "2018-04-23"
+      meta:
+    author = "Symantec"
+    family = "Kwampirs"
+    description = "Kwampirs dropper and main payload components"
+    reference = "https://www.symantec.com/blogs/threat-intelligence/orangeworm-targets-healthcare-us-europe-asia"
+    date = "2018-04-23"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     strings:
         $pubkey = {
             06 02 00 00 00 A4 00 00 52 53 41 31 00 08 00 00

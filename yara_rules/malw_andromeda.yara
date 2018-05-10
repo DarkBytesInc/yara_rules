@@ -6,11 +6,13 @@
 rule andromeda
 {
     
-    meta:
-        author = "Brian Wallace @botnet_hunter"
-        author_email = "bwall@ballastsecurity.net"
-        date = "2014-03-13"
-        description = "Identify Andromeda"
+      meta:
+    author = "Brian Wallace @botnet_hunter"
+    author_email = "bwall@ballastsecurity.net"
+    date = "2014-03-13"
+    description = "Identify Andromeda"
+    severity = "7"
+    type = "Malware"
     
     strings:
         $config = {1c 1c 1d 03 49 47 46}
@@ -23,10 +25,12 @@ rule andromeda
 rule Worm_Gamarue 
 {
 
-    meta:
-        author = "Centro Criptológico Nacional (CCN)"
-        ref = "https://www.ccn-cert.cni.es/informes/informes-ccn-cert-publicos.html"
-        description = "Gamarue_Andromeda"       
+      meta:
+    author = "Centro Criptológico Nacional (CCN)"
+    ref = "https://www.ccn-cert.cni.es/informes/informes-ccn-cert-publicos.html"
+    description = "Gamarue_Andromeda"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $a = { 69 E1 2A B0 2D 80 44 E3 2D 80 44 E3 2D 80 44 E3 EE 8F 1B E3 2A 80 44 E3 EE 8F 19 E3 3A 80 44 E3 2D 80 45 E3 CD 81 44 E3 0A 46 39 E3 34 80 44 E3 0A 46 29 E3 A5 80 44 E3 0A 46 2A E3 5C 80 44 E3 0A 46 36 E3 2C 80 44 E3 0A 46 3C E3 2C 80 44 E3 }
@@ -36,10 +40,12 @@ rule Worm_Gamarue
 
 rule andromeda_bot
 { 
-    meta:
-        maltype = "Andromeda bot"
-        author = "https://github.com/reed1713"
-        description = "IOC looks for the creation or termination of a process associated with the Andromeda Trojan. The malware will execute the msiexec.exe within the suspicious directory. Shortly after, it creates and injects itself into the wuauctl.exe (windows update) process. It then attempts to beacon to its C2."
+      meta:
+    maltype = "Andromeda bot"
+    author = "https://github.com/reed1713"
+    description = "IOC looks for the creation or termination of a process associated with the Andromeda Trojan. The malware will execute the msiexec.exe within the suspicious directory. Shortly after, it creates and injects itself into the wuauctl.exe (windows update) process. It then attempts to beacon to its C2."
+    severity = "7"
+    type = "Malware"
    
     strings:
         $type="Microsoft-Windows-Security-Auditing"

@@ -7,10 +7,12 @@ import "pe"
 
 rule universal_1337_stealer_serveur : Stealer
 {
-	meta:
-		author="Kevin Falcoz"
-		date="24/02/2013"
-		description="Universal 1337 Stealer Serveur"
+	  meta:
+    author = "Kevin Falcoz"
+    date = "24/02/2013"
+    description = "Universal 1337 Stealer Serveur"
+    severity = "7"
+    type = "Malware"
 		
 	strings:
 		$signature1={2A 5B 53 2D 50 2D 4C 2D 49 2D 54 5D 2A} /*[S-P-L-I-T]*/

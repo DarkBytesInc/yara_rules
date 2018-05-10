@@ -4,13 +4,15 @@
 */
 rule crimepack_jar : EK
 {
-meta:
-	author = "Josh Berry"
-	date = "2016-06-26"
-	description = "CrimePack Exploit Kit Detection"
-	hash0 = "d48e70d538225bc1807842ac13a8e188"
-	sample_filetype = "unknown"
-	yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "CrimePack Exploit Kit Detection"
+    hash0 = "d48e70d538225bc1807842ac13a8e188"
+    sample_filetype = "unknown"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Malware"
 strings:
 	$string0 = "r.JM,IM"
 	$string1 = "cpak/Crimepack$1.classPK"
@@ -24,13 +26,15 @@ condition:
 }
 rule crimepack_jar3 : EK
 {
-meta:
-	author = "Josh Berry"
-	date = "2016-06-26"
-	description = "CrimePack Exploit Kit Detection"
-	hash0 = "40ed977adc009e1593afcb09d70888c4"
-	sample_filetype = "unknown"
-	yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "CrimePack Exploit Kit Detection"
+    hash0 = "40ed977adc009e1593afcb09d70888c4"
+    sample_filetype = "unknown"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Malware"
 strings:
 	$string0 = "payload.serPK"
 	$string1 = "vE/JD[j"

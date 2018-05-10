@@ -9,10 +9,12 @@ import "pe"
 */
 
 rule hkdoor_backdoor_dll {
-   meta:
-      description = "Hacker's Door Backdoor DLL"
-      author = "Cylance Inc."
-      reference = "https://www.cylance.com/en_us/blog/threat-spotlight-opening-hackers-door.html"
+     meta:
+    description = "Hacker's Door Backdoor DLL"
+    author = "Cylance Inc."
+    reference = "https://www.cylance.com/en_us/blog/threat-spotlight-opening-hackers-door.html"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "The version of personal hacker's door server is" fullword ascii
       $s2 = "The connect back interval is %d (minutes)" fullword ascii
@@ -29,10 +31,12 @@ rule hkdoor_backdoor_dll {
 }
 
 rule hkdoor_backdoor {
-   meta:
-      description = "Hacker's Door Backdoor"
-      author = "Cylance Inc."
-      reference = "https://www.cylance.com/en_us/blog/threat-spotlight-opening-hackers-door.html"
+     meta:
+    description = "Hacker's Door Backdoor"
+    author = "Cylance Inc."
+    reference = "https://www.cylance.com/en_us/blog/threat-spotlight-opening-hackers-door.html"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "http://www.yythac.com" fullword ascii
       $s2 = "Example:%s 192.168.1.100 139 -p yyt_hac -t 1" fullword ascii
@@ -49,10 +53,12 @@ rule hkdoor_backdoor {
 }
 
 rule hkdoor_dropper {
-   meta:
-      description = "Hacker's Door Dropper"
-      author = "Cylance Inc."
-      reference = "https://www.cylance.com/en_us/blog/threat-spotlight-opening-hackers-door.html"
+     meta:
+    description = "Hacker's Door Dropper"
+    author = "Cylance Inc."
+    reference = "https://www.cylance.com/en_us/blog/threat-spotlight-opening-hackers-door.html"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "The version of personal hacker's door server is" fullword ascii
       $s2 = "The connect back interval is %d (minutes)" fullword ascii
@@ -74,8 +80,10 @@ rule hkdoor_dropper {
 }
 
 rule hkdoor_driver {
-   meta:
-      description = "Hacker's Door Driver"
+     meta:
+    description = "Hacker's Door Driver"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "ipfltdrv.sys" fullword ascii
       $s2 = "Patch Success." fullword ascii

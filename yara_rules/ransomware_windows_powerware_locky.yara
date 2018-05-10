@@ -1,10 +1,12 @@
 rule ransomware_windows_powerware_locky
 {
-    meta:
-        description = "PowerWare Ransomware"
-        reference = "https://researchcenter.paloaltonetworks.com/2016/07/unit42-powerware-ransomware-spoofing-locky-malware-family/"
-        author = "@fusionrace"
-        md5 = "3433a4da9d8794709630eb06afd2b8c1"
+      meta:
+    description = "PowerWare Ransomware"
+    reference = "https://researchcenter.paloaltonetworks.com/2016/07/unit42-powerware-ransomware-spoofing-locky-malware-family/"
+    author = "@fusionrace"
+    md5 = "3433a4da9d8794709630eb06afd2b8c1"
+    severity = "7"
+    type = "Exploit Kit"
     strings:
         // unpacks the powershell script
         $s0 = "ScriptRunner.dll" fullword ascii wide

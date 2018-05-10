@@ -6,12 +6,14 @@
 rule StuxNet_Malware_1 
 {
 
-    meta:
-        description = "Stuxnet Sample - file malware.exe"
-        author = "Florian Roth"
-        reference = "Internal Research"
-        date = "2016-07-09"
-        hash1 = "9c891edb5da763398969b6aaa86a5d46971bd28a455b20c2067cb512c9f9a0f8"
+      meta:
+    description = "Stuxnet Sample - file malware.exe"
+    author = "Florian Roth"
+    reference = "Internal Research"
+    date = "2016-07-09"
+    hash1 = "9c891edb5da763398969b6aaa86a5d46971bd28a455b20c2067cb512c9f9a0f8"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
          // 0x10001778 8b 45 08  mov     eax, dword ptr [ebp + 8]
@@ -41,12 +43,14 @@ rule StuxNet_Malware_1
 rule Stuxnet_Malware_2 
 {
    
-    meta:
-        description = "Stuxnet Sample - file 63e6b8136058d7a06dfff4034b4ab17a261cdf398e63868a601f77ddd1b32802"
-        author = "Florian Roth"
-        reference = "Internal Research"
-        date = "2016-07-09"
-        hash1 = "63e6b8136058d7a06dfff4034b4ab17a261cdf398e63868a601f77ddd1b32802"
+      meta:
+    description = "Stuxnet Sample - file 63e6b8136058d7a06dfff4034b4ab17a261cdf398e63868a601f77ddd1b32802"
+    author = "Florian Roth"
+    reference = "Internal Research"
+    date = "2016-07-09"
+    hash1 = "63e6b8136058d7a06dfff4034b4ab17a261cdf398e63868a601f77ddd1b32802"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $s1 = "\\SystemRoot\\System32\\hal.dll" fullword wide
@@ -59,12 +63,14 @@ rule Stuxnet_Malware_2
 rule StuxNet_dll 
 {
 
-    meta:
-        description = "Stuxnet Sample - file dll.dll"
-        author = "Florian Roth"
-        reference = "Internal Research"
-        date = "2016-07-09"
-        hash1 = "9e392277f62206098cf794ddebafd2817483cfd57ec03c2e05e7c3c81e72f562"
+      meta:
+    description = "Stuxnet Sample - file dll.dll"
+    author = "Florian Roth"
+    reference = "Internal Research"
+    date = "2016-07-09"
+    hash1 = "9e392277f62206098cf794ddebafd2817483cfd57ec03c2e05e7c3c81e72f562"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "SUCKM3 FROM EXPLORER.EXE MOTH4FUCKA #@!" fullword ascii
@@ -76,12 +82,14 @@ rule StuxNet_dll
 rule Stuxnet_Shortcut_to 
 {
 
-    meta:
-        description = "Stuxnet Sample - file Copy of Shortcut to.lnk"
-        author = "Florian Roth"
-        reference = "Internal Research"
-        date = "2016-07-09"
-        hash1 = "801e3b6d84862163a735502f93b9663be53ccbdd7f12b0707336fecba3a829a2"
+      meta:
+    description = "Stuxnet Sample - file Copy of Shortcut to.lnk"
+    author = "Florian Roth"
+    reference = "Internal Research"
+    date = "2016-07-09"
+    hash1 = "801e3b6d84862163a735502f93b9663be53ccbdd7f12b0707336fecba3a829a2"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "\\\\.\\STORAGE#Volume#_??_USBSTOR#Disk&Ven_Kingston&Prod_DataTraveler_2.0&Rev_PMAP#5B6B098B97BE&0#{53f56307-b6bf-11d0-94f2-00a0c" wide
@@ -93,13 +101,15 @@ rule Stuxnet_Shortcut_to
 rule Stuxnet_Malware_3 
 {
 
-    meta:
-        description = "Stuxnet Sample - file ~WTR4141.tmp"
-        author = "Florian Roth"
-        reference = "Internal Research"
-        date = "2016-07-09"
-        hash1 = "6bcf88251c876ef00b2f32cf97456a3e306c2a263d487b0a50216c6e3cc07c6a"
-        hash2 = "70f8789b03e38d07584f57581363afa848dd5c3a197f2483c6dfa4f3e7f78b9b"
+      meta:
+    description = "Stuxnet Sample - file ~WTR4141.tmp"
+    author = "Florian Roth"
+    reference = "Internal Research"
+    date = "2016-07-09"
+    hash1 = "6bcf88251c876ef00b2f32cf97456a3e306c2a263d487b0a50216c6e3cc07c6a"
+    hash2 = "70f8789b03e38d07584f57581363afa848dd5c3a197f2483c6dfa4f3e7f78b9b"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "SHELL32.DLL.ASLR." fullword wide
@@ -117,13 +127,15 @@ rule Stuxnet_Malware_3
 rule Stuxnet_Malware_4 
 {
 
-    meta:
-        description = "Stuxnet Sample - file 0d8c2bcb575378f6a88d17b5f6ce70e794a264cdc8556c8e812f0b5f9c709198"
-        author = "Florian Roth"
-        reference = "Internal Research"
-        date = "2016-07-09"
-        hash1 = "0d8c2bcb575378f6a88d17b5f6ce70e794a264cdc8556c8e812f0b5f9c709198"
-        hash2 = "1635ec04f069ccc8331d01fdf31132a4bc8f6fd3830ac94739df95ee093c555c"
+      meta:
+    description = "Stuxnet Sample - file 0d8c2bcb575378f6a88d17b5f6ce70e794a264cdc8556c8e812f0b5f9c709198"
+    author = "Florian Roth"
+    reference = "Internal Research"
+    date = "2016-07-09"
+    hash1 = "0d8c2bcb575378f6a88d17b5f6ce70e794a264cdc8556c8e812f0b5f9c709198"
+    hash2 = "1635ec04f069ccc8331d01fdf31132a4bc8f6fd3830ac94739df95ee093c555c"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $x1 = "\\objfre_w2k_x86\\i386\\guava.pdb" ascii
@@ -137,12 +149,14 @@ rule Stuxnet_Malware_4
 rule Stuxnet_maindll_decrypted_unpacked 
 {
 
-    meta:
-        description = "Stuxnet Sample - file maindll.decrypted.unpacked.dll_"
-        author = "Florian Roth"
-        reference = "Internal Research"
-        date = "2016-07-09"
-        hash1 = "4c3d7b38339d7b8adf73eaf85f0eb9fab4420585c6ab6950ebd360428af11712"
+      meta:
+    description = "Stuxnet Sample - file maindll.decrypted.unpacked.dll_"
+    author = "Florian Roth"
+    reference = "Internal Research"
+    date = "2016-07-09"
+    hash1 = "4c3d7b38339d7b8adf73eaf85f0eb9fab4420585c6ab6950ebd360428af11712"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "%SystemRoot%\\system32\\Drivers\\mrxsmb.sys;%SystemRoot%\\system32\\Drivers\\*.sys" fullword wide
@@ -161,12 +175,14 @@ rule Stuxnet_maindll_decrypted_unpacked
 rule Stuxnet_s7hkimdb 
 {
 
-    meta:
-        description = "Stuxnet Sample - file s7hkimdb.dll"
-        author = "Florian Roth"
-        reference = "Internal Research"
-        date = "2016-07-09"
-        hash1 = "4071ec265a44d1f0d42ff92b2fa0b30aafa7f6bb2160ed1d0d5372d70ac654bd"
+      meta:
+    description = "Stuxnet Sample - file s7hkimdb.dll"
+    author = "Florian Roth"
+    reference = "Internal Research"
+    date = "2016-07-09"
+    hash1 = "4071ec265a44d1f0d42ff92b2fa0b30aafa7f6bb2160ed1d0d5372d70ac654bd"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "S7HKIMDX.DLL" fullword wide

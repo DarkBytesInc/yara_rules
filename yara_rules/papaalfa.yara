@@ -1,8 +1,11 @@
 rule PapaAlfa
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    description = "PapaAlfa"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 		$ = "pmsconfig.msi" wide

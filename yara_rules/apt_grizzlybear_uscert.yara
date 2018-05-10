@@ -10,12 +10,14 @@ import "pe"
 /* Rule Set ----------------------------------------------------------------- */
 
 rule IMPLANT_1_v1 {
-   meta:
-      description = "Downrage Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "Downrage Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $STR1 = {6A ?? E8 ?? ?? FF FF 59 85 C0 74 0B 8B C8 E8 ?? ?? FF FF 8B F0
          EB 02 33 F6 8B CE E8 ?? ?? FF FF 85 F6 74 0E 8B CE E8 ?? ?? FF FF 56
@@ -25,12 +27,14 @@ rule IMPLANT_1_v1 {
 }
 
 rule IMPLANT_1_v2 {
-   meta:
-      description = "Downrage Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "Downrage Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $STR1 = {83 3E 00 53 74 4F 8B 46 04 85 C0 74 48 83 C0 02 50 E8 ?? ?? 00
          00 8B D8 59 85 DB 74 38 8B 4E 04 83 F9 FF 7E 21 57 }
@@ -41,12 +45,14 @@ rule IMPLANT_1_v2 {
 }
 
 rule IMPLANT_1_v3 {
-   meta:
-      description = "Downrage Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "Downrage Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $rol7encode = { 0F B7 C9 C1 C0 07 83 C2 02 33 C1 0F B7 0A 47 66 85 C9 75 }
    condition:
@@ -55,12 +61,14 @@ rule IMPLANT_1_v3 {
 }
 
 rule IMPLANT_1_v4 {
-   meta:
-      description = "Downrage Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "Downrage Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $XOR_LOOP = { 8B 45 FC 8D 0C 06 33 D2 6A 0B 8B C6 5B F7 F3 8A 82 ?? ??
          ?? ?? 32 04 0F 46 88 01 3B 75 0C 7C E0 }
@@ -69,12 +77,14 @@ rule IMPLANT_1_v4 {
 }
 
 rule IMPLANT_1_v5 {
-   meta:
-      description = "Downrage Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "Downrage Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $drivername = { 6A 30 ?? 6A 33 [5] 6A 37 [5] 6A 32 [5] 6A 31 [5] 6A 77
          [5] 6A 69 [5] 6A 6E [5] 6A 2E [5] 6A 73 [5-9] 6A 79 [5] 6A 73 }
@@ -88,12 +98,14 @@ rule IMPLANT_1_v5 {
 /* TOO MANY FALSE POSITIVES
 
 rule IMPLANT_1_v6 {
-   meta:
-      description = "Downrage Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "Downrage Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $XORopcodes_eax = { 35 (22 07 15 0e|56 d7 a7 0a) }
       $XORopcodes_others = { 81 (F1|F2|F3|F4|F5|F6|F7) (22 07 15 0E|56 D7 A7 0A) }
@@ -105,12 +117,14 @@ rule IMPLANT_1_v6 {
 */
 
 rule IMPLANT_1_v7 {
-   meta:
-      description = "Downrage Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "Downrage Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $XOR_FUNCT = { C7 45 ?? ?? ?? 00 10 8B 0E 6A ?? FF 75 ?? E8 ?? ?? FF FF }
    condition:
@@ -118,12 +132,14 @@ rule IMPLANT_1_v7 {
 }
 
 rule IMPLANT_2_v1 {
-   meta:
-      description = "CORESHELL/SOURFACE Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "CORESHELL/SOURFACE Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $STR1 = { 8d ?? fa [2] e8 [2] FF FF C7 [2-5] 00 00 00 00 8D [2-5] 5? 6a 00 6a 01}
    condition:
@@ -131,12 +147,14 @@ rule IMPLANT_2_v1 {
 }
 
 rule IMPLANT_2_v2 {
-   meta:
-      description = "CORESHELL/SOURFACE Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "CORESHELL/SOURFACE Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $STR1 = { 83 ?? 06 [7-17] fa [0-10] 45 [2-4] 48 [2-4] e8 [2] FF FF [6-8]
          48 8d [3] 48 89 [3] 45 [2] 4? [1-2] 01}
@@ -145,12 +163,14 @@ rule IMPLANT_2_v2 {
 }
 
 rule IMPLANT_2_v3 {
-   meta:
-      description = "CORESHELL/SOURFACE Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "CORESHELL/SOURFACE Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $STR1 = {C1 EB 07 8D ?? 01 32 1C ?? 33 D2 }
       $STR2 = {2B ?? 83 ?? 06 0F 83 ?? 00 00 00 EB 02 33 }
@@ -161,12 +181,14 @@ rule IMPLANT_2_v3 {
 }
 
 rule IMPLANT_2_v4 {
-   meta:
-      description = "CORESHELL/SOURFACE Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "CORESHELL/SOURFACE Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $STR1 = {55 8b ec 6a fe 68 [4] 68 [4] 64 A1 00 00 00 00 50 83 EC 0C 53
          56 57 A1 [4] 31 45 F8 33 C5 50 8D 45 F0 64 A3 00 00 00 00 [8-14] 68
@@ -176,12 +198,14 @@ rule IMPLANT_2_v4 {
 }
 
 rule IMPLANT_2_v5 {
-   meta:
-      description = "CORESHELL/SOURFACE Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "CORESHELL/SOURFACE Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $STR1 = {48 83 [2] 48 89 [3] c7 44 [6] 4c 8d 05 [3] 00 BA 01 00 00 00 33
          C9 ff 15 [2] 00 00 ff 15 [2] 00 00 3D B7 00 00 00 75 ?? 48 8D 15 ?? 00
@@ -191,12 +215,14 @@ rule IMPLANT_2_v5 {
 }
 
 rule IMPLANT_2_v6 {
-   meta:
-      description = "CORESHELL/SOURFACE Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "CORESHELL/SOURFACE Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $STR1 = { e8 [2] ff ff 8b [0-6] 00 04 00 00 7F ?? [1-2] 00 02 00 00 7F
          ?? [1-2] 00 01 00 00 7F ?? [1-2] 80 00 00 00 7F ?? 83 ?? 40 7F}
@@ -205,12 +231,14 @@ rule IMPLANT_2_v6 {
 }
 
 rule IMPLANT_2_v7 {
-   meta:
-      description = "CORESHELL/SOURFACE Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "CORESHELL/SOURFACE Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = {10 A0 FA FD 83 3D 28 D4 1F FF 77 5? ?8 B4 50 CC 1E B0 78 D7 90 13
          21 C0 23 3D 28 BC 78 95 DE 4B B0 60 00 00 0F 7F 38 B4 50 C8 D5 9F E0
@@ -226,12 +254,14 @@ rule IMPLANT_2_v7 {
 }
 
 rule IMPLANT_2_v8 {
-   meta:
-      description = "CORESHELL/SOURFACE Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "CORESHELL/SOURFACE Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $STR1 = {8B ?? 44 89 44 24 60 41 F7 E0 8B F2 B8 AB AA AA AA C1 EE 02 89
          74 24 58 44 8B ?? 41 F7 ?? 8B CA BA 03 00 00 00 C1 E9 02 89 0C 24 8D
@@ -251,12 +281,14 @@ rule IMPLANT_2_v8 {
 }
 
 rule IMPLANT_2_v9 {
-   meta:
-      description = "CORESHELL/SOURFACE Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "CORESHELL/SOURFACE Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $STR1 = { 8A C3 02 C0 02 D8 8B 45 F8 02 DB 83 C1 02 03 45 08 88 5D 0F 89
          45 E8 8B FF 0F B6 5C 0E FE 8B 45 F8 03 C1 0F AF D8 8D 51 01 89 55 F4
@@ -278,12 +310,14 @@ rule IMPLANT_2_v9 {
 }
 
 rule IMPLANT_2_v10 {
-   meta:
-      description = "CORESHELL/SOURFACE Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "CORESHELL/SOURFACE Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $STR1 = { 83 ?? 06 [7-17] fa [0-10] 45 [2-4] 48 [2-4] e8 [2] FF FF [6-8]
          48 8d [3] 48 89 [3] 45 [2] 4? [1-2] 01}
@@ -292,12 +326,14 @@ rule IMPLANT_2_v10 {
 }
 
 rule IMPLANT_2_v11 {
-   meta:
-      description = "CORESHELL/SOURFACE Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "CORESHELL/SOURFACE Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $STR1 = {55 8b ec 6a fe 68 [4] 68 [4] 64 A1 00 00 00 00 50 83 EC 0C 53
          56 57 A1 [4] 31 45 F8 33 C5 50 8D 45 F0 64 A3 00 00 00 00 [8-14] 68
@@ -307,12 +343,14 @@ rule IMPLANT_2_v11 {
 }
 
 rule IMPLANT_2_v12 {
-   meta:
-      description = "CORESHELL/SOURFACE Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "CORESHELL/SOURFACE Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $STR1 = {48 83 [2] 48 89 [3] c7 44 [6] 4c 8d 05 [3] 00 BA 01 00 00 00
          33 C9 ff 15 [2] 00 00 ff 15 [2] 00 00 3D B7 00 00 00 75 ?? 48 8D 15
@@ -322,12 +360,14 @@ rule IMPLANT_2_v12 {
 }
 
 rule IMPLANT_2_v13 {
-   meta:
-      description = "CORESHELL/SOURFACE Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "CORESHELL/SOURFACE Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $STR1 = { 83 ?? 06 [7-17] fa [0-10] 45 [2-4] 48 [2-4] e8 [2] FF FF
          [6-8] 48 8d [3] 48 89 [3] 45 [2] 4? [1-2] 01}
@@ -336,12 +376,14 @@ rule IMPLANT_2_v13 {
 }
 
 rule IMPLANT_2_v14 {
-   meta:
-      description = "CORESHELL/SOURFACE Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "CORESHELL/SOURFACE Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $STR1 = {8B ?? 44 89 44 24 60 41 F7 E0 8B F2 B8 AB AA AA AA C1 EE 02 89
          74 24 58 44 8B ?? 41 F7 ?? 8B CA BA 03 00 00 00 C1 E9 02 89 0C 24 8D
@@ -361,12 +403,14 @@ rule IMPLANT_2_v14 {
 }
 
 rule IMPLANT_2_v15 {
-   meta:
-      description = "CORESHELL/SOURFACE Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "CORESHELL/SOURFACE Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $XOR_LOOP1 = { 32 1C 02 33 D2 8B C7 89 5D E4 BB 06 00 00 00 F7 F3 }
       $XOR_LOOP2 = { 32 1C 02 8B C1 33 D2 B9 06 00 00 00 F7 F1 }
@@ -377,12 +421,14 @@ rule IMPLANT_2_v15 {
 }
 
 rule IMPLANT_2_v16 {
-   meta:
-      description = "CORESHELL/SOURFACE Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "CORESHELL/SOURFACE Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $OBF_FUNCT = { 0F B6 1C 0B 8D 34 08 8D 04 0A 0F AF D8 33 D2 8D 41 FF F7
          75 F8 8B 45 0C C1 EB 07 8D 79 01 32 1C 02 33 D2 8B C7 89 5D E4 BB 06
@@ -395,12 +441,14 @@ rule IMPLANT_2_v16 {
 }
 
 rule IMPLANT_2_v17  {
-   meta:
-      description = "CORESHELL/SOURFACE Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "CORESHELL/SOURFACE Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $STR1 = { 24108b44241c894424148b4424246836 }
       $STR2 = { 518d4ddc516a018bd08b4de4e8360400 }
@@ -412,12 +460,14 @@ rule IMPLANT_2_v17  {
 }
 
 rule IMPLANT_2_v18 {
-   meta:
-      description = "CORESHELL/SOURFACE Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "CORESHELL/SOURFACE Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $STR1 = { 8A C1 02 C0 8D 1C 08 8B 45 F8 02 DB 8D 4A 02 8B 55 0C 88 5D FF
          8B 5D EC 83 C2 FE 03 D8 89 55 E0 89 5D DC 8D 49 00 03 C1 8D 34 0B 0F
@@ -440,12 +490,14 @@ rule IMPLANT_2_v18 {
 }
 
 rule IMPLANT_2_v19 {
-   meta:
-      description = "CORESHELL/SOURFACE Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "CORESHELL/SOURFACE Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $obfuscated_RSA1 = { 7C 41 B4 DB ED B0 B8 47 F1 9C A1 49 B6 57 A6 CC D6
          74 B5 52 12 4D FC B1 B6 3B 85 73 DF AB 74 C9 25 D8 3C EA AE 8F 5E D2
@@ -467,12 +519,14 @@ rule IMPLANT_2_v19 {
 }
 
 rule IMPLANT_2_v20 {
-   meta:
-      description = "CORESHELL/SOURFACE Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "CORESHELL/SOURFACE Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $func = { 0F B6 5C 0A FE 8D 34 02 8B 45 D4 03 C2 0F AF D8 8D 7A 01 8D 42
          FF 33 D2 F7 75 F4 C1 EB 07 8B C7 32 1C 0A 33 D2 B9 06 00 00 00 F7 F1
@@ -485,12 +539,14 @@ rule IMPLANT_2_v20 {
 }
 
 rule IMPLANT_3_v1 {
-   meta:
-      description = "X-Agent/CHOPSTICK Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "X-Agent/CHOPSTICK Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $STR1 = ">process isn't exist<" ascii wide
       $STR2 = "shell\\open\\command=\"System Volume Information\\USBGuard.exe\" install" ascii wide
@@ -503,12 +559,14 @@ rule IMPLANT_3_v1 {
 }
 
 rule IMPLANT_3_v2 {
-   meta:
-      description = "X-Agent/CHOPSTICK Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "X-Agent/CHOPSTICK Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $base_key_moved = {C7 45 ?? 3B C6 73 0F C7 45 ?? 8B 07 85 C0 C7 45 ?? 74
          02 FF D0 C7 45 ?? 83 C7 04 3B C7 45 ?? FE 72 F1 5F C7 45 ?? 5E C3 8B
@@ -524,12 +582,14 @@ rule IMPLANT_3_v2 {
 }
 
 rule IMPLANT_3_v3 {
-   meta:
-      description = "X-Agent/CHOPSTICK Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "X-Agent/CHOPSTICK Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $STR1 = ".?AVAgentKernel@@"
       $STR2 = ".?AVIAgentModule@@"
@@ -540,12 +600,14 @@ rule IMPLANT_3_v3 {
 }
 
 rule IMPLANT_4_v1 {
-   meta:
-      description = "BlackEnergy / Voodoo Bear Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "BlackEnergy / Voodoo Bear Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $STR1 = {55 8B EC 81 EC 54 01 00 00 83 65 D4 00 C6 45 D8 61 C6 45 D9 64
          C6 45 DA 76 C6 45 DB 61 C6 45 DC 70 C6 45 DD 69 C6 45 DE 33 C6 45 DF
@@ -557,12 +619,14 @@ rule IMPLANT_4_v1 {
 }
 
 rule IMPLANT_4_v2 {
-   meta:
-      description = "BlackEnergy / Voodoo Bear Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "BlackEnergy / Voodoo Bear Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $BUILD_USER32 = {75 73 65 72 ?? ?? ?? 33 32 2E 64}
       $BUILD_ADVAPI32 = {61 64 76 61 ?? ?? ?? 70 69 33 32}
@@ -575,12 +639,14 @@ rule IMPLANT_4_v2 {
 /* Some false positives - replaced with alternative rule (see below)
 
 rule IMPLANT_4_v3 {
-   meta:
-      description = "BlackEnergy / Voodoo Bear Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "BlackEnergy / Voodoo Bear Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $a1 = "Adobe Flash Player Installer" wide nocase
       $a3 = "regedt32.exe" wide nocase
@@ -839,13 +905,15 @@ rule IMPLANT_4_v3 {
 /* Alternative Rule Set ---------------------------------------------------- */
 
 rule IMPLANT_4_v3_AlternativeRule {
-   meta:
-      description = "BlackEnergy / Voodoo Bear Implant by APT28"
-      comment = "Alternative rule - not based on the original samples but samples on which the original rule matched"
-      author = "Florian Roth"
-      reference = "US CERT Grizzly Steppe Report"
-      date = "2017-02-12"
-      hash1 = "2244fe9c5d038edcb5406b45361613cf3909c491e47debef35329060b00c985a"
+     meta:
+    description = "BlackEnergy / Voodoo Bear Implant by APT28"
+    comment = "Alternative rule - not based on the original samples but samples on which the original rule matched"
+    author = "Florian Roth"
+    reference = "US CERT Grizzly Steppe Report"
+    date = "2017-02-12"
+    hash1 = "2244fe9c5d038edcb5406b45361613cf3909c491e47debef35329060b00c985a"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $op1 = { 33 c9 41 ff 13 13 c9 ff 13 72 f8 c3 53 1e 01 00 } /* Opcode */
       $op2 = { 21 da 40 00 00 a0 40 00 08 a0 40 00 b0 70 40 00 } /* Opcode */
@@ -856,12 +924,14 @@ rule IMPLANT_4_v3_AlternativeRule {
 /* Alternative Rule Set ---------------------------------------------------- */
 
 rule IMPLANT_4_v4 {
-   meta:
-      description = "BlackEnergy / Voodoo Bear Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "BlackEnergy / Voodoo Bear Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $DK_format1 = "/c format %c: /Y /Q" ascii
       $DK_format2 = "/c format %c: /Y /X /FS:NTFS" ascii
@@ -872,12 +942,14 @@ rule IMPLANT_4_v4 {
 }
 
 rule IMPLANT_4_v5 {
-   meta:
-      description = "BlackEnergy / Voodoo Bear Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "BlackEnergy / Voodoo Bear Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $GEN_HASH = {0F BE C9 C1 C0 07 33 C1}
    condition:
@@ -889,12 +961,14 @@ rule IMPLANT_4_v5 {
 /* TOO MANY FALSE POSITIVES
 
 rule IMPLANT_4_v6 {
-   meta:
-      description = "BlackEnergy / Voodoo Bear Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "BlackEnergy / Voodoo Bear Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $STR1 = "DispatchCommand" wide ascii
       $STR2 = "DispatchEvent" wide ascii
@@ -906,12 +980,14 @@ rule IMPLANT_4_v6 {
 */
 
 rule IMPLANT_4_v7 {
-   meta:
-      description = "BlackEnergy / Voodoo Bear Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "BlackEnergy / Voodoo Bear Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $sb1 = {C7 [1-5] 33 32 2E 64 C7 [1-5] 77 73 32 5F 66 C7 [1-5] 6C 6C}
       $sb2 = {C7 [1-5] 75 73 65 72 C7 [1-5] 33 32 2E 64 66 C7 [1-5] 6C 6C}
@@ -929,12 +1005,14 @@ rule IMPLANT_4_v7 {
 }
 
 rule IMPLANT_4_v8 {
-   meta:
-      description = "BlackEnergy / Voodoo Bear Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "BlackEnergy / Voodoo Bear Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $f1 = {5E 81 EC 04 01 00 00 8B D4 68 04 01 00 00 52 6A 00 FF 57 1C 8B D4
          33 C9 03 D0 4A 41 3B C8 74 05 80 3A 5C 75 F5 42 81 EC 04 01 00 00 8B
@@ -958,12 +1036,14 @@ rule IMPLANT_4_v8 {
 }
 
 rule IMPLANT_4_v9 {
-   meta:
-      description = "BlackEnergy / Voodoo Bear Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "BlackEnergy / Voodoo Bear Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $a = "wevtutil clear-log" ascii wide nocase
       $b = "vssadmin delete shadows" ascii wide nocase
@@ -979,12 +1059,14 @@ rule IMPLANT_4_v9 {
 }
 
 rule IMPLANT_4_v10 {
-   meta:
-      description = "BlackEnergy / Voodoo Bear Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "BlackEnergy / Voodoo Bear Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $ ={A1B05C72}
       $ ={EB3D0384}
@@ -1011,12 +1093,14 @@ rule IMPLANT_4_v10 {
 }
 
 rule IMPLANT_4_v11 {
-   meta:
-      description = "BlackEnergy / Voodoo Bear Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "BlackEnergy / Voodoo Bear Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $ = "/c format %c: /Y /X /FS:NTFS"
       $ = ".exe.sys.drv.doc.docx.xls.xlsx.mdb.ppt.pptx.xml.jpg.jpeg.ini.inf.ttf" wide
@@ -1031,12 +1115,14 @@ rule IMPLANT_4_v11 {
 /* Deactivated - Slowing down scanning
 
 rule IMPLANT_4_v12 {
-   meta:
-      description = "BlackEnergy / Voodoo Bear Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "BlackEnergy / Voodoo Bear Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $CMP1 = {81 ?? 4D 5A 00 00 }
       $SUB1 = {81 ?? 00 10 00 00}
@@ -1052,12 +1138,14 @@ rule IMPLANT_4_v12 {
 */
 
 rule IMPLANT_4_v13 {
-   meta:
-      description = "BlackEnergy / Voodoo Bear Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "BlackEnergy / Voodoo Bear Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $XMLDOM1 = {81 BF 33 29 36 7B D2 11 B2 0E 00 C0 4F 98 3E 60}
       $XMLDOM2 = {90 BF 33 29 36 7B D2 11 B2 0E 00 C0 4F 98 3E 60}
@@ -1074,12 +1162,14 @@ rule IMPLANT_4_v13 {
 }
 
 rule IMPLANT_5_v1 {
-   meta:
-      description = "XTunnel Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "XTunnel Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $hexstr = {2D 00 53 00 69 00 00 00 2D 00 53 00 70 00 00 00 2D 00 55 00
          70 00 00 00 2D 00 50 00 69 00 00 00 2D 00 50 00 70 00 00 00}
@@ -1092,12 +1182,14 @@ rule IMPLANT_5_v1 {
 }
 
 rule IMPLANT_5_v2 {
-   meta:
-      description = "XTunnel Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "XTunnel Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $key0 = { 987AB999FE0924A2DF0A412B14E26093746FCDF9BA31DC05536892C33B116AD3 }
       $key1 = { 8B236C892D902B0C9A6D37AE4F9842C3070FBDC14099C6930158563C6AC00FF5 }
@@ -1232,12 +1324,14 @@ rule IMPLANT_5_v2 {
 }
 
 rule IMPLANT_5_v3 {
-   meta:
-      description = "XTunnel Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "XTunnel Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $BYTES1 = { 0F AF C0 6? C0 07 00 00 00 2D 01 00 00 00 0F AF ?? 39 ?8 }
       $BYTES2 = { 0F AF C0 6? C0 07 48 0F AF ?? 39 ?8 }
@@ -1246,12 +1340,14 @@ rule IMPLANT_5_v3 {
 }
 
 rule IMPLANT_5_v4 {
-   meta:
-      description = "XTunnel Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "XTunnel Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $FBKEY1 = { 987AB999FE0924A2DF0A412B14E26093746FCDF9BA31DC05536892C33B116AD3 }
       $FBKEY2 = { 8B236C892D902B0C9A6D37AE4F9842C3070FBDC14099C6930158563C6AC00FF5 }
@@ -1264,12 +1360,14 @@ rule IMPLANT_5_v4 {
 
 rule IMPLANT_6_v1
 {
-   meta:
-      description = "Sednit / EVILTOSS Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "Sednit / EVILTOSS Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $STR1 = "dll.dll" wide ascii
       $STR2 = "Init1" wide ascii
@@ -1280,12 +1378,14 @@ rule IMPLANT_6_v1
 }
 
 rule IMPLANT_6_v2 {
-   meta:
-      description = "Sednit / EVILTOSS Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "Sednit / EVILTOSS Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $obf_func = { 8B 45 F8 6A 07 03 C7 33 D2 89 45 E8 8D 47 01 5B 02 4D 0F F7 F3 6A 07 8A 04 32 33 D2 F6 E9 8A C8 8B C7 F7 F3 8A 44 3E FE 02 45 FC 02 0C 32 B2 03 F6 EA 8A D8 8D 47 FF 33 D2 5F F7 F7 02 5D 14 8B 45 E8 8B 7D F4 C0 E3 06 02 1C 32 32 CB 30 08 8B 4D 14 41 47 83 FF 09 89 4D 14 89 7D F4 72 A1 }
    condition:
@@ -1294,12 +1394,14 @@ rule IMPLANT_6_v2 {
 }
 
 rule IMPLANT_6_v3 {
-   meta:
-      description = "Sednit / EVILTOSS Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "Sednit / EVILTOSS Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $deob_func = { 8D 46 01 02 D1 83 E0 07 8A 04 38 F6 EA 8B D6 83 E2 07 0A
          04 3A 33 D2 8A 54 37 FE 03 D3 03 D1 D3 EA 32 C2 8D 56 FF 83 E2 07 8A
@@ -1310,12 +1412,14 @@ rule IMPLANT_6_v3 {
 }
 
 rule IMPLANT_6_v4 {
-   meta:
-      description = "Sednit / EVILTOSS Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "Sednit / EVILTOSS Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $ASM = {53 5? 5? [6-15] ff d? 8b ?? b? a0 86 01 00 [7-13] ff d? ?b
          [6-10] c0 [0-1] c3}
@@ -1325,12 +1429,14 @@ rule IMPLANT_6_v4 {
 }
 
 rule IMPLANT_6_v5 {
-   meta:
-      description = "Sednit / EVILTOSS Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "Sednit / EVILTOSS Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $STR1 = { 83 EC 18 8B 4C 24 24 B8 AB AA AA AA F7 E1 8B 44 24 20 53 55 8B
          EA 8D 14 08 B8 AB AA AA AA 89 54 24 1C F7 E2 56 8B F2 C1 ED 02 8B DD
@@ -1360,12 +1466,14 @@ rule IMPLANT_6_v5 {
 }
 
 rule IMPLANT_6_v6 {
-   meta:
-      description = "Sednit / EVILTOSS Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "Sednit / EVILTOSS Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $Init1_fun = {68 10 27 00 00 FF 15 ?? ?? ?? ?? A1 ?? ?? ?? ?? 6A FF 50
          FF 15 ?? ?? ?? ?? 33 C0 C3}
@@ -1377,12 +1485,14 @@ rule IMPLANT_6_v6 {
 /* TOO MANY FALSE POSITIVES
 
 rule IMPLANT_6_v7 {
-   meta:
-      description = "Sednit / EVILTOSS Implant by APT28"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "Sednit / EVILTOSS Implant by APT28"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $STR1 = "Init1"
       $OPT1 = "ServiceMain"
@@ -1398,12 +1508,14 @@ rule IMPLANT_6_v7 {
 */
 
 rule IMPLANT_7_v1 {
-   meta:
-      description = "Implant 7 by APT29"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "Implant 7 by APT29"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $STR1 = { 8A 44 0A 03 32 C3 0F B6 C0 66 89 04 4E 41 3B CF 72 EE }
       $STR2 = { F3 0F 6F 04 08 66 0F EF C1 F3 0F 7F 04 11 83 C1 10 3B CF 72 EB }
@@ -1413,12 +1525,14 @@ rule IMPLANT_7_v1 {
 
 rule IMPLANT_8_v1
 {
-   meta:
-      description = "HAMMERTOSS / HammerDuke Implant by APT29"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "HAMMERTOSS / HammerDuke Implant by APT29"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $DOTNET = "mscorlib" ascii
       $REF_URL = "https://www.google.com/url?sa=" wide
@@ -1441,12 +1555,14 @@ rule IMPLANT_8_v1
 /* TOO MANY FALSE POSITIVES
 
 rule IMPLANT_8_v2 {
-   meta:
-      description = "HAMMERTOSS / HammerDuke Implant by APT29"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "HAMMERTOSS / HammerDuke Implant by APT29"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $DOTNET= "mscorlib" ascii
       $XOR = {61 20 AA 00 00 00 61}
@@ -1457,12 +1573,14 @@ rule IMPLANT_8_v2 {
 */
 
 rule IMPLANT_9_v1 {
-   meta:
-      description = "Onion Duke Implant by APT29"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "Onion Duke Implant by APT29"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $STR1 = { 8B 03 8A 54 01 03 32 55 FF 41 88 54 39 FF 3B CE 72 EE }
       $STR2 = { 8B C8 83 E1 03 8A 54 19 08 8B 4D 08 32 54 01 04 40 88 54 38 FF
@@ -1476,12 +1594,14 @@ rule IMPLANT_9_v1 {
 /* TOO MANY FALSE POSITIVES
 
 rule IMPLANT_10_v1 {
-   meta:
-      description = "CozyDuke / CozyCar / CozyBear Implant by APT29"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "CozyDuke / CozyCar / CozyBear Implant by APT29"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $STR1 = {33 ?? 83 F2 ?? 81 E2 FF 00 00 00}
       $STR2 = {0F BE 14 01 33 D0 ?? F2 [1-4] 81 E2 FF 00 00 00 66 89 [6] 40 83
@@ -1493,12 +1613,14 @@ rule IMPLANT_10_v1 {
 */
 
 rule IMPLANT_10_v2 {
-   meta:
-      description = "CozyDuke / CozyCar / CozyBear Implant by APT29"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "CozyDuke / CozyCar / CozyBear Implant by APT29"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $xor = { 34 ?? 66 33 C1 48 FF C1 }
       $nop = { 66 66 66 66 66 66 0f 1f 84 00 00 00 00 00}
@@ -1509,12 +1631,14 @@ rule IMPLANT_10_v2 {
 /* Deactivated - Slowing down scanning
 
 rule IMPLANT_11_v12 {
-   meta:
-      description = "Mini Duke Implant by APT29"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "Mini Duke Implant by APT29"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $STR1 = {63 74 00 00} // ct
       $STR2 = {72 6F 74 65} // rote
@@ -1529,12 +1653,14 @@ rule IMPLANT_11_v12 {
 }
 
 rule IMPLANT_12_v1 {
-   meta:
-      description = "Cosmic Duke Implant by APT29"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "Cosmic Duke Implant by APT29"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $FUNC = {A1 [3-5] 33 C5 89 [2-3] 56 57 83 [4-6] 64}
    condition:
@@ -1544,12 +1670,14 @@ rule IMPLANT_12_v1 {
 */
 
 rule Unidentified_Malware_Two {
-   meta:
-      description = "Unidentified Implant by APT29"
-      author = "US CERT"
-      reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
-      date = "2017-02-10"
-      score = 85
+     meta:
+    description = "Unidentified Implant by APT29"
+    author = "US CERT"
+    reference = "https://www.us-cert.gov/ncas/current-activity/2017/02/10/Enhanced-Analysis-GRIZZLY-STEPPE"
+    date = "2017-02-10"
+    score = 85
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $my_string_one = "/zapoy/gate.php"
       $my_string_two = { E3 40 FE 45 FD 0F B6 45 FD 0F B6 14 38 88 55 FF 00 55

@@ -4,10 +4,12 @@
 */
 rule php_in_image
 {
-    meta:
-        author      = "Vlad https://github.com/vlad-s"
-        date        = "2016/07/18"
-        description = "Finds image files w/ PHP code in images"
+      meta:
+    author = "Vlad https://github.com/vlad-s"
+    date = "2016/07/18"
+    description = "Finds image files w/ PHP code in images"
+    severity = "10"
+    type = "Webshell"
     strings:
         $gif = /^GIF8[79]a/
         $jfif = { ff d8 ff e? 00 10 4a 46 49 46 }

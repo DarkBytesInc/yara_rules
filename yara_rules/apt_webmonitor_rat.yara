@@ -1,11 +1,13 @@
 rule MAL_WebMonitor_RAT {
-   meta:
-      description = "Detects WebMonitor RAT"
-      author = "Florian Roth"
-      reference = "https://researchcenter.paloaltonetworks.com/2018/04/unit42-say-cheese-webmonitor-rat-comes-c2-service-c2aas/"
-      date = "2018-04-13"
-      hash1 = "27aaad8a7b3fd53d99077a9202e8bed05696c843ed2485bea6eb9e33a1c273ac"
-      hash2 = "05111c305028b5d822ecd12de9879560223c42860cc9d448c47886c236648607"
+     meta:
+    description = "Detects WebMonitor RAT"
+    author = "Florian Roth"
+    reference = "https://researchcenter.paloaltonetworks.com/2018/04/unit42-say-cheese-webmonitor-rat-comes-c2-service-c2aas/"
+    date = "2018-04-13"
+    hash1 = "27aaad8a7b3fd53d99077a9202e8bed05696c843ed2485bea6eb9e33a1c273ac"
+    hash2 = "05111c305028b5d822ecd12de9879560223c42860cc9d448c47886c236648607"
+    severity = "7"
+    type = "Malware"
    strings:
       $x1 = "send_keylog_stream_start" fullword wide
       $x2 = "KEYLOG_STREAM_STOP" fullword wide

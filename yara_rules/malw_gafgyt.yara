@@ -5,13 +5,15 @@
 
 rule Gafgyt_Botnet_generic : MALW
 {
-meta:
-description = "Gafgyt Trojan"
-author = "Joan Soriano / @joanbtl"
-date = "2017-05-01"
-version = "1.0"
-MD5 = "e3fac853203c3f1692af0101eaad87f1"
-SHA1 = "710781e62d49419a3a73624f4a914b2ad1684c6a"
+  meta:
+    description = "Gafgyt Trojan"
+    author = "Joan Soriano / @joanbtl"
+    date = "2017-05-01"
+    version = "1.0"
+    MD5 = "e3fac853203c3f1692af0101eaad87f1"
+    SHA1 = "710781e62d49419a3a73624f4a914b2ad1684c6a"
+    severity = "7"
+    type = "Malware"
 
 strings:
 	$etcTZ = "/bin/busybox;echo -e 'gayfgt'"
@@ -25,13 +27,15 @@ condition:
 
 rule Gafgyt_Botnet_oh : MALW
 {
-meta:
-description = "Gafgyt Trojan"
-author = "Joan Soriano / @joanbtl"
-date = "2017-05-025"
-version = "1.0"
-MD5 = "97f5edac312de349495cb4afd119d2a5"
-SHA1 = "916a51f2139f11e8be6247418dca6c41591f4557"
+  meta:
+    description = "Gafgyt Trojan"
+    author = "Joan Soriano / @joanbtl"
+    date = "2017-05-025"
+    version = "1.0"
+    MD5 = "97f5edac312de349495cb4afd119d2a5"
+    SHA1 = "916a51f2139f11e8be6247418dca6c41591f4557"
+    severity = "7"
+    type = "Malware"
 
     strings:
             $s1 = "busyboxterrorist"
@@ -44,13 +48,15 @@ SHA1 = "916a51f2139f11e8be6247418dca6c41591f4557"
 
 rule Gafgyt_Botnet_bash : MALW
 {
-meta:
-description = "Gafgyt Trojan"
-author = "Joan Soriano / @joanbtl"
-date = "2017-05-25"
-version = "1.0"
-MD5 = "c8d58acfe524a09d4df7ffbe4a43c429"
-SHA1 = "b41fefa8470f3b3657594af18d2ea4f6ac4d567f"
+  meta:
+    description = "Gafgyt Trojan"
+    author = "Joan Soriano / @joanbtl"
+    date = "2017-05-25"
+    version = "1.0"
+    MD5 = "c8d58acfe524a09d4df7ffbe4a43c429"
+    SHA1 = "b41fefa8470f3b3657594af18d2ea4f6ac4d567f"
+    severity = "7"
+    type = "Malware"
 
     strings:
             $s1 = "PONG!"
@@ -63,13 +69,15 @@ SHA1 = "b41fefa8470f3b3657594af18d2ea4f6ac4d567f"
 
 rule Gafgyt_Botnet_hoho : MALW
 {
-meta:
-description = "Gafgyt Trojan"
-author = "Joan Soriano / @joanbtl"
-date = "2017-05-25"
-version = "1.0"
-MD5 = "369c7c66224b343f624803d595aa1e09"
-SHA1 = "54519d2c124cb536ed0ddad5683440293d90934f"
+  meta:
+    description = "Gafgyt Trojan"
+    author = "Joan Soriano / @joanbtl"
+    date = "2017-05-25"
+    version = "1.0"
+    MD5 = "369c7c66224b343f624803d595aa1e09"
+    SHA1 = "54519d2c124cb536ed0ddad5683440293d90934f"
+    severity = "7"
+    type = "Malware"
 
     strings:
             $s1 = "PING"
@@ -82,13 +90,15 @@ SHA1 = "54519d2c124cb536ed0ddad5683440293d90934f"
 
 rule Gafgyt_Botnet_jackmy : MALW
 {
-meta:
-description = "Gafgyt Trojan"
-author = "Joan Soriano / @joanbtl"
-date = "2017-05-25"
-version = "1.0"
-MD5 = "419b8a10a3ac200e7e8a0c141b8abfba"
-SHA1 = "5433a5768c5d22dabc4d133c8a1d192d525939d5"
+  meta:
+    description = "Gafgyt Trojan"
+    author = "Joan Soriano / @joanbtl"
+    date = "2017-05-25"
+    version = "1.0"
+    MD5 = "419b8a10a3ac200e7e8a0c141b8abfba"
+    SHA1 = "5433a5768c5d22dabc4d133c8a1d192d525939d5"
+    severity = "7"
+    type = "Malware"
 
     strings:
             $s1 = "PING"
@@ -101,13 +111,15 @@ SHA1 = "5433a5768c5d22dabc4d133c8a1d192d525939d5"
 
 rule Gafgyt_Botnet_HIHI: MALW
 {
-meta:
-description = "Gafgyt Trojan"
-author = "Joan Soriano / @joanbtl"
-date = "2017-05-01"
-version = "1.0"
-MD5 = "cc99e8dd2067fd5702a4716164865c8a"
-SHA1 = "b9b316c1cc9f7a1bf8c70400861de08d95716e49"
+  meta:
+    description = "Gafgyt Trojan"
+    author = "Joan Soriano / @joanbtl"
+    date = "2017-05-01"
+    version = "1.0"
+    MD5 = "cc99e8dd2067fd5702a4716164865c8a"
+    SHA1 = "b9b316c1cc9f7a1bf8c70400861de08d95716e49"
+    severity = "7"
+    type = "Malware"
 
     strings:
             $s1 = "PING"

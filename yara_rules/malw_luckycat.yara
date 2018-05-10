@@ -7,10 +7,12 @@ import "pe"
 
 rule LuckyCatCode : LuckyCat Family 
 {
-    meta:
-        description = "LuckyCat code tricks"
-        author = "Seth Hardy"
-        last_modified = "2014-06-19"
+      meta:
+    description = "LuckyCat code tricks"
+    author = "Seth Hardy"
+    last_modified = "2014-06-19"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $xordecrypt = { BF 0F 00 00 00 F7 F7 ?? ?? ?? ?? 32 14 39 80 F2 7B }

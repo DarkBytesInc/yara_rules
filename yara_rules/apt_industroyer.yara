@@ -9,13 +9,15 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule Industroyer_Malware_1 {
-   meta:
-      description = "Detects Industroyer related malware"
-      author = "Florian Roth"
-      reference = "https://goo.gl/x81cSy"
-      date = "2017-06-13"
-      hash1 = "ad23c7930dae02de1ea3c6836091b5fb3c62a89bf2bcfb83b4b39ede15904910"
-      hash2 = "018eb62e174efdcdb3af011d34b0bf2284ed1a803718fba6edffe5bc0b446b81"
+     meta:
+    description = "Detects Industroyer related malware"
+    author = "Florian Roth"
+    reference = "https://goo.gl/x81cSy"
+    date = "2017-06-13"
+    hash1 = "ad23c7930dae02de1ea3c6836091b5fb3c62a89bf2bcfb83b4b39ede15904910"
+    hash2 = "018eb62e174efdcdb3af011d34b0bf2284ed1a803718fba6edffe5bc0b446b81"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "haslo.exe" fullword ascii
       $s2 = "SYSTEM\\CurrentControlSet\\Services\\%ls" fullword wide
@@ -34,15 +36,16 @@ rule Industroyer_Malware_1 {
 }
 
 rule Industroyer_Malware_2 {
-   meta:
-      description = "Detects Industroyer related malware"
-      author = "Florian Roth"
-      reference = "https://goo.gl/x81cSy"
-      date = "2017-06-13"
-      hash1 = "3e3ab9674142dec46ce389e9e759b6484e847f5c1e1fc682fc638fc837c13571"
-      hash2 = "37d54e3d5e8b838f366b9c202f75fa264611a12444e62ae759c31a0d041aa6e4"
-      hash3 = "ecaf150e087ddff0ec6463c92f7f6cca23cc4fd30fe34c10b3cb7c2a6d135c77"
-      hash1 = "6d707e647427f1ff4a7a9420188a8831f433ad8c5325dc8b8cc6fc5e7f1f6f47"
+     meta:
+    description = "Detects Industroyer related malware"
+    author = "Florian Roth"
+    reference = "https://goo.gl/x81cSy"
+    date = "2017-06-13"
+    hash1 = "6d707e647427f1ff4a7a9420188a8831f433ad8c5325dc8b8cc6fc5e7f1f6f47"
+    hash2 = "37d54e3d5e8b838f366b9c202f75fa264611a12444e62ae759c31a0d041aa6e4"
+    hash3 = "ecaf150e087ddff0ec6463c92f7f6cca23cc4fd30fe34c10b3cb7c2a6d135c77"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $x1 = "sc create %ls type= own start= auto error= ignore binpath= \"%ls\" displayname= \"%ls\"" fullword wide
       $x2 = "10.15.1.69:3128" fullword wide
@@ -72,12 +75,14 @@ rule Industroyer_Malware_2 {
 }
 
 rule Industroyer_Portscan_3 {
-   meta:
-      description = "Detects Industroyer related custom port scaner"
-      author = "Florian Roth"
-      reference = "https://goo.gl/x81cSy"
-      date = "2017-06-13"
-      hash1 = "893e4cca7fe58191d2f6722b383b5e8009d3885b5913dcd2e3577e5a763cdb3f"
+     meta:
+    description = "Detects Industroyer related custom port scaner"
+    author = "Florian Roth"
+    reference = "https://goo.gl/x81cSy"
+    date = "2017-06-13"
+    hash1 = "893e4cca7fe58191d2f6722b383b5e8009d3885b5913dcd2e3577e5a763cdb3f"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "!ZBfamily" fullword ascii
       $s2 = ":g/outddomo;" fullword ascii
@@ -93,11 +98,13 @@ rule Industroyer_Portscan_3 {
 }
 
 rule Industroyer_Portscan_3_Output {
-   meta:
-      description = "Detects Industroyer related custom port scaner output file"
-      author = "Florian Roth"
-      reference = "https://goo.gl/x81cSy"
-      date = "2017-06-13"
+     meta:
+    description = "Detects Industroyer related custom port scaner output file"
+    author = "Florian Roth"
+    reference = "https://goo.gl/x81cSy"
+    date = "2017-06-13"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "WSA library load complite." fullword ascii
       $s2 = "Connection refused" fullword ascii
@@ -106,12 +113,14 @@ rule Industroyer_Portscan_3_Output {
 }
 
 rule Industroyer_Malware_4 {
-   meta:
-      description = "Detects Industroyer related malware"
-      author = "Florian Roth"
-      reference = "https://goo.gl/x81cSy"
-      date = "2017-06-13"
-      hash1 = "21c1fdd6cfd8ec3ffe3e922f944424b543643dbdab99fa731556f8805b0d5561"
+     meta:
+    description = "Detects Industroyer related malware"
+    author = "Florian Roth"
+    reference = "https://goo.gl/x81cSy"
+    date = "2017-06-13"
+    hash1 = "21c1fdd6cfd8ec3ffe3e922f944424b543643dbdab99fa731556f8805b0d5561"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $s1 = "haslo.dat" fullword wide
       $s2 = "defragsvc" fullword ascii
@@ -123,12 +132,14 @@ rule Industroyer_Malware_4 {
 }
 
 rule Industroyer_Malware_5 {
-   meta:
-      description = "Detects Industroyer related malware"
-      author = "Florian Roth"
-      reference = "https://goo.gl/x81cSy"
-      date = "2017-06-13"
-      hash1 = "7907dd95c1d36cf3dc842a1bd804f0db511a0f68f4b3d382c23a3c974a383cad"
+     meta:
+    description = "Detects Industroyer related malware"
+    author = "Florian Roth"
+    reference = "https://goo.gl/x81cSy"
+    date = "2017-06-13"
+    hash1 = "7907dd95c1d36cf3dc842a1bd804f0db511a0f68f4b3d382c23a3c974a383cad"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $x1 = "D2MultiCommService.exe" fullword ascii
       $x2 = "Crash104.dll" fullword ascii

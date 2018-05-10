@@ -4,8 +4,11 @@
 */
 rule glassrat: RAT
 {
-   meta:
-        author = "Brian Wallace @botnet_hunter"
+     meta:
+    author = "Brian Wallace @botnet_hunter"
+    description = "glassrat:"
+    severity = "7"
+    type = "Malware"
    strings:
     	$a = "PostQuitMessage"
         $b = "pwlfnn10,gzg"

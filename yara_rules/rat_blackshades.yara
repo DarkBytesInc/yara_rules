@@ -7,9 +7,11 @@ import "pe"
 
 rule BlackShades_3 : Trojan RAT
 {
-    meta:
-        description = "BlackShades RAT"
-	author = "botherder https://github.com/botherder"
+      meta:
+    description = "BlackShades RAT"
+    author = "botherder https://github.com/botherder"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $mod1 = /(m)odAPI/
@@ -64,10 +66,12 @@ rule BlackShades_3 : Trojan RAT
 
 rule BlackShades2 : Trojan RAT
 {
-	meta:
-		author="Kevin Falcoz"
-		date="26/06/2013"
-		description="BlackShades Server"
+	  meta:
+    author = "Kevin Falcoz"
+    date = "26/06/2013"
+    description = "BlackShades Server"
+    severity = "7"
+    type = "Malware"
 		
 	strings:
 		$signature1={62 73 73 5F 73 65 72 76 65 72}
@@ -80,12 +84,14 @@ rule BlackShades2 : Trojan RAT
 
 rule BlackShades_4 : rat
 {
-	meta:
-		description = "BlackShades"
-		author = "Jean-Philippe Teissier / @Jipe_"
-		date = "2013-01-12"
-		filetype = "memory"
-		version = "1.0" 
+	  meta:
+    description = "BlackShades"
+    author = "Jean-Philippe Teissier / @Jipe_"
+    date = "2013-01-12"
+    filetype = "memory"
+    version = "1.0"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$a = { 42 00 6C 00 61 00 63 00 6B 00 73 00 68 00 61 00 64 00 65 00 73 }
@@ -102,10 +108,12 @@ rule BlackShades_4 : rat
 
 rule BlackShades : Trojan
 {
-	meta:
-		author="Kevin Falcoz"
-		date="26/06/2013"
-		description="BlackShades Server"
+	  meta:
+    author = "Kevin Falcoz"
+    date = "26/06/2013"
+    description = "BlackShades Server"
+    severity = "7"
+    type = "Malware"
 		
 	strings:
 		$signature1={62 73 73 5F 73 65 72 76 65 72}
@@ -118,12 +126,14 @@ rule BlackShades : Trojan
 
 rule BlackShades_25052015
 {
-    meta:
-        author = "Brian Wallace (@botnet_hunter)"
-        date = "2014/04"
-        ref = "http://malwareconfig.com/stats/PoisonIvy"
-        ref = "http://blog.cylance.com/a-study-in-bots-blackshades-net"
-        family = "blackshades"
+      meta:
+    author = "Brian Wallace (@botnet_hunter)"
+    date = "2014/04"
+    ref = "http://blog.cylance.com/a-study-in-bots-blackshades-net"
+    family = "blackshades"
+    description = "BlackShades_25052015"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $string1 = "bss_server"

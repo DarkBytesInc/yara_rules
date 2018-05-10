@@ -7,8 +7,11 @@ import "pe"
 rule APT_DeputyDog_Fexel
 {
 
-meta:
+  meta:
     author = "ThreatConnect Intelligence Research Team"
+    description = "APT_DeputyDog_Fexel"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
 strings:
     $180 = "180.150.228.102" wide ascii
@@ -24,11 +27,14 @@ condition:
 rule APT_DeputyDog
 {
 
-    meta:
-        Author      = "FireEye Labs"
-        Date        = "2013/09/21"
-        Description = "detects string seen in samples used in 2013-3893 0day attacks"
-        Reference   = "https://www.fireeye.com/blog/threat-research/2013/09/operation-deputydog-zero-day-cve-2013-3893-attack-against-japanese-targets.html"
+      meta:
+    Author = "FireEye Labs"
+    Date = "2013/09/21"
+    Description = "detects string seen in samples used in 2013-3893 0day attacks"
+    Reference = "https://www.fireeye.com/blog/threat-research/2013/09/operation-deputydog-zero-day-cve-2013-3893-attack-against-japanese-targets.html"
+    description = "APT_DeputyDog"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $mz = {4d 5a}

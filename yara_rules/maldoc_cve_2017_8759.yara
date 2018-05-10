@@ -20,12 +20,14 @@ private rule RTFFILE {
 /* Rule Set ----------------------------------------------------------------- */
 
 rule CVE_2017_8759_Mal_HTA {
-   meta:
-      description = "Detects malicious files related to CVE-2017-8759 - file cmd.hta"
-      author = "Florian Roth"
-      reference = "https://github.com/Voulnet/CVE-2017-8759-Exploit-sample"
-      date = "2017-09-14"
-      hash1 = "fee2ab286eb542c08fdfef29fabf7796a0a91083a0ee29ebae219168528294b5"
+     meta:
+    description = "Detects malicious files related to CVE-2017-8759 - file cmd.hta"
+    author = "Florian Roth"
+    reference = "https://github.com/Voulnet/CVE-2017-8759-Exploit-sample"
+    date = "2017-09-14"
+    hash1 = "fee2ab286eb542c08fdfef29fabf7796a0a91083a0ee29ebae219168528294b5"
+    severity = "7"
+    type = "Malware"
    strings:
       $x1 = "Error = Process.Create(\"powershell -nop cmd.exe /c" fullword ascii
    condition:
@@ -33,12 +35,14 @@ rule CVE_2017_8759_Mal_HTA {
 }
 
 rule CVE_2017_8759_Mal_Doc {
-   meta:
-      description = "Detects malicious files related to CVE-2017-8759 - file Doc1.doc"
-      author = "Florian Roth"
-      reference = "https://github.com/Voulnet/CVE-2017-8759-Exploit-sample"
-      date = "2017-09-14"
-      hash1 = "6314c5696af4c4b24c3a92b0e92a064aaf04fd56673e830f4d339b8805cc9635"
+     meta:
+    description = "Detects malicious files related to CVE-2017-8759 - file Doc1.doc"
+    author = "Florian Roth"
+    reference = "https://github.com/Voulnet/CVE-2017-8759-Exploit-sample"
+    date = "2017-09-14"
+    hash1 = "6314c5696af4c4b24c3a92b0e92a064aaf04fd56673e830f4d339b8805cc9635"
+    severity = "7"
+    type = "Malware"
    strings:
       $s1 = "soap:wsdl=http://" ascii wide nocase
       $s2 = "soap:wsdl=https://" ascii wide nocase
@@ -49,12 +53,14 @@ rule CVE_2017_8759_Mal_Doc {
 }
 
 rule CVE_2017_8759_SOAP_via_JS {
-   meta:
-      description = "Detects SOAP WDSL Download via JavaScript"
-      author = "Florian Roth"
-      reference = "https://twitter.com/buffaloverflow/status/907728364278087680"
-      date = "2017-09-14"
-      score = 60
+     meta:
+    description = "Detects SOAP WDSL Download via JavaScript"
+    author = "Florian Roth"
+    reference = "https://twitter.com/buffaloverflow/status/907728364278087680"
+    date = "2017-09-14"
+    score = 60
+    severity = "7"
+    type = "Malware"
    strings:
       $s1 = "GetObject(\"soap:wsdl=https://" ascii wide nocase
       $s2 = "GetObject(\"soap:wsdl=http://" ascii wide nocase
@@ -63,11 +69,13 @@ rule CVE_2017_8759_SOAP_via_JS {
 }
 
 rule CVE_2017_8759_SOAP_Excel {
-   meta:
-      description = "Detects malicious files related to CVE-2017-8759"
-      author = "Florian Roth"
-      reference = "https://twitter.com/buffaloverflow/status/908455053345869825"
-      date = "2017-09-15"
+     meta:
+    description = "Detects malicious files related to CVE-2017-8759"
+    author = "Florian Roth"
+    reference = "https://twitter.com/buffaloverflow/status/908455053345869825"
+    date = "2017-09-15"
+    severity = "7"
+    type = "Malware"
    strings:
       $s1 = "|'soap:wsdl=" ascii wide nocase
    condition:
@@ -75,12 +83,14 @@ rule CVE_2017_8759_SOAP_Excel {
 }
 
 rule CVE_2017_8759_SOAP_txt {
-   meta:
-      description = "Detects malicious file in releation with CVE-2017-8759 - file exploit.txt"
-      author = "Florian Roth"
-      reference = "https://github.com/Voulnet/CVE-2017-8759-Exploit-sample"
-      date = "2017-09-14"
-      hash1 = "840ad14e29144be06722aff4cc04b377364eeed0a82b49cc30712823838e2444"
+     meta:
+    description = "Detects malicious file in releation with CVE-2017-8759 - file exploit.txt"
+    author = "Florian Roth"
+    reference = "https://github.com/Voulnet/CVE-2017-8759-Exploit-sample"
+    date = "2017-09-14"
+    hash1 = "840ad14e29144be06722aff4cc04b377364eeed0a82b49cc30712823838e2444"
+    severity = "7"
+    type = "Malware"
    strings:
       $s1 = /<soap:address location="http[s]?:\/\/[^"]{8,140}.hta"/ ascii wide
       $s2 = /<soap:address location="http[s]?:\/\/[^"]{8,140}mshta.exe"/ ascii wide
@@ -89,11 +99,13 @@ rule CVE_2017_8759_SOAP_txt {
 }
 
 rule CVE_2017_8759_WSDL_in_RTF {
-   meta:
-      description = "Detects malicious RTF file related CVE-2017-8759"
-      author = "Security Doggo @xdxdxdxdoa"
-      reference = "https://twitter.com/xdxdxdxdoa/status/908665278199996416"
-      date = "2017-09-15"
+     meta:
+    description = "Detects malicious RTF file related CVE-2017-8759"
+    author = "Security Doggo @xdxdxdxdoa"
+    reference = "https://twitter.com/xdxdxdxdoa/status/908665278199996416"
+    date = "2017-09-15"
+    severity = "7"
+    type = "Malware"
    strings:
       $doc = "d0cf11e0a1b11ae1"
       $obj = "\\objupdate"

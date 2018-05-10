@@ -7,10 +7,12 @@ import "pe"
 
 rule HTMLVariant : FakeM Family HTML Variant
 {
-	meta:
-		description = "Identifier for html variant of FAKEM"
-		author = "Katie Kleemola"
-		last_updated = "2014-05-20"
+	  meta:
+    description = "Identifier for html variant of FAKEM"
+    author = "Katie Kleemola"
+    last_updated = "2014-05-20"
+    severity = "7"
+    type = "Malware"
 	
 	strings:
 		// decryption loop
@@ -24,23 +26,25 @@ rule HTMLVariant : FakeM Family HTML Variant
 }
 
 rule FakeM_Generic {
-	meta:
-		description = "Detects FakeM malware samples"
-		author = "Florian Roth"
-		reference = "http://researchcenter.paloaltonetworks.com/2016/01/scarlet-mimic-years-long-espionage-targets-minority-activists/"
-		date = "2016-01-25"
-		score = 85
-		hash1 = "631fc66e57acd52284aba2608e6f31ba19e2807367e33d8704f572f6af6bd9c3"
-		hash2 = "3d9bd26f5bd5401efa17690357f40054a3d7b438ce8c91367dbf469f0d9bd520"
-		hash3 = "53af257a42a8f182e97dcbb8d22227c27d654bea756d7f34a80cc7982b70aa60"
-		hash4 = "4a4dfffae6fc8be77ac9b2c67da547f0d57ffae59e0687a356f5105fdddc88a3"
-		hash5 = "7bfbf49aa71b8235a16792ef721b7e4195df11cb75371f651595b37690d108c8"
-		hash6 = "12dedcdda853da9846014186e6b4a5d6a82ba0cf61d7fa4cbe444a010f682b5d"
-		hash7 = "9adda3d95535c6cf83a1ba08fe83f718f5c722e06d0caff8eab4a564185971c5"
-		hash8 = "3209ab95ca7ee7d8c0140f95bdb61a37d69810a7a23d90d63ecc69cc8c51db90"
-		hash9 = "41948c73b776b673f954f497e09cc469d55f27e7b6e19acb41b77f7e64c50a33"
-		hash10 = "53cecc0d0f6924eacd23c49d0d95a6381834360fbbe2356778feb8dd396d723e"
-		hash11 = "523ad50b498bfb5ab688d9b1958c8058f905b634befc65e96f9f947e40893e5b"
+	  meta:
+    description = "Detects FakeM malware samples"
+    author = "Florian Roth"
+    reference = "http://researchcenter.paloaltonetworks.com/2016/01/scarlet-mimic-years-long-espionage-targets-minority-activists/"
+    date = "2016-01-25"
+    score = 85
+    hash1 = "631fc66e57acd52284aba2608e6f31ba19e2807367e33d8704f572f6af6bd9c3"
+    hash2 = "3d9bd26f5bd5401efa17690357f40054a3d7b438ce8c91367dbf469f0d9bd520"
+    hash3 = "53af257a42a8f182e97dcbb8d22227c27d654bea756d7f34a80cc7982b70aa60"
+    hash4 = "4a4dfffae6fc8be77ac9b2c67da547f0d57ffae59e0687a356f5105fdddc88a3"
+    hash5 = "7bfbf49aa71b8235a16792ef721b7e4195df11cb75371f651595b37690d108c8"
+    hash6 = "12dedcdda853da9846014186e6b4a5d6a82ba0cf61d7fa4cbe444a010f682b5d"
+    hash7 = "9adda3d95535c6cf83a1ba08fe83f718f5c722e06d0caff8eab4a564185971c5"
+    hash8 = "3209ab95ca7ee7d8c0140f95bdb61a37d69810a7a23d90d63ecc69cc8c51db90"
+    hash9 = "41948c73b776b673f954f497e09cc469d55f27e7b6e19acb41b77f7e64c50a33"
+    hash10 = "53cecc0d0f6924eacd23c49d0d95a6381834360fbbe2356778feb8dd396d723e"
+    hash11 = "523ad50b498bfb5ab688d9b1958c8058f905b634befc65e96f9f947e40893e5b"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$a1 = "\\system32\\kernel32.dll" fullword ascii
 		$a2 = "\\boot.lnk" fullword ascii

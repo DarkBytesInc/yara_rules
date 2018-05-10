@@ -6,15 +6,17 @@
 */
 
 rule GhostDragon_Gh0stRAT {
-	meta:
-		description = "Detects Gh0st RAT mentioned in Cylance' Ghost Dragon Report"
-		author = "Florian Roth"
-		reference = "https://blog.cylance.com/the-ghost-dragon"
-		date = "2016-04-23"
-		hash1 = "f9a669d22866cd041e2d520c5eb093188962bea8864fdfd0c0abb2b254e9f197"
-		hash2 = "99ee5b764a5db1cb6b8a4f62605b5536487d9c35a28a23de8f9174659f65bcb2"
-		hash3 = "6c7f8ba75889e0021c4616fcbee86ac06cd7f5e1e355e0cbfbbb5110c08bb6df"
-		hash4 = "b803381535ac24ce7c8fdcf6155566d208dfca63fd66ec71bbc6754233e251f5"
+	  meta:
+    description = "Detects Gh0st RAT mentioned in Cylance' Ghost Dragon Report"
+    author = "Florian Roth"
+    reference = "https://blog.cylance.com/the-ghost-dragon"
+    date = "2016-04-23"
+    hash1 = "f9a669d22866cd041e2d520c5eb093188962bea8864fdfd0c0abb2b254e9f197"
+    hash2 = "99ee5b764a5db1cb6b8a4f62605b5536487d9c35a28a23de8f9174659f65bcb2"
+    hash3 = "6c7f8ba75889e0021c4616fcbee86ac06cd7f5e1e355e0cbfbbb5110c08bb6df"
+    hash4 = "b803381535ac24ce7c8fdcf6155566d208dfca63fd66ec71bbc6754233e251f5"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$x1 = "REG ADD HKEY_LOCAL_MACHINE\\%s /v ServiceDll /t REG_EXPAND_SZ /d \"%s\"" fullword ascii
 		$x2 = "Global\\REALCHEL_GLOBAL_SUBMIT_20031020_" fullword ascii
@@ -51,12 +53,14 @@ rule GhostDragon_Gh0stRAT {
 }
 
 rule GhostDragon_Gh0stRAT_Sample2 {
-	meta:
-		description = "Detects Gh0st RAT mentioned in Cylance' Ghost Dragon Report"
-		author = "Florian Roth"
-		reference = "https://blog.cylance.com/the-ghost-dragon"
-		date = "2016-04-23"
-		hash1 = "71a52058f6b5cef66302c19169f67cf304507b4454cca83e2c36151da8da1d97"
+	  meta:
+    description = "Detects Gh0st RAT mentioned in Cylance' Ghost Dragon Report"
+    author = "Florian Roth"
+    reference = "https://blog.cylance.com/the-ghost-dragon"
+    date = "2016-04-23"
+    hash1 = "71a52058f6b5cef66302c19169f67cf304507b4454cca83e2c36151da8da1d97"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$x1 = "AdobeWpk" fullword ascii
 		$x2 = "seekin.dll" fullword ascii
@@ -72,12 +76,14 @@ rule GhostDragon_Gh0stRAT_Sample2 {
 }
 
 rule GhostDragon_Gh0stRAT_Sample3 {
-	meta:
-		description = "Detects Gh0st RAT mentioned in Cylance' Ghost Dragon Report"
-		author = "Florian Roth"
-		reference = "https://blog.cylance.com/the-ghost-dragon"
-		date = "2016-04-23"
-		hash1 = "1be9c68b31247357328596a388010c9cfffadcb6e9841fb22de8b0dc2d161c42"
+	  meta:
+    description = "Detects Gh0st RAT mentioned in Cylance' Ghost Dragon Report"
+    author = "Florian Roth"
+    reference = "https://blog.cylance.com/the-ghost-dragon"
+    date = "2016-04-23"
+    hash1 = "1be9c68b31247357328596a388010c9cfffadcb6e9841fb22de8b0dc2d161c42"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$op1 = { 44 24 15 65 88 54 24 16 c6 44 24 }
 		$op2 = { 44 24 1b 43 c6 44 24 1c 75 88 54 24 1e }

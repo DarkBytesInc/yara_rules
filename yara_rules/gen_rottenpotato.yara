@@ -8,13 +8,15 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule RottenPotato_Potato {
-   meta:
-      description = "Detects a component of privilege escalation tool Rotten Potato - file Potato.exe"
-      author = "Florian Roth"
-      reference = "https://github.com/foxglovesec/RottenPotato"
-      date = "2017-02-07"
-      score = 90
-      hash1 = "59cdbb21d9e487ca82748168682f1f7af3c5f2b8daee3a09544dd58cbf51b0d5"
+     meta:
+    description = "Detects a component of privilege escalation tool Rotten Potato - file Potato.exe"
+    author = "Florian Roth"
+    reference = "https://github.com/foxglovesec/RottenPotato"
+    date = "2017-02-07"
+    score = 90
+    hash1 = "59cdbb21d9e487ca82748168682f1f7af3c5f2b8daee3a09544dd58cbf51b0d5"
+    severity = "5"
+    type = "Unknown"
    strings:
       $x1 = "Potato.exe -ip <ip>" fullword wide
       $x2 = "-enable_httpserver true -enable_spoof true" fullword wide

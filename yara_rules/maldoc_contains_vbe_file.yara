@@ -17,10 +17,12 @@
 
 rule Contains_VBE_File : maldoc
 {
-    meta:
-        author = "Didier Stevens (https://DidierStevens.com)"
-        description = "Detect a VBE file inside a byte sequence"
-        method = "Find string starting with #@~^ and ending with ^#~@"
+      meta:
+    author = "Didier Stevens (https://DidierStevens.com)"
+    description = "Detect a VBE file inside a byte sequence"
+    method = "Find string starting with #@~^ and ending with ^#~@"
+    severity = "7"
+    type = "Malware"
     strings:
         $vbe = /#@~\^.+\^#~@/
     condition:

@@ -1,9 +1,11 @@
 rule MAL_FancyBear_ComputraceAgent {
-   meta:
-      description = "Absolute Computrace Agent Executable"
-      author = "ASERT - Arbor Networks (slightly modified by Florian Roth)"
-      date = "2018-05-01"
-      reference = "https://asert.arbornetworks.com/lojack-becomes-a-double-agent/"
+     meta:
+    description = "Absolute Computrace Agent Executable"
+    author = "ASERT - Arbor Networks (slightly modified by Florian Roth)"
+    date = "2018-05-01"
+    reference = "https://asert.arbornetworks.com/lojack-becomes-a-double-agent/"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $a = { D1 E0 F5 8B 4D 0C 83 D1 00 8B EC FF 33 83 C3 04 }
       $b1 = { 72 70 63 6E 65 74 70 2E 65 78 65 00 72 70 63 6E 65 74 70 00 }

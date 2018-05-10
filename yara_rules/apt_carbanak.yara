@@ -14,12 +14,14 @@
 rule Carbanak_0915_1
 {
 
-    meta:
-        description = "Carbanak Malware"
-        author = "Florian Roth"
-        reference = "https://www.csis.dk/en/csis/blog/4710/"
-        date = "2015-09-03"
-        score = 70
+      meta:
+    description = "Carbanak Malware"
+    author = "Florian Roth"
+    reference = "https://www.csis.dk/en/csis/blog/4710/"
+    date = "2015-09-03"
+    score = 70
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "evict1.pdb" fullword ascii
@@ -32,12 +34,14 @@ rule Carbanak_0915_1
 rule Carbanak_0915_2
 {
 
-    meta:
-        description = "Carbanak Malware"
-        author = "Florian Roth"
-        reference = "https://www.csis.dk/en/csis/blog/4710/"
-        date = "2015-09-03"
-        score = 70
+      meta:
+    description = "Carbanak Malware"
+    author = "Florian Roth"
+    reference = "https://www.csis.dk/en/csis/blog/4710/"
+    date = "2015-09-03"
+    score = 70
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "8Rkzy.exe" fullword wide
@@ -55,12 +59,14 @@ rule Carbanak_0915_2
 rule Carbanak_0915_3
 {
 
-    meta:
-        description = "Carbanak Malware"
-        author = "Florian Roth"
-        reference = "https://www.csis.dk/en/csis/blog/4710/"
-        date = "2015-09-03"
-        score = 70
+      meta:
+    description = "Carbanak Malware"
+    author = "Florian Roth"
+    reference = "https://www.csis.dk/en/csis/blog/4710/"
+    date = "2015-09-03"
+    score = 70
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww" fullword ascii

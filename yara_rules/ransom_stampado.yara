@@ -7,15 +7,14 @@ import "pe"
 
 rule stampado_overlay
 {
-meta:
-description = "Catches Stampado samples looking for \\r at the beginning of PE overlay section"
-reference = ""
-author = "Fernando Merces, FTR, Trend Micro"
-date = "2016-07"
-md5 = "a393b9536a1caa34914636d3da7378b5"
-md5 = "dbf3707a9cd090853a11dda9cfa78ff0"
-md5 = "dd5686ca7ec28815c3cf3ed3dbebdff2"
-md5 = "6337f0938e4a9c0ef44ab99deb0ef466"
+  meta:
+    description = "Catches Stampado samples looking for at the beginning of PE overlay section"
+    reference = ""
+    author = "Fernando Merces, FTR, Trend Micro"
+    date = "2016-07"
+    md5 = "6337f0938e4a9c0ef44ab99deb0ef466"
+    severity = "10"
+    type = "Ransomware"
 
 condition:
 pe.characteristics == 0x122 and

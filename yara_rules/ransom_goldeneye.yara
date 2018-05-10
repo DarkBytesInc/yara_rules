@@ -4,12 +4,14 @@
 */
 
 rule GoldenEye_Ransomware_XLS {
-   meta:
-      description = "GoldenEye XLS with Macro - file Schneider-Bewerbung.xls"
-      author = "Florian Roth"
-      reference = "https://goo.gl/jp2SkT"
-      date = "2016-12-06"
-      hash1 = "2320d4232ee80cc90bacd768ba52374a21d0773c39895b88cdcaa7782e16c441"
+     meta:
+    description = "GoldenEye XLS with Macro - file Schneider-Bewerbung.xls"
+    author = "Florian Roth"
+    reference = "https://goo.gl/jp2SkT"
+    date = "2016-12-06"
+    hash1 = "2320d4232ee80cc90bacd768ba52374a21d0773c39895b88cdcaa7782e16c441"
+    severity = "10"
+    type = "Ransomware"
    strings:
       $x1 = "fso.GetTempName();tmp_path = tmp_path.replace('.tmp', '.exe')" fullword ascii
       $x2 = "var shell = new ActiveXObject('WScript.Shell');shell.run(t'" fullword ascii
@@ -18,12 +20,14 @@ rule GoldenEye_Ransomware_XLS {
 }
 
 rule GoldenEyeRansomware_Dropper_MalformedZoomit {
-   meta:
-      description = "Auto-generated rule - file b5ef16922e2c76b09edd71471dd837e89811c5e658406a8495c1364d0d9dc690"
-      author = "Florian Roth"
-      reference = "https://goo.gl/jp2SkT"
-      date = "2016-12-06"
-      hash1 = "b5ef16922e2c76b09edd71471dd837e89811c5e658406a8495c1364d0d9dc690"
+     meta:
+    description = "Auto-generated rule - file b5ef16922e2c76b09edd71471dd837e89811c5e658406a8495c1364d0d9dc690"
+    author = "Florian Roth"
+    reference = "https://goo.gl/jp2SkT"
+    date = "2016-12-06"
+    hash1 = "b5ef16922e2c76b09edd71471dd837e89811c5e658406a8495c1364d0d9dc690"
+    severity = "10"
+    type = "Ransomware"
    strings:
       $s1 = "ZoomIt - Sysinternals: www.sysinternals.com" fullword ascii
       $n1 = "Mark Russinovich" wide

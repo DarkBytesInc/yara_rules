@@ -4,12 +4,15 @@
 
 rule AAR : RAT
 {
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2014/04"
-		ref = "http://malwareconfig.com/stats/AAR"
-		maltype = "Remote Access Trojan"
-		filetype = "exe"
+	  meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/AAR"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "AAR"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$a = "Hashtable"
@@ -26,12 +29,15 @@ rule AAR : RAT
 
 rule Ap0calypse: RAT
 {
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2014/04"
-		ref = "http://malwareconfig.com/stats/Ap0calypse"
-		maltype = "Remote Access Trojan"
-		filetype = "exe"
+	  meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/Ap0calypse"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "Ap0calypse:"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$a = "Ap0calypse"
@@ -47,12 +53,15 @@ rule Ap0calypse: RAT
 
 rule Arcom : RAT
 {
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2014/04"
-		ref = "http://malwareconfig.com/stats/Arcom"
-		maltype = "Remote Access Trojan"
-		filetype = "exe"
+	  meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/Arcom"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "Arcom"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $a1 = "CVu3388fnek3W(3ij3fkp0930di"
@@ -69,12 +78,15 @@ rule Arcom : RAT
 rule Bandook : RAT
 {
 
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2014/04"
-		ref = "http://malwareconfig.com/stats/bandook"
-		maltype = "Remote Access Trojan"
-		filetype = "exe"
+	  meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/bandook"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "Bandook"
+    severity = "7"
+    type = "Malware"
         
     strings:
     		$a = "aaaaaa1|"
@@ -96,12 +108,15 @@ rule Bandook : RAT
 
 rule BlackNix : RAT
 {
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2014/04"
-		ref = "http://malwareconfig.com/stats/BlackNix"
-		maltype = "Remote Access Trojan"
-		filetype = "exe"
+	  meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/BlackNix"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "BlackNix"
+    severity = "7"
+    type = "Malware"
         
     strings:
 		$a1 = "SETTINGS" wide
@@ -116,12 +131,15 @@ rule BlackNix : RAT
 }
 rule BlueBanana : RAT
 {
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2014/04"
-		ref = "http://malwareconfig.com/stats/BlueBanana"
-		maltype = "Remote Access Trojan"
-		filetype = "Java"
+	  meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/BlueBanana"
+    maltype = "Remote Access Trojan"
+    filetype = "Java"
+    description = "BlueBanana"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$meta = "META-INF"
@@ -137,11 +155,14 @@ rule BlueBanana : RAT
 }
 rule ClientMesh : RAT
 {
-    meta:
-        author = "Kevin Breen <kevin@techanarchy.net>"
-        date = "2014/06"
-        ref = "http://malwareconfig.com/stats/ClientMesh"
-        family = "torct"
+      meta:
+    author = "Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/06"
+    ref = "http://malwareconfig.com/stats/ClientMesh"
+    family = "torct"
+    description = "ClientMesh"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $string1 = "machinedetails"
@@ -157,12 +178,15 @@ rule ClientMesh : RAT
 }
 rule DarkRAT : RAT
 {
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2014/04"
-		ref = "http://malwareconfig.com/stats/DarkRAT"
-		maltype = "Remote Access Trojan"
-		filetype = "exe"
+	  meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/DarkRAT"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "DarkRAT"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$a = "@1906dark1996coder@"
@@ -178,12 +202,15 @@ rule DarkRAT : RAT
 }
 rule Greame : RAT
 {
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2014/04"
-		ref = "http://malwareconfig.com/stats/Greame"
-		maltype = "Remote Access Trojan"
-		filetype = "exe"
+	  meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/Greame"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "Greame"
+    severity = "7"
+    type = "Malware"
 		
 	strings:
     		$a = {23 23 23 23 40 23 23 23 23 E8 EE E9 F9 23 23 23 23 40 23 23 23 23}
@@ -200,12 +227,15 @@ rule Greame : RAT
 }
 rule HawkEye : RAT
 {
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2015/06"
-		ref = "http://malwareconfig.com/stats/HawkEye"
-		maltype = "KeyLogger"
-		filetype = "exe"
+	  meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2015/06"
+    ref = "http://malwareconfig.com/stats/HawkEye"
+    maltype = "KeyLogger"
+    filetype = "exe"
+    description = "HawkEye"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$key = "HawkEyeKeylogger" wide
@@ -224,12 +254,15 @@ rule HawkEye : RAT
 }
 rule Imminent : RAT
 {
-    meta:
-        author = " Kevin Breen <kevin@techanarchy.net>"
-        date = "2014/04"
-        ref = "http://malwareconfig.com/stats/Imminent"
-        maltype = "Remote Access Trojan"
-        filetype = "exe"
+      meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/Imminent"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "Imminent"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $v1a = "DecodeProductKey"
@@ -252,12 +285,15 @@ rule Imminent : RAT
 }
 rule Infinity : RAT
 {
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2014/04"
-		ref = "http://malwareconfig.com/stats/Infinity"
-		maltype = "Remote Access Trojan"
-		filetype = "exe"
+	  meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/Infinity"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "Infinity"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$a = "CRYPTPROTECT_PROMPTSTRUCT"
@@ -274,12 +310,15 @@ rule Infinity : RAT
 }
 rule JavaDropper : RAT
 {
-    meta:
-	    author = " Kevin Breen <kevin@techanarchy.net>"
-	    date = "2015/10"
-	    ref = "http://malwareconfig.com/stats/AlienSpy"
-	    maltype = "Remote Access Trojan"
-	    filetype = "exe"
+      meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2015/10"
+    ref = "http://malwareconfig.com/stats/AlienSpy"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "JavaDropper"
+    severity = "7"
+    type = "Malware"
 
     strings:
 	    $jar = "META-INF/MANIFEST.MF"
@@ -299,12 +338,15 @@ rule JavaDropper : RAT
 }
 rule LostDoor : RAT
 {
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2014/04"
-		ref = "http://malwareconfig.com/stats/LostDoor"
-		maltype = "Remote Access Trojan"
-		filetype = "exe"
+	  meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/LostDoor"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "LostDoor"
+    severity = "7"
+    type = "Malware"
         
     strings:
     	$a0 = {0D 0A 2A 45 44 49 54 5F 53 45 52 56 45 52 2A 0D 0A}
@@ -323,12 +365,15 @@ rule LostDoor : RAT
 }
 rule LuminosityLink : RAT
 {
-    meta:
-        author = " Kevin Breen <kevin@techanarchy.net>"
-        date = "2014/04"
-        ref = "http://malwareconfig.com/stats/LuminosityLink"
-        maltype = "Remote Access Trojan"
-        filetype = "exe"
+      meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/LuminosityLink"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "LuminosityLink"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $a = "SMARTLOGS" wide
@@ -348,12 +393,15 @@ rule LuminosityLink : RAT
 }
 rule LuxNet : RAT
 {
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2014/04"
-		ref = "http://malwareconfig.com/stats/LuxNet"
-		maltype = "Remote Access Trojan"
-		filetype = "exe"
+	  meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/LuxNet"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "LuxNet"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$a = "GetHashCode"
@@ -368,12 +416,15 @@ rule LuxNet : RAT
 }
 rule NanoCore : RAT
 {
-    meta:
-        author = " Kevin Breen <kevin@techanarchy.net>"
-        date = "2014/04"
-        ref = "http://malwareconfig.com/stats/NanoCore"
-        maltype = "Remote Access Trojan"
-        filetype = "exe"
+      meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/NanoCore"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "NanoCore"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $a = "NanoCore"
@@ -395,12 +446,15 @@ rule NanoCore : RAT
 	
 rule Paradox : RAT
 {
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2014/04"
-		ref = "http://malwareconfig.com/stats/Paradox"
-		maltype = "Remote Access Trojan"
-		filetype = "exe"
+	  meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/Paradox"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "Paradox"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$a = "ParadoxRAT"
@@ -416,12 +470,15 @@ rule Paradox : RAT
 }
 rule Plasma : RAT
 {
-    meta:
-        author = " Kevin Breen <kevin@techanarchy.net>"
-        date = "2014/04"
-        ref = "http://malwareconfig.com/stats/Plasma"
-        maltype = "Remote Access Trojan"
-        filetype = "exe"
+      meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/Plasma"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "Plasma"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $a = "Miner: Failed to Inject." wide
@@ -440,12 +497,15 @@ rule Plasma : RAT
 rule PredatorPain : RAT
 {
 
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2014/04"
-		ref = "http://malwareconfig.com/stats/PredatorPain"
-		maltype = "Remote Access Trojan"
-		filetype = "exe"
+	  meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/PredatorPain"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "PredatorPain"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$string1 = "holderwb.txt" wide
@@ -467,12 +527,15 @@ rule PredatorPain : RAT
 }
 rule Punisher : RAT
 {
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2014/04"
-		ref = "http://malwareconfig.com/stats/Punisher"
-		maltype = "Remote Access Trojan"
-		filetype = "exe"
+	  meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/Punisher"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "Punisher"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$a = "abccba"
@@ -488,12 +551,15 @@ rule Punisher : RAT
 }
 rule PythoRAT : RAT
 {
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2014/04"
-		ref = "http://malwareconfig.com/stats/PythoRAT"
-		maltype = "Remote Access Trojan"
-		filetype = "exe"
+	  meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/PythoRAT"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "PythoRAT"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$a = "TKeylogger"
@@ -510,12 +576,15 @@ rule PythoRAT : RAT
 }
 rule QRat : RAT
 {
-    meta:
-        author = "Kevin Breen @KevTheHermit"
-        date = "2015/08"
-        ref = "http://malwareconfig.com"
-        maltype = "Remote Access Trojan"
-        filetype = "jar"
+      meta:
+    author = "Kevin Breen @KevTheHermit"
+    date = "2015/08"
+    ref = "http://malwareconfig.com"
+    maltype = "Remote Access Trojan"
+    filetype = "jar"
+    description = "QRat"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $a0 = "e-data"
@@ -532,12 +601,15 @@ rule QRat : RAT
 }
 rule SmallNet : RAT
 {
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2014/04"
-		ref = "http://malwareconfig.com/stats/SmallNet"
-		maltype = "Remote Access Trojan"
-		filetype = "exe"
+	  meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/SmallNet"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "SmallNet"
+    severity = "7"
+    type = "Malware"
 		
 	strings:
 		$split1 = "!!<3SAFIA<3!!"
@@ -551,12 +623,15 @@ rule SmallNet : RAT
 }
 rule SpyGate : RAT
 {
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2014/04"
-		ref = "http://malwareconfig.com/stats/SpyGate"
-		maltype = "Remote Access Trojan"
-		filetype = "exe"
+	  meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/SpyGate"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "SpyGate"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$split = "abccba"
@@ -577,12 +652,15 @@ rule SpyGate : RAT
 }
 rule Sub7Nation : RAT
 {
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2014/04"
-		ref = "http://malwareconfig.com/stats/Sub7Nation"
-		maltype = "Remote Access Trojan"
-		filetype = "exe"
+	  meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/Sub7Nation"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "Sub7Nation"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$a = "EnableLUA /t REG_DWORD /d 0 /f"
@@ -606,12 +684,15 @@ rule Sub7Nation : RAT
 rule Vertex : RAT
 {
 
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2014/04"
-		ref = "http://malwareconfig.com/stats/Vertex"
-		maltype = "Remote Access Trojan"
-		filetype = "exe"
+	  meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/Vertex"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "Vertex"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$string1 = "DEFPATH"
@@ -628,12 +709,15 @@ rule Vertex : RAT
 }
 rule VirusRat : RAT
 {
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2014/04"
-		ref = "http://malwareconfig.com/stats/VirusRat"
-		maltype = "Remote Access Trojan"
-		filetype = "exe"
+	  meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/VirusRat"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "VirusRat"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$string0 = "virustotal"
@@ -654,12 +738,15 @@ rule VirusRat : RAT
 }
 rule unrecom : RAT
 {
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2014/04"
-		ref = "http://malwareconfig.com/stats/AAR"
-		maltype = "Remote Access Trojan"
-		filetype = "exe"
+	  meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/AAR"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "AAR"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$meta = "META-INF"

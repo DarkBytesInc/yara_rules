@@ -6,13 +6,15 @@
 rule PassCV_Sabre_Malware_1 
 {
 
-   meta:
-      description = "PassCV Malware mentioned in Cylance Report"
-      author = "Florian Roth"
-      reference = "https://blog.cylance.com/digitally-signed-malware-targeting-gaming-companies"
-      date = "2016-10-20"
-      hash1 = "24a9bfbff81615a42e42755711c8d04f359f3bf815fb338022edca860ff1908a"
-      hash2 = "e61e56b8f2666b9e605127b4fcc7dc23871c1ae25aa0a4ea23b48c9de35d5f55"
+     meta:
+    description = "PassCV Malware mentioned in Cylance Report"
+    author = "Florian Roth"
+    reference = "https://blog.cylance.com/digitally-signed-malware-targeting-gaming-companies"
+    date = "2016-10-20"
+    hash1 = "24a9bfbff81615a42e42755711c8d04f359f3bf815fb338022edca860ff1908a"
+    hash2 = "e61e56b8f2666b9e605127b4fcc7dc23871c1ae25aa0a4ea23b48c9de35d5f55"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
    strings:
       $x1 = "F:\\Excalibur\\Excalibur\\Excalibur\\" ascii
@@ -33,13 +35,15 @@ rule PassCV_Sabre_Malware_1
 rule PassCV_Sabre_Malware_Signing_Cert 
 {
 
-   meta:
-      description = "PassCV Malware mentioned in Cylance Report"
-      author = "Florian Roth"
-      reference = "https://blog.cylance.com/digitally-signed-malware-targeting-gaming-companies"
-      date = "2016-10-20"
-      score = 50
-      hash1 = "7c32885c258a6d5be37ebe83643f00165da3ebf963471503909781540204752e"
+     meta:
+    description = "PassCV Malware mentioned in Cylance Report"
+    author = "Florian Roth"
+    reference = "https://blog.cylance.com/digitally-signed-malware-targeting-gaming-companies"
+    date = "2016-10-20"
+    score = 50
+    hash1 = "7c32885c258a6d5be37ebe83643f00165da3ebf963471503909781540204752e"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
    strings:
       $s1 = "WOODTALE TECHNOLOGY INC" ascii
@@ -58,15 +62,17 @@ rule PassCV_Sabre_Malware_Signing_Cert
 rule PassCV_Sabre_Malware_2 
 {
 
-   meta:
-      description = "PassCV Malware mentioned in Cylance Report"
-      author = "Florian Roth"
-      reference = "https://blog.cylance.com/digitally-signed-malware-targeting-gaming-companies"
-      date = "2016-10-20"
-      hash1 = "475d1c2d36b2cf28b28b202ada78168e7482a98b42ff980bbb2f65c6483db5b4"
-      hash2 = "009645c628e719fad2e280ef60bbd8e49bf057196ac09b3f70065f1ad2df9b78"
-      hash3 = "92479c7503393fc4b8dd7c5cd1d3479a182abca3cda21943279c68a8eef9c64b"
-      hash4 = "0c7b952c64db7add5b8b50b1199fc7d82e9b6ac07193d9ec30e5b8d353b1f6d2"
+     meta:
+    description = "PassCV Malware mentioned in Cylance Report"
+    author = "Florian Roth"
+    reference = "https://blog.cylance.com/digitally-signed-malware-targeting-gaming-companies"
+    date = "2016-10-20"
+    hash1 = "475d1c2d36b2cf28b28b202ada78168e7482a98b42ff980bbb2f65c6483db5b4"
+    hash2 = "009645c628e719fad2e280ef60bbd8e49bf057196ac09b3f70065f1ad2df9b78"
+    hash3 = "92479c7503393fc4b8dd7c5cd1d3479a182abca3cda21943279c68a8eef9c64b"
+    hash4 = "0c7b952c64db7add5b8b50b1199fc7d82e9b6ac07193d9ec30e5b8d353b1f6d2"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
    strings:
       $x1 = "ncProxyXll" fullword ascii
@@ -84,13 +90,15 @@ rule PassCV_Sabre_Malware_2
 rule PassCV_Sabre_Malware_Excalibur_1
 {
 
-   meta:
-      description = "PassCV Malware mentioned in Cylance Report"
-      author = "Florian Roth"
-      reference = "https://blog.cylance.com/digitally-signed-malware-targeting-gaming-companies"
-      date = "2016-10-20"
-      hash1 = "21566f5ff7d46cc9256dae8bc7e4c57f2b9261f95f6ad2ac921558582ea50dfb"
-      hash2 = "02922c5d994e81629d650be2a00507ec5ca221a501fe3827b5ed03b4d9f4fb70"
+     meta:
+    description = "PassCV Malware mentioned in Cylance Report"
+    author = "Florian Roth"
+    reference = "https://blog.cylance.com/digitally-signed-malware-targeting-gaming-companies"
+    date = "2016-10-20"
+    hash1 = "21566f5ff7d46cc9256dae8bc7e4c57f2b9261f95f6ad2ac921558582ea50dfb"
+    hash2 = "02922c5d994e81629d650be2a00507ec5ca221a501fe3827b5ed03b4d9f4fb70"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
    strings:
       $x1 = "F:\\Excalibur\\Excalibur\\" ascii
@@ -106,12 +114,14 @@ rule PassCV_Sabre_Malware_Excalibur_1
 rule PassCV_Sabre_Malware_3 
 {
 
-   meta:
-      description = "PassCV Malware mentioned in Cylance Report"
-      author = "Florian Roth"
-      reference = "https://blog.cylance.com/digitally-signed-malware-targeting-gaming-companies"
-      date = "2016-10-20"
-      hash1 = "28c7575b2368a9b58d0d1bf22257c4811bd3c212bd606afc7e65904041c29ce1"
+     meta:
+    description = "PassCV Malware mentioned in Cylance Report"
+    author = "Florian Roth"
+    reference = "https://blog.cylance.com/digitally-signed-malware-targeting-gaming-companies"
+    date = "2016-10-20"
+    hash1 = "28c7575b2368a9b58d0d1bf22257c4811bd3c212bd606afc7e65904041c29ce1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
    strings:
       $x1 = "NXKILL" fullword wide
@@ -126,12 +136,14 @@ rule PassCV_Sabre_Malware_3
 rule PassCV_Sabre_Malware_4 
 {
 
-   meta:
-      description = "PassCV Malware mentioned in Cylance Report"
-      author = "Florian Roth"
-      reference = "https://blog.cylance.com/digitally-signed-malware-targeting-gaming-companies"
-      date = "2016-10-20"
-      hash1 = "27463bcb4301f0fdd95bc10bf67f9049e161a4e51425dac87949387c54c9167f"
+     meta:
+    description = "PassCV Malware mentioned in Cylance Report"
+    author = "Florian Roth"
+    reference = "https://blog.cylance.com/digitally-signed-malware-targeting-gaming-companies"
+    date = "2016-10-20"
+    hash1 = "27463bcb4301f0fdd95bc10bf67f9049e161a4e51425dac87949387c54c9167f"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
    strings:
       $s1 = "QWNjZXB0On" fullword ascii /* base64 encoded string 'Accept:' */
@@ -145,12 +157,14 @@ rule PassCV_Sabre_Malware_4
 rule PassCV_Sabre_Tool_NTScan 
 {
 
-   meta:
-      description = "PassCV Malware mentioned in Cylance Report"
-      author = "Florian Roth"
-      reference = "https://blog.cylance.com/digitally-signed-malware-targeting-gaming-companies"
-      date = "2016-10-20"
-      hash1 = "0f290612b26349a551a148304a0bd3b0d0651e9563425d7c362f30bd492d8665"
+     meta:
+    description = "PassCV Malware mentioned in Cylance Report"
+    author = "Florian Roth"
+    reference = "https://blog.cylance.com/digitally-signed-malware-targeting-gaming-companies"
+    date = "2016-10-20"
+    hash1 = "0f290612b26349a551a148304a0bd3b0d0651e9563425d7c362f30bd492d8665"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
    strings:
       $x1 = "NTscan.EXE" fullword wide
@@ -164,12 +178,14 @@ rule PassCV_Sabre_Tool_NTScan
 rule PassCV_Sabre_Malware_5 
 {
 
-   meta:
-      description = "PassCV Malware mentioned in Cylance Report"
-      author = "Florian Roth"
-      reference = "https://blog.cylance.com/digitally-signed-malware-targeting-gaming-companies"
-      date = "2016-10-20"
-      hash1 = "03aafc5f468a84f7dd7d7d38f91ff17ef1ca044e5f5e8bbdfe589f5509b46ae5"
+     meta:
+    description = "PassCV Malware mentioned in Cylance Report"
+    author = "Florian Roth"
+    reference = "https://blog.cylance.com/digitally-signed-malware-targeting-gaming-companies"
+    date = "2016-10-20"
+    hash1 = "03aafc5f468a84f7dd7d7d38f91ff17ef1ca044e5f5e8bbdfe589f5509b46ae5"
+    severity = "10"
+    type = "Advanced Persistent Threat"
   
    strings:
       $x1 = "ncircTMPg" fullword ascii

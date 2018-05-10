@@ -5,9 +5,11 @@
 rule GEN_PowerShell 
 {
 
-    meta:
-        description = "Generic PowerShell Malware Rule"
-        author = "https://github.com/interleaved"
+      meta:
+    description = "Generic PowerShell Malware Rule"
+    author = "https://github.com/interleaved"
+    severity = "7"
+    type = "Exploit Kit"
     
     strings:
         $s1 = "powershell"

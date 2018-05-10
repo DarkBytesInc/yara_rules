@@ -10,16 +10,18 @@
 */
 
 rule Powerkatz_DLL_Generic {
-	meta:
-		description = "Detects Powerkatz - a Mimikatz version prepared to run in memory via Powershell (overlap with other Mimikatz versions is possible)"
-		author = "Florian Roth"
-		reference = "PowerKatz Analysis"
-		date = "2016-02-05"
-		super_rule = 1
-		score = 80
-		hash1 = "c20f30326fcebad25446cf2e267c341ac34664efad5c50ff07f0738ae2390eae"
-		hash2 = "1e67476281c1ec1cf40e17d7fc28a3ab3250b474ef41cb10a72130990f0be6a0"
-		hash3 = "49e7bac7e0db87bf3f0185e9cf51f2539dbc11384fefced465230c4e5bce0872"
+	  meta:
+    description = "Detects Powerkatz - a Mimikatz version prepared to run in memory via Powershell (overlap with other Mimikatz versions is possible)"
+    author = "Florian Roth"
+    reference = "PowerKatz Analysis"
+    date = "2016-02-05"
+    super_rule = 1
+    score = 80
+    hash1 = "c20f30326fcebad25446cf2e267c341ac34664efad5c50ff07f0738ae2390eae"
+    hash2 = "1e67476281c1ec1cf40e17d7fc28a3ab3250b474ef41cb10a72130990f0be6a0"
+    hash3 = "49e7bac7e0db87bf3f0185e9cf51f2539dbc11384fefced465230c4e5bce0872"
+    severity = "7"
+    type = "Exploit Kit"
 	strings:
 		$s1 = "%3u - Directory '%s' (*.kirbi)" fullword wide
 		$s2 = "%*s  pPublicKey         : " fullword wide

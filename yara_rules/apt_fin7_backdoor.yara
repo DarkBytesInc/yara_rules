@@ -10,13 +10,15 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule FIN7_Dropper_Aug17 {
-   meta:
-      description = "Detects Word Dropper from Proofpoint FIN7 Report"
-      author = "Florian Roth"
-      reference = "https://www.proofpoint.com/us/threat-insight/post/fin7carbanak-threat-actor-unleashes-bateleur-jscript-backdoor"
-      date = "2017-08-04"
-      hash1 = "c91642c0a5a8781fff9fd400bff85b6715c96d8e17e2d2390c1771c683c7ead9"
-      hash2 = "cf86c7a92451dca1ebb76ebd3e469f3fa0d9b376487ee6d07ae57ab1b65a86f8"
+     meta:
+    description = "Detects Word Dropper from Proofpoint FIN7 Report"
+    author = "Florian Roth"
+    reference = "https://www.proofpoint.com/us/threat-insight/post/fin7carbanak-threat-actor-unleashes-bateleur-jscript-backdoor"
+    date = "2017-08-04"
+    hash1 = "c91642c0a5a8781fff9fd400bff85b6715c96d8e17e2d2390c1771c683c7ead9"
+    hash2 = "cf86c7a92451dca1ebb76ebd3e469f3fa0d9b376487ee6d07ae57ab1b65a86f8"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $x1 = "tpircsj:e/ b// exe.tpircsw\" rt/" fullword ascii
 
@@ -30,11 +32,13 @@ rule FIN7_Dropper_Aug17 {
 }
 
 rule FIN7_Backdoor_Aug17 {
-   meta:
-      description = "Detects Word Dropper from Proofpoint FIN7 Report"
-      author = "Florian Roth"
-      reference = "https://www.proofpoint.com/us/threat-insight/post/fin7carbanak-threat-actor-unleashes-bateleur-jscript-backdoor"
-      date = "2017-08-04"
+     meta:
+    description = "Detects Word Dropper from Proofpoint FIN7 Report"
+    author = "Florian Roth"
+    reference = "https://www.proofpoint.com/us/threat-insight/post/fin7carbanak-threat-actor-unleashes-bateleur-jscript-backdoor"
+    date = "2017-08-04"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $x1 = "wscript.exe //b /e:jscript C:\\Users\\" ascii
       $x2 = "wscript.exe /b /e:jscript C:\\Users\\" ascii

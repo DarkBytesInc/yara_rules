@@ -2,10 +2,13 @@ import "pe"
 
 rule RomeoCharlie
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
-		Source = "a82108ef7115931b3fbe1fab99448c4139e22feda27c1b1d29325710671154e8"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    Source = "a82108ef7115931b3fbe1fab99448c4139e22feda27c1b1d29325710671154e8"
+    description = "RomeoCharlie"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 		$auth1 = "Success - Accept Auth"

@@ -1,12 +1,15 @@
 rule Crimson: RAT
 {
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		Description = "Crimson Rat"
-		date = "2015/05"
-		ref = "http://malwareconfig.com/stats/Crimson"
-		maltype = "Remote Access Trojan"
-		filetype = "jar"
+	  meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    Description = "Crimson Rat"
+    date = "2015/05"
+    ref = "http://malwareconfig.com/stats/Crimson"
+    maltype = "Remote Access Trojan"
+    filetype = "jar"
+    description = "Crimson:"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$a1 = "com/crimson/PK"

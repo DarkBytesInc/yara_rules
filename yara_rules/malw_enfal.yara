@@ -7,10 +7,12 @@ import "pe"
 
 rule EnfalCode : Enfal Family 
 {
-    meta:
-        description = "Enfal code tricks"
-        author = "Seth Hardy"
-        last_modified = "2014-06-19"
+      meta:
+    description = "Enfal code tricks"
+    author = "Seth Hardy"
+    last_modified = "2014-06-19"
+    severity = "7"
+    type = "Malware"
         
     strings:
         // mov al, 20h; sub al, bl; add [ebx+esi], al; push esi; inc ebx; call edi; cmp ebx, eax
@@ -22,10 +24,12 @@ rule EnfalCode : Enfal Family
 
 rule EnfalStrings : Enfal Family
 {
-    meta:
-        description = "Enfal Identifying Strings"
-        author = "Seth Hardy"
-        last_modified = "2014-06-19"
+      meta:
+    description = "Enfal Identifying Strings"
+    author = "Seth Hardy"
+    last_modified = "2014-06-19"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $ = "D:\\work\\\xe6\xba\x90\xe5\x93\xa5\xe5\x85\x8d\xe6\x9d\x80\\tmp\\Release\\ServiceDll.pdb"
@@ -66,10 +70,12 @@ rule EnfalStrings : Enfal Family
 
 rule Enfal : Family
 {
-    meta:
-        description = "Enfal"
-        author = "Seth Hardy"
-        last_modified = "2014-06-19"
+      meta:
+    description = "Enfal"
+    author = "Seth Hardy"
+    last_modified = "2014-06-19"
+    severity = "7"
+    type = "Malware"
         
     condition:
         EnfalCode or EnfalStrings
@@ -77,13 +83,15 @@ rule Enfal : Family
 
 
 rule Enfal_Malware {
-	meta:
-		description = "Detects a certain type of Enfal Malware"
-		author = "Florian Roth"
-		reference = "not set"
-		date = "2015/02/10"
-		hash = "9639ec9aca4011b2724d8e7ddd13db19913e3e16"
-		score = 60
+	  meta:
+    description = "Detects a certain type of Enfal Malware"
+    author = "Florian Roth"
+    reference = "not set"
+    date = "2015/02/10"
+    hash = "9639ec9aca4011b2724d8e7ddd13db19913e3e16"
+    score = 60
+    severity = "7"
+    type = "Malware"
 	strings:
 		$s0 = "POWERPNT.exe" fullword ascii
 		$s1 = "%APPDATA%\\Microsoft\\Windows\\" fullword ascii
@@ -99,15 +107,17 @@ rule Enfal_Malware {
 }
 
 rule Enfal_Malware_Backdoor {
-	meta:
-		description = "Generic Rule to detect the Enfal Malware"
-		author = "Florian Roth"
-		date = "2015/02/10"
-		super_rule = 1
-		hash0 = "6d484daba3927fc0744b1bbd7981a56ebef95790"
-		hash1 = "d4071272cc1bf944e3867db299b3f5dce126f82b"
-		hash2 = "6c7c8b804cc76e2c208c6e3b6453cb134d01fa41"
-		score = 60
+	  meta:
+    description = "Generic Rule to detect the Enfal Malware"
+    author = "Florian Roth"
+    date = "2015/02/10"
+    super_rule = 1
+    hash0 = "6d484daba3927fc0744b1bbd7981a56ebef95790"
+    hash1 = "d4071272cc1bf944e3867db299b3f5dce126f82b"
+    hash2 = "6c7c8b804cc76e2c208c6e3b6453cb134d01fa41"
+    score = 60
+    severity = "7"
+    type = "Malware"
 	strings:
 		$mz = { 4d 5a }
 			
@@ -131,11 +141,14 @@ rule Enfal_Malware_Backdoor {
 }
 rule ce_enfal_cmstar_debug_msg
 {
-    meta:
-        Author      = "rfalcone"
-        Date        = "2015.05.10"
-        Description = "Detects the static debug strings within CMSTAR"
-        Reference   = "http://researchcenter.paloaltonetworks.com/2015/05/cmstar-downloader-lurid-and-enfals-new-cousin"
+      meta:
+    Author = "rfalcone"
+    Date = "2015.05.10"
+    Description = "Detects the static debug strings within CMSTAR"
+    Reference = "http://researchcenter.paloaltonetworks.com/2015/05/cmstar-downloader-lurid-and-enfals-new-cousin"
+    description = "ce_enfal_cmstar_debug_msg"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $d1 = "EEE\x0d\x0a" fullword

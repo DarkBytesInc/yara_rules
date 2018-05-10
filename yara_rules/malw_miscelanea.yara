@@ -7,12 +7,15 @@ import "pe"
 
 rule tran_duy_linh
 {
-meta:
-	author = "@patrickrolsen"
-	maltype = "Misc."
-	version = "0.2"
-	reference = "8fa804105b1e514e1998e543cd2ca4ea, 872876cfc9c1535cd2a5977568716ae1, etc." 
-	date = "01/03/2014"
+  meta:
+    author = "@patrickrolsen"
+    maltype = "Misc."
+    version = "0.2"
+    reference = "8fa804105b1e514e1998e543cd2ca4ea, 872876cfc9c1535cd2a5977568716ae1, etc."
+    date = "01/03/2014"
+    description = "tran_duy_linh"
+    severity = "7"
+    type = "Malware"
 strings:
 	$doc = {D0 CF 11 E0} //DOCFILE0
 	$string1 = "Tran Duy Linh" fullword
@@ -23,11 +26,14 @@ condition:
 
 rule misc_iocs
 {
-meta:
-	author = "@patrickrolsen"
-	maltype = "Misc."
-	version = "0.1"
-	reference = "N/A" 
+  meta:
+    author = "@patrickrolsen"
+    maltype = "Misc."
+    version = "0.1"
+    reference = "N/A"
+    description = "misc_iocs"
+    severity = "7"
+    type = "Malware"
 strings:
 	$doc = {D0 CF 11 E0} //DOCFILE0
 	$s1 = "dw20.exe"
@@ -38,8 +44,11 @@ condition:
 
 rule malicious_LNK_files
 {
-meta:
-	author = "@patrickrolsen"
+  meta:
+    author = "@patrickrolsen"
+    description = "malicious_LNK_files"
+    severity = "7"
+    type = "Malware"
 strings:
 	$magic = {4C 00 00 00 01 14 02 00} // L.......
 	$s1 = "\\RECYCLER\\" wide
@@ -62,8 +71,11 @@ condition:
 rule memory_pivy
 
 {
-   meta:
-	  author = "https://github.com/jackcr/"
+     meta:
+    author = "https://github.com/jackcr/"
+    description = "memory_pivy"
+    severity = "7"
+    type = "Malware"
    strings:
       $a = {00 00 00 00 00 00 00 00 00 00 00 53 74 75 62 50 61 74 68 00} // presence of pivy in memory
 
@@ -75,8 +87,11 @@ rule memory_pivy
 rule memory_shylock
 
 {
-   meta:
-	  author = "https://github.com/jackcr/"
+     meta:
+    author = "https://github.com/jackcr/"
+    description = "memory_pivy"
+    severity = "7"
+    type = "Malware"
 
    strings:
       $a = /pipe\\[A-F0-9]{32}/     //Named pipe created by the malware
@@ -93,15 +108,17 @@ rule memory_shylock
 }
 
 rule ScanBox_Malware_Generic {
-	meta:
-		description = "Scanbox Chinese Deep Panda APT Malware http://goo.gl/MUUfjv and http://goo.gl/WXUQcP"
-		author = "Florian Roth"
-		reference1 = "http://goo.gl/MUUfjv"
-		reference2 = "http://goo.gl/WXUQcP"
-		date = "2015/02/28"
-		hash1 = "8d168092d5601ebbaed24ec3caeef7454c48cf21366cd76560755eb33aff89e9"
-		hash2 = "d4be6c9117db9de21138ae26d1d0c3cfb38fd7a19fa07c828731fa2ac756ef8d"
-		hash3 = "3fe208273288fc4d8db1bf20078d550e321d9bc5b9ab80c93d79d2cb05cbf8c2"
+	  meta:
+    description = "Scanbox Chinese Deep Panda APT Malware http://goo.gl/MUUfjv and http://goo.gl/WXUQcP"
+    author = "Florian Roth"
+    reference1 = "http://goo.gl/MUUfjv"
+    reference2 = "http://goo.gl/WXUQcP"
+    date = "2015/02/28"
+    hash1 = "8d168092d5601ebbaed24ec3caeef7454c48cf21366cd76560755eb33aff89e9"
+    hash2 = "d4be6c9117db9de21138ae26d1d0c3cfb38fd7a19fa07c828731fa2ac756ef8d"
+    hash3 = "3fe208273288fc4d8db1bf20078d550e321d9bc5b9ab80c93d79d2cb05cbf8c2"
+    severity = "7"
+    type = "Malware"
 	strings:
 		/* Sample 1 */
 		$s0 = "http://142.91.76.134/p.dat" fullword ascii
@@ -125,13 +142,15 @@ rule ScanBox_Malware_Generic {
 }
 
 rule TrojanDownloader {
-	meta:
-		description = "Trojan Downloader - Flash Exploit Feb15"
-		author = "Florian Roth"
-		reference = "http://goo.gl/wJ8V1I"
-		date = "2015/02/11"
-		hash = "5b8d4280ff6fc9c8e1b9593cbaeb04a29e64a81e"
-		score = 60
+	  meta:
+    description = "Trojan Downloader - Flash Exploit Feb15"
+    author = "Florian Roth"
+    reference = "http://goo.gl/wJ8V1I"
+    date = "2015/02/11"
+    hash = "5b8d4280ff6fc9c8e1b9593cbaeb04a29e64a81e"
+    score = 60
+    severity = "7"
+    type = "Malware"
 	strings:
 		$x1 = "Hello World!" fullword ascii
 		$x2 = "CONIN$" fullword ascii
@@ -163,11 +182,13 @@ rule TrojanDownloader {
 
 
 rule Cloaked_as_JPG {
-        meta:
-                description = "Detects a cloaked file as JPG"
-                author = "Florian Roth (eval section from Didier Stevens)"
-                date = "2015/02/29"
-                score = 70
+          meta:
+    description = "Detects a cloaked file as JPG"
+    author = "Florian Roth (eval section from Didier Stevens)"
+    date = "2015/02/29"
+    score = 70
+    severity = "7"
+    type = "Malware"
         strings:
                 $ext = "extension: .jpg"
         condition:
@@ -178,8 +199,11 @@ rule Cloaked_as_JPG {
 
 rule rtf_yahoo_ken
 {
-meta:
-	author = "@patrickrolsen"
+  meta:
+    author = "@patrickrolsen"
+    description = "malicious_LNK_files"
+    severity = "7"
+    type = "Malware"
 	maltype = "Yahoo Ken"
 	filetype = "RTF"
 	version = "0.1"
@@ -210,11 +234,14 @@ condition:
 
 rule OrcaRAT
 {
-    meta:
-        Author      = "PwC Cyber Threat Operations"
-        Date        = "2014/10/20" 
-        Description = "Strings inside"
-        Reference   = "http://pwc.blogs.com/cyber_security_updates/2014/10/orcarat-a-whale-of-a-tale.html"
+      meta:
+    Author = "PwC Cyber Threat Operations"
+    Date = "2014/10/20"
+    Description = "Strings inside"
+    Reference = "http://pwc.blogs.com/cyber_security_updates/2014/10/orcarat-a-whale-of-a-tale.html"
+    description = "OrcaRAT"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $MZ = "MZ"
@@ -234,16 +261,18 @@ rule OrcaRAT
 
 rule EmiratesStatement 
 {
-	meta:
-		Author 		= "Christiaan Beek"
-		Date 		= "2013-06-30"
-		Description = "Credentials Stealing Attack"
-		Reference 	= "https://blogs.mcafee.com/mcafee-labs/targeted-campaign-steals-credentials-in-gulf-states-and-caribbean"
-		
-		hash0 = "0e37b6efe5de1cc9236017e003b1fc37"
-		hash1 = "a28b22acf2358e6aced43a6260af9170"
-		hash2 = "6f506d7adfcc2288631ed2da37b0db04"
-		hash3 = "8aebade47dc1aa9ac4b5625acf5ade8f"
+	  meta:
+    Author = "Christiaan Beek"
+    Date = "2013-06-30"
+    Description = "Credentials Stealing Attack"
+    Reference = "https://blogs.mcafee.com/mcafee-labs/targeted-campaign-steals-credentials-in-gulf-states-and-caribbean"
+    hash0 = "0e37b6efe5de1cc9236017e003b1fc37"
+    hash1 = "a28b22acf2358e6aced43a6260af9170"
+    hash2 = "6f506d7adfcc2288631ed2da37b0db04"
+    hash3 = "8aebade47dc1aa9ac4b5625acf5ade8f"
+    description = "EmiratesStatement"
+    severity = "7"
+    type = "Malware"
 	
 	strings:
 		$string0 = "msn.klm"
@@ -255,12 +284,14 @@ rule EmiratesStatement
 }
 
 rule PUP_InstallRex_AntiFWb {
-	meta:
-		description = "Malware InstallRex / AntiFW"
-		author = "Florian Roth"
-		date = "2015-05-13"
-		hash = "bb5607cd2ee51f039f60e32cf7edc4e21a2d95cd"
-		score = 65
+	  meta:
+    description = "Malware InstallRex / AntiFW"
+    author = "Florian Roth"
+    date = "2015-05-13"
+    hash = "bb5607cd2ee51f039f60e32cf7edc4e21a2d95cd"
+    score = 65
+    severity = "7"
+    type = "Malware"
 	strings:
 		$s4 = "Error %u while loading TSU.DLL %ls" fullword ascii
 		$s7 = "GetModuleFileName() failed => %u" fullword ascii
@@ -272,14 +303,16 @@ rule PUP_InstallRex_AntiFWb {
 }
 
 rule LightFTP_fftp_x86_64 {
-	meta:
-		description = "Detects a light FTP server"
-		author = "Florian Roth"
-		reference = "https://github.com/hfiref0x/LightFTP"
-		date = "2015-05-14"
-		hash1 = "989525f85abef05581ccab673e81df3f5d50be36"
-		hash2 = "5884aeca33429830b39eba6d3ddb00680037faf4"
-		score = 50
+	  meta:
+    description = "Detects a light FTP server"
+    author = "Florian Roth"
+    reference = "https://github.com/hfiref0x/LightFTP"
+    date = "2015-05-14"
+    hash1 = "989525f85abef05581ccab673e81df3f5d50be36"
+    hash2 = "5884aeca33429830b39eba6d3ddb00680037faf4"
+    score = 50
+    severity = "7"
+    type = "Malware"
 	strings:
 		$s1 = "fftp.cfg" fullword wide
 		$s2 = "220 LightFTP server v1.0 ready" fullword ascii
@@ -291,12 +324,14 @@ rule LightFTP_fftp_x86_64 {
 }
 
 rule LightFTP_Config {
-	meta:
-		description = "Detects a light FTP server - config file"
-		author = "Florian Roth"
-		reference = "https://github.com/hfiref0x/LightFTP"
-		date = "2015-05-14"
-		hash = "ce9821213538d39775af4a48550eefa3908323c5"
+	  meta:
+    description = "Detects a light FTP server - config file"
+    author = "Florian Roth"
+    reference = "https://github.com/hfiref0x/LightFTP"
+    date = "2015-05-14"
+    hash = "ce9821213538d39775af4a48550eefa3908323c5"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$s2 = "maxusers=" wide
 		$s6 = "[ftpconfig]" fullword wide
@@ -310,11 +345,14 @@ rule LightFTP_Config {
 
 rule SpyGate_v2_9
 {
-	meta:
-		date = "2014/09"
-		maltype = "Spygate v2.9 Remote Access Trojan"
-		filetype = "exe"
-		reference = "https://blogs.mcafee.com/mcafee-labs/middle-east-developer-spygate-struts-stuff-online"
+	  meta:
+    date = "2014/09"
+    maltype = "Spygate v2.9 Remote Access Trojan"
+    filetype = "exe"
+    reference = "https://blogs.mcafee.com/mcafee-labs/middle-east-developer-spygate-struts-stuff-online"
+    description = "SpyGate_v2_9"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$1 = "shutdowncomputer" wide
 		$2 = "shutdown -r -t 00" wide
@@ -327,12 +365,14 @@ rule SpyGate_v2_9
 
 rule ice_ix_12xy : banker
 {
-	meta:
-		author = "Jean-Philippe Teissier / @Jipe_"
-		description = "ICE-IX 1.2.x.y trojan banker"
-		date = "2013-01-12"
-		filetype = "memory"
-		version = "1.0" 
+	  meta:
+    author = "Jean-Philippe Teissier / @Jipe_"
+    description = "ICE-IX 1.2.x.y trojan banker"
+    date = "2013-01-12"
+    filetype = "memory"
+    version = "1.0"
+    severity = "7"
+    type = "Malware"
 	
 	strings:
 		$regexp1= /bn1=.{32}&sk1=[0-9a-zA-Z]{32}/
@@ -348,12 +388,14 @@ rule ice_ix_12xy : banker
 }
 rule qadars : banker
 {
-	meta:
-		author = "Jean-Philippe Teissier / @Jipe_"
-		description = "Qadars - Mobile part. Maybe Perkele."
-		version = "1.0" 
-		filetype = "memory"
-		ref1 = "http://www.lexsi-leblog.fr/cert/qadars-nouveau-malware-bancaire-composant-mobile.html"
+	  meta:
+    author = "Jean-Philippe Teissier / @Jipe_"
+    description = "Qadars - Mobile part. Maybe Perkele."
+    version = "1.0"
+    filetype = "memory"
+    ref1 = "http://www.lexsi-leblog.fr/cert/qadars-nouveau-malware-bancaire-composant-mobile.html"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$cmd1 = "m?D"
@@ -374,14 +416,16 @@ rule qadars : banker
 }
 rule shylock :  banker
 {
-	meta:
-		author = "Jean-Philippe Teissier / @Jipe_"
-		description = "Shylock Banker"
-		date = "2013-12-12" 
-		version = "1.0" 
-		ref1 = "http://iocbucket.com/iocs/1b4660d57928df5ca843c21df0b2adb117026cba"
-		ref2 = "http://www.trusteer.com/blog/merchant-fraud-returns-%E2%80%93-shylock-polymorphic-financial-malware-infections-rise"
-		ref3 = "https://www.csis.dk/en/csis/blog/3811/"
+	  meta:
+    author = "Jean-Philippe Teissier / @Jipe_"
+    description = "Shylock Banker"
+    date = "2013-12-12"
+    version = "1.0"
+    ref1 = "http://iocbucket.com/iocs/1b4660d57928df5ca843c21df0b2adb117026cba"
+    ref2 = "http://www.trusteer.com/blog/merchant-fraud-returns-%E2%80%93-shylock-polymorphic-financial-malware-infections-rise"
+    ref3 = "https://www.csis.dk/en/csis/blog/3811/"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$process1 = "MASTER"
@@ -423,12 +467,14 @@ rule shylock :  banker
 }
 rule spyeye : banker
 {
-	meta:
-		author = "Jean-Philippe Teissier / @Jipe_"
-		description = "SpyEye X.Y memory"
-		date = "2012-05-23" 
-		version = "1.0" 
-		filetype = "memory"
+	  meta:
+    author = "Jean-Philippe Teissier / @Jipe_"
+    description = "SpyEye X.Y memory"
+    date = "2012-05-23"
+    version = "1.0"
+    filetype = "memory"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$spyeye = "SpyEye"
@@ -453,12 +499,14 @@ rule spyeye : banker
 
 rule spyeye_plugins : banker
 {
-	meta:
-		author = "Jean-Philippe Teissier / @Jipe_"
-		description = "SpyEye X.Y Plugins memory"
-		date = "2012-05-23" 
-		version = "1.0" 
-		filetype = "memory"
+	  meta:
+    author = "Jean-Philippe Teissier / @Jipe_"
+    description = "SpyEye X.Y Plugins memory"
+    date = "2012-05-23"
+    version = "1.0"
+    filetype = "memory"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$a = "webfakes.dll"
@@ -488,11 +536,14 @@ rule spyeye_plugins : banker
 
 rule callTogether_certificate
 {
-    meta:
-        Author      = "Fireeye Labs"
-        Date        = "2014/11/03" 
-        Description = "detects binaries signed with the CallTogether certificate"
-        Reference   = "https://www.fireeye.com/blog/threat-research/2014/11/operation-poisoned-handover-unveiling-ties-between-apt-activity-in-hong-kongs-pro-democracy-movement.html"
+      meta:
+    Author = "Fireeye Labs"
+    Date = "2014/11/03"
+    Description = "detects binaries signed with the CallTogether certificate"
+    Reference = "https://www.fireeye.com/blog/threat-research/2014/11/operation-poisoned-handover-unveiling-ties-between-apt-activity-in-hong-kongs-pro-democracy-movement.html"
+    description = "callTogether_certificate"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $serial = { 45 21 56 C3 B3 FB 01 76 36 5B DB 5B 77 15 BC 4C }
@@ -504,11 +555,14 @@ rule callTogether_certificate
 
 rule qti_certificate
 {
-    meta:
-        Author      = "Fireeye Labs"
-        Date        = "2014/11/03" 
-        Description = "detects binaries signed with the QTI International Inc certificate"
-        Reference   = "https://www.fireeye.com/blog/threat-research/2014/11/operation-poisoned-handover-unveiling-ties-between-apt-activity-in-hong-kongs-pro-democracy-movement.html"
+      meta:
+    Author = "Fireeye Labs"
+    Date = "2014/11/03"
+    Description = "detects binaries signed with the QTI International Inc certificate"
+    Reference = "https://www.fireeye.com/blog/threat-research/2014/11/operation-poisoned-handover-unveiling-ties-between-apt-activity-in-hong-kongs-pro-democracy-movement.html"
+    description = "qti_certificate"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $cn = "QTI International Inc"
@@ -520,11 +574,14 @@ rule qti_certificate
 
 rule DownExecute_A
 {
-	meta:
-        Author      = "PwC Cyber Threat Operations :: @tlansec"
-        Date        = "2015/04/27"
-        Description = "Malware is often wrapped/protected, best to run on memory"
-        Reference   = "http://pwc.blogs.com/cyber_security_updates/2015/04/attacks-against-israeli-palestinian-interests.html"
+	  meta:
+    Author = "PwC Cyber Threat Operations :: @tlansec"
+    Date = "2015/04/27"
+    Description = "Malware is often wrapped/protected, best to run on memory"
+    Reference = "http://pwc.blogs.com/cyber_security_updates/2015/04/attacks-against-israeli-palestinian-interests.html"
+    description = "DownExecute_A"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $winver1 = "win 8.1"
@@ -564,13 +621,14 @@ rule DownExecute_A
 }
 
 rule CVE_2015_1674_CNGSYS {
-	meta:
-		description = "Detects exploits for CVE-2015-1674"
-		author = "Florian Roth"
-		reference = "http://www.binvul.com/viewthread.php?tid=508"
-		reference2 = "https://github.com/Neo23x0/Loki/blob/master/signatures/exploit_cve_2015_1674.yar"
-		date = "2015-05-14"
-		hash = "af4eb2a275f6bbc2bfeef656642ede9ce04fad36"
+	  meta:
+    description = "Detects exploits for CVE-2015-1674"
+    author = "Florian Roth"
+    reference2 = "https://github.com/Neo23x0/Loki/blob/master/signatures/exploit_cve_2015_1674.yar"
+    date = "2015-05-14"
+    hash = "af4eb2a275f6bbc2bfeef656642ede9ce04fad36"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$s1 = "\\Device\\CNG" fullword wide
 		
@@ -585,12 +643,15 @@ rule CVE_2015_1674_CNGSYS {
 
 rule Pandora
 {
-	meta:
-		author = " Kevin Breen <kevin@techanarchy.net>"
-		date = "2014/04"
-		ref = "http://malwareconfig.com/stats/Pandora"
-		maltype = "Remote Access Trojan"
-		filetype = "exe"
+	  meta:
+    author = " Kevin Breen <kevin@techanarchy.net>"
+    date = "2014/04"
+    ref = "http://malwareconfig.com/stats/Pandora"
+    maltype = "Remote Access Trojan"
+    filetype = "exe"
+    description = "Pandora"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$a = "Can't get the Windows version"
@@ -612,11 +673,13 @@ rule Pandora
 }
 
 rule Base64_encoded_Executable {
-	meta:
-		description = "Detects an base64 encoded executable (often embedded)"
-		author = "Florian Roth"
-		date = "2015-05-28"
-		score = 50
+	  meta:
+    description = "Detects an base64 encoded executable (often embedded)"
+    author = "Florian Roth"
+    date = "2015-05-28"
+    score = 50
+    severity = "7"
+    type = "Malware"
 	strings:
 		$s1 = "TVpTAQEAAAAEAAAA//8AALgAAAA" // 14 samples in goodware archive
 		$s2 = "TVoAAAAAAAAAAAAAAAAAAAAAAAA" // 26 samples in goodware archive
@@ -628,10 +691,12 @@ rule Base64_encoded_Executable {
 }
 rule CredStealESY : For CredStealer
 {
- meta:
-description = "Generic Rule to detect the CredStealer Malware"
-author = "IsecG – McAfee Labs"
-date = "2015/05/08"
+   meta:
+    description = "Generic Rule to detect the CredStealer Malware"
+    author = "IsecG – McAfee Labs"
+    date = "2015/05/08"
+    severity = "7"
+    type = "Malware"
 strings:
 $my_hex_string = "CurrentControlSet\\Control\\Keyboard Layouts\\" wide //malware trying to get keyboard layout
 $my_hex_string2 = {89 45 E8 3B 7D E8 7C 0F 8B 45 E8 05 FF 00 00 00 2B C7 89 45 E8} //specific decryption module
@@ -641,12 +706,14 @@ $my_hex_string and $my_hex_string2
 
 
 rule Typical_Malware_String_Transforms {
-	meta:
-		description = "Detects typical strings in a reversed or otherwise modified form"
-		author = "Florian Roth"
-		reference = "Internal Research"
-		date = "2016-07-31"
-		score = 60
+	  meta:
+    description = "Detects typical strings in a reversed or otherwise modified form"
+    author = "Florian Roth"
+    reference = "Internal Research"
+    date = "2016-07-31"
+    score = 60
+    severity = "7"
+    type = "Malware"
 	strings:
 		/* Executables */
 		$e1 = "exe.tsohcvs" fullword ascii
@@ -686,13 +753,15 @@ rule Typical_Malware_String_Transforms {
 }
 
 rule Invoke_mimikittenz {
-	meta:
-		description = "Detects Mimikittenz - file Invoke-mimikittenz.ps1"
-		author = "Florian Roth"
-		reference = "https://github.com/putterpanda/mimikittenz"
-		date = "2016-07-19"
-		score = 90
-		hash1 = "14e2f70470396a18c27debb419a4f4063c2ad5b6976f429d47f55e31066a5e6a"
+	  meta:
+    description = "Detects Mimikittenz - file Invoke-mimikittenz.ps1"
+    author = "Florian Roth"
+    reference = "https://github.com/putterpanda/mimikittenz"
+    date = "2016-07-19"
+    score = 90
+    hash1 = "14e2f70470396a18c27debb419a4f4063c2ad5b6976f429d47f55e31066a5e6a"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$x1 = "[mimikittenz.MemProcInspector]" ascii
 

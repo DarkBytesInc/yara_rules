@@ -6,11 +6,13 @@
 rule COZY_FANCY_BEAR_Hunt 
 {
 
-    meta:
-        description = "Detects Cozy Bear / Fancy Bear C2 Server IPs"
-        author = "Florian Roth"
-        reference = "https://www.crowdstrike.com/blog/bears-midst-intrusion-democratic-national-committee/"
-        date = "2016-06-14"
+      meta:
+    description = "Detects Cozy Bear / Fancy Bear C2 Server IPs"
+    author = "Florian Roth"
+    reference = "https://www.crowdstrike.com/blog/bears-midst-intrusion-democratic-national-committee/"
+    date = "2016-06-14"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "185.100.84.134" ascii wide fullword
@@ -28,11 +30,13 @@ rule COZY_FANCY_BEAR_Hunt
 rule COZY_FANCY_BEAR_pagemgr_Hunt 
 {
 
-    meta:
-        description = "Detects a pagemgr.exe as mentioned in the CrowdStrike report"
-        author = "Florian Roth"
-        reference = "https://www.crowdstrike.com/blog/bears-midst-intrusion-democratic-national-committee/"
-        date = "2016-06-14"
+      meta:
+    description = "Detects a pagemgr.exe as mentioned in the CrowdStrike report"
+    author = "Florian Roth"
+    reference = "https://www.crowdstrike.com/blog/bears-midst-intrusion-democratic-national-committee/"
+    date = "2016-06-14"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "pagemgr.exe" wide fullword

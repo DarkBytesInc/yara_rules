@@ -1,10 +1,12 @@
 rule ransomware_windows_wannacry
 {
-    meta:
-        description = "wannacry ransomware for windows"
-        reference = "https://securelist.com/blog/incidents/78351/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/"
-        author = "@fusionrace"
-        md5 = "4fef5e34143e646dbf9907c4374276f5"
+      meta:
+    description = "wannacry ransomware for windows"
+    reference = "https://securelist.com/blog/incidents/78351/wannacry-ransomware-used-in-widespread-attacks-all-over-the-world/"
+    author = "@fusionrace"
+    md5 = "4fef5e34143e646dbf9907c4374276f5"
+    severity = "10"
+    type = "Ransomware"
     strings:
         // generic
         $a1 = "msg/m_chinese" wide ascii

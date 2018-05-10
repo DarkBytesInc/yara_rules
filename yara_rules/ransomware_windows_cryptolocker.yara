@@ -1,10 +1,12 @@
 rule ransomware_windows_cryptolocker
 {
-    meta:
-        description = "The CryptoLocker malware propagated via infected email attachments, and via an existing botnet; when activated, the malware encrypts files stored on local and mounted network drives"
-        reference = "https://www.secureworks.com/research/cryptolocker-ransomware"
-        author = "@fusionrace"
-        md5 = "012d9088558072bc3103ab5da39ddd54"
+      meta:
+    description = "The CryptoLocker malware propagated via infected email attachments, and via an existing botnet; when activated, the malware encrypts files stored on local and mounted network drives"
+    reference = "https://www.secureworks.com/research/cryptolocker-ransomware"
+    author = "@fusionrace"
+    md5 = "012d9088558072bc3103ab5da39ddd54"
+    severity = "10"
+    type = "Ransomware"
     strings:
         $u0 = "Paysafecard is an electronic payment method for predominantly online shopping" fullword ascii wide
         $u1 = "bb to select the method of payment and the currency." fullword ascii wide

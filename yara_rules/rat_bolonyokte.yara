@@ -7,12 +7,14 @@ import "pe"
 
 rule Bolonyokte : rat 
 {
-	meta:
-		description = "UnknownDotNet RAT - Bolonyokte"
-		author = "Jean-Philippe Teissier / @Jipe_"
-		date = "2013-02-01"
-		filetype = "memory"
-		version = "1.0" 
+	  meta:
+    description = "UnknownDotNet RAT - Bolonyokte"
+    author = "Jean-Philippe Teissier / @Jipe_"
+    date = "2013-02-01"
+    filetype = "memory"
+    version = "1.0"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$campaign1 = "Bolonyokte" ascii wide

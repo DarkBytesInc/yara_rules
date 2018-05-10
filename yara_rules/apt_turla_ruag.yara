@@ -6,14 +6,16 @@
 rule Turla_APT_srsvc 
 {
 
-    meta:
-        description = "Detects Turla malware (based on sample used in the RUAG APT case)"
-        author = "Florian Roth"
-        family = "Turla"
-        reference = "https://www.govcert.admin.ch/blog/22/technical-report-about-the-ruag-espionage-case"
-        date = "2016-06-09"
-        hash1 = "65996f266166dbb479a42a15a236e6564f0b322d5d68ee546244d7740a21b8f7"
-        hash2 = "25c7ff1eb16984a741948f2ec675ab122869b6edea3691b01d69842a53aa3bac"
+      meta:
+    description = "Detects Turla malware (based on sample used in the RUAG APT case)"
+    author = "Florian Roth"
+    family = "Turla"
+    reference = "https://www.govcert.admin.ch/blog/22/technical-report-about-the-ruag-espionage-case"
+    date = "2016-06-09"
+    hash1 = "65996f266166dbb479a42a15a236e6564f0b322d5d68ee546244d7740a21b8f7"
+    hash2 = "25c7ff1eb16984a741948f2ec675ab122869b6edea3691b01d69842a53aa3bac"
+    severity = "10"
+    type = "Advanced Persistent Threat"
   
     strings:
         $x1 = "SVCHostServiceDll.dll" fullword ascii
@@ -29,22 +31,24 @@ rule Turla_APT_srsvc
 rule Turla_APT_Malware_Gen1 
 {
 
-    meta:
-        description = "Detects Turla malware (based on sample used in the RUAG APT case)"
-        author = "Florian Roth"
-        family = "Turla"
-        reference = "https://www.govcert.admin.ch/blog/22/technical-report-about-the-ruag-espionage-case"
-        date = "2016-06-09"
-        hash1 = "0e1bf347c37fb199886f1e675e372ba55ac4627e8be2f05a76c2c64f9b6ed0e4"
-        hash2 = "7206075cd8f1004e8f1f759d46e98bfad4098b8642412811a214c0155a1f08b9"
-        hash3 = "fe3ffd7438c0d38484bf02a78a19ea81a6f51b4b3f2b2228bd21974c2538bbcd"
-        hash4 = "c49111af049dd9746c6b1980db6e150b2a79ca1569b23ed2cba81c85c00d82b4"
-        hash5 = "b62a643c96e2e41f639d2a8ce11d61e6b9d7fb3a9baf011120b7fec1b4ee3cf4"
-        hash6 = "edb12790b5cd959bc2e53a4b369a4fd747153e6c9d50f6a69ff047f7857a4348"
-        hash7 = "8f2ea0f916fda1dfb771f5441e919c561da5b6334b9f2fffcbf53db14063b24a"
-        hash8 = "8dddc744bbfcf215346c812aa569e49523996f73a1f22fe4e688084ce1225b98"
-        hash9 = "0c69258adcc97632b729e55664c22cd942812336d41e8ea0cff9ddcafaded20f"
-        hash10 = "2b4fba1ef06f85d1395945db40a9f2c3b3ed81b56fb9c2d5e5bb693c230215e2"
+      meta:
+    description = "Detects Turla malware (based on sample used in the RUAG APT case)"
+    author = "Florian Roth"
+    family = "Turla"
+    reference = "https://www.govcert.admin.ch/blog/22/technical-report-about-the-ruag-espionage-case"
+    date = "2016-06-09"
+    hash1 = "0e1bf347c37fb199886f1e675e372ba55ac4627e8be2f05a76c2c64f9b6ed0e4"
+    hash2 = "7206075cd8f1004e8f1f759d46e98bfad4098b8642412811a214c0155a1f08b9"
+    hash3 = "fe3ffd7438c0d38484bf02a78a19ea81a6f51b4b3f2b2228bd21974c2538bbcd"
+    hash4 = "c49111af049dd9746c6b1980db6e150b2a79ca1569b23ed2cba81c85c00d82b4"
+    hash5 = "b62a643c96e2e41f639d2a8ce11d61e6b9d7fb3a9baf011120b7fec1b4ee3cf4"
+    hash6 = "edb12790b5cd959bc2e53a4b369a4fd747153e6c9d50f6a69ff047f7857a4348"
+    hash7 = "8f2ea0f916fda1dfb771f5441e919c561da5b6334b9f2fffcbf53db14063b24a"
+    hash8 = "8dddc744bbfcf215346c812aa569e49523996f73a1f22fe4e688084ce1225b98"
+    hash9 = "0c69258adcc97632b729e55664c22cd942812336d41e8ea0cff9ddcafaded20f"
+    hash10 = "2b4fba1ef06f85d1395945db40a9f2c3b3ed81b56fb9c2d5e5bb693c230215e2"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $x1 = "too long data for this type of transport" fullword ascii
@@ -69,16 +73,18 @@ rule Turla_APT_Malware_Gen1
 rule Turla_APT_Malware_Gen2 
 {
 
-    meta:
-        description = "Detects Turla malware (based on sample used in the RUAG APT case)"
-        author = "Florian Roth"
-        family = "Turla"
-        reference = "https://www.govcert.admin.ch/blog/22/technical-report-about-the-ruag-espionage-case"
-        date = "2016-06-09"
-        hash1 = "0e1bf347c37fb199886f1e675e372ba55ac4627e8be2f05a76c2c64f9b6ed0e4"
-        hash2 = "7206075cd8f1004e8f1f759d46e98bfad4098b8642412811a214c0155a1f08b9"
-        hash3 = "fe3ffd7438c0d38484bf02a78a19ea81a6f51b4b3f2b2228bd21974c2538bbcd"
-        hash4 = "c49111af049dd9746c6b1980db6e150b2a79ca1569b23ed2cba81c85c00d82b4"
+      meta:
+    description = "Detects Turla malware (based on sample used in the RUAG APT case)"
+    author = "Florian Roth"
+    family = "Turla"
+    reference = "https://www.govcert.admin.ch/blog/22/technical-report-about-the-ruag-espionage-case"
+    date = "2016-06-09"
+    hash1 = "0e1bf347c37fb199886f1e675e372ba55ac4627e8be2f05a76c2c64f9b6ed0e4"
+    hash2 = "7206075cd8f1004e8f1f759d46e98bfad4098b8642412811a214c0155a1f08b9"
+    hash3 = "fe3ffd7438c0d38484bf02a78a19ea81a6f51b4b3f2b2228bd21974c2538bbcd"
+    hash4 = "c49111af049dd9746c6b1980db6e150b2a79ca1569b23ed2cba81c85c00d82b4"
+    severity = "10"
+    type = "Advanced Persistent Threat"
   
     strings:
         $x1 = "Internal command not support =((" fullword ascii
@@ -106,21 +112,23 @@ rule Turla_APT_Malware_Gen2
 rule Turla_APT_Malware_Gen3 
 {
 
-    meta:
-        description = "Detects Turla malware (based on sample used in the RUAG APT case)"
-        author = "Florian Roth"
-        family = "Turla"
-        reference = "https://www.govcert.admin.ch/blog/22/technical-report-about-the-ruag-espionage-case"
-        date = "2016-06-09"
-        hash1 = "c49111af049dd9746c6b1980db6e150b2a79ca1569b23ed2cba81c85c00d82b4"
-        hash2 = "b62a643c96e2e41f639d2a8ce11d61e6b9d7fb3a9baf011120b7fec1b4ee3cf4"
-        hash3 = "edb12790b5cd959bc2e53a4b369a4fd747153e6c9d50f6a69ff047f7857a4348"
-        hash4 = "8f2ea0f916fda1dfb771f5441e919c561da5b6334b9f2fffcbf53db14063b24a"
-        hash5 = "8dddc744bbfcf215346c812aa569e49523996f73a1f22fe4e688084ce1225b98"
-        hash6 = "0c69258adcc97632b729e55664c22cd942812336d41e8ea0cff9ddcafaded20f"
-        hash7 = "2b4fba1ef06f85d1395945db40a9f2c3b3ed81b56fb9c2d5e5bb693c230215e2"
-        hash8 = "7206075cd8f1004e8f1f759d46e98bfad4098b8642412811a214c0155a1f08b9"
-        hash9 = "edb12790b5cd959bc2e53a4b369a4fd747153e6c9d50f6a69ff047f7857a4348"
+      meta:
+    description = "Detects Turla malware (based on sample used in the RUAG APT case)"
+    author = "Florian Roth"
+    family = "Turla"
+    reference = "https://www.govcert.admin.ch/blog/22/technical-report-about-the-ruag-espionage-case"
+    date = "2016-06-09"
+    hash1 = "c49111af049dd9746c6b1980db6e150b2a79ca1569b23ed2cba81c85c00d82b4"
+    hash2 = "b62a643c96e2e41f639d2a8ce11d61e6b9d7fb3a9baf011120b7fec1b4ee3cf4"
+    hash3 = "edb12790b5cd959bc2e53a4b369a4fd747153e6c9d50f6a69ff047f7857a4348"
+    hash4 = "8f2ea0f916fda1dfb771f5441e919c561da5b6334b9f2fffcbf53db14063b24a"
+    hash5 = "8dddc744bbfcf215346c812aa569e49523996f73a1f22fe4e688084ce1225b98"
+    hash6 = "0c69258adcc97632b729e55664c22cd942812336d41e8ea0cff9ddcafaded20f"
+    hash7 = "2b4fba1ef06f85d1395945db40a9f2c3b3ed81b56fb9c2d5e5bb693c230215e2"
+    hash8 = "7206075cd8f1004e8f1f759d46e98bfad4098b8642412811a214c0155a1f08b9"
+    hash9 = "edb12790b5cd959bc2e53a4b369a4fd747153e6c9d50f6a69ff047f7857a4348"
+    severity = "10"
+    type = "Advanced Persistent Threat"
   
     strings:
         $x1 = "\\\\.\\pipe\\sdlrpc" fullword ascii
@@ -155,11 +163,13 @@ rule Turla_APT_Malware_Gen3
 rule RUAG_Tavdig_Malformed_Executable 
 {
 
-  meta:
+    meta:
     description = "Detects an embedded executable with a malformed header - known from Tavdig malware"
     author = "Florian Roth"
     reference = "https://goo.gl/N5MEj0"
     score = 60
+    severity = "10"
+    type = "Advanced Persistent Threat"
   
   condition:
   /* MZ Header and malformed PE header > 0x0bad */
@@ -169,11 +179,13 @@ rule RUAG_Tavdig_Malformed_Executable
 rule RUAG_Bot_Config_File 
 {
 
-  meta:
+    meta:
     description = "Detects a specific config file used by malware in RUAG APT case"
     author = "Florian Roth"
     reference = "https://goo.gl/N5MEj0"
     score = 60
+    severity = "10"
+    type = "Advanced Persistent Threat"
   
   strings:
     $s1 = "[CONFIG]" ascii
@@ -187,11 +199,13 @@ rule RUAG_Bot_Config_File
 rule RUAG_Cobra_Malware 
 {
 
-  meta:
+    meta:
     description = "Detects a malware mentioned in the RUAG Case called Carbon/Cobra"
     author = "Florian Roth"
     reference = "https://goo.gl/N5MEj0"
     score = 60
+    severity = "10"
+    type = "Advanced Persistent Threat"
  
   strings:
     $s1 = "\\Cobra\\Release\\Cobra.pdb" ascii
@@ -203,11 +217,13 @@ rule RUAG_Cobra_Malware
 rule RUAG_Cobra_Config_File 
 {
 
-  meta:
+    meta:
     description = "Detects a config text file used by malware Cobra in RUAG case"
     author = "Florian Roth"
     reference = "https://goo.gl/N5MEj0"
     score = 60
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
   strings:
     $h1 = "[NAME]" ascii
@@ -229,11 +245,13 @@ rule RUAG_Cobra_Config_File
 rule RUAG_Exfil_Config_File 
 {
 
-  meta:
+    meta:
     description = "Detects a config text file used in data exfiltration in RUAG case"
     author = "Florian Roth"
     reference = "https://goo.gl/N5MEj0"
     score = 60
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
   strings:
     $h1 = "[TRANSPORT]" ascii
@@ -256,11 +274,13 @@ import "pe"
 rule WaterBug_turla_dll 
 {
   
-    meta:
-        description = "Symantec Waterbug Attack - Trojan Turla DLL"
-        author = "Symantec Security Response"
-        date = "22.01.2015"
-        reference = "http://www.symantec.com/connect/blogs/turla-spying-tool-targets-governments-and-diplomats"   
+      meta:
+    description = "Symantec Waterbug Attack - Trojan Turla DLL"
+    author = "Symantec Security Response"
+    date = "22.01.2015"
+    reference = "http://www.symantec.com/connect/blogs/turla-spying-tool-targets-governments-and-diplomats"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $a = /([A-Za-z0-9]{2,10}_){,2}Win32\.dll\x00/
@@ -272,12 +292,14 @@ rule WaterBug_turla_dll
 rule turla_dropper
 { 
    
-    meta:
-        maltype = "turla dropper"
-        ref = "https://github.com/reed1713"
-        reference = "http://info.baesystemsdetica.com/rs/baesystems/images/snake_whitepaper.pdf"
-        date = "3/13/2014"
-        description = "This sample was pulled from the bae systems snake campaign report. The Turla dropper creates a file in teh temp dir and registers an auto start service call \"RPC Endpoint Locator\"."
+      meta:
+    maltype = "turla dropper"
+    ref = "https://github.com/reed1713"
+    reference = "http://info.baesystemsdetica.com/rs/baesystems/images/snake_whitepaper.pdf"
+    date = "3/13/2014"
+    description = "This sample was pulled from the bae systems snake campaign report. The Turla dropper creates a file in teh temp dir and registers an auto start service call \"RPC Endpoint Locator\"."
+    severity = "10"
+    type = "Advanced Persistent Threat"
     strings:
 
         $type="Microsoft-Windows-Security-Auditing"

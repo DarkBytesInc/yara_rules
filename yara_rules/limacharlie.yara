@@ -2,11 +2,14 @@ import "pe"
 
 rule LimaCharlie
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
-		Source_x86 = "6ee6ae79ee1502a11ece81e971a54f189a271be9ec700101a2bd7a21198b94c7"
-		Source_x64 = "90ace24eb132c776a6d5bb0451437db21e84601495a2165d75f520af637e71e8"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group - trig@novetta.com"
+    Source_x86 = "6ee6ae79ee1502a11ece81e971a54f189a271be9ec700101a2bd7a21198b94c7"
+    Source_x64 = "90ace24eb132c776a6d5bb0451437db21e84601495a2165d75f520af637e71e8"
+    description = "LimaCharlie"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 		$misspelling = "Defualt Sleep = %d" wide

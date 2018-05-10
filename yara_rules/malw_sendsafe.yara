@@ -7,13 +7,16 @@
 
 rule sendsafe {
 
-    meta:
-        author = " J from THL <j@techhelplist.com>"
-        date = "2016/09"
-        reference = "http://pastebin.com/WPWWs406"
-		version = 2
-        maltype = "Spammer"
-        filetype = "memory"
+      meta:
+    author = " J from THL <j@techhelplist.com>"
+    date = "2016/09"
+    reference = "http://pastebin.com/WPWWs406"
+    version = 2
+    maltype = "Spammer"
+    filetype = "memory"
+    description = "sendsafe"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $a = "Enterprise Mailing Service"

@@ -8,15 +8,17 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule Rombertik_CarbonGrabber {
-	meta:
-		description = "Detects CarbonGrabber alias Rombertik - file Copy#064046.scr"
-		author = "Florian Roth"
-		reference = "http://blogs.cisco.com/security/talos/rombertik"
-		date = "2015-05-05"
-		hash1 = "2f9b26b90311e62662c5946a1ac600d2996d3758"
-		hash2 = "aeb94064af2a6107a14fd32f39cb502e704cd0ab"
-		hash3 = "c2005c8d1a79da5e02e6a15d00151018658c264c" 
-		hash4 = "98223d4ec272d3a631498b621618d875dd32161d" 	
+	  meta:
+    description = "Detects CarbonGrabber alias Rombertik - file Copy#064046.scr"
+    author = "Florian Roth"
+    reference = "http://blogs.cisco.com/security/talos/rombertik"
+    date = "2015-05-05"
+    hash1 = "2f9b26b90311e62662c5946a1ac600d2996d3758"
+    hash2 = "aeb94064af2a6107a14fd32f39cb502e704cd0ab"
+    hash3 = "c2005c8d1a79da5e02e6a15d00151018658c264c"
+    hash4 = "98223d4ec272d3a631498b621618d875dd32161d"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$x1 = "ZwGetWriteWatch" fullword ascii
 		$x2 = "OutputDebugStringA" fullword ascii
@@ -29,12 +31,14 @@ rule Rombertik_CarbonGrabber {
 }
 
 rule Rombertik_CarbonGrabber_Panel_InstallScript {
-	meta:
-		description = "Detects CarbonGrabber alias Rombertik panel install script - file install.php"
-		author = "Florian Roth"
-		reference = "http://blogs.cisco.com/security/talos/rombertik"
-		date = "2015-05-05"
-		hash = "cd6c152dd1e0689e0bede30a8bd07fef465fbcfa"
+	  meta:
+    description = "Detects CarbonGrabber alias Rombertik panel install script - file install.php"
+    author = "Florian Roth"
+    reference = "http://blogs.cisco.com/security/talos/rombertik"
+    date = "2015-05-05"
+    hash = "cd6c152dd1e0689e0bede30a8bd07fef465fbcfa"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$s0 = "$insert = \"INSERT INTO `logs` (`id`, `ip`, `name`, `host`, `post`, `time`, `bro" ascii
 		$s3 = "`post` text NOT NULL," fullword ascii
@@ -49,12 +53,14 @@ rule Rombertik_CarbonGrabber_Panel_InstallScript {
 }
 
 rule Rombertik_CarbonGrabber_Panel {
-	meta:
-		description = "Detects CarbonGrabber alias Rombertik Panel - file index.php"
-		author = "Florian Roth"
-		reference = "http://blogs.cisco.com/security/talos/rombertik"
-		date = "2015-05-05"
-		hash = "e6e9e4fc3772ff33bbeeda51f217e9149db60082"
+	  meta:
+    description = "Detects CarbonGrabber alias Rombertik Panel - file index.php"
+    author = "Florian Roth"
+    reference = "http://blogs.cisco.com/security/talos/rombertik"
+    date = "2015-05-05"
+    hash = "e6e9e4fc3772ff33bbeeda51f217e9149db60082"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$s0 = "echo '<meta http-equiv=\"refresh\" content=\"0;url=index.php?a=login\">';" fullword ascii
 		$s1 = "echo '<meta http-equiv=\"refresh\" content=\"2;url='.$website.'/index.php?a=login" ascii
@@ -67,12 +73,14 @@ rule Rombertik_CarbonGrabber_Panel {
 }
 
 rule Rombertik_CarbonGrabber_Builder {
-	meta:
-		description = "Detects CarbonGrabber alias Rombertik Builder - file Builder.exe"
-		author = "Florian Roth"
-		reference = "http://blogs.cisco.com/security/talos/rombertik"
-		date = "2015-05-05"
-		hash = "b50ecc0ba3d6ec19b53efe505d14276e9e71285f"
+	  meta:
+    description = "Detects CarbonGrabber alias Rombertik Builder - file Builder.exe"
+    author = "Florian Roth"
+    reference = "http://blogs.cisco.com/security/talos/rombertik"
+    date = "2015-05-05"
+    hash = "b50ecc0ba3d6ec19b53efe505d14276e9e71285f"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$s0 = "c:\\users\\iden\\documents\\visual studio 2010\\Projects\\FormGrabberBuilderC++" ascii
 		$s1 = "Host(www.panel.com): " fullword ascii
@@ -84,12 +92,14 @@ rule Rombertik_CarbonGrabber_Builder {
 }
 
 rule Rombertik_CarbonGrabber_Builder_Server {
-	meta:
-		description = "Detects CarbonGrabber alias Rombertik Builder Server - file Server.exe"
-		author = "Florian Roth"
-		reference = "http://blogs.cisco.com/security/talos/rombertik"
-		date = "2015-05-05"
-		hash = "895fab8d55882eac51d4b27a188aa67205ff0ae5"
+	  meta:
+    description = "Detects CarbonGrabber alias Rombertik Builder Server - file Server.exe"
+    author = "Florian Roth"
+    reference = "http://blogs.cisco.com/security/talos/rombertik"
+    date = "2015-05-05"
+    hash = "895fab8d55882eac51d4b27a188aa67205ff0ae5"
+    severity = "7"
+    type = "Malware"
 	strings:
 		$s0 = "C:\\WINDOWS\\system32\\svchost.exe" fullword ascii
 		$s3 = "Software\\Microsoft\\Windows\\Currentversion\\RunOnce" fullword ascii

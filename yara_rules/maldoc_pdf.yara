@@ -5,10 +5,13 @@
 
 rule malicious_author : PDF raw
 {
-	meta:
-		author = "Glenn Edwards (@hiddenillusion)"
-		version = "0.1"
-		weight = 5
+	  meta:
+    author = "Glenn Edwards (@hiddenillusion)"
+    version = "0.1"
+    weight = 5
+    description = "malicious_author"
+    severity = "7"
+    type = "Malware"
 		
 	strings:
 		$magic = { 25 50 44 46 }
@@ -22,10 +25,13 @@ rule malicious_author : PDF raw
 
 rule suspicious_version : PDF raw
 {
-	meta:
-		author = "Glenn Edwards (@hiddenillusion)"
-		version = "0.1"
-		weight = 3
+	  meta:
+    author = "Glenn Edwards (@hiddenillusion)"
+    version = "0.1"
+    weight = 3
+    description = "suspicious_version"
+    severity = "7"
+    type = "Malware"
 		
 	strings:
 		$magic = { 25 50 44 46 }
@@ -36,10 +42,13 @@ rule suspicious_version : PDF raw
 
 rule suspicious_creation : PDF raw
 {
-	meta:
-		author = "Glenn Edwards (@hiddenillusion)"
-		version = "0.1"
-		weight = 2
+	  meta:
+    author = "Glenn Edwards (@hiddenillusion)"
+    version = "0.1"
+    weight = 2
+    description = "suspicious_creation"
+    severity = "7"
+    type = "Malware"
 		
 	strings:
 		$magic = { 25 50 44 46 }
@@ -53,10 +62,13 @@ rule suspicious_creation : PDF raw
 
 rule multiple_filtering : PDF raw
 {
-meta: 
-author = "Glenn Edwards (@hiddenillusion)"
-version = "0.2"
-weight = 3
+  meta:
+    author = "Glenn Edwards (@hiddenillusion)"
+    version = "0.2"
+    weight = 3
+    description = "multiple_filtering"
+    severity = "7"
+    type = "Malware"
 
     strings:
             $magic = { 25 50 44 46 }
@@ -69,10 +81,13 @@ weight = 3
 
 rule suspicious_title : PDF raw
 {
-	meta:
-		author = "Glenn Edwards (@hiddenillusion)"
-		version = "0.1"
-		weight = 4
+	  meta:
+    author = "Glenn Edwards (@hiddenillusion)"
+    version = "0.1"
+    weight = 4
+    description = "suspicious_title"
+    severity = "7"
+    type = "Malware"
 		
 	strings:
 		$magic = { 25 50 44 46 }
@@ -87,10 +102,13 @@ rule suspicious_title : PDF raw
 
 rule suspicious_author : PDF raw
 {
-	meta:
-		author = "Glenn Edwards (@hiddenillusion)"
-		version = "0.1"
-		weight = 4
+	  meta:
+    author = "Glenn Edwards (@hiddenillusion)"
+    version = "0.1"
+    weight = 4
+    description = "suspicious_title"
+    severity = "7"
+    type = "Malware"
 		
 	strings:
 		$magic = { 25 50 44 46 }
@@ -106,10 +124,13 @@ rule suspicious_author : PDF raw
 
 rule suspicious_producer : PDF raw 
 {
-	meta:
-		author = "Glenn Edwards (@hiddenillusion)"
-		version = "0.1"
-		weight = 2
+	  meta:
+    author = "Glenn Edwards (@hiddenillusion)"
+    version = "0.1"
+    weight = 2
+    description = "suspicious_creation"
+    severity = "7"
+    type = "Malware"
 		
 	strings:
 		$magic = { 25 50 44 46 }
@@ -123,10 +144,13 @@ rule suspicious_producer : PDF raw
 
 rule suspicious_creator : PDF raw
 {
-	meta:
-		author = "Glenn Edwards (@hiddenillusion)"
-		version = "0.1"
-		weight = 3
+	  meta:
+    author = "Glenn Edwards (@hiddenillusion)"
+    version = "0.1"
+    weight = 3
+    description = "suspicious_version"
+    severity = "7"
+    type = "Malware"
 		
 	strings:
 		$magic = { 25 50 44 46 }
@@ -141,10 +165,13 @@ rule suspicious_creator : PDF raw
 
 rule possible_exploit : PDF raw
 {
-	meta:
-		author = "Glenn Edwards (@hiddenillusion)"
-		version = "0.1"
-		weight = 3
+	  meta:
+    author = "Glenn Edwards (@hiddenillusion)"
+    version = "0.1"
+    weight = 3
+    description = "suspicious_version"
+    severity = "7"
+    type = "Malware"
 		
 	strings:
 		$magic = { 25 50 44 46 }
@@ -166,11 +193,13 @@ rule possible_exploit : PDF raw
 
 rule shellcode_blob_metadata : PDF raw
 {
-        meta:
-                author = "Glenn Edwards (@hiddenillusion)"
-                version = "0.1"
-                description = "When there's a large Base64 blob inserted into metadata fields it often indicates shellcode to later be decoded"
-                weight = 4
+          meta:
+    author = "Glenn Edwards (@hiddenillusion)"
+    version = "0.1"
+    description = "When there's a large Base64 blob inserted into metadata fields it often indicates shellcode to later be decoded"
+    weight = 4
+    severity = "7"
+    type = "Malware"
         strings:
                 $magic = { 25 50 44 46 }
 
@@ -187,10 +216,13 @@ rule shellcode_blob_metadata : PDF raw
 
 rule suspicious_js : PDF raw
 {
-	meta:
-		author = "Glenn Edwards (@hiddenillusion)"
-		version = "0.1"
-		weight = 3
+	  meta:
+    author = "Glenn Edwards (@hiddenillusion)"
+    version = "0.1"
+    weight = 3
+    description = "suspicious_version"
+    severity = "7"
+    type = "Malware"
 		
 	strings:
 		$magic = { 25 50 44 46 }
@@ -208,10 +240,13 @@ rule suspicious_js : PDF raw
 
 rule suspicious_launch_action : PDF raw
 {
-	meta:
-		author = "Glenn Edwards (@hiddenillusion)"
-		version = "0.1"
-		weight = 2
+	  meta:
+    author = "Glenn Edwards (@hiddenillusion)"
+    version = "0.1"
+    weight = 2
+    description = "suspicious_creation"
+    severity = "7"
+    type = "Malware"
 		
 	strings:
 		$magic = { 25 50 44 46 }
@@ -228,11 +263,14 @@ rule suspicious_launch_action : PDF raw
 
 rule suspicious_embed : PDF raw
 {
-	meta:
-		author = "Glenn Edwards (@hiddenillusion)"
-		version = "0.1"
-		ref = "https://feliam.wordpress.com/2010/01/13/generic-pdf-exploit-hider-embedpdf-py-and-goodbye-av-detection-012010/"
-		weight = 2
+	  meta:
+    author = "Glenn Edwards (@hiddenillusion)"
+    version = "0.1"
+    ref = "https://feliam.wordpress.com/2010/01/13/generic-pdf-exploit-hider-embedpdf-py-and-goodbye-av-detection-012010/"
+    weight = 2
+    description = "suspicious_embed"
+    severity = "7"
+    type = "Malware"
 		
 	strings:
 		$magic = { 25 50 44 46 }
@@ -249,10 +287,13 @@ rule suspicious_embed : PDF raw
 
 rule suspicious_obfuscation : PDF raw
 {
-	meta:
-		author = "Glenn Edwards (@hiddenillusion)"
-		version = "0.1"
-		weight = 2
+	  meta:
+    author = "Glenn Edwards (@hiddenillusion)"
+    version = "0.1"
+    weight = 2
+    description = "suspicious_creation"
+    severity = "7"
+    type = "Malware"
 		
 	strings:
 		$magic = { 25 50 44 46 }
@@ -264,12 +305,14 @@ rule suspicious_obfuscation : PDF raw
 
 rule invalid_XObject_js : PDF raw
 {
-	meta:
-		author = "Glenn Edwards (@hiddenillusion)"
-		description = "XObject's require v1.4+"
-		ref = "https://blogs.adobe.com/ReferenceXObjects/"
-		version = "0.1"
-		weight = 2
+	  meta:
+    author = "Glenn Edwards (@hiddenillusion)"
+    description = "XObject's require v1.4+"
+    ref = "https://blogs.adobe.com/ReferenceXObjects/"
+    version = "0.1"
+    weight = 2
+    severity = "7"
+    type = "Malware"
 		
 	strings:
 		$magic = { 25 50 44 46 }
@@ -284,10 +327,13 @@ rule invalid_XObject_js : PDF raw
 
 rule invalid_trailer_structure : PDF raw
 {
-	meta:
-		author = "Glenn Edwards (@hiddenillusion)"
-		version = "0.1"
-		weight = 1
+	  meta:
+    author = "Glenn Edwards (@hiddenillusion)"
+    version = "0.1"
+    weight = 1
+    description = "invalid_trailer_structure"
+    severity = "7"
+    type = "Malware"
 		
         strings:
                 $magic = { 25 50 44 46 }
@@ -301,11 +347,13 @@ rule invalid_trailer_structure : PDF raw
 
 rule multiple_versions : PDF raw
 {
-	meta:
-		author = "Glenn Edwards (@hiddenillusion)"
-		version = "0.1"
-        description = "Written very generically and doesn't hold any weight - just something that might be useful to know about to help show incremental updates to the file being analyzed"		
-		weight = 1
+	  meta:
+    author = "Glenn Edwards (@hiddenillusion)"
+    version = "0.1"
+    description = "Written very generically and doesn't hold any weight - just something that might be useful to know about to help show incremental updates to the file being analyzed"
+    weight = 1
+    severity = "7"
+    type = "Malware"
 		
         strings:
                 $magic = { 25 50 44 46 }
@@ -318,12 +366,14 @@ rule multiple_versions : PDF raw
 
 rule js_wrong_version : PDF raw
 {
-	meta:
-		author = "Glenn Edwards (@hiddenillusion)"
-		description = "JavaScript was introduced in v1.3"
-		ref = "http://wwwimages.adobe.com/www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/pdf_reference_1-7.pdf"
-		version = "0.1"
-		weight = 2
+	  meta:
+    author = "Glenn Edwards (@hiddenillusion)"
+    description = "JavaScript was introduced in v1.3"
+    ref = "http://wwwimages.adobe.com/www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/pdf_reference_1-7.pdf"
+    version = "0.1"
+    weight = 2
+    severity = "7"
+    type = "Malware"
 		
         strings:
                 $magic = { 25 50 44 46 }
@@ -336,12 +386,14 @@ rule js_wrong_version : PDF raw
 
 rule JBIG2_wrong_version : PDF raw
 {
-	meta:
-		author = "Glenn Edwards (@hiddenillusion)"
-		description = "JBIG2 was introduced in v1.4"
-		ref = "http://wwwimages.adobe.com/www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/pdf_reference_1-7.pdf"
-		version = "0.1"
-		weight = 1
+	  meta:
+    author = "Glenn Edwards (@hiddenillusion)"
+    description = "JBIG2 was introduced in v1.4"
+    ref = "http://wwwimages.adobe.com/www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/pdf_reference_1-7.pdf"
+    version = "0.1"
+    weight = 1
+    severity = "7"
+    type = "Malware"
 		
         strings:
                 $magic = { 25 50 44 46 }
@@ -354,12 +406,14 @@ rule JBIG2_wrong_version : PDF raw
 
 rule FlateDecode_wrong_version : PDF raw
 {
-	meta:
-		author = "Glenn Edwards (@hiddenillusion)"
-		description = "Flate was introduced in v1.2"
-		ref = "http://wwwimages.adobe.com/www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/pdf_reference_1-7.pdf"
-		version = "0.1"
-		weight = 1
+	  meta:
+    author = "Glenn Edwards (@hiddenillusion)"
+    description = "Flate was introduced in v1.2"
+    ref = "http://wwwimages.adobe.com/www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/pdf_reference_1-7.pdf"
+    version = "0.1"
+    weight = 1
+    severity = "7"
+    type = "Malware"
 		
         strings:
                 $magic = { 25 50 44 46 }
@@ -372,12 +426,14 @@ rule FlateDecode_wrong_version : PDF raw
 
 rule embed_wrong_version : PDF raw
 {
-	meta:
-		author = "Glenn Edwards (@hiddenillusion)"
-		description = "EmbeddedFiles were introduced in v1.3"
-		ref = "http://wwwimages.adobe.com/www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/pdf_reference_1-7.pdf"
-		version = "0.1"
-		weight = 1
+	  meta:
+    author = "Glenn Edwards (@hiddenillusion)"
+    description = "EmbeddedFiles were introduced in v1.3"
+    ref = "http://wwwimages.adobe.com/www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/pdf_reference_1-7.pdf"
+    version = "0.1"
+    weight = 1
+    severity = "7"
+    type = "Malware"
 		
         strings:
                 $magic = { 25 50 44 46 }
@@ -390,12 +446,14 @@ rule embed_wrong_version : PDF raw
 
 rule invalid_xref_numbers : PDF raw
 {
-        meta:
-			author = "Glenn Edwards (@hiddenillusion)"
-			version = "0.1"
-			description = "The first entry in a cross-reference table is always free and has a generation number of 65,535"
-			notes = "This can be also be in a stream..."
-			weight = 1
+          meta:
+    author = "Glenn Edwards (@hiddenillusion)"
+    version = "0.1"
+    description = "The first entry in a cross-reference table is always free and has a generation number of 65,535"
+    notes = "This can be also be in a stream..."
+    weight = 1
+    severity = "7"
+    type = "Malware"
 		
         strings:
                 $magic = { 25 50 44 46 }
@@ -407,11 +465,13 @@ rule invalid_xref_numbers : PDF raw
 
 rule js_splitting : PDF raw
 {
-        meta:
-                author = "Glenn Edwards (@hiddenillusion)"
-                version = "0.1"
-                description = "These are commonly used to split up JS code"
-                weight = 2
+          meta:
+    author = "Glenn Edwards (@hiddenillusion)"
+    version = "0.1"
+    description = "These are commonly used to split up JS code"
+    weight = 2
+    severity = "7"
+    type = "Malware"
                 
         strings:
                 $magic = { 25 50 44 46 }
@@ -427,12 +487,14 @@ rule js_splitting : PDF raw
 
 rule header_evasion : PDF raw
 {
-        meta:
-                author = "Glenn Edwards (@hiddenillusion)"
-                description = "3.4.1, 'File Header' of Appendix H states that ' Acrobat viewers require only that the header appear somewhere within the first 1024 bytes of the file.'  Therefore, if you see this trigger then any other rule looking to match the magic at 0 won't be applicable"
-                ref = "http://wwwimages.adobe.com/www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/pdf_reference_1-7.pdf"
-                version = "0.1"
-                weight = 3
+          meta:
+    author = "Glenn Edwards (@hiddenillusion)"
+    description = "3.4.1, 'File Header' of Appendix H states that ' Acrobat viewers require only that the header appear somewhere within the first 1024 bytes of the file.'  Therefore, if you see this trigger then any other rule looking to match the magic at 0 won't be applicable"
+    ref = "http://wwwimages.adobe.com/www.adobe.com/content/dam/Adobe/en/devnet/pdf/pdfs/pdf_reference_1-7.pdf"
+    version = "0.1"
+    weight = 3
+    severity = "7"
+    type = "Malware"
 
         strings:
                 $magic = { 25 50 44 46 }
@@ -442,11 +504,14 @@ rule header_evasion : PDF raw
 
 rule BlackHole_v2 : PDF raw
 {
-	meta:
-		author = "Glenn Edwards (@hiddenillusion)"
-		version = "0.1"
-		ref = "http://fortknoxnetworks.blogspot.no/2012/10/blackhhole-exploit-kit-v-20-url-pattern.html"
-		weight = 3
+	  meta:
+    author = "Glenn Edwards (@hiddenillusion)"
+    version = "0.1"
+    ref = "http://fortknoxnetworks.blogspot.no/2012/10/blackhhole-exploit-kit-v-20-url-pattern.html"
+    weight = 3
+    description = "BlackHole_v2"
+    severity = "7"
+    type = "Malware"
 		
 	strings:
 		$magic = { 25 50 44 46 }
@@ -459,11 +524,14 @@ rule BlackHole_v2 : PDF raw
 
 rule XDP_embedded_PDF : PDF raw
 {
-	meta:
-		author = "Glenn Edwards (@hiddenillusion)"
-		version = "0.1"
-		ref = "http://blog.9bplus.com/av-bypass-for-malicious-pdfs-using-xdp"
-        weight = 1		
+	  meta:
+    author = "Glenn Edwards (@hiddenillusion)"
+    version = "0.1"
+    ref = "http://blog.9bplus.com/av-bypass-for-malicious-pdfs-using-xdp"
+    weight = 1
+    description = "XDP_embedded_PDF"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		$s1 = "<pdf xmlns="
@@ -478,8 +546,11 @@ rule XDP_embedded_PDF : PDF raw
 
 rule PDF_Embedded_Exe : PDF
 {
-	meta:
-		ref = "https://github.com/jacobsoo/Yara-Rules/blob/master/PDF_Embedded_Exe.yar"
+	  meta:
+    ref = "https://github.com/jacobsoo/Yara-Rules/blob/master/PDF_Embedded_Exe.yar"
+    description = "PDF_Embedded_Exe"
+    severity = "7"
+    type = "Malware"
 	strings:
     	$header = {25 50 44 46}
     	$Launch_Action = {3C 3C 2F 53 2F 4C 61 75 6E 63 68 2F 54 79 70 65 2F 41 63 74 69 6F 6E 2F 57 69 6E 3C 3C 2F 46}

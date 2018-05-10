@@ -1,11 +1,13 @@
 rule wineggdrop : portscanner toolkit
 {
-    meta:
-        author = "Christian Rebischke (@sh1bumi)"
-        date = "2015-09-05"
-        description = "Rules for TCP Portscanner VX.X by WinEggDrop"
-        in_the_wild = true
-        family = "Hackingtool/Portscanner"
+      meta:
+    author = "Christian Rebischke (@sh1bumi)"
+    date = "2015-09-05"
+    description = "Rules for TCP Portscanner VX.X by WinEggDrop"
+    in_the_wild = true
+    family = "Hackingtool/Portscanner"
+    severity = "7"
+    type = "Exploit Kit"
 
     strings:
         $a = { 54 43 50 20 50 6f 72 74 20 53 63 61 6e 6e 65 72 

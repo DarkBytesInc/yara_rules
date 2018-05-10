@@ -4,10 +4,12 @@
 */
 rule sakula_v1_0: RAT
 {
-    meta:
-        description = "Sakula v1.0"
-        date = "2015-10-13"
-        author = "Airbus Defence and Space Cybersecurity CSIRT - Yoann Francou"
+      meta:
+    description = "Sakula v1.0"
+    date = "2015-10-13"
+    author = "Airbus Defence and Space Cybersecurity CSIRT - Yoann Francou"
+    severity = "7"
+    type = "Malware"
     strings:
         $m1 = "%d_of_%d_for_%s_on_%s"
         $m2 = "/c ping 127.0.0.1 & del /q \"%s\""
@@ -23,10 +25,12 @@ rule sakula_v1_0: RAT
 
 rule sakula_v1_1: RAT
 {
-    meta:
-        description = "Sakula v1.1"
-        date = "2015-10-13"
-        author = "Airbus Defence and Space Cybersecurity CSIRT - Yoann Francou"
+      meta:
+    description = "Sakula v1.1"
+    date = "2015-10-13"
+    author = "Airbus Defence and Space Cybersecurity CSIRT - Yoann Francou"
+    severity = "7"
+    type = "Malware"
     strings:
         $m1 = "%d_of_%d_for_%s_on_%s"
         $m2 = "/c ping 127.0.0.1 & del /q \"%s\""
@@ -42,10 +46,12 @@ rule sakula_v1_1: RAT
 
 rule sakula_v1_2: RAT
 {
-    meta:
-        description = "Sakula v1.2"
-        date = "2015-10-13"
-        author = "Airbus Defence and Space Cybersecurity CSIRT - Yoann Francou"
+      meta:
+    description = "Sakula v1.2"
+    date = "2015-10-13"
+    author = "Airbus Defence and Space Cybersecurity CSIRT - Yoann Francou"
+    severity = "7"
+    type = "Malware"
     strings:
         $m1 = "%d_of_%d_for_%s_on_%s"
         $m2 = "/c ping 127.0.0.1 & del /q \"%s\""
@@ -60,10 +66,12 @@ rule sakula_v1_2: RAT
 
 rule sakula_v1_3: RAT
 {
-    meta:
-        description = "Sakula v1.3"
-        date = "2015-10-13"
-        author = "Airbus Defence and Space Cybersecurity CSIRT - Yoann Francou"
+      meta:
+    description = "Sakula v1.3"
+    date = "2015-10-13"
+    author = "Airbus Defence and Space Cybersecurity CSIRT - Yoann Francou"
+    severity = "7"
+    type = "Malware"
     strings:
         $m1 = "%d_of_%d_for_%s_on_%s"
         $m2 = "/c ping 127.0.0.1 & del /q \"%s\""
@@ -78,10 +86,12 @@ rule sakula_v1_3: RAT
 
 rule sakula_v1_4: RAT
 {
-    meta:
-        description = "Sakula v1.4"
-        date = "2015-10-13"
-        author = "Airbus Defence and Space Cybersecurity CSIRT - Yoann Francou"
+      meta:
+    description = "Sakula v1.4"
+    date = "2015-10-13"
+    author = "Airbus Defence and Space Cybersecurity CSIRT - Yoann Francou"
+    severity = "7"
+    type = "Malware"
     strings:
         $m1 = "%d_of_%d_for_%s_on_%s"
         $m2 = "/c ping 127.0.0.1 & del /q \"%s\""

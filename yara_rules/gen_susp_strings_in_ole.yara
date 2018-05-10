@@ -1,10 +1,12 @@
 
 rule MAL_RTF_Embedded_OLE_PE {
-   meta:
-      description = "Detects a suspicious string often used in PE files in a hex encoded object stream"
-      author = "Florian Roth"
-      reference = "https://www.nextron-systems.com/2018/01/22/creating-yara-rules-detect-embedded-exe-files-ole-objects/"
-      date = "2018-01-22"
+     meta:
+    description = "Detects a suspicious string often used in PE files in a hex encoded object stream"
+    author = "Florian Roth"
+    reference = "https://www.nextron-systems.com/2018/01/22/creating-yara-rules-detect-embedded-exe-files-ole-objects/"
+    date = "2018-01-22"
+    severity = "5"
+    type = "Unknown"
    strings:
       /* Hex encoded strings */
       /* This program cannot be run in DOS mode */

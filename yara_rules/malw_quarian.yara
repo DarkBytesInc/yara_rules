@@ -7,10 +7,12 @@ import "pe"
 
 rule QuarianStrings : Quarian Family
 {
-    meta:
-        description = "Quarian Identifying Strings"
-        author = "Seth Hardy"
-        last_modified = "2014-07-09"
+      meta:
+    description = "Quarian Identifying Strings"
+    author = "Seth Hardy"
+    last_modified = "2014-07-09"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $ = "s061779s061750"
@@ -41,10 +43,12 @@ rule QuarianStrings : Quarian Family
 
 rule QuarianCode : Quarian Family 
 {
-    meta:
-        description = "Quarian code features"
-        author = "Seth Hardy"
-        last_modified = "2014-07-09"
+      meta:
+    description = "Quarian code features"
+    author = "Seth Hardy"
+    last_modified = "2014-07-09"
+    severity = "7"
+    type = "Malware"
     
     strings:
         // decrypt in intelnat.sys
@@ -61,10 +65,12 @@ rule QuarianCode : Quarian Family
 
 rule Quarian : Family
 {
-    meta:
-        description = "Quarian"
-        author = "Seth Hardy"
-        last_modified = "2014-07-09"
+      meta:
+    description = "Quarian"
+    author = "Seth Hardy"
+    last_modified = "2014-07-09"
+    severity = "7"
+    type = "Malware"
         
     condition:
         QuarianCode or QuarianStrings

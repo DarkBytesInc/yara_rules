@@ -6,9 +6,12 @@
 rule dubseven_file_set
 {
     
-    meta:
-        author = "Matt Brooks, @cmatthewbrooks"
-        desc = "Searches for service files loading UP007"
+      meta:
+    author = "Matt Brooks, @cmatthewbrooks"
+    desc = "Searches for service files loading UP007"
+    description = "dubseven_file_set"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $file1 = "\\Microsoft\\Internet Explorer\\conhost.exe"
@@ -29,9 +32,12 @@ rule dubseven_file_set
 rule dubseven_dropper_registry_checks
 {
     
-    meta:
-        author = "Matt Brooks, @cmatthewbrooks"
-        desc = "Searches for registry keys checked for by the dropper"
+      meta:
+    author = "Matt Brooks, @cmatthewbrooks"
+    desc = "Searches for registry keys checked for by the dropper"
+    description = "dubseven_dropper_registry_checks"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $reg1 = "SOFTWARE\\360Safe\\Liveup"
@@ -50,9 +56,12 @@ rule dubseven_dropper_registry_checks
 rule dubseven_dropper_dialog_remains
 {
    
-    meta:
-        author = "Matt Brooks, @cmatthewbrooks"
-        desc = "Searches for related dialog remnants. How rude."
+      meta:
+    author = "Matt Brooks, @cmatthewbrooks"
+    desc = "Searches for related dialog remnants. How rude."
+    description = "dubseven_dropper_dialog_remains"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $dia1 = "fuckMessageBox 1.0" wide
@@ -66,10 +75,13 @@ rule dubseven_dropper_dialog_remains
 rule maindll_mutex
 {
    
-    meta:
-        author = "Matt Brooks, @cmatthewbrooks"
-        desc = "Matches on the maindll mutex"
-        ref = "https://citizenlab.org/2016/04/between-hong-kong-and-burma/"
+      meta:
+    author = "Matt Brooks, @cmatthewbrooks"
+    desc = "Matches on the maindll mutex"
+    ref = "https://citizenlab.org/2016/04/between-hong-kong-and-burma/"
+    description = "maindll_mutex"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $mutex = "h31415927tttt"
@@ -82,10 +94,13 @@ rule maindll_mutex
 rule SLServer_dialog_remains
 {
     
-    meta:
-        author = "Matt Brooks, @cmatthewbrooks"
-        desc = "Searches for related dialog remnants."
-        ref = "https://citizenlab.org/2016/04/between-hong-kong-and-burma/"
+      meta:
+    author = "Matt Brooks, @cmatthewbrooks"
+    desc = "Searches for related dialog remnants."
+    ref = "https://citizenlab.org/2016/04/between-hong-kong-and-burma/"
+    description = "SLServer_dialog_remains"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $slserver = "SLServer" wide
@@ -98,10 +113,13 @@ rule SLServer_dialog_remains
 rule SLServer_mutex
 {
     
-    meta:
-        author = "Matt Brooks, @cmatthewbrooks"
-        desc = "Searches for the mutex."
-        ref = "https://citizenlab.org/2016/04/between-hong-kong-and-burma/"
+      meta:
+    author = "Matt Brooks, @cmatthewbrooks"
+    desc = "Searches for the mutex."
+    ref = "https://citizenlab.org/2016/04/between-hong-kong-and-burma/"
+    description = "SLServer_mutex"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $mutex = "M&GX^DSF&DA@F"
@@ -114,10 +132,13 @@ rule SLServer_mutex
 rule SLServer_command_and_control
 {
    
-    meta:
-        author = "Matt Brooks, @cmatthewbrooks"
-        desc = "Searches for the C2 server."
-        ref = "https://citizenlab.org/2016/04/between-hong-kong-and-burma/"
+      meta:
+    author = "Matt Brooks, @cmatthewbrooks"
+    desc = "Searches for the C2 server."
+    ref = "https://citizenlab.org/2016/04/between-hong-kong-and-burma/"
+    description = "SLServer_command_and_control"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $c2 = "safetyssl.security-centers.com"
@@ -129,10 +150,13 @@ rule SLServer_command_and_control
 
 rule SLServer_campaign_code
 {
-    meta:
-        author = "Matt Brooks, @cmatthewbrooks"
-        desc = "Searches for the related campaign code."
-        ref = "https://citizenlab.org/2016/04/between-hong-kong-and-burma/"
+      meta:
+    author = "Matt Brooks, @cmatthewbrooks"
+    desc = "Searches for the related campaign code."
+    ref = "https://citizenlab.org/2016/04/between-hong-kong-and-burma/"
+    description = "SLServer_campaign_code"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $campaign = "wthkdoc0106"
@@ -144,10 +168,13 @@ rule SLServer_campaign_code
 
 rule SLServer_unknown_string
 {
-    meta:
-        author = "Matt Brooks, @cmatthewbrooks"
-        desc = "Searches for a unique string."
-        ref = "https://citizenlab.org/2016/04/between-hong-kong-and-burma/"
+      meta:
+    author = "Matt Brooks, @cmatthewbrooks"
+    desc = "Searches for a unique string."
+    ref = "https://citizenlab.org/2016/04/between-hong-kong-and-burma/"
+    description = "SLServer_unknown_string"
+    severity = "10"
+    type = "Advanced Persistent Threat"
     
     strings:
         $string = "test-b7fa835a39"

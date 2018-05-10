@@ -16,12 +16,14 @@
 rule Codoso_PlugX_3
 {
 
-    meta:
-        description = "Detects Codoso APT PlugX Malware"
-        author = "Florian Roth"
-        reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
-        date = "2016-01-30"
-        hash = "74e1e83ac69e45a3bee78ac2fac00f9e897f281ea75ed179737e9b6fe39971e3"
+      meta:
+    description = "Detects Codoso APT PlugX Malware"
+    author = "Florian Roth"
+    reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
+    date = "2016-01-30"
+    hash = "74e1e83ac69e45a3bee78ac2fac00f9e897f281ea75ed179737e9b6fe39971e3"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "Cannot create folder %sDCRC failed in the encrypted file %s. Corrupt file or wrong password." fullword wide
@@ -36,12 +38,14 @@ rule Codoso_PlugX_3
 rule Codoso_PlugX_2
 {
 
-    meta:
-        description = "Detects Codoso APT PlugX Malware"
-        author = "Florian Roth"
-        reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
-        date = "2016-01-30"
-        hash = "b9510e4484fa7e3034228337768176fce822162ad819539c6ca3631deac043eb"
+      meta:
+    description = "Detects Codoso APT PlugX Malware"
+    author = "Florian Roth"
+    reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
+    date = "2016-01-30"
+    hash = "b9510e4484fa7e3034228337768176fce822162ad819539c6ca3631deac043eb"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "%TEMP%\\HID" fullword wide
@@ -57,15 +61,17 @@ rule Codoso_PlugX_2
 rule Codoso_CustomTCP_4
 {
 
-    meta:
-        description = "Detects Codoso APT CustomTCP Malware"
-        author = "Florian Roth"
-        reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
-        date = "2016-01-30"
-        hash1 = "ea67d76e9d2e9ce3a8e5f80ff9be8f17b2cd5b1212153fdf36833497d9c060c0"
-        hash2 = "130abb54112dd47284fdb169ff276f61f2b69d80ac0a9eac52200506f147b5f8"
-        hash3 = "3ea6b2b51050fe7c07e2cf9fa232de6a602aa5eff66a2e997b25785f7cf50daa"
-        hash4 = "02cf5c244aebaca6195f45029c1e37b22495609be7bdfcfcd79b0c91eac44a13"
+      meta:
+    description = "Detects Codoso APT CustomTCP Malware"
+    author = "Florian Roth"
+    reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
+    date = "2016-01-30"
+    hash1 = "ea67d76e9d2e9ce3a8e5f80ff9be8f17b2cd5b1212153fdf36833497d9c060c0"
+    hash2 = "130abb54112dd47284fdb169ff276f61f2b69d80ac0a9eac52200506f147b5f8"
+    hash3 = "3ea6b2b51050fe7c07e2cf9fa232de6a602aa5eff66a2e997b25785f7cf50daa"
+    hash4 = "02cf5c244aebaca6195f45029c1e37b22495609be7bdfcfcd79b0c91eac44a13"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "varus_service_x86.dll" fullword ascii
@@ -84,12 +90,14 @@ rule Codoso_CustomTCP_4
 rule Codoso_CustomTCP_3
 {
 
-    meta:
-        description = "Detects Codoso APT CustomTCP Malware"
-        author = "Florian Roth"
-        reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
-        date = "2016-01-30"
-        hash = "d66106ec2e743dae1d71b60a602ca713b93077f56a47045f4fc9143aa3957090"
+      meta:
+    description = "Detects Codoso APT CustomTCP Malware"
+    author = "Florian Roth"
+    reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
+    date = "2016-01-30"
+    hash = "d66106ec2e743dae1d71b60a602ca713b93077f56a47045f4fc9143aa3957090"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "DnsApi.dll" fullword ascii
@@ -109,12 +117,14 @@ rule Codoso_CustomTCP_3
 rule Codoso_CustomTCP_2
 {
 
-    meta:
-        description = "Detects Codoso APT CustomTCP Malware"
-        author = "Florian Roth"
-        reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
-        date = "2016-01-30"
-        hash = "3577845d71ae995762d4a8f43b21ada49d809f95c127b770aff00ae0b64264a3"
+      meta:
+    description = "Detects Codoso APT CustomTCP Malware"
+    author = "Florian Roth"
+    reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
+    date = "2016-01-30"
+    hash = "3577845d71ae995762d4a8f43b21ada49d809f95c127b770aff00ae0b64264a3"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "varus_service_x86.dll" fullword ascii
@@ -133,12 +143,14 @@ rule Codoso_CustomTCP_2
 rule Codoso_PGV_PVID_6
 {
 
-    meta:
-        description = "Detects Codoso APT PGV_PVID Malware"
-        author = "Florian Roth"
-        reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
-        date = "2016-01-30"
-        hash = "4b16f6e8414d4192d0286b273b254fa1bd633f5d3d07ceebd03dfdfc32d0f17f"
+      meta:
+    description = "Detects Codoso APT PGV_PVID Malware"
+    author = "Florian Roth"
+    reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
+    date = "2016-01-30"
+    hash = "4b16f6e8414d4192d0286b273b254fa1bd633f5d3d07ceebd03dfdfc32d0f17f"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "rundll32 \"%s\",%s" fullword ascii
@@ -151,12 +163,14 @@ rule Codoso_PGV_PVID_6
 rule Codoso_Gh0st_3
 {
 
-    meta:
-        description = "Detects Codoso APT Gh0st Malware"
-        author = "Florian Roth"
-        reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
-        date = "2016-01-30"
-        hash = "bf52ca4d4077ae7e840cf6cd11fdec0bb5be890ddd5687af5cfa581c8c015fcd"
+      meta:
+    description = "Detects Codoso APT Gh0st Malware"
+    author = "Florian Roth"
+    reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
+    date = "2016-01-30"
+    hash = "bf52ca4d4077ae7e840cf6cd11fdec0bb5be890ddd5687af5cfa581c8c015fcd"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "RunMeByDLL32" fullword ascii
@@ -175,12 +189,14 @@ rule Codoso_Gh0st_3
 rule Codoso_Gh0st_2
 {
 
-    meta:
-        description = "Detects Codoso APT Gh0st Malware"
-        author = "Florian Roth"
-        reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
-        date = "2016-01-30"
-        hash = "5402c785037614d09ad41e41e11093635455b53afd55aa054a09a84274725841"
+      meta:
+    description = "Detects Codoso APT Gh0st Malware"
+    author = "Florian Roth"
+    reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
+    date = "2016-01-30"
+    hash = "5402c785037614d09ad41e41e11093635455b53afd55aa054a09a84274725841"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "cmd.exe /c ping 127.0.0.1 && ping 127.0.0.1 && sc start %s && ping 127.0.0.1 && sc start %s" fullword ascii
@@ -197,12 +213,14 @@ rule Codoso_Gh0st_2
 rule Codoso_CustomTCP
 {
 
-    meta:
-        description = "Codoso CustomTCP Malware"
-        author = "Florian Roth"
-        reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
-        date = "2016-01-30"
-        hash = "b95d7f56a686a05398198d317c805924c36f3abacbb1b9e3f590ec0d59f845d8"
+      meta:
+    description = "Codoso CustomTCP Malware"
+    author = "Florian Roth"
+    reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
+    date = "2016-01-30"
+    hash = "b95d7f56a686a05398198d317c805924c36f3abacbb1b9e3f590ec0d59f845d8"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s4 = "wnyglw" fullword ascii
@@ -220,14 +238,16 @@ rule Codoso_CustomTCP
 rule Codoso_PGV_PVID_5
 {
 
-    meta:
-        description = "Detects Codoso APT PGV PVID Malware"
-        author = "Florian Roth"
-        reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
-        date = "2016-01-30"
-        super_rule = 1
-        hash1 = "13bce64b3b5bdfd24dc6f786b5bee08082ea736be6536ef54f9c908fd1d00f75"
-        hash2 = "bc0b885cddf80755c67072c8b5961f7f0adcaeb67a1a5c6b3475614fd51696fe"
+      meta:
+    description = "Detects Codoso APT PGV PVID Malware"
+    author = "Florian Roth"
+    reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
+    date = "2016-01-30"
+    super_rule = 1
+    hash1 = "13bce64b3b5bdfd24dc6f786b5bee08082ea736be6536ef54f9c908fd1d00f75"
+    hash2 = "bc0b885cddf80755c67072c8b5961f7f0adcaeb67a1a5c6b3475614fd51696fe"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "/c del %s >> NUL" fullword ascii
@@ -240,15 +260,17 @@ rule Codoso_PGV_PVID_5
 rule Codoso_Gh0st_1
 {
 
-    meta:
-        description = "Detects Codoso APT Gh0st Malware"
-        author = "Florian Roth"
-        reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
-        date = "2016-01-30"
-        super_rule = 1
-        hash1 = "5402c785037614d09ad41e41e11093635455b53afd55aa054a09a84274725841"
-        hash2 = "7dc7cec2c3f7e56499175691f64060ebd955813002d4db780e68a8f6e7d0a8f8"
-        hash3 = "d7004910a87c90ade7e5ff6169f2b866ece667d2feebed6f0ec856fb838d2297"
+      meta:
+    description = "Detects Codoso APT Gh0st Malware"
+    author = "Florian Roth"
+    reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
+    date = "2016-01-30"
+    super_rule = 1
+    hash1 = "5402c785037614d09ad41e41e11093635455b53afd55aa054a09a84274725841"
+    hash2 = "7dc7cec2c3f7e56499175691f64060ebd955813002d4db780e68a8f6e7d0a8f8"
+    hash3 = "d7004910a87c90ade7e5ff6169f2b866ece667d2feebed6f0ec856fb838d2297"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "cmd.exe /c ping 127.0.0.1 && ping 127.0.0.1 && sc start %s && ping 127.0.0.1 && sc start %s" fullword ascii
@@ -278,17 +300,19 @@ rule Codoso_Gh0st_1
 rule Codoso_PGV_PVID_4
 {
 
-    meta:
-        description = "Detects Codoso APT PlugX Malware"
-        author = "Florian Roth"
-        reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
-        date = "2016-01-30"
-        super_rule = 1
-        hash1 = "13bce64b3b5bdfd24dc6f786b5bee08082ea736be6536ef54f9c908fd1d00f75"
-        hash2 = "8a56b476d792983aea0199ee3226f0d04792b70a1c1f05f399cb6e4ce8a38761"
-        hash3 = "b2950f2e09f5356e985c38b284ea52175d21feee12e582d674c0da2233b1feb1"
-        hash4 = "b631553421aa17171cc47248adc110ca2e79eff44b5e5b0234d69b30cab104e3"
-        hash5 = "bc0b885cddf80755c67072c8b5961f7f0adcaeb67a1a5c6b3475614fd51696fe"
+      meta:
+    description = "Detects Codoso APT PlugX Malware"
+    author = "Florian Roth"
+    reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
+    date = "2016-01-30"
+    super_rule = 1
+    hash1 = "13bce64b3b5bdfd24dc6f786b5bee08082ea736be6536ef54f9c908fd1d00f75"
+    hash2 = "8a56b476d792983aea0199ee3226f0d04792b70a1c1f05f399cb6e4ce8a38761"
+    hash3 = "b2950f2e09f5356e985c38b284ea52175d21feee12e582d674c0da2233b1feb1"
+    hash4 = "b631553421aa17171cc47248adc110ca2e79eff44b5e5b0234d69b30cab104e3"
+    hash5 = "bc0b885cddf80755c67072c8b5961f7f0adcaeb67a1a5c6b3475614fd51696fe"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "dropper, Version 1.0" fullword wide
@@ -307,15 +331,17 @@ rule Codoso_PGV_PVID_4
 rule Codoso_PlugX_1
 {
 
-    meta:
-        description = "Detects Codoso APT PlugX Malware"
-        author = "Florian Roth"
-        reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
-        date = "2016-01-30"
-        super_rule = 1
-        hash1 = "0b8cbc9b4761ab35acce2aa12ba2c0a283afd596b565705514fd802c8b1e144b"
-        hash2 = "448711bd3f689ceebb736d25253233ac244d48cb766834b8f974c2e9d4b462e8"
-        hash3 = "fd22547497ce52049083092429eeff0599d0b11fe61186e91c91e1f76b518fe2"
+      meta:
+    description = "Detects Codoso APT PlugX Malware"
+    author = "Florian Roth"
+    reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
+    date = "2016-01-30"
+    super_rule = 1
+    hash1 = "0b8cbc9b4761ab35acce2aa12ba2c0a283afd596b565705514fd802c8b1e144b"
+    hash2 = "448711bd3f689ceebb736d25253233ac244d48cb766834b8f974c2e9d4b462e8"
+    hash3 = "fd22547497ce52049083092429eeff0599d0b11fe61186e91c91e1f76b518fe2"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "GETPASSWORD1" fullword ascii
@@ -329,18 +355,20 @@ rule Codoso_PlugX_1
 rule Codoso_PGV_PVID_3
 {
 
-    meta:
-        description = "Detects Codoso APT PGV PVID Malware"
-        author = "Florian Roth"
-        reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
-        date = "2016-01-30"
-        super_rule = 1
-        hash1 = "126fbdcfed1dfb31865d4b18db2fb963f49df838bf66922fea0c37e06666aee1"
-        hash2 = "13bce64b3b5bdfd24dc6f786b5bee08082ea736be6536ef54f9c908fd1d00f75"
-        hash3 = "8a56b476d792983aea0199ee3226f0d04792b70a1c1f05f399cb6e4ce8a38761"
-        hash4 = "b2950f2e09f5356e985c38b284ea52175d21feee12e582d674c0da2233b1feb1"
-        hash5 = "b631553421aa17171cc47248adc110ca2e79eff44b5e5b0234d69b30cab104e3"
-        hash6 = "bc0b885cddf80755c67072c8b5961f7f0adcaeb67a1a5c6b3475614fd51696fe"
+      meta:
+    description = "Detects Codoso APT PGV PVID Malware"
+    author = "Florian Roth"
+    reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
+    date = "2016-01-30"
+    super_rule = 1
+    hash1 = "126fbdcfed1dfb31865d4b18db2fb963f49df838bf66922fea0c37e06666aee1"
+    hash2 = "13bce64b3b5bdfd24dc6f786b5bee08082ea736be6536ef54f9c908fd1d00f75"
+    hash3 = "8a56b476d792983aea0199ee3226f0d04792b70a1c1f05f399cb6e4ce8a38761"
+    hash4 = "b2950f2e09f5356e985c38b284ea52175d21feee12e582d674c0da2233b1feb1"
+    hash5 = "b631553421aa17171cc47248adc110ca2e79eff44b5e5b0234d69b30cab104e3"
+    hash6 = "bc0b885cddf80755c67072c8b5961f7f0adcaeb67a1a5c6b3475614fd51696fe"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "Copyright (C) Microsoft Corporation.  All rights reserved.(C) 2012" fullword wide
@@ -352,15 +380,17 @@ rule Codoso_PGV_PVID_3
 rule Codoso_PGV_PVID_2
 {
 
-    meta:
-        description = "Detects Codoso APT PGV PVID Malware"
-        author = "Florian Roth"
-        reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
-        date = "2016-01-30"
-        super_rule = 1
-        hash1 = "13bce64b3b5bdfd24dc6f786b5bee08082ea736be6536ef54f9c908fd1d00f75"
-        hash2 = "b631553421aa17171cc47248adc110ca2e79eff44b5e5b0234d69b30cab104e3"
-        hash3 = "bc0b885cddf80755c67072c8b5961f7f0adcaeb67a1a5c6b3475614fd51696fe"
+      meta:
+    description = "Detects Codoso APT PGV PVID Malware"
+    author = "Florian Roth"
+    reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
+    date = "2016-01-30"
+    super_rule = 1
+    hash1 = "13bce64b3b5bdfd24dc6f786b5bee08082ea736be6536ef54f9c908fd1d00f75"
+    hash2 = "b631553421aa17171cc47248adc110ca2e79eff44b5e5b0234d69b30cab104e3"
+    hash3 = "bc0b885cddf80755c67072c8b5961f7f0adcaeb67a1a5c6b3475614fd51696fe"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\SvcHost" fullword ascii
@@ -378,17 +408,19 @@ rule Codoso_PGV_PVID_2
 rule Codoso_PGV_PVID_1
 {
 
-    meta:
-        description = "Detects Codoso APT PGV PVID Malware"
-        author = "Florian Roth"
-        reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
-        date = "2016-01-30"
-        super_rule = 1
-        hash1 = "41a936b0d1fd90dffb2f6d0bcaf4ad0536f93ca7591f7b75b0cd1af8804d0824"
-        hash2 = "58334eb7fed37e3104d8235d918aa5b7856f33ea52a74cf90a5ef5542a404ac3"
-        hash3 = "934b87ddceabb2063b5e5bc4f964628fe0c63b63bb2346b105ece19915384fc7"
-        hash4 = "ce91ea20aa2e6af79508dd0a40ab0981f463b4d2714de55e66d228c579578266"
-        hash5 = "e770a298ae819bba1c70d0c9a2e02e4680d3cdba22d558d21caaa74e3970adf1"
+      meta:
+    description = "Detects Codoso APT PGV PVID Malware"
+    author = "Florian Roth"
+    reference = "https://www.proofpoint.com/us/exploring-bergard-old-malware-new-tricks"
+    date = "2016-01-30"
+    super_rule = 1
+    hash1 = "41a936b0d1fd90dffb2f6d0bcaf4ad0536f93ca7591f7b75b0cd1af8804d0824"
+    hash2 = "58334eb7fed37e3104d8235d918aa5b7856f33ea52a74cf90a5ef5542a404ac3"
+    hash3 = "934b87ddceabb2063b5e5bc4f964628fe0c63b63bb2346b105ece19915384fc7"
+    hash4 = "ce91ea20aa2e6af79508dd0a40ab0981f463b4d2714de55e66d228c579578266"
+    hash5 = "e770a298ae819bba1c70d0c9a2e02e4680d3cdba22d558d21caaa74e3970adf1"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "Cookie: pgv_pvid=" ascii

@@ -6,12 +6,14 @@
 rule custom_ssh_backdoor_server
 {
 
-    meta:
-        description = "Custome SSH backdoor based on python and paramiko - file server.py"
-        author = "Florian Roth"
-        reference = "https://goo.gl/S46L3o"
-        date = "2015-05-14"
-        hash = "0953b6c2181249b94282ca5736471f85d80d41c9"
+      meta:
+    description = "Custome SSH backdoor based on python and paramiko - file server.py"
+    author = "Florian Roth"
+    reference = "https://goo.gl/S46L3o"
+    date = "2015-05-14"
+    hash = "0953b6c2181249b94282ca5736471f85d80d41c9"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $s0 = "command= raw_input(\"Enter command: \").strip('n')" fullword ascii

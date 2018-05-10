@@ -9,16 +9,18 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule MAL_Sednit_DelphiDownloader_Apr18_2 {
-   meta:
-      description = "Detects malware from Sednit Delphi Downloader report"
-      author = "Florian Roth"
-      reference = "https://www.welivesecurity.com/2018/04/24/sednit-update-analysis-zebrocy/"
-      date = "2018-04-24"
-      hash1 = "53aef1e8b281a00dea41387a24664655986b58d61d39cfbde7e58d8c2ca3efda"
-      hash2 = "657c83297cfcc5809e89098adf69c206df95aee77bfc1292898bbbe1c44c9dc4"
-      hash3 = "5427ecf4fa37e05a4fbab8a31436f2e94283a832b4e60a3475182001b9739182"
-      hash4 = "0458317893575568681c86b83e7f9c916540f0f58073b386d4419517c57dcb8f"
-      hash5 = "72aa4905598c9fb5a1e3222ba8daa3efb52bbff09d89603ab0911e43e15201f3"
+     meta:
+    description = "Detects malware from Sednit Delphi Downloader report"
+    author = "Florian Roth"
+    reference = "https://www.welivesecurity.com/2018/04/24/sednit-update-analysis-zebrocy/"
+    date = "2018-04-24"
+    hash1 = "53aef1e8b281a00dea41387a24664655986b58d61d39cfbde7e58d8c2ca3efda"
+    hash2 = "657c83297cfcc5809e89098adf69c206df95aee77bfc1292898bbbe1c44c9dc4"
+    hash3 = "5427ecf4fa37e05a4fbab8a31436f2e94283a832b4e60a3475182001b9739182"
+    hash4 = "0458317893575568681c86b83e7f9c916540f0f58073b386d4419517c57dcb8f"
+    hash5 = "72aa4905598c9fb5a1e3222ba8daa3efb52bbff09d89603ab0911e43e15201f3"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $ = "2D444F574E4C4F41445F53544152542D" ascii /* hex encoded string '-DOWNLOAD_START-' */
       $ = "55504C4F41445F414E445F455845435554455F46494C45" ascii /* hex encoded string 'UPLOAD_AND_EXECUTE_FILE' */
@@ -35,13 +37,15 @@ rule MAL_Sednit_DelphiDownloader_Apr18_2 {
 }
 
 rule MAL_Sednit_DelphiDownloader_Apr18_3 {
-   meta:
-      description = "Detects malware from Sednit Delphi Downloader report"
-      author = "Florian Roth"
-      reference = "https://www.welivesecurity.com/2018/04/24/sednit-update-analysis-zebrocy/"
-      date = "2018-04-24"
-      hash1 = "ecb835d03060db1ea3496ceca2d79d7c4c6c671c9907e0b0e73bf8d3371fa931"
-      hash2 = "e355a327479dcc4e71a38f70450af02411125c5f101ba262e8df99f9f0fef7b6"
+     meta:
+    description = "Detects malware from Sednit Delphi Downloader report"
+    author = "Florian Roth"
+    reference = "https://www.welivesecurity.com/2018/04/24/sednit-update-analysis-zebrocy/"
+    date = "2018-04-24"
+    hash1 = "ecb835d03060db1ea3496ceca2d79d7c4c6c671c9907e0b0e73bf8d3371fa931"
+    hash2 = "e355a327479dcc4e71a38f70450af02411125c5f101ba262e8df99f9f0fef7b6"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $ = "Processor Level: " fullword ascii
       $ = "CONNECTION ERROR" fullword ascii

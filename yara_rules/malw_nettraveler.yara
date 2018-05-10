@@ -7,10 +7,12 @@ import "pe"
 
 rule NetpassStrings : NetPass Variant {
 
-        meta:
-                description = "Identifiers for netpass variant"
-                author = "Katie Kleemola"
-                last_updated = "2014-05-29"
+          meta:
+    description = "Identifiers for netpass variant"
+    author = "Katie Kleemola"
+    last_updated = "2014-05-29"
+    severity = "7"
+    type = "Malware"
 
         strings:
                 $exif1 = "Device Protect ApplicatioN" wide
@@ -28,10 +30,12 @@ rule NetpassStrings : NetPass Variant {
 }
 
 rule NetPass : Variant {
-        meta:
-                description = "netpass variant"
-                author = "Katie Kleemola"
-                last_updated = "2014-07-08"
+          meta:
+    description = "netpass variant"
+    author = "Katie Kleemola"
+    last_updated = "2014-07-08"
+    severity = "7"
+    type = "Malware"
         condition:
                 NetpassStrings
 }
@@ -39,10 +43,12 @@ rule NetPass : Variant {
 rule NetTravStrings : NetTraveler Family {
 
 
-	meta:
-        	description = "Identifiers for NetTraveler DLL"
-		author = "Katie Kleemola"
-        	last_updated = "2014-05-20"
+	  meta:
+    description = "Identifiers for NetTraveler DLL"
+    author = "Katie Kleemola"
+    last_updated = "2014-05-20"
+    severity = "7"
+    type = "Malware"
 
 	strings:
 		//network strings
@@ -66,10 +72,12 @@ rule NetTravStrings : NetTraveler Family {
 
 rule NetTravExports : NetTraveler Family {
 
-	meta:
-		description = "Export names for dll component"
-		author = "Katie Kleemola"
-		last_updated = "2014-05-20"
+	  meta:
+    description = "Export names for dll component"
+    author = "Katie Kleemola"
+    last_updated = "2014-05-20"
+    severity = "7"
+    type = "Malware"
 	
 	strings:
 		//dll component exports
@@ -82,10 +90,12 @@ rule NetTravExports : NetTraveler Family {
 }
 
 rule NetTraveler : Family {
-	meta:
-		description = "Nettravelr"
-		author = "Katie Kleemola"
-		last_updated = "2014-07-08"
+	  meta:
+    description = "Nettravelr"
+    author = "Katie Kleemola"
+    last_updated = "2014-07-08"
+    severity = "7"
+    type = "Malware"
 	
 	condition:
 		NetTravExports or NetTravStrings or NetpassStrings

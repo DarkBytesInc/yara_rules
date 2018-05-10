@@ -1,10 +1,12 @@
 rule Hermes2_1 {
-   meta:
-      description = "Detects Hermes Ransomware as used in BAE report on FEIB"
-      date = "2017/10/11"
-      author = "BAE"
-      reference = "https://baesystemsai.blogspot.de/2017/10/taiwan-heist-lazarus-tools.html"
-      hash = "b27881f59c8d8cc529fa80a58709db36"
+     meta:
+    description = "Detects Hermes Ransomware as used in BAE report on FEIB"
+    date = "2017/10/11"
+    author = "BAE"
+    reference = "https://baesystemsai.blogspot.de/2017/10/taiwan-heist-lazarus-tools.html"
+    hash = "b27881f59c8d8cc529fa80a58709db36"
+    severity = "7"
+    type = "Malware"
    strings:
       $magic = { 4D 5A }
       //in both version 2.1 and sample in Feb

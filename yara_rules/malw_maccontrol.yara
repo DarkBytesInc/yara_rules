@@ -7,10 +7,12 @@ import "pe"
 
 rule MacControlCode : MacControl Family 
 {
-    meta:
-        description = "MacControl code tricks"
-        author = "Seth Hardy"
-        last_modified = "2014-06-17"
+      meta:
+    description = "MacControl code tricks"
+    author = "Seth Hardy"
+    last_modified = "2014-06-17"
+    severity = "7"
+    type = "Malware"
         
     strings:
         // Load these function strings 4 characters at a time. These check the first two blocks:
@@ -26,10 +28,12 @@ rule MacControlCode : MacControl Family
 
 rule MacControlStrings : MacControl Family
 {
-    meta:
-        description = "MacControl Identifying Strings"
-        author = "Seth Hardy"
-        last_modified = "2014-06-17"
+      meta:
+    description = "MacControl Identifying Strings"
+    author = "Seth Hardy"
+    last_modified = "2014-06-17"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $ = "HTTPHeadGet"
@@ -44,10 +48,12 @@ rule MacControlStrings : MacControl Family
 
 rule MacControl : Family
 {
-    meta:
-        description = "MacControl"
-        author = "Seth Hardy"
-        last_modified = "2014-06-16"
+      meta:
+    description = "MacControl"
+    author = "Seth Hardy"
+    last_modified = "2014-06-16"
+    severity = "7"
+    type = "Malware"
         
     condition:
         MacControlCode or MacControlStrings

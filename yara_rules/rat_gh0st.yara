@@ -7,13 +7,15 @@ import "pe"
 
 rule APT_WIN_Gh0st_ver : RAT
 {
-meta:
-   author = "@BryanNolen"
-   date = "2012-12"
-   type = "APT"
-   version = "1.1"
-   ref = "Detection of Gh0st RAT server DLL component"
-   ref1 = "http://www.mcafee.com/au/resources/white-papers/foundstone/wp-know-your-digital-enemy.pdf"
+  meta:
+    author = "@BryanNolen"
+    date = "2012-12"
+    type = "APT"
+    version = "1.1"
+    ref = "Detection of Gh0st RAT server DLL component"
+    ref1 = "http://www.mcafee.com/au/resources/white-papers/foundstone/wp-know-your-digital-enemy.pdf"
+    description = "APT_WIN_Gh0st_ver"
+    severity = "7"
  strings:  
    $library = "deflate 1.1.4 Copyright 1995-2002 Jean-loup Gailly"
    $capability = "GetClipboardData"
@@ -31,9 +33,11 @@ meta:
 
 rule Gh0st : RAT
 {
-    meta:
-        description = "Gh0st"
-	author = "botherder https://github.com/botherder"
+      meta:
+    description = "Gh0st"
+    author = "botherder https://github.com/botherder"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $ = /(G)host/
@@ -57,8 +61,11 @@ rule gh0st
 
 {
 
-meta:
-	author = "https://github.com/jackcr/"
+  meta:
+    author = "https://github.com/jackcr/"
+    description = "gh0st"
+    severity = "7"
+    type = "Malware"
 
    strings:
       $a = { 47 68 30 73 74 ?? ?? ?? ?? ?? ?? ?? ?? 78 9C }

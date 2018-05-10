@@ -1,14 +1,16 @@
 
 rule APT_Malware_CommentCrew_MiniASP {
-	meta:
-		description = "CommentCrew Malware MiniASP APT"
-		author = "Florian Roth"
-		reference = "VT Analysis"
-		date = "2015-06-03"
-		super_rule = 1
-		hash0 = "0af4360a5ae54d789a8814bf7791d5c77136d625"
-		hash1 = "777bf8def279942a25750feffc11d8a36cc0acf9"
-		hash2 = "173f20b126cb57fc8ab04d01ae223071e2345f97"
+	  meta:
+    description = "CommentCrew Malware MiniASP APT"
+    author = "Florian Roth"
+    reference = "VT Analysis"
+    date = "2015-06-03"
+    super_rule = 1
+    hash0 = "0af4360a5ae54d789a8814bf7791d5c77136d625"
+    hash1 = "777bf8def279942a25750feffc11d8a36cc0acf9"
+    hash2 = "173f20b126cb57fc8ab04d01ae223071e2345f97"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$x1 = "\\MiniAsp4\\Release\\MiniAsp.pdb" ascii /* score: '19.02' */
 		$x2 = "run http://%s/logo.png setup.exe" fullword ascii /* PEStudio Blacklist: strings */ /* score: '37.02' */

@@ -1,17 +1,15 @@
 rule xDedic_SysScan_unpacked : crimeware {
-meta:
-author = " Kaspersky Lab"
-ref = "https://securelist.com/files/2016/06/xDedic_marketplace_ENG.pdf"
-maltype = "crimeware"
-type ="crimeware"
-filetype = "Win32 EXE"
-date = "2016-03-14"
-version = "1.0"
-hash = "fac495be1c71012682ebb27092060b43"
-hash = "e8cc69231e209db7968397e8a244d104"
-hash = "a53847a51561a7e76fd034043b9aa36d"
-hash = "e8691fa5872c528cd8e72b82e7880e98"
-hash = "F661b50d45400e7052a2427919e2f777"
+  meta:
+    author = " Kaspersky Lab"
+    ref = "https://securelist.com/files/2016/06/xDedic_marketplace_ENG.pdf"
+    maltype = "crimeware"
+    type = "crimeware"
+    filetype = "Win32 EXE"
+    date = "2016-03-14"
+    version = "1.0"
+    hash = "F661b50d45400e7052a2427919e2f777"
+    description = "xDedic_SysScan_unpacked"
+    severity = "7"
 strings:
 $a1="/c ping -n 2 127.0.0.1 & del \"SysScan.exe\"" ascii wide
 $a2="SysScan DEBUG Mode!!!" ascii wide
@@ -25,10 +23,13 @@ condition:
 }
 import "pe"
 rule xdedic_packed_syscan : crimeware {
-meta:
-author = "Kaspersky Lab"
-company = "Kaspersky Lab"
-ref = "https://securelist.com/files/2016/06/xDedic_marketplace_ENG.pdf"
+  meta:
+    author = "Kaspersky Lab"
+    company = "Kaspersky Lab"
+    ref = "https://securelist.com/files/2016/06/xDedic_marketplace_ENG.pdf"
+    description = "xdedic_packed_syscan"
+    severity = "7"
+    type = "Malware"
 strings:
 $a1 = "SysScan.exe" nocase ascii wide
 condition:

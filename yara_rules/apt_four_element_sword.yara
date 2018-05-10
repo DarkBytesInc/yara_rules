@@ -9,12 +9,14 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule FourElementSword_Config_File {
-	meta:
-		description = "Detects FourElementSword Malware - file f05cd0353817bf6c2cab396181464c31c352d6dea07e2d688def261dd6542b27"
-		author = "Florian Roth"
-		reference = "https://www.arbornetworks.com/blog/asert/four-element-sword-engagement/"
-		date = "2016-04-18"
-		hash = "f05cd0353817bf6c2cab396181464c31c352d6dea07e2d688def261dd6542b27"
+	  meta:
+    description = "Detects FourElementSword Malware - file f05cd0353817bf6c2cab396181464c31c352d6dea07e2d688def261dd6542b27"
+    author = "Florian Roth"
+    reference = "https://www.arbornetworks.com/blog/asert/four-element-sword-engagement/"
+    date = "2016-04-18"
+    hash = "f05cd0353817bf6c2cab396181464c31c352d6dea07e2d688def261dd6542b27"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "01,,hccutils.dll,2" fullword ascii
 		$s1 = "RegisterDlls=OurDll" fullword ascii
@@ -26,12 +28,14 @@ rule FourElementSword_Config_File {
 }
 
 rule FourElementSword_T9000 {
-	meta:
-		description = "Detects FourElementSword Malware - file 5f3d0a319ecc875cc64a40a34d2283cb329abcf79ad02f487fbfd6bef153943c"
-		author = "Florian Roth"
-		reference = "https://www.arbornetworks.com/blog/asert/four-element-sword-engagement/"
-		date = "2016-04-18"
-		hash = "5f3d0a319ecc875cc64a40a34d2283cb329abcf79ad02f487fbfd6bef153943c"
+	  meta:
+    description = "Detects FourElementSword Malware - file 5f3d0a319ecc875cc64a40a34d2283cb329abcf79ad02f487fbfd6bef153943c"
+    author = "Florian Roth"
+    reference = "https://www.arbornetworks.com/blog/asert/four-element-sword-engagement/"
+    date = "2016-04-18"
+    hash = "5f3d0a319ecc875cc64a40a34d2283cb329abcf79ad02f487fbfd6bef153943c"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$x1 = "D:\\WORK\\T9000\\" ascii
 		$x2 = "%s\\temp\\HHHH.dat" fullword wide
@@ -45,12 +49,14 @@ rule FourElementSword_T9000 {
 }
 
 rule FourElementSword_32DLL {
-	meta:
-		description = "Detects FourElementSword Malware - file 7a200c4df99887991c638fe625d07a4a3fc2bdc887112437752b3df5c8da79b6"
-		author = "Florian Roth"
-		reference = "https://www.arbornetworks.com/blog/asert/four-element-sword-engagement/"
-		date = "2016-04-18"
-		hash = "7a200c4df99887991c638fe625d07a4a3fc2bdc887112437752b3df5c8da79b6"
+	  meta:
+    description = "Detects FourElementSword Malware - file 7a200c4df99887991c638fe625d07a4a3fc2bdc887112437752b3df5c8da79b6"
+    author = "Florian Roth"
+    reference = "https://www.arbornetworks.com/blog/asert/four-element-sword-engagement/"
+    date = "2016-04-18"
+    hash = "7a200c4df99887991c638fe625d07a4a3fc2bdc887112437752b3df5c8da79b6"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$x1 = "%temp%\\tmp092.tmp" fullword ascii
 
@@ -62,12 +68,14 @@ rule FourElementSword_32DLL {
 }
 
 rule FourElementSword_Keyainst_EXE {
-	meta:
-		description = "Detects FourElementSword Malware - file cf717a646a015ee72f965488f8df2dd3c36c4714ccc755c295645fe8d150d082"
-		author = "Florian Roth"
-		reference = "https://www.arbornetworks.com/blog/asert/four-element-sword-engagement/"
-		date = "2016-04-18"
-		hash = "cf717a646a015ee72f965488f8df2dd3c36c4714ccc755c295645fe8d150d082"
+	  meta:
+    description = "Detects FourElementSword Malware - file cf717a646a015ee72f965488f8df2dd3c36c4714ccc755c295645fe8d150d082"
+    author = "Florian Roth"
+    reference = "https://www.arbornetworks.com/blog/asert/four-element-sword-engagement/"
+    date = "2016-04-18"
+    hash = "cf717a646a015ee72f965488f8df2dd3c36c4714ccc755c295645fe8d150d082"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$x1 = "C:\\ProgramData\\Keyainst.exe" fullword ascii
 
@@ -79,12 +87,14 @@ rule FourElementSword_Keyainst_EXE {
 }
 
 rule FourElementSword_ElevateDLL_2 {
-	meta:
-		description = "Detects FourElementSword Malware - file 9c23febc49c7b17387767844356d38d5578727ee1150956164883cf555fe7f95"
-		author = "Florian Roth"
-		reference = "https://www.arbornetworks.com/blog/asert/four-element-sword-engagement/"
-		date = "2016-04-18"
-		hash = "9c23febc49c7b17387767844356d38d5578727ee1150956164883cf555fe7f95"
+	  meta:
+    description = "Detects FourElementSword Malware - file 9c23febc49c7b17387767844356d38d5578727ee1150956164883cf555fe7f95"
+    author = "Florian Roth"
+    reference = "https://www.arbornetworks.com/blog/asert/four-element-sword-engagement/"
+    date = "2016-04-18"
+    hash = "9c23febc49c7b17387767844356d38d5578727ee1150956164883cf555fe7f95"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "Elevate.dll" fullword ascii
 		$s2 = "GetSomeF" fullword ascii
@@ -94,12 +104,14 @@ rule FourElementSword_ElevateDLL_2 {
 }
 
 rule FourElementSword_fslapi_dll_gui {
-	meta:
-		description = "Detects FourElementSword Malware - file 2a6ef9dde178c4afe32fe676ff864162f104d85fac2439986de32366625dc083"
-		author = "Florian Roth"
-		reference = "https://www.arbornetworks.com/blog/asert/four-element-sword-engagement/"
-		date = "2016-04-18"
-		hash = "2a6ef9dde178c4afe32fe676ff864162f104d85fac2439986de32366625dc083"
+	  meta:
+    description = "Detects FourElementSword Malware - file 2a6ef9dde178c4afe32fe676ff864162f104d85fac2439986de32366625dc083"
+    author = "Florian Roth"
+    reference = "https://www.arbornetworks.com/blog/asert/four-element-sword-engagement/"
+    date = "2016-04-18"
+    hash = "2a6ef9dde178c4afe32fe676ff864162f104d85fac2439986de32366625dc083"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "fslapi.dll.gui" fullword wide
 		$s2 = "ImmGetDefaultIMEWnd" fullword ascii /* Goodware String - occured 64 times */
@@ -109,12 +121,14 @@ rule FourElementSword_fslapi_dll_gui {
 }
 
 rule FourElementSword_PowerShell_Start {
-	meta:
-		description = "Detects FourElementSword Malware - file 9b6053e784c5762fdb9931f9064ba6e52c26c2d4b09efd6ff13ca87bbb33c692"
-		author = "Florian Roth"
-		reference = "https://www.arbornetworks.com/blog/asert/four-element-sword-engagement/"
-		date = "2016-04-18"
-		hash = "9b6053e784c5762fdb9931f9064ba6e52c26c2d4b09efd6ff13ca87bbb33c692"
+	  meta:
+    description = "Detects FourElementSword Malware - file 9b6053e784c5762fdb9931f9064ba6e52c26c2d4b09efd6ff13ca87bbb33c692"
+    author = "Florian Roth"
+    reference = "https://www.arbornetworks.com/blog/asert/four-element-sword-engagement/"
+    date = "2016-04-18"
+    hash = "9b6053e784c5762fdb9931f9064ba6e52c26c2d4b09efd6ff13ca87bbb33c692"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "start /min powershell C:\\\\ProgramData\\\\wget.exe" ascii
 		$s1 = "start /min powershell C:\\\\ProgramData\\\\iuso.exe" fullword ascii
@@ -123,12 +137,14 @@ rule FourElementSword_PowerShell_Start {
 }
 
 rule FourElementSword_ResN32DLL {
-	meta:
-		description = "Detects FourElementSword Malware - file bf1b00b7430899d33795ef3405142e880ef8dcbda8aab0b19d80875a14ed852f"
-		author = "Florian Roth"
-		reference = "https://www.arbornetworks.com/blog/asert/four-element-sword-engagement/"
-		date = "2016-04-18"
-		hash = "bf1b00b7430899d33795ef3405142e880ef8dcbda8aab0b19d80875a14ed852f"
+	  meta:
+    description = "Detects FourElementSword Malware - file bf1b00b7430899d33795ef3405142e880ef8dcbda8aab0b19d80875a14ed852f"
+    author = "Florian Roth"
+    reference = "https://www.arbornetworks.com/blog/asert/four-element-sword-engagement/"
+    date = "2016-04-18"
+    hash = "bf1b00b7430899d33795ef3405142e880ef8dcbda8aab0b19d80875a14ed852f"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "\\Release\\BypassUAC.pdb" ascii
 		$s2 = "\\ResN32.dll" fullword wide
@@ -140,14 +156,16 @@ rule FourElementSword_ResN32DLL {
 /* Super Rules ------------------------------------------------------------- */
 
 rule FourElementSword_ElevateDLL {
-	meta:
-		description = "Detects FourElementSword Malware"
-		author = "Florian Roth"
-		reference = "https://www.arbornetworks.com/blog/asert/four-element-sword-engagement/"
-		date = "2016-04-18"
-		super_rule = 1
-		hash1 = "3dfc94605daf51ebd7bbccbb3a9049999f8d555db0999a6a7e6265a7e458cab9"
-		hash2 = "5f3d0a319ecc875cc64a40a34d2283cb329abcf79ad02f487fbfd6bef153943c"
+	  meta:
+    description = "Detects FourElementSword Malware"
+    author = "Florian Roth"
+    reference = "https://www.arbornetworks.com/blog/asert/four-element-sword-engagement/"
+    date = "2016-04-18"
+    super_rule = 1
+    hash1 = "3dfc94605daf51ebd7bbccbb3a9049999f8d555db0999a6a7e6265a7e458cab9"
+    hash2 = "5f3d0a319ecc875cc64a40a34d2283cb329abcf79ad02f487fbfd6bef153943c"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$x1 = "Elevate.dll" fullword wide
 		$x2 = "ResN32.dll" fullword wide

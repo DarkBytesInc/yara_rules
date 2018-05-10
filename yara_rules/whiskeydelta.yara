@@ -2,10 +2,13 @@ import "pe"
 
 rule WhiskeyDelta
 {
-	meta:
-		copyright = "2015 Novetta Solutions"
-		author = "Novetta Threat Research & Interdiction Group  trig@novetta.com"
-		Source = "41badf10ef6f469dd1c3be201aba809f9c42f86ad77d7f83bc3895bfa289c635"
+	  meta:
+    copyright = "2015 Novetta Solutions"
+    author = "Novetta Threat Research & Interdiction Group  trig@novetta.com"
+    Source = "41badf10ef6f469dd1c3be201aba809f9c42f86ad77d7f83bc3895bfa289c635"
+    description = "WhiskeyDelta"
+    severity = "5"
+    type = "Unknown"
 
 	strings:
 	/*

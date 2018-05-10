@@ -9,13 +9,15 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule Kriskynote_Mar17_1 {
-   meta:
-      description = "Detects Kriskynote Malware"
-      author = "Florian Roth"
-      reference = "Internal Research"
-      date = "2017-03-03"
-      hash1 = "a19c4b615aa54207604b181873e614d84126b639fee2cce3ca9d5bd863f6f577"
-      hash2 = "62b41db0bf63fa45a2c2b0f5df8c2209a5d96bf2bddf82749595c66d30b7ec61"
+     meta:
+    description = "Detects Kriskynote Malware"
+    author = "Florian Roth"
+    reference = "Internal Research"
+    date = "2017-03-03"
+    hash1 = "a19c4b615aa54207604b181873e614d84126b639fee2cce3ca9d5bd863f6f577"
+    hash2 = "62b41db0bf63fa45a2c2b0f5df8c2209a5d96bf2bddf82749595c66d30b7ec61"
+    severity = "7"
+    type = "Malware"
    strings:
       $s1 = "gzwrite64" fullword ascii
 
@@ -28,12 +30,14 @@ rule Kriskynote_Mar17_1 {
 }
 
 rule Kriskynote_Mar17_2 {
-   meta:
-      description = "Detects Kriskynote Malware"
-      author = "Florian Roth"
-      reference = "Internal Research"
-      date = "2017-03-03"
-      hash1 = "cb9a2f77868b28d98e4f9c1b27b7242fec2f2abbc91bfc21fe0573e472c5dfcb"
+     meta:
+    description = "Detects Kriskynote Malware"
+    author = "Florian Roth"
+    reference = "Internal Research"
+    date = "2017-03-03"
+    hash1 = "cb9a2f77868b28d98e4f9c1b27b7242fec2f2abbc91bfc21fe0573e472c5dfcb"
+    severity = "7"
+    type = "Malware"
    strings:
       $s1 = "fgjfcn8456fgjhfg89653wetwts" fullword ascii
       $op0 = { 33 c0 80 34 30 03 40 3d e6 21 00 00 72 f4 b8 e6 } /* Opcode */
@@ -42,12 +46,14 @@ rule Kriskynote_Mar17_2 {
 }
 
 rule Kriskynote_Mar17_3 {
-   meta:
-      description = "Detects Kriskynote Malware"
-      author = "Florian Roth"
-      reference = "Internal Research"
-      date = "2017-03-03"
-      hash1 = "fc838e07834994f25b3b271611e1014b3593278f0703a4a985fb4234936df492"
+     meta:
+    description = "Detects Kriskynote Malware"
+    author = "Florian Roth"
+    reference = "Internal Research"
+    date = "2017-03-03"
+    hash1 = "fc838e07834994f25b3b271611e1014b3593278f0703a4a985fb4234936df492"
+    severity = "7"
+    type = "Malware"
    strings:
       $s1 = "rundll32 %s Check" fullword ascii
       $s2 = "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\RecentDocs" fullword ascii

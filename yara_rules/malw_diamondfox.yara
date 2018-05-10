@@ -6,11 +6,13 @@
 rule diamond_fox
 {
    
-    meta:
-        author = "Brian Wallace @botnet_hunter"
-        author_email = "bwall@ballastsecurity.net"
-        date = "2015-08-22"
-        description = "Identify DiamondFox"
+      meta:
+    author = "Brian Wallace @botnet_hunter"
+    author_email = "bwall@ballastsecurity.net"
+    date = "2015-08-22"
+    description = "Identify DiamondFox"
+    severity = "7"
+    type = "Malware"
    
     strings:
         $s1 = "UPDATE_B"

@@ -1,9 +1,11 @@
 rule hacktool_macos_keylogger_caseyscarborough
 {
-    meta:
-        description = "A simple and easy to use keylogger for macOS."
-        reference = "https://github.com/caseyscarborough/keylogger"
-        author = "@mimeframe"
+      meta:
+    description = "A simple and easy to use keylogger for macOS."
+    reference = "https://github.com/caseyscarborough/keylogger"
+    author = "@mimeframe"
+    severity = "5"
+    type = "Unknown"
     strings:
         $a1 = "/var/log/keystroke.log" wide ascii
         $a2 = "ERROR: Unable to create event tap." wide ascii

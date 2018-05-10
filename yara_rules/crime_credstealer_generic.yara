@@ -1,11 +1,13 @@
 
 rule CredentialStealer_Generic_Backdoor {
-   meta:
-      description = "Detects credential stealer byed on many strings that indicate password store access"
-      author = "Florian Roth"
-      reference = "Internal Research"
-      date = "2017-06-07"
-      hash1 = "edb2d039a57181acf95bd91b2a20bd9f1d66f3ece18506d4ad870ab65e568f2c"
+     meta:
+    description = "Detects credential stealer byed on many strings that indicate password store access"
+    author = "Florian Roth"
+    reference = "Internal Research"
+    date = "2017-06-07"
+    hash1 = "edb2d039a57181acf95bd91b2a20bd9f1d66f3ece18506d4ad870ab65e568f2c"
+    severity = "7"
+    type = "Malware"
    strings:
       $s1 = "GetOperaLoginData" fullword ascii
       $s2 = "GetInternetExplorerCredentialsPasswords" fullword ascii

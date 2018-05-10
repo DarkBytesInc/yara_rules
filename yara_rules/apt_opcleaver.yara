@@ -8,10 +8,50 @@ import "pe"
 rule ZhoupinExploitCrew
 {
 
-  meta:
+                                          meta:
     author = "Cylance"
     date = "2014-12-02"
     description = "http://cylance.com/opcleaver"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
   strings:
     $s1 = "zhoupin exploit crew" nocase
@@ -24,10 +64,50 @@ rule ZhoupinExploitCrew
 rule BackDoorLogger
 {
 
-  meta:
+                                          meta:
     author = "Cylance"
     date = "2014-12-02"
     description = "http://cylance.com/opcleaver"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
   strings:
     $s1 = "BackDoorLogger"
@@ -40,10 +120,50 @@ rule BackDoorLogger
 rule Jasus
 {
 
-  meta:
+                                          meta:
     author = "Cylance"
     date = "2014-12-02"
     description = "http://cylance.com/opcleaver"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
   strings:
     $s1 = "pcap_dump_open"
@@ -57,10 +177,50 @@ rule Jasus
 rule LoggerModule
 {
 
-  meta:
+                                          meta:
     author = "Cylance"
     date = "2014-12-02"
     description = "http://cylance.com/opcleaver"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
   strings:
     $s1 = "%s-%02d%02d%02d%02d%02d.r"
@@ -73,10 +233,50 @@ rule LoggerModule
 rule NetC
 {
 
-  meta:
+                                          meta:
     author = "Cylance"
     date = "2014-12-02"
     description = "http://cylance.com/opcleaver"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
   strings:
     $s1 = "NetC.exe" wide
@@ -89,10 +289,50 @@ rule NetC
 rule ShellCreator2
 {
 
-  meta:
+                                          meta:
     author = "Cylance"
     date = "2014-12-02"
     description = "http://cylance.com/opcleaver"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
   strings:
     $s1 = "ShellCreator2.Properties"
@@ -105,10 +345,50 @@ rule ShellCreator2
 rule SmartCopy2
 {
 
-  meta:
+                                          meta:
     author = "Cylance"
     date = "2014-12-02"
     description = "http://cylance.com/opcleaver"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
   strings:
     $s1 = "SmartCopy2.Properties"
@@ -121,10 +401,50 @@ rule SmartCopy2
 rule SynFlooder
 {
 
-  meta:
+                                          meta:
     author = "Cylance"
     date = "2014-12-02"
     description = "http://cylance.com/opcleaver"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
   strings:
     $s1 = "Unable to resolve [ %s ]. ErrorCode %d"
@@ -138,10 +458,50 @@ rule SynFlooder
 rule TinyZBot
 {
 
-  meta:
+                                          meta:
     author = "Cylance"
     date = "2014-12-02"
     description = "http://cylance.com/opcleaver"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
   strings:
     $s1 = "NetScp" wide
@@ -161,10 +521,50 @@ rule TinyZBot
 rule antivirusdetector
 {
 
-  meta:
+                                          meta:
     author = "Cylance"
     date = "2014-12-02"
     description = "http://cylance.com/opcleaver"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "getShadyProcess"
@@ -178,10 +578,50 @@ rule antivirusdetector
 rule csext
 {
 
-  meta:
+                                          meta:
     author = "Cylance"
     date = "2014-12-02"
     description = "http://cylance.com/opcleaver"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
   strings:
     $s1 = "COM+ System Extentions"
@@ -195,10 +635,50 @@ rule csext
 rule kagent
 {
 
-  meta:
+                                          meta:
     author = "Cylance"
     date = "2014-12-02"
     description = "http://cylance.com/opcleaver"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
   strings:
     $s1 = "kill command is in last machine, going back"
@@ -211,10 +691,50 @@ rule kagent
 rule mimikatzWrapper : Toolkit
 {
 
-  meta:
+                                          meta:
     author = "Cylance"
     date = "2014-12-02"
     description = "http://cylance.com/opcleaver"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
   strings:
     $s1 = "mimikatzWrapper"
@@ -227,10 +747,50 @@ rule mimikatzWrapper : Toolkit
 rule pvz_in
 {
 
-  meta:
+                                          meta:
     author = "Cylance"
     date = "2014-12-02"
     description = "http://cylance.com/opcleaver"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
   strings:
     $s1 = "LAST_TIME=00/00/0000:00:00PM$"
@@ -243,10 +803,50 @@ rule pvz_in
 rule pvz_out
 {
 
-  meta:
+                                          meta:
     author = "Cylance"
     date = "2014-12-02"
     description = "http://cylance.com/opcleaver"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
   strings:
     $s1 = "Network Connectivity Module" wide
@@ -259,10 +859,50 @@ rule pvz_out
 rule wndTest
 {
 
-  meta:
+                                          meta:
     author = "Cylance"
     date = "2014-12-02"
     description = "http://cylance.com/opcleaver"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
   strings:
     $s1 = "[Alt]" wide
@@ -276,10 +916,50 @@ rule wndTest
 rule zhCat
 {
 
-  meta:
+                                          meta:
     author = "Cylance"
     date = "2014-12-02"
     description = "http://cylance.com/opcleaver"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
   strings:
     $s1 = "zhCat -l -h -tp 1234"
@@ -292,10 +972,50 @@ rule zhCat
 rule zhLookUp
 {
 
-  meta:
+                                          meta:
     author = "Cylance"
     date = "2014-12-02"
     description = "http://cylance.com/opcleaver"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
   strings:
     $s1 = "zhLookUp.Properties"
@@ -307,10 +1027,50 @@ rule zhLookUp
 rule zhmimikatz
 {
 
-  meta:
+                                          meta:
     author = "Cylance"
     date = "2014-12-02"
     description = "http://cylance.com/opcleaver"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
   strings:
     $s1 = "MimikatzRunner"
@@ -323,10 +1083,50 @@ rule zhmimikatz
 rule Zh0uSh311
 {
 
-  meta:
+                                          meta:
     author = "Cylance"
     date = "2014-12-02"
     description = "http://cylance.com/opcleaver"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
   strings:
     $s1 = "Zh0uSh311"
@@ -338,12 +1138,14 @@ rule Zh0uSh311
 rule OPCLEAVER_BackDoorLogger
 {
 
-    meta:
-        description = "Keylogger used by attackers in Operation Cleaver"
-        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
-        date = "2014/12/02"
-        author = "Cylance Inc."
-        score = "70"
+      meta:
+    description = "Keylogger used by attackers in Operation Cleaver"
+    reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+    date = "2014/12/02"
+    author = "Cylance Inc."
+    score = "70"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "BackDoorLogger"
@@ -356,12 +1158,14 @@ rule OPCLEAVER_BackDoorLogger
 rule OPCLEAVER_Jasus
 {
 
-    meta:
-        description = "ARP cache poisoner used by attackers in Operation Cleaver"
-        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
-        date = "2014/12/02"
-        author = "Cylance Inc."
-        score = "70"
+      meta:
+    description = "ARP cache poisoner used by attackers in Operation Cleaver"
+    reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+    date = "2014/12/02"
+    author = "Cylance Inc."
+    score = "70"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "pcap_dump_open"
@@ -375,12 +1179,14 @@ rule OPCLEAVER_Jasus
 rule OPCLEAVER_LoggerModule
 {
 
-    meta:
-        description = "Keylogger used by attackers in Operation Cleaver"
-        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
-        date = "2014/12/02"
-        author = "Cylance Inc."
-        score = "70"
+      meta:
+    description = "Keylogger used by attackers in Operation Cleaver"
+    reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+    date = "2014/12/02"
+    author = "Cylance Inc."
+    score = "70"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "%s-%02d%02d%02d%02d%02d.r"
@@ -393,12 +1199,14 @@ rule OPCLEAVER_LoggerModule
 rule OPCLEAVER_NetC
 {
 
-    meta:
-        description = "Net Crawler used by attackers in Operation Cleaver"
-        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
-        date = "2014/12/02"
-        author = "Cylance Inc."
-        score = "70"
+      meta:
+    description = "Net Crawler used by attackers in Operation Cleaver"
+    reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+    date = "2014/12/02"
+    author = "Cylance Inc."
+    score = "70"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "NetC.exe" wide
@@ -411,12 +1219,14 @@ rule OPCLEAVER_NetC
 rule OPCLEAVER_ShellCreator2
 {
 
-    meta:
-        description = "Shell Creator used by attackers in Operation Cleaver to create ASPX web shells"
-        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
-        date = "2014/12/02"
-        author = "Cylance Inc."
-        score = "70"
+      meta:
+    description = "Shell Creator used by attackers in Operation Cleaver to create ASPX web shells"
+    reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+    date = "2014/12/02"
+    author = "Cylance Inc."
+    score = "70"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "ShellCreator2.Properties"
@@ -429,12 +1239,14 @@ rule OPCLEAVER_ShellCreator2
 rule OPCLEAVER_SmartCopy2
 {
 
-    meta:
-        description = "Malware or hack tool used by attackers in Operation Cleaver"
-        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
-        date = "2014/12/02"
-        author = "Cylance Inc."
-        score = "70"
+      meta:
+    description = "Malware or hack tool used by attackers in Operation Cleaver"
+    reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+    date = "2014/12/02"
+    author = "Cylance Inc."
+    score = "70"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "SmartCopy2.Properties"
@@ -447,12 +1259,14 @@ rule OPCLEAVER_SmartCopy2
 rule OPCLEAVER_SynFlooder
 {
 
-    meta:
-        description = "Malware or hack tool used by attackers in Operation Cleaver"
-        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
-        date = "2014/12/02"
-        author = "Cylance Inc."
-        score = "70"
+      meta:
+    description = "Malware or hack tool used by attackers in Operation Cleaver"
+    reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+    date = "2014/12/02"
+    author = "Cylance Inc."
+    score = "70"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "Unable to resolve [ %s ]. ErrorCode %d"
@@ -466,12 +1280,14 @@ rule OPCLEAVER_SynFlooder
 rule OPCLEAVER_TinyZBot
 {
 
-    meta:
-        description = "Tiny Bot used by attackers in Operation Cleaver"
-        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
-        date = "2014/12/02"
-        author = "Cylance Inc."
-        score = "70"
+      meta:
+    description = "Tiny Bot used by attackers in Operation Cleaver"
+    reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+    date = "2014/12/02"
+    author = "Cylance Inc."
+    score = "70"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "NetScp" wide
@@ -491,12 +1307,14 @@ rule OPCLEAVER_TinyZBot
 rule OPCLEAVER_ZhoupinExploitCrew
 {
 
-    meta:
-        description = "Keywords used by attackers in Operation Cleaver"
-        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
-        date = "2014/12/02"
-        author = "Cylance Inc."
-        score = "70"
+      meta:
+    description = "Keywords used by attackers in Operation Cleaver"
+    reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+    date = "2014/12/02"
+    author = "Cylance Inc."
+    score = "70"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "zhoupin exploit crew" nocase
@@ -509,12 +1327,14 @@ rule OPCLEAVER_ZhoupinExploitCrew
 rule OPCLEAVER_antivirusdetector
 {
 
-    meta:
-        description = "Hack tool used by attackers in Operation Cleaver"
-        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
-        date = "2014/12/02"
-        author = "Cylance Inc."
-        score = "70"
+      meta:
+    description = "Hack tool used by attackers in Operation Cleaver"
+    reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+    date = "2014/12/02"
+    author = "Cylance Inc."
+    score = "70"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "getShadyProcess"
@@ -528,12 +1348,14 @@ rule OPCLEAVER_antivirusdetector
 rule OPCLEAVER_csext
 {
 
-    meta:
-        description = "Backdoor used by attackers in Operation Cleaver"
-        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
-        date = "2014/12/02"
-        author = "Cylance Inc."
-        score = "70"
+      meta:
+    description = "Backdoor used by attackers in Operation Cleaver"
+    reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+    date = "2014/12/02"
+    author = "Cylance Inc."
+    score = "70"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "COM+ System Extentions"
@@ -547,12 +1369,14 @@ rule OPCLEAVER_csext
 rule OPCLEAVER_kagent
 {
 
-    meta:
-        description = "Backdoor used by attackers in Operation Cleaver"
-        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
-        date = "2014/12/02"
-        author = "Cylance Inc."
-        score = "70"
+      meta:
+    description = "Backdoor used by attackers in Operation Cleaver"
+    reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+    date = "2014/12/02"
+    author = "Cylance Inc."
+    score = "70"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "kill command is in last machine, going back"
@@ -565,12 +1389,14 @@ rule OPCLEAVER_kagent
 rule OPCLEAVER_mimikatzWrapper
 {
 
-    meta:
-        description = "Mimikatz Wrapper used by attackers in Operation Cleaver"
-        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
-        date = "2014/12/02"
-        author = "Cylance Inc."
-        score = "70"
+      meta:
+    description = "Mimikatz Wrapper used by attackers in Operation Cleaver"
+    reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+    date = "2014/12/02"
+    author = "Cylance Inc."
+    score = "70"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "mimikatzWrapper"
@@ -583,12 +1409,14 @@ rule OPCLEAVER_mimikatzWrapper
 rule OPCLEAVER_pvz_in
 {
 
-    meta:
-        description = "Parviz tool used by attackers in Operation Cleaver"
-        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
-        date = "2014/12/02"
-        author = "Cylance Inc."
-        score = "70"
+      meta:
+    description = "Parviz tool used by attackers in Operation Cleaver"
+    reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+    date = "2014/12/02"
+    author = "Cylance Inc."
+    score = "70"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "LAST_TIME=00/00/0000:00:00PM$"
@@ -601,12 +1429,14 @@ rule OPCLEAVER_pvz_in
 rule OPCLEAVER_pvz_out
 {
 
-    meta:
-        description = "Parviz tool used by attackers in Operation Cleaver"
-        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
-        date = "2014/12/02"
-        author = "Cylance Inc."
-        score = "70"
+      meta:
+    description = "Parviz tool used by attackers in Operation Cleaver"
+    reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+    date = "2014/12/02"
+    author = "Cylance Inc."
+    score = "70"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "Network Connectivity Module" wide
@@ -619,12 +1449,14 @@ rule OPCLEAVER_pvz_out
 rule OPCLEAVER_wndTest
 {
 
-    meta:
-        description = "Backdoor used by attackers in Operation Cleaver"
-        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
-        date = "2014/12/02"
-        author = "Cylance Inc."
-        score = "70"
+      meta:
+    description = "Backdoor used by attackers in Operation Cleaver"
+    reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+    date = "2014/12/02"
+    author = "Cylance Inc."
+    score = "70"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "[Alt]" wide
@@ -638,12 +1470,14 @@ rule OPCLEAVER_wndTest
 rule OPCLEAVER_zhCat
 {
 
-    meta:
-        description = "Network tool used by Iranian hackers and used by attackers in Operation Cleaver"
-        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
-        date = "2014/12/02"
-        author = "Cylance Inc."
-        score = "70"
+      meta:
+    description = "Network tool used by Iranian hackers and used by attackers in Operation Cleaver"
+    reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+    date = "2014/12/02"
+    author = "Cylance Inc."
+    score = "70"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "Mozilla/4.0 ( compatible; MSIE 7.0; AOL 8.0 )" ascii fullword
@@ -656,12 +1490,14 @@ rule OPCLEAVER_zhCat
 rule OPCLEAVER_zhLookUp
 {
 
-    meta:
-        description = "Hack tool used by attackers in Operation Cleaver"
-        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
-        date = "2014/12/02"
-        author = "Cylance Inc."
-        score = "70"
+      meta:
+    description = "Hack tool used by attackers in Operation Cleaver"
+    reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+    date = "2014/12/02"
+    author = "Cylance Inc."
+    score = "70"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "zhLookUp.Properties"
@@ -673,12 +1509,14 @@ rule OPCLEAVER_zhLookUp
 rule OPCLEAVER_zhmimikatz
 {
 
-    meta:
-        description = "Mimikatz wrapper used by attackers in Operation Cleaver"
-        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
-        date = "2014/12/02"
-        author = "Cylance Inc."
-        score = "70"
+      meta:
+    description = "Mimikatz wrapper used by attackers in Operation Cleaver"
+    reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+    date = "2014/12/02"
+    author = "Cylance Inc."
+    score = "70"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "MimikatzRunner"
@@ -691,12 +1529,14 @@ rule OPCLEAVER_zhmimikatz
 rule OPCLEAVER_Parviz_Developer
 {
 
-    meta:
-        description = "Parviz developer known from Operation Cleaver"
-        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
-        date = "2014/12/02"
-        author = "Florian Roth"
-        score = "70"
+      meta:
+    description = "Parviz developer known from Operation Cleaver"
+    reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+    date = "2014/12/02"
+    author = "Florian Roth"
+    score = "70"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "Users\\parviz\\documents\\" nocase
@@ -708,12 +1548,14 @@ rule OPCLEAVER_Parviz_Developer
 rule OPCLEAVER_CCProxy_Config
 {
 
-    meta:
-        description = "CCProxy config known from Operation Cleaver"
-        reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
-        date = "2014/12/02"
-        author = "Florian Roth"
-        score = "70"
+      meta:
+    description = "CCProxy config known from Operation Cleaver"
+    reference = "http://cylance.com/assets/Cleaver/Cylance_Operation_Cleaver_Report.pdf"
+    date = "2014/12/02"
+    author = "Florian Roth"
+    score = "70"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "UserName=User-001" fullword ascii

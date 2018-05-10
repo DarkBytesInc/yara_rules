@@ -1,8 +1,10 @@
 rule UnicornGen {
-  meta:
-	author = "FDD @ Cuckoo Sandbox"
-	description = "Rule for malcode generated with the Unicorn tool"
-	ref = "https://github.com/trustedsec/unicorn"
+    meta:
+    author = "FDD @ Cuckoo Sandbox"
+    description = "Rule for malcode generated with the Unicorn tool"
+    ref = "https://github.com/trustedsec/unicorn"
+    severity = "7"
+    type = "Exploit Kit"
   strings:
 	$Import = "DllImport" nocase
 	$Kernel32 = "kernel32.dll"

@@ -1,16 +1,13 @@
 rule nkminer_monero {
 
- meta:
-
- description = "Detects installer of Monero miner that points to a NK domain"
-
- author = "cdoman@alienvault.com"
- 
- reference = "https://www.alienvault.com/blogs/labs-research/a-north-korean-monero-cryptocurrency-miner"
-
- tlp = "white"
-
- license = "MIT License"
+   meta:
+    description = "Detects installer of Monero miner that points to a NK domain"
+    author = "cdoman@alienvault.com"
+    reference = "https://www.alienvault.com/blogs/labs-research/a-north-korean-monero-cryptocurrency-miner"
+    tlp = "white"
+    license = "MIT License"
+    severity = "7"
+    type = "Malware"
 
  strings:
 

@@ -9,11 +9,13 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule PowerShell_ISESteroids_Obfuscation {
-   meta:
-      description = "Detects PowerShell ISESteroids obfuscation"
-      author = "Florian Roth"
-      reference = "https://twitter.com/danielhbohannon/status/877953970437844993"
-      date = "2017-06-23"
+     meta:
+    description = "Detects PowerShell ISESteroids obfuscation"
+    author = "Florian Roth"
+    reference = "https://twitter.com/danielhbohannon/status/877953970437844993"
+    date = "2017-06-23"
+    severity = "7"
+    type = "Exploit Kit"
    strings:
       $x1 = "/\\/===\\__" ascii
       $x2 = "${__/\\/==" ascii

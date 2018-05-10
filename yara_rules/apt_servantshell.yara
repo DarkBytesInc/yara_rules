@@ -1,10 +1,12 @@
 rule Servantshell {
-   meta:
-      author = "Arbor Networks ASERT Nov 2015"
-      description = "Detects Servantshell malware"
-      date = "2017-02-02"
-      reference = "https://tinyurl.com/jmp7nrs"
-      score = 70
+     meta:
+    author = "Arbor Networks ASERT Nov 2015"
+    description = "Detects Servantshell malware"
+    date = "2017-02-02"
+    reference = "https://tinyurl.com/jmp7nrs"
+    score = 70
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $string1 = "SelfDestruction.cpp"
       $string2 = "SvtShell.cpp"

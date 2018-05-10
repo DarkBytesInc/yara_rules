@@ -9,12 +9,14 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule SeDLL_Javascript_Decryptor {
-   meta:
-      description = "Detects SeDll - DLL is used for decrypting and executing another JavaScript backdoor such as Orz"
-      author = "Florian Roth"
-      reference = "https://goo.gl/MZ7dRg"
-      date = "2017-10-18"
-      hash1 = "146aa9a0ec013aa5bdba9ea9d29f59d48d43bc17c6a20b74bb8c521dbb5bc6f4"
+     meta:
+    description = "Detects SeDll - DLL is used for decrypting and executing another JavaScript backdoor such as Orz"
+    author = "Florian Roth"
+    reference = "https://goo.gl/MZ7dRg"
+    date = "2017-10-18"
+    hash1 = "146aa9a0ec013aa5bdba9ea9d29f59d48d43bc17c6a20b74bb8c521dbb5bc6f4"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $x1 = "SEDll_Win32.dll" fullword ascii
       $x2 = "regsvr32 /s \"%s\" DR __CIM__" fullword wide
@@ -29,12 +31,14 @@ rule SeDLL_Javascript_Decryptor {
 }
 
 rule Leviathan_CobaltStrike_Sample_1 {
-   meta:
-      description = "Detects Cobalt Strike sample from Leviathan report"
-      author = "Florian Roth"
-      reference = "https://goo.gl/MZ7dRg"
-      date = "2017-10-18"
-      hash1 = "5860ddc428ffa900258207e9c385f843a3472f2fbf252d2f6357d458646cf362"
+     meta:
+    description = "Detects Cobalt Strike sample from Leviathan report"
+    author = "Florian Roth"
+    reference = "https://goo.gl/MZ7dRg"
+    date = "2017-10-18"
+    hash1 = "5860ddc428ffa900258207e9c385f843a3472f2fbf252d2f6357d458646cf362"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $x1 = "a54c81.dll" fullword ascii
       $x2 = "%d is an x64 process (can't inject x86 content)" fullword ascii
@@ -51,13 +55,15 @@ rule Leviathan_CobaltStrike_Sample_1 {
 }
 
 rule MockDll_Gen {
-   meta:
-      description = "Detects MockDll - regsvr DLL loader"
-      author = "Florian Roth"
-      reference = "https://goo.gl/MZ7dRg"
-      date = "2017-10-18"
-      hash1 = "bfc5c6817ff2cc4f3cd40f649e10cc9ae1e52139f35fdddbd32cb4d221368922"
-      hash2 = "80b931ab1798d7d8a8d63411861cee07e31bb9a68f595f579e11d3817cfc4aca"
+     meta:
+    description = "Detects MockDll - regsvr DLL loader"
+    author = "Florian Roth"
+    reference = "https://goo.gl/MZ7dRg"
+    date = "2017-10-18"
+    hash1 = "bfc5c6817ff2cc4f3cd40f649e10cc9ae1e52139f35fdddbd32cb4d221368922"
+    hash2 = "80b931ab1798d7d8a8d63411861cee07e31bb9a68f595f579e11d3817cfc4aca"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $x1 = "mock_run_ini_Win32.dll" fullword ascii
       $x2 = "mock_run_ini_x64.dll" fullword ascii
@@ -69,12 +75,14 @@ rule MockDll_Gen {
 }
 
 rule VBScript_Favicon_File {
-   meta:
-      description = "VBScript cloaked as Favicon file used in Leviathan incident"
-      author = "Florian Roth"
-      reference = "https://goo.gl/MZ7dRg"
-      date = "2017-10-18"
-      hash1 = "39c952c7e14b6be5a9cb1be3f05eafa22e1115806e927f4e2dc85d609bc0eb36"
+     meta:
+    description = "VBScript cloaked as Favicon file used in Leviathan incident"
+    author = "Florian Roth"
+    reference = "https://goo.gl/MZ7dRg"
+    date = "2017-10-18"
+    hash1 = "39c952c7e14b6be5a9cb1be3f05eafa22e1115806e927f4e2dc85d609bc0eb36"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $x1 = "myxml = '<?xml version=\"\"1.0\"\" encoding=\"\"UTF-8\"\"?>';myxml = myxml +'<root>" ascii
       $x2 = ".Run \"taskkill /im mshta.exe" ascii

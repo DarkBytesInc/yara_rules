@@ -6,12 +6,14 @@
 rule Win32_Buzus_Softpulse
 {
 
-    meta:
-        description = "Trojan Buzus / Softpulse"
-        author = "Florian Roth"
-        date = "2015-05-13"
-        hash = "2f6df200e63a86768471399a74180466d2e99ea9"
-        score = 75
+      meta:
+    description = "Trojan Buzus / Softpulse"
+    author = "Florian Roth"
+    date = "2015-05-13"
+    hash = "2f6df200e63a86768471399a74180466d2e99ea9"
+    score = 75
+    severity = "7"
+    type = "Malware"
 
     strings:
         $x1 = "pi4izd6vp0.com" fullword ascii

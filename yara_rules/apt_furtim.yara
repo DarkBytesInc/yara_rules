@@ -6,12 +6,14 @@
 rule Furtim_nativeDLL 
 {
 
-    meta:
-        description = "Detects Furtim malware - file native.dll"
-        author = "Florian Roth"
-        reference = "MISP 3971"
-        date = "2016-06-13"
-        hash1 = "4f39d3e70ed1278d5fa83ed9f148ca92383ec662ac34635f7e56cc42eeaee948"
+      meta:
+    description = "Detects Furtim malware - file native.dll"
+    author = "Florian Roth"
+    reference = "MISP 3971"
+    date = "2016-06-13"
+    hash1 = "4f39d3e70ed1278d5fa83ed9f148ca92383ec662ac34635f7e56cc42eeaee948"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s1 = "FqkVpTvBwTrhPFjfFF6ZQRK44hHl26" fullword ascii
@@ -25,12 +27,14 @@ rule Furtim_nativeDLL
 rule Furtim_Parent_1 
 {
 
-    meta:
-        description = "Detects Furtim Parent Malware"
-        author = "Florian Roth"
-        reference = "https://sentinelone.com/blogs/sfg-furtims-parent/"
-        date = "2016-07-16"
-        hash1 = "766e49811c0bb7cce217e72e73a6aa866c15de0ba11d7dda3bd7e9ec33ed6963"
+      meta:
+    description = "Detects Furtim Parent Malware"
+    author = "Florian Roth"
+    reference = "https://sentinelone.com/blogs/sfg-furtims-parent/"
+    date = "2016-07-16"
+    hash1 = "766e49811c0bb7cce217e72e73a6aa866c15de0ba11d7dda3bd7e9ec33ed6963"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         /* RC4 encryption password */

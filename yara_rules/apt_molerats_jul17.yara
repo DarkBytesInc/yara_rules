@@ -9,12 +9,14 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule Molerats_Jul17_Sample_1 {
-   meta:
-      description = "Detects Molerats sample - July 2017"
-      author = "Florian Roth"
-      reference = "https://mymalwareparty.blogspot.de/2017/07/operation-desert-eagle.html"
-      date = "2017-07-07"
-      hash1 = "ebf2423b9de131eab1c61ac395cbcfc2ac3b15bd9c83b96ae0a48619a4a38d0a"
+     meta:
+    description = "Detects Molerats sample - July 2017"
+    author = "Florian Roth"
+    reference = "https://mymalwareparty.blogspot.de/2017/07/operation-desert-eagle.html"
+    date = "2017-07-07"
+    hash1 = "ebf2423b9de131eab1c61ac395cbcfc2ac3b15bd9c83b96ae0a48619a4a38d0a"
+    severity = "7"
+    type = "Malware"
    strings:
       /* {11804ce4-930a-4b09-bf70-9f1a95d0d70d}, Culture=neutral, PublicKeyToken=3e56350693f7355e */
       $s1 = "ezExODA0Y2U0LTkzMGEtNGIwOS1iZjcwLTlmMWE5NWQwZDcwZH0sIEN1bHR1cmU9bmV1dHJhbCwgUHVibGljS2V5VG9rZW49M2U1NjM1MDY5M2Y3MzU1ZQ==,[z]{c00" wide
@@ -23,12 +25,14 @@ rule Molerats_Jul17_Sample_1 {
 }
 
 rule Molerats_Jul17_Sample_2 {
-   meta:
-      description = "Detects Molerats sample - July 2017"
-      author = "Florian Roth"
-      reference = "https://mymalwareparty.blogspot.de/2017/07/operation-desert-eagle.html"
-      date = "2017-07-07"
-      hash1 = "7e122a882d625f4ccac019efb7bf1b1024b9e0919d205105e7e299fb1a20a326"
+     meta:
+    description = "Detects Molerats sample - July 2017"
+    author = "Florian Roth"
+    reference = "https://mymalwareparty.blogspot.de/2017/07/operation-desert-eagle.html"
+    date = "2017-07-07"
+    hash1 = "7e122a882d625f4ccac019efb7bf1b1024b9e0919d205105e7e299fb1a20a326"
+    severity = "7"
+    type = "Malware"
    strings:
       $s1 = "Folder.exe" fullword ascii
       $s2 = "Notepad++.exe" fullword wide
@@ -38,13 +42,15 @@ rule Molerats_Jul17_Sample_2 {
 }
 
 rule Molerats_Jul17_Sample_3 {
-   meta:
-      description = "Detects Molerats sample - July 2017"
-      author = "Florian Roth"
-      reference = "https://mymalwareparty.blogspot.de/2017/07/operation-desert-eagle.html"
-      date = "2017-07-07"
-      hash1 = "995eee4122802c2dc83bb619f8c53173a5a9c656ad8f43178223d78802445131"
-      hash2 = "fec657a19356753008b0f477083993aa5c36ebaf7276742cf84bfe614678746b"
+     meta:
+    description = "Detects Molerats sample - July 2017"
+    author = "Florian Roth"
+    reference = "https://mymalwareparty.blogspot.de/2017/07/operation-desert-eagle.html"
+    date = "2017-07-07"
+    hash1 = "995eee4122802c2dc83bb619f8c53173a5a9c656ad8f43178223d78802445131"
+    hash2 = "fec657a19356753008b0f477083993aa5c36ebaf7276742cf84bfe614678746b"
+    severity = "7"
+    type = "Malware"
    strings:
       $s1 = "ccleaner.exe" fullword wide
       $s2 = "Folder.exe" fullword ascii
@@ -53,12 +59,14 @@ rule Molerats_Jul17_Sample_3 {
 }
 
 rule Molerats_Jul17_Sample_4 {
-   meta:
-      description = "Detects Molerats sample - July 2017"
-      author = "Florian Roth"
-      reference = "https://mymalwareparty.blogspot.de/2017/07/operation-desert-eagle.html"
-      date = "2017-07-07"
-      hash1 = "512a14130a7a8b5c2548aa488055051ab7e725106ddf2c705f6eb4cfa5dc795c"
+     meta:
+    description = "Detects Molerats sample - July 2017"
+    author = "Florian Roth"
+    reference = "https://mymalwareparty.blogspot.de/2017/07/operation-desert-eagle.html"
+    date = "2017-07-07"
+    hash1 = "512a14130a7a8b5c2548aa488055051ab7e725106ddf2c705f6eb4cfa5dc795c"
+    severity = "7"
+    type = "Malware"
    strings:
       $x1 = "get-itemproperty -path 'HKCU:\\SOFTWARE\\Microsoft\\' -name 'KeyName')" wide
       $x2 = "O.Run C & chrw(34) & \"[System.IO.File]::" wide
@@ -68,12 +76,14 @@ rule Molerats_Jul17_Sample_4 {
 }
 
 rule Molerats_Jul17_Sample_5 {
-   meta:
-      description = "Detects Molerats sample - July 2017"
-      author = "Florian Roth"
-      reference = "https://mymalwareparty.blogspot.de/2017/07/operation-desert-eagle.html"
-      date = "2017-07-07"
-      hash1 = "ebf2423b9de131eab1c61ac395cbcfc2ac3b15bd9c83b96ae0a48619a4a38d0a"
+     meta:
+    description = "Detects Molerats sample - July 2017"
+    author = "Florian Roth"
+    reference = "https://mymalwareparty.blogspot.de/2017/07/operation-desert-eagle.html"
+    date = "2017-07-07"
+    hash1 = "ebf2423b9de131eab1c61ac395cbcfc2ac3b15bd9c83b96ae0a48619a4a38d0a"
+    severity = "7"
+    type = "Malware"
    strings:
       $x1 = "powershell.exe -nop -c \"iex" nocase ascii
       $x2 = ".run('%windir%\\\\SysWOW64\\\\WindowsPowerShell\\\\" ascii
@@ -85,12 +95,14 @@ rule Molerats_Jul17_Sample_5 {
 }
 
 rule Molerats_Jul17_Sample_Dropper {
-   meta:
-      description = "Detects Molerats sample dropper SFX - July 2017"
-      author = "Florian Roth"
-      reference = "https://mymalwareparty.blogspot.de/2017/07/operation-desert-eagle.html"
-      date = "2017-07-07"
-      hash1 = "ad0b3ac8c573d84c0862bf1c912dba951ec280d31fe5b84745ccd12164b0bcdb"
+     meta:
+    description = "Detects Molerats sample dropper SFX - July 2017"
+    author = "Florian Roth"
+    reference = "https://mymalwareparty.blogspot.de/2017/07/operation-desert-eagle.html"
+    date = "2017-07-07"
+    hash1 = "ad0b3ac8c573d84c0862bf1c912dba951ec280d31fe5b84745ccd12164b0bcdb"
+    severity = "7"
+    type = "Malware"
    strings:
       $s1 = "Please remove %s from %s folder. It is unsecure to run %s until it is done." fullword wide
       $s2 = "sfxrar.exe" fullword ascii

@@ -7,10 +7,12 @@ import "pe"
 
 rule Zegost : Trojan
 {
-	meta:
-		author="Kevin Falcoz"
-		date="10/06/2013"
-		description="Zegost Trojan"
+	  meta:
+    author = "Kevin Falcoz"
+    date = "10/06/2013"
+    description = "Zegost Trojan"
+    severity = "7"
+    type = "Malware"
 		
 	strings:
 		$signature1={39 2F 66 33 30 4C 69 35 75 62 4F 35 44 4E 41 44 44 78 47 38 73 37 36 32 74 71 59 3D}

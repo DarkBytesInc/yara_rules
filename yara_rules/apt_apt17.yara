@@ -5,12 +5,14 @@
 rule APT17_Sample_FXSST_DLL 
 {
     
-    meta:
-        description = "Detects Samples related to APT17 activity - file FXSST.DLL"
-        author = "Florian Roth"
-        reference = "https://goo.gl/ZiJyQv"
-        date = "2015-05-14"
-        hash = "52f1add5ad28dc30f68afda5d41b354533d8bce3"
+      meta:
+    description = "Detects Samples related to APT17 activity - file FXSST.DLL"
+    author = "Florian Roth"
+    reference = "https://goo.gl/ZiJyQv"
+    date = "2015-05-14"
+    hash = "52f1add5ad28dc30f68afda5d41b354533d8bce3"
+    severity = "10"
+    type = "Advanced Persistent Threat"
         
     strings:
         $x1 = "Microsoft? Windows? Operating System" fullword wide

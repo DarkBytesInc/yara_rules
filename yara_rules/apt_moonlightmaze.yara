@@ -10,19 +10,16 @@ Date: 2017-03-28
 
 rule apt_RU_MoonlightMaze_customlokitools {
 
-meta:
-
-	author = "Kaspersky Lab"
-	date = "2017-03-15"
-	version = "1.1"
-	last_modified = "2017-03-22"
-	reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
-	description = "Rule to detect Moonlight Maze Loki samples by custom attacker-authored strings"
-	hash = "14cce7e641d308c3a177a8abb5457019"
-	hash = "a3164d2bbc45fb1eef5fde7eb8b245ea"
-	hash = "dabee9a7ea0ddaf900ef1e3e166ffe8a"
-	hash = "1980958afffb6a9d5a6c73fc1e2795c2"
-	hash = "e59f92aadb6505f29a9f368ab803082e"
+  meta:
+    author = "Kaspersky Lab"
+    date = "2017-03-15"
+    version = "1.1"
+    last_modified = "2017-03-22"
+    reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
+    description = "Rule to detect Moonlight Maze Loki samples by custom attacker-authored strings"
+    hash = "e59f92aadb6505f29a9f368ab803082e"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
 strings:
 
@@ -48,16 +45,16 @@ condition:
 
 rule apt_RU_MoonlightMaze_customsniffer {
 
-meta:
-
-	author = "Kaspersky Lab"
-	date = "2017-03-15"
-	version = "1.1"
-	reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
-	description = "Rule to detect Moonlight Maze sniffer tools"
-	hash = "7b86f40e861705d59f5206c482e1f2a5"
-	hash = "927426b558888ad680829bd34b0ad0e7"
-	original_filename = "ora;tdn"
+  meta:
+    author = "Kaspersky Lab"
+    date = "2017-03-15"
+    version = "1.1"
+    reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
+    description = "Rule to detect Moonlight Maze sniffer tools"
+    hash = "927426b558888ad680829bd34b0ad0e7"
+    original_filename = "ora;tdn"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
 strings:
 
@@ -79,18 +76,15 @@ condition:
 
 rule loki2crypto {
 
-meta:
-
-	author = "Costin Raiu, Kaspersky Lab"
-	date = "2017-03-21"
-	version = "1.0"
-	description = "Rule to detect hardcoded DH modulus used in 1996/1997 Loki2 sourcecode; #ifdef STRONG_CRYPTO /* 384-bit strong prime */"
-	reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
-	hash = "19fbd8cbfb12482e8020a887d6427315"
-	hash = "ea06b213d5924de65407e8931b1e4326"
-	hash = "14ecd5e6fc8e501037b54ca263896a11"
-	hash = "e079ec947d3d4dacb21e993b760a65dc"
-	hash = "edf900cebb70c6d1fcab0234062bfc28"
+  meta:
+    author = "Costin Raiu, Kaspersky Lab"
+    date = "2017-03-21"
+    version = "1.0"
+    description = "Rule to detect hardcoded DH modulus used in 1996/1997 Loki2 sourcecode; #ifdef STRONG_CRYPTO /* 384-bit strong prime */"
+    reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
+    hash = "edf900cebb70c6d1fcab0234062bfc28"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
 strings:
 
@@ -107,16 +101,16 @@ condition:
 
 rule apt_RU_MoonlightMaze_de_tool {
 
-meta:
-
-	author = "Kaspersky Lab"
-	date = "2017-03-27"
-	version = "1.0"
-	last_modified = "2017-03-27"
-	reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
-	description = "Rule to detect Moonlight Maze 'de' and 'deg' tunnel tool"
-	hash = "4bc7ed168fb78f0dc688ee2be20c9703"
-	hash = "8b56e8552a74133da4bc5939b5f74243"
+  meta:
+    author = "Kaspersky Lab"
+    date = "2017-03-27"
+    version = "1.0"
+    last_modified = "2017-03-27"
+    reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
+    description = "Rule to detect Moonlight Maze 'de' and 'deg' tunnel tool"
+    hash = "8b56e8552a74133da4bc5939b5f74243"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
 strings:
 
@@ -135,15 +129,16 @@ condition:
 
 rule apt_RU_MoonlightMaze_cle_tool {
 
-meta:
-
-	author = "Kaspersky Lab"
-	date = "2017-03-27"
-	version = "1.0"
-	last_modified = "2017-03-27"
-	reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
-	description = "Rule to detect Moonlight Maze 'cle' log cleaning tool"
-	hash = "647d7b711f7b4434145ea30d0ef207b0"
+  meta:
+    author = "Kaspersky Lab"
+    date = "2017-03-27"
+    version = "1.0"
+    last_modified = "2017-03-27"
+    reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
+    description = "Rule to detect Moonlight Maze 'cle' log cleaning tool"
+    hash = "647d7b711f7b4434145ea30d0ef207b0"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
 
 strings:
@@ -164,14 +159,15 @@ condition:
 
 rule apt_RU_MoonlightMaze_xk_keylogger {
 
-meta:
-
-	author = "Kaspersky Lab"
-	date = "2017-03-27"
-	version = "1.0"
-	last_modified = "2017-03-27"
-	reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
-	description = "Rule to detect Moonlight Maze 'xk' keylogger"
+  meta:
+    author = "Kaspersky Lab"
+    date = "2017-03-27"
+    version = "1.0"
+    last_modified = "2017-03-27"
+    reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
+    description = "Rule to detect Moonlight Maze 'xk' keylogger"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
 strings:
 
@@ -197,14 +193,15 @@ condition:
 
 rule apt_RU_MoonlightMaze_encrypted_keylog {
 
-meta:
-
-	author = "Kaspersky Lab"
-	date = "2017-03-27"
-	version = "1.0"
-	last_modified = "2017-03-27"
-	reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
-	description = "Rule to detect Moonlight Maze encrypted keylogger logs"
+  meta:
+    author = "Kaspersky Lab"
+    date = "2017-03-27"
+    version = "1.0"
+    last_modified = "2017-03-27"
+    reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
+    description = "Rule to detect Moonlight Maze encrypted keylogger logs"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
 strings:
 
@@ -218,20 +215,17 @@ condition:
 
 rule apt_RU_MoonlightMaze_IRIX_exploit_GEN {
 
-meta:
-
-	author = "Kaspersky Lab"
-	date = "2017-03-27"
-	version = "1.0"
-	last_modified = "2017-03-27"
-	reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
-	description = "Rule to detect Irix exploits from David Hedley used by Moonlight Maze hackers"
-	reference2 = "https://www.exploit-db.com/exploits/19274/"
-	hash = "008ea82f31f585622353bd47fa1d84be" //df3
-	hash = "a26bad2b79075f454c83203fa00ed50c" //log
-	hash = "f67fc6e90f05ba13f207c7fdaa8c2cab" //xconsole
-	hash = "5937db3896cdd8b0beb3df44e509e136" //xlock
-	hash = "f4ed5170dcea7e5ba62537d84392b280" //xterm
+  meta:
+    author = "Kaspersky Lab"
+    date = "2017-03-27"
+    version = "1.0"
+    last_modified = "2017-03-27"
+    reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
+    description = "Rule to detect Irix exploits from David Hedley used by Moonlight Maze hackers"
+    reference2 = "https://www.exploit-db.com/exploits/19274/"
+    hash = "f4ed5170dcea7e5ba62537d84392b280" //xterm
+    severity = "7"
+    type = "Exploit Kit"
 
 strings:
 
@@ -247,17 +241,17 @@ condition:
 
 rule apt_RU_MoonlightMaze_u_logcleaner {
 
-meta:
-
-	author = "Kaspersky Lab"
-	date = "2017-03-27"
-	version = "1.0"
-	last_modified = "2017-03-27"
-	reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
-	description = "Rule to detect log cleaners based on utclean.c"
-	reference2 = "http://cd.textfiles.com/cuteskunk/Unix-Hacking-Exploits/utclean.c"
-	hash = "d98796dcda1443a37b124dbdc041fe3b"
-	hash = "73a518f0a73ab77033121d4191172820"
+  meta:
+    author = "Kaspersky Lab"
+    date = "2017-03-27"
+    version = "1.0"
+    last_modified = "2017-03-27"
+    reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
+    description = "Rule to detect log cleaners based on utclean.c"
+    reference2 = "http://cd.textfiles.com/cuteskunk/Unix-Hacking-Exploits/utclean.c"
+    hash = "73a518f0a73ab77033121d4191172820"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
 strings:
 
@@ -274,16 +268,17 @@ condition:
 
 rule apt_RU_MoonlightMaze_wipe {
 
-meta:
-
-	author = "Kaspersky Lab"
-	date = "2017-03-27"
-	version = "1.0"
-	last_modified = "2017-03-27"
-	reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
-	description = "Rule to detect log cleaner based on wipe.c"
-	reference2 = "http://www.afn.org/~afn28925/wipe.c"
-	hash = "e69efc504934551c6a77b525d5343241"
+  meta:
+    author = "Kaspersky Lab"
+    date = "2017-03-27"
+    version = "1.0"
+    last_modified = "2017-03-27"
+    reference = "https://en.wikipedia.org/wiki/Moonlight_Maze"
+    description = "Rule to detect log cleaner based on wipe.c"
+    reference2 = "http://www.afn.org/~afn28925/wipe.c"
+    hash = "e69efc504934551c6a77b525d5343241"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
 strings:
 

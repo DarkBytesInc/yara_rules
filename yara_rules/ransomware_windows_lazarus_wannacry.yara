@@ -2,12 +2,14 @@ import "pe"
 
 rule ransomware_windows_lazarus_wannacry
 {
-    meta:
-        description = "Rule based on shared code between Feb 2017 Wannacry sample and Lazarus backdoor from Feb 2015 discovered by Neel Mehta"
-        reference = "https://twitter.com/neelmehta/status/864164081116225536"
-        author = "Costin G. Raiu, Kaspersky Lab"
-        md5_1 = "9c7c7149387a1c79679a87dd1ba755bc"
-        md5_2 = "ac21c8ad899727137c4b94458d7aa8d8"
+      meta:
+    description = "Rule based on shared code between Feb 2017 Wannacry sample and Lazarus backdoor from Feb 2015 discovered by Neel Mehta"
+    reference = "https://twitter.com/neelmehta/status/864164081116225536"
+    author = "Costin G. Raiu, Kaspersky Lab"
+    md5_1 = "9c7c7149387a1c79679a87dd1ba755bc"
+    md5_2 = "ac21c8ad899727137c4b94458d7aa8d8"
+    severity = "10"
+    type = "Ransomware"
     strings:
         $a1={
         51 53 55 8B 6C 24 10 56 57 6A 20 8B 45 00 8D 75

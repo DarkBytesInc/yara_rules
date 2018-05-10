@@ -6,11 +6,13 @@
 rule BlackWorm
 {
 
-    meta:
-        author = "Brian Wallace @botnet_hunter"
-        author_email = "bwall@ballastsecurity.net"
-        date = "2015-05-20"
-        description = "Identify BlackWorm"
+      meta:
+    author = "Brian Wallace @botnet_hunter"
+    author_email = "bwall@ballastsecurity.net"
+    date = "2015-05-20"
+    description = "Identify BlackWorm"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $str1 = "m_ComputerObjectProvider"

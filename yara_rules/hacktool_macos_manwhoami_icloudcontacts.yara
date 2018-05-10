@@ -1,9 +1,11 @@
 rule hacktool_macos_manwhoami_icloudcontacts
 {
-    meta:
-        description = "Pulls iCloud Contacts for an account. No dependencies. No user notification."
-        reference = "https://github.com/manwhoami/iCloudContacts"
-        author = "@mimeframe"
+      meta:
+    description = "Pulls iCloud Contacts for an account. No dependencies. No user notification."
+    reference = "https://github.com/manwhoami/iCloudContacts"
+    author = "@mimeframe"
+    severity = "5"
+    type = "Unknown"
     strings:
         $a1 = "https://setup.icloud.com/setup/authenticate/" wide ascii
         $a2 = "https://p04-contacts.icloud.com/" wide ascii

@@ -7,10 +7,12 @@ import "pe"
 
 rule YayihCode : Yayih Family 
 {
-    meta:
-        description = "Yayih code features"
-        author = "Seth Hardy"
-        last_modified = "2014-07-11"
+      meta:
+    description = "Yayih code features"
+    author = "Seth Hardy"
+    last_modified = "2014-07-11"
+    severity = "7"
+    type = "Malware"
     
     strings:
         //  encryption
@@ -22,10 +24,12 @@ rule YayihCode : Yayih Family
 
 rule YayihStrings : Yayih Family
 {
-    meta:
-        description = "Yayih Identifying Strings"
-        author = "Seth Hardy"
-        last_modified = "2014-07-11"
+      meta:
+    description = "Yayih Identifying Strings"
+    author = "Seth Hardy"
+    last_modified = "2014-07-11"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $ = "/bbs/info.asp"
@@ -39,10 +43,12 @@ rule YayihStrings : Yayih Family
 
 rule Yayih : Family
 {
-    meta:
-        description = "Yayih"
-        author = "Seth Hardy"
-        last_modified = "2014-07-11"
+      meta:
+    description = "Yayih"
+    author = "Seth Hardy"
+    last_modified = "2014-07-11"
+    severity = "7"
+    type = "Malware"
         
     condition:
         YayihCode or YayihStrings

@@ -6,11 +6,14 @@
 rule Molerats_certs
 {
     
-    meta:
-        Author      = "FireEye Labs"
-        Date        = "2013/08/23"
-        Description = "this rule detections code signed with certificates used by the Molerats actor"
-        Reference   = "https://www.fireeye.com/blog/threat-research/2013/08/operation-molerats-middle-east-cyber-attacks-using-poison-ivy.html"
+      meta:
+    Author = "FireEye Labs"
+    Date = "2013/08/23"
+    Description = "this rule detections code signed with certificates used by the Molerats actor"
+    Reference = "https://www.fireeye.com/blog/threat-research/2013/08/operation-molerats-middle-east-cyber-attacks-using-poison-ivy.html"
+    description = "Molerats_certs"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $cert1 = { 06 50 11 A5 BC BF 83 C0 93 28 16 5E 7E 85 27 75 }

@@ -6,10 +6,12 @@
 rule ChickenDOS
 {
 
-    meta:
-        author = "Jason Jones <jasonjones@arbor.net>"
-        description = "Win32-variant of Chicken ident for both dropper and dropped file"
-        source = "https://github.com/arbor/yara/blob/master/chicken.yara"
+      meta:
+    author = "Jason Jones <jasonjones@arbor.net>"
+    description = "Win32-variant of Chicken ident for both dropper and dropped file"
+    source = "https://github.com/arbor/yara/blob/master/chicken.yara"
+    severity = "7"
+    type = "Malware"
 
     strings:
         $pdb1 = "\\Chicken\\Release\\svchost.pdb"
@@ -31,10 +33,12 @@ rule ChickenDOS
 rule ChickenDOS_Linux 
 {
  
-    meta:
-        author = "Jason Jones <jasonjones@arbor.net>"
-        description = "Linux-variant of Chicken ident for both dropper and dropped file"
-        source = "https://github.com/arbor/yara/blob/master/chicken.yara"
+      meta:
+    author = "Jason Jones <jasonjones@arbor.net>"
+    description = "Linux-variant of Chicken ident for both dropper and dropped file"
+    source = "https://github.com/arbor/yara/blob/master/chicken.yara"
+    severity = "7"
+    type = "Malware"
     
     strings:
         $cfg = "fake.cfg"

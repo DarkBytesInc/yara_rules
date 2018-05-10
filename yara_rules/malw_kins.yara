@@ -5,10 +5,12 @@
 
 import "pe"
 rule KINS_dropper : dropper {
-	meta:
-		author = "AlienVault Labs aortega@alienvault.com"
-		description = "Match protocol, process injects and windows exploit present in KINS dropper"
-		reference = "http://goo.gl/arPhm3"
+	  meta:
+    author = "AlienVault Labs aortega@alienvault.com"
+    description = "Match protocol, process injects and windows exploit present in KINS dropper"
+    reference = "http://goo.gl/arPhm3"
+    severity = "7"
+    type = "Malware"
 	strings:
 		// Network protocol
 		$n1 = "tid=%d&ta=%s-%x" fullword
@@ -31,10 +33,12 @@ rule KINS_dropper : dropper {
 }
 
 rule KINS_DLL_zeus {
-	meta:
-		author = "AlienVault Labs aortega@alienvault.com"
-		description = "Match default bot in KINS leaked dropper, Zeus"
-		reference = "http://goo.gl/arPhm3"
+	  meta:
+    author = "AlienVault Labs aortega@alienvault.com"
+    description = "Match default bot in KINS leaked dropper, Zeus"
+    reference = "http://goo.gl/arPhm3"
+    severity = "7"
+    type = "Malware"
 	strings:
 		// Network protocol
 		$n1 = "%BOTID%" fullword

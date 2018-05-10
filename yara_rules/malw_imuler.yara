@@ -7,10 +7,12 @@ import "pe"
 
 rule IMulerCode : IMuler Family 
 {
-    meta:
-        description = "IMuler code tricks"
-        author = "Seth Hardy"
-        last_modified = "2014-06-16"
+      meta:
+    description = "IMuler code tricks"
+    author = "Seth Hardy"
+    last_modified = "2014-06-16"
+    severity = "7"
+    type = "Malware"
         
     strings:
         // Load these function strings 4 characters at a time. These check the first two blocks:
@@ -26,10 +28,12 @@ rule IMulerCode : IMuler Family
 
 rule IMulerStrings : IMuler Family
 {
-    meta:
-        description = "IMuler Identifying Strings"
-        author = "Seth Hardy"
-        last_modified = "2014-06-16"
+      meta:
+    description = "IMuler Identifying Strings"
+    author = "Seth Hardy"
+    last_modified = "2014-06-16"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $ = "/cgi-mac/"
@@ -57,10 +61,12 @@ rule IMulerStrings : IMuler Family
 
 rule IMuler : Family
 {
-    meta:
-        description = "IMuler"
-        author = "Seth Hardy"
-        last_modified = "2014-06-16"
+      meta:
+    description = "IMuler"
+    author = "Seth Hardy"
+    last_modified = "2014-06-16"
+    severity = "7"
+    type = "Malware"
         
     condition:
         IMulerCode or IMulerStrings

@@ -1,9 +1,11 @@
 rule APT_Project_Sauron_Scripts {
-	meta:
-		description = "Detects scripts (mostly LUA) from Project Sauron report by Kaspersky"
-		author = "Florian Roth"
-		reference = "https://goo.gl/eFoP4A"
-		date = "2016-08-08"
+	  meta:
+    description = "Detects scripts (mostly LUA) from Project Sauron report by Kaspersky"
+    author = "Florian Roth"
+    reference = "https://goo.gl/eFoP4A"
+    date = "2016-08-08"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$x1 = "local t = w.exec2str(\"regedit "
 		$x2 = "local r = w.exec2str(\"cat"
@@ -24,11 +26,13 @@ rule APT_Project_Sauron_Scripts {
 }
 
 rule APT_Project_Sauron_arping_module {
-	meta:
-		description = "Detects strings from arping module - Project Sauron report by Kaspersky"
-		author = "Florian Roth"
-		reference = "https://goo.gl/eFoP4A"
-		date = "2016-08-08"
+	  meta:
+    description = "Detects strings from arping module - Project Sauron report by Kaspersky"
+    author = "Florian Roth"
+    reference = "https://goo.gl/eFoP4A"
+    date = "2016-08-08"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "Resolve hosts that answer"
 		$s2 = "Print only replying Ips"
@@ -38,11 +42,13 @@ rule APT_Project_Sauron_arping_module {
 }
 
 rule APT_Project_Sauron_kblogi_module {
-	meta:
-		description = "Detects strings from kblogi module - Project Sauron report by Kaspersky"
-		author = "Florian Roth"
-		reference = "https://goo.gl/eFoP4A"
-		date = "2016-08-08"
+	  meta:
+    description = "Detects strings from kblogi module - Project Sauron report by Kaspersky"
+    author = "Florian Roth"
+    reference = "https://goo.gl/eFoP4A"
+    date = "2016-08-08"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$x1 = "Inject using process name or pid. Default"
 		$s2 = "Convert mode: Read log from file and convert to text"
@@ -52,11 +58,13 @@ rule APT_Project_Sauron_kblogi_module {
 }
 
 rule APT_Project_Sauron_basex_module {
-	meta:
-		description = "Detects strings from basex module - Project Sauron report by Kaspersky"
-		author = "Florian Roth"
-		reference = "https://goo.gl/eFoP4A"
-		date = "2016-08-08"
+	  meta:
+    description = "Detects strings from basex module - Project Sauron report by Kaspersky"
+    author = "Florian Roth"
+    reference = "https://goo.gl/eFoP4A"
+    date = "2016-08-08"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$x1 = "64, 64url, 32, 32url or 16."
 		$s2 = "Force decoding when input is invalid/corrupt"
@@ -66,11 +74,13 @@ rule APT_Project_Sauron_basex_module {
 }
 
 rule APT_Project_Sauron_dext_module {
-	meta:
-		description = "Detects strings from dext module - Project Sauron report by Kaspersky"
-		author = "Florian Roth"
-		reference = "https://goo.gl/eFoP4A"
-		date = "2016-08-08"
+	  meta:
+    description = "Detects strings from dext module - Project Sauron report by Kaspersky"
+    author = "Florian Roth"
+    reference = "https://goo.gl/eFoP4A"
+    date = "2016-08-08"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$x1 = "Assemble rows of DNS names back to a single string of data"
 		$x2 = "removes checks of DNS names and lengths (during split)"
@@ -81,12 +91,14 @@ rule APT_Project_Sauron_dext_module {
 }
 
 rule Hacktool_This_Cruft {
-	meta:
-		description = "Detects string 'This cruft' often used in hack tools like netcat or cryptcat and also mentioned in Project Sauron report"
-		author = "Florian Roth"
-		reference = "https://goo.gl/eFoP4A"
-		date = "2016-08-08"
-		score = 60
+	  meta:
+    description = "Detects string 'This cruft' often used in hack tools like netcat or cryptcat and also mentioned in Project Sauron report"
+    author = "Florian Roth"
+    reference = "https://goo.gl/eFoP4A"
+    date = "2016-08-08"
+    score = 60
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$x1 = "This cruft" fullword
 	condition:
@@ -103,12 +115,14 @@ rule Hacktool_This_Cruft {
 /* Rule Set ----------------------------------------------------------------- */
 
 rule APT_Project_Sauron_Custom_M1 {
-	meta:
-		description = "Detects malware from Project Sauron APT"
-		author = "FLorian Roth"
-		reference = "https://goo.gl/eFoP4A"
-		date = "2016-08-09"
-		hash1 = "9572624b6026311a0e122835bcd7200eca396802000d0777dba118afaaf9f2a9"
+	  meta:
+    description = "Detects malware from Project Sauron APT"
+    author = "FLorian Roth"
+    reference = "https://goo.gl/eFoP4A"
+    date = "2016-08-09"
+    hash1 = "9572624b6026311a0e122835bcd7200eca396802000d0777dba118afaaf9f2a9"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "ncnfloc.dll" fullword wide
 		$s4 = "Network Configuration Locator" fullword wide
@@ -121,12 +135,14 @@ rule APT_Project_Sauron_Custom_M1 {
 }
 
 rule APT_Project_Sauron_Custom_M2 {
-	meta:
-		description = "Detects malware from Project Sauron APT"
-		author = "FLorian Roth"
-		reference = "https://goo.gl/eFoP4A"
-		date = "2016-08-09"
-		hash1 = "30a824155603c2e9d8bfd3adab8660e826d7e0681e28e46d102706a03e23e3a8"
+	  meta:
+    description = "Detects malware from Project Sauron APT"
+    author = "FLorian Roth"
+    reference = "https://goo.gl/eFoP4A"
+    date = "2016-08-09"
+    hash1 = "30a824155603c2e9d8bfd3adab8660e826d7e0681e28e46d102706a03e23e3a8"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s2 = "\\*\\3vpn" fullword ascii
 
@@ -138,12 +154,14 @@ rule APT_Project_Sauron_Custom_M2 {
 }
 
 rule APT_Project_Sauron_Custom_M3 {
-	meta:
-		description = "Detects malware from Project Sauron APT"
-		author = "FLorian Roth"
-		reference = "https://goo.gl/eFoP4A"
-		date = "2016-08-09"
-		hash1 = "a4736de88e9208eb81b52f29bab9e7f328b90a86512bd0baadf4c519e948e5ec"
+	  meta:
+    description = "Detects malware from Project Sauron APT"
+    author = "FLorian Roth"
+    reference = "https://goo.gl/eFoP4A"
+    date = "2016-08-09"
+    hash1 = "a4736de88e9208eb81b52f29bab9e7f328b90a86512bd0baadf4c519e948e5ec"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "ExampleProject.dll" fullword ascii
 
@@ -155,12 +173,14 @@ rule APT_Project_Sauron_Custom_M3 {
 }
 
 rule APT_Project_Sauron_Custom_M4 {
-	meta:
-		description = "Detects malware from Project Sauron APT"
-		author = "FLorian Roth"
-		reference = "https://goo.gl/eFoP4A"
-		date = "2016-08-09"
-		hash1 = "e12e66a6127cfd2cbb42e6f0d57c9dd019b02768d6f1fb44d91f12d90a611a57"
+	  meta:
+    description = "Detects malware from Project Sauron APT"
+    author = "FLorian Roth"
+    reference = "https://goo.gl/eFoP4A"
+    date = "2016-08-09"
+    hash1 = "e12e66a6127cfd2cbb42e6f0d57c9dd019b02768d6f1fb44d91f12d90a611a57"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "xpsmngr.dll" fullword wide
 		$s2 = "XPS Manager" fullword wide
@@ -173,12 +193,14 @@ rule APT_Project_Sauron_Custom_M4 {
 }
 
 rule APT_Project_Sauron_Custom_M6 {
-	meta:
-		description = "Detects malware from Project Sauron APT"
-		author = "FLorian Roth"
-		reference = "https://goo.gl/eFoP4A"
-		date = "2016-08-09"
-		hash1 = "3782b63d7f6f688a5ccb1b72be89a6a98bb722218c9f22402709af97a41973c8"
+	  meta:
+    description = "Detects malware from Project Sauron APT"
+    author = "FLorian Roth"
+    reference = "https://goo.gl/eFoP4A"
+    date = "2016-08-09"
+    hash1 = "3782b63d7f6f688a5ccb1b72be89a6a98bb722218c9f22402709af97a41973c8"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "rseceng.dll" fullword wide
 		$s2 = "Remote Security Engine" fullword wide
@@ -191,13 +213,15 @@ rule APT_Project_Sauron_Custom_M6 {
 }
 
 rule APT_Project_Sauron_Custom_M7 {
-	meta:
-		description = "Detects malware from Project Sauron APT"
-		author = "FLorian Roth"
-		reference = "https://goo.gl/eFoP4A"
-		date = "2016-08-09"
-		hash1 = "6c8c93069831a1b60279d2b316fd36bffa0d4c407068dbef81b8e2fe8fd8e8cd"
-		hash2 = "7cc0bf547e78c8aaf408495ceef58fa706e6b5d44441fefdce09d9f06398c0ca"
+	  meta:
+    description = "Detects malware from Project Sauron APT"
+    author = "FLorian Roth"
+    reference = "https://goo.gl/eFoP4A"
+    date = "2016-08-09"
+    hash1 = "6c8c93069831a1b60279d2b316fd36bffa0d4c407068dbef81b8e2fe8fd8e8cd"
+    hash2 = "7cc0bf547e78c8aaf408495ceef58fa706e6b5d44441fefdce09d9f06398c0ca"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$sx1 = "Default user" fullword wide
 		$sx2 = "Hincorrect header check" fullword ascii /* Typo */

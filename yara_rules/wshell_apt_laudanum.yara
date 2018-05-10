@@ -3,12 +3,14 @@
 
 */
 rule asp_file : webshell {
-	meta:
-		description = "Laudanum Injector Tools - file file.asp"
-		author = "Florian Roth"
-		reference = "http://laudanum.inguardians.com/"
-		date = "2015-06-22"
-		hash = "ff5b1a9598735440bdbaa768b524c639e22f53c5"
+	  meta:
+    description = "Laudanum Injector Tools - file file.asp"
+    author = "Florian Roth"
+    reference = "http://laudanum.inguardians.com/"
+    date = "2015-06-22"
+    hash = "ff5b1a9598735440bdbaa768b524c639e22f53c5"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "' *** Written by Tim Medin <tim@counterhack.com>" fullword ascii
 		$s2 = "Response.BinaryWrite(stream.Read)" fullword ascii
@@ -21,12 +23,14 @@ rule asp_file : webshell {
 }
 
 rule php_killnc : webshell {
-	meta:
-		description = "Laudanum Injector Tools - file killnc.php"
-		author = "Florian Roth"
-		reference = "http://laudanum.inguardians.com/"
-		date = "2015-06-22"
-		hash = "c0dee56ee68719d5ec39e773621ffe40b144fda5"
+	  meta:
+    description = "Laudanum Injector Tools - file killnc.php"
+    author = "Florian Roth"
+    reference = "http://laudanum.inguardians.com/"
+    date = "2015-06-22"
+    hash = "c0dee56ee68719d5ec39e773621ffe40b144fda5"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "if ($_SERVER[\"REMOTE_ADDR\"] == $IP)" fullword ascii /* PEStudio Blacklist: strings */
 		$s2 = "header(\"HTTP/1.0 404 Not Found\");" fullword ascii
@@ -38,12 +42,14 @@ rule php_killnc : webshell {
 }
 
 rule asp_shell : webshell {
-	meta:
-		description = "Laudanum Injector Tools - file shell.asp"
-		author = "Florian Roth"
-		reference = "http://laudanum.inguardians.com/"
-		date = "2015-06-22"
-		hash = "8bf1ff6f8edd45e3102be5f8a1fe030752f45613"
+	  meta:
+    description = "Laudanum Injector Tools - file shell.asp"
+    author = "Florian Roth"
+    reference = "http://laudanum.inguardians.com/"
+    date = "2015-06-22"
+    hash = "8bf1ff6f8edd45e3102be5f8a1fe030752f45613"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "<form action=\"shell.asp\" method=\"POST\" name=\"shell\">" fullword ascii /* PEStudio Blacklist: strings */
 		$s2 = "%ComSpec% /c dir" fullword ascii /* PEStudio Blacklist: strings */
@@ -57,12 +63,14 @@ rule asp_shell : webshell {
 }
 
 rule settings : webshell {
-	meta:
-		description = "Laudanum Injector Tools - file settings.php"
-		author = "Florian Roth"
-		reference = "http://laudanum.inguardians.com/"
-		date = "2015-06-22"
-		hash = "588739b9e4ef2dbb0b4cf630b73295d8134cc801"
+	  meta:
+    description = "Laudanum Injector Tools - file settings.php"
+    author = "Florian Roth"
+    reference = "http://laudanum.inguardians.com/"
+    date = "2015-06-22"
+    hash = "588739b9e4ef2dbb0b4cf630b73295d8134cc801"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "Port: <input name=\"port\" type=\"text\" value=\"8888\">" fullword ascii /* PEStudio Blacklist: strings */
 		$s2 = "<li>Reverse Shell - " fullword ascii /* PEStudio Blacklist: strings */
@@ -72,12 +80,14 @@ rule settings : webshell {
 }
 
 rule asp_proxy : webshell {
-	meta:
-		description = "Laudanum Injector Tools - file proxy.asp"
-		author = "Florian Roth"
-		reference = "http://laudanum.inguardians.com/"
-		date = "2015-06-22"
-		hash = "51e97040d1737618b1775578a772fa6c5a31afd8"
+	  meta:
+    description = "Laudanum Injector Tools - file proxy.asp"
+    author = "Florian Roth"
+    reference = "http://laudanum.inguardians.com/"
+    date = "2015-06-22"
+    hash = "51e97040d1737618b1775578a772fa6c5a31afd8"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "'response.write \"<br/>  -value:\" & request.querystring(key)(j)" fullword ascii /* PEStudio Blacklist: strings */
 		$s2 = "q = q & \"&\" & key & \"=\" & request.querystring(key)(j)" fullword ascii /* PEStudio Blacklist: strings */
@@ -90,12 +100,14 @@ rule asp_proxy : webshell {
 }
 
 rule cfm_shell : webshell {
-	meta:
-		description = "Laudanum Injector Tools - file shell.cfm"
-		author = "Florian Roth"
-		reference = "http://laudanum.inguardians.com/"
-		date = "2015-06-22"
-		hash = "885e1783b07c73e7d47d3283be303c9719419b92"
+	  meta:
+    description = "Laudanum Injector Tools - file shell.cfm"
+    author = "Florian Roth"
+    reference = "http://laudanum.inguardians.com/"
+    date = "2015-06-22"
+    hash = "885e1783b07c73e7d47d3283be303c9719419b92"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "Executable: <Input type=\"text\" name=\"cmd\" value=\"cmd.exe\"><br>" fullword ascii /* PEStudio Blacklist: strings */
 		$s2 = "<cfif ( #suppliedCode# neq secretCode )>" fullword ascii /* PEStudio Blacklist: strings */
@@ -105,12 +117,14 @@ rule cfm_shell : webshell {
 }
 
 rule aspx_shell  : webshell{
-	meta:
-		description = "Laudanum Injector Tools - file shell.aspx"
-		author = "Florian Roth"
-		reference = "http://laudanum.inguardians.com/"
-		date = "2015-06-22"
-		hash = "076aa781a004ecb2bf545357fd36dcbafdd68b1a"
+	  meta:
+    description = "Laudanum Injector Tools - file shell.aspx"
+    author = "Florian Roth"
+    reference = "http://laudanum.inguardians.com/"
+    date = "2015-06-22"
+    hash = "076aa781a004ecb2bf545357fd36dcbafdd68b1a"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "remoteIp = HttpContext.Current.Request.Headers[\"X-Forwarded-For\"].Split(new" ascii /* PEStudio Blacklist: strings */
 		$s2 = "remoteIp = Request.UserHostAddress;" fullword ascii /* PEStudio Blacklist: strings */
@@ -121,12 +135,14 @@ rule aspx_shell  : webshell{
 }
 
 rule php_shell  : webshell{
-	meta:
-		description = "Laudanum Injector Tools - file shell.php"
-		author = "Florian Roth"
-		reference = "http://laudanum.inguardians.com/"
-		date = "2015-06-22"
-		hash = "dc5c03a21267d024ef0f5ab96a34e3f6423dfcd6"
+	  meta:
+    description = "Laudanum Injector Tools - file shell.php"
+    author = "Florian Roth"
+    reference = "http://laudanum.inguardians.com/"
+    date = "2015-06-22"
+    hash = "dc5c03a21267d024ef0f5ab96a34e3f6423dfcd6"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "command_hist[current_line] = document.shell.command.value;" fullword ascii /* PEStudio Blacklist: strings */
 		$s2 = "if (e.keyCode == 38 && current_line < command_hist.length-1) {" fullword ascii /* PEStudio Blacklist: strings */
@@ -137,12 +153,14 @@ rule php_shell  : webshell{
 }
 
 rule php_reverse_shell : webshell {
-	meta:
-		description = "Laudanum Injector Tools - file php-reverse-shell.php"
-		author = "Florian Roth"
-		reference = "http://laudanum.inguardians.com/"
-		date = "2015-06-22"
-		hash = "3ef03bbe3649535a03315dcfc1a1208a09cea49d"
+	  meta:
+    description = "Laudanum Injector Tools - file php-reverse-shell.php"
+    author = "Florian Roth"
+    reference = "http://laudanum.inguardians.com/"
+    date = "2015-06-22"
+    hash = "3ef03bbe3649535a03315dcfc1a1208a09cea49d"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "$process = proc_open($shell, $descriptorspec, $pipes);" fullword ascii /* PEStudio Blacklist: strings */
 		$s2 = "printit(\"Successfully opened reverse shell to $ip:$port\");" fullword ascii /* PEStudio Blacklist: strings */
@@ -152,12 +170,14 @@ rule php_reverse_shell : webshell {
 }
 
 rule php_dns  : webshell{
-	meta:
-		description = "Laudanum Injector Tools - file dns.php"
-		author = "Florian Roth"
-		reference = "http://laudanum.inguardians.com/"
-		date = "2015-06-22"
-		hash = "01d5d16d876c55d77e094ce2b9c237de43b21a16"
+	  meta:
+    description = "Laudanum Injector Tools - file dns.php"
+    author = "Florian Roth"
+    reference = "http://laudanum.inguardians.com/"
+    date = "2015-06-22"
+    hash = "01d5d16d876c55d77e094ce2b9c237de43b21a16"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "$query = isset($_POST['query']) ? $_POST['query'] : '';" fullword ascii /* PEStudio Blacklist: strings */
 		$s2 = "$result = dns_get_record($query, $types[$type], $authns, $addtl);" fullword ascii /* PEStudio Blacklist: strings */
@@ -168,12 +188,14 @@ rule php_dns  : webshell{
 }
 
 rule WEB_INF_web  : webshell{
-	meta:
-		description = "Laudanum Injector Tools - file web.xml"
-		author = "Florian Roth"
-		reference = "http://laudanum.inguardians.com/"
-		date = "2015-06-22"
-		hash = "0251baed0a16c451f9d67dddce04a45dc26cb4a3"
+	  meta:
+    description = "Laudanum Injector Tools - file web.xml"
+    author = "Florian Roth"
+    reference = "http://laudanum.inguardians.com/"
+    date = "2015-06-22"
+    hash = "0251baed0a16c451f9d67dddce04a45dc26cb4a3"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "<servlet-name>Command</servlet-name>" fullword ascii /* PEStudio Blacklist: strings */
 		$s2 = "<jsp-file>/cmd.jsp</jsp-file>" fullword ascii
@@ -182,12 +204,14 @@ rule WEB_INF_web  : webshell{
 }
 
 rule jsp_cmd : webshell {
-	meta:
-		description = "Laudanum Injector Tools - file cmd.war"
-		author = "Florian Roth"
-		reference = "http://laudanum.inguardians.com/"
-		date = "2015-06-22"
-		hash = "55e4c3dc00cfab7ac16e7cfb53c11b0c01c16d3d"
+	  meta:
+    description = "Laudanum Injector Tools - file cmd.war"
+    author = "Florian Roth"
+    reference = "http://laudanum.inguardians.com/"
+    date = "2015-06-22"
+    hash = "55e4c3dc00cfab7ac16e7cfb53c11b0c01c16d3d"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s0 = "cmd.jsp}" fullword ascii
 		$s1 = "cmd.jspPK" fullword ascii
@@ -199,12 +223,14 @@ rule jsp_cmd : webshell {
 }
 
 rule laudanum : webshell {
-	meta:
-		description = "Laudanum Injector Tools - file laudanum.php"
-		author = "Florian Roth"
-		reference = "http://laudanum.inguardians.com/"
-		date = "2015-06-22"
-		hash = "fd498c8b195967db01f68776ff5e36a06c9dfbfe"
+	  meta:
+    description = "Laudanum Injector Tools - file laudanum.php"
+    author = "Florian Roth"
+    reference = "http://laudanum.inguardians.com/"
+    date = "2015-06-22"
+    hash = "fd498c8b195967db01f68776ff5e36a06c9dfbfe"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "public function __activate()" fullword ascii
 		$s2 = "register_activation_hook(__FILE__, array('WP_Laudanum', 'activate'));" fullword ascii /* PEStudio Blacklist: strings */
@@ -213,12 +239,14 @@ rule laudanum : webshell {
 }
 
 rule php_file  : webshell{
-	meta:
-		description = "Laudanum Injector Tools - file file.php"
-		author = "Florian Roth"
-		reference = "http://laudanum.inguardians.com/"
-		date = "2015-06-22"
-		hash = "7421d33e8007c92c8642a36cba7351c7f95a4335"
+	  meta:
+    description = "Laudanum Injector Tools - file file.php"
+    author = "Florian Roth"
+    reference = "http://laudanum.inguardians.com/"
+    date = "2015-06-22"
+    hash = "7421d33e8007c92c8642a36cba7351c7f95a4335"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "$allowedIPs =" fullword ascii /* PEStudio Blacklist: strings */
 		$s2 = "<a href=\"<?php echo $_SERVER['PHP_SELF']  ?>\">Home</a><br/>" fullword ascii /* PEStudio Blacklist: strings */
@@ -229,12 +257,14 @@ rule php_file  : webshell{
 }
 
 rule warfiles_cmd : webshell {
-	meta:
-		description = "Laudanum Injector Tools - file cmd.jsp"
-		author = "Florian Roth"
-		reference = "http://laudanum.inguardians.com/"
-		date = "2015-06-22"
-		hash = "3ae3d837e7b362de738cf7fad78eded0dccf601f"
+	  meta:
+    description = "Laudanum Injector Tools - file cmd.jsp"
+    author = "Florian Roth"
+    reference = "http://laudanum.inguardians.com/"
+    date = "2015-06-22"
+    hash = "3ae3d837e7b362de738cf7fad78eded0dccf601f"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "Process p = Runtime.getRuntime().exec(request.getParameter(\"cmd\"));" fullword ascii /* PEStudio Blacklist: strings */
 		$s2 = "out.println(\"Command: \" + request.getParameter(\"cmd\") + \"<BR>\");" fullword ascii /* PEStudio Blacklist: strings */
@@ -245,12 +275,14 @@ rule warfiles_cmd : webshell {
 }
 
 rule asp_dns  : webshell{
-	meta:
-		description = "Laudanum Injector Tools - file dns.asp"
-		author = "Florian Roth"
-		reference = "http://laudanum.inguardians.com/"
-		date = "2015-06-22"
-		hash = "5532154dd67800d33dace01103e9b2c4f3d01d51"
+	  meta:
+    description = "Laudanum Injector Tools - file dns.asp"
+    author = "Florian Roth"
+    reference = "http://laudanum.inguardians.com/"
+    date = "2015-06-22"
+    hash = "5532154dd67800d33dace01103e9b2c4f3d01d51"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "command = \"nslookup -type=\" & qtype & \" \" & query " fullword ascii /* PEStudio Blacklist: strings */
 		$s2 = "Set objCmd = objWShell.Exec(command)" fullword ascii /* PEStudio Blacklist: strings */
@@ -261,12 +293,14 @@ rule asp_dns  : webshell{
 }
 
 rule php_reverse_shell_2  : webshell{
-	meta:
-		description = "Laudanum Injector Tools - file php-reverse-shell.php"
-		author = "Florian Roth"
-		reference = "http://laudanum.inguardians.com/"
-		date = "2015-06-22"
-		hash = "025db3c3473413064f0606d93d155c7eb5049c42"
+	  meta:
+    description = "Laudanum Injector Tools - file php-reverse-shell.php"
+    author = "Florian Roth"
+    reference = "http://laudanum.inguardians.com/"
+    date = "2015-06-22"
+    hash = "025db3c3473413064f0606d93d155c7eb5049c42"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "$process = proc_open($shell, $descriptorspec, $pipes);" fullword ascii /* PEStudio Blacklist: strings */
 		$s7 = "$shell = 'uname -a; w; id; /bin/sh -i';" fullword ascii /* PEStudio Blacklist: strings */
@@ -275,29 +309,31 @@ rule php_reverse_shell_2  : webshell{
 }
 
 rule Laudanum_Tools_Generic  : webshell Toolkit{
-	meta:
-		description = "Laudanum Injector Tools"
-		author = "Florian Roth"
-		reference = "http://laudanum.inguardians.com/"
-		date = "2015-06-22"
-		super_rule = 1
-		hash0 = "076aa781a004ecb2bf545357fd36dcbafdd68b1a"
-		hash1 = "885e1783b07c73e7d47d3283be303c9719419b92"
-		hash2 = "01d5d16d876c55d77e094ce2b9c237de43b21a16"
-		hash3 = "7421d33e8007c92c8642a36cba7351c7f95a4335"
-		hash4 = "f49291aef9165ee4904d2d8c3cf5a6515ca0794f"
-		hash5 = "c0dee56ee68719d5ec39e773621ffe40b144fda5"
-		hash6 = "f32b9c2cc3a61fa326e9caebce28ef94a7a00c9a"
-		hash7 = "dc5c03a21267d024ef0f5ab96a34e3f6423dfcd6"
-		hash8 = "fd498c8b195967db01f68776ff5e36a06c9dfbfe"
-		hash9 = "b50ae35fcf767466f6ca25984cc008b7629676b8"
-		hash10 = "5570d10244d90ef53b74e2ac287fc657e38200f0"
-		hash11 = "42bcb491a11b4703c125daf1747cf2a40a1b36f3"
-		hash12 = "83e4eaaa2cf6898d7f83ab80158b64b1d48096f4"
-		hash13 = "dec7ea322898690a7f91db9377f035ad7072b8d7"
-		hash14 = "a2272b8a4221c6cc373915f0cc555fe55d65ac4d"
-		hash15 = "588739b9e4ef2dbb0b4cf630b73295d8134cc801"
-		hash16 = "43320dc23fb2ed26b882512e7c0bfdc64e2c1849"
+	  meta:
+    description = "Laudanum Injector Tools"
+    author = "Florian Roth"
+    reference = "http://laudanum.inguardians.com/"
+    date = "2015-06-22"
+    super_rule = 1
+    hash0 = "076aa781a004ecb2bf545357fd36dcbafdd68b1a"
+    hash1 = "885e1783b07c73e7d47d3283be303c9719419b92"
+    hash2 = "01d5d16d876c55d77e094ce2b9c237de43b21a16"
+    hash3 = "7421d33e8007c92c8642a36cba7351c7f95a4335"
+    hash4 = "f49291aef9165ee4904d2d8c3cf5a6515ca0794f"
+    hash5 = "c0dee56ee68719d5ec39e773621ffe40b144fda5"
+    hash6 = "f32b9c2cc3a61fa326e9caebce28ef94a7a00c9a"
+    hash7 = "dc5c03a21267d024ef0f5ab96a34e3f6423dfcd6"
+    hash8 = "fd498c8b195967db01f68776ff5e36a06c9dfbfe"
+    hash9 = "b50ae35fcf767466f6ca25984cc008b7629676b8"
+    hash10 = "5570d10244d90ef53b74e2ac287fc657e38200f0"
+    hash11 = "42bcb491a11b4703c125daf1747cf2a40a1b36f3"
+    hash12 = "83e4eaaa2cf6898d7f83ab80158b64b1d48096f4"
+    hash13 = "dec7ea322898690a7f91db9377f035ad7072b8d7"
+    hash14 = "a2272b8a4221c6cc373915f0cc555fe55d65ac4d"
+    hash15 = "588739b9e4ef2dbb0b4cf630b73295d8134cc801"
+    hash16 = "43320dc23fb2ed26b882512e7c0bfdc64e2c1849"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 	strings:
 		$s1 = "***  laudanum@secureideas.net" fullword ascii
 		$s2 = "*** Laudanum Project" fullword ascii

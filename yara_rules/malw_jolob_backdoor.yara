@@ -1,10 +1,12 @@
 rule Backdoor_Jolob
 {
-	meta:
-		maltype = "Backdoor.Jolob"
+	  meta:
+    maltype = "Backdoor.Jolob"
     ref = "https://github.com/reed1713"
-		reference = "http://www.symantec.com/connect/blogs/new-flash-zero-day-linked-yet-more-watering-hole-attacks"
-		description = "the backdoor registers an auto start service with the display name \"Network Access Management Agent\" pointing to the dll netfilter.dll. This is accomplished without notifying the user via the sysprep UAC bypass method."
+    reference = "http://www.symantec.com/connect/blogs/new-flash-zero-day-linked-yet-more-watering-hole-attacks"
+    description = "the backdoor registers an auto start service with the display name \"Network Access Management Agent\" pointing to the dll netfilter.dll. This is accomplished without notifying the user via the sysprep UAC bypass method."
+    severity = "7"
+    type = "Malware"
 	strings:   
 		$type = "Microsoft-Windows-Security-Auditing"
 		$eventid = "4673"

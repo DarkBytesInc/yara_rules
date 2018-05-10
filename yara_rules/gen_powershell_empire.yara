@@ -7,13 +7,15 @@
 */
 
 rule Empire_Invoke_BypassUAC {
-	meta:
-		description = "Empire - a pure PowerShell post-exploitation agent - file Invoke-BypassUAC.ps1"
-		author = "Florian Roth"
-		reference = "https://github.com/PowerShellEmpire/Empire"
-		date = "2015-08-06"
-		score = 70
-		hash = "ab0f900a6915b7497313977871a64c3658f3e6f73f11b03d2d33ca61305dc6a8"
+	  meta:
+    description = "Empire - a pure PowerShell post-exploitation agent - file Invoke-BypassUAC.ps1"
+    author = "Florian Roth"
+    reference = "https://github.com/PowerShellEmpire/Empire"
+    date = "2015-08-06"
+    score = 70
+    hash = "ab0f900a6915b7497313977871a64c3658f3e6f73f11b03d2d33ca61305dc6a8"
+    severity = "7"
+    type = "Exploit Kit"
 	strings:
 		$s1 = "$WriteProcessMemoryAddr = Get-ProcAddress kernel32.dll WriteProcessMemory" fullword ascii 
 		$s2 = "$proc = Start-Process -WindowStyle Hidden notepad.exe -PassThru" fullword ascii 
@@ -24,13 +26,15 @@ rule Empire_Invoke_BypassUAC {
 }
 
 rule Empire_lib_modules_trollsploit_message {
-	meta:
-		description = "Empire - a pure PowerShell post-exploitation agent - file message.py"
-		author = "Florian Roth"
-		reference = "https://github.com/PowerShellEmpire/Empire"
-		date = "2015-08-06"
-		score = 70
-		hash = "71f2258177eb16eafabb110a9333faab30edacf67cb019d5eab3c12d095655d5"
+	  meta:
+    description = "Empire - a pure PowerShell post-exploitation agent - file message.py"
+    author = "Florian Roth"
+    reference = "https://github.com/PowerShellEmpire/Empire"
+    date = "2015-08-06"
+    score = 70
+    hash = "71f2258177eb16eafabb110a9333faab30edacf67cb019d5eab3c12d095655d5"
+    severity = "7"
+    type = "Exploit Kit"
 	strings:
 		$s1 = "script += \" -\" + str(option) + \" \\\"\" + str(values['Value'].strip(\"\\\"\")) + \"\\\"\"" fullword ascii 
 		$s2 = "if option.lower() != \"agent\" and option.lower() != \"computername\":" fullword ascii 
@@ -41,13 +45,15 @@ rule Empire_lib_modules_trollsploit_message {
 }
 
 rule Empire_Persistence {
-	meta:
-		description = "Empire - a pure PowerShell post-exploitation agent - file Persistence.psm1"
-		author = "Florian Roth"
-		reference = "https://github.com/PowerShellEmpire/Empire"
-		date = "2015-08-06"
-		score = 70
-		hash = "ae8875f7fcb8b4de5cf9721a9f5a9f7782f7c436c86422060ecdc5181e31092f"
+	  meta:
+    description = "Empire - a pure PowerShell post-exploitation agent - file Persistence.psm1"
+    author = "Florian Roth"
+    reference = "https://github.com/PowerShellEmpire/Empire"
+    date = "2015-08-06"
+    score = 70
+    hash = "ae8875f7fcb8b4de5cf9721a9f5a9f7782f7c436c86422060ecdc5181e31092f"
+    severity = "7"
+    type = "Exploit Kit"
 	strings:
 		$s1 = "C:\\PS>Add-Persistence -ScriptBlock $RickRoll -ElevatedPersistenceOption $ElevatedOptions -UserPersistenceOption $UserOptions -V" ascii 
 		$s2 = "# Execute the following to remove the user-level persistent payload" fullword ascii 
@@ -57,13 +63,15 @@ rule Empire_Persistence {
 }
 
 rule Empire_portscan {
-	meta:
-		description = "Empire - a pure PowerShell post-exploitation agent - file portscan.py"
-		author = "Florian Roth"
-		reference = "https://github.com/PowerShellEmpire/Empire"
-		date = "2015-08-06"
-		score = 70
-		hash = "b355efa1e7b3681b1402e22c58ce968795ef245fd08a0afb948d45c173e60b97"
+	  meta:
+    description = "Empire - a pure PowerShell post-exploitation agent - file portscan.py"
+    author = "Florian Roth"
+    reference = "https://github.com/PowerShellEmpire/Empire"
+    date = "2015-08-06"
+    score = 70
+    hash = "b355efa1e7b3681b1402e22c58ce968795ef245fd08a0afb948d45c173e60b97"
+    severity = "7"
+    type = "Exploit Kit"
 	strings:
 		$s1 = "script += \"Invoke-PortScan -noProgressMeter -f\"" fullword ascii 
 		$s2 = "script += \" | ? {$_.alive}| Select-Object HostName,@{name='OpenPorts';expression={$_.openPorts -join ','}} | ft -wrap | Out-Str" ascii 
@@ -72,13 +80,15 @@ rule Empire_portscan {
 }
 
 rule Empire_Invoke_Shellcode {
-	meta:
-		description = "Empire - a pure PowerShell post-exploitation agent - file Invoke-Shellcode.ps1"
-		author = "Florian Roth"
-		reference = "https://github.com/PowerShellEmpire/Empire"
-		date = "2015-08-06"
-		score = 70
-		hash = "fa75cfd57269fbe3ad6bdc545ee57eb19335b0048629c93f1dc1fe1059f60438"
+	  meta:
+    description = "Empire - a pure PowerShell post-exploitation agent - file Invoke-Shellcode.ps1"
+    author = "Florian Roth"
+    reference = "https://github.com/PowerShellEmpire/Empire"
+    date = "2015-08-06"
+    score = 70
+    hash = "fa75cfd57269fbe3ad6bdc545ee57eb19335b0048629c93f1dc1fe1059f60438"
+    severity = "7"
+    type = "Exploit Kit"
 	strings:
 		$s1 = "C:\\PS> Invoke-Shellcode -ProcessId $Proc.Id -Payload windows/meterpreter/reverse_https -Lhost 192.168.30.129 -Lport 443 -Verbos" ascii 
 		$s2 = "\"Injecting shellcode injecting into $((Get-Process -Id $ProcessId).ProcessName) ($ProcessId)!\" ) )" fullword ascii 
@@ -88,13 +98,15 @@ rule Empire_Invoke_Shellcode {
 }
 
 rule Empire_Invoke_Mimikatz {
-	meta:
-		description = "Empire - a pure PowerShell post-exploitation agent - file Invoke-Mimikatz.ps1"
-		author = "Florian Roth"
-		reference = "https://github.com/PowerShellEmpire/Empire"
-		date = "2015-08-06"
-		score = 70
-		hash = "c5481864b757837ecbc75997fa24978ffde3672b8a144a55478ba9a864a19466"
+	  meta:
+    description = "Empire - a pure PowerShell post-exploitation agent - file Invoke-Mimikatz.ps1"
+    author = "Florian Roth"
+    reference = "https://github.com/PowerShellEmpire/Empire"
+    date = "2015-08-06"
+    score = 70
+    hash = "c5481864b757837ecbc75997fa24978ffde3672b8a144a55478ba9a864a19466"
+    severity = "7"
+    type = "Exploit Kit"
 	strings:
 		$s1 = "$PEBytes64 = \"TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+AAAAA4fug4AtAnNIbgBTM0hVGhpcyBwc" ascii 
 		$s2 = "[System.Runtime.InteropServices.Marshal]::StructureToPtr($CmdLineAArgsPtr, $GetCommandLineAAddrTemp, $false)" fullword ascii 
@@ -104,13 +116,15 @@ rule Empire_Invoke_Mimikatz {
 }
 
 rule Empire_lib_modules_credentials_mimikatz_pth {
-	meta:
-		description = "Empire - a pure PowerShell post-exploitation agent - file pth.py"
-		author = "Florian Roth"
-		reference = "https://github.com/PowerShellEmpire/Empire"
-		date = "2015-08-06"
-		score = 70
-		hash = "6dee1cf931e02c5f3dc6889e879cc193325b39e18409dcdaf987b8bf7c459211"
+	  meta:
+    description = "Empire - a pure PowerShell post-exploitation agent - file pth.py"
+    author = "Florian Roth"
+    reference = "https://github.com/PowerShellEmpire/Empire"
+    date = "2015-08-06"
+    score = 70
+    hash = "6dee1cf931e02c5f3dc6889e879cc193325b39e18409dcdaf987b8bf7c459211"
+    severity = "7"
+    type = "Exploit Kit"
 	strings:
 		$s0 = "(credID, credType, domainName, userName, password, host, sid, notes) = self.mainMenu.credentials.get_credentials(credID)[0]" fullword ascii 
 		$s1 = "command = \"sekurlsa::pth /user:\"+self.options[\"user\"]['Value']" fullword ascii 
@@ -119,13 +133,15 @@ rule Empire_lib_modules_credentials_mimikatz_pth {
 }
 
 rule Empire_Write_HijackDll {
-	meta:
-		description = "Empire - a pure PowerShell post-exploitation agent - file Write-HijackDll.ps1"
-		author = "Florian Roth"
-		reference = "https://github.com/PowerShellEmpire/Empire"
-		date = "2015-08-06"
-		score = 70
-		hash = "155fa7168e28f15bb34f67344f47234a866e2c63b3303422ff977540623c70bf"
+	  meta:
+    description = "Empire - a pure PowerShell post-exploitation agent - file Write-HijackDll.ps1"
+    author = "Florian Roth"
+    reference = "https://github.com/PowerShellEmpire/Empire"
+    date = "2015-08-06"
+    score = 70
+    hash = "155fa7168e28f15bb34f67344f47234a866e2c63b3303422ff977540623c70bf"
+    severity = "7"
+    type = "Exploit Kit"
 	strings:
 		$s1 = "$DllBytes = Invoke-PatchDll -DllBytes $DllBytes -FindString \"debug.bat\" -ReplaceString $BatchPath" fullword ascii 
 		$s2 = "$DllBytes32 = \"TVqQAAMAAAAEAAAA//8AALgAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4AAAAA4fug4AtAnNIbgBTM0hVGhpcyBw" ascii 
@@ -135,13 +151,15 @@ rule Empire_Write_HijackDll {
 }
 
 rule Empire_skeleton_key {
-	meta:
-		description = "Empire - a pure PowerShell post-exploitation agent - file skeleton_key.py"
-		author = "Florian Roth"
-		reference = "https://github.com/PowerShellEmpire/Empire"
-		date = "2015-08-06"
-		score = 70
-		hash = "3d02f16dcc38faaf5e97e4c5dbddf761f2816004775e6af8826cde9e29bb750f"
+	  meta:
+    description = "Empire - a pure PowerShell post-exploitation agent - file skeleton_key.py"
+    author = "Florian Roth"
+    reference = "https://github.com/PowerShellEmpire/Empire"
+    date = "2015-08-06"
+    score = 70
+    hash = "3d02f16dcc38faaf5e97e4c5dbddf761f2816004775e6af8826cde9e29bb750f"
+    severity = "7"
+    type = "Exploit Kit"
 	strings:
 		$s1 = "script += \"Invoke-Mimikatz -Command '\\\"\" + command + \"\\\"';\"" fullword ascii 
 		$s2 = "script += '\"Skeleton key implanted. Use password \\'mimikatz\\' for access.\"'" fullword ascii 
@@ -152,13 +170,15 @@ rule Empire_skeleton_key {
 }
 
 rule Empire_invoke_wmi {
-	meta:
-		description = "Empire - a pure PowerShell post-exploitation agent - file invoke_wmi.py"
-		author = "Florian Roth"
-		reference = "https://github.com/PowerShellEmpire/Empire"
-		date = "2015-08-06"
-		score = 70
-		hash = "a914cb227f652734a91d3d39745ceeacaef7a8b5e89c1beedfd6d5f9b4615a1d"
+	  meta:
+    description = "Empire - a pure PowerShell post-exploitation agent - file invoke_wmi.py"
+    author = "Florian Roth"
+    reference = "https://github.com/PowerShellEmpire/Empire"
+    date = "2015-08-06"
+    score = 70
+    hash = "a914cb227f652734a91d3d39745ceeacaef7a8b5e89c1beedfd6d5f9b4615a1d"
+    severity = "7"
+    type = "Exploit Kit"
 	strings:
 		$s1 = "(credID, credType, domainName, userName, password, host, sid, notes) = self.mainMenu.credentials.get_credentials(credID)[0]" fullword ascii 
 		$s2 = "script += \";'Invoke-Wmi executed on \" +computerNames +\"'\"" fullword ascii 

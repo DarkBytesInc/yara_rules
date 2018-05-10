@@ -8,12 +8,14 @@
 */
 
 rule Beacon_K5om {
-   meta:
-      description = "Detects Meterpreter Beacon - file K5om.dll"
-      author = "Florian Roth"
-      reference = "https://www.fireeye.com/blog/threat-research/2017/06/phished-at-the-request-of-counsel.html"
-      date = "2017-06-07"
-      hash1 = "e3494fd2cc7e9e02cff76841630892e4baed34a3e1ef2b9ae4e2608f9a4d7be9"
+     meta:
+    description = "Detects Meterpreter Beacon - file K5om.dll"
+    author = "Florian Roth"
+    reference = "https://www.fireeye.com/blog/threat-research/2017/06/phished-at-the-request-of-counsel.html"
+    date = "2017-06-07"
+    hash1 = "e3494fd2cc7e9e02cff76841630892e4baed34a3e1ef2b9ae4e2608f9a4d7be9"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $x1 = "IEX (New-Object Net.Webclient).DownloadString('http://127.0.0.1:%u/'); %s" fullword ascii
       $x2 = "powershell -nop -exec bypass -EncodedCommand \"%s\"" fullword ascii
@@ -30,12 +32,14 @@ rule Beacon_K5om {
 /* Rule Set ----------------------------------------------------------------- */
 
 rule FE_LEGALSTRIKE_MACRO {
-   meta:
-      version=".1"
-      filetype="MACRO"
-      author="Ian.Ahl@fireeye.com @TekDefense - modified by Florian Roth"
-      date="2017-06-02"
-      description="This rule is designed to identify macros with the specific encoding used in the sample 30f149479c02b741e897cdb9ecd22da7."
+     meta:
+    version = ".1"
+    filetype = "MACRO"
+    author = "Ian.Ahl@fireeye.com @TekDefense - modified by Florian Roth"
+    date = "2017-06-02"
+    description = "This rule is designed to identify macros with the specific encoding used in the sample 30f149479c02b741e897cdb9ecd22da7."
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       // OBSFUCATION
       $ob1 = "ChrW(114) & ChrW(101) & ChrW(103) & ChrW(115) & ChrW(118) & ChrW(114) & ChrW(51) & ChrW(50) & ChrW(46) & ChrW(101)" ascii wide
@@ -47,12 +51,14 @@ rule FE_LEGALSTRIKE_MACRO {
 }
 
 rule FE_LEGALSTRIKE_RTF {
-   meta:
-      version=".1"
-      filetype="MACRO"
-      author="joshua.kim@FireEye. - modified by Florian Roth"
-      date="2017-06-02"
-      description="Rtf Phishing Campaign leveraging the CVE 2017-0199 exploit, to point to the domain 2bunnyDOTcom"
+     meta:
+    version = ".1"
+    filetype = "MACRO"
+    author = "joshua.kim@FireEye. - modified by Florian Roth"
+    date = "2017-06-02"
+    description = "Rtf Phishing Campaign leveraging the CVE 2017-0199 exploit, to point to the domain 2bunnyDOTcom"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $lnkinfo = "4c0069006e006b0049006e0066006f"
       $encoded1 = "4f4c45324c696e6b"

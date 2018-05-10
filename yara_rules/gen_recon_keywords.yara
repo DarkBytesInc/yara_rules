@@ -10,13 +10,14 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule Recon_Commands_Windows_Gen1 {
-   meta:
-      description = "Detects a set of reconnaissance commands on Windows systems"
-      author = "Florian Roth"
-      reference = "Internal Research"
-      date = "2017-07-10"
-      score = 60
-      reference = "https://goo.gl/MSJCxP"
+     meta:
+    description = "Detects a set of reconnaissance commands on Windows systems"
+    author = "Florian Roth"
+    reference = "https://goo.gl/MSJCxP"
+    date = "2017-07-10"
+    score = 60
+    severity = "5"
+    type = "Unknown"
    strings:
       $s1 = "netstat -an" ascii
       $s2 = "net view" ascii fullword

@@ -1,12 +1,14 @@
 rule legion_777
 {
-    meta:
-        author = "Daxda (https://github.com/Daxda)"
-        date = "2016/6/6"
-        description = "Detects an UPX-unpacked .777 ransomware binary."
-        ref = "https://github.com/Daxda/malware-analysis/tree/master/malware_samples/legion"
-        category = "Ransomware"
-        sample = "SHA256: 14d22359e76cf63bf17268cad24bac03663c8b2b8028b869f5cec10fe3f75548"
+      meta:
+    author = "Daxda (https://github.com/Daxda)"
+    date = "2016/6/6"
+    description = "Detects an UPX-unpacked .777 ransomware binary."
+    ref = "https://github.com/Daxda/malware-analysis/tree/master/malware_samples/legion"
+    category = "Ransomware"
+    sample = "SHA256: 14d22359e76cf63bf17268cad24bac03663c8b2b8028b869f5cec10fe3f75548"
+    severity = "10"
+    type = "Ransomware"
 
     strings:
         $s1 = "http://tuginsaat.com/wp-content/themes/twentythirteen/stats.php"

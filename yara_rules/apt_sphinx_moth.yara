@@ -13,11 +13,13 @@
 rule Sphinx_Moth_cudacrt 
 { 
 
-    meta:
-        description = "sphinx moth threat group file cudacrt.dll" 
-        author = "Kudelski Security - Nagravision SA"
-        reference = "www.kudelskisecurity.com"
-        date = "2015-08-06"
+      meta:
+    description = "sphinx moth threat group file cudacrt.dll"
+    author = "Kudelski Security - Nagravision SA"
+    reference = "www.kudelskisecurity.com"
+    date = "2015-08-06"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "HPSSOEx.dll" fullword wide
@@ -34,11 +36,13 @@ rule Sphinx_Moth_cudacrt
 rule Sphinx_Moth_h2t 
 { 
 
-    meta:
-        description = "sphinx moth threat group file h2t.dat" 
-        author = "Kudelski Security - Nagravision SA (modified by Florian Roth)" 
-        reference = "www.kudelskisecurity.com"
-        date = "2015-08-06"
+      meta:
+    description = "sphinx moth threat group file h2t.dat"
+    author = "Kudelski Security - Nagravision SA (modified by Florian Roth)"
+    reference = "www.kudelskisecurity.com"
+    date = "2015-08-06"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "%s <proxy ip> <proxy port> <target ip> <target port> <cmd> [arg1 cmd] ... [argX cmd]" fullword ascii 
@@ -55,11 +59,13 @@ rule Sphinx_Moth_h2t
 rule Sphinx_Moth_iastor32 
 { 
 
-    meta:
-        description = "sphinx moth threat group file iastor32.exe" 
-        author = "Kudelski Security - Nagravision SA"
-        reference = "www.kudelskisecurity.com"
-        date = "2015-08-06"
+      meta:
+    description = "sphinx moth threat group file iastor32.exe"
+    author = "Kudelski Security - Nagravision SA"
+    reference = "www.kudelskisecurity.com"
+    date = "2015-08-06"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    
     strings:
         $s0 = "MIIEpQIBAAKCAQEA4lSvv/W1Mkz38Q3z+EzJBZRANzKrlxeE6/UXWL67YtokF2nN" fullword ascii /* private key */
@@ -72,11 +78,13 @@ rule Sphinx_Moth_iastor32
 rule Sphinx_Moth_kerberos32 
 {
 
-    meta:
-        description = "sphinx moth threat group file kerberos32.dll" 
-        author = "Kudelski Security - Nagravision SA (modified by Florian Roth)"
-        reference = "www.kudelskisecurity.com"
-        date = "2015-08-06"
+      meta:
+    description = "sphinx moth threat group file kerberos32.dll"
+    author = "Kudelski Security - Nagravision SA (modified by Florian Roth)"
+    reference = "www.kudelskisecurity.com"
+    date = "2015-08-06"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $x1 = "%WINDIR%\\ativpsrz.bin" fullword ascii
@@ -100,11 +108,13 @@ rule Sphinx_Moth_kerberos32
 rule Sphinx_Moth_kerberos64 
 { 
 
-    meta:
-        description = "sphinx moth threat group file kerberos64.dll" 
-        author = "Kudelski Security - Nagravision SA (modified by Florian Roth)"
-        reference = "www.kudelskisecurity.com"
-        date = "2015-08-06"
+      meta:
+    description = "sphinx moth threat group file kerberos64.dll"
+    author = "Kudelski Security - Nagravision SA (modified by Florian Roth)"
+    reference = "www.kudelskisecurity.com"
+    date = "2015-08-06"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "KERBEROS64.dll" fullword ascii
@@ -122,11 +132,13 @@ rule Sphinx_Moth_kerberos64
 rule Sphinx_Moth_nvcplex 
 { 
 
-    meta:
-        description = "sphinx moth threat group file nvcplex.dat" 
-        author = "Kudelski Security - Nagravision SA"
-        reference = "www.kudelskisecurity.com"
-        date = "2015-08-06"
+      meta:
+    description = "sphinx moth threat group file nvcplex.dat"
+    author = "Kudelski Security - Nagravision SA"
+    reference = "www.kudelskisecurity.com"
+    date = "2015-08-06"
+    severity = "10"
+    type = "Advanced Persistent Threat"
 
     strings:
         $s0 = "mshtaex.exe" fullword wide

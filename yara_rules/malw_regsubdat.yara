@@ -7,10 +7,12 @@ import "pe"
 
 rule RegSubDatCode : RegSubDat Family 
 {
-    meta:
-        description = "RegSubDat code features"
-        author = "Seth Hardy"
-        last_modified = "2014-07-14"
+      meta:
+    description = "RegSubDat code features"
+    author = "Seth Hardy"
+    last_modified = "2014-07-14"
+    severity = "7"
+    type = "Malware"
     
     strings:
         // decryption loop
@@ -25,10 +27,12 @@ rule RegSubDatCode : RegSubDat Family
 
 rule RegSubDatStrings : RegSubDat Family
 {
-    meta:
-        description = "RegSubDat Identifying Strings"
-        author = "Seth Hardy"
-        last_modified = "2014-07-14"
+      meta:
+    description = "RegSubDat Identifying Strings"
+    author = "Seth Hardy"
+    last_modified = "2014-07-14"
+    severity = "7"
+    type = "Malware"
         
     strings:
         $avg1 = "Button"
@@ -44,10 +48,12 @@ rule RegSubDatStrings : RegSubDat Family
 
 rule RegSubDat : Family
 {
-    meta:
-        description = "RegSubDat"
-        author = "Seth Hardy"
-        last_modified = "2014-07-14"
+      meta:
+    description = "RegSubDat"
+    author = "Seth Hardy"
+    last_modified = "2014-07-14"
+    severity = "7"
+    type = "Malware"
         
     condition:
         RegSubDatCode or RegSubDatStrings

@@ -8,12 +8,14 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule Invoke_OSiRis {
-   meta:
-      description = "Osiris Device Guard Bypass - file Invoke-OSiRis.ps1"
-      author = "Florian Roth"
-      reference = "Internal Research"
-      date = "2017-03-27"
-      hash1 = "19e4a8b07f85c3d4c396d0c4e839495c9fba9405c06a631d57af588032d2416e"
+     meta:
+    description = "Osiris Device Guard Bypass - file Invoke-OSiRis.ps1"
+    author = "Florian Roth"
+    reference = "Internal Research"
+    date = "2017-03-27"
+    hash1 = "19e4a8b07f85c3d4c396d0c4e839495c9fba9405c06a631d57af588032d2416e"
+    severity = "5"
+    type = "Unknown"
    strings:
       $x1 = "$null = Iwmi Win32_Process -EnableA -Impers 3 -AuthenPacketprivacy -Name Create -Arg $ObfusK -Computer $Target" fullword ascii
       $x2 = "Invoke-OSiRis" ascii

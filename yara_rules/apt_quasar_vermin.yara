@@ -9,13 +9,15 @@
 /* Rule Set ----------------------------------------------------------------- */
 
 rule Quasar_RAT_Jan18_1 {
-   meta:
-      description = "Detects Quasar RAT"
-      author = "Florian Roth"
-      reference = "https://researchcenter.paloaltonetworks.com/2018/01/unit42-vermin-quasar-rat-custom-malware-used-ukraine/"
-      date = "2018-01-29"
-      hash1 = "0157b43eb3c20928b77f8700ad8eb279a0aa348921df074cd22ebaff01edaae6"
-      hash2 = "24956d8edcf2a1fd26805ec58cfd1ee7498e1a59af8cc2f4b832a7ab34948c18"
+     meta:
+    description = "Detects Quasar RAT"
+    author = "Florian Roth"
+    reference = "https://researchcenter.paloaltonetworks.com/2018/01/unit42-vermin-quasar-rat-custom-malware-used-ukraine/"
+    date = "2018-01-29"
+    hash1 = "0157b43eb3c20928b77f8700ad8eb279a0aa348921df074cd22ebaff01edaae6"
+    hash2 = "24956d8edcf2a1fd26805ec58cfd1ee7498e1a59af8cc2f4b832a7ab34948c18"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $a1 = "ping -n 20 localhost > nul" fullword wide
 
@@ -31,17 +33,19 @@ rule Quasar_RAT_Jan18_1 {
 }
 
 rule Vermin_Keylogger_Jan18_1 {
-   meta:
-      description = "Detects Vermin Keylogger"
-      author = "Florian Roth"
-      reference = "https://researchcenter.paloaltonetworks.com/2018/01/unit42-vermin-quasar-rat-custom-malware-used-ukraine/"
-      date = "2018-01-29"
-      hash1 = "74ba162eef84bf13d1d79cb26192a4692c09fed57f321230ddb7668a88e3935d"
-      hash2 = "e1d917769267302d58a2fd00bc49d4aee5a472227a75f9366b46ce243e9cbef7"
-      hash3 = "0157b43eb3c20928b77f8700ad8eb279a0aa348921df074cd22ebaff01edaae6"
-      hash4 = "4c5e019e0e55a3fe378aa339d52c235c06ecc5053625a5d54d65c4ae38c6e3da"
-      hash5 = "24956d8edcf2a1fd26805ec58cfd1ee7498e1a59af8cc2f4b832a7ab34948c18"
-      hash6 = "2963c5eacaad13ace807edd634a4a5896cb5536f961f43afcf8c1f25c08a5eef"
+     meta:
+    description = "Detects Vermin Keylogger"
+    author = "Florian Roth"
+    reference = "https://researchcenter.paloaltonetworks.com/2018/01/unit42-vermin-quasar-rat-custom-malware-used-ukraine/"
+    date = "2018-01-29"
+    hash1 = "74ba162eef84bf13d1d79cb26192a4692c09fed57f321230ddb7668a88e3935d"
+    hash2 = "e1d917769267302d58a2fd00bc49d4aee5a472227a75f9366b46ce243e9cbef7"
+    hash3 = "0157b43eb3c20928b77f8700ad8eb279a0aa348921df074cd22ebaff01edaae6"
+    hash4 = "4c5e019e0e55a3fe378aa339d52c235c06ecc5053625a5d54d65c4ae38c6e3da"
+    hash5 = "24956d8edcf2a1fd26805ec58cfd1ee7498e1a59af8cc2f4b832a7ab34948c18"
+    hash6 = "2963c5eacaad13ace807edd634a4a5896cb5536f961f43afcf8c1f25c08a5eef"
+    severity = "10"
+    type = "Advanced Persistent Threat"
    strings:
       $x1 = "_keyloggerTaskDescription" fullword ascii
       $x2 = "_keyloggerTaskAuthor" fullword ascii

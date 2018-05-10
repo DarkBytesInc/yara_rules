@@ -6,11 +6,13 @@
 rule DirtJumper_drive
 {
    
-    meta:
-        author = "Jason Jones <jasonjones@arbor.net>"
-        date = "2013-08-26"
-        description = "Identify first version of drive DDoS malware"
-        source = "https://github.com/arbor/yara/blob/master/drive.yara"
+      meta:
+    author = "Jason Jones <jasonjones@arbor.net>"
+    date = "2013-08-26"
+    description = "Identify first version of drive DDoS malware"
+    source = "https://github.com/arbor/yara/blob/master/drive.yara"
+    severity = "7"
+    type = "Malware"
    
     strings:
         $cmd1 = "-get" fullword
@@ -35,11 +37,13 @@ rule DirtJumper_drive
 rule DirtJumper_drive2
 {
    
-    meta:
-        author = "Jason Jones <jasonjones@arbor.net>"
-        date = "2013-08-26"
-        description = "Identify newer version of drive DDoS malware"
-        source = "https://github.com/arbor/yara/blob/master/drive2.yara"
+      meta:
+    author = "Jason Jones <jasonjones@arbor.net>"
+    date = "2013-08-26"
+    description = "Identify newer version of drive DDoS malware"
+    source = "https://github.com/arbor/yara/blob/master/drive2.yara"
+    severity = "7"
+    type = "Malware"
    
     strings:
         $cmd1 = "-get" fullword
@@ -66,11 +70,13 @@ rule DirtJumper_drive2
 rule DirtJumper_drive3
 {
   
-    meta:
-        author = "Jason Jones <jasonjones@arbor.net>"
-        date = "2014-03-17"
-        description = "Identify version of Drive DDoS malware using compromised sites"
-        source = "https://github.com/arbor/yara/blob/master/drive3.yara"
+      meta:
+    author = "Jason Jones <jasonjones@arbor.net>"
+    date = "2014-03-17"
+    description = "Identify version of Drive DDoS malware using compromised sites"
+    source = "https://github.com/arbor/yara/blob/master/drive3.yara"
+    severity = "7"
+    type = "Malware"
   
     strings:
         $cmd1 = "-get" fullword

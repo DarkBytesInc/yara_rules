@@ -1,8 +1,11 @@
 
 rule sogu {
-    meta:
-        block = false
-        quarantine = false
+      meta:
+    block = false
+    quarantine = false
+    description = "sogu"
+    severity = "5"
+    type = "Unknown"
 
     strings:
         // 08E9FC6B4687C3F7FCFB86EAC870158F @ 0x4067F6

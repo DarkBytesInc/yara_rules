@@ -4,13 +4,15 @@
 */
 rule bleedinglife2_adobe_2010_1297_exploit : EK PDF
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "BleedingLife2 Exploit Kit Detection"
-   hash0 = "8179a7f91965731daa16722bd95f0fcf"
-   sample_filetype = "unknown"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "BleedingLife2 Exploit Kit Detection"
+    hash0 = "8179a7f91965731daa16722bd95f0fcf"
+    sample_filetype = "unknown"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "getSharedStyle"
    $string1 = "currentCount"
@@ -35,13 +37,15 @@ condition:
 }
 rule bleedinglife2_adobe_2010_2884_exploit : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "BleedingLife2 Exploit Kit Detection"
-   hash0 = "b22ac6bea520181947e7855cd317c9ac"
-   sample_filetype = "unknown"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "BleedingLife2 Exploit Kit Detection"
+    hash0 = "b22ac6bea520181947e7855cd317c9ac"
+    sample_filetype = "unknown"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "_autoRepeat"
    $string1 = "embedFonts"
@@ -66,13 +70,15 @@ condition:
 }
 rule bleedinglife2_jar2 : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "BleedingLife2 Exploit Kit Detection"
-   hash0 = "2bc0619f9a0c483f3fd6bce88148a7ab"
-   sample_filetype = "unknown"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "BleedingLife2 Exploit Kit Detection"
+    hash0 = "2bc0619f9a0c483f3fd6bce88148a7ab"
+    sample_filetype = "unknown"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "META-INF/MANIFEST.MFPK"
    $string1 = "RequiredJavaComponent.classPK"
@@ -89,13 +95,15 @@ condition:
 }
 rule bleedinglife2_java_2010_0842_exploit : EK
 {
-meta:
-   author = "Josh Berry"
-   date = "2016-06-26"
-   description = "BleedingLife2 Exploit Kit Detection"
-   hash0 = "b14ee91a3da82f5acc78abd10078752e"
-   sample_filetype = "unknown"
-   yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+  meta:
+    author = "Josh Berry"
+    date = "2016-06-26"
+    description = "BleedingLife2 Exploit Kit Detection"
+    hash0 = "b14ee91a3da82f5acc78abd10078752e"
+    sample_filetype = "unknown"
+    yaragenerator = "https://github.com/Xen0ph0n/YaraGenerator"
+    severity = "7"
+    type = "Exploit Kit"
 strings:
    $string0 = "META-INF/MANIFEST.MFManifest-Version: 1.0"
    $string1 = "ToolsDemo.classPK"
