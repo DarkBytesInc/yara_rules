@@ -325,26 +325,6 @@ rule invalid_XObject_js : PDF raw
 		$magic in (0..1024) and not $ver and all of ($attrib*)
 }
 
-rule invalid_trailer_structure : PDF raw
-{
-	  meta:
-    author = "Glenn Edwards (@hiddenillusion)"
-    version = "0.1"
-    weight = 1
-    description = "invalid_trailer_structure"
-    severity = "7"
-    type = "Malware"
-		
-        strings:
-                $magic = { 25 50 44 46 }
-				// Required for a valid PDF
-                $reg0 = /trailer\r?\n?.*\/Size.*\r?\n?\.*/
-                $reg1 = /\/Root.*\r?\n?.*startxref\r?\n?.*\r?\n?%%EOF/
-
-        condition:
-                $magic in (0..1024) and not $reg0 and not $reg1
-}
-
 rule multiple_versions : PDF raw
 {
 	  meta:
